@@ -1,0 +1,34 @@
+About Me
+========
+email
+trabajo
+estudios
+awards
+
+Teaching
+========
+Resumen de experiencia docente
+
+
+Math Documents
+==============
+- incluir mas cosas... y la tesis de doctorado
+
+
+Talks
+=====
+Math Talks
+
+
+The Beauty of Math
+==================
+- las 27 lineas
+- las 4 lineas (link al taller que cree)
+- los ceros de la exponencial
+- los gráficas de funciones complejas (usar las gráficas que cree para research con Ken y Nick)
+- la historia del perímetro de la elípse
+- fractales
+
+
+fotos
+=====
