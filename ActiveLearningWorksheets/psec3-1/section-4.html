@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-01-23T15:50:40-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC First set - let's find zeros</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/2-6pw16fig.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="psec3-1ActiveWorksheet.html"><span class="title">Active Learning Worksheet</span><span class="subtitle">Section 3.1 - Introduction to the Family of Quadratic Functions</span></a></h1>
+<p class="byline">Mathematical Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-3.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="psec3-1ActiveWorksheet.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-5.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-3.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="psec3-1ActiveWorksheet.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-5.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<h2 class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Instructions</span></a></h2>
+<h2 class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Goals</span></a></h2>
+<h2 class="link"><a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">Summary of section (your toolbox)</span></a></h2>
+<h2 class="link active"><a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">First set - let's find zeros</span></a></h2>
+<ul>
+<li><a href="section-4.html#subsection-1" data-scroll="subsection-1">Finding zeros practice</a></li>
+<li><a href="section-4.html#subsection-2" data-scroll="subsection-2">Finding zeros practice - extra problems</a></li>
+<li><a href="section-4.html#subsection-3" data-scroll="subsection-3">First set Wrap-up</a></li>
+</ul>
+<h2 class="link"><a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title punctuated">Second set - How do the graphs look like?</span></a></h2>
+<ul>
+<li><a href="section-5.html#subsection-4" data-scroll="subsection-4">Concavity from the formula</a></li>
+<li><a href="section-5.html#subsection-5" data-scroll="subsection-5">Formula from its graph</a></li>
+</ul>
+<h2 class="link"><a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Wrap-up</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="not-implemented.html" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-4"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">First set - let's find zeros</span>
+</h2>
+<section class="introduction" id="introduction-1"><p id="p-13">SOME Introductory TEXT HERE?</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1</span> <span class="title">Finding zeros practice</span>
+</h3>
+<p id="p-14">In the following problems find the zeros (if any) of the function algebraically.</p>
+<article class="exercise-like" id="exercise-1"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.1</span> <span class="title">TITLE FOR PROBLEM: problem-3-1pw12</span>
+</h6>
+<div class="introduction" id="introduction-2"><p id="p-15">Introductory text for problem if needed.</p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-2"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.2</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwID0gWyRhU3FdIHheMitbJGFUd29dIHgrMS5gYGBdCgpXZSBzZWUgdGhhdCB0aGlzIGlzIGZhY3RvcmFibGUsIGFzIGZvbGxvd3M6CgpbYGBgXGJlZ2lue2FsaWduZWR9CiB5IFxhbXAgPVxhbXAgIChbJGFdIHgrMSkoWyRhXSB4KzEpXFwKIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKV4yLgpcZW5ke2FsaWduZWR9YGBgXQoKVGhlcmVmb3JlLCB0aGVyZSBpcyBvbmx5IG9uZSB6ZXJvIGF0IFtgeD0tXGZyYWN7MX17WyRhXX1cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-3"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.3</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUbyBmaW5kIHRoZSB6ZXJvcywgd2Ugc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUaGlzIGRvZXMgbm90IGFwcGVhciB0byBiZSBmYWN0b3JhYmxlLiAgVGh1cywgd2UgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB3aXRoIFtgYT1bJGFdIFx0ZXh0eyx9YF0gW2BiPTU1XHRleHR7LH1gXSBhbmQgW2BjPVskY10gXHRleHR7On1gXQoKW2BgYFxiZWdpbnthbGlnbmVkfQogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHs1NV4yLTQoWyRhXSAgKShbJGNdICl9fXsyKFskYV0gICl9XFwKIHggXGFtcCA9XGFtcCAgXGZyYWN7LTU1XHBtXHNxcnR7LVskY29uc3RdIH19ezE3OH0KXGVuZHthbGlnbmVkfWBgYF0KCgoKU2luY2UgW2Bcc3FydHstWyRjb25zdF0gfWBdIGlzIHVuZGVmaW5lZCwgdGhlcmUgYXJlIG5vIHplcm9zLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-4"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.4</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIHNvbHZlIGZvciBbYHJgXSBpbiB0aGUgZXF1YXRpb24gW2BRKHIpPVskYV0gcl4yLVskYkFic10gci1bJGNBYnNdPTBgXSB1c2luZyB0aGUgcXVhZHJhdGljIGZvcm11bGEgd2l0aCBbYGE9WyRhXVx0ZXh0eyx9YF0gW2BiPS1bJGJBYnNdYF0gYW5kIFtgYz0tWyRjQWJzXVx0ZXh0ey59YF0KCltgYGBcYmVnaW57YWxpZ25lZH0KIHJcYW1wID1cYW1wIFxmcmFjey0oLVskYkFic10pIFxwbSBcc3FydHsoLVskYkFic10pXjItNChbJGFdKSgtWyRjQWJzXSl9fXsyKFskYV0pfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJGJTcV0rWyRjb25zdF19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJHJvb3RTcV19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBbJHJvb3RdfXtbJGFUd29dfQpcZW5ke2FsaWduZWR9YGBgXQoKCgpUaGVyZWZvcmUgW2ByPShbJGJBYnNdICsgWyRyb290XSkvWyRhVHdvXT1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPShbJGJBYnNdIC0gWyRyb290XSkvWyRhVHdvXT0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXSBUaGUgemVyb3Mgb2YgW2BRKHIpYF0gYXJlIFtgcj1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPS1bJG5lZ2F0aXZlWmVyb0Fic11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.2</span> <span class="title">Finding zeros practice - extra problems</span>
+</h3>
+<p id="p-80">This has different versions of the same problems for you to practice.</p>
+<article class="exercise-like" id="exercise-5"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.5</span> <span class="title">TITLE FOR PROBLEM: problem-3-1pw12</span>
+</h6>
+<div class="introduction" id="introduction-3"><p id="p-81">Introductory text for problem if needed.</p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-6"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.6</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwID0gWyRhU3FdIHheMitbJGFUd29dIHgrMS5gYGBdCgpXZSBzZWUgdGhhdCB0aGlzIGlzIGZhY3RvcmFibGUsIGFzIGZvbGxvd3M6CgpbYGBgXGJlZ2lue2FsaWduZWR9CiB5IFxhbXAgPVxhbXAgIChbJGFdIHgrMSkoWyRhXSB4KzEpXFwKIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKV4yLgpcZW5ke2FsaWduZWR9YGBgXQoKVGhlcmVmb3JlLCB0aGVyZSBpcyBvbmx5IG9uZSB6ZXJvIGF0IFtgeD0tXGZyYWN7MX17WyRhXX1cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-7"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.7</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUbyBmaW5kIHRoZSB6ZXJvcywgd2Ugc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUaGlzIGRvZXMgbm90IGFwcGVhciB0byBiZSBmYWN0b3JhYmxlLiAgVGh1cywgd2UgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB3aXRoIFtgYT1bJGFdIFx0ZXh0eyx9YF0gW2BiPTU1XHRleHR7LH1gXSBhbmQgW2BjPVskY10gXHRleHR7On1gXQoKW2BgYFxiZWdpbnthbGlnbmVkfQogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHs1NV4yLTQoWyRhXSAgKShbJGNdICl9fXsyKFskYV0gICl9XFwKIHggXGFtcCA9XGFtcCAgXGZyYWN7LTU1XHBtXHNxcnR7LVskY29uc3RdIH19ezE3OH0KXGVuZHthbGlnbmVkfWBgYF0KCgoKU2luY2UgW2Bcc3FydHstWyRjb25zdF0gfWBdIGlzIHVuZGVmaW5lZCwgdGhlcmUgYXJlIG5vIHplcm9zLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article><article class="exercise-like" id="exercise-8"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.8</span>
+</h6>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIHNvbHZlIGZvciBbYHJgXSBpbiB0aGUgZXF1YXRpb24gW2BRKHIpPVskYV0gcl4yLVskYkFic10gci1bJGNBYnNdPTBgXSB1c2luZyB0aGUgcXVhZHJhdGljIGZvcm11bGEgd2l0aCBbYGE9WyRhXVx0ZXh0eyx9YF0gW2BiPS1bJGJBYnNdYF0gYW5kIFtgYz0tWyRjQWJzXVx0ZXh0ey59YF0KCltgYGBcYmVnaW57YWxpZ25lZH0KIHJcYW1wID1cYW1wIFxmcmFjey0oLVskYkFic10pIFxwbSBcc3FydHsoLVskYkFic10pXjItNChbJGFdKSgtWyRjQWJzXSl9fXsyKFskYV0pfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJGJTcV0rWyRjb25zdF19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJHJvb3RTcV19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBbJHJvb3RdfXtbJGFUd29dfQpcZW5ke2FsaWduZWR9YGBgXQoKCgpUaGVyZWZvcmUgW2ByPShbJGJBYnNdICsgWyRyb290XSkvWyRhVHdvXT1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPShbJGJBYnNdIC0gWyRyb290XSkvWyRhVHdvXT0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXSBUaGUgemVyb3Mgb2YgW2BRKHIpYF0gYXJlIFtgcj1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPS1bJG5lZ2F0aXZlWmVyb0Fic11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3</span> <span class="title">First set Wrap-up</span>
+</h3>
+<p id="p-146">Discuss these questions before moving on.</p>
+<ul class="disc">
+<li id="li-13">How many different ways have you learned for finding the zeros of a quadratic function? What is the advantage of each method?</li>
+<li id="li-14">How many zeros can a quadratic function have?</li>
+</ul></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

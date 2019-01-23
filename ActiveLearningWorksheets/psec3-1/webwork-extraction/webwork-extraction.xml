@@ -1,0 +1,2649 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<webwork-extraction>
+  <webwork-reps xml:id="extracted-problem-3-1pw12" ww-id="problem-3-1pw12">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(2,9,1));
+                                      $b=Compute(random(2,9,1));
+                                      $c=$b+1;
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros. 
+                                  <me>y=(<var name="$a"/>-x)(<var name="$c"/>-<var name="$b"/> x)</me></p>
+          <p>Give exact answers, or round to three decimal places.</p>
+          <p>Smallest zero (if any) at <m>x=</m> <var name="$c/$b" width="5" category="number"/></p>
+          <p>Largest zero (if any) at <m>x=</m>  <var name="$a" width="5" category="number"/> </p>
+        </statement>
+        <hint>
+                                  Use the fact that <m>a b=0</m> exactly when <m>a=0</m> or <m>b=0</m>.
+                              </hint>
+        <solution>
+          <p> Setting the factors equal to zero, we have
+                                      <md><mrow> <var name="$a"/>-x\amp =\amp 0</mrow><mrow> x\amp =\amp <var name="$a"/>,</mrow></md>
+                                      and
+                                      <md><mrow> <var name="$c"/>-<var name="$b"/> x\amp =\amp 0</mrow><mrow> x\amp =\amp <var name="$c"/>/<var name="$b"/>,</mrow></md>
+                                  </p>
+          <p> so the zeros are <m>x=<var name="$a"/>,<var name="$c"/>/<var name="$b"/></m>.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="1">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros.</p>
+      <p><me>y=({2}-x)({9}-{8} x)</me></p>
+      <p>Give exact answers, or round to three decimal places.</p>
+      <p>Smallest zero (if any) at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      <p>Largest zero (if any) at <m>x=</m>  <fillin name="AnSwEr0002" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Use the fact that <m>a b=0</m> exactly when <m>a=0</m> or <m>b=0\text{.}</m></p>
+      </hint>
+      
+      <solution>
+      <p>Setting the factors equal to zero, we have</p>
+      <p><me>\begin{aligned}
+       {2}-x\amp =\amp 0\\
+       x\amp =\amp {2},
+      \end{aligned}</me></p>
+      <p>and</p>
+      <p><me>\begin{aligned}
+       {9}-{8} x\amp =\amp 0\\
+       x\amp =\amp {9}/{8},
+      \end{aligned}</me></p>
+      <p>so the zeros are <m>x={2},{9}/{8}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.1)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(2,9,1));
+      $b=Compute(random(2,9,1));
+      $c=$b+1;
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros.
+      
+      [```y=([$a]-x)([$c]-[$b] x)```]
+      
+      Give exact answers, or round to three decimal places.
+      
+      Smallest zero (if any) at [`x=`] [_____]{$c/$b} [@AnswerFormatHelp('numbers')@]*
+      
+      Largest zero (if any) at [`x=`]  [_____]{$a} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Use the fact that [`a b=0`] exactly when [`a=0`] or [`b=0\text{.}`]
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Setting the factors equal to zero, we have
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       [$a]-x\amp =\amp 0\\
+       x\amp =\amp [$a],
+      \end{aligned}```]
+      
+      and
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       [$c]-[$b] x\amp =\amp 0\\
+       x\amp =\amp [$c]/[$b],
+      \end{aligned}```]
+      
+      so the zeros are [`x=[$a],[$c]/[$b]\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw12-practice" ww-id="problem-3-1pw12-practice">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(2,9,1));
+                                      $b=Compute(random(2,9,1));
+                                      $c=$b+1;
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros. 
+                                  <me>y=(<var name="$a"/>-x)(<var name="$c"/>-<var name="$b"/> x)</me></p>
+          <p>Give exact answers, or round to three decimal places.</p>
+          <p>Smallest zero (if any) at <m>x=</m> <var name="$c/$b" width="5" category="number"/></p>
+          <p>Largest zero (if any) at <m>x=</m>  <var name="$a" width="5" category="number"/> </p>
+        </statement>
+        <hint>
+                                  Use the fact that <m>a b=0</m> exactly when <m>a=0</m> or <m>b=0</m>.
+                              </hint>
+        <solution>
+          <p> Setting the factors equal to zero, we have
+                                      <md><mrow> <var name="$a"/>-x\amp =\amp 0</mrow><mrow> x\amp =\amp <var name="$a"/>,</mrow></md>
+                                      and
+                                      <md><mrow> <var name="$c"/>-<var name="$b"/> x\amp =\amp 0</mrow><mrow> x\amp =\amp <var name="$c"/>/<var name="$b"/>,</mrow></md>
+                                  </p>
+          <p> so the zeros are <m>x=<var name="$a"/>,<var name="$c"/>/<var name="$b"/></m>.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="5">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros.</p>
+      <p><me>y=({6}-x)({5}-{4} x)</me></p>
+      <p>Give exact answers, or round to three decimal places.</p>
+      <p>Smallest zero (if any) at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      <p>Largest zero (if any) at <m>x=</m>  <fillin name="AnSwEr0002" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Use the fact that <m>a b=0</m> exactly when <m>a=0</m> or <m>b=0\text{.}</m></p>
+      </hint>
+      
+      <solution>
+      <p>Setting the factors equal to zero, we have</p>
+      <p><me>\begin{aligned}
+       {6}-x\amp =\amp 0\\
+       x\amp =\amp {6},
+      \end{aligned}</me></p>
+      <p>and</p>
+      <p><me>\begin{aligned}
+       {5}-{4} x\amp =\amp 0\\
+       x\amp =\amp {5}/{4},
+      \end{aligned}</me></p>
+      <p>so the zeros are <m>x={6},{5}/{4}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApVc2UgdGhlIGZhY3QgdGhhdCBbYGEgYj0wYF0gZXhhY3RseSB3aGVuIFtgYT0wYF0gb3IgW2BiPTBcdGV4dHsufWBdCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KU2V0dGluZyB0aGUgZmFjdG9ycyBlcXVhbCB0byB6ZXJvLCB3ZSBoYXZlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBbJGFdLXhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRhXSwKXGVuZHthbGlnbmVkfWBgYF0KCmFuZAoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXS1bJGJdIHhcYW1wID1cYW1wIDBcXAogeFxhbXAgPVxhbXAgWyRjXS9bJGJdLApcZW5ke2FsaWduZWR9YGBgXQoKCgpzbyB0aGUgemVyb3MgYXJlIFtgeD1bJGFdLFskY10vWyRiXVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRiPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRjPSRiKzE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZHMgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYHk9KFskYV0teCkoWyRjXS1bJGJdIHgpYGBgXQoKCgpHaXZlIGV4YWN0IGFuc3dlcnMsIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKU21hbGxlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gW19fX19fXXskYy8kYn0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCkxhcmdlc3QgemVybyAoaWYgYW55KSBhdCBbYHg9YF0gIFtfX19fX117JGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.5)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(2,9,1));
+      $b=Compute(random(2,9,1));
+      $c=$b+1;
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response fields below if there are no zeros.
+      
+      [```y=([$a]-x)([$c]-[$b] x)```]
+      
+      Give exact answers, or round to three decimal places.
+      
+      Smallest zero (if any) at [`x=`] [_____]{$c/$b} [@AnswerFormatHelp('numbers')@]*
+      
+      Largest zero (if any) at [`x=`]  [_____]{$a} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Use the fact that [`a b=0`] exactly when [`a=0`] or [`b=0\text{.}`]
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Setting the factors equal to zero, we have
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       [$a]-x\amp =\amp 0\\
+       x\amp =\amp [$a],
+      \end{aligned}```]
+      
+      and
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       [$c]-[$b] x\amp =\amp 0\\
+       x\amp =\amp [$c]/[$b],
+      \end{aligned}```]
+      
+      so the zeros are [`x=[$a],[$c]/[$b]\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw13" ww-id="problem-3-1pw13">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(2,9,1));
+                                      $aSq=$a**2;
+                                      $aTwo=2*$a;
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>y=<var name="$aSq"/> x^2+<var name="$aTwo"/> x+1 </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>x=</m> <var name="-1/$a" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>Try to factor the equation, or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> To find the zeros, we solve the equation 
+                                  <me>0 = <var name="$aSq"/> x^2+<var name="$aTwo"/> x+1.</me>
+                                  We see that this is factorable, as follows:
+                                  <md><mrow> y \amp =\amp  (<var name="$a"/> x+1)(<var name="$a"/> x+1)</mrow><mrow> y \amp =\amp  (<var name="$a"/> x+1)^2.</mrow></md>
+                                  Therefore, there is only one zero at <m>x=-\frac{1}{<var name="$a"/>}</m>.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="2">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>y={9} x^2+{6} x+1</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Try to factor the equation, or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>To find the zeros, we solve the equation</p>
+      <p><me>0 = {9} x^2+{6} x+1.</me></p>
+      <p>We see that this is factorable, as follows:</p>
+      <p><me>\begin{aligned}
+       y \amp =\amp  ({3} x+1)({3} x+1)\\
+       y \amp =\amp  ({3} x+1)^2.
+      \end{aligned}</me></p>
+      <p>Therefore, there is only one zero at <m>x=-\frac{1}{{3}}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwID0gWyRhU3FdIHheMitbJGFUd29dIHgrMS5gYGBdCgpXZSBzZWUgdGhhdCB0aGlzIGlzIGZhY3RvcmFibGUsIGFzIGZvbGxvd3M6CgpbYGBgXGJlZ2lue2FsaWduZWR9CiB5IFxhbXAgPVxhbXAgIChbJGFdIHgrMSkoWyRhXSB4KzEpXFwKIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKV4yLgpcZW5ke2FsaWduZWR9YGBgXQoKVGhlcmVmb3JlLCB0aGVyZSBpcyBvbmx5IG9uZSB6ZXJvIGF0IFtgeD0tXGZyYWN7MX17WyRhXX1cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVG8gZmluZCB0aGUgemVyb3MsIHdlIHNvbHZlIHRoZSBlcXVhdGlvbgoKW2BgYDAgPSBbJGFTcV0geF4yK1skYVR3b10geCsxLmBgYF0KCldlIHNlZSB0aGF0IHRoaXMgaXMgZmFjdG9yYWJsZSwgYXMgZm9sbG93czoKCltgYGBcYmVnaW57YWxpZ25lZH0KIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKShbJGFdIHgrMSlcXAogeSBcYW1wID1cYW1wICAoWyRhXSB4KzEpXjIuClxlbmR7YWxpZ25lZH1gYGBdCgpUaGVyZWZvcmUsIHRoZXJlIGlzIG9ubHkgb25lIHplcm8gYXQgW2B4PS1cZnJhY3sxfXtbJGFdfVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.2)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(2,9,1));
+      $aSq=$a**2;
+      $aTwo=2*$a;
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```y=[$aSq] x^2+[$aTwo] x+1 ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`x=`] [_____]{-1/$a} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Try to factor the equation, or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      To find the zeros, we solve the equation
+      
+      [```0 = [$aSq] x^2+[$aTwo] x+1.```]
+      
+      We see that this is factorable, as follows:
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       y \amp =\amp  ([$a] x+1)([$a] x+1)\\
+       y \amp =\amp  ([$a] x+1)^2.
+      \end{aligned}```]
+      
+      Therefore, there is only one zero at [`x=-\frac{1}{[$a]}\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw13-practice" ww-id="problem-3-1pw13-practice">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(2,9,1));
+                                      $aSq=$a**2;
+                                      $aTwo=2*$a;
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>y=<var name="$aSq"/> x^2+<var name="$aTwo"/> x+1 </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>x=</m> <var name="-1/$a" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>Try to factor the equation, or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> To find the zeros, we solve the equation 
+                                  <me>0 = <var name="$aSq"/> x^2+<var name="$aTwo"/> x+1.</me>
+                                  We see that this is factorable, as follows:
+                                  <md><mrow> y \amp =\amp  (<var name="$a"/> x+1)(<var name="$a"/> x+1)</mrow><mrow> y \amp =\amp  (<var name="$a"/> x+1)^2.</mrow></md>
+                                  Therefore, there is only one zero at <m>x=-\frac{1}{<var name="$a"/>}</m>.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="6">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>y={49} x^2+{14} x+1</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Try to factor the equation, or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>To find the zeros, we solve the equation</p>
+      <p><me>0 = {49} x^2+{14} x+1.</me></p>
+      <p>We see that this is factorable, as follows:</p>
+      <p><me>\begin{aligned}
+       y \amp =\amp  ({7} x+1)({7} x+1)\\
+       y \amp =\amp  ({7} x+1)^2.
+      \end{aligned}</me></p>
+      <p>Therefore, there is only one zero at <m>x=-\frac{1}{{7}}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwID0gWyRhU3FdIHheMitbJGFUd29dIHgrMS5gYGBdCgpXZSBzZWUgdGhhdCB0aGlzIGlzIGZhY3RvcmFibGUsIGFzIGZvbGxvd3M6CgpbYGBgXGJlZ2lue2FsaWduZWR9CiB5IFxhbXAgPVxhbXAgIChbJGFdIHgrMSkoWyRhXSB4KzEpXFwKIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKV4yLgpcZW5ke2FsaWduZWR9YGBgXQoKVGhlcmVmb3JlLCB0aGVyZSBpcyBvbmx5IG9uZSB6ZXJvIGF0IFtgeD0tXGZyYWN7MX17WyRhXX1cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApUcnkgdG8gZmFjdG9yIHRoZSBlcXVhdGlvbiwgb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVG8gZmluZCB0aGUgemVyb3MsIHdlIHNvbHZlIHRoZSBlcXVhdGlvbgoKW2BgYDAgPSBbJGFTcV0geF4yK1skYVR3b10geCsxLmBgYF0KCldlIHNlZSB0aGF0IHRoaXMgaXMgZmFjdG9yYWJsZSwgYXMgZm9sbG93czoKCltgYGBcYmVnaW57YWxpZ25lZH0KIHkgXGFtcCA9XGFtcCAgKFskYV0geCsxKShbJGFdIHgrMSlcXAogeSBcYW1wID1cYW1wICAoWyRhXSB4KzEpXjIuClxlbmR7YWxpZ25lZH1gYGBdCgpUaGVyZWZvcmUsIHRoZXJlIGlzIG9ubHkgb25lIHplcm8gYXQgW2B4PS1cZnJhY3sxfXtbJGFdfVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDIsOSwxKSk7CiRhU3E9JGEqKjI7CiRhVHdvPTIqJGE7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHplcm9zIChpZiBhbnkpIG9mIHRoZSBmdW5jdGlvbiBhbGdlYnJhaWNhbGx5LiBFbnRlciBOT05FIGluIHRoZSByZXNwb25zZSBmaWVsZCBiZWxvdyBpZiB0aGVyZSBhcmUgbm8gemVyb3MuCgpbYGBgeT1bJGFTcV0geF4yK1skYVR3b10geCsxIGBgYF0KCgoKU2VwYXJhdGUgYW5zd2VycyB3aXRoIGNvbW1hcy4gUm91bmQgeW91ciBhbnN3ZXJzIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKWmVyb3MgYXQgW2B4PWBdIFtfX19fX117LTEvJGF9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.6)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(2,9,1));
+      $aSq=$a**2;
+      $aTwo=2*$a;
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```y=[$aSq] x^2+[$aTwo] x+1 ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`x=`] [_____]{-1/$a} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Try to factor the equation, or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      To find the zeros, we solve the equation
+      
+      [```0 = [$aSq] x^2+[$aTwo] x+1.```]
+      
+      We see that this is factorable, as follows:
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       y \amp =\amp  ([$a] x+1)([$a] x+1)\\
+       y \amp =\amp  ([$a] x+1)^2.
+      \end{aligned}```]
+      
+      Therefore, there is only one zero at [`x=-\frac{1}{[$a]}\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw16" ww-id="problem-3-1pw16">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(75,99,1));
+                                      $c=Compute(random(15,50,1));
+                                      $const=-(55**2-4*$a*$c);
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>y=<var name="$a"/>  x^2+55x+<var name="$c"/>  </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>x=</m> <var name="NONE" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>To find the zeros one must solve the equation <me>0=<var name="$a"/>  x^2+55x+<var name="$c"/> </me>. Try to factor the expression or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> To find the zeros, we solve the equation <me>0=<var name="$a"/>  x^2+55x+<var name="$c"/> </me>.  This does not appear to be factorable.  Thus, we use the quadratic formula with <m>a=<var name="$a"/> </m>, <m>b=55</m>, and <m>c=<var name="$c"/> </m>:
+                                  <md><mrow> x \amp =\amp  \frac{-55\pm\sqrt{55^2-4(<var name="$a"/>  )(<var name="$c"/> )}}{2(<var name="$a"/>  )}</mrow><mrow> x \amp =\amp  \frac{-55\pm\sqrt{-<var name="$const"/> }}{178}</mrow></md></p>
+          <p> Since <m>\sqrt{-<var name="$const"/> }</m> is undefined, there are no zeros.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="3">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>y={83}  x^2+55x+{17}</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>To find the zeros one must solve the equation</p>
+      <p><me>0={83}  x^2+55x+{17} \text{.}</me></p>
+      <p>Try to factor the expression or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>To find the zeros, we solve the equation</p>
+      <p><me>0={83}  x^2+55x+{17} \text{.}</me></p>
+      <p>This does not appear to be factorable.  Thus, we use the quadratic formula with <m>a={83} \text{,}</m> <m>b=55\text{,}</m> and <m>c={17} \text{:}</m></p>
+      <p><me>\begin{aligned}
+       x \amp =\amp  \frac{-55\pm\sqrt{55^2-4({83}  )({17} )}}{2({83}  )}\\
+       x \amp =\amp  \frac{-55\pm\sqrt{-{2619} }}{178}
+      \end{aligned}</me></p>
+      <p>Since <m>\sqrt{-{2619} }</m> is undefined, there are no zeros.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUbyBmaW5kIHRoZSB6ZXJvcywgd2Ugc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUaGlzIGRvZXMgbm90IGFwcGVhciB0byBiZSBmYWN0b3JhYmxlLiAgVGh1cywgd2UgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB3aXRoIFtgYT1bJGFdIFx0ZXh0eyx9YF0gW2BiPTU1XHRleHR7LH1gXSBhbmQgW2BjPVskY10gXHRleHR7On1gXQoKW2BgYFxiZWdpbnthbGlnbmVkfQogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHs1NV4yLTQoWyRhXSAgKShbJGNdICl9fXsyKFskYV0gICl9XFwKIHggXGFtcCA9XGFtcCAgXGZyYWN7LTU1XHBtXHNxcnR7LVskY29uc3RdIH19ezE3OH0KXGVuZHthbGlnbmVkfWBgYF0KCgoKU2luY2UgW2Bcc3FydHstWyRjb25zdF0gfWBdIGlzIHVuZGVmaW5lZCwgdGhlcmUgYXJlIG5vIHplcm9zLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwPVskYV0gIHheMis1NXgrWyRjXSBcdGV4dHsufWBgYF0KClRoaXMgZG9lcyBub3QgYXBwZWFyIHRvIGJlIGZhY3RvcmFibGUuICBUaHVzLCB3ZSB1c2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHdpdGggW2BhPVskYV0gXHRleHR7LH1gXSBbYGI9NTVcdGV4dHssfWBdIGFuZCBbYGM9WyRjXSBcdGV4dHs6fWBdCgpbYGBgXGJlZ2lue2FsaWduZWR9CiB4IFxhbXAgPVxhbXAgIFxmcmFjey01NVxwbVxzcXJ0ezU1XjItNChbJGFdICApKFskY10gKX19ezIoWyRhXSAgKX1cXAogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHstWyRjb25zdF0gfX17MTc4fQpcZW5ke2FsaWduZWR9YGBgXQoKCgpTaW5jZSBbYFxzcXJ0ey1bJGNvbnN0XSB9YF0gaXMgdW5kZWZpbmVkLCB0aGVyZSBhcmUgbm8gemVyb3MuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.3)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(75,99,1));
+      $c=Compute(random(15,50,1));
+      $const=-(55**2-4*$a*$c);
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```y=[$a]  x^2+55x+[$c]  ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`x=`] [_____]{NONE} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      To find the zeros one must solve the equation
+      
+      [```0=[$a]  x^2+55x+[$c] \text{.}```]
+      
+      Try to factor the expression or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      To find the zeros, we solve the equation
+      
+      [```0=[$a]  x^2+55x+[$c] \text{.}```]
+      
+      This does not appear to be factorable.  Thus, we use the quadratic formula with [`a=[$a] \text{,}`] [`b=55\text{,}`] and [`c=[$c] \text{:}`]
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       x \amp =\amp  \frac{-55\pm\sqrt{55^2-4([$a]  )([$c] )}}{2([$a]  )}\\
+       x \amp =\amp  \frac{-55\pm\sqrt{-[$const] }}{178}
+      \end{aligned}```]
+      
+      Since [`\sqrt{-[$const] }`] is undefined, there are no zeros.
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw16-practice" ww-id="problem-3-1pw16-practice">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(random(75,99,1));
+                                      $c=Compute(random(15,50,1));
+                                      $const=-(55**2-4*$a*$c);
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>y=<var name="$a"/>  x^2+55x+<var name="$c"/>  </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>x=</m> <var name="NONE" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>To find the zeros one must solve the equation <me>0=<var name="$a"/>  x^2+55x+<var name="$c"/> </me>. Try to factor the expression or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> To find the zeros, we solve the equation <me>0=<var name="$a"/>  x^2+55x+<var name="$c"/> </me>.  This does not appear to be factorable.  Thus, we use the quadratic formula with <m>a=<var name="$a"/> </m>, <m>b=55</m>, and <m>c=<var name="$c"/> </m>:
+                                  <md><mrow> x \amp =\amp  \frac{-55\pm\sqrt{55^2-4(<var name="$a"/>  )(<var name="$c"/> )}}{2(<var name="$a"/>  )}</mrow><mrow> x \amp =\amp  \frac{-55\pm\sqrt{-<var name="$const"/> }}{178}</mrow></md></p>
+          <p> Since <m>\sqrt{-<var name="$const"/> }</m> is undefined, there are no zeros.</p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="7">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>y={94}  x^2+55x+{39}</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>x=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>To find the zeros one must solve the equation</p>
+      <p><me>0={94}  x^2+55x+{39} \text{.}</me></p>
+      <p>Try to factor the expression or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>To find the zeros, we solve the equation</p>
+      <p><me>0={94}  x^2+55x+{39} \text{.}</me></p>
+      <p>This does not appear to be factorable.  Thus, we use the quadratic formula with <m>a={94} \text{,}</m> <m>b=55\text{,}</m> and <m>c={39} \text{:}</m></p>
+      <p><me>\begin{aligned}
+       x \amp =\amp  \frac{-55\pm\sqrt{55^2-4({94}  )({39} )}}{2({94}  )}\\
+       x \amp =\amp  \frac{-55\pm\sqrt{-{11639} }}{178}
+      \end{aligned}</me></p>
+      <p>Since <m>\sqrt{-{11639} }</m> is undefined, there are no zeros.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUbyBmaW5kIHRoZSB6ZXJvcywgd2Ugc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUaGlzIGRvZXMgbm90IGFwcGVhciB0byBiZSBmYWN0b3JhYmxlLiAgVGh1cywgd2UgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB3aXRoIFtgYT1bJGFdIFx0ZXh0eyx9YF0gW2BiPTU1XHRleHR7LH1gXSBhbmQgW2BjPVskY10gXHRleHR7On1gXQoKW2BgYFxiZWdpbnthbGlnbmVkfQogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHs1NV4yLTQoWyRhXSAgKShbJGNdICl9fXsyKFskYV0gICl9XFwKIHggXGFtcCA9XGFtcCAgXGZyYWN7LTU1XHBtXHNxcnR7LVskY29uc3RdIH19ezE3OH0KXGVuZHthbGlnbmVkfWBgYF0KCgoKU2luY2UgW2Bcc3FydHstWyRjb25zdF0gfWBdIGlzIHVuZGVmaW5lZCwgdGhlcmUgYXJlIG5vIHplcm9zLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKVG8gZmluZCB0aGUgemVyb3Mgb25lIG11c3Qgc29sdmUgdGhlIGVxdWF0aW9uCgpbYGBgMD1bJGFdICB4XjIrNTV4K1skY10gXHRleHR7Ln1gYGBdCgpUcnkgdG8gZmFjdG9yIHRoZSBleHByZXNzaW9uIG9yIHVzZSB0aGUgcXVhZHJhdGljIGZvcm11bGEuCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIGZpbmQgdGhlIHplcm9zLCB3ZSBzb2x2ZSB0aGUgZXF1YXRpb24KCltgYGAwPVskYV0gIHheMis1NXgrWyRjXSBcdGV4dHsufWBgYF0KClRoaXMgZG9lcyBub3QgYXBwZWFyIHRvIGJlIGZhY3RvcmFibGUuICBUaHVzLCB3ZSB1c2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHdpdGggW2BhPVskYV0gXHRleHR7LH1gXSBbYGI9NTVcdGV4dHssfWBdIGFuZCBbYGM9WyRjXSBcdGV4dHs6fWBdCgpbYGBgXGJlZ2lue2FsaWduZWR9CiB4IFxhbXAgPVxhbXAgIFxmcmFjey01NVxwbVxzcXJ0ezU1XjItNChbJGFdICApKFskY10gKX19ezIoWyRhXSAgKX1cXAogeCBcYW1wID1cYW1wICBcZnJhY3stNTVccG1cc3FydHstWyRjb25zdF0gfX17MTc4fQpcZW5ke2FsaWduZWR9YGBgXQoKCgpTaW5jZSBbYFxzcXJ0ey1bJGNvbnN0XSB9YF0gaXMgdW5kZWZpbmVkLCB0aGVyZSBhcmUgbm8gemVyb3MuCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhPUNvbXB1dGUocmFuZG9tKDc1LDk5LDEpKTsKJGM9Q29tcHV0ZShyYW5kb20oMTUsNTAsMSkpOwokY29uc3Q9LSg1NSoqMi00KiRhKiRjKTsKCkJFR0lOX1BHTUwKRmluZCB0aGUgemVyb3MgKGlmIGFueSkgb2YgdGhlIGZ1bmN0aW9uIGFsZ2VicmFpY2FsbHkuIEVudGVyIE5PTkUgaW4gdGhlIHJlc3BvbnNlIGZpZWxkIGJlbG93IGlmIHRoZXJlIGFyZSBubyB6ZXJvcy4KCltgYGB5PVskYV0gIHheMis1NXgrWyRjXSAgYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHg9YF0gW19fX19fXXtOT05FfSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.7)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(random(75,99,1));
+      $c=Compute(random(15,50,1));
+      $const=-(55**2-4*$a*$c);
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```y=[$a]  x^2+55x+[$c]  ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`x=`] [_____]{NONE} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      To find the zeros one must solve the equation
+      
+      [```0=[$a]  x^2+55x+[$c] \text{.}```]
+      
+      Try to factor the expression or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      To find the zeros, we solve the equation
+      
+      [```0=[$a]  x^2+55x+[$c] \text{.}```]
+      
+      This does not appear to be factorable.  Thus, we use the quadratic formula with [`a=[$a] \text{,}`] [`b=55\text{,}`] and [`c=[$c] \text{:}`]
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       x \amp =\amp  \frac{-55\pm\sqrt{55^2-4([$a]  )([$c] )}}{2([$a]  )}\\
+       x \amp =\amp  \frac{-55\pm\sqrt{-[$const] }}{178}
+      \end{aligned}```]
+      
+      Since [`\sqrt{-[$const] }`] is undefined, there are no zeros.
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw17" ww-id="problem-3-1pw17">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $m=Compute(random(2,4,1));
+                                      $negativeZero=Compute(random(-7,-3,1));
+                                      $negativeZeroAbs=-$negativeZero;
+                                      do {$positiveZero=Compute(random(2,8,1)); } until ($positiveZero+$negativeZero &gt; 0);
+                                      $a=$m;
+                                      $aTwo=2*$a;
+                                      $bAbs=$m*($positiveZero+$negativeZero);
+                                      $bSq=$bAbs**2;
+                                      $cAbs=-$m*$negativeZero*$positiveZero;
+                                      $const=4*($a)*($cAbs);
+                                      $rootSq=$bSq+$const;
+                                      $root=sqrt($rootSq);
+                                      $ListAns=List("$negativeZero,$positiveZero");
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>Q(r)=<var name="$a"/> r^2-<var name="$bAbs"/> r-<var name="$cAbs"/> </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>r=</m> <var name="$ListAns" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>Try to factor <m>Q(r)</m> or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> We solve for <m>r</m> in the equation <m>Q(r)=<var name="$a"/> r^2-<var name="$bAbs"/> r-<var name="$cAbs"/>=0</m> using the quadratic formula with <m>a=<var name="$a"/></m>, <m>b=-<var name="$bAbs"/></m> and <m>c=-<var name="$cAbs"/></m>.
+                                  <md><mrow> r\amp =\amp \frac{-(-<var name="$bAbs"/>) \pm \sqrt{(-<var name="$bAbs"/>)^2-4(<var name="$a"/>)(-<var name="$cAbs"/>)}}{2(<var name="$a"/>)}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm \sqrt{<var name="$bSq"/>+<var name="$const"/>}}{<var name="$aTwo"/>}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm \sqrt{<var name="$rootSq"/>}}{<var name="$aTwo"/>}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm <var name="$root"/>}{<var name="$aTwo"/>}</mrow></md> </p>
+          <p> Therefore <m>r=(<var name="$bAbs"/> + <var name="$root"/>)/<var name="$aTwo"/>=<var name="$positiveZero"/></m> and <m>r=(<var name="$bAbs"/> - <var name="$root"/>)/<var name="$aTwo"/>=-<var name="$negativeZeroAbs"/></m>. The zeros of <m>Q(r)</m> are <m>r=<var name="$positiveZero"/></m> and <m>r=-<var name="$negativeZeroAbs"/></m>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="4">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>Q(r)={3} r^2-{3} r-{60}</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>r=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Try to factor <m>Q(r)</m> or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>We solve for <m>r</m> in the equation <m>Q(r)={3} r^2-{3} r-{60}=0</m> using the quadratic formula with <m>a={3}\text{,}</m> <m>b=-{3}</m> and <m>c=-{60}\text{.}</m></p>
+      <p><me>\begin{aligned}
+       r\amp =\amp \frac{-(-{3}) \pm \sqrt{(-{3})^2-4({3})(-{60})}}{2({3})}\\
+       r\amp =\amp \frac{{3} \pm \sqrt{{9}+{720}}}{{6}}\\
+       r\amp =\amp \frac{{3} \pm \sqrt{{729}}}{{6}}\\
+       r\amp =\amp \frac{{3} \pm {27}}{{6}}
+      \end{aligned}</me></p>
+      <p>Therefore <m>r=({3} + {27})/{6}={5}</m> and <m>r=({3} - {27})/{6}=-{4}\text{.}</m> The zeros of <m>Q(r)</m> are <m>r={5}</m> and <m>r=-{4}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIHNvbHZlIGZvciBbYHJgXSBpbiB0aGUgZXF1YXRpb24gW2BRKHIpPVskYV0gcl4yLVskYkFic10gci1bJGNBYnNdPTBgXSB1c2luZyB0aGUgcXVhZHJhdGljIGZvcm11bGEgd2l0aCBbYGE9WyRhXVx0ZXh0eyx9YF0gW2BiPS1bJGJBYnNdYF0gYW5kIFtgYz0tWyRjQWJzXVx0ZXh0ey59YF0KCltgYGBcYmVnaW57YWxpZ25lZH0KIHJcYW1wID1cYW1wIFxmcmFjey0oLVskYkFic10pIFxwbSBcc3FydHsoLVskYkFic10pXjItNChbJGFdKSgtWyRjQWJzXSl9fXsyKFskYV0pfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJGJTcV0rWyRjb25zdF19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJHJvb3RTcV19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBbJHJvb3RdfXtbJGFUd29dfQpcZW5ke2FsaWduZWR9YGBgXQoKCgpUaGVyZWZvcmUgW2ByPShbJGJBYnNdICsgWyRyb290XSkvWyRhVHdvXT1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPShbJGJBYnNdIC0gWyRyb290XSkvWyRhVHdvXT0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXSBUaGUgemVyb3Mgb2YgW2BRKHIpYF0gYXJlIFtgcj1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPS1bJG5lZ2F0aXZlWmVyb0Fic11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSBzb2x2ZSBmb3IgW2ByYF0gaW4gdGhlIGVxdWF0aW9uIFtgUShyKT1bJGFdIHJeMi1bJGJBYnNdIHItWyRjQWJzXT0wYF0gdXNpbmcgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHdpdGggW2BhPVskYV1cdGV4dHssfWBdIFtgYj0tWyRiQWJzXWBdIGFuZCBbYGM9LVskY0Fic11cdGV4dHsufWBdCgpbYGBgXGJlZ2lue2FsaWduZWR9CiByXGFtcCA9XGFtcCBcZnJhY3stKC1bJGJBYnNdKSBccG0gXHNxcnR7KC1bJGJBYnNdKV4yLTQoWyRhXSkoLVskY0Fic10pfX17MihbJGFdKX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gXHNxcnR7WyRiU3FdK1skY29uc3RdfX17WyRhVHdvXX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gXHNxcnR7WyRyb290U3FdfX17WyRhVHdvXX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gWyRyb290XX17WyRhVHdvXX0KXGVuZHthbGlnbmVkfWBgYF0KCgoKVGhlcmVmb3JlIFtgcj0oWyRiQWJzXSArIFskcm9vdF0pL1skYVR3b109WyRwb3NpdGl2ZVplcm9dYF0gYW5kIFtgcj0oWyRiQWJzXSAtIFskcm9vdF0pL1skYVR3b109LVskbmVnYXRpdmVaZXJvQWJzXVx0ZXh0ey59YF0gVGhlIHplcm9zIG9mIFtgUShyKWBdIGFyZSBbYHI9WyRwb3NpdGl2ZVplcm9dYF0gYW5kIFtgcj0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=4&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.4)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $m=Compute(random(2,4,1));
+      $negativeZero=Compute(random(-7,-3,1));
+      $negativeZeroAbs=-$negativeZero;
+      do {$positiveZero=Compute(random(2,8,1)); } until ($positiveZero+$negativeZero &gt; 0);
+      $a=$m;
+      $aTwo=2*$a;
+      $bAbs=$m*($positiveZero+$negativeZero);
+      $bSq=$bAbs**2;
+      $cAbs=-$m*$negativeZero*$positiveZero;
+      $const=4*($a)*($cAbs);
+      $rootSq=$bSq+$const;
+      $root=sqrt($rootSq);
+      $ListAns=List("$negativeZero,$positiveZero");
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```Q(r)=[$a] r^2-[$bAbs] r-[$cAbs] ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`r=`] [_____]{$ListAns} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Try to factor [`Q(r)`] or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      We solve for [`r`] in the equation [`Q(r)=[$a] r^2-[$bAbs] r-[$cAbs]=0`] using the quadratic formula with [`a=[$a]\text{,}`] [`b=-[$bAbs]`] and [`c=-[$cAbs]\text{.}`]
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       r\amp =\amp \frac{-(-[$bAbs]) \pm \sqrt{(-[$bAbs])^2-4([$a])(-[$cAbs])}}{2([$a])}\\
+       r\amp =\amp \frac{[$bAbs] \pm \sqrt{[$bSq]+[$const]}}{[$aTwo]}\\
+       r\amp =\amp \frac{[$bAbs] \pm \sqrt{[$rootSq]}}{[$aTwo]}\\
+       r\amp =\amp \frac{[$bAbs] \pm [$root]}{[$aTwo]}
+      \end{aligned}```]
+      
+      Therefore [`r=([$bAbs] + [$root])/[$aTwo]=[$positiveZero]`] and [`r=([$bAbs] - [$root])/[$aTwo]=-[$negativeZeroAbs]\text{.}`] The zeros of [`Q(r)`] are [`r=[$positiveZero]`] and [`r=-[$negativeZeroAbs]\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw17-practice" ww-id="problem-3-1pw17-practice">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $m=Compute(random(2,4,1));
+                                      $negativeZero=Compute(random(-7,-3,1));
+                                      $negativeZeroAbs=-$negativeZero;
+                                      do {$positiveZero=Compute(random(2,8,1)); } until ($positiveZero+$negativeZero &gt; 0);
+                                      $a=$m;
+                                      $aTwo=2*$a;
+                                      $bAbs=$m*($positiveZero+$negativeZero);
+                                      $bSq=$bAbs**2;
+                                      $cAbs=-$m*$negativeZero*$positiveZero;
+                                      $const=4*($a)*($cAbs);
+                                      $rootSq=$bSq+$const;
+                                      $root=sqrt($rootSq);
+                                      $ListAns=List("$negativeZero,$positiveZero");
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros. 
+                                  <me>Q(r)=<var name="$a"/> r^2-<var name="$bAbs"/> r-<var name="$cAbs"/> </me></p>
+          <p>Separate answers with commas. Round your answers to three decimal places.</p>
+          <p>Zeros at <m>r=</m> <var name="$ListAns" width="5" category="number"/></p>
+        </statement>
+        <hint>
+          <p>Try to factor <m>Q(r)</m> or use the quadratic formula.</p>
+        </hint>
+        <solution>
+          <p> We solve for <m>r</m> in the equation <m>Q(r)=<var name="$a"/> r^2-<var name="$bAbs"/> r-<var name="$cAbs"/>=0</m> using the quadratic formula with <m>a=<var name="$a"/></m>, <m>b=-<var name="$bAbs"/></m> and <m>c=-<var name="$cAbs"/></m>.
+                                  <md><mrow> r\amp =\amp \frac{-(-<var name="$bAbs"/>) \pm \sqrt{(-<var name="$bAbs"/>)^2-4(<var name="$a"/>)(-<var name="$cAbs"/>)}}{2(<var name="$a"/>)}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm \sqrt{<var name="$bSq"/>+<var name="$const"/>}}{<var name="$aTwo"/>}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm \sqrt{<var name="$rootSq"/>}}{<var name="$aTwo"/>}</mrow><mrow> r\amp =\amp \frac{<var name="$bAbs"/> \pm <var name="$root"/>}{<var name="$aTwo"/>}</mrow></md> </p>
+          <p> Therefore <m>r=(<var name="$bAbs"/> + <var name="$root"/>)/<var name="$aTwo"/>=<var name="$positiveZero"/></m> and <m>r=(<var name="$bAbs"/> - <var name="$root"/>)/<var name="$aTwo"/>=-<var name="$negativeZeroAbs"/></m>. The zeros of <m>Q(r)</m> are <m>r=<var name="$positiveZero"/></m> and <m>r=-<var name="$negativeZeroAbs"/></m>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="8">
+      <statement>
+      <p>Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.</p>
+      <p><me>Q(r)={4} r^2-{8} r-{192}</me></p>
+      <p>Separate answers with commas. Round your answers to three decimal places.</p>
+      <p>Zeros at <m>r=</m> <fillin name="AnSwEr0001" characters="5" /></p>
+      </statement>
+      
+      <hint>
+      <p>Try to factor <m>Q(r)</m> or use the quadratic formula.</p>
+      </hint>
+      
+      <solution>
+      <p>We solve for <m>r</m> in the equation <m>Q(r)={4} r^2-{8} r-{192}=0</m> using the quadratic formula with <m>a={4}\text{,}</m> <m>b=-{8}</m> and <m>c=-{192}\text{.}</m></p>
+      <p><me>\begin{aligned}
+       r\amp =\amp \frac{-(-{8}) \pm \sqrt{(-{8})^2-4({4})(-{192})}}{2({4})}\\
+       r\amp =\amp \frac{{8} \pm \sqrt{{64}+{3072}}}{{8}}\\
+       r\amp =\amp \frac{{8} \pm \sqrt{{3136}}}{{8}}\\
+       r\amp =\amp \frac{{8} \pm {56}}{{8}}
+      \end{aligned}</me></p>
+      <p>Therefore <m>r=({8} + {56})/{8}={8}</m> and <m>r=({8} - {56})/{8}=-{6}\text{.}</m> The zeros of <m>Q(r)</m> are <m>r={8}</m> and <m>r=-{6}\text{.}</m></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIHNvbHZlIGZvciBbYHJgXSBpbiB0aGUgZXF1YXRpb24gW2BRKHIpPVskYV0gcl4yLVskYkFic10gci1bJGNBYnNdPTBgXSB1c2luZyB0aGUgcXVhZHJhdGljIGZvcm11bGEgd2l0aCBbYGE9WyRhXVx0ZXh0eyx9YF0gW2BiPS1bJGJBYnNdYF0gYW5kIFtgYz0tWyRjQWJzXVx0ZXh0ey59YF0KCltgYGBcYmVnaW57YWxpZ25lZH0KIHJcYW1wID1cYW1wIFxmcmFjey0oLVskYkFic10pIFxwbSBcc3FydHsoLVskYkFic10pXjItNChbJGFdKSgtWyRjQWJzXSl9fXsyKFskYV0pfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJGJTcV0rWyRjb25zdF19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBcc3FydHtbJHJvb3RTcV19fXtbJGFUd29dfVxcCiByXGFtcCA9XGFtcCBcZnJhY3tbJGJBYnNdIFxwbSBbJHJvb3RdfXtbJGFUd29dfQpcZW5ke2FsaWduZWR9YGBgXQoKCgpUaGVyZWZvcmUgW2ByPShbJGJBYnNdICsgWyRyb290XSkvWyRhVHdvXT1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPShbJGJBYnNdIC0gWyRyb290XSkvWyRhVHdvXT0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXSBUaGUgemVyb3Mgb2YgW2BRKHIpYF0gYXJlIFtgcj1bJHBvc2l0aXZlWmVyb11gXSBhbmQgW2ByPS1bJG5lZ2F0aXZlWmVyb0Fic11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRyeSB0byBmYWN0b3IgW2BRKHIpYF0gb3IgdXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYS4KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSBzb2x2ZSBmb3IgW2ByYF0gaW4gdGhlIGVxdWF0aW9uIFtgUShyKT1bJGFdIHJeMi1bJGJBYnNdIHItWyRjQWJzXT0wYF0gdXNpbmcgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHdpdGggW2BhPVskYV1cdGV4dHssfWBdIFtgYj0tWyRiQWJzXWBdIGFuZCBbYGM9LVskY0Fic11cdGV4dHsufWBdCgpbYGBgXGJlZ2lue2FsaWduZWR9CiByXGFtcCA9XGFtcCBcZnJhY3stKC1bJGJBYnNdKSBccG0gXHNxcnR7KC1bJGJBYnNdKV4yLTQoWyRhXSkoLVskY0Fic10pfX17MihbJGFdKX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gXHNxcnR7WyRiU3FdK1skY29uc3RdfX17WyRhVHdvXX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gXHNxcnR7WyRyb290U3FdfX17WyRhVHdvXX1cXAogclxhbXAgPVxhbXAgXGZyYWN7WyRiQWJzXSBccG0gWyRyb290XX17WyRhVHdvXX0KXGVuZHthbGlnbmVkfWBgYF0KCgoKVGhlcmVmb3JlIFtgcj0oWyRiQWJzXSArIFskcm9vdF0pL1skYVR3b109WyRwb3NpdGl2ZVplcm9dYF0gYW5kIFtgcj0oWyRiQWJzXSAtIFskcm9vdF0pL1skYVR3b109LVskbmVnYXRpdmVaZXJvQWJzXVx0ZXh0ey59YF0gVGhlIHplcm9zIG9mIFtgUShyKWBdIGFyZSBbYHI9WyRwb3NpdGl2ZVplcm9dYF0gYW5kIFtgcj0tWyRuZWdhdGl2ZVplcm9BYnNdXHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRtPUNvbXB1dGUocmFuZG9tKDIsNCwxKSk7CiRuZWdhdGl2ZVplcm89Q29tcHV0ZShyYW5kb20oLTcsLTMsMSkpOwokbmVnYXRpdmVaZXJvQWJzPS0kbmVnYXRpdmVaZXJvOwpkbyB7JHBvc2l0aXZlWmVybz1Db21wdXRlKHJhbmRvbSgyLDgsMSkpOyB9IHVudGlsICgkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8gPiAwKTsKJGE9JG07CiRhVHdvPTIqJGE7CiRiQWJzPSRtKigkcG9zaXRpdmVaZXJvKyRuZWdhdGl2ZVplcm8pOwokYlNxPSRiQWJzKioyOwokY0Ficz0tJG0qJG5lZ2F0aXZlWmVybyokcG9zaXRpdmVaZXJvOwokY29uc3Q9NCooJGEpKigkY0Ficyk7CiRyb290U3E9JGJTcSskY29uc3Q7CiRyb290PXNxcnQoJHJvb3RTcSk7CiRMaXN0QW5zPUxpc3QoIiRuZWdhdGl2ZVplcm8sJHBvc2l0aXZlWmVybyIpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB6ZXJvcyAoaWYgYW55KSBvZiB0aGUgZnVuY3Rpb24gYWxnZWJyYWljYWxseS4gRW50ZXIgTk9ORSBpbiB0aGUgcmVzcG9uc2UgZmllbGQgYmVsb3cgaWYgdGhlcmUgYXJlIG5vIHplcm9zLgoKW2BgYFEocik9WyRhXSByXjItWyRiQWJzXSByLVskY0Fic10gYGBgXQoKCgpTZXBhcmF0ZSBhbnN3ZXJzIHdpdGggY29tbWFzLiBSb3VuZCB5b3VyIGFuc3dlcnMgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpaZXJvcyBhdCBbYHI9YF0gW19fX19fXXskTGlzdEFuc30gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(4.8)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $m=Compute(random(2,4,1));
+      $negativeZero=Compute(random(-7,-3,1));
+      $negativeZeroAbs=-$negativeZero;
+      do {$positiveZero=Compute(random(2,8,1)); } until ($positiveZero+$negativeZero &gt; 0);
+      $a=$m;
+      $aTwo=2*$a;
+      $bAbs=$m*($positiveZero+$negativeZero);
+      $bSq=$bAbs**2;
+      $cAbs=-$m*$negativeZero*$positiveZero;
+      $const=4*($a)*($cAbs);
+      $rootSq=$bSq+$const;
+      $root=sqrt($rootSq);
+      $ListAns=List("$negativeZero,$positiveZero");
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find the zeros (if any) of the function algebraically. Enter NONE in the response field below if there are no zeros.
+      
+      [```Q(r)=[$a] r^2-[$bAbs] r-[$cAbs] ```]
+      
+      Separate answers with commas. Round your answers to three decimal places.
+      
+      Zeros at [`r=`] [_____]{$ListAns} [@AnswerFormatHelp('numbers')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Try to factor [`Q(r)`] or use the quadratic formula.
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      We solve for [`r`] in the equation [`Q(r)=[$a] r^2-[$bAbs] r-[$cAbs]=0`] using the quadratic formula with [`a=[$a]\text{,}`] [`b=-[$bAbs]`] and [`c=-[$cAbs]\text{.}`]
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       r\amp =\amp \frac{-(-[$bAbs]) \pm \sqrt{(-[$bAbs])^2-4([$a])(-[$cAbs])}}{2([$a])}\\
+       r\amp =\amp \frac{[$bAbs] \pm \sqrt{[$bSq]+[$const]}}{[$aTwo]}\\
+       r\amp =\amp \frac{[$bAbs] \pm \sqrt{[$rootSq]}}{[$aTwo]}\\
+       r\amp =\amp \frac{[$bAbs] \pm [$root]}{[$aTwo]}
+      \end{aligned}```]
+      
+      Therefore [`r=([$bAbs] + [$root])/[$aTwo]=[$positiveZero]`] and [`r=([$bAbs] - [$root])/[$aTwo]=-[$negativeZeroAbs]\text{.}`] The zeros of [`Q(r)`] are [`r=[$positiveZero]`] and [`r=-[$negativeZeroAbs]\text{.}`]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw21" ww-id="problem-3-1pw21">
+    <authored>
+      
+        <!-- <pg-macros>
+                                  <macro-file>problemRandomize.pl</macro-file>
+                              </pg-macros> -->
+        <setup>
+          <pg-code>
+                                      <!-- ProblemRandomize(when=>"always",onlyAfterDue=>0,style=>"Button"); -->
+                                      $a=Compute(non_zero_random(-10,10,1));
+                                      $b=Compute(non_zero_random(-10,10,1));
+                                      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+                                      if (0 &gt; $a){
+                                          $CorrectChoice="concave down"; 
+                                          $IncorrectChoice="concave up";} 
+                                      else {
+                                          $CorrectChoice="concave up"; 
+                                          $IncorrectChoice="concave down";}
+                                      $MultipleC= RadioButtons(
+                                      [$CorrectChoice,$IncorrectChoice],
+                                      $CorrectChoice, # correct answer
+                                      );
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+          <p>
+            <var name="$MultipleC" form="buttons"/>
+          </p>
+        </statement>
+        <hint>
+                                  Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                              </hint>
+        <solution>
+          <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="9">
+      <statement>
+      <p>Is the graph of the quadratic function <m>{10\!\left(x-10\right)^{2}}</m> concave up or concave down?</p>
+      <p><var form="buttons">
+      <li>
+      <p>concave up</p>
+      </li>
+      <li>
+      <p>concave down</p>
+      </li>
+      </var></p>
+      </statement>
+      
+      <hint>
+      <p>Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?</p>
+      </hint>
+      
+      <solution>
+      <p>Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m>{10}\text{,}</m> so this function has a graph which is concave up.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldpdGhvdXQgZnVsbHkgbXVsdGlwbHlpbmcgb3V0LCB3ZSBjYW4gc2VlIHRoYXQgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gaXMgW2BbJGFdXHRleHR7LH1gXSBzbyB0aGlzIGZ1bmN0aW9uIGhhcyBhIGdyYXBoIHdoaWNoIGlzIFskQ29ycmVjdENob2ljZV0uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXaXRob3V0IGZ1bGx5IG11bHRpcGx5aW5nIG91dCwgd2UgY2FuIHNlZSB0aGF0IHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGlzIFtgWyRhXVx0ZXh0eyx9YF0gc28gdGhpcyBmdW5jdGlvbiBoYXMgYSBncmFwaCB3aGljaCBpcyBbJENvcnJlY3RDaG9pY2VdLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.1)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "parserRadioButtons.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(non_zero_random(-10,10,1));
+      $b=Compute(non_zero_random(-10,10,1));
+      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+      if (0 &gt; $a){
+          $CorrectChoice="concave down"; 
+          $IncorrectChoice="concave up";} 
+      else {
+          $CorrectChoice="concave up"; 
+          $IncorrectChoice="concave down";}
+      $MultipleC= RadioButtons(
+      [$CorrectChoice,$IncorrectChoice],
+      $CorrectChoice, # correct answer
+      );
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Is the graph of the quadratic function [` [$quadratic] `] concave up or concave down?
+      
+          [_____]{$MultipleC}
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Will the coefficient of [`x^2`] be positive or negative if you expand completely?
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Without fully multiplying out, we can see that the coefficient of [`x^2`] is [`[$a]\text{,}`] so this function has a graph which is [$CorrectChoice].
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw21-repeat" ww-id="problem-3-1pw21-repeat">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(non_zero_random(-10,10,1));
+                                      $b=Compute(non_zero_random(-10,10,1));
+                                      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+                                      if (0 &gt; $a){
+                                          $CorrectChoice="concave down"; 
+                                          $IncorrectChoice="concave up";} 
+                                      else {
+                                          $CorrectChoice="concave up";
+                                          $IncorrectChoice="concave down";}
+                                      $MultipleC= RadioButtons(
+                                      [$CorrectChoice,$IncorrectChoice],
+                                      $CorrectChoice, # correct answer
+                                      );
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+          <p>
+            <var name="$MultipleC" form="buttons"/>
+          </p>
+        </statement>
+        <hint>
+                                  Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                              </hint>
+        <solution>
+          <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="10">
+      <statement>
+      <p>Is the graph of the quadratic function <m>{-8\!\left(x-3\right)^{2}}</m> concave up or concave down?</p>
+      <p><var form="buttons">
+      <li>
+      <p>concave down</p>
+      </li>
+      <li>
+      <p>concave up</p>
+      </li>
+      </var></p>
+      </statement>
+      
+      <hint>
+      <p>Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?</p>
+      </hint>
+      
+      <solution>
+      <p>Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m>{-8}\text{,}</m> so this function has a graph which is concave down.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOwogICAgJEluY29ycmVjdENob2ljZT0iY29uY2F2ZSBkb3duIjt9CiRNdWx0aXBsZUM9IFJhZGlvQnV0dG9ucygKWyRDb3JyZWN0Q2hvaWNlLCRJbmNvcnJlY3RDaG9pY2VdLAokQ29ycmVjdENob2ljZSwgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApJcyB0aGUgZ3JhcGggb2YgdGhlIHF1YWRyYXRpYyBmdW5jdGlvbiBbYCBbJHF1YWRyYXRpY10gYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgogICAgW19fX19fXXskTXVsdGlwbGVDfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKV2lsbCB0aGUgY29lZmZpY2llbnQgb2YgW2B4XjJgXSBiZSBwb3NpdGl2ZSBvciBuZWdhdGl2ZSBpZiB5b3UgZXhwYW5kIGNvbXBsZXRlbHk%2FCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KV2l0aG91dCBmdWxseSBtdWx0aXBseWluZyBvdXQsIHdlIGNhbiBzZWUgdGhhdCB0aGUgY29lZmZpY2llbnQgb2YgW2B4XjJgXSBpcyBbYFskYV1cdGV4dHssfWBdIHNvIHRoaXMgZnVuY3Rpb24gaGFzIGEgZ3JhcGggd2hpY2ggaXMgWyRDb3JyZWN0Q2hvaWNlXS4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOwogICAgJEluY29ycmVjdENob2ljZT0iY29uY2F2ZSBkb3duIjt9CiRNdWx0aXBsZUM9IFJhZGlvQnV0dG9ucygKWyRDb3JyZWN0Q2hvaWNlLCRJbmNvcnJlY3RDaG9pY2VdLAokQ29ycmVjdENob2ljZSwgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApJcyB0aGUgZ3JhcGggb2YgdGhlIHF1YWRyYXRpYyBmdW5jdGlvbiBbYCBbJHF1YWRyYXRpY10gYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgogICAgW19fX19fXXskTXVsdGlwbGVDfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKV2lsbCB0aGUgY29lZmZpY2llbnQgb2YgW2B4XjJgXSBiZSBwb3NpdGl2ZSBvciBuZWdhdGl2ZSBpZiB5b3UgZXhwYW5kIGNvbXBsZXRlbHk%2FCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOwogICAgJEluY29ycmVjdENob2ljZT0iY29uY2F2ZSBkb3duIjt9CiRNdWx0aXBsZUM9IFJhZGlvQnV0dG9ucygKWyRDb3JyZWN0Q2hvaWNlLCRJbmNvcnJlY3RDaG9pY2VdLAokQ29ycmVjdENob2ljZSwgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApJcyB0aGUgZ3JhcGggb2YgdGhlIHF1YWRyYXRpYyBmdW5jdGlvbiBbYCBbJHF1YWRyYXRpY10gYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgogICAgW19fX19fXXskTXVsdGlwbGVDfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCldpdGhvdXQgZnVsbHkgbXVsdGlwbHlpbmcgb3V0LCB3ZSBjYW4gc2VlIHRoYXQgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gaXMgW2BbJGFdXHRleHR7LH1gXSBzbyB0aGlzIGZ1bmN0aW9uIGhhcyBhIGdyYXBoIHdoaWNoIGlzIFskQ29ycmVjdENob2ljZV0uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOwogICAgJEluY29ycmVjdENob2ljZT0iY29uY2F2ZSBkb3duIjt9CiRNdWx0aXBsZUM9IFJhZGlvQnV0dG9ucygKWyRDb3JyZWN0Q2hvaWNlLCRJbmNvcnJlY3RDaG9pY2VdLAokQ29ycmVjdENob2ljZSwgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApJcyB0aGUgZ3JhcGggb2YgdGhlIHF1YWRyYXRpYyBmdW5jdGlvbiBbYCBbJHF1YWRyYXRpY10gYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgogICAgW19fX19fXXskTXVsdGlwbGVDfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.2)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "parserRadioButtons.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(non_zero_random(-10,10,1));
+      $b=Compute(non_zero_random(-10,10,1));
+      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+      if (0 &gt; $a){
+          $CorrectChoice="concave down"; 
+          $IncorrectChoice="concave up";} 
+      else {
+          $CorrectChoice="concave up";
+          $IncorrectChoice="concave down";}
+      $MultipleC= RadioButtons(
+      [$CorrectChoice,$IncorrectChoice],
+      $CorrectChoice, # correct answer
+      );
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Is the graph of the quadratic function [` [$quadratic] `] concave up or concave down?
+      
+          [_____]{$MultipleC}
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Will the coefficient of [`x^2`] be positive or negative if you expand completely?
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Without fully multiplying out, we can see that the coefficient of [`x^2`] is [`[$a]\text{,}`] so this function has a graph which is [$CorrectChoice].
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw21-repeat-repeat" ww-id="problem-3-1pw21-repeat-repeat">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(non_zero_random(-10,10,1));
+                                      $b=Compute(non_zero_random(-10,10,1));
+                                      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+                                      if (0 &gt; $a){
+                                          $CorrectChoice="concave down"; 
+                                          $IncorrectChoice="concave up";} 
+                                      else {
+                                          $CorrectChoice="concave up"; 
+                                          $IncorrectChoice="concave down";}
+                                      $MultipleC= RadioButtons(
+                                      [$CorrectChoice,$IncorrectChoice],
+                                      $CorrectChoice, # correct answer
+                                      );
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+          <p>
+            <var name="$MultipleC" form="buttons"/>
+          </p>
+        </statement>
+        <hint>
+                                  Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                              </hint>
+        <solution>
+          <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="11">
+      <statement>
+      <p>Is the graph of the quadratic function <m>{-6\!\left(x+4\right)^{2}}</m> concave up or concave down?</p>
+      <p><var form="buttons">
+      <li>
+      <p>concave down</p>
+      </li>
+      <li>
+      <p>concave up</p>
+      </li>
+      </var></p>
+      </statement>
+      
+      <hint>
+      <p>Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?</p>
+      </hint>
+      
+      <solution>
+      <p>Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m>{-6}\text{,}</m> so this function has a graph which is concave down.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldpdGhvdXQgZnVsbHkgbXVsdGlwbHlpbmcgb3V0LCB3ZSBjYW4gc2VlIHRoYXQgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gaXMgW2BbJGFdXHRleHR7LH1gXSBzbyB0aGlzIGZ1bmN0aW9uIGhhcyBhIGdyYXBoIHdoaWNoIGlzIFskQ29ycmVjdENob2ljZV0uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXaXRob3V0IGZ1bGx5IG11bHRpcGx5aW5nIG91dCwgd2UgY2FuIHNlZSB0aGF0IHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGlzIFtgWyRhXVx0ZXh0eyx9YF0gc28gdGhpcyBmdW5jdGlvbiBoYXMgYSBncmFwaCB3aGljaCBpcyBbJENvcnJlY3RDaG9pY2VdLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:20-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.3)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "parserRadioButtons.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(non_zero_random(-10,10,1));
+      $b=Compute(non_zero_random(-10,10,1));
+      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+      if (0 &gt; $a){
+          $CorrectChoice="concave down"; 
+          $IncorrectChoice="concave up";} 
+      else {
+          $CorrectChoice="concave up"; 
+          $IncorrectChoice="concave down";}
+      $MultipleC= RadioButtons(
+      [$CorrectChoice,$IncorrectChoice],
+      $CorrectChoice, # correct answer
+      );
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Is the graph of the quadratic function [` [$quadratic] `] concave up or concave down?
+      
+          [_____]{$MultipleC}
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Will the coefficient of [`x^2`] be positive or negative if you expand completely?
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Without fully multiplying out, we can see that the coefficient of [`x^2`] is [`[$a]\text{,}`] so this function has a graph which is [$CorrectChoice].
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw21-repeat-repeat-repeat" ww-id="problem-3-1pw21-repeat-repeat-repeat">
+    <authored>
+      
+        <setup>
+          <pg-code>
+                                      $a=Compute(non_zero_random(-10,10,1));
+                                      $b=Compute(non_zero_random(-10,10,1));
+                                      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+                                      if (0 &gt; $a){
+                                          $CorrectChoice="concave down"; 
+                                          $IncorrectChoice="concave up";} 
+                                      else {
+                                          $CorrectChoice="concave up"; 
+                                          $IncorrectChoice="concave down";}
+                                      $MultipleC= RadioButtons(
+                                      [$CorrectChoice,$IncorrectChoice],
+                                      $CorrectChoice, # correct answer
+                                      );
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+          <p>
+            <var name="$MultipleC" form="buttons"/>
+          </p>
+        </statement>
+        <hint>
+                                  Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                              </hint>
+        <solution>
+          <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="510">
+      <statement>
+      <p>Is the graph of the quadratic function <m>{-\left(x-6\right)^{2}}</m> concave up or concave down?</p>
+      <p><var form="buttons">
+      <li>
+      <p>concave down</p>
+      </li>
+      <li>
+      <p>concave up</p>
+      </li>
+      </var></p>
+      </statement>
+      
+      <hint>
+      <p>Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?</p>
+      </hint>
+      
+      <solution>
+      <p>Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m>{-1}\text{,}</m> so this function has a graph which is concave down.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=510&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldpdGhvdXQgZnVsbHkgbXVsdGlwbHlpbmcgb3V0LCB3ZSBjYW4gc2VlIHRoYXQgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gaXMgW2BbJGFdXHRleHR7LH1gXSBzbyB0aGlzIGZ1bmN0aW9uIGhhcyBhIGdyYXBoIHdoaWNoIGlzIFskQ29ycmVjdENob2ljZV0uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=510&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldpbGwgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gYmUgcG9zaXRpdmUgb3IgbmVnYXRpdmUgaWYgeW91IGV4cGFuZCBjb21wbGV0ZWx5PwpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=510&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXaXRob3V0IGZ1bGx5IG11bHRpcGx5aW5nIG91dCwgd2UgY2FuIHNlZSB0aGF0IHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGlzIFtgWyRhXVx0ZXh0eyx9YF0gc28gdGhpcyBmdW5jdGlvbiBoYXMgYSBncmFwaCB3aGljaCBpcyBbJENvcnJlY3RDaG9pY2VdLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=510&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGE9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJGI9Q29tcHV0ZShub25femVyb19yYW5kb20oLTEwLDEwLDEpKTsKJHF1YWRyYXRpYz1Db21wdXRlKCIkYSAqICh4LSRiKV4yIiktPnJlZHVjZSgpOwppZiAoMCA%2BICRhKXsKICAgICRDb3JyZWN0Q2hvaWNlPSJjb25jYXZlIGRvd24iOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiO30gCmVsc2UgewogICAgJENvcnJlY3RDaG9pY2U9ImNvbmNhdmUgdXAiOyAKICAgICRJbmNvcnJlY3RDaG9pY2U9ImNvbmNhdmUgZG93biI7fQokTXVsdGlwbGVDPSBSYWRpb0J1dHRvbnMoClskQ29ycmVjdENob2ljZSwkSW5jb3JyZWN0Q2hvaWNlXSwKJENvcnJlY3RDaG9pY2UsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2AgWyRxdWFkcmF0aWNdIGBdIGNvbmNhdmUgdXAgb3IgY29uY2F2ZSBkb3duPwoKICAgIFtfX19fX117JE11bHRpcGxlQ30KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:21-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.4)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "parserRadioButtons.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $a=Compute(non_zero_random(-10,10,1));
+      $b=Compute(non_zero_random(-10,10,1));
+      $quadratic=Compute("$a * (x-$b)^2")-&gt;reduce();
+      if (0 &gt; $a){
+          $CorrectChoice="concave down"; 
+          $IncorrectChoice="concave up";} 
+      else {
+          $CorrectChoice="concave up"; 
+          $IncorrectChoice="concave down";}
+      $MultipleC= RadioButtons(
+      [$CorrectChoice,$IncorrectChoice],
+      $CorrectChoice, # correct answer
+      );
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Is the graph of the quadratic function [` [$quadratic] `] concave up or concave down?
+      
+          [_____]{$MultipleC}
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Will the coefficient of [`x^2`] be positive or negative if you expand completely?
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Without fully multiplying out, we can see that the coefficient of [`x^2`] is [`[$a]\text{,}`] so this function has a graph which is [$CorrectChoice].
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw22" ww-id="problem-3-1pw22">
+    <authored>
+      
+        <!-- <pg-macros>
+                                  <macro-file>problemRandomize.pl</macro-file>
+                              </pg-macros> -->
+        <setup>
+          <pg-code>
+                                      <!-- ProblemRandomize(when=>"always",onlyAfterDue=>0,style=>"Button"); -->
+                                      $p=Compute(random(2,10,1));
+                                      do {$q=Compute(random(2,10,1))} until ($q != $p);
+                                      do {$r=Compute(random(2,10,1))} until (($r != $q) and ($r != $p));
+                                      $a=-$p*$q*$r;
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p> Is the graph of the quadratic function <m>y= <var name="$p"/>(1-<var name="$q"/> x)(x-<var name="$r"/>)</m> concave up or concave down?</p>
+        </statement>
+        <hint>
+                                  Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                              </hint>
+        <solution>
+          <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is concave down.
+                                  </p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="13">
+      <statement>
+      <p>Is the graph of the quadratic function <m>y= {5}(1-{7} x)(x-{3})</m> concave up or concave down?</p>
+      </statement>
+      
+      <hint>
+      <p>Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?</p>
+      </hint>
+      
+      <solution>
+      <p>Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m>{-105}\text{,}</m> so this function has a graph which is concave down.</p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=13&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHA9Q29tcHV0ZShyYW5kb20oMiwxMCwxKSk7CmRvIHskcT1Db21wdXRlKHJhbmRvbSgyLDEwLDEpKX0gdW50aWwgKCRxICE9ICRwKTsKZG8geyRyPUNvbXB1dGUocmFuZG9tKDIsMTAsMSkpfSB1bnRpbCAoKCRyICE9ICRxKSBhbmQgKCRyICE9ICRwKSk7CiRhPS0kcCokcSokcjsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2B5PSBbJHBdKDEtWyRxXSB4KSh4LVskcl0pYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaWxsIHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGJlIHBvc2l0aXZlIG9yIG5lZ2F0aXZlIGlmIHlvdSBleHBhbmQgY29tcGxldGVseT8KRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXaXRob3V0IGZ1bGx5IG11bHRpcGx5aW5nIG91dCwgd2UgY2FuIHNlZSB0aGF0IHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGlzIFtgWyRhXVx0ZXh0eyx9YF0gc28gdGhpcyBmdW5jdGlvbiBoYXMgYSBncmFwaCB3aGljaCBpcyBjb25jYXZlIGRvd24uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=13&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHA9Q29tcHV0ZShyYW5kb20oMiwxMCwxKSk7CmRvIHskcT1Db21wdXRlKHJhbmRvbSgyLDEwLDEpKX0gdW50aWwgKCRxICE9ICRwKTsKZG8geyRyPUNvbXB1dGUocmFuZG9tKDIsMTAsMSkpfSB1bnRpbCAoKCRyICE9ICRxKSBhbmQgKCRyICE9ICRwKSk7CiRhPS0kcCokcSokcjsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2B5PSBbJHBdKDEtWyRxXSB4KSh4LVskcl0pYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaWxsIHRoZSBjb2VmZmljaWVudCBvZiBbYHheMmBdIGJlIHBvc2l0aXZlIG9yIG5lZ2F0aXZlIGlmIHlvdSBleHBhbmQgY29tcGxldGVseT8KRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=13&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHA9Q29tcHV0ZShyYW5kb20oMiwxMCwxKSk7CmRvIHskcT1Db21wdXRlKHJhbmRvbSgyLDEwLDEpKX0gdW50aWwgKCRxICE9ICRwKTsKZG8geyRyPUNvbXB1dGUocmFuZG9tKDIsMTAsMSkpfSB1bnRpbCAoKCRyICE9ICRxKSBhbmQgKCRyICE9ICRwKSk7CiRhPS0kcCokcSokcjsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2B5PSBbJHBdKDEtWyRxXSB4KSh4LVskcl0pYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KV2l0aG91dCBmdWxseSBtdWx0aXBseWluZyBvdXQsIHdlIGNhbiBzZWUgdGhhdCB0aGUgY29lZmZpY2llbnQgb2YgW2B4XjJgXSBpcyBbYFskYV1cdGV4dHssfWBdIHNvIHRoaXMgZnVuY3Rpb24gaGFzIGEgZ3JhcGggd2hpY2ggaXMgY29uY2F2ZSBkb3duLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=13&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JHA9Q29tcHV0ZShyYW5kb20oMiwxMCwxKSk7CmRvIHskcT1Db21wdXRlKHJhbmRvbSgyLDEwLDEpKX0gdW50aWwgKCRxICE9ICRwKTsKZG8geyRyPUNvbXB1dGUocmFuZG9tKDIsMTAsMSkpfSB1bnRpbCAoKCRyICE9ICRxKSBhbmQgKCRyICE9ICRwKSk7CiRhPS0kcCokcSokcjsKCkJFR0lOX1BHTUwKSXMgdGhlIGdyYXBoIG9mIHRoZSBxdWFkcmF0aWMgZnVuY3Rpb24gW2B5PSBbJHBdKDEtWyRxXSB4KSh4LVskcl0pYF0gY29uY2F2ZSB1cCBvciBjb25jYXZlIGRvd24%2FCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:21-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.5)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      $p=Compute(random(2,10,1));
+      do {$q=Compute(random(2,10,1))} until ($q != $p);
+      do {$r=Compute(random(2,10,1))} until (($r != $q) and ($r != $p));
+      $a=-$p*$q*$r;
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Is the graph of the quadratic function [`y= [$p](1-[$q] x)(x-[$r])`] concave up or concave down?
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Will the coefficient of [`x^2`] be positive or negative if you expand completely?
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      Without fully multiplying out, we can see that the coefficient of [`x^2`] is [`[$a]\text{,}`] so this function has a graph which is concave down.
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw35" ww-id="problem-3-1pw35">
+    <authored>
+      
+        <!-- <pg-macros>
+                                  <macro-file>problemRandomize.pl</macro-file>
+                              </pg-macros> -->
+        <setup>
+          <pg-code>
+                                      
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p/>
+        </statement>
+        <hint>
+          <p/>
+        </hint>
+        <solution>
+          <p/>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="14">
+      <statement>
+      
+      </statement>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=14&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=14&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=14&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=14&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:21-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.6)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGcourse.pl",
+      );
+      
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      Context('Numeric');
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw36" ww-id="problem-3-1pw36">
+    <authored>
+      
+        <!-- <pg-macros>
+                                  <macro-file>problemRandomize.pl</macro-file>
+                              </pg-macros> -->
+        <setup>
+          <pg-code>
+                                      $refreshCachedImages = 1;
+                                      $fM7=-5/12*(-7)**2-5/3*(-7)+5;
+                                      $fM2=-5/12*(-2)**2-5/3*(-2)+5;
+                                      $graph1=init_graph(-7,$fM7,3,$fM2+0.5,axes=&gt;[0,0],size=&gt;[250,250]);
+                                      add_functions($graph1, "-5/12*x^2-5/3*x+5 for x in &lt;-7,3&gt; using color:blue and weight:2");
+                                      $graph1-&gt;lb( new Label(-6,0,'(-6,0)','black','left','top'));
+                                      $graph1-&gt;lb( new Label(0,5,'(0,5)','black','right','middle'));
+                                      $graph1-&gt;lb( new Label(2,0,'(2,0)','black','right','top'));\
+                                      $graph1-&gt;stamps( closed_circle(-6,0,'blue') );
+                                      $graph1-&gt;stamps( closed_circle(0,5,'blue') );
+                                      $graph1-&gt;stamps( closed_circle(2,0,'blue') );
+                                      $graph1-&gt;lb( new Label(3-0.4,0.3,'x','black','center','middle'));
+                                      $graph1-&gt;lb( new Label(0.3,$fM2,'y','black','center','middle'));
+                                      $xN=6;
+                                      $xP=2;
+                                      $d=$xN*$xP;
+                                      $c=5;
+                                      $p=5;
+                                      $q=3;
+                                      Context()-&gt;flags-&gt;set(reduceConstants =&gt; 0);
+                                      $f=Formula("-5/12*x^2-5/3*x +5");
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>  Find a formula for the parabola. </p>
+          <sidebyside widths="50%">
+            <image pg-name="$graph1"/>
+          </sidebyside>
+          <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
+        </statement>
+        <hint>
+          <p> Which of the ways to write the equation of a parabola allows you to see the zeros more easily? </p>
+        </hint>
+        <solution>
+          <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                                  <md><mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow><mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow><mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow></md>
+                                  Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
+        </solution>
+      
+    </authored>
+
+      
+    <static seed="15">
+      <statement>
+      <p>Find a formula for the parabola.</p>
+      <sidebyside widths="50%">
+      <image source="images/problem-3-1pw36-image-1.png" />
+      </sidebyside>
+      <p><m>y=</m> <fillin name="AnSwEr0001" characters="25" /></p>
+      </statement>
+      
+      <hint>
+      <p>Which of the ways to write the equation of a parabola allows you to see the zeros more easily?</p>
+      </hint>
+      
+      <solution>
+      <p>We know there are zeros at <m>x=-6</m> and <m>x=2\text{,}</m> so we use the factored form:</p>
+      <p><me>y=a(x+6)(x-2)</me></p>
+      <p>and solve for <m>a\text{.}</m> At <m>x=0\text{,}</m> we have</p>
+      <p><me>\begin{aligned}
+       5 \amp=\amp a(0+6)(0-2)  \\
+       5 \amp=\amp -12 a \\
+       -\frac{5}{12} \amp=\amp a. 
+      \end{aligned}</me></p>
+      <p>Thus,</p>
+      <p><me>y=-\frac{5}{12}(x+6)(x-2)</me></p>
+      <p>or</p>
+      <p><me>y = -\frac{5}{12} x^2-\frac{5}{3}x +5.</me></p>
+      </solution>
+      
+      
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=15&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9IDE7VEVYVChiZWdpbnByb2JsZW0oKSk7bG9hZE1hY3JvcygiUENDbWFjcm9zLnBsIik7ClRFWFQoS2V5Ym9hcmRJbnN0cnVjdGlvbnMocUBcKFxuZXdjb21tYW5ke1xhbXB9eyZ9XClAKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZNNz0tNS8xMiooLTcpKioyLTUvMyooLTcpKzU7CiRmTTI9LTUvMTIqKC0yKSoqMi01LzMqKC0yKSs1OwokZ3JhcGgxPWluaXRfZ3JhcGgoLTcsJGZNNywzLCRmTTIrMC41LGF4ZXM9PlswLDBdLHNpemU9PlsyNTAsMjUwXSk7CmFkZF9mdW5jdGlvbnMoJGdyYXBoMSwgIi01LzEyKnheMi01LzMqeCs1IGZvciB4IGluIDwtNywzPiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKC02LDAsJygtNiwwKScsJ2JsYWNrJywnbGVmdCcsJ3RvcCcpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgwLDUsJygwLDUpJywnYmxhY2snLCdyaWdodCcsJ21pZGRsZScpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgyLDAsJygyLDApJywnYmxhY2snLCdyaWdodCcsJ3RvcCcpKTtcCiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgtNiwwLCdibHVlJykgKTsKJGdyYXBoMS0%2Bc3RhbXBzKCBjbG9zZWRfY2lyY2xlKDAsNSwnYmx1ZScpICk7CiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgyLDAsJ2JsdWUnKSApOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDMtMC40LDAuMywneCcsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDAuMywkZk0yLCd5JywnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiR4Tj02OwokeFA9MjsKJGQ9JHhOKiR4UDsKJGM9NTsKJHA9NTsKJHE9MzsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHJlZHVjZUNvbnN0YW50cyA9PiAwKTsKJGY9Rm9ybXVsYSgiLTUvMTIqeF4yLTUvMyp4ICs1Iik7CgpCRUdJTl9QR01MCkZpbmQgYSBmb3JtdWxhIGZvciB0aGUgcGFyYWJvbGEuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRncmFwaDEpLCB3aWR0aD0%2BMzAwKUBdKiAgPDwKCltgeT1gXSBbX117JGZ9e3dpZHRoPT4yNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaGljaCBvZiB0aGUgd2F5cyB0byB3cml0ZSB0aGUgZXF1YXRpb24gb2YgYSBwYXJhYm9sYSBhbGxvd3MgeW91IHRvIHNlZSB0aGUgemVyb3MgbW9yZSBlYXNpbHk%2FCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSBrbm93IHRoZXJlIGFyZSB6ZXJvcyBhdCBbYHg9LVskeE5dYF0gYW5kIFtgeD1bJHhQXVx0ZXh0eyx9YF0gc28gd2UgdXNlIHRoZSBmYWN0b3JlZCBmb3JtOgoKW2BgYHk9YSh4K1skeE5dKSh4LVskeFBdKWBgYF0KCmFuZCBzb2x2ZSBmb3IgW2BhXHRleHR7Ln1gXSBBdCBbYHg9MFx0ZXh0eyx9YF0gd2UgaGF2ZQoKW2BgYFxiZWdpbnthbGlnbmVkfQogWyRjXSBcYW1wPVxhbXAgYSgwK1skeE5dKSgwLVskeFBdKSAgXFwKIFskY10gXGFtcD1cYW1wIC1bJGRdIGEgXFwKIC1cZnJhY3tbJGNdfXtbJGRdfSBcYW1wPVxhbXAgYS4gClxlbmR7YWxpZ25lZH1gYGBdCgpUaHVzLAoKW2BgYHk9LVxmcmFje1skY119e1skZF19KHgrWyR4Tl0pKHgtWyR4UF0pYGBgXQoKb3IKCltgYGB5ID0gLVxmcmFje1skY119e1skZF19IHheMi1cZnJhY3tbJHBdfXtbJHFdfXggK1skY10uYGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=15&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9IDE7VEVYVChiZWdpbnByb2JsZW0oKSk7bG9hZE1hY3JvcygiUENDbWFjcm9zLnBsIik7ClRFWFQoS2V5Ym9hcmRJbnN0cnVjdGlvbnMocUBcKFxuZXdjb21tYW5ke1xhbXB9eyZ9XClAKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZNNz0tNS8xMiooLTcpKioyLTUvMyooLTcpKzU7CiRmTTI9LTUvMTIqKC0yKSoqMi01LzMqKC0yKSs1OwokZ3JhcGgxPWluaXRfZ3JhcGgoLTcsJGZNNywzLCRmTTIrMC41LGF4ZXM9PlswLDBdLHNpemU9PlsyNTAsMjUwXSk7CmFkZF9mdW5jdGlvbnMoJGdyYXBoMSwgIi01LzEyKnheMi01LzMqeCs1IGZvciB4IGluIDwtNywzPiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKC02LDAsJygtNiwwKScsJ2JsYWNrJywnbGVmdCcsJ3RvcCcpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgwLDUsJygwLDUpJywnYmxhY2snLCdyaWdodCcsJ21pZGRsZScpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgyLDAsJygyLDApJywnYmxhY2snLCdyaWdodCcsJ3RvcCcpKTtcCiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgtNiwwLCdibHVlJykgKTsKJGdyYXBoMS0%2Bc3RhbXBzKCBjbG9zZWRfY2lyY2xlKDAsNSwnYmx1ZScpICk7CiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgyLDAsJ2JsdWUnKSApOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDMtMC40LDAuMywneCcsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDAuMywkZk0yLCd5JywnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiR4Tj02OwokeFA9MjsKJGQ9JHhOKiR4UDsKJGM9NTsKJHA9NTsKJHE9MzsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHJlZHVjZUNvbnN0YW50cyA9PiAwKTsKJGY9Rm9ybXVsYSgiLTUvMTIqeF4yLTUvMyp4ICs1Iik7CgpCRUdJTl9QR01MCkZpbmQgYSBmb3JtdWxhIGZvciB0aGUgcGFyYWJvbGEuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRncmFwaDEpLCB3aWR0aD0%2BMzAwKUBdKiAgPDwKCltgeT1gXSBbX117JGZ9e3dpZHRoPT4yNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaGljaCBvZiB0aGUgd2F5cyB0byB3cml0ZSB0aGUgZXF1YXRpb24gb2YgYSBwYXJhYm9sYSBhbGxvd3MgeW91IHRvIHNlZSB0aGUgemVyb3MgbW9yZSBlYXNpbHk%2FCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=15&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9IDE7VEVYVChiZWdpbnByb2JsZW0oKSk7bG9hZE1hY3JvcygiUENDbWFjcm9zLnBsIik7ClRFWFQoS2V5Ym9hcmRJbnN0cnVjdGlvbnMocUBcKFxuZXdjb21tYW5ke1xhbXB9eyZ9XClAKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZNNz0tNS8xMiooLTcpKioyLTUvMyooLTcpKzU7CiRmTTI9LTUvMTIqKC0yKSoqMi01LzMqKC0yKSs1OwokZ3JhcGgxPWluaXRfZ3JhcGgoLTcsJGZNNywzLCRmTTIrMC41LGF4ZXM9PlswLDBdLHNpemU9PlsyNTAsMjUwXSk7CmFkZF9mdW5jdGlvbnMoJGdyYXBoMSwgIi01LzEyKnheMi01LzMqeCs1IGZvciB4IGluIDwtNywzPiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKC02LDAsJygtNiwwKScsJ2JsYWNrJywnbGVmdCcsJ3RvcCcpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgwLDUsJygwLDUpJywnYmxhY2snLCdyaWdodCcsJ21pZGRsZScpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgyLDAsJygyLDApJywnYmxhY2snLCdyaWdodCcsJ3RvcCcpKTtcCiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgtNiwwLCdibHVlJykgKTsKJGdyYXBoMS0%2Bc3RhbXBzKCBjbG9zZWRfY2lyY2xlKDAsNSwnYmx1ZScpICk7CiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgyLDAsJ2JsdWUnKSApOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDMtMC40LDAuMywneCcsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDAuMywkZk0yLCd5JywnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiR4Tj02OwokeFA9MjsKJGQ9JHhOKiR4UDsKJGM9NTsKJHA9NTsKJHE9MzsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHJlZHVjZUNvbnN0YW50cyA9PiAwKTsKJGY9Rm9ybXVsYSgiLTUvMTIqeF4yLTUvMyp4ICs1Iik7CgpCRUdJTl9QR01MCkZpbmQgYSBmb3JtdWxhIGZvciB0aGUgcGFyYWJvbGEuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRncmFwaDEpLCB3aWR0aD0%2BMzAwKUBdKiAgPDwKCltgeT1gXSBbX117JGZ9e3dpZHRoPT4yNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KV2Uga25vdyB0aGVyZSBhcmUgemVyb3MgYXQgW2B4PS1bJHhOXWBdIGFuZCBbYHg9WyR4UF1cdGV4dHssfWBdIHNvIHdlIHVzZSB0aGUgZmFjdG9yZWQgZm9ybToKCltgYGB5PWEoeCtbJHhOXSkoeC1bJHhQXSlgYGBdCgphbmQgc29sdmUgZm9yIFtgYVx0ZXh0ey59YF0gQXQgW2B4PTBcdGV4dHssfWBdIHdlIGhhdmUKCltgYGBcYmVnaW57YWxpZ25lZH0KIFskY10gXGFtcD1cYW1wIGEoMCtbJHhOXSkoMC1bJHhQXSkgIFxcCiBbJGNdIFxhbXA9XGFtcCAtWyRkXSBhIFxcCiAtXGZyYWN7WyRjXX17WyRkXX0gXGFtcD1cYW1wIGEuIApcZW5ke2FsaWduZWR9YGBgXQoKVGh1cywKCltgYGB5PS1cZnJhY3tbJGNdfXtbJGRdfSh4K1skeE5dKSh4LVskeFBdKWBgYF0KCm9yCgpbYGBgeSA9IC1cZnJhY3tbJGNdfXtbJGRdfSB4XjItXGZyYWN7WyRwXX17WyRxXX14ICtbJGNdLmBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=15&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXM9IDE7VEVYVChiZWdpbnByb2JsZW0oKSk7bG9hZE1hY3JvcygiUENDbWFjcm9zLnBsIik7ClRFWFQoS2V5Ym9hcmRJbnN0cnVjdGlvbnMocUBcKFxuZXdjb21tYW5ke1xhbXB9eyZ9XClAKSk7CiRyZWZyZXNoQ2FjaGVkSW1hZ2VzID0gMTsKJGZNNz0tNS8xMiooLTcpKioyLTUvMyooLTcpKzU7CiRmTTI9LTUvMTIqKC0yKSoqMi01LzMqKC0yKSs1OwokZ3JhcGgxPWluaXRfZ3JhcGgoLTcsJGZNNywzLCRmTTIrMC41LGF4ZXM9PlswLDBdLHNpemU9PlsyNTAsMjUwXSk7CmFkZF9mdW5jdGlvbnMoJGdyYXBoMSwgIi01LzEyKnheMi01LzMqeCs1IGZvciB4IGluIDwtNywzPiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKC02LDAsJygtNiwwKScsJ2JsYWNrJywnbGVmdCcsJ3RvcCcpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgwLDUsJygwLDUpJywnYmxhY2snLCdyaWdodCcsJ21pZGRsZScpKTsKJGdyYXBoMS0%2BbGIoIG5ldyBMYWJlbCgyLDAsJygyLDApJywnYmxhY2snLCdyaWdodCcsJ3RvcCcpKTtcCiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgtNiwwLCdibHVlJykgKTsKJGdyYXBoMS0%2Bc3RhbXBzKCBjbG9zZWRfY2lyY2xlKDAsNSwnYmx1ZScpICk7CiRncmFwaDEtPnN0YW1wcyggY2xvc2VkX2NpcmNsZSgyLDAsJ2JsdWUnKSApOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDMtMC40LDAuMywneCcsJ2JsYWNrJywnY2VudGVyJywnbWlkZGxlJykpOwokZ3JhcGgxLT5sYiggbmV3IExhYmVsKDAuMywkZk0yLCd5JywnYmxhY2snLCdjZW50ZXInLCdtaWRkbGUnKSk7CiR4Tj02OwokeFA9MjsKJGQ9JHhOKiR4UDsKJGM9NTsKJHA9NTsKJHE9MzsKQ29udGV4dCgpLT5mbGFncy0%2Bc2V0KHJlZHVjZUNvbnN0YW50cyA9PiAwKTsKJGY9Rm9ybXVsYSgiLTUvMTIqeF4yLTUvMyp4ICs1Iik7CgpCRUdJTl9QR01MCkZpbmQgYSBmb3JtdWxhIGZvciB0aGUgcGFyYWJvbGEuCgo%2BPiBbQGltYWdlKGluc2VydEdyYXBoKCRncmFwaDEpLCB3aWR0aD0%2BMzAwKUBdKiAgPDwKCltgeT1gXSBbX117JGZ9e3dpZHRoPT4yNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+
+    <pg>
+      #######################################
+      ###    Generated from PreTeXt source   
+      ###    on 2019-01-23T15:50:21-05:00    
+      ###                                    
+      ###      https://pretextbook.org       
+      ###                                    
+      #######################################
+      ## DBsubject()
+      ## DBchapter()
+      ## DBsection()
+      ## Level()
+      ## KEYWORDS()
+      ## TitleText1(Active Learning Worksheet)
+      ## EditionText1()
+      ## AuthorText1(Mathematical Consortium Working Group (MCWG))
+      ## Section1(not reported)
+      ## Problem1(5.7)
+      ## Author()
+      ## Institution()
+      ## Language(en-US)
+      
+      DOCUMENT();
+      
+      ############################################################
+      # Load Macros
+      ############################################################
+      loadMacros(
+        "PGstandard.pl",
+        "MathObjects.pl",
+        "PGML.pl",
+        "AnswerFormatHelp.pl",
+        "PGgraphmacros.pl",
+        "PGcourse.pl",
+      );
+      $refreshCachedImages= 1;
+      ############################################################
+      # Header
+      ############################################################
+      COMMENT('Authored in PreTeXt');
+      TEXT(beginproblem());
+      
+      ############################################################
+      # PG Setup
+      ############################################################
+      $refreshCachedImages = 1;
+      $fM7=-5/12*(-7)**2-5/3*(-7)+5;
+      $fM2=-5/12*(-2)**2-5/3*(-2)+5;
+      $graph1=init_graph(-7,$fM7,3,$fM2+0.5,axes=&gt;[0,0],size=&gt;[250,250]);
+      add_functions($graph1, "-5/12*x^2-5/3*x+5 for x in &lt;-7,3&gt; using color:blue and weight:2");
+      $graph1-&gt;lb( new Label(-6,0,'(-6,0)','black','left','top'));
+      $graph1-&gt;lb( new Label(0,5,'(0,5)','black','right','middle'));
+      $graph1-&gt;lb( new Label(2,0,'(2,0)','black','right','top'));\
+      $graph1-&gt;stamps( closed_circle(-6,0,'blue') );
+      $graph1-&gt;stamps( closed_circle(0,5,'blue') );
+      $graph1-&gt;stamps( closed_circle(2,0,'blue') );
+      $graph1-&gt;lb( new Label(3-0.4,0.3,'x','black','center','middle'));
+      $graph1-&gt;lb( new Label(0.3,$fM2,'y','black','center','middle'));
+      $xN=6;
+      $xP=2;
+      $d=$xN*$xP;
+      $c=5;
+      $p=5;
+      $q=3;
+      Context()-&gt;flags-&gt;set(reduceConstants =&gt; 0);
+      $f=Formula("-5/12*x^2-5/3*x +5");
+      
+      ############################################################
+      # Body
+      ############################################################
+      
+      BEGIN_PGML
+      Find a formula for the parabola.
+      
+      &gt;&gt; [@image(insertGraph($graph1), width=&gt;300)@]*  &lt;&lt;
+      
+      [`y=`] [__]{$f}{width =&gt; 25} [@AnswerFormatHelp('formulas')@]*
+      
+      END_PGML
+      
+      ############################################################
+      # Hint
+      ############################################################
+      #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
+      
+      BEGIN_PGML_HINT
+      Which of the ways to write the equation of a parabola allows you to see the zeros more easily?
+      
+      END_PGML_HINT
+      
+      ############################################################
+      # Solution
+      ############################################################
+      
+      BEGIN_PGML_SOLUTION
+      We know there are zeros at [`x=-[$xN]`] and [`x=[$xP]\text{,}`] so we use the factored form:
+      
+      [```y=a(x+[$xN])(x-[$xP])```]
+      
+      and solve for [`a\text{.}`] At [`x=0\text{,}`] we have
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       [$c] \amp=\amp a(0+[$xN])(0-[$xP])  \\
+       [$c] \amp=\amp -[$d] a \\
+       -\frac{[$c]}{[$d]} \amp=\amp a. 
+      \end{aligned}```]
+      
+      Thus,
+      
+      [```y=-\frac{[$c]}{[$d]}(x+[$xN])(x-[$xP])```]
+      
+      or
+      
+      [```y = -\frac{[$c]}{[$d]} x^2-\frac{[$p]}{[$q]}x +[$c].```]
+      
+      END_PGML_SOLUTION
+      
+      ############################################################
+      # End Problem
+      ############################################################
+      
+      ENDDOCUMENT();
+      
+    </pg>
+
+  </webwork-reps>
+
+  <webwork-reps xml:id="extracted-problem-3-1pw36-randomized" ww-id="problem-3-1pw36-randomized">
+    <authored>
+      
+        <!-- <pg-macros>
+                                  <macro-file>problemRandomize.pl</macro-file>
+                              </pg-macros> -->
+        <setup>
+          <pg-code>
+                                      $refreshCachedImages = 1;
+                                      $fM7=-5/12*(-7)**2-5/3*(-7)+5;
+                                      $fM2=-5/12*(-2)**2-5/3*(-2)+5;
+                                      $graph1=init_graph(-$xN-1,-15,$xP+1,15,axes=&gt;[0,0],size=&gt;[250,250]);
+                                      add_functions($graph1, "-$c/$d*x^2-$p/$q*x +$constTop/$constBot for x in &lt;-$xN-1,$xP+1 &gt; using color:blue and weight:2");
+                                      $graph1-&gt;lb( new Label(-6,0,'(-6,0)','black','left','top'));
+                                      $graph1-&gt;lb( new Label(0,5,'(0,5)','black','right','middle'));
+                                      $graph1-&gt;lb( new Label(2,0,'(2,0)','black','right','top'));\
+                                      $graph1-&gt;stamps( closed_circle(-6,0,'blue') );
+                                      $graph1-&gt;stamps( closed_circle(0,5,'blue') );
+                                      $graph1-&gt;stamps( closed_circle(2,0,'blue') );
+                                      $graph1-&gt;lb( new Label(3-0.4,0.3,'x','black','center','middle'));
+                                      $graph1-&gt;lb( new Label(0.3,$fM2,'y','black','center','middle'));
+                                      $xN=Compute(random(3,7,1));
+                                      do {$xP=Compute(random(3,7,1));} until ($xP &gt; $xN);
+                                      $d=$xN*$xP;
+                                      do {$c=Compute(random(2,15,1));} until (gcd($c,$d) == 1);
+                                      $pNonReduced=$c*($xP-$xN);
+                                      $qNonreduced=$d;
+                                      $gcdpq=gcd($pNonReduced,$qNonReduced);
+                                      $p=$pNonReduced/$gcdpq;
+                                      $q=$qNonReduced/$gcdpq;
+                                      $constTopNonreduced=$c*$xN*$xP;
+                                      $constBotNonreduced=$d;
+                                      $gcdconst=gcd($constTopNonreduced,$constBotNonreduced);
+                                      $constTop=$constTopNonreduced/$gcdconst;
+                                      $constBot=$constBotNonreduced/$gcdconst:
+                                      Context()-&gt;flags-&gt;set(reduceConstants =&gt; 0);
+                                      $f=Formula("-$c/$d*x^2-$p/$q*x +$constTop/$constBot");
+                                  </pg-code>
+        </setup>
+        <statement>
+          <p>  Find a formula for the parabola. </p>
+          <sidebyside widths="50%">
+            <image pg-name="$graph1"/>
+          </sidebyside>
+          <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
+        </statement>
+        <hint>
+          <p> Which of the ways to write the equation of a parabola allows you to see the zeros more easily? </p>
+        </hint>
+        <solution>
+          <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                                  <md><mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow><mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow><mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow></md>
+                                  Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
+        </solution>
+      
+    </authored>
+
+    <static seed="16" failure='compile'>
+      <statement>
+        <p>
+          PTX:ERROR:  WeBWorK problem problem-3-1pw36-randomized with seed 16 did not compile  
+          Use -a to halt with full PG if PTX-sourced
+        </p>
+      </statement>
+    </static>
+      
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCldlQldvcksgUHJvYmxlbSBEaWQgTm90IENvbXBpbGUKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCldlQldvcksgUHJvYmxlbSBEaWQgTm90IENvbXBpbGUKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCldlQldvcksgUHJvYmxlbSBEaWQgTm90IENvbXBpbGUKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCldlQldvcksgUHJvYmxlbSBEaWQgTm90IENvbXBpbGUKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+
+    <pg>
+      DOCUMENT();
+      loadMacros('PGstandard.pl','PGML.pl','PGcourse.pl');
+      TEXT(beginproblem());
+      BEGIN_PGML
+      PTX:ERROR:  WeBWorK problem problem-3-1pw36-randomized with seed 16 did not compile  
+      Use -a to halt with full PG if PTX-sourced
+      END_PGML
+      ENDDOCUMENT();
+    </pg>
+
+  </webwork-reps>
+
+</webwork-extraction>
