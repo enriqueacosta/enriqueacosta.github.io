@@ -26,7 +26,7 @@
     <!-- this is the default, but supresses a warning -->
     <cross-references text="type-global"/>
     <!-- An initialism is useful sometimes -->
-    <initialism>WWSC</initialism>
+    <initialism>MCWG PRCAL 3-1</initialism>
     <!--
         With a <feedback> element, in the HTML version, you get a button
         for reporting typos and errors.  You might link to a Google Docs
@@ -171,7 +171,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -337,7 +337,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -521,7 +521,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -671,7 +671,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -814,7 +814,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -974,7 +974,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1141,7 +1141,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1291,7 +1291,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1434,7 +1434,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1594,7 +1594,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1788,7 +1788,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1947,7 +1947,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2106,7 +2106,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2265,7 +2265,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2410,7 +2410,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2565,7 +2565,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2724,7 +2724,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2883,7 +2883,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3042,7 +3042,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3187,7 +3187,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3340,7 +3340,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3534,7 +3534,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3730,7 +3730,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3909,7 +3909,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4053,7 +4053,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4199,7 +4199,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4373,7 +4373,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4567,7 +4567,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4763,7 +4763,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:00-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -4942,7 +4942,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:01-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -5086,7 +5086,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:01-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -5232,7 +5232,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-01-24T15:33:01-05:00    
+      ###    on 2019-01-24T16:12:52-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
