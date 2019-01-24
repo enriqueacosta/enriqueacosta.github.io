@@ -141,7 +141,119 @@
      
 
         </section>
+         <section>
+            <title> 0th set - structure</title>
+            <introduction> 
+                <p>SOME Introductory TEXT HERE? </p>
+            </introduction>
+            <subsection>
+                <title> Identifying coefficients </title>
+                <p> This section gives you practice on identifying the coefficients in the summary</p>
+                <exercise>
+                <title>Solving Quadratic Equations</title>
+                <introduction>
+                    <p> This example is taken form the PreTeXt sample file. Try giving the coefficients without the correct sign.</p>
+                </introduction>
+                <webwork xml:id="quadratic-equation">
 
+                    <setup>
+                        <!-- TODO: move out context shift -->
+                        <pg-code>
+                        Context("Fraction");
+
+                        $a = Compute(random(2,6,1));
+                        do {$k = Compute(random(2,6,1))} until (gcd($a,$k)==1);
+                        $r = Compute(random(2,6,1));
+                        $c = $k*-$r;
+                        $b = $a*-$r+$k;
+                        $quadratic = Formula("$a x^2 + $b x + $c")->reduce;
+                        $x1 = Fraction($r,1);
+                        $x2 = Fraction(-$k,$a);
+                        Context()->flags->set(reduceConstants=>0,reduceConstantFunctions=>0);
+                        $solnum1 = Formula("-$b+sqrt(($b)**2-4($a)($c))");
+                        $solnum2 = Formula("-$b-sqrt(($b)**2-4($a)($c))");
+
+                        $evaluatorfora = $a->cmp()->withPostFilter(AnswerHints(
+                            [-$a] =>
+                            "Do you have the sign correct?"));
+                        $evaluatorforb = $b->cmp()->withPostFilter(AnswerHints(
+                            [-$b] =>
+                            "Do you have the sign correct?"));
+                        $evaluatorforc = $c->cmp()->withPostFilter(AnswerHints(
+                            [-$c] =>
+                            "Do you have the sign correct?"));
+                        </pg-code>
+                    </setup>
+                        <title>Identify the coefficients</title>
+                        <statement>
+                            <p>Consider the quadratic equation given by <me><var name="$quadratic" /> = 0\text{.}</me>  Identify the coefficients for the quadratic equation using the standard form.</p>
+
+                            <p><m>a=</m> <var name="$a" width="4" evaluator="$evaluatorfora"/>, <m>b=</m> <var name="$b" width="4" evaluator="$evaluatorforb"/>, <m>c=</m> <var name="$c" width="4" evaluator="$evaluatorforc"/></p>
+                        </statement>
+
+                        <solution>
+                            <p> Take the coefficient of <m>x^2</m> for the value of <m>a</m>, the coefficient of <m>x</m> for <m>b</m>, and the constant for <m>c</m>.  <em>In this case</em>, they are <m>a = <var name="$a" /></m>, <m>b = <var name="$b" /></m>, <m>c = <var name="$c" /></m>.</p>
+                        </solution>
+                </webwork>
+            </exercise>
+                 <exercise>
+                    <title>TITLE FOR PROBLEM: problem-3-1pw39</title>
+                    <introduction>
+                        <p> Try giving <m>k</m> with wrong sign to see how feedback works.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw39">
+                        <setup>
+                            <pg-code>
+                                $a=Compute(random(2,9,1));
+                                $coeff=Compute(list_random(0.1,0.2,0.4,0.5,0.8));
+                                $const=-$a*$coeff*20;
+                                $constAbs=-$const;
+                                $r=4/$coeff;
+                                $evaluatorforConst = $const->cmp()->withPostFilter(AnswerHints([-$const] => "Is <m>3-x</m> equal to <m>x-3</m>?"));
+                                $multians = MultiAnswer($r,0.2)->with(
+                                singleResult => 0,
+                                checker => sub {
+                                my ($correct,$student,$self) = @_;
+                                my ($s1, $s2) = @{$student};
+                                my ($c1, $c2) = @{$correct};
+                                return (1,1) if ($c1 == $s1 and $c2 == $s2) or
+                                                ($c1 == $s2 and $c2 == $s1);
+                                return (1,0) if $c1 == $s1 or $c2 == $s1;
+                                return (0,1) if $c1 == $s2 or $c2 == $s2;
+                                return (0,0);
+                                }
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Write <m>y=<var name="$a"/> (<var name="$coeff"/> x-4)(4-20x)</m> in the form <m>y=k(x-r)(x-s)</m> and give the values of <m>k,r,s</m>.</p>
+                            <p> <m>k=</m> <var name="$const" width="15" evaluator="$evaluatorforConst" category="number"/></p>
+                            <p> <m>r=</m> <var name="$multians" width="15" category="number"/> </p>
+                            <p> <m>s=</m> <var name="$multians" width="15" category="number"/></p>     
+                        </statement>
+
+                        <hint>
+                            What do you need to factor out of <m><var name="$coeff"/> x-4</m> so that the coefficient of <m>x</m> becomes <m>1</m>? In other words, what values of <m>a</m> and <m>b</m> allow you to write <m><var name="$coeff"/> x-4=a(x-b)</m>?
+                        </hint>
+
+                        <solution>
+                            <p> We have
+                            <md>
+                            <mrow> y\amp =\amp <var name="$a"/> (<var name="$coeff"/> x-4)(4-20x)</mrow>
+                            <mrow> \amp =\amp <var name="$a"/> (<var name="$coeff"/> )(x-<var name="$r"/>)(-20)(x-4/20) </mrow>
+                            <mrow> \amp =\amp -<var name="$constAbs"/> (x-<var name="$r"/>)(x-0.2),</mrow>
+                            </md>
+                            so <m>k=-<var name="$constAbs"/> ,r=<var name="$r"/>,s=0.2</m>.</p>
+                            <p> Note that the order of <m>r</m> and <m>s</m> does not matter.</p>
+                        </solution>
+                    </webwork>
+                    <conclusion>
+                        <p> Try swapping your answers for <m>r</m> and <m>s</m>! What do you notice?</p>
+                    </conclusion>
+                </exercise>
+            </subsection>
+        </section>
         <section>
             <title> First set - let's find zeros</title>
             <introduction> 
@@ -668,46 +780,268 @@
                     </webwork>
                 </exercise>
             </subsection>
+             <subsection>
+                <title>Concavity from the formula -- Extra practice </title>
+                <p> In the following problems, is the graph of the quadratic function concave up or concave down?</p>
+                <exercise>
+                    <title>TITLE FOR PROBLEM</title>
+                    <introduction>
+                        <p> Introductory text for problem if needed.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw21-practice">
+                        <!-- <pg-macros>
+                            <macro-file>problemRandomize.pl</macro-file>
+                        </pg-macros> -->
+                        <setup>
+                            <pg-code>
+                                <!-- ProblemRandomize(when=>"always",onlyAfterDue=>0,style=>"Button"); -->
+                                $a=Compute(non_zero_random(-10,10,1));
+                                $b=Compute(non_zero_random(-10,10,1));
+                                $quadratic=Compute("$a * (x-$b)^2")->reduce();
+                                if (0 > $a){
+                                    $CorrectChoice="concave down"; 
+                                    $IncorrectChoice="concave up";} 
+                                else {
+                                    $CorrectChoice="concave up"; 
+                                    $IncorrectChoice="concave down";}
+                                $MultipleC= RadioButtons(
+                                [$CorrectChoice,$IncorrectChoice],
+                                $CorrectChoice, # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+                            <p><var name="$MultipleC" form="buttons"/></p>
+                        </statement>
+
+                        <hint>
+                            Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                        </hint>
+
+                        <solution>
+                            <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>Copy of previous problem</title>
+                    <introduction>
+                        <p> To give extra practice with another seed.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw21-repeat-practice">
+                        <setup>
+                            <pg-code>
+                                $a=Compute(non_zero_random(-10,10,1));
+                                $b=Compute(non_zero_random(-10,10,1));
+                                $quadratic=Compute("$a * (x-$b)^2")->reduce();
+                                if (0 > $a){
+                                    $CorrectChoice="concave down"; 
+                                    $IncorrectChoice="concave up";} 
+                                else {
+                                    $CorrectChoice="concave up";
+                                    $IncorrectChoice="concave down";}
+                                $MultipleC= RadioButtons(
+                                [$CorrectChoice,$IncorrectChoice],
+                                $CorrectChoice, # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+                            <p><var name="$MultipleC" form="buttons"/></p>
+                        </statement>
+
+                        <hint>
+                            Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                        </hint>
+
+                        <solution>
+                            <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>Copy of previous problem</title>
+                    <introduction>
+                        <p> To give extra practice with another seed.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw21-repeat-repeat-practice">
+                        <setup>
+                            <pg-code>
+                                $a=Compute(non_zero_random(-10,10,1));
+                                $b=Compute(non_zero_random(-10,10,1));
+                                $quadratic=Compute("$a * (x-$b)^2")->reduce();
+                                if (0 > $a){
+                                    $CorrectChoice="concave down"; 
+                                    $IncorrectChoice="concave up";} 
+                                else {
+                                    $CorrectChoice="concave up"; 
+                                    $IncorrectChoice="concave down";}
+                                $MultipleC= RadioButtons(
+                                [$CorrectChoice,$IncorrectChoice],
+                                $CorrectChoice, # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+                            <p><var name="$MultipleC" form="buttons"/></p>
+                        </statement>
+
+                        <hint>
+                            Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                        </hint>
+
+                        <solution>
+                            <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>Copy of previous problem with a selected seed</title>
+                    <introduction>
+                        <p> To give extra practice with another seed.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw21-repeat-repeat-repeat-practice" seed="510">
+                        <setup>
+                            <pg-code>
+                                $a=Compute(non_zero_random(-10,10,1));
+                                $b=Compute(non_zero_random(-10,10,1));
+                                $quadratic=Compute("$a * (x-$b)^2")->reduce();
+                                if (0 > $a){
+                                    $CorrectChoice="concave down"; 
+                                    $IncorrectChoice="concave up";} 
+                                else {
+                                    $CorrectChoice="concave up"; 
+                                    $IncorrectChoice="concave down";}
+                                $MultipleC= RadioButtons(
+                                [$CorrectChoice,$IncorrectChoice],
+                                $CorrectChoice, # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Is the graph of the quadratic function <m> <var name="$quadratic"/> </m> concave up or concave down? </p>
+                            <p><var name="$MultipleC" form="buttons"/></p>
+                        </statement>
+
+                        <hint>
+                            Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                        </hint>
+
+                        <solution>
+                            <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is <var name="$CorrectChoice"/>.
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>Another problem</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw22-practice">
+                        <!-- <pg-macros>
+                            <macro-file>problemRandomize.pl</macro-file>
+                        </pg-macros> -->
+                        <setup>
+                            <pg-code>
+                                <!-- ProblemRandomize(when=>"always",onlyAfterDue=>0,style=>"Button"); -->
+                                $p=Compute(random(2,10,1));
+                                do {$q=Compute(random(2,10,1))} until ($q != $p);
+                                do {$r=Compute(random(2,10,1))} until (($r != $q) and ($r != $p));
+                                $a=-$p*$q*$r;
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Is the graph of the quadratic function <m>y= <var name="$p"/>(1-<var name="$q"/> x)(x-<var name="$r"/>)</m> concave up or concave down?</p>
+                        </statement>
+
+                        <hint>
+                            Will the coefficient of <m>x^2</m> be positive or negative if you expand completely?
+                        </hint>
+
+                        <solution>
+                            <p> Without fully multiplying out, we can see that the coefficient of <m>x^2</m> is <m><var name="$a"/></m>, so this function has a graph which is concave down.
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            </subsection>
             <subsection>
                 <title>Formula from its graph</title>
                  <p> In the following problems, find a formula for the parabola.</p>
                <exercise>
                     <title>Title: problem-3-1pw35</title>
                     <introduction>
-                        <p> Text.</p>
+                        <p> This problem has not been randomized yet.</p>
                     </introduction>
                     <webwork xml:id="problem-3-1pw35">
-                        <!-- <pg-macros>
-                            <macro-file>problemRandomize.pl</macro-file>
-                        </pg-macros> -->
                         <setup>
                             <pg-code>
-                                
+                                $refreshCachedImages = 1;
+                                $f1=1/3*(1)**2-2/3*(1) -1;
+                                $f5=1/3*(5)**2-2/3*(5) -1;
+                                $graph1=init_graph(-3,$f1-0.5,5,$f5+0.5,axes=>[0,0],size=>[250,250]);
+                                add_functions($graph1, "1/3*x^2-2/3*x -1 for x in &lt;-3,5&gt; using color:blue and weight:2");
+                                $graph1->lb( new Label(3,0,'(3,0)','black','left','top'));
+                                $graph1->lb( new Label(0,-1,'(0,-1)','black','right','middle'));
+                                $graph1->lb( new Label(-1,0,'(-1,0)','black','right','top'));\
+                                $graph1->stamps( closed_circle(3,0,'blue') );
+                                $graph1->stamps( closed_circle(0,-1,'blue') );
+                                $graph1->stamps( closed_circle(-1,0,'blue') );
+                                $graph1->lb( new Label(5-0.4,0.3,'x','black','center','middle'));
+                                $graph1->lb( new Label(0.3,$f5,'y','black','center','middle'));
+                                $xN=1;
+                                $xP=3;
+                                $d=$xN*$xP;
+                                $c=1;
+                                $p=2;
+                                $q=3;
+                                Context()->flags->set(reduceConstants => 0);
+                                $f=Formula("1/3*x^2-2/3*x -1");
                             </pg-code>
                         </setup>
 
                         <statement>
-                            <p></p>
+                            <p>  Find a formula for the parabola. </p>
+                            <sidebyside widths="50%">
+                              <image pg-name="$graph1"/> 
+                            </sidebyside>
+                            <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
                         </statement>
 
                         <hint>
-                            <p></p>
+                            <p> There is a relationship between the <me>x</me>-intercepts of the parabola and the factors in the formula. </p>
                         </hint>
 
                         <solution>
-                            <p></p>
+                            <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                            <md>
+                            <mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow>
+                            <mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow>
+                            <mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow>
+                            </md>
+                            Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
                         </solution>
                     </webwork>
                 </exercise>
                 <exercise>
                     <title>problem-3-1pw36</title>
+                    <!-- this problem has not been randomized yet -->
                     <introduction>
-                        <p> Text.</p>
+                        <p> This problem has not been randomized yet.</p>
                     </introduction>
                     <webwork xml:id="problem-3-1pw36">
-                        <!-- <pg-macros>
-                            <macro-file>problemRandomize.pl</macro-file>
-                        </pg-macros> -->
                         <setup>
                             <pg-code>
                                 $refreshCachedImages = 1;
@@ -737,7 +1071,7 @@
                         <statement>
                             <p>  Find a formula for the parabola. </p>
                             <sidebyside widths="50%">
-                              <image pg-name="$graph1" /> 
+                              <image pg-name="$graph1"/> 
                             </sidebyside>
                             <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
                         </statement>
@@ -758,21 +1092,250 @@
                     </webwork>
                 </exercise>
                 <exercise>
-                    <title>problem-3-1pw36 with randomization</title>
+                    <title>problem based on 3-1pw36</title>
+                    <!-- this problem has not been randomized yet -->
                     <introduction>
-                        <p> Text.</p>
+                        <p> This problem is based on 3-1pw36, but it does not give the <m>y</m>-intercept, so there are multiple correct answers.</p>
                     </introduction>
-                    <webwork xml:id="problem-3-1pw36-randomized">
-                        <!-- <pg-macros>
-                            <macro-file>problemRandomize.pl</macro-file>
-                        </pg-macros> -->
+                    <webwork xml:id="problem-3-1pw36-alt">
                         <setup>
                             <pg-code>
                                 $refreshCachedImages = 1;
                                 $fM7=-5/12*(-7)**2-5/3*(-7)+5;
                                 $fM2=-5/12*(-2)**2-5/3*(-2)+5;
-                                $graph1=init_graph(-$xN-1,-15,$xP+1,15,axes=>[0,0],size=>[250,250]);
-                                add_functions($graph1, "-$c/$d*x^2-$p/$q*x +$constTop/$constBot for x in &lt;-$xN-1,$xP+1 &gt; using color:blue and weight:2");
+                                $graph1=init_graph(-7,$fM7,3,$fM2+0.5,axes=>[0,0],size=>[250,250]);
+                                add_functions($graph1, "-5/12*x^2-5/3*x+5 for x in &lt;-7,3&gt; using color:blue and weight:2");
+                                $graph1->lb( new Label(-6,0,'(-6,0)','black','left','top'));
+                                <!--   $graph1->lb( new Label(0,5,'(0,5)','black','right','middle')); -->
+                                $graph1->lb( new Label(2,0,'(2,0)','black','right','top'));\
+                                $graph1->stamps( closed_circle(-6,0,'blue') );
+                                <!-- $graph1->stamps( closed_circle(0,5,'blue') ); -->
+                                $graph1->stamps( closed_circle(2,0,'blue') );
+                                $graph1->lb( new Label(3-0.4,0.3,'x','black','center','middle'));
+                                $graph1->lb( new Label(0.3,$fM2,'y','black','center','middle'));
+                                $xN=6;
+                                $xP=2;
+                                $d=$xN*$xP;
+                                $c=5;
+                                $p=5;
+                                $q=3;
+                                Context()->flags->set(reduceConstants => 0);
+                                $f=Formula("-5/12*x^2-5/3*x +5");
+                                $checker = $f -> cmp (
+                                    checker => sub {
+                                        my ($correct,$student,$ansHash) = @_;  # get correct and student MathObjects
+                                        return ((($student/$correct) > 0) and (($student/$correct)-> D == 0)); 
+                                    }
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p>  Find at leas two different formulas for the parabola. </p>
+                            <sidebyside widths="50%">
+                              <image pg-name="$graph1"/> 
+                            </sidebyside>
+                            <p> <m>y=</m> <var name="$checker" width="25" category="formula"/>  </p>
+                        </statement>
+
+                        <hint>
+                            <p> Which of the ways to write the equation of a parabola allows you to see the zeros more easily? </p>
+                        </hint>
+
+                        <solution>
+                            <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                            <md>
+                            <mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow>
+                            <mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow>
+                            <mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow>
+                            </md>
+                            Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw25</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw25">
+                        <setup>
+                            <pg-code>
+                                $const=Compute(random(1,10,1));
+                                $constSq=$const**2;
+                                do {$intercept=Compute(random(1,20,1));} until (gcd($const,$intercept)==1);
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($intercept/$constSq)*(x+$const)^2");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Find a formula for the quadratic function whose graph has a <m>y</m>-intercept of <m>y=<var name="$intercept"/> </m> and only one zero at <m>x=-<var name="$const"/></m>.</p>
+                            <p><m>y=</m> <var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> What do you know about the vertex of the parabola if there is only one zero at <m>x=-<var name="$const"/></m>? Use this, and the <m>y</m>-intercept, to find the leading coefficient. </p>
+                        </hint>
+
+                        <solution>
+                            <p>  There is one zero at <m>x=-<var name="$const"/></m>, so by symmetry the vertex is <m>(-<var name="$const"/>,0)</m>. We have <m>y=a(x+<var name="$const"/>)^2</m>. Solving for <m>a</m>, we have
+                            <md>
+                            <mrow>a(0+<var name="$const"/>)^2\amp =\amp <var name="$intercept"/> </mrow>
+                            <mrow><var name="$constSq"/> a\amp =\amp <var name="$intercept"/> </mrow>
+                            <mrow>a \amp =\amp \frac{<var name="$intercept"/> }{<var name="$constSq"/>},</mrow>
+                            </md>
+                            so <m>y=<var name="$ans"/></m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw26</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw26">
+                        <setup>
+                            <pg-code>
+                                $smallZero=random(1,3,1);
+                                $largeZero=$smallZero+random(1,4,1);
+                                do {$yIntercept=random(1,8,1);} until (gcd($yIntercept,$largeZero) == 1);
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($yIntercept/$largeZero)*(x-$smallZero)*(x-$largeZero)");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Find a formula for the quadratic function whose graph has a <m>y</m>-intercept of <m>y=<var name="$yIntercept"/> </m> and <m>x</m>-intercepts at <m>x=<var name="$smallZero"/> ,<var name="$largeZero"/></m>.</p>
+                            <p><m>y=</m> <var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Use the fact that there is a relationship between the <m>x</m>-intercepts and the zeros of a function. </p>
+                        </hint>
+
+                        <solution>
+                            <p> The zeros are <m>x=<var name="$smallZero"/> ,<var name="$largeZero"/></m>, so <m>y=a(x-<var name="$smallZero"/> )(x-<var name="$largeZero"/> )</m>. Solving for <m>a</m>, we have
+                            <md>
+                            <mrow> a(0-<var name="$smallZero"/> )(0-<var name="$largeZero"/> )\amp =\amp <var name="$yIntercept"/>  </mrow>
+                            <mrow> <var name="$largeZero"/> a\amp =\amp <var name="$yIntercept"/>  </mrow>
+                            <mrow> a\amp =\amp \frac{<var name="$yIntercept"/> }{<var name="$largeZero"/>}, </mrow>
+                            </md>
+                            so <m>y=<var name="$ans"/> </m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw37</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw37">
+                        <setup>
+                            <pg-code>
+                                do {
+                                $zN=random(1,9,1);
+                                $zP=random(1,9,1);
+                                $x=non_zero_random(-10,10,1);
+                                $y=random(2,10,1);
+                                $topNonReduced=$y;
+                                $botNonReduced=($x+$zN)*($x-$zP);
+                                } until ($botNonReduced > 0);
+                                $d=gcd($topNonReduced,$botNonReduced);
+                                $top=$topNonReduced/$d;
+                                $bot=$botNonReduced/$d;
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($top/$bot)*(x+$zN)*(x-$zP)");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Using the factored form, find the formula for the parabola whose zeros are <m>x=-<var name="$zN"/> </m> and <m>x=<var name="$zP"/> </m>, and which passes through the point <m>(<var name="$x"/>,<var name="$y"/>)</m>.</p>
+                            <p> <m>y=</m><var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> There is a relationship between the zeros of the parabola and the factors in the formula.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Since the parabola has <m>x</m>-intercepts at <m>x=-<var name="$zN"/> </m> and <m>x=<var name="$zP"/> </m>, its formula is: <me>y=a(x+<var name="$zN"/> )(x-<var name="$zP"/> ).</me> The coordinates <m>(<var name="$x"/>, <var name="$y"/>)</m> must satisfy the equation, so <me><var name="$y"/>=a(<var name="$x"/>+<var name="$zN"/> )(<var name="$x"/>-<var name="$zP"/> ).</me> Solving for <m>a</m> gives <m>a=\frac{<var name="$top"/>}{<var name="$bot"/>}</m>. The formula is: <me>y=\frac{<var name="$top"/>}{<var name="$bot"/>} (x+<var name="$zN"/> )(x-<var name="$zP"/> ).</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            </subsection>
+            <subsection>
+                <title>Formula from its graph - extra practice </title>
+                 <p> In the following problems, find a formula for the parabola.</p>
+               <exercise>
+                    <title>Title: problem-3-1pw35</title>
+                    <introduction>
+                        <p> This problem has not been randomized yet.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw35-pratice">
+                        <setup>
+                            <pg-code>
+                                $refreshCachedImages = 1;
+                                $f1=1/3*(1)**2-2/3*(1) -1;
+                                $f5=1/3*(5)**2-2/3*(5) -1;
+                                $graph1=init_graph(-3,$f1-0.5,5,$f5+0.5,axes=>[0,0],size=>[250,250]);
+                                add_functions($graph1, "1/3*x^2-2/3*x -1 for x in &lt;-3,5&gt; using color:blue and weight:2");
+                                $graph1->lb( new Label(3,0,'(3,0)','black','left','top'));
+                                $graph1->lb( new Label(0,-1,'(0,-1)','black','right','middle'));
+                                $graph1->lb( new Label(-1,0,'(-1,0)','black','right','top'));\
+                                $graph1->stamps( closed_circle(3,0,'blue') );
+                                $graph1->stamps( closed_circle(0,-1,'blue') );
+                                $graph1->stamps( closed_circle(-1,0,'blue') );
+                                $graph1->lb( new Label(5-0.4,0.3,'x','black','center','middle'));
+                                $graph1->lb( new Label(0.3,$f5,'y','black','center','middle'));
+                                $xN=1;
+                                $xP=3;
+                                $d=$xN*$xP;
+                                $c=1;
+                                $p=2;
+                                $q=3;
+                                Context()->flags->set(reduceConstants => 0);
+                                $f=Formula("1/3*x^2-2/3*x -1");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p>  Find a formula for the parabola. </p>
+                            <sidebyside widths="50%">
+                              <image pg-name="$graph1"/> 
+                            </sidebyside>
+                            <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
+                        </statement>
+
+                        <hint>
+                            <p> There is a relationship between the <me>x</me>-intercepts of the parabola and the factors in the formula. </p>
+                        </hint>
+
+                        <solution>
+                            <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                            <md>
+                            <mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow>
+                            <mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow>
+                            <mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow>
+                            </md>
+                            Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw36</title>
+                    <!-- this problem has not been randomized yet -->
+                    <introduction>
+                        <p> This problem has not been randomized yet.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw36-pratice">
+                        <setup>
+                            <pg-code>
+                                $refreshCachedImages = 1;
+                                $fM7=-5/12*(-7)**2-5/3*(-7)+5;
+                                $fM2=-5/12*(-2)**2-5/3*(-2)+5;
+                                $graph1=init_graph(-7,$fM7,3,$fM2+0.5,axes=>[0,0],size=>[250,250]);
+                                add_functions($graph1, "-5/12*x^2-5/3*x+5 for x in &lt;-7,3&gt; using color:blue and weight:2");
                                 $graph1->lb( new Label(-6,0,'(-6,0)','black','left','top'));
                                 $graph1->lb( new Label(0,5,'(0,5)','black','right','middle'));
                                 $graph1->lb( new Label(2,0,'(2,0)','black','right','top'));\
@@ -781,29 +1344,21 @@
                                 $graph1->stamps( closed_circle(2,0,'blue') );
                                 $graph1->lb( new Label(3-0.4,0.3,'x','black','center','middle'));
                                 $graph1->lb( new Label(0.3,$fM2,'y','black','center','middle'));
-                                $xN=Compute(random(3,7,1));
-                                do {$xP=Compute(random(3,7,1));} until ($xP > $xN);
+                                $xN=6;
+                                $xP=2;
                                 $d=$xN*$xP;
-                                do {$c=Compute(random(2,15,1));} until (gcd($c,$d) == 1);
-                                $pNonReduced=$c*($xP-$xN);
-                                $qNonreduced=$d;
-                                $gcdpq=gcd($pNonReduced,$qNonReduced);
-                                $p=$pNonReduced/$gcdpq;
-                                $q=$qNonReduced/$gcdpq;
-                                $constTopNonreduced=$c*$xN*$xP;
-                                $constBotNonreduced=$d;
-                                $gcdconst=gcd($constTopNonreduced,$constBotNonreduced);
-                                $constTop=$constTopNonreduced/$gcdconst;
-                                $constBot=$constBotNonreduced/$gcdconst:
+                                $c=5;
+                                $p=5;
+                                $q=3;
                                 Context()->flags->set(reduceConstants => 0);
-                                $f=Formula("-$c/$d*x^2-$p/$q*x +$constTop/$constBot");
+                                $f=Formula("-5/12*x^2-5/3*x +5");
                             </pg-code>
                         </setup>
 
                         <statement>
                             <p>  Find a formula for the parabola. </p>
                             <sidebyside widths="50%">
-                              <image pg-name="$graph1" /> 
+                              <image pg-name="$graph1"/> 
                             </sidebyside>
                             <p> <m>y=</m> <var name="$f" width="25" category="formula"/>  </p>
                         </statement>
@@ -823,6 +1378,186 @@
                         </solution>
                     </webwork>
                 </exercise>
+                <exercise>
+                    <title>problem based on 3-1pw36</title>
+                    <!-- this problem has not been randomized yet -->
+                    <introduction>
+                        <p> This problem is based on 3-1pw36, but it does not give the <m>y</m>-intercept, so there are multiple correct answers.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw36-alt-pratice">
+                        <setup>
+                            <pg-code>
+                                $refreshCachedImages = 1;
+                                $fM7=-5/12*(-7)**2-5/3*(-7)+5;
+                                $fM2=-5/12*(-2)**2-5/3*(-2)+5;
+                                $graph1=init_graph(-7,$fM7,3,$fM2+0.5,axes=>[0,0],size=>[250,250]);
+                                add_functions($graph1, "-5/12*x^2-5/3*x+5 for x in &lt;-7,3&gt; using color:blue and weight:2");
+                                $graph1->lb( new Label(-6,0,'(-6,0)','black','left','top'));
+                                <!--   $graph1->lb( new Label(0,5,'(0,5)','black','right','middle')); -->
+                                $graph1->lb( new Label(2,0,'(2,0)','black','right','top'));\
+                                $graph1->stamps( closed_circle(-6,0,'blue') );
+                                <!-- $graph1->stamps( closed_circle(0,5,'blue') ); -->
+                                $graph1->stamps( closed_circle(2,0,'blue') );
+                                $graph1->lb( new Label(3-0.4,0.3,'x','black','center','middle'));
+                                $graph1->lb( new Label(0.3,$fM2,'y','black','center','middle'));
+                                $xN=6;
+                                $xP=2;
+                                $d=$xN*$xP;
+                                $c=5;
+                                $p=5;
+                                $q=3;
+                                Context()->flags->set(reduceConstants => 0);
+                                $f=Formula("-5/12*x^2-5/3*x +5");
+                                $checker = $f -> cmp (
+                                    checker => sub {
+                                        my ($correct,$student,$ansHash) = @_;  # get correct and student MathObjects
+                                        return ((($student/$correct) > 0) and (($student/$correct)-> D == 0)); 
+                                    }
+                                );
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p>  Find at leas two different formulas for the parabola. </p>
+                            <sidebyside widths="50%">
+                              <image pg-name="$graph1"/> 
+                            </sidebyside>
+                            <p> <m>y=</m> <var name="$checker" width="25" category="formula"/>  </p>
+                        </statement>
+
+                        <hint>
+                            <p> Which of the ways to write the equation of a parabola allows you to see the zeros more easily? </p>
+                        </hint>
+
+                        <solution>
+                            <p>We know there are zeros at <m>x=-<var name="$xN"/></m> and <m>x=<var name="$xP"/></m>, so we use the factored form: <me>y=a(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> and solve for <m>a</m>. At <m>x=0</m>, we have
+                            <md>
+                            <mrow> <var name="$c"/> \amp=\amp a(0+<var name="$xN"/>)(0-<var name="$xP"/>)  </mrow>
+                            <mrow> <var name="$c"/> \amp=\amp -<var name="$d"/> a </mrow>
+                            <mrow> -\frac{<var name="$c"/>}{<var name="$d"/>} \amp=\amp a. </mrow>
+                            </md>
+                            Thus, <me>y=-\frac{<var name="$c"/>}{<var name="$d"/>}(x+<var name="$xN"/>)(x-<var name="$xP"/>)</me> or <me>y = -\frac{<var name="$c"/>}{<var name="$d"/>} x^2-\frac{<var name="$p"/>}{<var name="$q"/>}x +<var name="$c"/>.</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw25</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw25-pratice">
+                        <setup>
+                            <pg-code>
+                                $const=Compute(random(1,10,1));
+                                $constSq=$const**2;
+                                do {$intercept=Compute(random(1,20,1));} until (gcd($const,$intercept)==1);
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($intercept/$constSq)*(x+$const)^2");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Find a formula for the quadratic function whose graph has a <m>y</m>-intercept of <m>y=<var name="$intercept"/> </m> and only one zero at <m>x=-<var name="$const"/></m>.</p>
+                            <p><m>y=</m> <var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> What do you know about the vertex of the parabola if there is only one zero at <m>x=-<var name="$const"/></m>? Use this, and the <m>y</m>-intercept, to find the leading coefficient. </p>
+                        </hint>
+
+                        <solution>
+                            <p>  There is one zero at <m>x=-<var name="$const"/></m>, so by symmetry the vertex is <m>(-<var name="$const"/>,0)</m>. We have <m>y=a(x+<var name="$const"/>)^2</m>. Solving for <m>a</m>, we have
+                            <md>
+                            <mrow>a(0+<var name="$const"/>)^2\amp =\amp <var name="$intercept"/> </mrow>
+                            <mrow><var name="$constSq"/> a\amp =\amp <var name="$intercept"/> </mrow>
+                            <mrow>a \amp =\amp \frac{<var name="$intercept"/> }{<var name="$constSq"/>},</mrow>
+                            </md>
+                            so <m>y=<var name="$ans"/></m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw26</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw26-pratice">
+                        <setup>
+                            <pg-code>
+                                $smallZero=random(1,3,1);
+                                $largeZero=$smallZero+random(1,4,1);
+                                do {$yIntercept=random(1,8,1);} until (gcd($yIntercept,$largeZero) == 1);
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($yIntercept/$largeZero)*(x-$smallZero)*(x-$largeZero)");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Find a formula for the quadratic function whose graph has a <m>y</m>-intercept of <m>y=<var name="$yIntercept"/> </m> and <m>x</m>-intercepts at <m>x=<var name="$smallZero"/> ,<var name="$largeZero"/></m>.</p>
+                            <p><m>y=</m> <var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Use the fact that there is a relationship between the <m>x</m>-intercepts and the zeros of a function. </p>
+                        </hint>
+
+                        <solution>
+                            <p> The zeros are <m>x=<var name="$smallZero"/> ,<var name="$largeZero"/></m>, so <m>y=a(x-<var name="$smallZero"/> )(x-<var name="$largeZero"/> )</m>. Solving for <m>a</m>, we have
+                            <md>
+                            <mrow> a(0-<var name="$smallZero"/> )(0-<var name="$largeZero"/> )\amp =\amp <var name="$yIntercept"/>  </mrow>
+                            <mrow> <var name="$largeZero"/> a\amp =\amp <var name="$yIntercept"/>  </mrow>
+                            <mrow> a\amp =\amp \frac{<var name="$yIntercept"/> }{<var name="$largeZero"/>}, </mrow>
+                            </md>
+                            so <m>y=<var name="$ans"/> </m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title>problem-3-1pw37</title>
+                    <introduction>
+                        <p> Text.</p>
+                    </introduction>
+                    <webwork xml:id="problem-3-1pw37-practice">
+                        <setup>
+                            <pg-code>
+                                do {
+                                $zN=random(1,9,1);
+                                $zP=random(1,9,1);
+                                $x=non_zero_random(-10,10,1);
+                                $y=random(2,10,1);
+                                $topNonReduced=$y;
+                                $botNonReduced=($x+$zN)*($x-$zP);
+                                } until ($botNonReduced > 0);
+                                $d=gcd($topNonReduced,$botNonReduced);
+                                $top=$topNonReduced/$d;
+                                $bot=$botNonReduced/$d;
+                                Context()->flags->set(reduceConstants => 0);
+                                $ans=Formula("($top/$bot)*(x+$zN)*(x-$zP)");
+                            </pg-code>
+                        </setup>
+
+                        <statement>
+                            <p> Using the factored form, find the formula for the parabola whose zeros are <m>x=-<var name="$zN"/> </m> and <m>x=<var name="$zP"/> </m>, and which passes through the point <m>(<var name="$x"/>,<var name="$y"/>)</m>.</p>
+                            <p> <m>y=</m><var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> There is a relationship between the zeros of the parabola and the factors in the formula.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Since the parabola has <m>x</m>-intercepts at <m>x=-<var name="$zN"/> </m> and <m>x=<var name="$zP"/> </m>, its formula is: <me>y=a(x+<var name="$zN"/> )(x-<var name="$zP"/> ).</me> The coordinates <m>(<var name="$x"/>, <var name="$y"/>)</m> must satisfy the equation, so <me><var name="$y"/>=a(<var name="$x"/>+<var name="$zN"/> )(<var name="$x"/>-<var name="$zP"/> ).</me> Solving for <m>a</m> gives <m>a=\frac{<var name="$top"/>}{<var name="$bot"/>}</m>. The formula is: <me>y=\frac{<var name="$top"/>}{<var name="$bot"/>} (x+<var name="$zN"/> )(x-<var name="$zP"/> ).</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            </subsection>
+            <subsection>
+                <title> Second set Wrap-up</title>
+                <p> Discuss these questions before moving on.</p>
+                <ul>
+                     <li> Is it possible for two different quadratic functions to have the same zeros? If so, give specific examples.</li>
+                     <li> Given the formula of a quadratic function in standard form, how do you determine the concavity of its graph? What if it is given in factored form?</li>
+                </ul>
             </subsection>
         </section>
         <section>
