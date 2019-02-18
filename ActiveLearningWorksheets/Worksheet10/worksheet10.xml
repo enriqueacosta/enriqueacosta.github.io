@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ********************************************************************* -->
+<!-- Copyright 2018                                                        -->
+<!-- Enrique Acosta                                                        -->
+<!--                                                                       -->
+<!--                                                                       -->
+<!-- Created with PreTeXt                                                  -->
+<!-- ********************************************************************* -->
+
+<mathbook>
+    <!-- Other languages can be used to internationalize parts of a document -->
+    <!-- <mathbook xml:lang="pt-BR"> -->
+
+    <!-- "docinfo" is like metadata, it is necessary technical -->
+    <!-- information which a reader mostly will never see. -->
+
+    <docinfo>
+
+        <!-- In the HTML version there is room for a   -->
+        <!-- picture or logo in the upper left corner. -->
+        <brandlogo url="http://www.google.com" source="images/Logo.svg"/>
+
+        <!-- For WeBWorK problems, these LaTeX macros must          -->
+        <!-- (a) be entirely on one line                            -->
+        <!-- (b) not employ a previous custom macro                 -->
+        <!-- (c) be defined only via \newcommand{<name>}{<command>} -->
+        <macros>
+        \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+        \newcommand{\indefiniteintegral}[2]{\int#1\,d#2} % comments get stripped
+        </macros>
+
+        <!-- this is the default, but supresses a warning -->
+        <cross-references text="type-global" />
+
+        <!-- An initialism is useful sometimes -->
+        <initialism>MCWG Worksheet 10</initialism>
+        <!--
+        With a <feedback> element, in the HTML version, you get a button
+        for reporting typos and errors.  You might link to a Google Docs
+        spreadsheet or something similar.  Default is to get a button
+        labeled "Feedback", which will be localized to your target language.
+        You can override this with some text of your choosing, but then you
+        lose the localization feature.
+        -->
+        <feedback>
+            <url>https://goo.gl/forms/weAIuVKWR8Zzhmct2</url>
+             <!-- <text>My Button Text</text>  -->
+        </feedback>
+
+        <latex-image-preamble>
+        <![CDATA[
+        \usepackage{pgfplots}
+        ]]>
+        </latex-image-preamble>
+
+        <rename element="inlineexercise" lang="en-US">Problem</rename>
+
+    </docinfo>
+
+    <article xml:id="Worksheet10">
+        <title>Active Learning Worksheet</title>
+        <subtitle>Worksheet 10 - Optimization: The Derivative Test</subtitle>
+
+        <frontmatter xml:id="index">
+
+            <!-- Items typically at the top of the first page of an article -->
+            <titlepage>
+               <!-- There can be several authors here -->
+                <author>
+                    <personname>Mathematics Consortium Working Group (MCWG)</personname>
+                    <!-- <email>wootton@up.edu, enriqueacostajaramillo@gmail.com</email> -->
+                </author>
+
+                <!-- Can set date manually or use the "today" element -->
+                <date><today /></date>
+
+            </titlepage>
+
+
+            <abstract>
+                <p> This worksheet is meant to be used in class. You should be working in groups or individually depending on the instructions from your teacher. </p>
+
+                <p> You can submit responses any number of times.</p>
+
+                <p> Remember, the point is that you learn from your mistakes and with the help of your peers, so make sure you reflect on incorrect answers and try again with your new understanding. If you can't figure it out, ask your teacher, or bring up your strategy in a whole class discussion. This will allow you to get as much as possible out of the activity.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <section>
+            <title>Prerequisites</title>
+            <subsection> 
+                <title> Prerequisite Topics and Skills </title>
+                <ul>
+                    <li> Solving systems of equations in two variables </li>
+                    <li> Partial derivatives </li>
+                    <li> Gradient Vectors </li>
+                    <li> Determinants of matrices </li>
+                </ul>
+            </subsection>  
+            <exercises>
+                <title> Exercises </title>
+                <p> The following exercises test your knowledge of the prerequisites for this section.</p>
+                <exercise>
+                    <title> Exercise </title>
+<!--                     <introduction>  
+                        <p> Solve the systems of equations. </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-ex-01">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} -2 -2x=0\\ 4 - 8 y=0 \end{cases}</me>
+                            <p> <m>x=</m><var name="-1" width="15" category="number"/></p>
+                            <p> <m>y=</m><var name="1/2" width="15" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Can you solve each equation separately? If so, then this is a simple system to solve!</p>
+                        </hint>
+
+                        <solution>
+                            <p> The first equation gives <m>-2=2x</m>, so <m>x=-1</m>. The second one is equivalent to <m>4=8y</m>, so <m>y=1/2</m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-02">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} 4 + 10 x + 4 y=0\\ -4+4x-4y=0 \end{cases}</me>
+                            <p> <m>x=</m><var name="0" width="15" category="number"/></p>
+                            <p> <m>y=</m><var name="-1" width="15" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Try adding or subtracting the two equations to find an equation with only one variable.</p>
+                        </hint>
+
+                        <solution>
+                            <p> If we add these two equations together, the <m>4y</m> cancels giving <m>14x=0</m>, so <m>x=0</m>. Setting <m>x=0</m> in either of the two equations gives <m>y=-1</m>. Thus, the only solution is <m>x=0</m> and <m>y=-1</m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-03">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-4,-1), (2,5)");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} y=x^2+3x-5\\ y=x+3 \end{cases}</me>
+                            <p> There may be multiple answers. Make sure you input all of them.</p>
+                            <p> <m>(x,y)=</m><var name="$ans" width="15" category="point" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Any pair of values <m>(x,y)</m> which is a solution to the system must satisfy both equations. In particular, the <m>y</m>-coordinates have to equal at the same time <m>x^2+3x-5</m> and <m>x+3</m>. Use this to find the only possible values for <m>x</m> for which <m>(x,y)</m> could be a solution.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Any pair of values <m>(x,y)</m> which is a solution must satisfy both equations. In particular, the <m>y</m>-coordinates of any solution have to both equal <m>x^2+3x-5</m> and <m>x+3</m>. Thus, we have
+                            <me>x^2+3x-5=x+3,</me>
+                            which has solutions <m>x=-4</m> and <m>x=2</m>. These are the only values of <m>x</m> for which <m>(x,y)</m> can satisfy both equations in the system of equations. Setting <m>x=-4</m> in either of the two equations we find <m>y=-1</m>, so <m>(x,y)=(-4,-1)</m> is a solution (the only one with <m>x=-4</m>). Setting <m>x=3</m> in either of the two equations we find <m>y=5</m>, so <m>(x,y)=(2,5)</m> is the only other solution.</p>
+                            <p>Thus, the only solutions are <m>(x,y)=(-4,-1)</m> and <m>(x,y)=(2,5)</m></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-04">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-3,-15), (4,-8)");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} x^2-y-24=0\\ y-x+12 = 0 \end{cases}</me>
+                            <p> There may be multiple answers. Make sure you input all of them.</p>
+                            <p> <m>(x,y)=</m><var name="$ans" width="15" category="point" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Note that you can isolate <m>y</m> in both equations. Note that any pair of values <m>(x,y)</m> which is a solution to the system must satisfy both equations. Use this to find the only possible values for <m>x</m> for which <m>(x,y)</m> could be a solution.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Solving for <m>y</m> in both equations we find that 
+                            <me>\begin{cases}y=x^2-24\\ y=x-12\end{cases}</me>
+                            Any pair of values <m>(x,y)</m> which is a solution must satisfy both of these equations. In particular, the <m>y</m>-coordinates of any solution have to both equal  <m>x^2-24</m> and <m>x-12</m>.</p> <p>Thus, we must have
+                            <me>x^2-24=x-12,</me>
+                            which has solutions <m>x=-3</m> and <m>x=4</m>. These are the only values of <m>x</m> for which <m>(x,y)</m> can satisfy both equations in the system of equations. Setting <m>x=-3</m> in either of the two equations we find <m>y=-15</m>, so <m>(x,y)=(-3,-15)</m> is a solution (the only one with <m>x=-3</m>). Setting <m>x=4</m> in either of the two equations we find <m>y=-8</m>, so <m>(x,y)=(4,-8)</m> is the only other solution.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-05">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-1/2,-1/8), (0,0)");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} 2xy+y=0\\ x^2+2y = 0 \end{cases}</me>
+                            <p> There may be multiple answers. Make sure you input all of them.</p>
+                            <p> <m>(x,y)=</m><var name="$ans" width="15" category="point" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> Note that you can solve for <m>y</m> in the second equation. Since any pair of values <m>(x,y)</m> which is a solution to the system must satisfy both equations, then the <m>y</m>-value of any solution must be what the second equation tells you it should be. Plug this into the first equation to find the only possible values for <m>x</m> for which <m>(x,y)</m> is a solution.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Solving for <m>y</m> in the second equation gives <m>y=-x^2/2</m>. Any pair of values <m>(x,y)</m> which is a solution to the system must satisfy <m>y=-x^2/2</m>, and so we can plug this into the first equation, giving 
+                            <md>
+                            <mrow> 2x\left(-\frac{x^2}{2} \right)+\left(-\frac{x^2}{2} \right)\amp =\amp 0 </mrow>
+                            <mrow> -x^3-\frac{x^2}{2}\amp =\amp 0</mrow>
+                            <mrow> -\frac{1}{2} x^2 (2 x + 1)\amp =\amp 0</mrow>
+                            </md>
+                            so <m>x=0</m> or <m>x=-1/2</m>. These are the only two possible values of <m>x</m> for which <m>(x,y)</m> may be a solution of the system (for some <m>y</m>). Setting <m>x=0</m> in the second equation of the system we find <m>y=0</m>, so <m>(x,y)=(0,0)</m> is a solution (the only one with <m>x=0</m>). Setting <m>x=-1/2</m> in the second equation of the system we find <m>y=-1/8</m>, so <m>(x,y)=(-1/2,-1/8)</m> is the only other solution.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-06">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-5/3,0), (-1,-2), (-1,2), (0,0)");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Solve the system of equations </p>
+                            <me>\begin{cases} 10x + 6x^2 + y^2=0\\ 2y+2xy=0 \end{cases}</me>
+                            <p> There may be multiple answers. Make sure you input all of them.</p>
+                            <p> <m>(x,y)=</m><var name="$ans" width="15" category="point" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> A solution to the system is a pair of values <m>(x,y)</m> which makes both equations true. Note that you can factor out a <m>y</m> in the second equation. What does the factored form tell you about the solutions to the second equation?</p>
+                        </hint>
+
+                        <solution>
+                            <p> Factoring out a <m>2y</m> in the second equation gives <m>2y(1+x)=0</m>, so either <m>2y=0</m> or <m>1+x=0</m> (or both). This shows that any solution <m>(x,y)</m> to the system must have <m>y=0</m> or <m>x=-1</m>. Setting <m>y=0</m> in the first equation gives \[10x+6x^2=0,\] which has solutions <m>x=0</m> or <m>x=-5/3</m>. Thus, <m>(x,y)=(0,0)</m> and <m>(x,y)=(-5/3,0)</m> are two solutions (the only solutions with <m>y=0</m>). Setting <m>x=-1</m> in the first equation gives <m>-4+y^2=0</m>, so <m>y=\pm 2</m>. Thus, <m>(x,y)=(-1,-2)</m> and <m>(x,y)=(-1,2)</m> are two more solutions (the only solutions with <m>x=-1</m>).</p>
+                            <p> The solutions to the system are <m>(0,0)</m>, <m>(-5/3,0)</m>, <m>(-1,-2)</m> and <m>(-1,2)</m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+<!--                     <introduction>  
+                        <p> Find the indicated partial derivative. </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-ex-07">
+                        <setup>
+                            <pg-code>
+                                Context()->variables->add(y => ["Real"]);
+                                $ans=Compute("2*x*y - 4*x + 3*y^2");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the partial derivative <m>f_x</m> for </p>
+                            <me>f(x,y)=x^2y-2x^2+3xy^2</me>
+                            <p> <m>f_x(x,y)=</m> <var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> When finding a partial derivative all other variables are treated as constants.</p>
+                        </hint>
+
+                        <solution>
+                            <p> When we differentiate with respect to <m>x</m>, we think of <m>y</m> as a constant. Thus,
+                            <md>
+                            <mrow>f_x(x,y)\amp=\amp \frac{\partial}{\partial x}\left(x^2y-2x^2+3xy^2\right) </mrow>
+                            <mrow>\amp=\amp \frac{\partial}{\partial x}\left(x^2y\right)-\frac{\partial}{\partial x}\left(2x^2\right)+\frac{\partial}{\partial x}\left(3xy^2\right)</mrow>
+                            <mrow>\amp =\amp 2xy - 4x + 3y^2</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-08">
+                        <setup>
+                            <pg-code>
+                                Context()->variables->add(y => ["Real"]);
+                                $ans=Compute("3-5*x^2+12*x*y");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the partial derivative <m>g_y</m> for </p>
+                            <me>g(x,y)=3y-5x^2y+6xy^2+4</me>
+                            <p> <m>g_y=</m><var name="$ans" width="25" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> When finding a partial derivative all other variables are treated as constants.</p>
+                        </hint>
+
+                        <solution>
+                            <p> When we differentiate with respect to <m>y</m>, we think of <m>x</m> as a constant. Thus,
+                            <md>
+                            <mrow> g_y(x,y)\amp =\amp \frac{\partial}{\partial y}\left(3y-5x^2y+6xy^2+4\right)</mrow>
+                            <mrow> \amp =\amp \frac{\partial}{\partial y}\left(3y\right)-\frac{\partial}{\partial y}\left(5x^2y\right)+\frac{\partial}{\partial y} \left(6xy^2\right)+\frac{\partial}{\partial y}\left(4\right)</mrow>
+                            <mrow> \amp =\amp 3-5x^2+12xy</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+<!--                     <introduction>  
+                        <p> Find the gradient vector. </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-ex-09">
+                        <setup>
+                            <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->add(y => ["Real"]);
+                                $ans=Vector("(2*x*y-4*x+3y^2)*i + (x^2+6*x*y)*j");
+                                $evaluatorforans=$ans->cmp(showCoordinateHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the gradient vector for </p>
+                            <me>f(x,y)=x^2y-2x^2+3xy^2</me>
+                            <p> <m>\nabla f (x,y)=</m> <var name="$ans" width="25" category="vector" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> What is the relationship between the components of the gradient vector and the partial derivatives of the function?</p>
+                        </hint>
+
+                        <solution>
+                            <p> We have <m>\nabla f(x,y)=f_x(x,y)\vec{i}+f_y(x,y)\vec{j}</m>, so
+                            <me>\nabla f(x,y)=(2xy-4x+3y^2)\vec{i}+(x^2+6xy)\vec{j}.</me>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                     <webwork xml:id="file-10-ex-10">
+                        <setup>
+                            <pg-code>
+                                Context()->variables->add(y => ["Real"]);
+                                Context("Vector2D");
+                                $ans=Vector("(-10*x*y+6*y^2)i + (3-5*x^2+12*x*y)j");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the gradient vector for </p>
+                            <me>g(x,y)=3y-5x^2y+6xy^2+4</me>
+                            <p> <m>\nabla g (x,y)=</m> <var name="$ans" width="25" category="vector"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>What is the relationship between the components of the gradient vector and the partial derivatives of the function?</p>
+                        </hint>
+
+                        <solution>
+                            <p> We have <m>\nabla g(x,y)=g_x(x,y)\vec{i}+g_y(x,y)\vec{j}</m>, so
+                            <me>\nabla g(x,y)=(-10xy+6y^2)\vec{i}+(3-5x^2+12xy)\vec{j}.</me>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+<!--                     <introduction>  
+                        <p> Find the determinant. </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-ex-11">
+                        <setup>
+                            <pg-code>
+                                Context("Matrix");
+                                $M=Matrix([[1,-2],[-1,3]]);
+                                $determinant=$M->det();
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the determinant of </p>
+                            <me><var name="$M"/></me>
+                            <p> determinant <m>=</m> <var name="$determinant" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> The determinant of 
+                            <me>\pmatrix{a \amp b \\ c \amp d }</me>
+                            is <m>ad-bc</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p> <me>\det \pmatrix{1 \amp -2 \\ -1 \amp 3} = (1)(3)-(-1)(-2)=3-2=1.</me></p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-10-ex-12">
+                        <setup>
+                            <pg-code>
+                                Context("Matrix");
+                                Context('Matrix')->variables->add(x=>'Real');
+                                Context('Matrix')->variables->add(y=>'Real');
+                                $M=Matrix([["2*x","x*y^2"],["-2","2*x+y"]]);
+                                Context("Numeric");
+                                Context()->variables->add(y => ["Real"]);
+                                $determinant=Formula("4*x^2 + 2*x*y^2 + 2*x*y");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the determinant for </p>
+                            <me><var name="$M"/></me>
+                            <p> determinant <m>=</m> <var name="$determinant" width="10" category="formula"/></p>
+                        </statement>
+
+                        <hint>
+                            <p> The determinant of 
+                            <me>\pmatrix{a \amp b \\ c \amp d }</me>
+                            is <m>ad-bc</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p> 
+                            <md>
+                            <mrow>\det\pmatrix{2x \amp xy^2 \\ -2 \amp 2x+y} \amp =  (2x)(2x+y)-(-2)(xy^2)</mrow>
+                            <mrow>\amp = (4x^2+2xy)-(-2xy^2)</mrow>
+                            <mrow> \amp = 4x^2 + 2xy + 2xy^2.</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            </exercises> 
+        </section>
+
+        <section>
+            <title> Key Concepts and Goals </title>
+            <subsection> 
+                <title> Key concepts </title>
+                <ul>
+                    <li>
+                    <m>(a,b) </m> is a local maximum of <m>f(x,y) </m> if <m>f(a,b)\geq f(x,y) </m> for all <m>(x,y) </m> near <m>(a,b) </m>.  <m>(a,b) </m> is a local minimum of <m>f(x,y) </m> if <m>f(a,b)\leq f(x,y) </m> for all <m>(x,y) </m> near <m>(a,b) </m>.  </li>
+
+                    <li>
+                    A critical point of a function <m>f(x,y) </m> is a point where <m>\nabla f(x,y)=\vec{0} </m> or where <m>\nabla f(x,y) </m> is undefined.</li>
+
+                    <li>
+                    Any local minima or maxima of <m>f(x,y) </m> must occur at a critical point of <m>f(x,y) </m>.</li>
+
+                    <li> <p>The nature of a critical point can be determined using the Second Derivative Test. Specifically, let 
+                    <me>H_f=\left[ \begin{array}{cc} f_{xx} \amp f_{xy} \\ f_{yx} \amp f_{yy} \end{array}\right]
+                    </me> and let <m>D=\det{(H_f)} </m> (<m>H_f </m> is called the Hessian matrix of <m>f(x,y) </m>). If <m>(a,b) </m> is a critical point of <m>f(x,y) </m>, then:</p>
+                        <ol>
+                            <li>
+                            if <m>D(a,b)\gt 0 </m> and <m>f_{xx}\gt 0 </m>, <m>(a,b) </m> is a local minimum</li>
+                            <li>
+                            if <m>D(a,b)>0 </m> and <m>f_{xx}\lt 0 </m>, <m>(a,b) </m> is a  local maximum</li>
+                            <li>
+                            if <m>D(a,b)\lt 0 </m>, then <m>(a,b) </m> is  neither a maximum or a minimum</li>
+                            <li>
+                            if <m>D(a,b)=0 </m>, the test is inconclusive.</li>
+                        </ol>
+                        <p>Note: If the test is inconclusive or <m>\nabla f </m> is undefined, we need to use some other method.</p>
+                    </li>
+
+                    <li>
+                    Other methods to determine the nature of a critical point of <m>f(x,y) </m> include looking at its graph or a contour diagram.</li>
+
+                </ul>
+            </subsection>
+          
+            <subsection>
+                <title> Goals </title>
+                <p> After completing your work on this section, you should be able to:</p>
+                <ul>
+                    <li>  Define what it means for a point <m>(a,b)</m> to be a local minimum or maximum of a function <m>f(x,y)</m></li>
+                    <li> Define and find the critical points of a function of two variables</li>
+                    <li> Recognize minima, maxima, and saddle points on the graph of a function or from a contour diagram</li>
+                    <li> Classify critical points as minima, maxima, or saddle points using the second derivative test</li>
+                    <li> Recognize when the second derivative test is inconclusive or cannot be used and use other methods to determine the nature of a critical point</li>
+                </ul>
+         </subsection>
+        </section>
+
+        <section>
+            <title>Practice Problem</title>
+            <!-- <introduction>
+                <p> Find the critical points of the following functions.</p>
+            </introduction> -->
+           <!--  <subsection> 
+                <title>Problem 1a</title> -->
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-pr-01">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-1,1/2)");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the critical points of the following function. </p>
+                            <me>f(x,y)=9-2x+4y-x^2-4y^2</me>
+                            <p> The critical points are (input DNE if there are none):</p>
+                            <p> <m>(x,y)=</m> <var name="$ans" width="15" category="point"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>What is true about <m>\nabla f(x,y)</m> at a critical point?</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m>f(x,y)</m> is a point where <m>\nabla f(x,y)=\vec{0}</m> or where <m>\nabla f(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow>f_x(x,y)\amp =  -2-2x</mrow>
+                            <mrow>f_y(x,y)\amp =   4-8y,</mrow>
+                            </md>
+                            show that <m>\nabla f(x,y)</m> is defined everywhere, and <m>\nabla f(x,y)=\vec{0}</m> only when <m>(x,y)=(-1,1/2)</m>. Thus, the only critical point is <m>(-1,1/2)</m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            <!-- </subsection>
+            <subsection> -->
+                <!-- <title>Problem 1b</title> -->
+                <exercise>
+                    <!-- <title> Problem 1b </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-pr-02">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(0,-1)");
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the critical points of the following function. </p>
+                            <me>g(x,y)=5x^2+4xy-2y^2+4x-4y</me>
+                            <p> The critical points are (input DNE if there are none):</p>
+                            <p> <m>(x,y)=</m> <var name="$ans" width="15" category="point"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>What is true about <m>\nabla g(x,y)</m> at a critical point?</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m>g(x,y)</m> is a point where <m>\nabla g(x,y)=\vec{0}</m> or where <m>\nabla g(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow> g_x(x,y)\amp =10x+4y+4</mrow>
+                            <mrow> g_y(x,y)\amp = 4x-4y-4,</mrow>
+                            </md>
+                            show that <m>\nabla g(x,y)</m> is defined everywhere, and <m>\nabla g(x,y)=\vec{0}</m> only at the points which are solutions the system of equations
+                            <md>
+                            <mrow> 10x+4y+4 \amp = 0</mrow>
+                            <mrow> 4x-4y-4 \amp  =  0.</mrow>
+                            </md>
+                            If we add these two equations together, the <m>4y</m> will cancel giving <m>14x=0</m>, so <m>x=0</m>. Setting <m>x=0</m> in either of the two equations gives <m>y=-1</m>. Thus, the only solution to the system is <m>(x,y)=(0,-1)</m>. Thus, the only critical point is <m>(0,-1)</m>.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+           <!--  </subsection>
+            <subsection> -->
+                <!-- <title> Problem 1c </title> -->
+                <exercise>
+                   <!--  <title> Problem 1c </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-10-pr-03">
+                        <setup>
+                            <pg-code>
+                                Context("Point");
+                                $ans=Compute("(-5/3,0),(-1,-2),(-1,2),(0,0)");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find the critical points of the following function. </p>
+                            <me>h(x,y)=2x^3+xy^2+5x^2+y^2</me>
+                            <p> <m>(x,y)=</m> <var name="$ans" width="15" category="point" evaluator="$evaluatorforans"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>What is true about <m> \nabla h(x,y)</m> at a critical point?</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m> h(x,y)</m> is a point where <m> \nabla h(x,y)=\vec{0}</m> or where <m> \nabla h(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow> h_x(x,y)\amp= 6 x^2 + 10 x + y^2 </mrow>
+                            <mrow> h_y(x,y)\amp= 2xy+2y,</mrow>
+                            </md>
+                            show that <m> \nabla h(x,y)</m> is defined everywhere, and <m> \nabla h(x,y)=\vec{0}</m> only at the points which are solutions the system of equations
+                            <md>
+                            <mrow> 6 x^2 + 10 x + y^2 \amp= 0  </mrow>
+                            <mrow> 2xy+2y \amp = 0.</mrow>
+                            </md>
+                            Factoring out a <m> 2y</m> in the second equation gives <m> 2y(1+x)=0</m>, so either <m> 2y=0</m> or <m> 1+x=0</m> (or both). This shows that any solution <m> (x,y)</m> to the system must have <m> y=0</m> or <m> x=-1</m>. Setting <m> y=0</m> in the first equation gives \[10x+6x^2=0,\] which has solutions <m> x=0</m> or <m> x=-5/3</m>. Thus, <m> (x,y)=(0,0)</m> and <m> (x,y)=(-5/3,0)</m> are two solutions (the only solutions with <m> y=0</m>). Setting <m> x=-1</m> in the first equation gives <m> -4+y^2=0</m>, so <m> y=\pm 2</m>. Thus, <m> (x,y)=(-1,-2)</m> and <m> (x,y)=(-1,2)</m> are two more solutions (the only solutions with <m> x=-1</m>).</p>
+                            <p> Therefore, the solutions to the system are <m> (0,0)</m>, <m> (-5/3,0)</m>, <m> (-1,-2)</m> and <m> (-1,2)</m>. These are the critical points.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+           <!--  </subsection> -->
+            <!-- <conclusion>
+                <title> Wrap-up Questions for these problems </title>
+                <ol>
+                    <li>Is there a relationship between the degree of a function and the number of critical points?</li>
+                </ol>
+            </conclusion> -->
+        </section>
+        <section>
+            <title>Practice Problem</title>
+                <p> The following is the contour diagram for the function <me>g(x,y)=2x^3+xy^2+5x^2+y^2.</me> Use it to help classify its critical points. </p>
+                <p><image source="images/Optimization1Contour" width="85%"/></p>
+                <!-- <exercise> -->
+                    <!-- <title> Problem 2 </title> -->
+                    <webwork xml:id="file-10-pr-04">
+                        <setup>
+                            <pg-code>
+                                $MC1= RadioButtons(
+                                ["maximum.","minimum.","saddle point.","there is not enough information to decide."],
+                                "maximum.", # correct answer
+                                );
+                                $MC2= RadioButtons(
+                                ["maximum.","minimum.","saddle point.","there is not enough information to decide."],
+                                "minimum.", # correct answer
+                                );
+                                $MC3= RadioButtons(
+                                ["maximum.","minimum.","saddle point.","there is not enough information to decide."],
+                                "saddle point.", # correct answer
+                                );
+                                $MC4= RadioButtons(
+                                ["maximum.","minimum.","saddle point.","there is not enough information to decide."],
+                                "saddle point.", # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p>The critical point <m>(-5/3,0)</m> is a</p>
+                            <p><var name="$MC1" form="buttons"/></p>
+                            <p>The critical point <m>(0,0)</m> is a</p>
+                            <p><var name="$MC2" form="buttons"/></p>
+                            <p>The critical point <m>(-1,2)</m> is a</p>
+                            <p><var name="$MC3" form="buttons"/></p>
+                            <p>The critical point <m>(-1,-2)</m> is a</p>
+                            <p><var name="$MC4" form="buttons"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>When you move away form the points, do the values of the contours always increase or decrease? Or are there directions in which they increase and others in which they decrease? </p>
+                        </hint>
+
+                        <solution>
+                            <p>When you move away form the <m>(-5/3,0)</m> in any direction, the contour values seem to always decrease. This indicates that <m>(-5/3,0)</m> is a maximum. A similar reasoning indicates that <m>(0,0)</m> is a minimum (all contour values increase away from the point).
+                            </p>
+                            <p>Regarding the point <m>(-1,2)</m> note that if you move away from the point in the <m>-\vec{i}+\vec{j}</m> direction (or its direct opposite, the <m>\vec{i}-\vec{j}</m> direction) the values of the contours seem to decrease. However, if you move away from the point in the <m>\vec{i}+\vec{j}</m> direction (or its direct opposite, the <m>-\vec{i}-\vec{j}</m> direction) the values of the contours seem to increase. This indicates that <m>(-1,2)</m> is a saddle point. A similar reasoning shows that <m>(-1,-2)</m> is also a saddle point.</p>
+                        </solution>
+                    </webwork>
+                <!-- </exercise> -->
+        </section>
+        <section> 
+            <title>Practice Problem</title>
+            <!-- <introduction>
+                <p> Classify the critical points of the following functions using the derivative test. </p>
+            </introduction> -->
+            <!-- <subsection> -->
+                <!-- <title> Problem 3a</title> -->
+                <exercise>
+                    <!-- <title> Problem 3a </title> -->
+                    <webwork xml:id="file-10-pr-05">
+                        <setup>
+                            <pg-code>
+                                $MultipleC= PopUp(
+                                ["Select choice", "maximum.","minimum.", "saddle point.", "...there is not enough information to decide."],
+                                "maximum.", 
+                                );   
+                                $ans=Compute("1");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                                $MultipleC2= PopUp(
+                                ["Select choice", "Yes","No"],
+                                "No", 
+                                ); 
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Classify the critical points of the function using the second derivative test.
+                            <me>f(x,y)=9-2x+4y-x^2-4y^2</me> 
+                            </p>
+                            <p> The critical point <m>(-1,1/2)</m> is a <var name="$MultipleC" form="popup"/></p>
+                            <p> We know this for sure because (list all the valid reasons with commas): <var name="$ans" width="15" category="number" evaluator="$evaluatorforans"/>
+                                <ol label="1"> 
+                                    <li> <m>D \gt  0</m> and <m>f_{xx}(-1,1/2)\lt  0</m>. 
+                                    </li>
+                                    <li> <m>D \lt  0</m>. 
+                                    </li>
+                                    <li> <m>D \gt  0</m> and <m>f_x(-1,1/2)\gt  0</m>.
+                                    </li>
+                                    <li> <m>f_{xx}(-1,1/2)\gt  0</m>. 
+                                    </li>
+                                    <li> <m>f_x(-1,1/2)\lt  0</m>.
+                                    </li>
+                                </ol>
+                            </p>
+                            <p> Are there any other critical points? <var name="$MultipleC2" form="popup"/></p>
+
+                        </statement>
+
+                        <hint>
+                            <p>Find all the critical points and compute the value of <m>D</m> at each.</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m>f(x,y)</m> is a point where <m>\nabla f(x,y)=\vec{0}</m> or where <m>\nabla f(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow> f_x(x,y)\amp = -2-2x</mrow>
+                            <mrow> f_y(x,y)\amp =  4-8y,</mrow>
+                            </md>
+                            show that <m>\nabla f(x,y)</m> is defined everywhere, and <m>\nabla f(x,y)=\vec{0}</m> only when <m>(x,y)=(-1,1/2)</m>. Thus, the only critical point of <m>f</m> is <m>(-1,1/2)</m>.
+                            </p>
+                            <p> We compute <m>D</m>
+                            <me>D=\det \pmatrix{f_{xx} \amp f_{xy} \\ f_{yx} \amp f_{yy}}=\det \pmatrix{-2 \amp 0 \\ 0 \amp -8}=16,</me>
+                            and see that <m>D\gt 0</m> (at any point so in particular at <m>(-1,1/2)</m>), so we see that <m>(-1,1/2)</m> is a local maximum or a local minimum.  To figure out which one it is, we can look at, for example, the concavity in <m>x</m>-direction by computing <m>f_{xx}(-1,1/2)</m> which gives <m>f_{xx}(-1,1/2)=-2\lt 0</m>. This indicates that <m>f</m> is concave down in the <m>x</m>-direction at <m>(-1,1/2)</m> and so <m>(-1,1/2)</m> is a local maximum.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+           <!--  </subsection>
+            <subsection> -->
+                <!-- <title> Problem 3b</title> -->
+                <exercise>
+                    <!-- <title> Problem 3a </title> -->
+                    <webwork xml:id="file-10-pr-06">
+                        <setup>
+                            <pg-code>
+                                $MultipleC= PopUp(
+                                ["Select choice", "maximum.","minimum.", "saddle point.", "...there is not enough information to decide."],
+                                "saddle point.", 
+                                );   
+                                $ans=Compute("3");
+                                $evaluatorforans=$ans->cmp(showLengthHints => 1, partialCredit => 1, showHints => 1);
+                                $MultipleC2= PopUp(
+                                ["Select choice", "Yes","No"],
+                                "No", 
+                                ); 
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Classify the critical points of the function using the second derivative test.
+                            <me>g(x,y)=5x^2+4xy-2y^2+4x-4y</me> 
+                            </p>
+                            <p> The critical point <m>(0,-1)</m> is a <var name="$MultipleC" form="popup"/></p>
+                            <p> We know this for sure because (list all the valid reasons with commas): <var name="$ans" width="15" category="number" evaluator="$evaluatorforans"/>
+                                <ol label="1"> 
+                                    <li> <m>D \gt  0</m>.
+                                    </li>
+                                    <li> <m>g_{xx}(0,-1)\lt  0</m>.
+                                    </li>
+                                    <li> <m>D \lt  0</m>.
+                                    </li>
+                                    <li> <m>g_x(0,-1)\gt  0</m>.
+                                    </li>
+                                    <li> <m>g_{xx}(0,-1)\gt  0</m>.
+                                    </li>
+                                    <li> <m>g_x(0,-1)\lt  0</m>.
+                                    </li>
+                                </ol>
+                            </p>
+                            <p> Are there any other critical points? <var name="$MultipleC2" form="popup"/></p>
+
+                        </statement>
+
+                        <hint>
+                            <p>Find all the critical points and compute the value of <m>D</m> at each.</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m>g(x,y)</m> is a point where <m>\nabla g(x,y)=\vec{0}</m> or where <m>\nabla g(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow> g_x(x,y)\amp = 10x+4y+4 </mrow>
+                            <mrow> g_y(x,y)\amp =  4x-4y-4,</mrow>
+                            </md>
+                            show that <m>\nabla g(x,y)</m> is defined everywhere, and <m>\nabla g(x,y)=\vec{0}</m> only at the points which are solutions the system of equations
+                            <md>
+                            <mrow> 10x+4y+4 \amp =  0  </mrow>
+                            <mrow> 4x-4y-4 \amp  =   0.</mrow>
+                            </md>
+                            If we add these two equations together, the <m>4y</m> will cancel giving <m>14x=0</m>, so <m>x=0</m>. Setting <m>x=0</m> in either of the two equations gives <m>y=-1</m>. Thus, the only solution to the system is <m>(x,y)=(0,-1)</m>. Thus, the only critical point of <m>g</m> is <m>(0,-1)</m>.</p>
+                            <p> We  compute <m>D</m>
+                            <me>D=\det \pmatrix{g_{xx} \amp  g_{xy} \\ g_{yx} \amp  g_{yy}}=\det \pmatrix{10 \amp  4 \\ 4 \amp  -4}=-56,</me>
+                            and since <m>D\lt 0</m> (at any point so in particular at <m>(0,-1)</m>), we see that <m>(0,-1)</m> is a saddle point.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <!-- <title> Problem 3a </title> -->
+                    <webwork xml:id="file-10-pr-07">
+                        <setup>
+                            <pg-code>
+                                $MC1= PopUp(
+                                ["Select choice", "maximum.","minimum.", "saddle point."],
+                                "minimum.", 
+                                ); 
+                                $MC2= PopUp(
+                                ["Select choice", "maximum.","minimum.", "saddle point."],
+                                "maximum.", 
+                                ); 
+                                $MC3= PopUp(
+                                ["Select choice", "maxima.","minima.", "saddle points."],
+                                "saddle points.", 
+                                );  
+                                $MC4= PopUp(
+                                ["Select choice", "Yes","No"],
+                                "No", 
+                                ); 
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Classify the critical points of the function using the second derivative test.
+                            <me>h(x,y)=2x^3+xy^2+5x^2+y^2</me> 
+                            </p>
+                            <p> The value of <m>D</m> at <m>(0,0)</m> is <var name="20" width="8" category="number"/>. The critical point <m>(0,0)</m> is a <var name="$MC1" form="popup"/>
+                            </p>
+                            <p> The value of <m>D</m> at <m>(-5/3,0)</m> is <var name="40/3" width="8" category="number"/>. The critical point <m>(-5/3,0)</m> is a <var name="$MC2" form="popup"/>
+                            </p>
+                            <p> The value of <m>D</m> at <m>(-1,-2)</m> is <var name="-16" width="8" category="number"/>. The value of <m>D</m> at <m>(-1,2)</m> is <var name="-16" width="8" category="number"/>. The critical points <m>(-1,2)</m> and <m>(-1,-2)</m> are <var name="$MC3" form="popup"/>
+                            </p>
+                            <p> Are there any other critical points? <var name="$MC4" form="popup"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Find all the critical points and compute the value of <m>D</m> at each.</p>
+                        </hint>
+
+                        <solution>
+                            <p>A critical point of a function <m>h(x,y)</m> is a point where <m>\nabla h(x,y)=\vec{0}</m> or where <m>\nabla h(x,y)</m> is undefined. The partial derivatives
+                            <md>
+                            <mrow> h_x(x,y)\amp =  6 x^2 + 10 x + y^2</mrow>
+                            <mrow> h_y(x,y)\amp =  2xy+2y ,</mrow>
+                            </md>
+                            show that <m>\nabla h(x,y)</m> is defined everywhere, and <m>\nabla h(x,y)=\vec{0}</m> only at the points which are solutions the system of equations
+                            <md>
+                            <mrow> 6 x^2 + 10 x + y^2 \amp =  0 </mrow>
+                            <mrow> 2xy+2y \amp  = 0.</mrow>
+                            </md>
+                            </p>
+                            <p>Factoring out a <m>2y</m> in the second equation gives <m>2y(1+x)=0</m>, so either <m>2y=0</m> or <m>1+x=0</m> (or both). This shows that any solution <m>(x,y)</m> to the system must have <m>y=0</m> or <m>x=-1</m>. Setting <m>y=0</m> in the first equation gives \[10x+6x^2=0,\] which has solutions <m>x=0</m> or <m>x=-5/3</m>. Thus, <m>(x,y)=(0,0)</m> and <m>(x,y)=(-5/3,0)</m> are two solutions (the only solutions with <m>y=0</m>). Setting <m>x=-1</m> in the first equation gives <m>-4+y^2=0</m>, so <m>y=\pm 2</m>. Thus, <m>(x,y)=(-1,-2)</m> and <m>(x,y)=(-1,2)</m> are two more solutions (the only solutions with <m>x=-1</m>).</p>
+                            <p> Therefore, the solutions to the system are <m>(0,0)</m>, <m>(-5/3,0)</m>, <m>(-1,-2)</m> and <m>(-1,2)</m>. These are the critical points.</p>
+                            <p> We compute <m>D</m>
+                            <md>
+                            <mrow> D \amp =\det \pmatrix{h_{xx} \amp  h_{xy} \\ h_{yx} \amp  h_{yy}}</mrow>
+                            <mrow> \amp =\det \pmatrix{12x+10 \amp  2y \\ 2y \amp  2x+2}</mrow>
+                            <mrow> \amp =24 x^2 + 44 x - 4 y^2 + 20.</mrow>
+                            </md>
+                            </p>
+                            <p> At the point <m>(0,0)</m> we have <m>D(0,0)=20\gt 0</m>, so <m>(0,0)</m> is a local maximum or minimum. To figure out which one it is, we can look at, for example, the concavity in <m>x</m>-direction by computing <m>h_{xx}(0,0)</m> which gives <m>h_{xx}(0,0)=10\gt 0</m>. This indicates that <m>h</m> is concave up in the <m>x</m>-direction at <m>(0,0)</m> and so <m>(0,0)</m> is a local minimum. </p>
+                            <p> At the point <m>(-5/3,0)</m> we have <m>D(-5/3,0)=40/3\gt 0</m>, so <m>(-5/3,0)</m> is a local maximum or minimum. We figure out which it is again by computing <m>h_{xx}(-5/3,0)=-10\lt 0</m>. This indicates that <m>h</m> is concave down in the <m>x</m>-direction at <m>(-5/3,0)</m> and so <m>(-5/3,0)</m> is a local maximum. </p>
+                            <p> At the points <m>(-1,-2)</m> and <m>(-1,2)</m> we have <m>D(-1,-2)=D(-1,2)=-16</m>, and so both are saddle points.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            <!-- </subsection> -->
+        </section>
+
+        <section>
+            <title> Wrap Up Questions </title>
+            <ol>
+            <li>
+                <p>Are the following statements true or false?</p>
+                <ol>
+                    <li>
+                    The only places a local minima or maxima can occur are where <m>\nabla f=\vec{0} </m></li>
+
+                    <li>
+                    Provided <m>\nabla f\neq \vec{0} </m>, the second derivative test can always be used to determine the nature of a critical point</li>
+
+                </ol>
+            </li>
+
+            <li>
+            Explain geometrically why, if <m>f_x </m> and <m>f_y </m> are defined, they both have to be zero at a minimum or maximum.</li>
+
+            <li>
+            What do you expect a contour diagram to look like close to a minimum or maximum? What about close to a saddle point?</li>
+
+            <li>
+            If two contours cross at a point <m>(a,b) </m>, does this mean it has to be a critical point? If so, does it have to be a saddle?</li>
+
+            <li> 
+            What do we do if <m>D=0</m>? What are reasonable strategies?</li>
+
+            </ol>
+        </section>
+
+        <!-- <backmatter> -->
+            <!-- 2018-09-19: answers are not yet available, so we -->
+            <!-- still test that asking for them is not a problem -->
+           <!--  <solutions inline="hint answer solution" divisional="hint answer solution">
+                <title>Hints, Answers, and Solutions</title>
+            </solutions>
+        </backmatter> -->
+    </article>
+</mathbook>
