@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-02-25T21:07:14-05:00    *-->
+<!--*    on 2019-02-26T17:27:04-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -105,21 +105,34 @@ var login_required = false;
 <span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Key concepts</span>
 </h3>
 <ul class="disc">
-<li id="li-13">The definition of a line integral of a real valued function</li>
-<li id="li-14">Geometric interpretation of a line integral of a real valued function</li>
-<li id="li-15">Set up and calculation of a line integral of a real valued function</li>
-<li id="li-16">Line integrals of scalar valued functions are not dependent on orientation or parameterization of a curve</li>
-<li id="li-17">Line integrals of scalar valued functions are path dependent</li>
+<li id="li-13">
+<p id="p-113">The line integral \(\int_{C} f(x,y)~ds \) of a scalar valued function \(f(x,y) \) over a curve \(C \) is defined similarly to how the standard single variable definite integral is defined. Specifically:</p>
+<ul id="p-114" class="circle">
+<li id="li-14">Break up the curve \(C \) into small pieces and approximate each piece by a line segment.</li>
+<li id="li-15">For each line segment, construct a rectangle whose height is determined by the height of the graph of \(f(x,y) \) at some point on this segment and whose base is the line segment.</li>
+<li id="li-16">Construct the Riemann sum of the areas of these rectangles.</li>
+<li id="li-17">The integral \(\int_{C} f(x,y)~ds \) is defined to be the limit of this Riemann sum as the lengths of the line segments go to zero.</li>
+</ul>
+</li>
+<li id="li-18">By the way it is defined, the line integral \(\int_{C} f(x,y)~ds \) of a scalar valued function \(f(x,y) \) over a curve \(C \) gives the weighted area bounded between the curve \(C \) and the graph of the function \(f(x,y) \text{.}\)</li>
+<li id="li-19">If \(C \) is parameterized by \(\vec{r}(t) \) for \(a\leq t\leq b \text{,}\) then to calculate the \(\int_{C} f(x,y)~ds \) we use the formula<div class="displaymath">
+\begin{equation*}
+\int_{C} f(x,y)~ds =\int_{a}^{b} f(\vec{r}(t)) ~ ||\vec{r}'(t)|| ~dt.
+\end{equation*}
+</div>Note that if \(C \) is not already parameterized, this means you will need to find a parameterization for \(C \text{,}\) including the bounds.</li>
+<li id="li-20">Since \(\int_{C} f(x,y)~ds \) calculates weighted area, we can often approximate its value from a contour diagram of specific graph.</li>
+<li id="li-21">Since geometrically a line integral of scalar valued function calculates weighted area, it does not depend on either the orientation of a curve or on the chosen parameterization. It does however depend upon the actual curve itself: that is, if \(C_1 \) and \(C_2 \) are two different curves between the same two points, we would expect the integrals over these curves to be different.</li>
+<li id="li-22">The concept of line integral of a scalar valued function generalizes to functions of more variables. Such integrals also calculate area, though we cannot visualize it as easily since their graphs lie in higher dimensions.</li>
 </ul></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Goals</span>
 </h3>
-<p id="p-113">After completing your work on this section, you should be able to:</p>
+<p id="p-115">After completing your work on this section, you should be able to:</p>
 <ul class="disc">
-<li id="li-18">Interpret the line integral of a real valued function geometrically as area</li>
-<li id="li-19">Set up and evaluate a line integral of a real valued function</li>
-<li id="li-20">Recognize that a line integral of a real valued function is independent of the chosen parameterization of the curve</li>
-<li id="li-21">Recognize that a line integral of a real valued function is independent of the orientation of a curve</li>
-<li id="li-22">Recognize that a line integral of a real valued function is dependent on path</li>
+<li id="li-23">Interpret the line integral of a real valued function geometrically as area</li>
+<li id="li-24">Set up and evaluate a line integral of a real valued function</li>
+<li id="li-25">Recognize that a line integral of a real valued function is independent of the chosen parameterization of the curve</li>
+<li id="li-26">Recognize that a line integral of a real valued function is independent of the orientation of a curve</li>
+<li id="li-27">Recognize that a line integral of a real valued function is dependent on path</li>
 </ul></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>

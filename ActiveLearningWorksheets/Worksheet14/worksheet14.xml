@@ -622,12 +622,36 @@
             <subsection> 
                 <title> Key concepts </title>
                 <ul>
+                    <li> <p>The line integral <m>\int_{C} f(x,y)~ds </m> of a scalar valued function <m>f(x,y) </m> over a curve <m>C </m> is defined similarly to how the standard single variable definite integral is defined. Specifically:</p>
+                    <p><ul>
+                        <li> Break up the curve <m>C </m> into small pieces and approximate each piece by a line segment.</li>
+
+                        <li> For each line segment, construct a rectangle whose height is determined by the height of the graph of <m>f(x,y) </m> at some point on this segment and whose base is the line segment.</li>
+
+                        <li> Construct the Riemann sum of the areas of these rectangles.</li>
+
+                        <li> The integral <m>\int_{C} f(x,y)~ds </m> is defined to be the limit of this Riemann sum as the lengths of the line segments go to zero.</li>
+                    </ul></p>
+                    </li>
+
+                    <li> By the way it is defined, the line integral <m>\int_{C} f(x,y)~ds </m> of a scalar valued function <m>f(x,y) </m> over a curve <m>C </m> gives the weighted area bounded between the curve <m>C </m> and the graph of the function <m>f(x,y) </m>. </li>
+
+                    <li> If <m>C </m> is parameterized by <m>\vec{r}(t) </m> for <m>a\leq t\leq b </m>, then to calculate the <m>\int_{C} f(x,y)~ds </m> we use the formula <me>\int_{C} f(x,y)~ds =\int_{a}^{b} f(\vec{r}(t)) ~ ||\vec{r}'(t)|| ~dt.</me> Note that if <m>C </m> is not already parameterized, this means you will need to find a parameterization for <m>C </m>, including the bounds.</li>
+
+                    <li> Since <m>\int_{C} f(x,y)~ds </m> calculates weighted area, we can often approximate its value from a contour diagram of specific graph.</li>
+
+                    <li> Since geometrically a line integral of scalar valued function calculates weighted area, it does not depend on either the orientation of a curve or on the chosen parameterization. It does however depend upon the actual curve itself: that is, if <m>C_1 </m> and <m>C_2 </m> are two different curves between the same two points, we would expect the integrals over these curves to be different.</li>
+
+                    <li> The concept of line integral of a scalar valued function generalizes to functions of more variables. Such integrals also calculate area, though we cannot visualize it as easily since their graphs lie in higher dimensions.</li>
+                </ul>
+
+<!--                 <ul>
                     <li>The definition of a line integral of a real valued function </li>
                     <li>Geometric interpretation of a line integral of a real valued function </li>
                     <li>Set up and calculation of a line integral of a real valued function </li>
                     <li>Line integrals of scalar valued functions are not dependent on orientation or parameterization of a curve </li>
                     <li>Line integrals of scalar valued functions are path dependent </li>
-                </ul>
+                </ul> -->
             </subsection>
           
             <subsection>
