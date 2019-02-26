@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- ********************************************************************* -->
+<!-- Copyright 2018                                                        -->
+<!-- Enrique Acosta                                                        -->
+<!--                                                                       -->
+<!--                                                                       -->
+<!-- Created with PreTeXt                                                  -->
+<!-- ********************************************************************* -->
+
+<mathbook>
+    <!-- Other languages can be used to internationalize parts of a document -->
+    <!-- <mathbook xml:lang="pt-BR"> -->
+
+    <!-- "docinfo" is like metadata, it is necessary technical -->
+    <!-- information which a reader mostly will never see. -->
+
+    <docinfo>
+
+        <!-- In the HTML version there is room for a   -->
+        <!-- picture or logo in the upper left corner. -->
+        <brandlogo url="http://www.google.com" source="images/Logo.svg"/>
+
+        <!-- For WeBWorK problems, these LaTeX macros must          -->
+        <!-- (a) be entirely on one line                            -->
+        <!-- (b) not employ a previous custom macro                 -->
+        <!-- (c) be defined only via \newcommand{<name>}{<command>} -->
+        <macros>
+        \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+        \newcommand{\indefiniteintegral}[2]{\int#1\,d#2} % comments get stripped
+        </macros>
+
+        <!-- this is the default, but supresses a warning -->
+        <cross-references text="type-global" />
+
+        <!-- An initialism is useful sometimes -->
+        <initialism>MCWG Worksheet 14</initialism>
+        <!--
+        With a <feedback> element, in the HTML version, you get a button
+        for reporting typos and errors.  You might link to a Google Docs
+        spreadsheet or something similar.  Default is to get a button
+        labeled "Feedback", which will be localized to your target language.
+        You can override this with some text of your choosing, but then you
+        lose the localization feature.
+        -->
+        <feedback>
+            <url>https://goo.gl/forms/o4iqZ3Yb408ushfP2</url>
+             <!-- <text>My Button Text</text>  -->
+        </feedback>
+
+        <latex-image-preamble>
+        <![CDATA[
+        \usepackage{pgfplots}
+        ]]>
+        </latex-image-preamble>
+
+        <rename element="inlineexercise" lang="en-US">Problem</rename>
+
+    </docinfo>
+
+    <article xml:id="Worksheet14">
+        <title>Active Learning Worksheet</title>
+        <subtitle>Worksheet 14 - Line integrals of a real valued functions</subtitle>
+
+        <frontmatter xml:id="index">
+
+            <!-- Items typically at the top of the first page of an article -->
+            <titlepage>
+               <!-- There can be several authors here -->
+                <author>
+                    <personname>Mathematics Consortium Working Group (MCWG)</personname>
+                    <!-- <email>wootton@up.edu, enriqueacostajaramillo@gmail.com</email> -->
+                </author>
+
+                <!-- Can set date manually or use the "today" element -->
+                <date><today /></date>
+
+            </titlepage>
+
+
+            <abstract>
+                <p> This worksheet is meant to be used in class. You should be working in groups or individually depending on the instructions from your teacher. </p>
+
+                <p> You can submit responses any number of times.</p>
+
+                <p> Remember, the point is that you learn from your mistakes and with the help of your peers, so make sure you reflect on incorrect answers and try again with your new understanding. If you can't figure it out, ask your teacher, or bring up your strategy in a whole class discussion. This will allow you to get as much as possible out of the activity.</p>
+            </abstract>
+
+        </frontmatter>
+
+        <section>
+            <title>Prerequisites</title>
+            <subsection> 
+                <title> Prerequisite Topics and Skills </title>
+                <ul>
+                    <li> Finding a vector equation for a given curve including bounds on the parameter </li>
+                    <li> Differentiation of a vector valued function </li>
+                    <li> Composition of vector valued functions </li>
+                    <li> Integrating a function of a single variable </li>
+                </ul>
+            </subsection>  
+            <exercises>
+                <title> (**) Exercises </title>
+                <p> The following exercises test your knowledge of the prerequisites for this section.</p>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-01">
+                        <setup>
+                            <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros>
+                            <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->are(t=>"Real");
+
+                                $P = Point(1,2);
+                                $Q = Point(-1,3);
+                                $PQ = Vector(-2,1);
+
+                                $t = Formula("t");
+                                $line = Vector("$P + $t * $PQ");
+
+                                $multians = MultiAnswer( $line, Real("0"), Real("1") )->with(
+                                  singleResult => 0,
+                                  checker => sub {
+                                    my ( $correct, $student, $ansHash ) = @_;
+                                    my ( $linestu, $astu, $bstu ) = @{$student};
+                                    my ( $linecor, $acor, $bcor ) = @{$correct};
+
+                                    if ( (ParametricLine("$line") == $linestu) and
+                                         ($linestu->eval(t=>$astu) == $line->eval(t=>"0")) and
+                                         ($linestu->eval(t=>$bstu) == $line->eval(t=>"1")) ) 
+                                    {  
+                                       return [1,1,1]; 
+
+                                    } elsif ( (ParametricLine("$line") == $linestu) and
+                                              ($linestu->eval(t=>$astu) == $line->eval(t=>"0")) )
+                                    {  
+                                       return [1,1,0]; 
+
+                                    } elsif ( (ParametricLine("$line") == $linestu) and
+                                              ($linestu->eval(t=>$bstu) == $line->eval(t=>"1")) )
+                                    {  
+                                       return [1,0,1]; 
+
+                                    } elsif ( (ParametricLine("$line") == $linestu) )
+                                    {
+                                        return [1,0,0];
+
+                                    } else { 
+                                        return [0,0,0]; 
+                                    }
+
+                                  }
+                                );
+
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find a vector equation for the line segment from the point <m>(1,2)</m> to the point <m>(-1,3)</m>.</p>
+                            <p> <m>\vec{r}(t) =</m> <var name="$multians" width="15" category="vector"/> for <var name="$multians" width="3"/> <m>\leq t \leq </m> <var name="$multians" width="3"/> </p>
+                        </statement>
+
+                        <hint>
+                            <p> Recall that a vector equation for a line segment from point <m>P</m> to point <m>Q</m> is <m>\vec{r}(t)=\vec{P} +\vec{PQ}t</m> for <m>0\leq t\leq 1</m> where <m>\vec{P}</m> is the position vector with head at point <m>P</m> and <m>\vec{PQ}</m> is the vector pointing from <m>P</m> to <m>Q</m>. </p>
+                        </hint>
+
+                        <solution>
+                            <p> The vector pointing from <m>(1,2)</m> to <m>(-1,3)</m> is <m>\vec{v}=-2\vec{i} +\vec{j}</m>. Therefore, a vector equation for this line segment will be <me>\vec{r}(t)=\vec{i} +2\vec{j} +(-2\vec{i} +\vec{j})t=(1-2t)\vec{i} +(2+t)\vec{j}</me> with <m>0\leq t\leq 1</m>.</p>
+                            <p> There are many other correct answers.</p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-02">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                                Context("Numeric");
+                                Context()->variables->are(t=>"Real");
+                                Context()->variables->set(t=>{limits=>[-5,5]});
+
+                                $x = Formula("2*cos(t)+1");
+                                $y = Formula("2*sin(t)-2");
+                                $t0 = Compute("0");
+                                $t1 = Compute("pi");
+
+                                ($x0,$y0) = (3,-2);
+                                ($x1,$y1) = (-1,-2);
+
+                                $multians = MultiAnswer($x, $y, $t0, $t1)->with(
+                                  singleResult => 0,
+                                  checker => sub {
+                                      my ( $correct, $student, $self ) = @_;
+                                      my ( $xstu, $ystu, $t0stu, $t1stu ) = @{$student};
+                                      if ( 
+                                           ( (($xstu-1)**2 + ($ystu+2)**2) == 4 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) {
+                                            return [1,1,1,1];
+
+                                      } elsif (
+                                           ( (($xstu-1)**2 + ($ystu+2)**2) == 4 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) 
+                                         ) { 
+                                            return [1,1,1,0];
+
+                                      } elsif (
+                                           ( (($xstu-1)**2 + ($ystu+2)**2) == 4 )  and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) { 
+                                            return [1,1,0,1];
+
+                                      } elsif (
+                                           ( (($xstu-1)**2 + ($ystu+2)**2) == 4 ) 
+                                         ) { 
+                                            return [1,1,0,0];
+
+                                      } else {
+                                            return [0,0,0,0];
+                                      }
+                                  }
+                                );
+                                $MC1= RadioButtons(
+                                ["\(\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)-2)\vec{j}\), for \(0\leq t\leq \pi/2\)",
+                                "\(\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)-2)\vec{j}\), for \(0\leq t\leq 2\pi\)",
+                                "\(\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)+2)\vec{j}\), for \(0\leq t\leq \pi/2\)",
+                                "\(\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)+2)\vec{j}\), for \(0\leq t\leq 2\pi\)",
+                                "\(\vec{r}(t) =(4\cos(2t)+1)\vec{i} +(4\sin(2t)-2)\vec{j}\), for \(0\leq t\leq \pi/2\)",
+                                "\(\vec{r}(t) =(4\cos(2t)+1)\vec{i} +(4\sin(2t)-2)\vec{j}\), for \(0\leq t\leq 2\pi\)",
+                                "\(\vec{r}(t) =(4\cos(2t)-1)\vec{i} +(4\sin(2t)+2)\vec{j}\), for \(0\leq t\leq \pi/2\)",
+                                "\(\vec{r}(t) =(4\cos(2t)-1)\vec{i} +(4\sin(2t)+2)\vec{j}\), for \(0\leq t\leq 2\pi\)"
+                                ],
+                                "\(\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)-2)\vec{j}\), for \(0\leq t\leq \pi/2\)", # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+                        <stage>
+                        <statement>
+                            <p> Find a vector equation for the half circle <m>(x-1)^2+(y+2)^2=4</m> with <m>y\geq -2</m> oriented counter-clockwise.</p>
+                            <p> <m>x(t) =</m> <var name="$multians" width="15" category="formula"/></p>
+                            <p> <m>y(t) =</m> <var name="$multians" width="15" category="formula"/></p> 
+                            <p>for <var name="$multians" width="3"/> <m>\leq t \leq </m> <var name="$multians" width="3" category="number"/> </p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that <m>\vec{r}(t) =\cos t \vec{i} +\sin t \vec{j}</m>, <m>0\leq t\leq 2\pi</m> gives a full circle oriented counter-clockwise starting (when <m>t=0</m>) at <m>(1,0)</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p> Observe that <m>(x-1)^2+(y+2)^2=4</m> is a circle of radius <m>2</m> centered at <m>(1,-2)</m>. The equation <m>\vec{r}(t) =\cos t \vec{i} +\sin t \vec{j}</m>, <m>0\leq t\leq 2\pi</m> gives a full circle of radius <m>1</m> oriented counter-clockwise starting at <m>(1,0)</m> when <m>t=0</m>. To get a circle of radius <m>2</m>, we scale each component by <m>2</m>, and to move the center to <m>(1,-2)</m> we add the vector <m>\vec{i} -2\vec{j}</m> (which translates every point to the right by <m>1</m> and down by <m>2</m>). Thus <m>\vec{r}(t) =(2\cos t +1)\vec{i} +(2\sin t -2)\vec{j}</m> for <m>0\leq t\leq 2\pi</m> is a circle of radius <m>2</m> centered at <m>(1,-2)</m> oriented counterclockwise starting at <m>(3,-2)</m> when <m>t=0</m>. To get the half circle, we restrict <m>0\leq t\leq \pi</m>.</p>
+                        </solution>
+                        </stage>
+                        <stage>
+                            <statement>
+                            <p> Which of the following are also parametric equations the same half-circle?</p>
+                            <p><var name="$MC1" form="buttons"/></p>
+                            </statement>
+
+                            <hint>
+                                <p>Recall that <m>\vec{r}(t) =\cos t \vec{i} +\sin t \vec{j}</m>, <m>0\leq t\leq 2\pi</m> gives a full circle oriented counter-clockwise starting (when <m>t=0</m>) at <m>(1,0)</m>. What does replacing <m>t</m> by <m>2t</m> do in the parameterization <m>\vec{r}(t) </m>?</p>
+                            </hint>
+
+                            <solution>
+                                <p> <m>\vec{r}(t) =(2\cos(2t)+1)\vec{i} +(2\sin(2t)-2)\vec{j}</m>, for <m>0\leq t\leq \pi/2</m></p>
+                            </solution>
+                        </stage>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-03">
+                        <setup>
+                            <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <!-- <macro-file>parserParametricLine.pl</macro-file> -->
+                            </pg-macros>
+                            <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->are(t=>"Real");
+
+                                $x = Formula("t");
+                                $y = Formula("2*t^2-1");
+
+                                
+                                $vec = Vector("$x*i+$y*j");
+                                $t0 = Compute("-1");
+                                $t1 = Compute("2");
+
+                                ($x0,$y0) = (-1,1);
+                                ($x1,$y1) = (2,7);
+
+                                $multians = MultiAnswer($vec, $t0, $t1)->with(
+                                  singleResult => 0,
+                                  checker => sub {
+                                      my ( $correct, $student, $self ) = @_;
+                                      my ( $vecstu, $t0stu, $t1stu ) = @{$student};
+                                      $xstu=$vecstu.i;
+                                      $ystu=$vecstu.j;
+                                      if ( 
+                                           ( (2*($xstu)**2-1-$ystu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) {
+                                            return [1,1,1];
+
+                                      } elsif (
+                                           ( (2*($xstu)**2-1-$ystu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) 
+                                         ) { 
+                                            return [1,1,0];
+
+                                      } elsif (
+                                           ( (2*($xstu)**2-1-$ystu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) { 
+                                            return [1,0,1];
+
+                                      } elsif (
+                                           ( (2*($xstu)**2-1-$ystu) == 0 ) 
+                                         ) { 
+                                            return [1,0,0];
+
+                                      } else {
+                                            return [0,0,0];
+                                      }
+                                  }
+                                );
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find a vector equation for the portion of the parabola <m>y=2x^2-1</m> from <m>x=-1</m> to <m>x=2</m>.</p>
+                            <p> <m>\vec{r}(t) =</m> <var name="$multians" width="15" category="vector"/> for <var name="$multians" width="3"/> <m>\leq t \leq </m> <var name="$multians" width="3" category="number"/> </p>
+                        </statement>
+
+                        <hint>
+                            <p> Recall that to parameterize a curve that follows that graph of a function <m>y=f(x)</m>, we can choose <m>x=t</m> and then <m>y</m> is completely determined by the function <m>y=f(x)</m>. </p>
+                        </hint>
+
+                        <solution>
+                            <p> To parameterize a curve that follows that graph of a function <m>y=f(x)</m>, we can choose <m>x=t</m> and then we get <m>y=f(t)=2t^2-1</m>. Thus, <m>\vec{r}(t) =t\vec{i} +(2t^2-1)\vec{j}</m> is a vector equation for  <m>y=2x^2-1</m>. Since <m>x=t</m> we choose <m>-1 \leq t\leq 2</m> to restrict to the appropriate domain. </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-04">
+                        <setup>
+                            <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <!-- <macro-file>parserParametricLine.pl</macro-file> -->
+                            </pg-macros>
+                            <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->are(t=>"Real");
+
+                                $x = Formula("sin(t)");
+                                $y = Formula("t");
+
+                                
+                                $vec = Vector("$x*i+$y*j");
+                                $t0 = Compute("0");
+                                $t1 = Compute("2*pi");
+
+                                ($x0,$y0) = (0,0);
+                                ($x1,$y1) = (0,2*pi);
+
+                                $multians = MultiAnswer($vec, $t0, $t1)->with(
+                                  singleResult => 0,
+                                  checker => sub {
+                                      my ( $correct, $student, $self ) = @_;
+                                      my ( $vecstu, $t0stu, $t1stu ) = @{$student};
+                                      $xstu=$vecstu.i;
+                                      $ystu=$vecstu.j;
+                                      if ( 
+                                           ( (sin($ystu)-$xstu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) {
+                                            return [1,1,1];
+
+                                      } elsif (
+                                           ( (sin($ystu)-$xstu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t0stu)) == $x0 ) and
+                                           ( ($ystu->eval(t=>$t0stu)) == $y0 ) 
+                                         ) { 
+                                            return [1,1,0];
+
+                                      } elsif (
+                                           ( (sin($ystu)-$xstu) == 0 )  and
+                                           ( ($xstu->eval(t=>$t1stu)) == $x1 ) and
+                                           ( ($ystu->eval(t=>$t1stu)) == $y1 )
+                                         ) { 
+                                            return [1,0,1];
+
+                                      } elsif (
+                                           ( (sin($ystu)-$xstu) == 0 ) 
+                                         ) { 
+                                            return [1,0,0];
+
+                                      } else {
+                                            return [0,0,0];
+                                      }
+                                  }
+                                );
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find parametric equations for the curve <m>x=\sin{y}</m> for <m>0\leq y\leq 2\pi</m>.</p>
+                            <p> <m>\vec{r}(t) =</m> <var name="$multians" width="15" category="vector"/> for <var name="$multians" width="3"/> <m>\leq t \leq </m> <var name="$multians" width="3" category="number"/> </p>
+                        </statement>
+
+                        <hint>
+                            <p> Recall that to parameterize a curve that follows that graph of a function <m>x=f(y)</m>, we can choose <m>y=t</m> and then <m>x</m> is completely determined by the function <m>x=f(y)</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p> To parameterize a curve that follows that graph of a function <m>x=f(y)</m>, we can choose <m>y=t</m> and then we get <m>x=f(t)=\sin t</m>. Thus, <m>\vec{r}(t) =\sin t\vec{i} +t\vec{j}</m> is a vector equation for  <m>x=\sin y</m>. Since <m>y=t</m> we choose <m>0\leq t\leq 2\pi</m> to restrict to the appropriate domain. </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-05">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> PENDING </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-06">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> PENDING </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-07">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> PENDING </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-08">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> PENDING </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-09">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p>  </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <title> Exercise </title>
+                    <webwork xml:id="file-14-ex-10">
+                        <setup>
+<!--                             <pg-macros>
+                                <macro-file>parserVectorUtils.pl</macro-file>
+                                <macro-file>parserParametricLine.pl</macro-file>
+                            </pg-macros> -->
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> PENDING </p>
+                        </statement>
+
+                        <hint>
+                            <p> PENDING </p>
+                        </hint>
+
+                        <solution>
+                            <p> PENDING </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            </exercises> 
+        </section>
+
+        <section>
+            <title> Key Concepts and Goals </title>
+            <subsection> 
+                <title> Key concepts </title>
+                <ul>
+                    <li>The definition of a line integral of a real valued function </li>
+                    <li>Geometric interpretation of a line integral of a real valued function </li>
+                    <li>Set up and calculation of a line integral of a real valued function </li>
+                    <li>Line integrals of scalar valued functions are not dependent on orientation or parameterization of a curve </li>
+                    <li>Line integrals of scalar valued functions are path dependent </li>
+                </ul>
+            </subsection>
+          
+            <subsection>
+                <title> Goals </title>
+                <p> After completing your work on this section, you should be able to:</p>
+                <ul>
+                    <li>Interpret the line integral of a real valued function geometrically as area </li>
+                    <li>Set up and evaluate a line integral of a real valued function </li>
+                    <li>Recognize that a line integral of a real valued function is independent of the chosen parameterization of the curve </li>
+                    <li>Recognize that a line integral of a real valued function is independent of the orientation of a curve </li>
+                    <li>Recognize that a line integral of a real valued function is dependent on path </li>
+                </ul>
+         </subsection>
+        </section>
+
+        <section>
+            <title> First problem set</title>
+            <!-- <introduction>
+                <p> Find the critical points of the following functions.</p>
+            </introduction> -->
+           <!--  <subsection> 
+                <title>Problem 1a</title> -->
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-01">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find \(\int_{C} (x^2+y^2) ds\) where \(C\) is parameterized by \(\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}\) for \(0\leq t\leq \pi\).</p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p>\(\displaystyle\int_{C} (x^2+y^2) ds =\) <var name="pi" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function \(f(x,y)\), the integral \(\int_{C} f(x,y) ds\) is equal to \(\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt\) where \(\vec{r}(t)\) parameterizes \(C\).</p>
+                        </hint>
+
+                        <solution>
+                            <p>We have \(\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\). Therefore 
+                            <md>
+                            <mrow> \int_{C} (x^2+y^2) ds \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right) ||\vec{r}'(t)|| dt</mrow>
+                            <mrow> \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right)\sqrt{(-\sin t)^2+(-\cos t)^2}dt</mrow>
+                            <mrow> \amp = \int_{0}^{\pi} 1~ dt</mrow>
+                            <mrow> \amp = \pi</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+            <!-- </subsection>
+            <subsection> -->
+                <!-- <title>Problem 1b</title> -->
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-02">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find <m>\int_{C} xyz ds</m> where <m>C</m> is parameterized by <me>\vec{r}(t) =-\cos{(t)} \vec{i} +\frac{1}{\sqrt{2}} \sin{(t)} \vec{j} -\frac{1}{\sqrt{2}}\sin{(t)}\vec{k}</me> for <m>0\leq t\leq \pi /2</m>. </p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p><m>\displaystyle\int_{C} xyz ~ ds =</m> <var name="1/3" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p>We have <m>\vec{r}'(t)=\sin{(t)} \vec{i} +\frac{1}{\sqrt{2}} \cos{(t)} \vec{j} -\frac{1}{\sqrt{2}}\cos{(t)}\vec{k}</m>. Therefore 
+                            <md>
+                            <mrow> \int_{C} xyz ds \amp = \int_0^{\pi /2} \left(-\cos{(t)}\right)\left(- \frac{1}{\sqrt{2}} \sin{(t)} \right)\frac{1}{\sqrt{2}} ||\vec{r}'(t)|| dt</mrow>
+                            <mrow> \amp = \int_0^{\pi /2} \cos{(t)} \sin^{2}{(t)}\sqrt{(-\sin t)^2+\left(\frac{1}{\sqrt{2}} \cos t\right)^2+\left(-\frac{1}{\sqrt{2}} \cos t\right)^2}dt</mrow>
+                            <mrow> \amp = \int_0^{\pi /2} \cos{(t)} \sin^{2}{(t)}\sqrt{\sin^{2}(t) +\cos^2{(t)}}dt</mrow>
+                            <mrow> \amp = \int_0^{\pi /2} \cos{(t)} \sin^{2}{(t)}dt</mrow>
+                            <mrow> \amp = \frac{\sin^{3}({t})}{3} \bigg|_{0}^{\pi /2}</mrow>
+                            <mrow> \amp = \frac{1}{3}.</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+           <!--  </subsection>
+            <subsection> -->
+                <!-- <title> Problem 1c </title> -->
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-03">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find <m>\int_{C} (x-y) ds</m> where <m>C</m> is the line segment from <m>(1,3)</m> to <m>(5,-2)</m>. </p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p><m>\displaystyle  \int_{C} (x-y) ~ ds=</m> <var name="5*sqrt(41)/2" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p>The line segment from <m>(1,3)</m> to <m>(5,-2)</m> can be parametrized by
+                            \[\vec{r}(t)=(4t+1)\vec{i}+(-5t+3)\vec{j},\quad 0\leq t\leq 1.\] 
+                            Then we have <m>\vec{r}'(t)=4\vec{i} -5\vec{j}</m> and so 
+                            <md>
+                            <mrow> \displaystyle\int_{C} (x-y)  ds \amp =  \int_0^{1} \left( (4t+1)-(-5t+3)\right) \sqrt{(4)^2+(-5)^2} dt </mrow>
+                            <mrow> \amp =  \int_0^{1} (9t-2) \sqrt{41} dt</mrow>
+                            <mrow> \amp = \sqrt{41} \left( \frac{9t^2}{2} -2t\right)_{0}^{1}</mrow>
+                            <mrow> \amp = \frac{5\sqrt{41}}{2}.</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-04">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find <m>\int_{C} (z+y^2) ~ ds</m> where <m>C</m> is the line segment from <m>(3,4,0)</m> to <m>(1,4,2)</m>. </p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p><m>\displaystyle  \int_{C} (z+y^2) ~ ds=</m> <var name="17*sqrt(8)" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p>The line segment from <m>(3,4,0)</m> to <m>(1,4,2)</m> can be parametrized by 
+                            <me>\vec{r}(t)=(-2t+3)\vec{i}+4\vec{j} +(2t)\vec{k},\quad 0\leq t\leq 1.</me> 
+                            Then we have <m>\vec{r}'(t)=-2\vec{i} +2\vec{k}</m> and so 
+                            <md>
+                            <mrow> \int_{C} (z+y^2) ~ ds \amp = \int_0^{1} \left((2t)+(4)^2\right) \sqrt{(-2)^2+(0)^2+(2)^2} ~ dt </mrow>
+                            <mrow> \amp = \int_0^{1} (2t+16) \sqrt{8} ~ dt</mrow>
+                            <mrow> \amp =\sqrt{8} \left( t^2 +16t\right)_{0}^{1}</mrow>
+                            <mrow> \amp =17\sqrt{8}.</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-05">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find <m>\int_{C} 3x ~ ds</m> where <m>C</m> is the curve <m>y=x^2</m> from <m>(0,0)</m> to <m>(3,9)</m>. </p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p><m>\displaystyle  \int_{C} 3x ~ ds=</m> <var name="(1/4)*(37*sqrt(37) - 1)" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ~ ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||~dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p>The curve <m>y=x^2</m> from from <m>(0,0)</m> to <m>(3,9)</m> can be parametrized by 
+                            <me>\vec{r}(t)=t\vec{i}+t^2\vec{j},\quad 0\leq t\leq 3.</me> 
+                            Then we have <m>\vec{r}'(t)=\vec{i} +(2t)\vec{k}</m> and so 
+                            <md>
+                            <mrow> \int_{C} 3x  ~ ds \amp = \int_0^{3} \left(3t \right) \sqrt{(1)^2+(2t)^2}~dt </mrow>
+                            <mrow> \amp = \int_0^{3} 3t \sqrt{1+4t^2}~dt</mrow>
+                            <mrow> \amp = \left( \frac{1}{4}\left(1+4t^2\right)^{\frac{3}{2}} \right)_{0}^{3}</mrow>
+                            <mrow> \amp = \frac{1}{4}\left( \left(37\right)^{\frac{3}{2}} -1\right).</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+                <exercise>
+                    <!-- <title> Problem 1a </title> -->
+                   <!--  <introduction>  
+                        <p> text </p>
+                    </introduction> -->
+                    <webwork xml:id="file-14-pr-06">
+                        <setup>
+                            <pg-code>
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p> Find <m>\int_{C} y ~ ds</m> where <m>C</m> is the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m>. </p>
+                            <p> Enter the exact answer or round to three decimal places.</p>
+                            <p><m>\displaystyle  \int_{C} y ~ ds =</m> <var name="8" width="10" category="number"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ~ ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||~dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
+                        </hint>
+
+                        <solution>
+                            <p>The the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m> can be parametrized by 
+                            <me>\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.</me> 
+                            Then we have <m>\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}</m> and so 
+                            <md>
+                            <mrow>\int_{C} y  ds \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{(-2\sin t)^2+(2\cos t)^2}dt</mrow> 
+                            <mrow> \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{4}dt</mrow>
+                            <mrow> \amp = 4\left( -\cos t \right)_{0}^{\pi} </mrow>
+                            <mrow> \amp = 8.</mrow>
+                            </md>
+                            </p>
+                        </solution>
+                    </webwork>
+                </exercise>
+           <!--  </subsection> -->
+            <!-- <conclusion>
+                <title> Wrap-up Questions for these problems </title>
+                <ol>
+                    <li>Is there a relationship between the degree of a function and the number of critical points?</li>
+                </ol>
+            </conclusion> -->
+        </section>
+        <section>
+            <title> Second Problem Set </title>
+                <p> The contour diagram of a function <m>f(x,y)</m> is given below. Use it to answer the following question. </p>
+                <p><image source="images/Exam2Fig1" width="85%"/></p>
+                <!-- <exercise> -->
+                    <!-- <title> Problem 2 </title> -->
+                    <webwork xml:id="file-14-pr-07">
+                        <setup>
+                            <pg-code>
+                                $MC1= PopUp(
+                                ["option",
+                                "(I)",
+                                "(II)",
+                                "(III)"
+                                ],
+                                "(III)", # correct answer
+                                );
+                                $MC2= PopUp(
+                                ["option",
+                                "(I)",
+                                "(II)",
+                                "(III)"
+                                ],
+                                "(II)", # correct answer
+                                );
+                                $MC3= PopUp(
+                                ["option",
+                                "(I)",
+                                "(II)",
+                                "(III)"
+                                ],
+                                "(I)", # correct answer
+                                );
+                            </pg-code>
+                        </setup>
+                        <statement>
+                            <p>(a) Find <m>\int_{C_2} f(x,y) ~ ds</m> exactly. </p>
+                            <p><m>\displaystyle \int_{C_2} f(x,y) ~ ds=</m> <var name="0" width="10" category="number"/></p>
+                            <p> (b) Order the integrals (I)\(\int_{C_1} f(x,y) ~ ds\), (II)\(\int_{C_2} f(x,y) ~ ds\), and (III)\(\int_{C_3} f(x,y) ~ ds\).</p>
+                            <p><var name="$MC1" form="popup"/><m>\lt</m><var name="$MC2" form="popup"/><m>\lt</m> <var name="$MC3" form="popup"/></p>
+                        </statement>
+
+                        <hint>
+                            <p>Recall that the integral <m>\int_{C} f(x,y) ~ds</m> gives the weighted area under <m>f(x,y)</m> above <m>C</m>. What do the contours that the different curves lie on tell you about these areas?</p>
+                        </hint>
+
+                        <solution>
+                            <p>(a) <m>C_2</m> is entirely along the <m>0</m> contour so <m>\int_{C_2} f(x,y) ds=0</m>.</p>
+                            <p> (b) We know \(\int_{C_2} f(x,y) ~ ds=0\). Since \(C_1\) lies only on positive contours, the area under \(f(x,y)\) above \(C_1\) will be positive, so \(\int_{C_1} f(x,y)~ ds\gt 0\). Similarly since \(C_3\) lies only on negative contours, the weighted area under \(f(x,y)\) above \(C_3\) will be negative (since it is below the \(xy\)-plane), so \(\int_{C_3} f(x,y)~ ds\lt 0\). Thus 
+                            <me>\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.</me>
+                            </p>
+                        </solution>
+                    </webwork>
+                <!-- </exercise> -->
+        </section>
+
+        <section>
+            <title> Wrap Up Questions </title>
+            <ol>
+            <li>
+                <p>Are the following statements true or false?</p>
+                <ol>
+                    <li>If <m>C </m> is a curve and <m>-C </m> is the same curve oriented in the opposite direction, then for any scalar function <m>f(x,y) </m> we have <m>\displaystyle \int_{-C} f(x,y)ds=\displaystyle -\int_{C} f(x,y)ds </m>.</li>
+                    <li>If <m>f(x,y)=k </m> for some constant <m>k </m>, then <m>\displaystyle \int_{C} f(x,y)ds=k|C| </m> where <m>|C| </m> denotes the length of <m>C </m>.</li>
+                    <li>The integral <m>\displaystyle \int_{C} f(x,y)ds </m> is always positive since it measures the area of <m>f(x,y) </m> over the curve <m>C </m>.</li>
+                    <li>If <m>C_1 </m> is longer than <m>C_2 </m>, then <m>\displaystyle \int_{C_1} f(x,y)ds>\displaystyle \int_{C_2} f(x,y)ds </m>.</li>
+                </ol>
+            </li>
+
+            <li>Explain geometrically why if <m>P </m> and <m>Q </m> are two different points and <m>C_1 </m> and <m>C_2 </m> are curves between them, it is not necessary that <m>\displaystyle \int_{C_1} f(x,y)ds=\displaystyle \int_{C_2} f(x,y)ds </m>.
+            </li>
+            <li>If a curve <m>C </m> lies entirely on the contour <m>f(x,y)=k </m> of a function <m>f(x,y) </m>, what is the value of <m>\int_{C} f(x,y)ds </m>?
+            </li>
+
+
+            </ol>
+        </section>
+
+        <!-- <backmatter> -->
+            <!-- 2018-09-19: answers are not yet available, so we -->
+            <!-- still test that asking for them is not a problem -->
+           <!--  <solutions inline="hint answer solution" divisional="hint answer solution">
+                <title>Hints, Answers, and Solutions</title>
+            </solutions>
+        </backmatter> -->
+    </article>
+</mathbook>
