@@ -89,9 +89,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada746b190)" correct_ans="(1,2)+t*&amp;lt;-2,1&amp;gt;" correct_ans_latex_string="\left(1,2\right)+t\!\left&lt;-2,1\right&gt;" correct_value="(1,2)+t*&lt;-2,1&gt;" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada746b190)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada746b190)" correct_ans="1" correct_ans_latex_string="1" correct_value="1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adb0ce31d0)" correct_ans="(1,2)+t*&amp;lt;-2,1&amp;gt;" correct_ans_latex_string="\left(1,2\right)+t\!\left&lt;-2,1\right&gt;" correct_value="(1,2)+t*&lt;-2,1&gt;" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adb0ce31d0)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adb0ce31d0)" correct_ans="1" correct_ans_latex_string="1" correct_value="1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -107,7 +107,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -392,10 +392,10 @@
       </stage>
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adab282fb8)" correct_ans="2*cos(t)+1" correct_ans_latex_string="2\cos\!\left(t\right)+1" correct_value="2*cos(t)+1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="0" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adab282fb8)" correct_ans="2*sin(t)-2" correct_ans_latex_string="2\sin\!\left(t\right)-2" correct_value="2*sin(t)-2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" upToConstant="0" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adab282fb8)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
-        <AnSwEr0004 _filter_name="dereference_array_ans" ans_label="AnSwEr0004" ans_message="" ans_name="AnSwEr0004" checker="CODE(0x55adab282fb8)" correct_ans="pi" correct_ans_latex_string="\pi " correct_value="3.14159" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="3" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(3)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adb01d5998)" correct_ans="2*cos(t)+1" correct_ans_latex_string="2\cos\!\left(t\right)+1" correct_value="2*cos(t)+1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="0" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adb01d5998)" correct_ans="2*sin(t)-2" correct_ans_latex_string="2\sin\!\left(t\right)-2" correct_value="2*sin(t)-2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" upToConstant="0" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adb01d5998)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0004 _filter_name="dereference_array_ans" ans_label="AnSwEr0004" ans_message="" ans_name="AnSwEr0004" checker="CODE(0x55adb01d5998)" correct_ans="pi" correct_ans_latex_string="\pi " correct_value="3.14159" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="3" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(3)" />
         <AnSwEr0005 _filter_name="dereference_array_ans" ans_label="AnSwEr0005" ans_message="" ans_name="AnSwEr0005" correct_ans="Choice 1" correct_ans_latex_string="\text{Choice 1}" correct_value="Choice 1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (parserRadioButtons)" typeMatch="Value::Real" />
       </answerhashes>
       
@@ -412,7 +412,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -710,9 +710,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adac77b008)" correct_ans="t*i+(2*t^2-1)*j" correct_ans_latex_string="t\boldsymbol{i}+\left(2t^{2}-1\right)\boldsymbol{j}" correct_value="t*i+(2*t^2-1)*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adac77b008)" correct_ans="-1" correct_ans_latex_string="-1" correct_value="-1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adac77b008)" correct_ans="2" correct_ans_latex_string="2" correct_value="2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada8809358)" correct_ans="t*i+(2*t^2-1)*j" correct_ans_latex_string="t\boldsymbol{i}+\left(2t^{2}-1\right)\boldsymbol{j}" correct_value="t*i+(2*t^2-1)*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada8809358)" correct_ans="-1" correct_ans_latex_string="-1" correct_value="-1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada8809358)" correct_ans="2" correct_ans_latex_string="2" correct_value="2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -728,7 +728,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -960,9 +960,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada8de6878)" correct_ans="sin(t)*i+t*j" correct_ans_latex_string="\sin\!\left(t\right)\boldsymbol{i}+t\boldsymbol{j}" correct_value="sin(t)*i+t*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada8de6878)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada8de6878)" correct_ans="2*pi" correct_ans_latex_string="2\pi " correct_value="6.28319" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada94028d0)" correct_ans="sin(t)*i+t*j" correct_ans_latex_string="\sin\!\left(t\right)\boldsymbol{i}+t\boldsymbol{j}" correct_value="sin(t)*i+t*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada94028d0)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada94028d0)" correct_ans="2*pi" correct_ans_latex_string="2\pi " correct_value="6.28319" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -978,7 +978,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1174,7 +1174,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1318,7 +1318,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1468,7 +1468,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1619,7 +1619,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1772,7 +1772,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1926,7 +1926,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2078,7 +2078,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2237,7 +2237,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2400,7 +2400,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2559,7 +2559,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2722,7 +2722,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2834,9 +2834,11 @@
           <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ~ ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||~dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
         </hint>
         <solution>
-          <p>The the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m> can be parametrized by 
-                                  <me>\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.</me> 
-                                  Then we have <m>\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}</m> and so 
+          <p>The the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m> can be parametrized by </p>
+          <p>
+            <me>\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.</me>
+          </p>
+          <p>Then we have <m>\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}</m> and so 
                                   <md><mrow>\int_{C} y  ds \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{(-2\sin t)^2+(2\cos t)^2}dt</mrow><mrow> \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{4}dt</mrow><mrow> \amp = 4\left( -\cos t \right)_{0}^{\pi} </mrow><mrow> \amp = 8.</mrow></md>
                                   </p>
         </solution>
@@ -2874,18 +2876,18 @@
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IGZvciBhIHNjYWxhciB2YWx1ZWQgZnVuY3Rpb24gW2BmKHgseSlcdGV4dHssfWBdIHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IGYoeCx5KSB%2BIGRzYF0gaXMgZXF1YWwgdG8gW2BcaW50X3tDfSBmKFx2ZWN7cn0odCkpIHx8XHZlY3tyfScodCl8fH5kdGBdIHdoZXJlIFtgXHZlY3tyfSh0KWBdIHBhcmFtZXRlcml6ZXMgW2BDXHRleHR7Ln1gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHRoZSB1cHBlciBoYWxmIG9mIHRoZSBjaXJjbGUgb2YgcmFkaXVzIFtgMmBdIGZyb20gW2AoMiwwKWBdIHRvIFtgKC0yLDApYF0gY2FuIGJlIHBhcmFtZXRyaXplZCBieQoKW2BgYFx2ZWN7cn0odCk9KDJcY29zIHQpIFx2ZWN7aX0rKDJcc2luIHQpXHZlY3tqfSxccXVhZCAwXGxlcSB0XGxlcSBccGkuYGBgXQoKVGhlbiB3ZSBoYXZlIFtgXHZlY3tyfScodCk9LTJcc2lueyh0KX0gXHZlY3tpfSArMlxjb3N7KHQpfSBcdmVje2p9YF0gYW5kIHNvCgpbYGBgXGJlZ2lue2FsaWduZWR9ClxpbnRfe0N9IHkgIGRzIFxhbXAgPSBcaW50XzBee1xwaX0gXGxlZnQoMlxzaW4gdCBccmlnaHQpIFxzcXJ0eygtMlxzaW4gdCleMisoMlxjb3MgdCleMn1kdFxcCiBcYW1wID0gXGludF8wXntccGl9IFxsZWZ0KDJcc2luIHQgXHJpZ2h0KSBcc3FydHs0fWR0XFwKIFxhbXAgPSA0XGxlZnQoIC1cY29zIHQgXHJpZ2h0KV97MH1ee1xwaX0gXFwKIFxhbXAgPSA4LgpcZW5ke2FsaWduZWR9YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IGZvciBhIHNjYWxhciB2YWx1ZWQgZnVuY3Rpb24gW2BmKHgseSlcdGV4dHssfWBdIHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IGYoeCx5KSB%2BIGRzYF0gaXMgZXF1YWwgdG8gW2BcaW50X3tDfSBmKFx2ZWN7cn0odCkpIHx8XHZlY3tyfScodCl8fH5kdGBdIHdoZXJlIFtgXHZlY3tyfSh0KWBdIHBhcmFtZXRlcml6ZXMgW2BDXHRleHR7Ln1gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIHRoZSB1cHBlciBoYWxmIG9mIHRoZSBjaXJjbGUgb2YgcmFkaXVzIFtgMmBdIGZyb20gW2AoMiwwKWBdIHRvIFtgKC0yLDApYF0gY2FuIGJlIHBhcmFtZXRyaXplZCBieQoKCgpbYGBgXHZlY3tyfSh0KT0oMlxjb3MgdCkgXHZlY3tpfSsoMlxzaW4gdClcdmVje2p9LFxxdWFkIDBcbGVxIHRcbGVxIFxwaS5gYGBdCgoKClRoZW4gd2UgaGF2ZSBbYFx2ZWN7cn0nKHQpPS0yXHNpbnsodCl9IFx2ZWN7aX0gKzJcY29zeyh0KX0gXHZlY3tqfWBdIGFuZCBzbwoKW2BgYFxiZWdpbnthbGlnbmVkfQpcaW50X3tDfSB5ICBkcyBcYW1wID0gXGludF8wXntccGl9IFxsZWZ0KDJcc2luIHQgXHJpZ2h0KSBcc3FydHsoLTJcc2luIHQpXjIrKDJcY29zIHQpXjJ9ZHRcXAogXGFtcCA9IFxpbnRfMF57XHBpfSBcbGVmdCgyXHNpbiB0IFxyaWdodCkgXHNxcnR7NH1kdFxcCiBcYW1wID0gNFxsZWZ0KCAtXGNvcyB0IFxyaWdodClfezB9XntccGl9IFxcCiBcYW1wID0gOC4KXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
     <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IGZvciBhIHNjYWxhciB2YWx1ZWQgZnVuY3Rpb24gW2BmKHgseSlcdGV4dHssfWBdIHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IGYoeCx5KSB%2BIGRzYF0gaXMgZXF1YWwgdG8gW2BcaW50X3tDfSBmKFx2ZWN7cn0odCkpIHx8XHZlY3tyfScodCl8fH5kdGBdIHdoZXJlIFtgXHZlY3tyfSh0KWBdIHBhcmFtZXRlcml6ZXMgW2BDXHRleHR7Ln1gXQoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClgXSBjYW4gYmUgcGFyYW1ldHJpemVkIGJ5CgpbYGBgXHZlY3tyfSh0KT0oMlxjb3MgdCkgXHZlY3tpfSsoMlxzaW4gdClcdmVje2p9LFxxdWFkIDBcbGVxIHRcbGVxIFxwaS5gYGBdCgpUaGVuIHdlIGhhdmUgW2BcdmVje3J9Jyh0KT0tMlxzaW57KHQpfSBcdmVje2l9ICsyXGNvc3sodCl9IFx2ZWN7an1gXSBhbmQgc28KCltgYGBcYmVnaW57YWxpZ25lZH0KXGludF97Q30geSAgZHMgXGFtcCA9IFxpbnRfMF57XHBpfSBcbGVmdCgyXHNpbiB0IFxyaWdodCkgXHNxcnR7KC0yXHNpbiB0KV4yKygyXGNvcyB0KV4yfWR0XFwKIFxhbXAgPSBcaW50XzBee1xwaX0gXGxlZnQoMlxzaW4gdCBccmlnaHQpIFxzcXJ0ezR9ZHRcXAogXGFtcCA9IDRcbGVmdCggLVxjb3MgdCBccmlnaHQpX3swfV57XHBpfSBcXAogXGFtcCA9IDguClxlbmR7YWxpZ25lZH1gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClgXSBjYW4gYmUgcGFyYW1ldHJpemVkIGJ5CgoKCltgYGBcdmVje3J9KHQpPSgyXGNvcyB0KSBcdmVje2l9KygyXHNpbiB0KVx2ZWN7an0sXHF1YWQgMFxsZXEgdFxsZXEgXHBpLmBgYF0KCgoKVGhlbiB3ZSBoYXZlIFtgXHZlY3tyfScodCk9LTJcc2lueyh0KX0gXHZlY3tpfSArMlxjb3N7KHQpfSBcdmVje2p9YF0gYW5kIHNvCgpbYGBgXGJlZ2lue2FsaWduZWR9ClxpbnRfe0N9IHkgIGRzIFxhbXAgPSBcaW50XzBee1xwaX0gXGxlZnQoMlxzaW4gdCBccmlnaHQpIFxzcXJ0eygtMlxzaW4gdCleMisoMlxjb3MgdCleMn1kdFxcCiBcYW1wID0gXGludF8wXntccGl9IFxsZWZ0KDJcc2luIHQgXHJpZ2h0KSBcc3FydHs0fWR0XFwKIFxhbXAgPSA0XGxlZnQoIC1cY29zIHQgXHJpZ2h0KV97MH1ee1xwaX0gXFwKIFxhbXAgPSA4LgpcZW5ke2FsaWduZWR9YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
     <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=16&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30geSB%2BIGRzYF0gd2hlcmUgW2BDYF0gaXMgdGhlIHVwcGVyIGhhbGYgb2YgdGhlIGNpcmNsZSBvZiByYWRpdXMgW2AyYF0gZnJvbSBbYCgyLDApYF0gdG8gW2AoLTIsMClcdGV4dHsufWBdCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2BcZGlzcGxheXN0eWxlICBcaW50X3tDfSB5IH4gZHMgPWBdIFtfXXs4fXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3109,7 +3111,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:52:28-05:00    
+      ###    on 2019-02-25T21:07:01-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    

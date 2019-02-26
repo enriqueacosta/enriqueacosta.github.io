@@ -644,7 +644,7 @@
         </section>
 
         <section>
-            <title> First problem set</title>
+            <title> First Set</title>
             <!-- <introduction>
                 <p> Find the critical points of the following functions.</p>
             </introduction> -->
@@ -845,9 +845,9 @@
                         </hint>
 
                         <solution>
-                            <p>The the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m> can be parametrized by 
-                            <me>\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.</me> 
-                            Then we have <m>\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}</m> and so 
+                            <p>The the upper half of the circle of radius <m>2</m> from <m>(2,0)</m> to <m>(-2,0)</m> can be parametrized by </p>
+                            <p><me>\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.</me></p>
+                            <p>Then we have <m>\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}</m> and so 
                             <md>
                             <mrow>\int_{C} y  ds \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{(-2\sin t)^2+(2\cos t)^2}dt</mrow> 
                             <mrow> \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{4}dt</mrow>
@@ -867,8 +867,8 @@
             </conclusion> -->
         </section>
         <section>
-            <title> Second Problem Set </title>
-                <p> The contour diagram of a function <m>f(x,y)</m> is given below. Use it to answer the following question. </p>
+            <title> Second Set </title>
+                <p> The contour diagram of a function <m>f(x,y)</m> is given below. Use it to answer the following questions. </p>
                 <p><image source="images/Exam2Fig1" width="85%"/></p>
                 <!-- <exercise> -->
                     <!-- <title> Problem 2 </title> -->
