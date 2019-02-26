@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-02-25T20:04:07-05:00    *-->
+<!--*    on 2019-02-25T20:52:42-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,21 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>(b) We know \​(\int_{C_2} f(x,y) ~ ds=0\). Since \​(C_1\) lies only on positive contours, the area under \​(f(x,y)\) above \​(C_1\) will be positive, so \​(\int_{C_1} f(x,y)~ ds\gt 0\). Similarly since \​(C_3\) lies only on negative contours, the weighted area under \​(f(x,y)\) above \​(C_3\) will be negative (since it is below the \​(xy\)-plane), so \​(\int_{C_3} f(x,y)~ ds\lt 0\). Thus</p>
+<p>The the upper half of the circle of radius \(2\) from \((2,0)\) to \((-2,0)\) can be parametrized by</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.
+\vec{r}(t)=(2\cos t) \vec{i}+(2\sin t)\vec{j},\quad 0\leq t\leq \pi.
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-4.html#p-179">in-context</a></span>
+<p>Then we have \(\vec{r}'(t)=-2\sin{(t)} \vec{i} +2\cos{(t)} \vec{j}\) and so</p>
+<div class="displaymath">
+\begin{align*}
+\int_{C} y  ds \amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{(-2\sin t)^2+(2\cos t)^2}dt\\
+\amp = \int_0^{\pi} \left(2\sin t \right) \sqrt{4}dt\\
+\amp = 4\left( -\cos t \right)_{0}^{\pi} \\
+\amp = 8.
+\end{align*}
+</div>
+<span class="incontext"><a href="section-3.html#p-179">in-context</a></span>
 </body>
 </html>

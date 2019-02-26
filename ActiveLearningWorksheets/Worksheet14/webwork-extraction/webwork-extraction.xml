@@ -89,9 +89,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada7c05d18)" correct_ans="(1,2)+t*&amp;lt;-2,1&amp;gt;" correct_ans_latex_string="\left(1,2\right)+t\!\left&lt;-2,1\right&gt;" correct_value="(1,2)+t*&lt;-2,1&gt;" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada7c05d18)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada7c05d18)" correct_ans="1" correct_ans_latex_string="1" correct_value="1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada746b190)" correct_ans="(1,2)+t*&amp;lt;-2,1&amp;gt;" correct_ans_latex_string="\left(1,2\right)+t\!\left&lt;-2,1\right&gt;" correct_value="(1,2)+t*&lt;-2,1&gt;" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada746b190)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada746b190)" correct_ans="1" correct_ans_latex_string="1" correct_value="1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -107,7 +107,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -392,10 +392,10 @@
       </stage>
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada878f018)" correct_ans="2*cos(t)+1" correct_ans_latex_string="2\cos\!\left(t\right)+1" correct_value="2*cos(t)+1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="0" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada878f018)" correct_ans="2*sin(t)-2" correct_ans_latex_string="2\sin\!\left(t\right)-2" correct_value="2*sin(t)-2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" upToConstant="0" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada878f018)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
-        <AnSwEr0004 _filter_name="dereference_array_ans" ans_label="AnSwEr0004" ans_message="" ans_name="AnSwEr0004" checker="CODE(0x55ada878f018)" correct_ans="pi" correct_ans_latex_string="\pi " correct_value="3.14159" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="3" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(3)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adab282fb8)" correct_ans="2*cos(t)+1" correct_ans_latex_string="2\cos\!\left(t\right)+1" correct_value="2*cos(t)+1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="0" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adab282fb8)" correct_ans="2*sin(t)-2" correct_ans_latex_string="2\sin\!\left(t\right)-2" correct_value="2*sin(t)-2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" upToConstant="0" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adab282fb8)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0004 _filter_name="dereference_array_ans" ans_label="AnSwEr0004" ans_message="" ans_name="AnSwEr0004" checker="CODE(0x55adab282fb8)" correct_ans="pi" correct_ans_latex_string="\pi " correct_value="3.14159" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="3" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(3)" />
         <AnSwEr0005 _filter_name="dereference_array_ans" ans_label="AnSwEr0005" ans_message="" ans_name="AnSwEr0005" correct_ans="Choice 1" correct_ans_latex_string="\text{Choice 1}" correct_value="Choice 1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (parserRadioButtons)" typeMatch="Value::Real" />
       </answerhashes>
       
@@ -412,7 +412,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -710,9 +710,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada85ba7b8)" correct_ans="t*i+(2*t^2-1)*j" correct_ans_latex_string="t\boldsymbol{i}+\left(2t^{2}-1\right)\boldsymbol{j}" correct_value="t*i+(2*t^2-1)*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada85ba7b8)" correct_ans="-1" correct_ans_latex_string="-1" correct_value="-1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada85ba7b8)" correct_ans="2" correct_ans_latex_string="2" correct_value="2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55adac77b008)" correct_ans="t*i+(2*t^2-1)*j" correct_ans_latex_string="t\boldsymbol{i}+\left(2t^{2}-1\right)\boldsymbol{j}" correct_value="t*i+(2*t^2-1)*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55adac77b008)" correct_ans="-1" correct_ans_latex_string="-1" correct_value="-1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55adac77b008)" correct_ans="2" correct_ans_latex_string="2" correct_value="2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -728,7 +728,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -960,9 +960,9 @@
       
       
       <answerhashes>
-        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada87dcda8)" correct_ans="sin(t)*i+t*j" correct_ans_latex_string="\sin\!\left(t\right)\boldsymbol{i}+t\boldsymbol{j}" correct_value="sin(t)*i+t*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
-        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada87dcda8)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
-        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada87dcda8)" correct_ans="2*pi" correct_ans_latex_string="2\pi " correct_value="6.28319" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" checker="CODE(0x55ada8de6878)" correct_ans="sin(t)*i+t*j" correct_ans_latex_string="\sin\!\left(t\right)\boldsymbol{i}+t\boldsymbol{j}" correct_value="sin(t)*i+t*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" part="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="0" showDimensionHints="1" showDomainErrors="1" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(0)" upToConstant="0" />
+        <AnSwEr0002 _filter_name="dereference_array_ans" ans_label="AnSwEr0002" ans_message="" ans_name="AnSwEr0002" checker="CODE(0x55ada8de6878)" correct_ans="0" correct_ans_latex_string="0" correct_value="0" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="1" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(1)" />
+        <AnSwEr0003 _filter_name="dereference_array_ans" ans_label="AnSwEr0003" ans_message="" ans_name="AnSwEr0003" checker="CODE(0x55ada8de6878)" correct_ans="2*pi" correct_ans_latex_string="2\pi " correct_value="6.28319" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" part="2" preview_latex_string="" preview_text_string="" score="0" showCoordinateHints="0" showEndTypeHints="0" showEndpointHints="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="MultiAnswer(2)" />
       </answerhashes>
       
     </static>
@@ -978,7 +978,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1124,16 +1124,19 @@
                                       <macro-file>parserParametricLine.pl</macro-file>
                                   </pg-macros> -->
           <pg-code>
+                                      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+                                      $ans=Compute("4*t-3*t^2");
                                   </pg-code>
         </setup>
         <statement>
-          <p> PENDING </p>
+          <p> Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=2x-3y</m> and <m>\vec{r}(t)=2t\vec{i} +t^2\vec{j}</m>.</p>
+          <p><m>f(\vec{r}(t))=</m> <var name="$ans" width="15" category="formula"/></p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p> What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)</m>?</p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>2t</m>, and the <m>y</m>-coordinate is <m>t^2</m>so <m>f(\vec{r}(t))=4t-3 t^2</m>.</p>
         </solution>
       
     </authored>
@@ -1141,34 +1144,37 @@
       
     <static seed="5">
       <statement>
-      <p>PENDING</p>
+      <p>Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=2x-3y</m> and <m>\vec{r}(t)=2t\vec{i} +t^2\vec{j}\text{.}</m></p>
+      <p><m>f(\vec{r}(t))=</m> <fillin name="AnSwEr0001" characters="15" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)\text{?}</m></p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p>The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>2t\text{,}</m> and the <m>y</m>-coordinate is <m>t^2</m>so <m>f(\vec{r}(t))=4t-3 t^2\text{.}</m></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="4*t-3*t^2" correct_ans_latex_string="4t-3t^{2}" correct_value="4*t-3*t^2" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showDomainErrors="1" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Formula)" upToConstant="0" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Q29tcHV0ZSgiNCp0LTMqdF4yIik7CgpCRUdJTl9QR01MCkZpbmQgW2BmKFx2ZWN7cn0odCkpYF0gZm9yIFtgZih4LHkpPTJ4LTN5YF0gYW5kIFtgXHZlY3tyfSh0KT0ydFx2ZWN7aX0gK3ReMlx2ZWN7an1cdGV4dHsufWBdCgpbYGYoXHZlY3tyfSh0KSk9YF0gW19deyRhbnN9ezE1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldoYXQgYXJlIHRoZSBbYHhgXSBhbmQgW2B5YF0tY29vcmRpbmF0ZXMgb2YgW2BcdmVje3J9KHQpXHRleHR7P31gXQoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIFtgeGBdIGNvb3JkaW5hdGUgb2YgW2BcdmVje3J9KHQpYF0gaXMgW2AydFx0ZXh0eyx9YF0gYW5kIHRoZSBbYHlgXS1jb29yZGluYXRlIGlzIFtgdF4yYF1zbyBbYGYoXHZlY3tyfSh0KSk9NHQtMyB0XjJcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Q29tcHV0ZSgiNCp0LTMqdF4yIik7CgpCRUdJTl9QR01MCkZpbmQgW2BmKFx2ZWN7cn0odCkpYF0gZm9yIFtgZih4LHkpPTJ4LTN5YF0gYW5kIFtgXHZlY3tyfSh0KT0ydFx2ZWN7aX0gK3ReMlx2ZWN7an1cdGV4dHsufWBdCgpbYGYoXHZlY3tyfSh0KSk9YF0gW19deyRhbnN9ezE1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCldoYXQgYXJlIHRoZSBbYHhgXSBhbmQgW2B5YF0tY29vcmRpbmF0ZXMgb2YgW2BcdmVje3J9KHQpXHRleHR7P31gXQoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpQRU5ESU5HCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Q29tcHV0ZSgiNCp0LTMqdF4yIik7CgpCRUdJTl9QR01MCkZpbmQgW2BmKFx2ZWN7cn0odCkpYF0gZm9yIFtgZih4LHkpPTJ4LTN5YF0gYW5kIFtgXHZlY3tyfSh0KT0ydFx2ZWN7aX0gK3ReMlx2ZWN7an1cdGV4dHsufWBdCgpbYGYoXHZlY3tyfSh0KSk9YF0gW19deyRhbnN9ezE1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgW2B4YF0gY29vcmRpbmF0ZSBvZiBbYFx2ZWN7cn0odClgXSBpcyBbYDJ0XHRleHR7LH1gXSBhbmQgdGhlIFtgeWBdLWNvb3JkaW5hdGUgaXMgW2B0XjJgXXNvIFtgZihcdmVje3J9KHQpKT00dC0zIHReMlx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=5&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Q29tcHV0ZSgiNCp0LTMqdF4yIik7CgpCRUdJTl9QR01MCkZpbmQgW2BmKFx2ZWN7cn0odCkpYF0gZm9yIFtgZih4LHkpPTJ4LTN5YF0gYW5kIFtgXHZlY3tyfSh0KT0ydFx2ZWN7aX0gK3ReMlx2ZWN7an1cdGV4dHsufWBdCgpbYGYoXHZlY3tyfSh0KSk9YF0gW19deyRhbnN9ezE1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1209,14 +1215,17 @@
       ############################################################
       # PG Setup
       ############################################################
-      Context('Numeric');
+      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      $ans=Compute("4*t-3*t^2");
       
       ############################################################
       # Body
       ############################################################
       
       BEGIN_PGML
-      PENDING
+      Find [`f(\vec{r}(t))`] for [`f(x,y)=2x-3y`] and [`\vec{r}(t)=2t\vec{i} +t^2\vec{j}\text{.}`]
+      
+      [`f(\vec{r}(t))=`] [_]{$ans}{15} [@AnswerFormatHelp('formulas')@]*
       
       END_PGML
       
@@ -1226,7 +1235,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      What are the [`x`] and [`y`]-coordinates of [`\vec{r}(t)\text{?}`]
       
       END_PGML_HINT
       
@@ -1235,7 +1244,7 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      The [`x`] coordinate of [`\vec{r}(t)`] is [`2t\text{,}`] and the [`y`]-coordinate is [`t^2`]so [`f(\vec{r}(t))=4t-3 t^2\text{.}`]
       
       END_PGML_SOLUTION
       
@@ -1258,16 +1267,19 @@
                                       <macro-file>parserParametricLine.pl</macro-file>
                                   </pg-macros> -->
           <pg-code>
+                                      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+                                      $ans=Formula("1");
                                   </pg-code>
         </setup>
         <statement>
-          <p> PENDING </p>
+          <p> Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=x^2+y^2</m> and <m>\vec{r}(t)=\cos t\vec{i} +\sin t\vec{j}</m>.</p>
+          <p><m>f(\vec{r}(t))=</m> <var name="$ans" width="15" category="formula"/></p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p>What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)</m>?</p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>\cos t</m>, and the <m>y</m>-coordinate is <m>\sin t</m>, so <me>f(\vec{r}(t))=(\cos t)^2+(\sin t)^2=1.</me></p>
         </solution>
       
     </authored>
@@ -1275,34 +1287,38 @@
       
     <static seed="6">
       <statement>
-      <p>PENDING</p>
+      <p>Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=x^2+y^2</m> and <m>\vec{r}(t)=\cos t\vec{i} +\sin t\vec{j}\text{.}</m></p>
+      <p><m>f(\vec{r}(t))=</m> <fillin name="AnSwEr0001" characters="15" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)\text{?}</m></p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p>The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>\cos t\text{,}</m> and the <m>y</m>-coordinate is <m>\sin t\text{,}</m> so</p>
+      <p><me>f(\vec{r}(t))=(\cos t)^2+(\sin t)^2=1.</me></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="1" correct_ans_latex_string="1" correct_value="1" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showDomainErrors="1" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Formula)" upToConstant="0" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Rm9ybXVsYSgiMSIpOwoKQkVHSU5fUEdNTApGaW5kIFtgZihcdmVje3J9KHQpKWBdIGZvciBbYGYoeCx5KT14XjIreV4yYF0gYW5kIFtgXHZlY3tyfSh0KT1cY29zIHRcdmVje2l9ICtcc2luIHRcdmVje2p9XHRleHR7Ln1gXQoKW2BmKFx2ZWN7cn0odCkpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaGF0IGFyZSB0aGUgW2B4YF0gYW5kIFtgeWBdLWNvb3JkaW5hdGVzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0ez99YF0KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRoZSBbYHhgXSBjb29yZGluYXRlIG9mIFtgXHZlY3tyfSh0KWBdIGlzIFtgXGNvcyB0XHRleHR7LH1gXSBhbmQgdGhlIFtgeWBdLWNvb3JkaW5hdGUgaXMgW2Bcc2luIHRcdGV4dHssfWBdIHNvCgpbYGBgZihcdmVje3J9KHQpKT0oXGNvcyB0KV4yKyhcc2luIHQpXjI9MS5gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Rm9ybXVsYSgiMSIpOwoKQkVHSU5fUEdNTApGaW5kIFtgZihcdmVje3J9KHQpKWBdIGZvciBbYGYoeCx5KT14XjIreV4yYF0gYW5kIFtgXHZlY3tyfSh0KT1cY29zIHRcdmVje2l9ICtcc2luIHRcdmVje2p9XHRleHR7Ln1gXQoKW2BmKFx2ZWN7cn0odCkpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApXaGF0IGFyZSB0aGUgW2B4YF0gYW5kIFtgeWBdLWNvb3JkaW5hdGVzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0ez99YF0KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpQRU5ESU5HCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Rm9ybXVsYSgiMSIpOwoKQkVHSU5fUEdNTApGaW5kIFtgZihcdmVje3J9KHQpKWBdIGZvciBbYGYoeCx5KT14XjIreV4yYF0gYW5kIFtgXHZlY3tyfSh0KT1cY29zIHRcdmVje2l9ICtcc2luIHRcdmVje2p9XHRleHR7Ln1gXQoKW2BmKFx2ZWN7cn0odCkpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIFtgeGBdIGNvb3JkaW5hdGUgb2YgW2BcdmVje3J9KHQpYF0gaXMgW2BcY29zIHRcdGV4dHssfWBdIGFuZCB0aGUgW2B5YF0tY29vcmRpbmF0ZSBpcyBbYFxzaW4gdFx0ZXh0eyx9YF0gc28KCltgYGBmKFx2ZWN7cn0odCkpPShcY29zIHQpXjIrKFxzaW4gdCleMj0xLmBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=6&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CiRhbnM9Rm9ybXVsYSgiMSIpOwoKQkVHSU5fUEdNTApGaW5kIFtgZihcdmVje3J9KHQpKWBdIGZvciBbYGYoeCx5KT14XjIreV4yYF0gYW5kIFtgXHZlY3tyfSh0KT1cY29zIHRcdmVje2l9ICtcc2luIHRcdmVje2p9XHRleHR7Ln1gXQoKW2BmKFx2ZWN7cn0odCkpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1343,14 +1359,17 @@
       ############################################################
       # PG Setup
       ############################################################
-      Context('Numeric');
+      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      $ans=Formula("1");
       
       ############################################################
       # Body
       ############################################################
       
       BEGIN_PGML
-      PENDING
+      Find [`f(\vec{r}(t))`] for [`f(x,y)=x^2+y^2`] and [`\vec{r}(t)=\cos t\vec{i} +\sin t\vec{j}\text{.}`]
+      
+      [`f(\vec{r}(t))=`] [_]{$ans}{15} [@AnswerFormatHelp('formulas')@]*
       
       END_PGML
       
@@ -1360,7 +1379,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      What are the [`x`] and [`y`]-coordinates of [`\vec{r}(t)\text{?}`]
       
       END_PGML_HINT
       
@@ -1369,7 +1388,9 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      The [`x`] coordinate of [`\vec{r}(t)`] is [`\cos t\text{,}`] and the [`y`]-coordinate is [`\sin t\text{,}`] so
+      
+      [```f(\vec{r}(t))=(\cos t)^2+(\sin t)^2=1.```]
       
       END_PGML_SOLUTION
       
@@ -1392,16 +1413,23 @@
                                       <macro-file>parserParametricLine.pl</macro-file>
                                   </pg-macros> -->
           <pg-code>
+                                      Context("Vector2D");
+                                      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      
+                                      $ans=Compute("-2*sin(t)*i+3*cos(t)*j");
                                   </pg-code>
         </setup>
         <statement>
-          <p> PENDING </p>
+          <p> Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=2\cos t\vec{i} +3\sin t\vec{j}</m>.</p>
+          <p><m>\vec{r}'(t)=</m> <var name="$ans" width="15" category="vector"/> </p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>, so use standard single variable rules to differentiate each component. </p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>. Thus,
+                                  <me>\vec{r}'(t)=(-2\sin t)\vec{i} + (3\cos t)\vec{j}</me> 
+                                  </p>
         </solution>
       
     </authored>
@@ -1409,34 +1437,38 @@
       
     <static seed="7">
       <statement>
-      <p>PENDING</p>
+      <p>Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=2\cos t\vec{i} +3\sin t\vec{j}\text{.}</m></p>
+      <p><m>\vec{r}'(t)=</m> <fillin name="AnSwEr0001" characters="15" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)\text{,}</m> so use standard single variable rules to differentiate each component.</p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p>The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)\text{.}</m> Thus,</p>
+      <p><me>\vec{r}'(t)=(-2\sin t)\vec{i} + (3\cos t)\vec{j}</me></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="-2*sin(t)*i+3*cos(t)*j" correct_ans_latex_string="-2\sin\!\left(t\right)\boldsymbol{i}+3\cos\!\left(t\right)\boldsymbol{j}" correct_value="-2*sin(t)*i+3*cos(t)*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="1" showDimensionHints="1" showDomainErrors="1" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Formula)" upToConstant="0" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIi0yKnNpbih0KSppKzMqY29zKHQpKmoiKTsKCkJFR0lOX1BHTUwKRmluZCBbYFx2ZWN7cn0nKHQpYF0gZm9yIFtgXHZlY3tyfSh0KT0yXGNvcyB0XHZlY3tpfSArM1xzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfScodClgXSBhcmUgdGhlIGRlcml2YXRpdmVzIG9mIHRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0eyx9YF0gc28gdXNlIHN0YW5kYXJkIHNpbmdsZSB2YXJpYWJsZSBydWxlcyB0byBkaWZmZXJlbnRpYXRlIGVhY2ggY29tcG9uZW50LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIGNvbXBvbmVudHMgb2YgW2BcdmVje3J9Jyh0KWBdIGFyZSB0aGUgZGVyaXZhdGl2ZXMgb2YgdGhlIGNvbXBvbmVudHMgb2YgW2BcdmVje3J9KHQpXHRleHR7Ln1gXSBUaHVzLAoKW2BgYFx2ZWN7cn0nKHQpPSgtMlxzaW4gdClcdmVje2l9ICsgKDNcY29zIHQpXHZlY3tqfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIi0yKnNpbih0KSppKzMqY29zKHQpKmoiKTsKCkJFR0lOX1BHTUwKRmluZCBbYFx2ZWN7cn0nKHQpYF0gZm9yIFtgXHZlY3tyfSh0KT0yXGNvcyB0XHZlY3tpfSArM1xzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfScodClgXSBhcmUgdGhlIGRlcml2YXRpdmVzIG9mIHRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0eyx9YF0gc28gdXNlIHN0YW5kYXJkIHNpbmdsZSB2YXJpYWJsZSBydWxlcyB0byBkaWZmZXJlbnRpYXRlIGVhY2ggY29tcG9uZW50LgoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpQRU5ESU5HCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIi0yKnNpbih0KSppKzMqY29zKHQpKmoiKTsKCkJFR0lOX1BHTUwKRmluZCBbYFx2ZWN7cn0nKHQpYF0gZm9yIFtgXHZlY3tyfSh0KT0yXGNvcyB0XHZlY3tpfSArM1xzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgY29tcG9uZW50cyBvZiBbYFx2ZWN7cn0nKHQpYF0gYXJlIHRoZSBkZXJpdmF0aXZlcyBvZiB0aGUgY29tcG9uZW50cyBvZiBbYFx2ZWN7cn0odClcdGV4dHsufWBdIFRodXMsCgpbYGBgXHZlY3tyfScodCk9KC0yXHNpbiB0KVx2ZWN7aX0gKyAoM1xjb3MgdClcdmVje2p9YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=7&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIi0yKnNpbih0KSppKzMqY29zKHQpKmoiKTsKCkJFR0lOX1BHTUwKRmluZCBbYFx2ZWN7cn0nKHQpYF0gZm9yIFtgXHZlY3tyfSh0KT0yXGNvcyB0XHZlY3tpfSArM1xzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1477,14 +1509,19 @@
       ############################################################
       # PG Setup
       ############################################################
-      Context('Numeric');
+      Context("Vector2D");
+      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      
+      $ans=Compute("-2*sin(t)*i+3*cos(t)*j");
       
       ############################################################
       # Body
       ############################################################
       
       BEGIN_PGML
-      PENDING
+      Find [`\vec{r}'(t)`] for [`\vec{r}(t)=2\cos t\vec{i} +3\sin t\vec{j}\text{.}`]
+      
+      [`\vec{r}'(t)=`] [_]{$ans}{15} [@AnswerFormatHelp('vectors')@]*
       
       END_PGML
       
@@ -1494,7 +1531,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      The components of [`\vec{r}'(t)`] are the derivatives of the components of [`\vec{r}(t)\text{,}`] so use standard single variable rules to differentiate each component.
       
       END_PGML_HINT
       
@@ -1503,7 +1540,9 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      The components of [`\vec{r}'(t)`] are the derivatives of the components of [`\vec{r}(t)\text{.}`] Thus,
+      
+      [```\vec{r}'(t)=(-2\sin t)\vec{i} + (3\cos t)\vec{j}```]
       
       END_PGML_SOLUTION
       
@@ -1526,16 +1565,22 @@
                                       <macro-file>parserParametricLine.pl</macro-file>
                                   </pg-macros> -->
           <pg-code>
+                                      Context("Vector2D");
+                                      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      
+                                      $ans=Compute("4*t*i+e^t*(t*sin(t) + sin(t) + t*cos(t))*j");
                                   </pg-code>
         </setup>
         <statement>
-          <p> PENDING </p>
+          <p> Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=(2t^2+1)\vec{i} +te^t\sin t\vec{j}</m>. </p>
+          <p><m>\vec{r}'(t)=</m> <var name="$ans" width="15" category="vector"/> </p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>, so use standard single variable rules to differentiate each component. </p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>. Thus,
+                                  <me>\vec{r}'(t)=(4t)\vec{i}+ e^t( \sin t + t \sin t + t \cos t)\vec{j}</me> </p>
         </solution>
       
     </authored>
@@ -1543,34 +1588,38 @@
       
     <static seed="8">
       <statement>
-      <p>PENDING</p>
+      <p>Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=(2t^2+1)\vec{i} +te^t\sin t\vec{j}\text{.}</m></p>
+      <p><m>\vec{r}'(t)=</m> <fillin name="AnSwEr0001" characters="15" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)\text{,}</m> so use standard single variable rules to differentiate each component.</p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p>The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)\text{.}</m> Thus,</p>
+      <p><me>\vec{r}'(t)=(4t)\vec{i}+ e^t( \sin t + t \sin t + t \cos t)\vec{j}</me></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="4*t*i+e^t*[t*sin(t)+sin(t)+t*cos(t)]*j" correct_ans_latex_string="4t\boldsymbol{i}+e^{t}\!\left(t\sin\!\left(t\right)+\sin\!\left(t\right)+t\cos\!\left(t\right)\right)\boldsymbol{j}" correct_value="4*t*i+e^t*[t*sin(t)+sin(t)+t*cos(t)]*j" done="1" error_flag="" error_message="" ignoreStrings="1" original_student_ans="" parallel="0" preview_latex_string="" preview_text_string="" promotePoints="0" sameDirection="0" score="0" showCoordinateHints="1" showDimensionHints="1" showDomainErrors="1" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Formula)" upToConstant="0" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIjQqdCppK2VedCoodCpzaW4odCkgKyBzaW4odCkgKyB0KmNvcyh0KSkqaiIpOwoKQkVHSU5fUEdNTApGaW5kIFtgXHZlY3tyfScodClgXSBmb3IgW2BcdmVje3J9KHQpPSgydF4yKzEpXHZlY3tpfSArdGVedFxzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfScodClgXSBhcmUgdGhlIGRlcml2YXRpdmVzIG9mIHRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0eyx9YF0gc28gdXNlIHN0YW5kYXJkIHNpbmdsZSB2YXJpYWJsZSBydWxlcyB0byBkaWZmZXJlbnRpYXRlIGVhY2ggY29tcG9uZW50LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KVGhlIGNvbXBvbmVudHMgb2YgW2BcdmVje3J9Jyh0KWBdIGFyZSB0aGUgZGVyaXZhdGl2ZXMgb2YgdGhlIGNvbXBvbmVudHMgb2YgW2BcdmVje3J9KHQpXHRleHR7Ln1gXSBUaHVzLAoKW2BgYFx2ZWN7cn0nKHQpPSg0dClcdmVje2l9KyBlXnQoIFxzaW4gdCArIHQgXHNpbiB0ICsgdCBcY29zIHQpXHZlY3tqfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIjQqdCppK2VedCoodCpzaW4odCkgKyBzaW4odCkgKyB0KmNvcyh0KSkqaiIpOwoKQkVHSU5fUEdNTApGaW5kIFtgXHZlY3tyfScodClgXSBmb3IgW2BcdmVje3J9KHQpPSgydF4yKzEpXHZlY3tpfSArdGVedFxzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfScodClgXSBhcmUgdGhlIGRlcml2YXRpdmVzIG9mIHRoZSBjb21wb25lbnRzIG9mIFtgXHZlY3tyfSh0KVx0ZXh0eyx9YF0gc28gdXNlIHN0YW5kYXJkIHNpbmdsZSB2YXJpYWJsZSBydWxlcyB0byBkaWZmZXJlbnRpYXRlIGVhY2ggY29tcG9uZW50LgoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpQRU5ESU5HCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIjQqdCppK2VedCoodCpzaW4odCkgKyBzaW4odCkgKyB0KmNvcyh0KSkqaiIpOwoKQkVHSU5fUEdNTApGaW5kIFtgXHZlY3tyfScodClgXSBmb3IgW2BcdmVje3J9KHQpPSgydF4yKzEpXHZlY3tpfSArdGVedFxzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgY29tcG9uZW50cyBvZiBbYFx2ZWN7cn0nKHQpYF0gYXJlIHRoZSBkZXJpdmF0aXZlcyBvZiB0aGUgY29tcG9uZW50cyBvZiBbYFx2ZWN7cn0odClcdGV4dHsufWBdIFRodXMsCgpbYGBgXHZlY3tyfScodCk9KDR0KVx2ZWN7aX0rIGVedCggXHNpbiB0ICsgdCBcc2luIHQgKyB0IFxjb3MgdClcdmVje2p9YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=8&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCJWZWN0b3IyRCIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHQ9PiJSZWFsIik7CgokYW5zPUNvbXB1dGUoIjQqdCppK2VedCoodCpzaW4odCkgKyBzaW4odCkgKyB0KmNvcyh0KSkqaiIpOwoKQkVHSU5fUEdNTApGaW5kIFtgXHZlY3tyfScodClgXSBmb3IgW2BcdmVje3J9KHQpPSgydF4yKzEpXHZlY3tpfSArdGVedFxzaW4gdFx2ZWN7an1cdGV4dHsufWBdCgpbYFx2ZWN7cn0nKHQpPWBdIFtfXXskYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1611,14 +1660,19 @@
       ############################################################
       # PG Setup
       ############################################################
-      Context('Numeric');
+      Context("Vector2D");
+      Context()-&gt;variables-&gt;are(t=&gt;"Real");
+      
+      $ans=Compute("4*t*i+e^t*(t*sin(t) + sin(t) + t*cos(t))*j");
       
       ############################################################
       # Body
       ############################################################
       
       BEGIN_PGML
-      PENDING
+      Find [`\vec{r}'(t)`] for [`\vec{r}(t)=(2t^2+1)\vec{i} +te^t\sin t\vec{j}\text{.}`]
+      
+      [`\vec{r}'(t)=`] [_]{$ans}{15} [@AnswerFormatHelp('vectors')@]*
       
       END_PGML
       
@@ -1628,7 +1682,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      The components of [`\vec{r}'(t)`] are the derivatives of the components of [`\vec{r}(t)\text{,}`] so use standard single variable rules to differentiate each component.
       
       END_PGML_HINT
       
@@ -1637,7 +1691,9 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      The components of [`\vec{r}'(t)`] are the derivatives of the components of [`\vec{r}(t)\text{.}`] Thus,
+      
+      [```\vec{r}'(t)=(4t)\vec{i}+ e^t( \sin t + t \sin t + t \cos t)\vec{j}```]
       
       END_PGML_SOLUTION
       
@@ -1663,13 +1719,16 @@
                                   </pg-code>
         </setup>
         <statement>
-          <p>  </p>
+          <p> Find the value of the integral. </p>
+          <p> <m>\displaystyle \int_{0}^{1} 2x\sqrt{1-x^2} dx=</m>  <var name="2/3" width="10" category="number"/></p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p> It might be handy to use integration by substitution. </p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> We use the substitution <m>u=1-x^2</m>. When <m>x=0</m> we have <m>u=1</m> and when <m>x=1</m> we have <m>u=0</m>. We also have <m>du=-2xdx</m> and so 
+                                      <md><mrow>\int_{0}^{1} 2x\sqrt{1-x^2} dx \amp =\int_{0}^{-1} -\sqrt{u}du</mrow><mrow> \amp =\int_{-1}^{0} \sqrt{u}du =\frac{2}{3} u^{\frac{3}{2}}\bigg|_{-1}^{0}</mrow><mrow> \amp =\frac{2}{3} \left(0\right)-\frac{2}{3} \left(-1\right)^{\frac{3}{2}}</mrow><mrow> \amp =\frac{2}{3}.</mrow></md> 
+                                  </p>
         </solution>
       
     </authored>
@@ -1677,34 +1736,43 @@
       
     <static seed="9">
       <statement>
-      
+      <p>Find the value of the integral.</p>
+      <p><m>\displaystyle \int_{0}^{1} 2x\sqrt{1-x^2} dx=</m>  <fillin name="AnSwEr0001" characters="10" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>It might be handy to use integration by substitution.</p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p>We use the substitution <m>u=1-x^2\text{.}</m> When <m>x=0</m> we have <m>u=1</m> and when <m>x=1</m> we have <m>u=0\text{.}</m> We also have <m>du=-2xdx</m> and so</p>
+      <p><me>\begin{aligned}
+      \int_{0}^{1} 2x\sqrt{1-x^2} dx \amp =\int_{0}^{-1} -\sqrt{u}du\\
+       \amp =\int_{-1}^{0} \sqrt{u}du =\frac{2}{3} u^{\frac{3}{2}}\bigg|_{-1}^{0}\\
+       \amp =\frac{2}{3} \left(0\right)-\frac{2}{3} \left(-1\right)^{\frac{3}{2}}\\
+       \amp =\frac{2}{3}.
+      \end{aligned}</me></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="0.666667" correct_ans_latex_string="0.666667" correct_value="0.666667" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Real)" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUEVORElORwoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KUEVORElORwoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB2YWx1ZSBvZiB0aGUgaW50ZWdyYWwuCgpbYFxkaXNwbGF5c3R5bGUgXGludF97MH1eezF9IDJ4XHNxcnR7MS14XjJ9IGR4PWBdICBbX117Mi8zfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkl0IG1pZ2h0IGJlIGhhbmR5IHRvIHVzZSBpbnRlZ3JhdGlvbiBieSBzdWJzdGl0dXRpb24uCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSB1c2UgdGhlIHN1YnN0aXR1dGlvbiBbYHU9MS14XjJcdGV4dHsufWBdIFdoZW4gW2B4PTBgXSB3ZSBoYXZlIFtgdT0xYF0gYW5kIHdoZW4gW2B4PTFgXSB3ZSBoYXZlIFtgdT0wXHRleHR7Ln1gXSBXZSBhbHNvIGhhdmUgW2BkdT0tMnhkeGBdIGFuZCBzbwoKW2BgYFxiZWdpbnthbGlnbmVkfQpcaW50X3swfV57MX0gMnhcc3FydHsxLXheMn0gZHggXGFtcCA9XGludF97MH1eey0xfSAtXHNxcnR7dX1kdVxcCiBcYW1wID1caW50X3stMX1eezB9IFxzcXJ0e3V9ZHUgPVxmcmFjezJ9ezN9IHVee1xmcmFjezN9ezJ9fVxiaWdnfF97LTF9XnswfVxcCiBcYW1wID1cZnJhY3syfXszfSBcbGVmdCgwXHJpZ2h0KS1cZnJhY3syfXszfSBcbGVmdCgtMVxyaWdodClee1xmcmFjezN9ezJ9fVxcCiBcYW1wID1cZnJhY3syfXszfS4KXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUEVORElORwoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB2YWx1ZSBvZiB0aGUgaW50ZWdyYWwuCgpbYFxkaXNwbGF5c3R5bGUgXGludF97MH1eezF9IDJ4XHNxcnR7MS14XjJ9IGR4PWBdICBbX117Mi8zfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkl0IG1pZ2h0IGJlIGhhbmR5IHRvIHVzZSBpbnRlZ3JhdGlvbiBieSBzdWJzdGl0dXRpb24uCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB2YWx1ZSBvZiB0aGUgaW50ZWdyYWwuCgpbYFxkaXNwbGF5c3R5bGUgXGludF97MH1eezF9IDJ4XHNxcnR7MS14XjJ9IGR4PWBdICBbX117Mi8zfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSB1c2UgdGhlIHN1YnN0aXR1dGlvbiBbYHU9MS14XjJcdGV4dHsufWBdIFdoZW4gW2B4PTBgXSB3ZSBoYXZlIFtgdT0xYF0gYW5kIHdoZW4gW2B4PTFgXSB3ZSBoYXZlIFtgdT0wXHRleHR7Ln1gXSBXZSBhbHNvIGhhdmUgW2BkdT0tMnhkeGBdIGFuZCBzbwoKW2BgYFxiZWdpbnthbGlnbmVkfQpcaW50X3swfV57MX0gMnhcc3FydHsxLXheMn0gZHggXGFtcCA9XGludF97MH1eey0xfSAtXHNxcnR7dX1kdVxcCiBcYW1wID1caW50X3stMX1eezB9IFxzcXJ0e3V9ZHUgPVxmcmFjezJ9ezN9IHVee1xmcmFjezN9ezJ9fVxiaWdnfF97LTF9XnswfVxcCiBcYW1wID1cZnJhY3syfXszfSBcbGVmdCgwXHJpZ2h0KS1cZnJhY3syfXszfSBcbGVmdCgtMVxyaWdodClee1xmcmFjezN9ezJ9fVxcCiBcYW1wID1cZnJhY3syfXszfS4KXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MCgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIHRoZSB2YWx1ZSBvZiB0aGUgaW50ZWdyYWwuCgpbYFxkaXNwbGF5c3R5bGUgXGludF97MH1eezF9IDJ4XHNxcnR7MS14XjJ9IGR4PWBdICBbX117Mi8zfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1752,6 +1820,9 @@
       ############################################################
       
       BEGIN_PGML
+      Find the value of the integral.
+      
+      [`\displaystyle \int_{0}^{1} 2x\sqrt{1-x^2} dx=`]  [_]{2/3}{10} [@AnswerFormatHelp('numbers')@]*
       
       END_PGML
       
@@ -1761,7 +1832,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      It might be handy to use integration by substitution.
       
       END_PGML_HINT
       
@@ -1770,7 +1841,14 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      We use the substitution [`u=1-x^2\text{.}`] When [`x=0`] we have [`u=1`] and when [`x=1`] we have [`u=0\text{.}`] We also have [`du=-2xdx`] and so
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+      \int_{0}^{1} 2x\sqrt{1-x^2} dx \amp =\int_{0}^{-1} -\sqrt{u}du\\
+       \amp =\int_{-1}^{0} \sqrt{u}du =\frac{2}{3} u^{\frac{3}{2}}\bigg|_{-1}^{0}\\
+       \amp =\frac{2}{3} \left(0\right)-\frac{2}{3} \left(-1\right)^{\frac{3}{2}}\\
+       \amp =\frac{2}{3}.
+      \end{aligned}```]
       
       END_PGML_SOLUTION
       
@@ -1793,16 +1871,20 @@
                                       <macro-file>parserParametricLine.pl</macro-file>
                                   </pg-macros> -->
           <pg-code>
+                                      $ans=Compute("(3*e-2)/sqrt(3)");
                                   </pg-code>
         </setup>
         <statement>
-          <p> PENDING </p>
+          <p> Find the value of the integral. Give the exact answer or round to three decimal places.</p>
+          <p> <m> \displaystyle \int_{0}^{1} (e^x+x^2) \sqrt{3} ~ dx =</m>  <var name="$ans" width="10" category="number"/></p>
         </statement>
         <hint>
-          <p> PENDING </p>
+          <p> Recall that the integral of a sum is the sum of the integrals. </p>
         </hint>
         <solution>
-          <p> PENDING </p>
+          <p> 
+                                  <md><mrow> \int_{0}^{1} (e^x+x^2) \sqrt{3} dx \amp =  \sqrt{3} \int_{0}^{1} e^x+ \sqrt{3}\int_{0}^{1} x^2 dx</mrow><mrow> \amp = \sqrt{3} (e-1) + \sqrt{3}(1/3) </mrow><mrow> \amp = (3 e-2)/\sqrt{3}</mrow></md>
+                                   </p>
         </solution>
       
     </authored>
@@ -1810,34 +1892,41 @@
       
     <static seed="10">
       <statement>
-      <p>PENDING</p>
+      <p>Find the value of the integral. Give the exact answer or round to three decimal places.</p>
+      <p><m>\displaystyle \int_{0}^{1} (e^x+x^2) \sqrt{3} ~ dx =</m>  <fillin name="AnSwEr0001" characters="10" /></p>
       </statement>
       
       <hint>
-      <p>PENDING</p>
+      <p>Recall that the integral of a sum is the sum of the integrals.</p>
       </hint>
       
       <solution>
-      <p>PENDING</p>
+      <p><me>\begin{aligned}
+       \int_{0}^{1} (e^x+x^2) \sqrt{3} dx \amp =  \sqrt{3} \int_{0}^{1} e^x+ \sqrt{3}\int_{0}^{1} x^2 dx\\
+       \amp = \sqrt{3} (e-1) + \sqrt{3}(1/3) \\
+       \amp = (3 e-2)/\sqrt{3}
+      \end{aligned}</me></p>
       </solution>
       
       
-      <answerhashes></answerhashes>
+      <answerhashes>
+        <AnSwEr0001 _filter_name="dereference_array_ans" ans_label="AnSwEr0001" ans_message="" ans_name="AnSwEr0001" correct_ans="(3*e-2)/[sqrt(3)]" correct_ans_latex_string="\frac{3e-2}{\sqrt{3}}" correct_value="3.5535" done="1" error_flag="" error_message="" ignoreInfinity="1" ignoreStrings="1" original_student_ans="" preview_latex_string="" preview_text_string="" score="0" showEqualErrors="1" showTypeWarnings="1" showUnionReduceWarnings="1" student_ans="" studentsMustReduceUnions="1" type="Value (Real)" />
+      </answerhashes>
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClBFTkRJTkcKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnM9Q29tcHV0ZSgiKDMqZS0yKS9zcXJ0KDMpIik7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHZhbHVlIG9mIHRoZSBpbnRlZ3JhbC4gR2l2ZSB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2AgXGRpc3BsYXlzdHlsZSBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IH4gZHggPWBdICBbX117JGFuc317MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCB0aGUgaW50ZWdyYWwgb2YgYSBzdW0gaXMgdGhlIHN1bSBvZiB0aGUgaW50ZWdyYWxzLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IGR4IFxhbXAgPSAgXHNxcnR7M30gXGludF97MH1eezF9IGVeeCsgXHNxcnR7M31caW50X3swfV57MX0geF4yIGR4XFwKIFxhbXAgPSBcc3FydHszfSAoZS0xKSArIFxzcXJ0ezN9KDEvMykgXFwKIFxhbXAgPSAoMyBlLTIpL1xzcXJ0ezN9ClxlbmR7YWxpZ25lZH1gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClBFTkRJTkcKCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnM9Q29tcHV0ZSgiKDMqZS0yKS9zcXJ0KDMpIik7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHZhbHVlIG9mIHRoZSBpbnRlZ3JhbC4gR2l2ZSB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2AgXGRpc3BsYXlzdHlsZSBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IH4gZHggPWBdICBbX117JGFuc317MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCB0aGUgaW50ZWdyYWwgb2YgYSBzdW0gaXMgdGhlIHN1bSBvZiB0aGUgaW50ZWdyYWxzLgoKCkVORF9QR01MX0hJTlQKCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpQRU5ESU5HCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnM9Q29tcHV0ZSgiKDMqZS0yKS9zcXJ0KDMpIik7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHZhbHVlIG9mIHRoZSBpbnRlZ3JhbC4gR2l2ZSB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2AgXGRpc3BsYXlzdHlsZSBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IH4gZHggPWBdICBbX117JGFuc317MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IGR4IFxhbXAgPSAgXHNxcnR7M30gXGludF97MH1eezF9IGVeeCsgXHNxcnR7M31caW50X3swfV57MX0geF4yIGR4XFwKIFxhbXAgPSBcc3FydHszfSAoZS0xKSArIFxzcXJ0ezN9KDEvMykgXFwKIFxhbXAgPSAoMyBlLTIpL1xzcXJ0ezN9ClxlbmR7YWxpZ25lZH1gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7CgpCRUdJTl9QR01MClBFTkRJTkcKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhbnM9Q29tcHV0ZSgiKDMqZS0yKS9zcXJ0KDMpIik7CgpCRUdJTl9QR01MCkZpbmQgdGhlIHZhbHVlIG9mIHRoZSBpbnRlZ3JhbC4gR2l2ZSB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKW2AgXGRpc3BsYXlzdHlsZSBcaW50X3swfV57MX0gKGVeeCt4XjIpIFxzcXJ0ezN9IH4gZHggPWBdICBbX117JGFuc317MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -1879,13 +1968,16 @@
       # PG Setup
       ############################################################
       Context('Numeric');
+      $ans=Compute("(3*e-2)/sqrt(3)");
       
       ############################################################
       # Body
       ############################################################
       
       BEGIN_PGML
-      PENDING
+      Find the value of the integral. Give the exact answer or round to three decimal places.
+      
+      [` \displaystyle \int_{0}^{1} (e^x+x^2) \sqrt{3} ~ dx =`]  [_]{$ans}{10} [@AnswerFormatHelp('numbers')@]*
       
       END_PGML
       
@@ -1895,7 +1987,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      PENDING
+      Recall that the integral of a sum is the sum of the integrals.
       
       END_PGML_HINT
       
@@ -1904,7 +1996,12 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      PENDING
+      
+      [```\newcommand{\amp}{&amp;}\begin{aligned}
+       \int_{0}^{1} (e^x+x^2) \sqrt{3} dx \amp =  \sqrt{3} \int_{0}^{1} e^x+ \sqrt{3}\int_{0}^{1} x^2 dx\\
+       \amp = \sqrt{3} (e-1) + \sqrt{3}(1/3) \\
+       \amp = (3 e-2)/\sqrt{3}
+      \end{aligned}```]
       
       END_PGML_SOLUTION
       
@@ -1926,15 +2023,15 @@
                                   </pg-code>
         </setup>
         <statement>
-          <p> Find \(\int_{C} (x^2+y^2) ds\) where \(C\) is parameterized by \(\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}\) for \(0\leq t\leq \pi\).</p>
+          <p> Find <m>\int_{C} (x^2+y^2) ds</m> where <m>C</m> is parameterized by <m>\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}</m> for <m>0\leq t\leq \pi</m>.</p>
           <p> Enter the exact answer or round to three decimal places.</p>
-          <p>\(\displaystyle\int_{C} (x^2+y^2) ds =\) <var name="pi" width="10" category="number"/></p>
+          <p><m>\displaystyle\int_{C} (x^2+y^2) ds =</m> <var name="pi" width="10" category="number"/></p>
         </statement>
         <hint>
-          <p>Recall that for a scalar valued function \(f(x,y)\), the integral \(\int_{C} f(x,y) ds\) is equal to \(\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt\) where \(\vec{r}(t)\) parameterizes \(C\).</p>
+          <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
         </hint>
         <solution>
-          <p>We have \(\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\). Therefore 
+          <p>We have <m>\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}</m>. Therefore 
                                   <md><mrow> \int_{C} (x^2+y^2) ds \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right) ||\vec{r}'(t)|| dt</mrow><mrow> \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right)\sqrt{(-\sin t)^2+(-\cos t)^2}dt</mrow><mrow> \amp = \int_{0}^{\pi} 1~ dt</mrow><mrow> \amp = \pi</mrow></md>
                                   </p>
         </solution>
@@ -1944,17 +2041,17 @@
       
     <static seed="11">
       <statement>
-      <p>Find \(\int_{C} (x^2+y^2) ds\) where \(C\) is parameterized by \(\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}\) for \(0\leq t\leq \pi\).</p>
+      <p>Find <m>\int_{C} (x^2+y^2) ds</m> where <m>C</m> is parameterized by <m>\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}</m> for <m>0\leq t\leq \pi\text{.}</m></p>
       <p>Enter the exact answer or round to three decimal places.</p>
-      <p>\(\displaystyle\int_{C} (x^2+y^2) ds =\) <fillin name="AnSwEr0001" characters="10" /></p>
+      <p><m>\displaystyle\int_{C} (x^2+y^2) ds =</m> <fillin name="AnSwEr0001" characters="10" /></p>
       </statement>
       
       <hint>
-      <p>Recall that for a scalar valued function \(f(x,y)\), the integral \(\int_{C} f(x,y) ds\) is equal to \(\int_{C} f(\vec{r}(t)) ||\vec{r}<rsq/>(t)||dt\) where \(\vec{r}(t)\) parameterizes \(C\).</p>
+      <p>Recall that for a scalar valued function <m>f(x,y)\text{,}</m> the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C\text{.}</m></p>
       </hint>
       
       <solution>
-      <p>We have \(\vec{r}<rsq/>(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\). Therefore</p>
+      <p>We have <m>\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\text{.}</m> Therefore</p>
       <p><me>\begin{aligned}
        \int_{C} (x^2+y^2) ds \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right) ||\vec{r}'(t)|| dt\\
        \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right)\sqrt{(-\sin t)^2+(-\cos t)^2}dt\\
@@ -1970,18 +2067,18 @@
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFxcKFxcaW50XF9ce0NcfSAoeF4yXCt5XjIpIGRzXFwpIHdoZXJlIFxcKENcXCkgaXMgcGFyYW1ldGVyaXplZCBieSBcXChcXHZlY1x7clx9KHQpID1cXGNvc1x7KHQpXH0gXFx2ZWNce2lcfSBcK1xcc2luXHsodClcfSBcXHZlY1x7alx9XFwpIGZvciBcXCgwXFxsZXEgdFxcbGVxIFxccGlcXCkuCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKXFwoXFxkaXNwbGF5c3R5bGVcXGludFxfXHtDXH0gKHheMlwreV4yKSBkcyA9XFwpIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCBmb3IgYSBzY2FsYXIgdmFsdWVkIGZ1bmN0aW9uIFxcKGYoeCx5KVxcKSwgdGhlIGludGVncmFsIFxcKFxcaW50XF9ce0NcfSBmKHgseSkgZHNcXCkgaXMgZXF1YWwgdG8gXFwoXFxpbnRcX1x7Q1x9IGYoXFx2ZWNce3JcfSh0KSkgfHxcXHZlY1x7clx9Jyh0KXx8ZHRcXCkgd2hlcmUgXFwoXFx2ZWNce3JcfSh0KVxcKSBwYXJhbWV0ZXJpemVzIFxcKENcXCkuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpXZSBoYXZlIFxcKFxcdmVjXHtyXH0nKHQpPS1cXHNpblx7KHQpXH0gXFx2ZWNce2lcfSBcK1xcY29zXHsodClcfVxcdmVjXHtqXH1cXCkuIFRoZXJlZm9yZQoKW2BgYFxiZWdpbnthbGlnbmVkfQogXGludF97Q30gKHheMit5XjIpIGRzIFxhbXAgPSAgXGludF8wXlxwaSBcbGVmdCgoXGNvcyB0KV4yKyhcc2luIHQpXjIgXHJpZ2h0KSB8fFx2ZWN7cn0nKHQpfHwgZHRcXAogXGFtcCA9ICBcaW50XzBeXHBpIFxsZWZ0KChcY29zIHQpXjIrKFxzaW4gdCleMiBccmlnaHQpXHNxcnR7KC1cc2luIHQpXjIrKC1cY29zIHQpXjJ9ZHRcXAogXGFtcCA9IFxpbnRfezB9XntccGl9IDF%2BIGR0XFwKIFxhbXAgPSBccGkKXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30gKHheMit5XjIpIGRzYF0gd2hlcmUgW2BDYF0gaXMgcGFyYW1ldGVyaXplZCBieSBbYFx2ZWN7cn0odCkgPVxjb3N7KHQpfSBcdmVje2l9ICtcc2lueyh0KX0gXHZlY3tqfWBdIGZvciBbYDBcbGVxIHRcbGVxIFxwaVx0ZXh0ey59YF0KCkVudGVyIHRoZSBleGFjdCBhbnN3ZXIgb3Igcm91bmQgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpbYFxkaXNwbGF5c3R5bGVcaW50X3tDfSAoeF4yK3leMikgZHMgPWBdIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCBmb3IgYSBzY2FsYXIgdmFsdWVkIGZ1bmN0aW9uIFtgZih4LHkpXHRleHR7LH1gXSB0aGUgaW50ZWdyYWwgW2BcaW50X3tDfSBmKHgseSkgZHNgXSBpcyBlcXVhbCB0byBbYFxpbnRfe0N9IGYoXHZlY3tyfSh0KSkgfHxcdmVje3J9Jyh0KXx8ZHRgXSB3aGVyZSBbYFx2ZWN7cn0odClgXSBwYXJhbWV0ZXJpemVzIFtgQ1x0ZXh0ey59YF0KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIGhhdmUgW2BcdmVje3J9Jyh0KT0tXHNpbnsodCl9IFx2ZWN7aX0gK1xjb3N7KHQpfVx2ZWN7an1cdGV4dHsufWBdIFRoZXJlZm9yZQoKW2BgYFxiZWdpbnthbGlnbmVkfQogXGludF97Q30gKHheMit5XjIpIGRzIFxhbXAgPSAgXGludF8wXlxwaSBcbGVmdCgoXGNvcyB0KV4yKyhcc2luIHQpXjIgXHJpZ2h0KSB8fFx2ZWN7cn0nKHQpfHwgZHRcXAogXGFtcCA9ICBcaW50XzBeXHBpIFxsZWZ0KChcY29zIHQpXjIrKFxzaW4gdCleMiBccmlnaHQpXHNxcnR7KC1cc2luIHQpXjIrKC1cY29zIHQpXjJ9ZHRcXAogXGFtcCA9IFxpbnRfezB9XntccGl9IDF%2BIGR0XFwKIFxhbXAgPSBccGkKXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFxcKFxcaW50XF9ce0NcfSAoeF4yXCt5XjIpIGRzXFwpIHdoZXJlIFxcKENcXCkgaXMgcGFyYW1ldGVyaXplZCBieSBcXChcXHZlY1x7clx9KHQpID1cXGNvc1x7KHQpXH0gXFx2ZWNce2lcfSBcK1xcc2luXHsodClcfSBcXHZlY1x7alx9XFwpIGZvciBcXCgwXFxsZXEgdFxcbGVxIFxccGlcXCkuCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKXFwoXFxkaXNwbGF5c3R5bGVcXGludFxfXHtDXH0gKHheMlwreV4yKSBkcyA9XFwpIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCBmb3IgYSBzY2FsYXIgdmFsdWVkIGZ1bmN0aW9uIFxcKGYoeCx5KVxcKSwgdGhlIGludGVncmFsIFxcKFxcaW50XF9ce0NcfSBmKHgseSkgZHNcXCkgaXMgZXF1YWwgdG8gXFwoXFxpbnRcX1x7Q1x9IGYoXFx2ZWNce3JcfSh0KSkgfHxcXHZlY1x7clx9Jyh0KXx8ZHRcXCkgd2hlcmUgXFwoXFx2ZWNce3JcfSh0KVxcKSBwYXJhbWV0ZXJpemVzIFxcKENcXCkuCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30gKHheMit5XjIpIGRzYF0gd2hlcmUgW2BDYF0gaXMgcGFyYW1ldGVyaXplZCBieSBbYFx2ZWN7cn0odCkgPVxjb3N7KHQpfSBcdmVje2l9ICtcc2lueyh0KX0gXHZlY3tqfWBdIGZvciBbYDBcbGVxIHRcbGVxIFxwaVx0ZXh0ey59YF0KCkVudGVyIHRoZSBleGFjdCBhbnN3ZXIgb3Igcm91bmQgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpbYFxkaXNwbGF5c3R5bGVcaW50X3tDfSAoeF4yK3leMikgZHMgPWBdIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCBmb3IgYSBzY2FsYXIgdmFsdWVkIGZ1bmN0aW9uIFtgZih4LHkpXHRleHR7LH1gXSB0aGUgaW50ZWdyYWwgW2BcaW50X3tDfSBmKHgseSkgZHNgXSBpcyBlcXVhbCB0byBbYFxpbnRfe0N9IGYoXHZlY3tyfSh0KSkgfHxcdmVje3J9Jyh0KXx8ZHRgXSB3aGVyZSBbYFx2ZWN7cn0odClgXSBwYXJhbWV0ZXJpemVzIFtgQ1x0ZXh0ey59YF0KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFxcKFxcaW50XF9ce0NcfSAoeF4yXCt5XjIpIGRzXFwpIHdoZXJlIFxcKENcXCkgaXMgcGFyYW1ldGVyaXplZCBieSBcXChcXHZlY1x7clx9KHQpID1cXGNvc1x7KHQpXH0gXFx2ZWNce2lcfSBcK1xcc2luXHsodClcfSBcXHZlY1x7alx9XFwpIGZvciBcXCgwXFxsZXEgdFxcbGVxIFxccGlcXCkuCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKXFwoXFxkaXNwbGF5c3R5bGVcXGludFxfXHtDXH0gKHheMlwreV4yKSBkcyA9XFwpIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KV2UgaGF2ZSBcXChcXHZlY1x7clx9Jyh0KT0tXFxzaW5ceyh0KVx9IFxcdmVjXHtpXH0gXCtcXGNvc1x7KHQpXH1cXHZlY1x7alx9XFwpLiBUaGVyZWZvcmUKCltgYGBcYmVnaW57YWxpZ25lZH0KIFxpbnRfe0N9ICh4XjIreV4yKSBkcyBcYW1wID0gIFxpbnRfMF5ccGkgXGxlZnQoKFxjb3MgdCleMisoXHNpbiB0KV4yIFxyaWdodCkgfHxcdmVje3J9Jyh0KXx8IGR0XFwKIFxhbXAgPSAgXGludF8wXlxwaSBcbGVmdCgoXGNvcyB0KV4yKyhcc2luIHQpXjIgXHJpZ2h0KVxzcXJ0eygtXHNpbiB0KV4yKygtXGNvcyB0KV4yfWR0XFwKIFxhbXAgPSBcaW50X3swfV57XHBpfSAxfiBkdFxcCiBcYW1wID0gXHBpClxlbmR7YWxpZ25lZH1gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30gKHheMit5XjIpIGRzYF0gd2hlcmUgW2BDYF0gaXMgcGFyYW1ldGVyaXplZCBieSBbYFx2ZWN7cn0odCkgPVxjb3N7KHQpfSBcdmVje2l9ICtcc2lueyh0KX0gXHZlY3tqfWBdIGZvciBbYDBcbGVxIHRcbGVxIFxwaVx0ZXh0ey59YF0KCkVudGVyIHRoZSBleGFjdCBhbnN3ZXIgb3Igcm91bmQgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpbYFxkaXNwbGF5c3R5bGVcaW50X3tDfSAoeF4yK3leMikgZHMgPWBdIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KV2UgaGF2ZSBbYFx2ZWN7cn0nKHQpPS1cc2lueyh0KX0gXHZlY3tpfSArXGNvc3sodCl9XHZlY3tqfVx0ZXh0ey59YF0gVGhlcmVmb3JlCgpbYGBgXGJlZ2lue2FsaWduZWR9CiBcaW50X3tDfSAoeF4yK3leMikgZHMgXGFtcCA9ICBcaW50XzBeXHBpIFxsZWZ0KChcY29zIHQpXjIrKFxzaW4gdCleMiBccmlnaHQpIHx8XHZlY3tyfScodCl8fCBkdFxcCiBcYW1wID0gIFxpbnRfMF5ccGkgXGxlZnQoKFxjb3MgdCleMisoXHNpbiB0KV4yIFxyaWdodClcc3FydHsoLVxzaW4gdCleMisoLVxjb3MgdCleMn1kdFxcCiBcYW1wID0gXGludF97MH1ee1xwaX0gMX4gZHRcXAogXGFtcCA9IFxwaQpcZW5ke2FsaWduZWR9YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFxcKFxcaW50XF9ce0NcfSAoeF4yXCt5XjIpIGRzXFwpIHdoZXJlIFxcKENcXCkgaXMgcGFyYW1ldGVyaXplZCBieSBcXChcXHZlY1x7clx9KHQpID1cXGNvc1x7KHQpXH0gXFx2ZWNce2lcfSBcK1xcc2luXHsodClcfSBcXHZlY1x7alx9XFwpIGZvciBcXCgwXFxsZXEgdFxcbGVxIFxccGlcXCkuCgpFbnRlciB0aGUgZXhhY3QgYW5zd2VyIG9yIHJvdW5kIHRvIHRocmVlIGRlY2ltYWwgcGxhY2VzLgoKXFwoXFxkaXNwbGF5c3R5bGVcXGludFxfXHtDXH0gKHheMlwreV4yKSBkcyA9XFwpIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChLZXlib2FyZEluc3RydWN0aW9ucyhxQFwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKUApKTsKQ29udGV4dCgnTnVtZXJpYycpOwoKQkVHSU5fUEdNTApGaW5kIFtgXGludF97Q30gKHheMit5XjIpIGRzYF0gd2hlcmUgW2BDYF0gaXMgcGFyYW1ldGVyaXplZCBieSBbYFx2ZWN7cn0odCkgPVxjb3N7KHQpfSBcdmVje2l9ICtcc2lueyh0KX0gXHZlY3tqfWBdIGZvciBbYDBcbGVxIHRcbGVxIFxwaVx0ZXh0ey59YF0KCkVudGVyIHRoZSBleGFjdCBhbnN3ZXIgb3Igcm91bmQgdG8gdGhyZWUgZGVjaW1hbCBwbGFjZXMuCgpbYFxkaXNwbGF5c3R5bGVcaW50X3tDfSAoeF4yK3leMikgZHMgPWBdIFtfXXtwaX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2029,11 +2126,11 @@
       ############################################################
       
       BEGIN_PGML
-      Find \\(\\int\_\{C\} (x^2\+y^2) ds\\) where \\(C\\) is parameterized by \\(\\vec\{r\}(t) =\\cos\{(t)\} \\vec\{i\} \+\\sin\{(t)\} \\vec\{j\}\\) for \\(0\\leq t\\leq \\pi\\).
+      Find [`\int_{C} (x^2+y^2) ds`] where [`C`] is parameterized by [`\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}`] for [`0\leq t\leq \pi\text{.}`]
       
       Enter the exact answer or round to three decimal places.
       
-      \\(\\displaystyle\\int\_\{C\} (x^2\+y^2) ds =\\) [_]{pi}{10} [@AnswerFormatHelp('numbers')@]*
+      [`\displaystyle\int_{C} (x^2+y^2) ds =`] [_]{pi}{10} [@AnswerFormatHelp('numbers')@]*
       
       END_PGML
       
@@ -2043,7 +2140,7 @@
       #Set value of $showHint in PGcourse.pl for course-wide attempt threshhold for revealing hints
       
       BEGIN_PGML_HINT
-      Recall that for a scalar valued function \\(f(x,y)\\), the integral \\(\\int\_\{C\} f(x,y) ds\\) is equal to \\(\\int\_\{C\} f(\\vec\{r\}(t)) ||\\vec\{r\}'(t)||dt\\) where \\(\\vec\{r\}(t)\\) parameterizes \\(C\\).
+      Recall that for a scalar valued function [`f(x,y)\text{,}`] the integral [`\int_{C} f(x,y) ds`] is equal to [`\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt`] where [`\vec{r}(t)`] parameterizes [`C\text{.}`]
       
       END_PGML_HINT
       
@@ -2052,7 +2149,7 @@
       ############################################################
       
       BEGIN_PGML_SOLUTION
-      We have \\(\\vec\{r\}'(t)=-\\sin\{(t)\} \\vec\{i\} \+\\cos\{(t)\}\\vec\{j\}\\). Therefore
+      We have [`\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\text{.}`] Therefore
       
       [```\newcommand{\amp}{&amp;}\begin{aligned}
        \int_{C} (x^2+y^2) ds \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right) ||\vec{r}'(t)|| dt\\
@@ -2140,7 +2237,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2303,7 +2400,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2462,7 +2559,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2625,7 +2722,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2788,7 +2885,7 @@
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -2918,15 +3015,15 @@
         <statement>
           <p>(a) Find <m>\int_{C_2} f(x,y) ~ ds</m> exactly. </p>
           <p><m>\displaystyle \int_{C_2} f(x,y) ~ ds=</m> <var name="0" width="10" category="number"/></p>
-          <p> (b) Order the integrals (I)\(\int_{C_1} f(x,y) ~ ds\), (II)\(\int_{C_2} f(x,y) ~ ds\), and (III)\(\int_{C_3} f(x,y) ~ ds\).</p>
-          <p><var name="$MC1" form="popup"/><m>\lt</m><var name="$MC2" form="popup"/><m>\lt</m> <var name="$MC3" form="popup"/></p>
+          <p> (b) Order the integrals (I)<m>\int_{C_1} f(x,y) ~ ds</m>, (II)<m>\int_{C_2} f(x,y) ~ ds</m>, and (III)<m>\int_{C_3} f(x,y) ~ ds</m>.</p>
+          <p><var name="$MC1" form="popup"/> <m>\lt</m> <var name="$MC2" form="popup"/> <m>\lt</m>  <var name="$MC3" form="popup"/></p>
         </statement>
         <hint>
           <p>Recall that the integral <m>\int_{C} f(x,y) ~ds</m> gives the weighted area under <m>f(x,y)</m> above <m>C</m>. What do the contours that the different curves lie on tell you about these areas?</p>
         </hint>
         <solution>
           <p>(a) <m>C_2</m> is entirely along the <m>0</m> contour so <m>\int_{C_2} f(x,y) ds=0</m>.</p>
-          <p> (b) We know \(\int_{C_2} f(x,y) ~ ds=0\). Since \(C_1\) lies only on positive contours, the area under \(f(x,y)\) above \(C_1\) will be positive, so \(\int_{C_1} f(x,y)~ ds\gt 0\). Similarly since \(C_3\) lies only on negative contours, the weighted area under \(f(x,y)\) above \(C_3\) will be negative (since it is below the \(xy\)-plane), so \(\int_{C_3} f(x,y)~ ds\lt 0\). Thus 
+          <p> (b) We know <m>\int_{C_2} f(x,y) ~ ds=0</m>. Since <m>C_1</m> lies only on positive contours, the area under <m>f(x,y)</m> above <m>C_1</m> will be positive, so <m>\int_{C_1} f(x,y)~ ds\gt 0</m>. Similarly since <m>C_3</m> lies only on negative contours, the weighted area under <m>f(x,y)</m> above <m>C_3</m> will be negative (since it is below the <m>xy</m>-plane), so <m>\int_{C_3} f(x,y)~ ds\lt 0</m>. Thus 
                                   <me>\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.</me>
                                   </p>
         </solution>
@@ -2938,7 +3035,7 @@
       <statement>
       <p>(a) Find <m>\int_{C_2} f(x,y) ~ ds</m> exactly.</p>
       <p><m>\displaystyle \int_{C_2} f(x,y) ~ ds=</m> <fillin name="AnSwEr0001" characters="10" /></p>
-      <p>(b) Order the integrals (I)\(\int_{C_1} f(x,y) ~ ds\), (II)\(\int_{C_2} f(x,y) ~ ds\), and (III)\(\int_{C_3} f(x,y) ~ ds\).</p>
+      <p>(b) Order the integrals (I)<m>\int_{C_1} f(x,y) ~ ds\text{,}</m> (II)<m>\int_{C_2} f(x,y) ~ ds\text{,}</m> and (III)<m>\int_{C_3} f(x,y) ~ ds\text{.}</m></p>
       <p><var form="popup">
       <li>
       <p>option</p>
@@ -2952,7 +3049,7 @@
       <li>
       <p>(III)</p>
       </li>
-      </var><m>\lt</m><var form="popup">
+      </var> <m>\lt</m> <var form="popup">
       <li>
       <p>option</p>
       </li>
@@ -2965,7 +3062,7 @@
       <li>
       <p>(III)</p>
       </li>
-      </var><m>\lt</m> <var form="popup">
+      </var> <m>\lt</m>  <var form="popup">
       <li>
       <p>option</p>
       </li>
@@ -2987,7 +3084,7 @@
       
       <solution>
       <p>(a) <m>C_2</m> is entirely along the <m>0</m> contour so <m>\int_{C_2} f(x,y) ds=0\text{.}</m></p>
-      <p>(b) We know \(\int_{C_2} f(x,y) ~ ds=0\). Since \(C_1\) lies only on positive contours, the area under \(f(x,y)\) above \(C_1\) will be positive, so \(\int_{C_1} f(x,y)~ ds\gt 0\). Similarly since \(C_3\) lies only on negative contours, the weighted area under \(f(x,y)\) above \(C_3\) will be negative (since it is below the \(xy\)-plane), so \(\int_{C_3} f(x,y)~ ds\lt 0\). Thus</p>
+      <p>(b) We know <m>\int_{C_2} f(x,y) ~ ds=0\text{.}</m> Since <m>C_1</m> lies only on positive contours, the area under <m>f(x,y)</m> above <m>C_1</m> will be positive, so <m>\int_{C_1} f(x,y)~ ds\gt 0\text{.}</m> Similarly since <m>C_3</m> lies only on negative contours, the weighted area under <m>f(x,y)</m> above <m>C_3</m> will be negative (since it is below the <m>xy</m>-plane), so <m>\int_{C_3} f(x,y)~ ds\lt 0\text{.}</m> Thus</p>
       <p><me>\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.</me></p>
       </solution>
       
@@ -3001,18 +3098,18 @@
       
     </static>
       
-    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVxcKFxcaW50XF9ce0NcXzFcfSBmKHgseSkgfiBkc1xcKSwgKElJKVxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkc1xcKSwgYW5kIChJSUkpXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KSB%2BIGRzXFwpLgoKICAgIFtfXXskTUMxfXs1fVtgXGx0YF1bX117JE1DMn17NX1bYFxsdGBdIFtfXXskTUMzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUmVjYWxsIHRoYXQgdGhlIGludGVncmFsIFtgXGludF97Q30gZih4LHkpIH5kc2BdIGdpdmVzIHRoZSB3ZWlnaHRlZCBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXHRleHR7Ln1gXSBXaGF0IGRvIHRoZSBjb250b3VycyB0aGF0IHRoZSBkaWZmZXJlbnQgY3VydmVzIGxpZSBvbiB0ZWxsIHlvdSBhYm91dCB0aGVzZSBhcmVhcz8KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCihhKSBbYENfMmBdIGlzIGVudGlyZWx5IGFsb25nIHRoZSBbYDBgXSBjb250b3VyIHNvIFtgXGludF97Q18yfSBmKHgseSkgZHM9MFx0ZXh0ey59YF0KCihiKSBXZSBrbm93IFxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkcz0wXFwpLiBTaW5jZSBcXChDXF8xXFwpIGxpZXMgb25seSBvbiBwb3NpdGl2ZSBjb250b3VycywgdGhlIGFyZWEgdW5kZXIgXFwoZih4LHkpXFwpIGFib3ZlIFxcKENcXzFcXCkgd2lsbCBiZSBwb3NpdGl2ZSwgc28gXFwoXFxpbnRcX1x7Q1xfMVx9IGYoeCx5KX4gZHNcXGd0IDBcXCkuIFNpbWlsYXJseSBzaW5jZSBcXChDXF8zXFwpIGxpZXMgb25seSBvbiBuZWdhdGl2ZSBjb250b3VycywgdGhlIHdlaWdodGVkIGFyZWEgdW5kZXIgXFwoZih4LHkpXFwpIGFib3ZlIFxcKENcXzNcXCkgd2lsbCBiZSBuZWdhdGl2ZSAoc2luY2UgaXQgaXMgYmVsb3cgdGhlIFxcKHh5XFwpLXBsYW5lKSwgc28gXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KX4gZHNcXGx0IDBcXCkuIFRodXMKCltgYGBcaW50X3tDXzN9IGYoeCx5KSB%2BZHNcbHQgXGludF97Q18yfSBmKHgseSkgfmRzXGx0IFxpbnRfe0NfMX0gZih4LHkpIH5kcy5gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="yes" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVtgXGludF97Q18xfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gKElJKVtgXGludF97Q18yfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gYW5kIChJSUkpW2BcaW50X3tDXzN9IGYoeCx5KSB%2BIGRzXHRleHR7Ln1gXQoKICAgIFtfXXskTUMxfXs1fSBbYFxsdGBdIFtfXXskTUMyfXs1fSBbYFxsdGBdICBbX117JE1DM317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IGYoeCx5KSB%2BZHNgXSBnaXZlcyB0aGUgd2VpZ2h0ZWQgYXJlYSB1bmRlciBbYGYoeCx5KWBdIGFib3ZlIFtgQ1x0ZXh0ey59YF0gV2hhdCBkbyB0aGUgY29udG91cnMgdGhhdCB0aGUgZGlmZmVyZW50IGN1cnZlcyBsaWUgb24gdGVsbCB5b3UgYWJvdXQgdGhlc2UgYXJlYXM%2FCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgooYSkgW2BDXzJgXSBpcyBlbnRpcmVseSBhbG9uZyB0aGUgW2AwYF0gY29udG91ciBzbyBbYFxpbnRfe0NfMn0gZih4LHkpIGRzPTBcdGV4dHsufWBdCgooYikgV2Uga25vdyBbYFxpbnRfe0NfMn0gZih4LHkpIH4gZHM9MFx0ZXh0ey59YF0gU2luY2UgW2BDXzFgXSBsaWVzIG9ubHkgb24gcG9zaXRpdmUgY29udG91cnMsIHRoZSBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXzFgXSB3aWxsIGJlIHBvc2l0aXZlLCBzbyBbYFxpbnRfe0NfMX0gZih4LHkpfiBkc1xndCAwXHRleHR7Ln1gXSBTaW1pbGFybHkgc2luY2UgW2BDXzNgXSBsaWVzIG9ubHkgb24gbmVnYXRpdmUgY29udG91cnMsIHRoZSB3ZWlnaHRlZCBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXzNgXSB3aWxsIGJlIG5lZ2F0aXZlIChzaW5jZSBpdCBpcyBiZWxvdyB0aGUgW2B4eWBdLXBsYW5lKSwgc28gW2BcaW50X3tDXzN9IGYoeCx5KX4gZHNcbHQgMFx0ZXh0ey59YF0gVGh1cwoKW2BgYFxpbnRfe0NfM30gZih4LHkpIH5kc1xsdCBcaW50X3tDXzJ9IGYoeCx5KSB%2BZHNcbHQgXGludF97Q18xfSBmKHgseSkgfmRzLmBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVxcKFxcaW50XF9ce0NcXzFcfSBmKHgseSkgfiBkc1xcKSwgKElJKVxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkc1xcKSwgYW5kIChJSUkpXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KSB%2BIGRzXFwpLgoKICAgIFtfXXskTUMxfXs1fVtgXGx0YF1bX117JE1DMn17NX1bYFxsdGBdIFtfXXskTUMzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUmVjYWxsIHRoYXQgdGhlIGludGVncmFsIFtgXGludF97Q30gZih4LHkpIH5kc2BdIGdpdmVzIHRoZSB3ZWlnaHRlZCBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXHRleHR7Ln1gXSBXaGF0IGRvIHRoZSBjb250b3VycyB0aGF0IHRoZSBkaWZmZXJlbnQgY3VydmVzIGxpZSBvbiB0ZWxsIHlvdSBhYm91dCB0aGVzZSBhcmVhcz8KCgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="yes" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVtgXGludF97Q18xfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gKElJKVtgXGludF97Q18yfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gYW5kIChJSUkpW2BcaW50X3tDXzN9IGYoeCx5KSB%2BIGRzXHRleHR7Ln1gXQoKICAgIFtfXXskTUMxfXs1fSBbYFxsdGBdIFtfXXskTUMyfXs1fSBbYFxsdGBdICBbX117JE1DM317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IGYoeCx5KSB%2BZHNgXSBnaXZlcyB0aGUgd2VpZ2h0ZWQgYXJlYSB1bmRlciBbYGYoeCx5KWBdIGFib3ZlIFtgQ1x0ZXh0ey59YF0gV2hhdCBkbyB0aGUgY29udG91cnMgdGhhdCB0aGUgZGlmZmVyZW50IGN1cnZlcyBsaWUgb24gdGVsbCB5b3UgYWJvdXQgdGhlc2UgYXJlYXM%2FCgoKRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
-    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVxcKFxcaW50XF9ce0NcXzFcfSBmKHgseSkgfiBkc1xcKSwgKElJKVxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkc1xcKSwgYW5kIChJSUkpXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KSB%2BIGRzXFwpLgoKICAgIFtfXXskTUMxfXs1fVtgXGx0YF1bX117JE1DMn17NX1bYFxsdGBdIFtfXXskTUMzfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCihhKSBbYENfMmBdIGlzIGVudGlyZWx5IGFsb25nIHRoZSBbYDBgXSBjb250b3VyIHNvIFtgXGludF97Q18yfSBmKHgseSkgZHM9MFx0ZXh0ey59YF0KCihiKSBXZSBrbm93IFxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkcz0wXFwpLiBTaW5jZSBcXChDXF8xXFwpIGxpZXMgb25seSBvbiBwb3NpdGl2ZSBjb250b3VycywgdGhlIGFyZWEgdW5kZXIgXFwoZih4LHkpXFwpIGFib3ZlIFxcKENcXzFcXCkgd2lsbCBiZSBwb3NpdGl2ZSwgc28gXFwoXFxpbnRcX1x7Q1xfMVx9IGYoeCx5KX4gZHNcXGd0IDBcXCkuIFNpbWlsYXJseSBzaW5jZSBcXChDXF8zXFwpIGxpZXMgb25seSBvbiBuZWdhdGl2ZSBjb250b3VycywgdGhlIHdlaWdodGVkIGFyZWEgdW5kZXIgXFwoZih4LHkpXFwpIGFib3ZlIFxcKENcXzNcXCkgd2lsbCBiZSBuZWdhdGl2ZSAoc2luY2UgaXQgaXMgYmVsb3cgdGhlIFxcKHh5XFwpLXBsYW5lKSwgc28gXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KX4gZHNcXGx0IDBcXCkuIFRodXMKCltgYGBcaW50X3tDXzN9IGYoeCx5KSB%2BZHNcbHQgXGludF97Q18yfSBmKHgseSkgfmRzXGx0IFxpbnRfe0NfMX0gZih4LHkpIH5kcy5gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
+    <server-url hint="no" solution="yes">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVtgXGludF97Q18xfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gKElJKVtgXGludF97Q18yfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gYW5kIChJSUkpW2BcaW50X3tDXzN9IGYoeCx5KSB%2BIGRzXHRleHR7Ln1gXQoKICAgIFtfXXskTUMxfXs1fSBbYFxsdGBdIFtfXXskTUMyfXs1fSBbYFxsdGBdICBbX117JE1DM317NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgooYSkgW2BDXzJgXSBpcyBlbnRpcmVseSBhbG9uZyB0aGUgW2AwYF0gY29udG91ciBzbyBbYFxpbnRfe0NfMn0gZih4LHkpIGRzPTBcdGV4dHsufWBdCgooYikgV2Uga25vdyBbYFxpbnRfe0NfMn0gZih4LHkpIH4gZHM9MFx0ZXh0ey59YF0gU2luY2UgW2BDXzFgXSBsaWVzIG9ubHkgb24gcG9zaXRpdmUgY29udG91cnMsIHRoZSBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXzFgXSB3aWxsIGJlIHBvc2l0aXZlLCBzbyBbYFxpbnRfe0NfMX0gZih4LHkpfiBkc1xndCAwXHRleHR7Ln1gXSBTaW1pbGFybHkgc2luY2UgW2BDXzNgXSBsaWVzIG9ubHkgb24gbmVnYXRpdmUgY29udG91cnMsIHRoZSB3ZWlnaHRlZCBhcmVhIHVuZGVyIFtgZih4LHkpYF0gYWJvdmUgW2BDXzNgXSB3aWxsIGJlIG5lZ2F0aXZlIChzaW5jZSBpdCBpcyBiZWxvdyB0aGUgW2B4eWBdLXBsYW5lKSwgc28gW2BcaW50X3tDXzN9IGYoeCx5KX4gZHNcbHQgMFx0ZXh0ey59YF0gVGh1cwoKW2BgYFxpbnRfe0NfM30gZih4LHkpIH5kc1xsdCBcaW50X3tDXzJ9IGYoeCx5KSB%2BZHNcbHQgXGludF97Q18xfSBmKHgseSkgfmRzLmBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
 
-    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVxcKFxcaW50XF9ce0NcXzFcfSBmKHgseSkgfiBkc1xcKSwgKElJKVxcKFxcaW50XF9ce0NcXzJcfSBmKHgseSkgfiBkc1xcKSwgYW5kIChJSUkpXFwoXFxpbnRcX1x7Q1xfM1x9IGYoeCx5KSB%2BIGRzXFwpLgoKICAgIFtfXXskTUMxfXs1fVtgXGx0YF1bX117JE1DMn17NX1bYFxsdGBdIFtfXXskTUMzfXs1fQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw%3D%3D</server-url>
+    <server-url hint="no" solution="no">https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=17&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO2xvYWRNYWNyb3MoIlBDQ21hY3Jvcy5wbCIpOwpURVhUKEtleWJvYXJkSW5zdHJ1Y3Rpb25zKHFAXChcbmV3Y29tbWFuZHtcbHR9ezx9XG5ld2NvbW1hbmR7XGd0fXs%2BfVwpQCkpOwpDb250ZXh0KCdOdW1lcmljJyk7JE1DMT0gUG9wVXAoClsib3B0aW9uIiwKIihJKSIsCiIoSUkpIiwKIihJSUkpIgpdLAoiKElJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzI9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJSSkiLCAjIGNvcnJlY3QgYW5zd2VyCik7CiRNQzM9IFBvcFVwKApbIm9wdGlvbiIsCiIoSSkiLAoiKElJKSIsCiIoSUlJKSIKXSwKIihJKSIsICMgY29ycmVjdCBhbnN3ZXIKKTsKCkJFR0lOX1BHTUwKKGEpIEZpbmQgW2BcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzYF0gZXhhY3RseS4KCltgXGRpc3BsYXlzdHlsZSBcaW50X3tDXzJ9IGYoeCx5KSB%2BIGRzPWBdIFtfXXswfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCihiKSBPcmRlciB0aGUgaW50ZWdyYWxzIChJKVtgXGludF97Q18xfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gKElJKVtgXGludF97Q18yfSBmKHgseSkgfiBkc1x0ZXh0eyx9YF0gYW5kIChJSUkpW2BcaW50X3tDXzN9IGYoeCx5KSB%2BIGRzXHRleHR7Ln1gXQoKICAgIFtfXXskTUMxfXs1fSBbYFxsdGBdIFtfXXskTUMyfXs1fSBbYFxsdGBdICBbX117JE1DM317NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs%3D</server-url>
 
     <pg>
       #######################################
       ###    Generated from PreTeXt source   
-      ###    on 2019-02-25T20:03:54-05:00    
+      ###    on 2019-02-25T20:52:28-05:00    
       ###                                    
       ###      https://pretextbook.org       
       ###                                    
@@ -3089,9 +3186,9 @@
       
       [`\displaystyle \int_{C_2} f(x,y) ~ ds=`] [_]{0}{10} [@AnswerFormatHelp('numbers')@]*
       
-      (b) Order the integrals (I)\\(\\int\_\{C\_1\} f(x,y) ~ ds\\), (II)\\(\\int\_\{C\_2\} f(x,y) ~ ds\\), and (III)\\(\\int\_\{C\_3\} f(x,y) ~ ds\\).
+      (b) Order the integrals (I)[`\int_{C_1} f(x,y) ~ ds\text{,}`] (II)[`\int_{C_2} f(x,y) ~ ds\text{,}`] and (III)[`\int_{C_3} f(x,y) ~ ds\text{.}`]
       
-          [_]{$MC1}{5}[`\newcommand{\lt}{&lt;}\lt`][_]{$MC2}{5}[`\newcommand{\lt}{&lt;}\lt`] [_]{$MC3}{5}
+          [_]{$MC1}{5} [`\newcommand{\lt}{&lt;}\lt`] [_]{$MC2}{5} [`\newcommand{\lt}{&lt;}\lt`]  [_]{$MC3}{5}
       
       END_PGML
       
@@ -3112,7 +3209,7 @@
       BEGIN_PGML_SOLUTION
       (a) [`C_2`] is entirely along the [`0`] contour so [`\int_{C_2} f(x,y) ds=0\text{.}`]
       
-      (b) We know \\(\\int\_\{C\_2\} f(x,y) ~ ds=0\\). Since \\(C\_1\\) lies only on positive contours, the area under \\(f(x,y)\\) above \\(C\_1\\) will be positive, so \\(\\int\_\{C\_1\} f(x,y)~ ds\\gt 0\\). Similarly since \\(C\_3\\) lies only on negative contours, the weighted area under \\(f(x,y)\\) above \\(C\_3\\) will be negative (since it is below the \\(xy\\)-plane), so \\(\\int\_\{C\_3\} f(x,y)~ ds\\lt 0\\). Thus
+      (b) We know [`\int_{C_2} f(x,y) ~ ds=0\text{.}`] Since [`C_1`] lies only on positive contours, the area under [`f(x,y)`] above [`C_1`] will be positive, so [`\newcommand{\gt}{&gt;}\int_{C_1} f(x,y)~ ds\gt 0\text{.}`] Similarly since [`C_3`] lies only on negative contours, the weighted area under [`f(x,y)`] above [`C_3`] will be negative (since it is below the [`xy`]-plane), so [`\newcommand{\lt}{&lt;}\int_{C_3} f(x,y)~ ds\lt 0\text{.}`] Thus
       
       [```\newcommand{\lt}{&lt;}\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.```]
       

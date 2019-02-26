@@ -100,7 +100,7 @@
                 </ul>
             </subsection>  
             <exercises>
-                <title> (**) Exercises </title>
+                <title> Exercises </title>
                 <p> The following exercises test your knowledge of the prerequisites for this section.</p>
                 <exercise>
                     <title> Exercise </title>
@@ -444,18 +444,21 @@
                                 <macro-file>parserParametricLine.pl</macro-file>
                             </pg-macros> -->
                             <pg-code>
+                                Context()->variables->are(t=>"Real");
+                                $ans=Compute("4*t-3*t^2");
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> PENDING </p>
+                            <p> Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=2x-3y</m> and <m>\vec{r}(t)=2t\vec{i} +t^2\vec{j}</m>.</p>
+                            <p><m>f(\vec{r}(t))=</m> <var name="$ans" width="15" category="formula"/></p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p> What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)</m>?</p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>2t</m>, and the <m>y</m>-coordinate is <m>t^2</m>so <m>f(\vec{r}(t))=4t-3 t^2</m>.</p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -468,18 +471,21 @@
                                 <macro-file>parserParametricLine.pl</macro-file>
                             </pg-macros> -->
                             <pg-code>
+                                Context()->variables->are(t=>"Real");
+                                $ans=Formula("1");
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> PENDING </p>
+                            <p> Find <m>f(\vec{r}(t))</m> for <m>f(x,y)=x^2+y^2</m> and <m>\vec{r}(t)=\cos t\vec{i} +\sin t\vec{j}</m>.</p>
+                            <p><m>f(\vec{r}(t))=</m> <var name="$ans" width="15" category="formula"/></p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p>What are the <m>x</m> and <m>y</m>-coordinates of <m>\vec{r}(t)</m>?</p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> The <m>x</m> coordinate of <m>\vec{r}(t)</m> is <m>\cos t</m>, and the <m>y</m>-coordinate is <m>\sin t</m>, so <me>f(\vec{r}(t))=(\cos t)^2+(\sin t)^2=1.</me></p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -492,18 +498,25 @@
                                 <macro-file>parserParametricLine.pl</macro-file>
                             </pg-macros> -->
                             <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->are(t=>"Real");
+
+                                $ans=Compute("-2*sin(t)*i+3*cos(t)*j");
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> PENDING </p>
+                            <p> Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=2\cos t\vec{i} +3\sin t\vec{j}</m>.</p>
+                            <p><m>\vec{r}'(t)=</m> <var name="$ans" width="15" category="vector"/> </p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>, so use standard single variable rules to differentiate each component. </p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>. Thus,
+                            <me>\vec{r}'(t)=(-2\sin t)\vec{i} + (3\cos t)\vec{j}</me> 
+                            </p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -516,18 +529,24 @@
                                 <macro-file>parserParametricLine.pl</macro-file>
                             </pg-macros> -->
                             <pg-code>
+                                Context("Vector2D");
+                                Context()->variables->are(t=>"Real");
+
+                                $ans=Compute("4*t*i+e^t*(t*sin(t) + sin(t) + t*cos(t))*j");
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> PENDING </p>
+                            <p> Find <m>\vec{r}'(t)</m> for <m>\vec{r}(t)=(2t^2+1)\vec{i} +te^t\sin t\vec{j}</m>. </p>
+                            <p><m>\vec{r}'(t)=</m> <var name="$ans" width="15" category="vector"/> </p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>, so use standard single variable rules to differentiate each component. </p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> The components of <m>\vec{r}'(t)</m> are the derivatives of the components of <m>\vec{r}(t)</m>. Thus,
+                            <me>\vec{r}'(t)=(4t)\vec{i}+ e^t( \sin t + t \sin t + t \cos t)\vec{j}</me> </p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -543,15 +562,23 @@
                             </pg-code>
                         </setup>
                         <statement>
-                            <p>  </p>
+                            <p> Find the value of the integral. </p>
+                            <p> <m>\displaystyle \int_{0}^{1} 2x\sqrt{1-x^2} dx=</m>  <var name="2/3" width="10" category="number"/></p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p> It might be handy to use integration by substitution. </p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> We use the substitution <m>u=1-x^2</m>. When <m>x=0</m> we have <m>u=1</m> and when <m>x=1</m> we have <m>u=0</m>. We also have <m>du=-2xdx</m> and so 
+                                <md>
+                                <mrow>\int_{0}^{1} 2x\sqrt{1-x^2} dx \amp =\int_{0}^{-1} -\sqrt{u}du</mrow>
+                                <mrow> \amp =\int_{-1}^{0} \sqrt{u}du =\frac{2}{3} u^{\frac{3}{2}}\bigg|_{-1}^{0}</mrow>
+                                <mrow> \amp =\frac{2}{3} \left(0\right)-\frac{2}{3} \left(-1\right)^{\frac{3}{2}}</mrow>
+                                <mrow> \amp =\frac{2}{3}.</mrow>
+                                </md> 
+                            </p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -564,18 +591,26 @@
                                 <macro-file>parserParametricLine.pl</macro-file>
                             </pg-macros> -->
                             <pg-code>
+                                $ans=Compute("(3*e-2)/sqrt(3)");
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> PENDING </p>
+                            <p> Find the value of the integral. Give the exact answer or round to three decimal places.</p>
+                            <p> <m> \displaystyle \int_{0}^{1} (e^x+x^2) \sqrt{3} ~ dx =</m>  <var name="$ans" width="10" category="number"/></p>
                         </statement>
 
                         <hint>
-                            <p> PENDING </p>
+                            <p> Recall that the integral of a sum is the sum of the integrals. </p>
                         </hint>
 
                         <solution>
-                            <p> PENDING </p>
+                            <p> 
+                            <md>
+                            <mrow> \int_{0}^{1} (e^x+x^2) \sqrt{3} dx \amp =  \sqrt{3} \int_{0}^{1} e^x+ \sqrt{3}\int_{0}^{1} x^2 dx</mrow>
+                            <mrow> \amp = \sqrt{3} (e-1) + \sqrt{3}(1/3) </mrow>
+                            <mrow> \amp = (3 e-2)/\sqrt{3}</mrow>
+                            </md>
+                             </p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -626,17 +661,17 @@
                             </pg-code>
                         </setup>
                         <statement>
-                            <p> Find \(\int_{C} (x^2+y^2) ds\) where \(C\) is parameterized by \(\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}\) for \(0\leq t\leq \pi\).</p>
+                            <p> Find <m>\int_{C} (x^2+y^2) ds</m> where <m>C</m> is parameterized by <m>\vec{r}(t) =\cos{(t)} \vec{i} +\sin{(t)} \vec{j}</m> for <m>0\leq t\leq \pi</m>.</p>
                             <p> Enter the exact answer or round to three decimal places.</p>
-                            <p>\(\displaystyle\int_{C} (x^2+y^2) ds =\) <var name="pi" width="10" category="number"/></p>
+                            <p><m>\displaystyle\int_{C} (x^2+y^2) ds =</m> <var name="pi" width="10" category="number"/></p>
                         </statement>
 
                         <hint>
-                            <p>Recall that for a scalar valued function \(f(x,y)\), the integral \(\int_{C} f(x,y) ds\) is equal to \(\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt\) where \(\vec{r}(t)\) parameterizes \(C\).</p>
+                            <p>Recall that for a scalar valued function <m>f(x,y)</m>, the integral <m>\int_{C} f(x,y) ds</m> is equal to <m>\int_{C} f(\vec{r}(t)) ||\vec{r}'(t)||dt</m> where <m>\vec{r}(t)</m> parameterizes <m>C</m>.</p>
                         </hint>
 
                         <solution>
-                            <p>We have \(\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}\). Therefore 
+                            <p>We have <m>\vec{r}'(t)=-\sin{(t)} \vec{i} +\cos{(t)}\vec{j}</m>. Therefore 
                             <md>
                             <mrow> \int_{C} (x^2+y^2) ds \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right) ||\vec{r}'(t)|| dt</mrow>
                             <mrow> \amp =  \int_0^\pi \left((\cos t)^2+(\sin t)^2 \right)\sqrt{(-\sin t)^2+(-\cos t)^2}dt</mrow>
@@ -869,8 +904,8 @@
                         <statement>
                             <p>(a) Find <m>\int_{C_2} f(x,y) ~ ds</m> exactly. </p>
                             <p><m>\displaystyle \int_{C_2} f(x,y) ~ ds=</m> <var name="0" width="10" category="number"/></p>
-                            <p> (b) Order the integrals (I)\(\int_{C_1} f(x,y) ~ ds\), (II)\(\int_{C_2} f(x,y) ~ ds\), and (III)\(\int_{C_3} f(x,y) ~ ds\).</p>
-                            <p><var name="$MC1" form="popup"/><m>\lt</m><var name="$MC2" form="popup"/><m>\lt</m> <var name="$MC3" form="popup"/></p>
+                            <p> (b) Order the integrals (I)<m>\int_{C_1} f(x,y) ~ ds</m>, (II)<m>\int_{C_2} f(x,y) ~ ds</m>, and (III)<m>\int_{C_3} f(x,y) ~ ds</m>.</p>
+                            <p><var name="$MC1" form="popup"/> <m>\lt</m> <var name="$MC2" form="popup"/> <m>\lt</m>  <var name="$MC3" form="popup"/></p>
                         </statement>
 
                         <hint>
@@ -879,7 +914,7 @@
 
                         <solution>
                             <p>(a) <m>C_2</m> is entirely along the <m>0</m> contour so <m>\int_{C_2} f(x,y) ds=0</m>.</p>
-                            <p> (b) We know \(\int_{C_2} f(x,y) ~ ds=0\). Since \(C_1\) lies only on positive contours, the area under \(f(x,y)\) above \(C_1\) will be positive, so \(\int_{C_1} f(x,y)~ ds\gt 0\). Similarly since \(C_3\) lies only on negative contours, the weighted area under \(f(x,y)\) above \(C_3\) will be negative (since it is below the \(xy\)-plane), so \(\int_{C_3} f(x,y)~ ds\lt 0\). Thus 
+                            <p> (b) We know <m>\int_{C_2} f(x,y) ~ ds=0</m>. Since <m>C_1</m> lies only on positive contours, the area under <m>f(x,y)</m> above <m>C_1</m> will be positive, so <m>\int_{C_1} f(x,y)~ ds\gt 0</m>. Similarly since <m>C_3</m> lies only on negative contours, the weighted area under <m>f(x,y)</m> above <m>C_3</m> will be negative (since it is below the <m>xy</m>-plane), so <m>\int_{C_3} f(x,y)~ ds\lt 0</m>. Thus 
                             <me>\int_{C_3} f(x,y) ~ds\lt \int_{C_2} f(x,y) ~ds\lt \int_{C_1} f(x,y) ~ds.</me>
                             </p>
                         </solution>
