@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-08T14:50:06-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">6.5.1</span>.</h6>
+<p>Remember that if \(\vec{r}(t)\text{,}\) for \(a\leq t\leq b\text{,}\) is a smooth parameterization of an oriented curve \(C\) and \(\vec{F}\) is a vector field which is continuous on \(C\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\int_C \vec{F}\cdot d\vec{r}=\int_a^b \vec{F}(\vec{r}(t))\cdot \vec{r}'(t)  dt.
+\end{equation*}
+</div>
+<p>The curve \(x=\cos{(y)}\) from \((1,0)\) to \((1,2\pi)\) can be parameterized by \(\cos(t)\vec{i}+t\vec{j}\) with \(0\leq t\leq 2\pi\text{.}\) To find a parameterization from \((1,2\pi)\) to \((1,0)\) we reverse the orientation by replacing \(t\) by \(-t\text{.}\) Thus, the curve \(x=\cos{(y)}\) from \((1,2\pi)\) to  \((1,0)\) can be parameterized by</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}(t)=\cos(t)\vec{i}-t\vec{j},\quad -2\pi\leq t\leq 0,
+\end{equation*}
+</div>
+<p>(since \(\cos(-t)=\cos(t)\)), and we have</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}'(t)=-\sin(t)\vec{i}-\vec{j}.
+\end{equation*}
+</div>
+<p>Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int_{C} \left(y\vec{i} +2x\vec{j} \right) \cdot d\vec{r} \amp =  \int_{-2\pi}^{0} \left( -t\vec{i}+2\cos(t)\vec{j}\right) \cdot \left(-\sin(t)\vec{i}-\vec{j} \right)dt\\
+\amp = \int_{-2\pi}^{0} \left( t\sin(t)-2\cos(t) \right)  dt\\
+\amp =  \left(\sin{(t)} -t\cos{(t)} -2\sin(t)\right)_{-2\pi }^{0} \\
+\amp =  0-\left(0 -(-2\pi)-0\right) \\
+\amp =  -2\pi
+\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="section-6.html#solution-54">in-context</a></span>
+</body>
+</html>

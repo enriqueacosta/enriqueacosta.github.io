@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-08T14:50:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MCWG Worksheet 15 First Set - What does the line integral of a vector field over a curve measure?</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/Logo.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="Worksheet15.html"><span class="title">Active Learning Worksheet:</span> <span class="subtitle">Worksheet 15 - Line integrals of vector fields</span></a></h1>
+<p class="byline">Mathematics Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-4.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Worksheet15.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-4.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Worksheet15.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Goals</span></a></li>
+<li class="link">
+<a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Prerequisites</span></a><ul><li><a href="section-2.html#exercises-1" data-scroll="exercises-1">Exercises</a></li></ul>
+</li>
+<li class="link"><a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">Key Concepts</span></a></li>
+<li class="link"><a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">Warm-up Set</span></a></li>
+<li class="link active">
+<a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title">First Set - What does the line integral of a vector field over a curve measure?</span></a><ul><li><a href="section-5.html#subsection-1" data-scroll="subsection-1">Problem set wrap-up</a></li></ul>
+</li>
+<li class="link">
+<a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Second Set - How are line integrals of vector fields computed?</span></a><ul><li><a href="section-6.html#subsection-2" data-scroll="subsection-2">Problem set wrap-up</a></li></ul>
+</li>
+<li class="link"><a href="section-7.html" data-scroll="section-7"><span class="codenumber">7</span> <span class="title">Wrap Up Questions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://goo.gl/forms/lbMHtFlNZFa7GEJu2" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-5"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5</span> <span class="title">First Set - What does the line integral of a vector field over a curve measure?</span>
+</h2>
+<article class="exercise-like" id="exercise-21"><a data-knowl="" class="id-ref" data-refid="hk-exercise-21"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.1</span>.</h6></a></article><div id="hk-exercise-21" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="introduction" id="introduction-4"><p id="p-236"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/fig4Sec17.2.svg" style="width: 100%; height: auto;" alt=""></div></p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=21&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskTUMxPSBQb3BVcCgKWyI%2FIiwicG9zaXRpdmUuIiwibmVnYXRpdmUuIiwiemVyby4iLCJ0aGVyZSBpcyBub3QgZW5vdWdoIGluZm9ybWF0aW9uIHRvIGRlY2lkZS4iXSwKInBvc2l0aXZlLiIgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApGb3IgdGhlIGdpdmVuIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBhbmQgY3VydmUgW2BDYF0gKG9yaWVudGVkIGZyb20gbGVmdCB0byByaWdodCksIGRldGVybWluZSB3aGV0aGVyICBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBwb3NpdGl2ZSwgbmVnYXRpdmUsIG9yIHplcm8uCgpbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBbX117JE1DMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBhIHNjYWxhciBtZWFzdXJlbWVudCBvZiBob3cgdGhlIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBmbG93cyBhbG9uZyB0aGUgb3JpZW50ZWQgY3VydmUgW2BDYF0gWyRNREFTSF0qIGl0IGlzIHBvc2l0aXZlIHdoZW4gaXQgZ2VuZXJhbGx5IGZsb3dzIHdpdGggdGhlIGN1cnZlLCBuZWdhdGl2ZSB3aGVuIGl0IGZsb3dzIGFnYWluc3QgYW5kIHplcm8gd2hlbiBpdCBpcyBwZXJwZW5kaWN1bGFyIG9yIGZsb3dzIHJvdWdobHkgZXF1YWxseSB3aXRoIGl0IGFuZCBhZ2FpbnN0IGl0LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KSW4gdGhlIHNlY29uZCBxdWFkcmFudCwgdGhlIHZlY3RvciBmaWVsZCBmbG93cyByb3VnaGx5IGluIHRoZSBzYW1lIGRpcmVjdGlvbiBhcyB0aGUgY3VydmUsIGFuZCBpbiB0aGUgZmlyc3QgcXVhZHJhbnQgaXQgZmxvd3MgcGVycGVuZGljdWxhci4gVGhlcmVmb3JlIHRoZSBpbnRlZ3JhbCBpcyBwb3NpdGl2ZS4KCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<article class="exercise-like" id="exercise-22"><a data-knowl="" class="id-ref" data-refid="hk-exercise-22"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.2</span>.</h6></a></article><div id="hk-exercise-22" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="introduction" id="introduction-5"><p id="p-250"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/fig5Sec17.2.svg" style="width: 100%; height: auto;" alt=""></div></p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=22&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskTUMxPSBQb3BVcCgKWyI%2FIiwicG9zaXRpdmUuIiwibmVnYXRpdmUuIiwiemVyby4iLCJ0aGVyZSBpcyBub3QgZW5vdWdoIGluZm9ybWF0aW9uIHRvIGRlY2lkZS4iXSwKIm5lZ2F0aXZlLiIgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApGb3IgdGhlIGdpdmVuIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBhbmQgY3VydmUgW2BDYF0gKG9yaWVudGVkIGZyb20gbGVmdCB0byByaWdodCksIGRldGVybWluZSB3aGV0aGVyICBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBwb3NpdGl2ZSwgbmVnYXRpdmUsIG9yIHplcm8uCgpbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBbX117JE1DMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBhIHNjYWxhciBtZWFzdXJlbWVudCBvZiBob3cgdGhlIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBmbG93cyBhbG9uZyB0aGUgb3JpZW50ZWQgY3VydmUgW2BDYF0gWyRNREFTSF0qIGl0IGlzIHBvc2l0aXZlIHdoZW4gaXQgZ2VuZXJhbGx5IGZsb3dzIHdpdGggdGhlIGN1cnZlLCBuZWdhdGl2ZSB3aGVuIGl0IGZsb3dzIGFnYWluc3QgYW5kIHplcm8gd2hlbiBpdCBpcyBwZXJwZW5kaWN1bGFyIG9yIGZsb3dzIHJvdWdobHkgZXF1YWxseSB3aXRoIGl0IGFuZCBhZ2FpbnN0IGl0LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KSW4gdGhlIHNlY29uZCBxdWFkcmFudCwgdGhlIHZlY3RvciBmaWVsZCBmbG93cyBwZXJwZW5kaWN1bGFyLCBhbmQgaW4gdGhlIGZpcnN0IHF1YWRyYW50IGl0IGZsb3dzIGluIHRoZSBvcHBvc2l0ZSBkaXJlY3Rpb24gYXMgdGhlIGN1cnZlLiBUaGVyZWZvcmUgdGhlIGludGVncmFsIGlzIG5lZ2F0aXZlLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<article class="exercise-like" id="exercise-23"><a data-knowl="" class="id-ref" data-refid="hk-exercise-23"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.3</span>.</h6></a></article><div id="hk-exercise-23" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="introduction" id="introduction-6"><p id="p-264"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/fig6Sec17.2.svg" style="width: 100%; height: auto;" alt=""></div></p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=23&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskTUMxPSBQb3BVcCgKWyI%2FIiwicG9zaXRpdmUuIiwibmVnYXRpdmUuIiwiemVyby4iLCJ0aGVyZSBpcyBub3QgZW5vdWdoIGluZm9ybWF0aW9uIHRvIGRlY2lkZS4iXSwKInplcm8uIiAjIGNvcnJlY3QgYW5zd2VyCik7CgpCRUdJTl9QR01MCkZvciB0aGUgZ2l2ZW4gdmVjdG9yIGZpZWxkIFtgXHZlY3tGfWBdIGFuZCBjdXJ2ZSBbYENgXSAob3JpZW50ZWQgZnJvbSBsZWZ0IHRvIHJpZ2h0KSwgZGV0ZXJtaW5lIHdoZXRoZXIgIFtgXGludF97Q30gXHZlY3tGfSBcY2RvdCBkXHZlY3tyfWBdIGlzIHBvc2l0aXZlLCBuZWdhdGl2ZSwgb3IgemVyby4KCltgXGludF97Q30gXHZlY3tGfSBcY2RvdCBkXHZlY3tyfWBdIGlzIFtfXXskTUMxfXs1fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUmVjYWxsIHRoYXQgdGhlIGludGVncmFsIFtgXGludF97Q30gXHZlY3tGfSBcY2RvdCBkXHZlY3tyfWBdIGlzIGEgc2NhbGFyIG1lYXN1cmVtZW50IG9mIGhvdyB0aGUgdmVjdG9yIGZpZWxkIFtgXHZlY3tGfWBdIGZsb3dzIGFsb25nIHRoZSBvcmllbnRlZCBjdXJ2ZSBbYENgXSBbJE1EQVNIXSogaXQgaXMgcG9zaXRpdmUgd2hlbiBpdCBnZW5lcmFsbHkgZmxvd3Mgd2l0aCB0aGUgY3VydmUsIG5lZ2F0aXZlIHdoZW4gaXQgZmxvd3MgYWdhaW5zdCBhbmQgemVybyB3aGVuIGl0IGlzIHBlcnBlbmRpY3VsYXIgb3IgZmxvd3Mgcm91Z2hseSBlcXVhbGx5IHdpdGggaXQgYW5kIGFnYWluc3QgaXQuCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpJbiB0aGUgc2Vjb25kIHF1YWRyYW50LCB0aGUgdmVjdG9yIGZpZWxkIGZsb3dzIGluIHRoZSBvcHBvc2l0ZSBkaXJlY3Rpb24sIGFuZCBpbiB0aGUgZmlyc3QgcXVhZHJhbnQgaXQgZmxvd3MgaW4gdGhlIHNhbWUgZGlyZWN0aW9uIGFzIHRoZSBjdXJ2ZS4gTm90aWNlIGhvd2V2ZXIgdGhhdCB0aGUgYW1vdW50IG9mIGZsb3cgaW4gZWFjaCBxdWFkcmFudCAocG9zaXRpdmUgYW5kIG5lZ2F0aXZlKSBhcmUgcm91Z2hseSBlcXVhbCwgc28gdGhlIGludGVncmFsIGlzIHplcm8uCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<article class="exercise-like" id="exercise-24"><a data-knowl="" class="id-ref" data-refid="hk-exercise-24"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.4</span>.</h6></a></article><div id="hk-exercise-24" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="introduction" id="introduction-7"><p id="p-278"><div style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/fig7Sec17.2.svg" style="width: 100%; height: auto;" alt=""></div></p></div>
+<iframe width="100%" src="https://webwork-ptx.aimath.org/webwork2/html2xml?courseID=anonymous&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=24&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoJ051bWVyaWMnKTskTUMxPSBQb3BVcCgKWyI%2FIiwicG9zaXRpdmUuIiwibmVnYXRpdmUuIiwiemVyby4iLCJ0aGVyZSBpcyBub3QgZW5vdWdoIGluZm9ybWF0aW9uIHRvIGRlY2lkZS4iXSwKIm5lZ2F0aXZlLiIgIyBjb3JyZWN0IGFuc3dlcgopOwoKQkVHSU5fUEdNTApGb3IgdGhlIGdpdmVuIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBhbmQgY3VydmUgW2BDYF0gKG9yaWVudGVkIGZyb20gbGVmdCB0byByaWdodCksIGRldGVybWluZSB3aGV0aGVyICBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBwb3NpdGl2ZSwgbmVnYXRpdmUsIG9yIHplcm8uCgpbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBbX117JE1DMX17NX0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UClJlY2FsbCB0aGF0IHRoZSBpbnRlZ3JhbCBbYFxpbnRfe0N9IFx2ZWN7Rn0gXGNkb3QgZFx2ZWN7cn1gXSBpcyBhIHNjYWxhciBtZWFzdXJlbWVudCBvZiBob3cgdGhlIHZlY3RvciBmaWVsZCBbYFx2ZWN7Rn1gXSBmbG93cyBhbG9uZyB0aGUgb3JpZW50ZWQgY3VydmUgW2BDYF0gWyRNREFTSF0qIGl0IGlzIHBvc2l0aXZlIHdoZW4gaXQgZ2VuZXJhbGx5IGZsb3dzIHdpdGggdGhlIGN1cnZlLCBuZWdhdGl2ZSB3aGVuIGl0IGZsb3dzIGFnYWluc3QgYW5kIHplcm8gd2hlbiBpdCBpcyBwZXJwZW5kaWN1bGFyIG9yIGZsb3dzIHJvdWdobHkgZXF1YWxseSB3aXRoIGl0IGFuZCBhZ2FpbnN0IGl0LgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KSW4gdGhlIHNlY29uZCBxdWFkcmFudCwgdGhlIHZlY3RvciBmaWVsZCBmbG93cyBhZ2FpbnN0LCBhbmQgaW4gdGhlIGZpcnN0IHF1YWRyYW50IGl0IGZsb3dzIHBlcnBlbmRpY3VsYXIgdG8gdGhlIGN1cnZlLiBUaGVyZWZvcmUgdGhlIGludGVncmFsIGlzIG5lZ2F0aXZlLgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork-ptx.aimath.org"]})</script></article></div>
+<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1</span> <span class="title">Problem set wrap-up</span>
+</h3>
+<ol class="decimal">
+<li id="li-90">Explain in your own words what the line integral of a vector field over a curve measures.</li>
+<li id="li-91">If \(\int_{C} \vec{F}\cdot d\vec{r}=0\text{,}\) is \(C\) perpendicular to \(\vec{F}\) at all points of \(C\text{?}\)</li>
+</ol></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
