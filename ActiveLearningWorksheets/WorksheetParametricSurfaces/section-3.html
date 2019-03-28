@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-28T17:09:33-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MCWG Worksheet Parametric Surfaces Key Concepts</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-ptx.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/Logo.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="WorksheetParamericSurfaces.html"><span class="title">Active Learning Worksheet:</span> <span class="subtitle">Parametric Surfaces</span></a></h1>
+<p class="byline">Mathematics Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-2.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-2.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Goals</span></a></li>
+<li class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Prerequisites</span></a></li>
+<li class="link active"><a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">Key Concepts</span></a></li>
+<li class="link"><a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">Warm-up</span></a></li>
+<li class="link"><a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title">First Set — Recognizing parameterization strategies</span></a></li>
+<li class="link"><a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Second Set — Setting up parameterizations</span></a></li>
+<li class="link"><a href="section-7.html" data-scroll="section-7"><span class="codenumber">7</span> <span class="title">Third Set — Setting up parameterizations - parameter bounds and orientations</span></a></li>
+<li class="link"><a href="section-8.html" data-scroll="section-8"><span class="codenumber">8</span> <span class="title">Wrap Up Questions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://goo.gl/forms/lbMHtFlNZFa7GEJu2" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Key Concepts</span>
+</h2>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Parameterization of a surface.</span></h5>
+<p id="p-6">A parameterization for a surface \(S\) in \({\mathbb R}^3\) is a function of two variables \(\vec{r} \colon D \rightarrow {\mathbb R}^3\) where:</p>
+<ul class="disc">
+<li id="li-15">\(D\) is a region in \({\mathbb R}^2\)</li>
+<li id="li-16">For a given \((u,v)\) in the region \(D\text{,}\) the image \(\vec{r}(u,v)\) is interpreted as point of \({\mathbb R}^3\text{,}\) each of which lie on the surface \(S\text{.}\)</li>
+<li id="li-17">As we allow \((u,v)\) to vary over all the points in \(D\text{,}\) the image \(\vec{r}(u,v)\) varies over all the points in \(S\text{.}\) Moreoever, no two points \((u,v)\) map to the same point of \(S\) under \(\vec{r}\) i.e. \(\vec{r}\) is a one-to-one function.</li>
+</ul></article><article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Standard surface parameterizations.</span></h5>
+<p id="p-7">Some standard surface parameterizations are the following:</p>
+<ul class="disc">
+<li id="li-18">
+<em class="alert">Planes.</em> If \(\Pi\) is a plane containing the point \(P\) and the non-parallel vectors \(\vec{u}\) and \(\vec{v}\text{,}\) then the equation<div class="displaymath">
+\begin{equation*}
+\vec{r}(s,t) =\vec{P} +\vec{u} t +\vec{v} s
+\end{equation*}
+</div>is a parameterization for \(\Pi\text{.}\)</li>
+<li id="li-19">
+<p id="p-8"><em class="alert">Graphs.</em> If a surface \(S\) is the part of the graph of a function \(z=f(x,y)\) above the region \(D\) in the \(xy\)-plane, then \(S\) can be parameterized by choosing \(x=u\text{,}\) \(y=v\) and \(z=f(u,v)\) where the \(uv\)-bounds are the same as the \(xy\)-bounds in \(D\text{.}\) That is, \(S\) is parameterized by</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}(u,v) =u\vec{i} +v\vec{j} +f(u,v)\vec{k}.
+\end{equation*}
+</div>
+<p id="p-9">The parameterization above can be easily modified for graphs of the type \(x=f(y,z)\) or \(y=f(x,z)\text{.}\)</p>
+</li>
+<li id="li-20">
+<p id="p-10"><em class="alert">Surfaces generated by circles.</em> If a surface \(S\) has contours which consist of concentric circles (or part of concentric circles) centered on the \(z\)-axis whose radii are a function of height \(f(z)\text{,}\) then \(S\) can be parameterized by letting \(z=v\text{,}\) \(x=f(v)\cos{(u)}\) and \(y=f(v)\sin{(u)}\text{.}\) That is, \(S\) is parameterized by</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}(u,v) =f(v) \cos{(u)} \vec{i} +f(v)\sin{(u)} \vec{j} +v\vec{k}.
+\end{equation*}
+</div>
+<p>Since \(u\) acts as an angle of rotation and \(v\) acts as height, we can find bounds for \(u\) and \(v\) accordingly. Examples of such surfaces include spheres, cones and cylinders.</p>
+<p id="p-11">The parameterization above can be easily modified with shifts for more general surfaces whose contours are concentric circles. In addition, they can also be modified to cases where the concentric circles live in planes parallel to the \(xz\)-plane or \(yz\)-plane by changing the “height” to be \(y\) or \(x\) respectively and adjusting the components which have the trigonometric functions  \(f(v)\sin (u)\) and \(f(v)\cos (u)\) accordingly.</p>
+</li>
+</ul></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Tangent and normal vectors to parameterized surfaces.</span></h5>
+<p id="p-12">If \(\vec{r}(u,v)\) is a parameterization for a surface \(S\) and \(P=\vec{r}(a,b)\) is a point on \(S\text{,}\) then:</p>
+<ul class="disc">
+<li id="li-21">\(\vec{r}_{u}(a,b)\) and \(\vec{r}_{v}(a,b)\text{,}\) when non-zero, are tangent vectors to the surface \(S\) at the point \(P\text{.}\)</li>
+<li id="li-22">\(\vec{N} =\vec{r}_{u}(a,b) \times \vec{r}_{v}(a,b)\text{,}\) when non-zero, is a normal vector to the surface \(S\) at \(P\) (so one can use it to write down the equation for the tangent plane to \(S\) at point \(P\)).</li>
+</ul>
+<p id="p-13">Since they appear frequently, it is useful to be familiar with the formulas for normal vectors in the following cases:</p>
+<ul class="disc">
+<li id="li-23">
+<em class="alert">Normal vectors to graphs.</em> If a surface \(S\) is the part of the graph of a function \(z=f(x,y)\) and parameterized by \(\vec{r}(u,v) =u\vec{i} +v\vec{j} +f(u,v)\vec{k}\text{,}\) then<div class="displaymath">
+\begin{equation*}
+\vec{N} =-f_u\vec{i} -f_v\vec{j} +\vec{k}\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-24">
+<em class="alert">Normal vectors to surfaces generated by circles.</em> If a surface \(S\) has contours which consist of concentric circles centered on the \(z\)-axis and is parameterized by \(\vec{r}(u,v) =f(v) \cos{(i)} \vec{i} +f(v)\sin{(u)} \vec{j} +v\vec{k}\) then<div class="displaymath">
+\begin{equation*}
+\vec{N} =f(v) \cos{(u)} \vec{i} +f(v)\sin{(u)} \vec{j} +f(v)f'(v)\vec{k}\text{.}
+\end{equation*}
+</div>
+</li>
+</ul></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">Smooth surfaces.</span></h5>
+<p id="p-14">A surface \(S\) parameterized by \(\vec{r}(u,v)\) is said to be smooth at a point \(P=\vec{r}(a,b)\) if \(\vec{r}\) is differentiable at \(P\text{,}\) and the normal vector \(\vec{N} (a,b)\neq \vec{0}\text{.}\) It is a smooth surface if it is smooth at all points.</p></article><article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Orientable surfaces.</span></h5>
+<p id="p-15">A surface \(S\) is orientable if it is possible to choose a <em class="emphasis">unit</em> normal vector \(\vec{n}\) at every point so that \(\vec{n}\) varies continuously over \(S\text{.}\) Such a choice of normal vectors is called an orientation of \(S\text{,}\) and once an orientation of \(S\) has been specified, it is called an oriented surface.</p>
+<p id="p-16">Suppose that \(S\) is an oriented  surface with orientation \(\vec{n}\) and suppose that \(\vec{r}(u,v)\) parameterizes \(S\text{.}\) Then we say \(\vec{r}\) is <em class="alert">orientation preserving</em> if \(\vec{n} = \vec{N}/||\vec{N}||\) and <em class="alert">orientation reversing</em> if  \(\vec{n} =- \vec{N}/||\vec{N}||\text{.}\)</p></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
