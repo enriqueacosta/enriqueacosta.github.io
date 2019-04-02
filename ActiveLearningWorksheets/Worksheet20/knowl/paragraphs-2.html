@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-01T13:48:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Surface Integral Formulas.</span></h5>
+<p>If \(S\) is parameterized by \(\vec{r}(u,v)\) over the \(uv\)-region \(D\) and \(\vec{N}\) is the normal vector for \(\vec{r}(u,v)\text{,}\) and \(dA=dudv\) or \(dvdu\) depending upon how the bounds for \(D\) are set up, then \(\int \int_{S} f \,dS\) is calculated using the following formula:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(\vec{r}(u,v)) \,||\vec{N}|| \,dA.
+\end{equation*}
+</div>
+<p>Since we have a standard formula for \(\vec{N}\) when either \(S\) is the graph of a function or has concentric circles as contours, we get the following special cases:</p>
+<ul class="disc">
+<li>
+<p>When \(S\) is the graph of \(z=g(x,y)\) and parameterized by \(\vec{r}(u,v)=u\vec{i} +v\vec{j} +g(u,v)\vec{k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(u,v,g(u,v))\, \sqrt{(g_u)^2 +(g_v)^2 +1} \,dA.
+\end{equation*}
+</div>
+</li>
+<li>
+<p>When \(S\) is has contours which are concentric circles centered on the \(z\)-axis with radius \(g(z)\) at height \(z\) and is parameterized by \(\vec{r}(u,v)=g(v)\cos{(u)}\vec{i} +g(v)\sin{(u)} \vec{j} +v\vec{k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(g(v)\cos{(u)},g(v)\sin{(u)},v) \, |g(v)| \, \sqrt{1+(g'(v))^2} \,dA.
+\end{equation*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="section-3.html#paragraphs-2">in-context</a></span>
+</body>
+</html>

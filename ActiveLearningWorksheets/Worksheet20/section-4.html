@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-01T13:48:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MCWG Worksheet Surface integrals of scalar functions Warm-up</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="http://webwork.math.arizona.edu/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://webwork.math.arizona.edu/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/Logo.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="WorksheetParamericSurfaces.html"><span class="title">Active Learning Worksheet:</span> <span class="subtitle">Surface integrals of scalar functions</span></a></h1>
+<p class="byline">Mathematics Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-3.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-5.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-3.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-5.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Goals</span></a></li>
+<li class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Prerequisites</span></a></li>
+<li class="link"><a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">Key Concepts</span></a></li>
+<li class="link active"><a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">Warm-up</span></a></li>
+<li class="link"><a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title">First Set: Understanding the definition</span></a></li>
+<li class="link"><a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Second Set: Computing surface integrals of scalar functions</span></a></li>
+<li class="link"><a href="section-7.html" data-scroll="section-7"><span class="codenumber">7</span> <span class="title">Wrap Up Questions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://goo.gl/forms/lbMHtFlNZFa7GEJu2" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-4"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">Warm-up</span>
+</h2>
+<article class="exercise-like" id="exercise-1"><a data-knowl="" class="id-ref" data-refid="hk-exercise-1"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">4.1</span>.</h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="http://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=1&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJNdWx0aUFuc3dlci5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpO0NvbnRleHQoIk51bWVyaWMiKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPmFyZSh1PT4iUmVhbCIsIHY9PiJSZWFsIik7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQodT0%2Be2xpbWl0cz0%2BWy0yLDJdfSk7CkNvbnRleHQoKS0%2BdmFyaWFibGVzLT5zZXQodj0%2Be2xpbWl0cz0%2BWy0yLDJdfSk7CgokYT1Db21wdXRlKHJhbmRvbSgyLDksMSkpOwokYVNxPSRhKioyOwoKJHggPSBGb3JtdWxhKCJzcXJ0KCRhU3Etdl4yKSpjb3ModSkiKTsKJHkgPSBGb3JtdWxhKCJzcXJ0KCRhU3Etdl4yKSpzaW4odSkiKTsKJHogPSBGb3JtdWxhKCJ2Iik7CgokbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkeCwgJHksICR6KS0%2Bd2l0aCgKICBzaW5nbGVSZXN1bHQgPT4gMCwKICBjaGVja2VyID0%2BIHN1YiB7CiAgICAgIG15ICggJGNvcnJlY3QsICRzdHVkZW50LCAkc2VsZiApID0gQF87CiAgICAgIG15ICggJHhzdHUsICR5c3R1LCAkenN0dSkgPSBAeyRzdHVkZW50fTsKICAgICAgaWYgKCAKICAgICAgICAjIENoZWNrIGNhcnRlc2lhbiBlcXVhdGlvbiBpcyBzYXRpc2ZpZWQKICAgICAgICAoICgoJHhzdHUpKioyICsgKCR5c3R1KSoqMiArICgkenN0dSkqKjIgLSAkYVNxICkgPT0gMCApIGFuZCAKICAgICAgICAjIE5vdyBjaGVjayB0aGF0IFx2ZWN7cl91fSBhbmQgXHZlY3tyX3Z9IGFyZSBub3QgZ2VuZXJpY2FsbHkgcGFyYWxsZWwgKGJ5IGNoZWNraW5nIGNvbXBvbmVudHMgb2YgY3Jvc3MgcHJvZHVjdCBhcmUgbm90IGFsbCBnZW5lcmljYWxseSB6ZXJvKQogICAgICAgICgKICAgICAgICAgICAgKCAoKCR4c3R1LT5EKCd1JykpKigkeXN0dS0%2BRCgndicpKS0oJHhzdHUtPkQoJ3YnKSkqKCR5c3R1LT5EKCd1JykpKSAhPSAwICkgb3IgCiAgICAgICAgICAgICggKCgkeXN0dS0%2BRCgndScpKSooJHpzdHUtPkQoJ3YnKSktKCR5c3R1LT5EKCd2JykpKigkenN0dS0%2BRCgndScpKSkgIT0gMCApIG9yCiAgICAgICAgICAgICggKCgkeHN0dS0%2BRCgndScpKSooJHpzdHUtPkQoJ3YnKSktKCR4c3R1LT5EKCd2JykpKigkenN0dS0%2BRCgndScpKSkgIT0gMCApCiAgICAgICAgKQogICAgICApIHsgCiAgICAgICAgICAgIHJldHVybiBbMSwxLDFdOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHJldHVybiBbMCwwLDBdOwogICAgICAgIH0KICAgIH0KKTsKCkJFR0lOX1BHTUwKRmluZCBhIHBhcmFtZXRlcml6YXRpb24gZm9yIHRoZSBzcGhlcmUgW2B4XjIreV4yK3peMj1bJGFTcV0gXHRleHR7Ln1gXQoKW2B4KHUsdikgPWBdIFtfXXskbXVsdGlhbnN9ezE1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCltgeSh1LHYpID1gXSBbX117JG11bHRpYW5zfXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgpbYHoodSx2KSA9YF0gW19deyRtdWx0aWFuc317MTV9IFtAQW5zd2VyRm9ybWF0SGVscCgnZm9ybXVsYXMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX0hJTlQKUmVjYWxsIHRoYXQgaWYgYSBzdXJmYWNlIFtgU2BdIGhhcyBjb250b3VycyB3aGljaCBjb25zaXN0IG9mIGNvbmNlbnRyaWMgY2lyY2xlcyAob3IgcGFydCBvZiBjb25jZW50cmljIGNpcmNsZXMpIGNlbnRlcmVkIG9uIHRoZSBbYHpgXS1heGlzIHdob3NlIHJhZGlpIGFyZSBhIGZ1bmN0aW9uIG9mIGhlaWdodCBbYGYoeilcdGV4dHssfWBdIHRoZW4gW2BTYF0gY2FuIGJlIHBhcmFtZXRlcml6ZWQgYnkgbGV0dGluZyBbYHo9dlx0ZXh0eyx9YF0gW2B4PWYodilcY29zeyh1KX1gXSBhbmQgW2B5PWYodilcc2lueyh1KX1cdGV4dHsufWBdCgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgc3BoZXJlIFtgeF4yK3leMit6XjI9WyRhU3FdIGBdIGhhcyBjb250b3VycyB3aGljaCBjb25zaXN0IG9mIGNvbmNlbnRyaWMgY2lyY2xlcyBjZW50ZXJlZCBvbiB0aGUgW2B6YF0tYXhpcyB3aG9zZSByYWRpaSBjaGFuZ2UgYXQgZGlmZmVyZW50IGhlaWdodHMuIFNwZWNpZmljYWxseSwgZm9yIGEgZ2l2ZW4gW2B6YF0gc2luY2Ugd2UgY2FuIHJld3JpdGUgIFtgeF4yK3leMit6XjI9WyRhU3FdIGBdIGFzIFtgeF4yK3leMj0oWyRhU3FdIC16XjIpPXJeMlx0ZXh0eyx9YF0gdGhlIHJhZGl1cyBbYHJgXSBvZiB0aGUgY29udG91ciBhdCBoZWlnaHQgW2B6YF0gd2lsbCBiZSBbYHI9XHNxcnR7WyRhU3FdIC16XjJ9XHRleHR7Ln1gXSBUaGVyZWZvcmUsIHRoZSBzcGhlcmUgY2FuIGJlIHBhcmFtZXRlcml6ZWQgYnkgbGV0dGluZyBbYHo9dlx0ZXh0eyx9YF0gW2B4PVxzcXJ0e1skYVNxXSAtdl4yfVxjb3N7KHUpfWBdIGFuZCBbYHk9XHNxcnR7WyRhU3FdIC12XjJ9XHNpbnsodSl9XHRleHR7LH1gXSBvcgoKW2BgYAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFx2ZWN7cn0odSx2KSA9XHNxcnR7WyRhU3FdIC12XjJ9XGNvc3sodSl9IFx2ZWN7aX0gK1xzcXJ0e1skYVNxXSAtdl4yfVxzaW57KHUpfSBcdmVje2p9ICt2XHZlY3trfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgXHRleHR7Ln1gYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["http://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-2"><a data-knowl="" class="id-ref" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">4.2</span>.</h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="http://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=2&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtsb2FkTWFjcm9zKCJQQ0NtYWNyb3MucGwiKTsKVEVYVChNT0RFUyhQVFg9PicnLEhUTUw9PnFAPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI%2BXChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY%2BQCkpOwokYT1Db21wdXRlKHJhbmRvbSgyLDksMSkpOwokYVNxPSRhKioyOwoKIyMgPT09PT09PT09PT09PT09PT09PT0KIyMgR3JhZGluZyBjb2RlIGZvciAoYSkgCiMjID09PT09PT09PT09PT09PT09PT09CkNvbnRleHQoIlZlY3RvciIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKHU9PiJSZWFsIiwgdj0%2BIlJlYWwiKTsKQ29udGV4dCgpLT52YXJpYWJsZXMtPnNldCh1PT57bGltaXRzPT5bLTEwLDEwXX0pOwpDb250ZXh0KCktPnZhcmlhYmxlcy0%2Bc2V0KHY9PntsaW1pdHM9PlstMTAsMTBdfSk7CgokTng9Rm9ybXVsYSgiLXYqY29zKHUpLyRhIik7CiROeT1Gb3JtdWxhKCJ2LyRhU3EiKTsKJE56PUZvcm11bGEoIi12KnNpbih1KS8kYSIpOwoKJE5vcm1hbD1WZWN0b3IoIiROeCppKyROeSpqKyROeiprIik7CgpCRUdJTl9QR01MClRoZSBmdW5jdGlvbgoKW2BgYAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFx2ZWN7cn0odSx2KSA9XGZyYWN7MX17WyRhXX12XGNvcyh1KVx2ZWN7aX0gK3ZcdmVje2p9ICtcZnJhY3sxfXtbJGFdfXZcc2luKHUpXHZlY3trfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgYGBgXQoKcGFyYW1ldGVyaXplcyB0aGUgY29uZSBbYHk9XHNxcnR7WyRhU3FdIHheMitbJGFTcV0gel4yfVx0ZXh0ey59YF0KCkZpbmQgdGhlIG5vcm1hbCB2ZWN0b3IgW2BcdmVje059YF0gZm9yIHRoaXMgcGFyYW1ldGVyaXphdGlvbi4KCltgXHZlY3tOfSh1LHYpPWBdIFtfXXskTm9ybWFsfXsyNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCd2ZWN0b3JzJylAXSogCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApSZWNhbGwgdGhhdCBbYFx2ZWN7Tn0gPVx2ZWN7cn1fdVx0aW1lcyBcdmVje3J9X3t2fVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIGhhdmUKCltgYGBcYmVnaW57YWxpZ25lZH0KIFx2ZWN7Tn0gXGFtcCA9IFx2ZWN7cn1fe3V9IFx0aW1lcyBcdmVje3J9X3t2fSBcXAogXGFtcCA9IFxsZWZ0KCAtXGZyYWN7MX17WyRhXX12XHNpbih1KVx2ZWN7aX0gK1xmcmFjezF9e1skYV19dlxjb3ModSlcdmVje2t9XHJpZ2h0KSBcdGltZXMgXGxlZnQoIFxmcmFjezF9e1skYV19XGNvcyh1KVx2ZWN7aX0gK1x2ZWN7an0gK1xmcmFjezF9e1skYV19XHNpbih1KVx2ZWN7a31ccmlnaHQpICBcXAogXGFtcCA9IC1cZnJhY3sxfXtbJGFdfXZcY29zKHUpXHZlY3tpfSArXGZyYWN7MX17WyRhU3FdfXZcdmVje2p9IC1cZnJhY3sxfXtbJGFdfXZcc2luKHUpXHZlY3trfS4KXGVuZHthbGlnbmVkfWBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["http://webwork.math.arizona.edu"]})</script></article></div></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

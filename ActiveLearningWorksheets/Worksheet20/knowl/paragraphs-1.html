@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-01T13:48:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Defining a Surface Integral of a Scalar Function.</span></h5>
+<p>The integral \(\int \int_{S} f(x,y,z)\,dS\) of a scalar function over a general surface \(S\) is defined as a natural generalization of the standard double integral of a function of two variables over a region in the plane. It is defined as follows:</p>
+<ol class="decimal">
+<li>Suppose that \(S\) is parameterized by \(\vec{r}(u,v)\) over some \(uv\)-region \(D\text{.}\)</li>
+<li>Divide \(D\) up into small rectangles of lengths \(\Delta u\) in the \(u\)-direction and \(\Delta v\) in the \(v\)-direction and area \(\Delta A=\Delta u \Delta v\text{.}\) Note: rectangles may not perfectly fit in \(D\text{,}\) but later in the process we will take  \(\Delta u ,\Delta v\rightarrow 0\text{,}\) so they will approximate \(D\) better and better.</li>
+<li>If we apply \(\vec{r}(u,v)\) to the edges of these rectangles, they each create a “patch” on the surface \(S\text{,}\) with all the rectangles creating a lattice, similar to a quilt. We shall create a Riemann sum over these patches.</li>
+<li>
+<p>For a given patch, the vectors \(\vec{r}_{u}  \Delta u\) and  \(\vec{r}_{v} \Delta v\) approximate the length of the sides in the \(u\) direction and \(v\) direction. It follows that the area of a given patch can be approximated by</p>
+<div class="displaymath">
+\begin{equation*}
+||\vec{r}_{u} \Delta u\times \vec{r}_{v} \Delta v|| =||\vec{r}_{u} \times \vec{r}_{v}|| \Delta u \Delta v=||\vec{r}_{u} \times \vec{r}_{v}|| \Delta A=||\vec{N}|| \Delta A
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Fixing a point \((u_{i}^*,v_{j}^*)\) in each patch, we can construct our Riemann some over all the patches as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{j=1}^{m} \sum_{i=1}^{n} f(\vec{r} (u_{i}^* , v_{j}^*))\,||\vec{N}||\,\Delta A
+\end{equation*}
+</div>
+<p>and we can now define our integral as the limit of this double sum. Specifically:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f\,dS =\lim_{n,m\rightarrow \infty} \sum_{j=1}^{m} \sum_{i=1}^{n} f(\vec{r} (u_{i}^* , v_{j}^*)) \, ||\vec{N}||\,\Delta A.
+\end{equation*}
+</div>
+</li>
+</ol></article><span class="incontext"><a href="section-3.html#paragraphs-1">in-context</a></span>
+</body>
+</html>

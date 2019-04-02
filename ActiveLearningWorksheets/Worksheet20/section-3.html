@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-01T13:48:03-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MCWG Worksheet Surface integrals of scalar functions Key Concepts</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="http://webwork.math.arizona.edu/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="http://webwork.math.arizona.edu/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/Logo.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="WorksheetParamericSurfaces.html"><span class="title">Active Learning Worksheet:</span> <span class="subtitle">Surface integrals of scalar functions</span></a></h1>
+<p class="byline">Mathematics Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-2.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-2.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="WorksheetParamericSurfaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Goals</span></a></li>
+<li class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Prerequisites</span></a></li>
+<li class="link active"><a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">Key Concepts</span></a></li>
+<li class="link"><a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">Warm-up</span></a></li>
+<li class="link"><a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title">First Set: Understanding the definition</span></a></li>
+<li class="link"><a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Second Set: Computing surface integrals of scalar functions</span></a></li>
+<li class="link"><a href="section-7.html" data-scroll="section-7"><span class="codenumber">7</span> <span class="title">Wrap Up Questions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://goo.gl/forms/lbMHtFlNZFa7GEJu2" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Key Concepts</span>
+</h2>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Defining a Surface Integral of a Scalar Function.</span></h5>
+<p id="p-6">The integral \(\int \int_{S} f(x,y,z)\,dS\) of a scalar function over a general surface \(S\) is defined as a natural generalization of the standard double integral of a function of two variables over a region in the plane. It is defined as follows:</p>
+<ol id="p-7" class="decimal">
+<li id="li-9">Suppose that \(S\) is parameterized by \(\vec{r}(u,v)\) over some \(uv\)-region \(D\text{.}\)</li>
+<li id="li-10">Divide \(D\) up into small rectangles of lengths \(\Delta u\) in the \(u\)-direction and \(\Delta v\) in the \(v\)-direction and area \(\Delta A=\Delta u \Delta v\text{.}\) Note: rectangles may not perfectly fit in \(D\text{,}\) but later in the process we will take  \(\Delta u ,\Delta v\rightarrow 0\text{,}\) so they will approximate \(D\) better and better.</li>
+<li id="li-11">If we apply \(\vec{r}(u,v)\) to the edges of these rectangles, they each create a “patch” on the surface \(S\text{,}\) with all the rectangles creating a lattice, similar to a quilt. We shall create a Riemann sum over these patches.</li>
+<li id="li-12">
+<p id="p-8">For a given patch, the vectors \(\vec{r}_{u}  \Delta u\) and  \(\vec{r}_{v} \Delta v\) approximate the length of the sides in the \(u\) direction and \(v\) direction. It follows that the area of a given patch can be approximated by</p>
+<div class="displaymath">
+\begin{equation*}
+||\vec{r}_{u} \Delta u\times \vec{r}_{v} \Delta v|| =||\vec{r}_{u} \times \vec{r}_{v}|| \Delta u \Delta v=||\vec{r}_{u} \times \vec{r}_{v}|| \Delta A=||\vec{N}|| \Delta A
+\end{equation*}
+</div>
+</li>
+<li id="li-13">
+<p id="p-9">Fixing a point \((u_{i}^*,v_{j}^*)\) in each patch, we can construct our Riemann some over all the patches as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{j=1}^{m} \sum_{i=1}^{n} f(\vec{r} (u_{i}^* , v_{j}^*))\,||\vec{N}||\,\Delta A
+\end{equation*}
+</div>
+<p>and we can now define our integral as the limit of this double sum. Specifically:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f\,dS =\lim_{n,m\rightarrow \infty} \sum_{j=1}^{m} \sum_{i=1}^{n} f(\vec{r} (u_{i}^* , v_{j}^*)) \, ||\vec{N}||\,\Delta A.
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Surface Integral Formulas.</span></h5>
+<p id="p-10">If \(S\) is parameterized by \(\vec{r}(u,v)\) over the \(uv\)-region \(D\) and \(\vec{N}\) is the normal vector for \(\vec{r}(u,v)\text{,}\) and \(dA=dudv\) or \(dvdu\) depending upon how the bounds for \(D\) are set up, then \(\int \int_{S} f \,dS\) is calculated using the following formula:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(\vec{r}(u,v)) \,||\vec{N}|| \,dA.
+\end{equation*}
+</div>
+<p id="p-11">Since we have a standard formula for \(\vec{N}\) when either \(S\) is the graph of a function or has concentric circles as contours, we get the following special cases:</p>
+<ul id="p-12" class="disc">
+<li id="li-14">
+<p id="p-13">When \(S\) is the graph of \(z=g(x,y)\) and parameterized by \(\vec{r}(u,v)=u\vec{i} +v\vec{j} +g(u,v)\vec{k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(u,v,g(u,v))\, \sqrt{(g_u)^2 +(g_v)^2 +1} \,dA.
+\end{equation*}
+</div>
+</li>
+<li id="li-15">
+<p id="p-14">When \(S\) is has contours which are concentric circles centered on the \(z\)-axis with radius \(g(z)\) at height \(z\) and is parameterized by \(\vec{r}(u,v)=g(v)\cos{(u)}\vec{i} +g(v)\sin{(u)} \vec{j} +v\vec{k}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int \int_{S} f(x,y,z)\,dS =\int \int_{D} f(g(v)\cos{(u)},g(v)\sin{(u)},v) \, |g(v)| \, \sqrt{1+(g'(v))^2} \,dA.
+\end{equation*}
+</div>
+</li>
+</ul></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">General Set up and Calculation.</span></h5>
+<p id="p-15">To set up and evaluate \(\int \int_{S} f(x,y,z)\,dS\text{,}\) we take the following steps:</p>
+<ol id="p-16" class="decimal">
+<li id="li-16">Find a parameterization \(\vec{r}(u,v)\) for \(S\text{.}\) This includes finding the \(uv\)-bounds for \(D\text{.}\)</li>
+<li id="li-17">Find the normal vector \(\vec{N}\) and its magnitude.</li>
+<li id="li-18">Perform the composition \(f(\vec{r}(u,v))\text{.}\)</li>
+<li id="li-19">Invoke the integral formula and evaluate using standard double integration techniques.</li>
+</ol></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
