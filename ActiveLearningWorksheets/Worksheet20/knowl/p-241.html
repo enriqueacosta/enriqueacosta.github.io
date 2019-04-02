@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-04-01T13:48:05-05:00    *-->
+<!--*    on 2019-04-02T07:41:40-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Notice that \(S\) has concentric circles as contours, so you can use the parameterization \(\vec{r}(u,v)=f(v) \cos{(u)} \vec{i} +f(v) \sin{(u)} \vec{j} +v\vec{k}\) where \(f(z)\) is the radius of the circle at height \(z\text{.}\)</p>
+<p>First, \(S\) can be parameterized by</p>
+<div class="displaymath">
+\begin{equation*}
+\vec{r}(u,v)=u \vec{i} +v \vec{j} +(u^2+v^2)\vec{k}.
+\end{equation*}
+</div>
+<p>Since we want \(z\leq 4\text{,}\) the region \(D\) mut be the disc \(z=u^2+v^2\leq 4\text{.}\) The normal vector is \(\vec{N} =-2u \vec{i} -2v \vec{j} +\vec{k}\) and so \(||N||=\sqrt{1+4u^2+4v^2}\text{.}\) Therefore, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{S} 2dS =\int \int_D  2\sqrt{1+4u^2+4v^2}dudv.
+\end{equation*}
+</div>
 <span class="incontext"><a href="section-6.html#p-241">in-context</a></span>
 </body>
 </html>
