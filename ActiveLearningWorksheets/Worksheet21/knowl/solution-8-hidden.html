@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-04-04T08:19:52-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>First, \(S\) can be parameterized by \(\vec{r}(u,v)=u\vec{i} +v\vec{j} +(u^2+v^2)\vec{k}\text{.}\) Since we have \(0\leq z\leq 4\text{,}\) this means the corresponding restrictions on \(u\) and \(v\) are \(0\leq u^2+v^2\leq 4\text{,}\) so the region \(D\) within the circle \(u^2+v^2=4\text{.}\) The normal vector is \(\vec{N} =-2u \vec{i} -2v \vec{j} +\vec{k}\text{.}\) Since \(S\) is an upward facing parabolic bowl, the inward pointing normal vector will have positive \(\vec{k}\) component, and thus this parameterization is orientation preserving. Thus we have</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int \int_{S} (x\vec{i}+y\vec{j})\, \cdot d\vec{S} \amp =\int \int_{D} (u\vec{i}+v\vec{j})\cdot \left( -2u \vec{i} -2v \vec{j} +\vec{k} \right)  \,du\,dv\\
+\amp =\int \int_{D} \left(-2u^2 -2v^2\right) \,du\,dv
+\end{aligned}
+\end{equation*}
+</div>
+<p>Since the region of integration is the disk \(u^2+v^2\leq 4\text{,}\) we switch to polar coordinates with \(u=r\cos{(\theta)}\text{,}\) \(v=r\sin{(\theta)}\text{,}\) \(0\leq r\leq 2\) and \(0\leq \theta \leq 2\pi\text{.}\) This gives:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{aligned}
+\int \int_{D} \left(-2u^2 -2v^2\right) \,du\,dv \amp = \int_{0}^{2\pi} \int_{0}^{2} (-2r^2)r\, dr\, d\theta \\
+\amp = -4\pi \int_{0}^{2} r^2\, dr \\
+\amp = -4\pi \frac{r^4}{4}\big|_{0}^{2} \\
+\amp = -16\pi.
+\end{aligned}
+\end{equation*}
+</div>
+</div></body>
+</html>
