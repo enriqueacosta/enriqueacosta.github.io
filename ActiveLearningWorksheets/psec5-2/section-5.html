@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-17T15:31:02-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MCWG PCALC 5-2 Third set: Finding the doubling time or half life</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork.math.arizona.edu/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork.math.arizona.edu/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://www.google.com" target="_blank"><img src="images/Logo.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="psec5-1.html"><span class="title">DRAFT Corequisite Worksheet:</span> <span class="subtitle">Section 5.2 - Logarithms and Exponential Models</span></a></h1>
+<p class="byline">Mathematics Consortium Working Group (MCWG)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-4.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="psec5-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-4.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="psec5-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-6.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-1.html" data-scroll="section-1"><span class="codenumber">1</span> <span class="title">Goals</span></a></li>
+<li class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span> <span class="title">Summary of Section</span></a></li>
+<li class="link">
+<a href="section-3.html" data-scroll="section-3"><span class="codenumber">3</span> <span class="title">First set: Algebraic structure - converting between the forms</span></a><ul>
+<li><a href="section-3.html#subsection-1" data-scroll="subsection-1">Problems</a></li>
+<li><a href="section-3.html#subsection-2" data-scroll="subsection-2">Wrap-Up</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="section-4.html" data-scroll="section-4"><span class="codenumber">4</span> <span class="title">Second set: Identifying and interpreting the parameters</span></a><ul>
+<li><a href="section-4.html#subsection-3" data-scroll="subsection-3">Problems</a></li>
+<li><a href="section-4.html#subsection-4" data-scroll="subsection-4">Wrap-Up</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="section-5.html" data-scroll="section-5"><span class="codenumber">5</span> <span class="title">Third set: Finding the doubling time or half life</span></a><ul>
+<li><a href="section-5.html#subsection-5" data-scroll="subsection-5">Problems</a></li>
+<li><a href="section-5.html#subsection-6" data-scroll="subsection-6">Wrap-Up</a></li>
+<li><a href="section-5.html#subsection-7" data-scroll="subsection-7">(**) Wrap-Up - interactive</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="section-6.html" data-scroll="section-6"><span class="codenumber">6</span> <span class="title">Fourth set: Putting this all together - modeling in situations involving exponential change</span></a><ul>
+<li><a href="section-6.html#subsection-8" data-scroll="subsection-8">Problems</a></li>
+<li><a href="section-6.html#subsection-9" data-scroll="subsection-9">Wrap-Up</a></li>
+</ul>
+</li>
+<li class="link"><a href="section-7.html" data-scroll="section-7"><span class="codenumber">7</span> <span class="title">Wrap Up Questions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-5"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5</span> <span class="title">Third set: Finding the doubling time or half life</span>
+</h2>
+<section class="introduction" id="introduction-3"><p id="p-103">Only functions of the form \(Q=ab^t\) and \(Q=ae^{kt}\) have the amazing property that \(Q\) always doubles of reduces in half  in the same constant intervals.</p>
+<p id="p-104">To find the doubling time in any of the forms, just set \(Q=2a\) and solve for \(t\text{!}\) (remember that \(a\) is the initial amount, so one is finding the time in which the initial amount doubles). The fact that you can solve it independent of the value of \(a\) or \(t\) is the indication that that it is always constant.</p>
+<p id="p-105">If one solves \(Q=2a\) for \(t\) using general parameters, then one gets a general formula for the doubling time in terms of the parameters which is useful if one is going to be using this repeatedly. Otherwise, it is better just to solve \(Q=2a\) each time one needs it instead of relying on memory.</p>
+<p id="p-106">Similarly, to find the half life in any of the forms, just set \(Q=(1/2)a\) and solve for \(t\text{!}\) (with parameters for a general formula, or with numbers for a specific case).</p>
+<p id="p-107">Try this out in the following problems.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1</span> <span class="title">Problems</span>
+</h3>
+<article class="exercise-like" id="exercise-9"><a data-knowl="" class="id-ref" data-refid="hk-exercise-9"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.1</span>.</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=9&amp;sourceFilePath=local/psec5-2worksheet/5-2pw22WP/5-2pw22WP.pg" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-10"><a data-knowl="" class="id-ref" data-refid="hk-exercise-10"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.2</span>.</h6></a></article><div id="hk-exercise-10" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=10&amp;sourceFilePath=local/psec5-2worksheet/5-2pw23WP/5-2pw23WP.pg" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-11"><a data-knowl="" class="id-ref" data-refid="hk-exercise-11"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.3</span>.</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=11&amp;sourceFilePath=local/psec5-2worksheet/5-2pw24WP/5-2pw24WP.pg" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-12"><a data-knowl="" class="id-ref" data-refid="hk-exercise-12"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.4</span>.</h6></a></article><div id="hk-exercise-12" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=12&amp;sourceFilePath=local/psec5-2worksheet/5-2pw25WP/5-2pw25WP.pg" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-13"><a data-knowl="" class="id-ref" data-refid="hk-exercise-13"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.5</span>.</h6></a></article><div id="hk-exercise-13" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=13&amp;sourceFilePath=local/psec5-2worksheet/5-2pw27WP/5-2pw27WP.pg" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2</span> <span class="title">Wrap-Up</span>
+</h3>
+<ol class="decimal">
+<li id="li-9"><p id="p-149">As stated above, only functions of the form \(Q=ab^t\) and \(Q=ae^{kt}\) have the amazing property that \(Q\) always doubles in the same constant intervals. Find a general formula for the doubling time in terms of \(b\) or \(k\) by solving the equation \(Q=2a\) for \(t\) with both forms \(Q=ab^t\) and \(Q=ae^{kt}\text{.}\)</p></li>
+<li id="li-10"><p id="p-150">As stated above, only functions of the form \(Q=ab^t\) and \(Q=ae^{kt}\) have the amazing property that \(Q\) always reduces in half in the same constant intervals. Find a general formula for the doubling time in terms of \(b\) or \(k\) by solving the equation \(Q=2/a\) for \(t\) with both forms \(Q=ab^t\) and \(Q=ae^{kt}\text{.}\)</p></li>
+</ol></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3</span> <span class="title">(**) Wrap-Up - interactive</span>
+</h3>
+<article class="exercise-like" id="exercise-14"><a data-knowl="" class="id-ref" data-refid="hk-exercise-14"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.6</span>. <span class="title">General formula for the doubling time.</span>
+</h6></a></article><div id="hk-exercise-14" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=14&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKGI9PiJSZWFsIiwgaz0%2BIlJlYWwiKTsKJGFuc0Zvcm0xPUNvbXB1dGUoImxuKDIpL2xuKGIpIik7CiRhbnNGb3JtMj1Db21wdXRlKCJsbigyKS9rIik7CgpCRUdJTl9QR01MCkFzIHN0YXRlZCBhYm92ZSwgb25seSBmdW5jdGlvbnMgb2YgdGhlIGZvcm0gW2BRPWFiXnRgXSBhbmQgW2BRPWFlXntrdH1gXSBoYXZlIHRoZSBhbWF6aW5nIHByb3BlcnR5IHRoYXQgW2BRYF0gYWx3YXlzIGRvdWJsZXMgaW4gdGhlIHNhbWUgY29uc3RhbnQgaW50ZXJ2YWxzLiBGaW5kIGEgZ2VuZXJhbCBmb3JtdWxhIGZvciB0aGUgZG91YmxpbmcgdGltZSBpbiB0ZXJtcyBvZiBbYGJgXSBvciBbYGtgXSBieSBzb2x2aW5nIHRoZSBlcXVhdGlvbiBbYFE9MmFgXSBmb3IgW2B0YF0gd2l0aCBib3RoIGZvcm1zIFtgUT1hYl50YF0gYW5kIFtgUT1hZV57a3R9XHRleHR7Ln1gXQoKRm9ybXVsYSBmb3IgdGhlIGRvdWJsaW5nIHRpbWUgZm9ybSBbYFE9YWJedFx0ZXh0ezp9YF0KCkRvdWJsaW5nIFRpbWUgKGluIHRlcm1zIG9mIFtgYmBdKVtgPWBdIFtfXXskYW5zRm9ybTF9ezEwfSBbQEFuc3dlckZvcm1hdEhlbHAoJ2Zvcm11bGFzJylAXSoKCkZvcm11bGEgZm9yIHRoZSBkb3VibGluZyB0aW1lIGZvcm0gW2BRPWFlXntrdH1cdGV4dHs6fWBdCgpEb3VibGluZyBUaW1lIChpbiB0ZXJtcyBvZiBbYGtgXSlbYD1gXSBbX117JGFuc0Zvcm0yfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApZb3VyIGFuc3dlciB3aWxsIG9ubHkgYmUgaW4gdGVybXMgb2YgW2BiYF0gb3IgW2BrXHRleHR7LH1gXSBzaW5jZSB3aGVuIG9uZSBzZXRzIHVwIFtgUT0yYWBdIHRoZSBbYGFgXSdzIHdpbGwgY2FuY2VsLgpFTkRfUEdNTF9ISU5UCgpFTkRET0NVTUVOVCgpOw%3D%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div>
+<article class="exercise-like" id="exercise-15"><a data-knowl="" class="id-ref" data-refid="hk-exercise-15"><h6 class="heading">
+<span class="type">Problem</span> <span class="codenumber">5.7</span>. <span class="title">General formula for the half-life life.</span>
+</h6></a></article><div id="hk-exercise-15" class="hidden-content tex2jax_ignore"><article class="exercise-like"><iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=15&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCktPnZhcmlhYmxlcy0%2BYXJlKGI9PiJSZWFsIiwgaz0%2BIlJlYWwiKTsKJGFuc0Zvcm0xPUNvbXB1dGUoImxuKDEvMikvbG4oYikiKTsKJGFuc0Zvcm0yPUNvbXB1dGUoImxuKDEvMikvayIpOwoKQkVHSU5fUEdNTApBcyBzdGF0ZWQgYWJvdmUsIG9ubHkgZnVuY3Rpb25zIG9mIHRoZSBmb3JtIFtgUT1hYl50YF0gYW5kIFtgUT1hZV57a3R9YF0gaGF2ZSB0aGUgYW1hemluZyBwcm9wZXJ0eSB0aGF0IFtgUWBdIGFsd2F5cyByZWR1Y2VzIGluIGhhbGYgaW4gdGhlIHNhbWUgY29uc3RhbnQgaW50ZXJ2YWxzLiBGaW5kIGEgZ2VuZXJhbCBmb3JtdWxhIGZvciB0aGUgZG91YmxpbmcgdGltZSBpbiB0ZXJtcyBvZiBbYGJgXSBvciBbYGtgXSBieSBzb2x2aW5nIHRoZSBlcXVhdGlvbiBbYFE9Mi9hYF0gZm9yIFtgdGBdIHdpdGggYm90aCBmb3JtcyBbYFE9YWJedGBdIGFuZCBbYFE9YWVee2t0fVx0ZXh0ey59YF0KCkZvcm11bGEgZm9yIHRoZSBoYWxmLWxpZmUgZm9yIHRoZSBmb3JtIFtgUT1hYl50XHRleHR7On1gXQoKSGFsZi1saWZlIChpbiB0ZXJtcyBvZiBbYGJgXSkgW2A9YF0gW19deyRhbnNGb3JtMX17MTB9IFtAQW5zd2VyRm9ybWF0SGVscCgnZm9ybXVsYXMnKUBdKgoKRm9ybXVsYSBmb3IgdGhlIGhhbGYtbGlmZSB0aW1lIGZvcm0gW2BRPWFlXntrdH1cdGV4dHs6fWBdCgpIYWxmLWxpZmUgKGluIHRlcm1zIG9mIFtga2BdKSBbYD1gXSBbX117JGFuc0Zvcm0yfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdmb3JtdWxhcycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApZb3VyIGFuc3dlciB3aWxsIG9ubHkgYmUgaW4gdGVybXMgb2YgW2BiYF0gb3IgW2BrXHRleHR7LH1gXSBzaW5jZSB3aGVuIG9uZSBzZXRzIHVwIFtgUT0yL2FgXSB0aGUgW2BhYF0ncyB3aWxsIGNhbmNlbC4KRU5EX1BHTUxfSElOVAoKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></div></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
