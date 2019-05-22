@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-05-22T18:01:46-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Algebraic Interpretation</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork.math.arizona.edu/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork.math.arizona.edu/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\doubler}[1]{2#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Concept Building Activity: The First Derivative Test for Critical Points</span></a></h1>
+<p class="byline">Cody Patterson, Aaron Wootton, Elliot Marks and Enrique Acosta</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="numerical-interpretation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Other-Interpretations.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="numerical-interpretation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Other-Interpretations.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-textual.html" data-scroll="section-textual"><span class="codenumber">1</span> <span class="title">Introduction</span></a></li>
+<li class="link"><a href="section-interesting.html" data-scroll="section-interesting"><span class="codenumber">2</span> <span class="title">Graphical Interpretation</span></a></li>
+<li class="link"><a href="numerical-interpretation.html" data-scroll="numerical-interpretation"><span class="codenumber">3</span> <span class="title">Numerical Interpretation</span></a></li>
+<li class="link active"><a href="Algebraic-interpretation.html" data-scroll="Algebraic-interpretation"><span class="codenumber">4</span> <span class="title">Algebraic Interpretation</span></a></li>
+<li class="link"><a href="Other-Interpretations.html" data-scroll="Other-Interpretations"><span class="codenumber">5</span> <span class="title">Other Interpretations</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Algebraic-interpretation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">Algebraic Interpretation</span>
+</h2>
+<a href="Algebraic-interpretation.html" class="permalink">¶</a><article class="exercise-like" id="exercise-3"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">4.1</span>. <span class="title">Exercise 3.</span>
+</h6>
+<div class="introduction" id="introduction-4">
+<p id="p-90">The derivative of a function \(h\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+h'(x) = -2(x + 2)(x - 5)(x - 11)\text{.}
+\end{equation*}
+</div>
+</div>
+<iframe width="100%" src="https://webwork.math.arizona.edu/webwork2/html2xml?courseID=Precalculus_Activities&amp;userID=anonymous&amp;password=anonymous&amp;course_password=anonymous&amp;answersSubmitted=0&amp;displayMode=MathJax&amp;outputformat=simple&amp;problemSeed=3&amp;problemSource=RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsInNjYWZmb2xkLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsInBhcnNlclBvcFVwLnBsIiwicGFyc2VyTXVsdGlBbnN3ZXIucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTtDb250ZXh0KCdOdW1lcmljJyk7JGFuczE9TGlzdCgiLTIsNSwxMSIpOwokZXZhbGZvcmFuczE9JGFuczEtPmNtcChzaG93TGVuZ3RoSGludHMgPT4gMSk7CgokYT1Db21wdXRlKCIxIik7CiRocHJpbWU9Q29tcHV0ZSgiLTIqKHggKyAyKSooeCAtIDUpKih4IC0gMTEpIik7CiRocHJpbWVhPSRocHJpbWUtPmV2YWwoeD0%2BJGEpOwokbXVsdGlhbnMgPSBNdWx0aUFuc3dlcigkYSwkaHByaW1lKS0%2Bd2l0aCgKICAgIHNpbmdsZVJlc3VsdCA9PiAwLAogICAgY2hlY2tlciA9PiBzdWIgewogICAgbXkgKCRjb3JyZWN0LCRzdHVkZW50LCRzZWxmKSA9IEBfOwogICAgbXkgKCRzMSwgJHMyKSA9IEB7JHN0dWRlbnR9OwogICAgbXkgKCRjMSwgJGMyKSA9IEB7JGNvcnJlY3R9OwogICAgcmV0dXJuICgxLDEpIGlmICggLTIgPCAkczEgKSBhbmQgKCAkczEgPCA1KSBhbmQKICAgICAgICAgICAgICAgICAgICAoKCRocHJpbWUtPmV2YWwoeD0%2BJHMxKSkgPT0gJHMyKTsKICAgIHJldHVybiAoMSwwKSBpZiAoIC0yIDwgJHMxICkgYW5kICggJHMxIDwgNSkgYW5kCiAgICAgICAgICAgICAgICAgICAgKCgkaHByaW1lLT5ldmFsKHg9PiRzMSkpICE9ICRzMik7CiAgICByZXR1cm4gKDAsMCk7CiAgICB9CiAgICApOwoKJE11bHRpcGxlU2VsZWN0PUxpc3QoIjIsNCIpOwokZXZhbGZvck11bHRpcGxlU2VsZWN0PSRNdWx0aXBsZVNlbGVjdC0%2BY21wKHNob3dMZW5ndGhIaW50cyA9PiAxKTsKCiRkZDE9IFBvcFVwKAogICAgWyI%2FIiwiaW5jcmVhc2luZyIsICJkZWNyZWFzaW5nIiwgIm5laXRoZXIiXSwKICAgICJpbmNyZWFzaW5nIiAjIGNvcnJlY3QgYW5zd2VyCiAgICApOwokZGQyPSBQb3BVcCgKICAgIFsiPyIsImluY3JlYXNpbmciLCAiZGVjcmVhc2luZyIsICJuZWl0aGVyIl0sCiAgICAiZGVjcmVhc2luZyIgIyBjb3JyZWN0IGFuc3dlcgogICAgKTsKJGRkMz0gUG9wVXAoCiAgICBbIj8iLCJpbmNyZWFzaW5nIiwgImRlY3JlYXNpbmciLCAibmVpdGhlciJdLAogICAgImluY3JlYXNpbmciICMgY29ycmVjdCBhbnN3ZXIKICAgICk7CiRkZDQ9IFBvcFVwKAogICAgWyI%2FIiwiaW5jcmVhc2luZyIsICJkZWNyZWFzaW5nIiwgIm5laXRoZXIiXSwKICAgICJkZWNyZWFzaW5nIiAjIGNvcnJlY3QgYW5zd2VyCiAgICApOwoKJGRkNT0gUG9wVXAoCiAgICBbIj8iLCJhIGxvY2FsIG1pbmltdW0iLCAiYSBsb2NhbCBtYXhpbXVtIiwgIm5laXRoZXIiXSwKICAgICJhIGxvY2FsIG1heGltdW0iICMgY29ycmVjdCBhbnN3ZXIKICAgICk7CiRkZDY9IFBvcFVwKAogICAgWyI%2FIiwiYSBsb2NhbCBtaW5pbXVtIiwgImEgbG9jYWwgbWF4aW11bSIsICJuZWl0aGVyIl0sCiAgICAiYSBsb2NhbCBtaW5pbXVtIiAjIGNvcnJlY3QgYW5zd2VyCiAgICApOwokZGQ3PSBQb3BVcCgKICAgIFsiPyIsImEgbG9jYWwgbWluaW11bSIsICJhIGxvY2FsIG1heGltdW0iLCAibmVpdGhlciJdLAogICAgImEgbG9jYWwgbWF4aW11bSIgIyBjb3JyZWN0IGFuc3dlcgogICAgKTsKU2NhZmZvbGQ6OkJlZ2luKCk7U2VjdGlvbjo6QmVnaW4oIiIpOwpCRUdJTl9QR01MCklkZW50aWZ5IHRoZSBsb2NhdGlvbnMgb2YgdGhlIHRocmVlIGNyaXRpY2FsIHBvaW50cy4gU2VwYXJhdGUgeW91ciBhbnN3ZXJzIHVzaW5nIGNvbW1hcy4KCltgeD1gXSBbX117JGV2YWxmb3JhbnMxfXsxMH0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpBREQKCgpFTkRfUEdNTF9TT0xVVElPTgpTZWN0aW9uOjpFbmQoKTtTZWN0aW9uOjpCZWdpbigiIik7CkJFR0lOX1BHTUwKUGljayBhIHZhbHVlIG9mIFtgeGBdIGJldHdlZW4gW2AtMmBdIGFuZCBbYDVcdGV4dHssfWBdIGFuZCBjYWxsIHRoaXMgdmFsdWUgW2BhXHRleHR7Ln1gXSAgRXZhbHVhdGUgW2BoJyh4KWBdIGF0IFtgeCA9IGFcdGV4dHsufWBdCgoqIFtgYSA9IGBdICBbX117JG11bHRpYW5zfXsxMH0KKiBbYGgnKGEpID0gYF0gIFtfXXskbXVsdGlhbnN9ezEwfQoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpBREQKCgpFTkRfUEdNTF9TT0xVVElPTgpTZWN0aW9uOjpFbmQoKTtTZWN0aW9uOjpCZWdpbigiIik7CkJFR0lOX1BHTUwKV2hpY2ggb2YgdGhlIGZvbGxvd2luZyBjb25jbHVzaW9ucyBjYW4gYmUgbWFkZSBiYXNlZCBvbiB0aGUgaW5mb3JtYXRpb24geW91IG9idGFpbmVkIGluIHRoZSBwcmV2aW91cyBxdWVzdGlvbj8gIFNlbGVjdCBhbGwgdGhhdCBhcHBseS4KCjEuICBUaGUgZnVuY3Rpb24gW2BoYF0gaXMgaW5jcmVhc2luZyBuZWFyIFtgeCA9IGFcdGV4dHsufWBdCjEuICBUaGUgZnVuY3Rpb24gW2BoYF0gaXMgZGVjcmVhc2luZyBuZWFyIFtgeCA9IGFcdGV4dHsufWBdCjEuICBUaGUgZnVuY3Rpb24gW2BoYF0gaXMgaW5jcmVhc2luZyBvbiB0aGUgaW50ZXJ2YWwgW2AoLTIsIDUpXHRleHR7Ln1gXQoxLiAgVGhlIGZ1bmN0aW9uIFtgaGBdIGlzIGRlY3JlYXNpbmcgb24gdGhlIGludGVydmFsIFtgKC0yLCA1KVx0ZXh0ey59YF0KMS4gIFRoZSBmdW5jdGlvbiBbYGhgXSBpcyBpbmNyZWFzaW5nIG92ZXIgaXRzIGVudGlyZSBkb21haW4uCjEuICBUaGUgZnVuY3Rpb24gW2BoYF0gaXMgZGVjcmVhc2luZyBvdmVyIGl0cyBlbnRpcmUgZG9tYWluLiAgIAoKCklucHV0IHRoZSBudW1iZXJzIG9mIGFsbCBjb3JyZWN0IGFuc3dlcnM6IFtfXXskZXZhbGZvck11bHRpcGxlU2VsZWN0fXsxNX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpBREQ%2FCgoKRU5EX1BHTUxfU09MVVRJT04KU2VjdGlvbjo6RW5kKCk7U2VjdGlvbjo6QmVnaW4oIiIpOwpCRUdJTl9QR01MClRoZSB0aHJlZSBjcml0aWNhbCBwb2ludHMgb2YgW2BmYF0gZGl2aWRlIHRoZSBbYHhgXS1heGlzIGludG8gZm91ciBpbnRlcnZhbHMuICBEZXRlcm1pbmUgdGhlc2UgaW50ZXJ2YWxzLCBpbiBvcmRlciBmcm9tIGxlZnQgdG8gcmlnaHQsIGFuZCBzdGF0ZSB3aGV0aGVyIFtgZmBdIGlzIGluY3JlYXNpbmcgb3IgZGVjcmVhc2luZyBvbiBlYWNoIG9mIHRoZW0uCiogT24gdGhlIGludGVydmFsIFtgKC1caW5mdHksIC0xKVx0ZXh0eyx9YF0gW2BmYF0gaXMgW19deyRkZDF9ezV9IC4KKiBPbiB0aGUgaW50ZXJ2YWwgW2AoLTIsIDUpXHRleHR7LH1gXSBbYGZgXSBpcyBbX117JGRkMn17NX0gLgoqIE9uIHRoZSBpbnRlcnZhbCBbYCg1LCAxMSlcdGV4dHssfWBdIFtgZmBdIGlzIFtfXXskZGQzfXs1fSAuCiogT24gdGhlIGludGVydmFsIFtgKDExLCBcaW5mdHkpXHRleHR7LH1gXSBbYGZgXSBpcyBbX117JGRkNH17NX0gLiAgIAoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpBREQKCgpFTkRfUEdNTF9TT0xVVElPTgpTZWN0aW9uOjpFbmQoKTtTZWN0aW9uOjpCZWdpbigiIik7CkJFR0lOX1BHTUwKRm9yIGVhY2ggY3JpdGljYWwgcG9pbnQgb2YgW2BoXHRleHR7LH1gXSBzdGF0ZSB3aGV0aGVyIGl0IGlzIGEgbG9jYWwgbWF4aW11bSwgbG9jYWwgbWluaW11bSwgb3IgbmVpdGhlci4KCiogVGhlIGNyaXRpY2FsIHBvaW50IGF0IFtgeCA9IC0yYF0gaXMgW19deyRkZDV9ezV9LgoqIFRoZSBjcml0aWNhbCBwb2ludCBhdCBbYHggPSA1YF0gaXMgW19deyRkZDZ9ezV9LgoqIFRoZSBjcml0aWNhbCBwb2ludCBhdCBbYHggPSAxMWBdIGlzIFtfXXskZGQ3fXs1fS4gICAKCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KTG9va2luZyBhdCB0aGUgZ3JhcGgsIHdlIHNlZToKKiBvbiBbYCgtXGluZnR5LCAtMSlcdGV4dHssfWBdIFtgZmBdIGlzIGluY3JlYXNpbmcuCiogb24gW2AoLTEsIDEpXHRleHR7LH1gXSBbYGZgXSBpcyBkZWNyZWFzaW5nLgoqIG9uIFtgKDEsIDMpXHRleHR7LH1gXSBbYGZgXSBpcyBkZWNyZWFzaW5nLgoqIG9uIFtgKDMsIFxpbmZ0eSlcdGV4dHssfWBdIFtgZmBdIGlzIGluY3JlYXNpbmcuICAgCgoKCkVORF9QR01MX1NPTFVUSU9OClNlY3Rpb246OkVuZCgpO1NjYWZmb2xkOjpFbmQoKTsKRU5ERE9DVU1FTlQoKTs%3D" base64="1" uri="1"></iframe><script>iFrameResize({log:true,inPageLinks:true,resizeFrom:'child',checkOrigin:["https://webwork.math.arizona.edu"]})</script></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
