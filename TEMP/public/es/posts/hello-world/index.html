@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tikz 3D - La Twisted Cubic &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="/posts/hello-world/">English</a>
+    
+      <a href="/es/posts/hello-world/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       El blog en español 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/es">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Tikz 3D - La Twisted Cubic</h1>
+  <time datetime=2021-12-06T22:28:53-0500 class="post-date">6 de diciembre de 2021</time>
+  
+    
+      <h4>(<a href="/posts/hello-world/">English: Tikz 3D - Twisted Cubic</a>)</h4>
+    
+  
+  <!-- raw HTML omitted -->
+<p>Hay una sección en Twisted Cubics y decidí hacer un diagrama de Tikz .</p>
+<p>Un par de horas después terminé con en siguiente coódigo del cual estoy muy orgulloso.
+Me he convertido en todo un fan de Tikz.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=0pt, tikz]</span>{standalone}
+<span style="color:#66d9ef">\usepackage</span>{pgfplots}
+<span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
+<span style="color:#66d9ef">\usetikzlibrary</span>{calc}
+
+<span style="color:#66d9ef">\begin</span>{document}
+
+<span style="color:#66d9ef">\begin</span>{tikzpicture}
+<span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ scale=0.8
+, view={235}{15} <span style="color:#75715e">% {rotation angle}{elevation angle}
+</span><span style="color:#75715e"></span>, xlabel=<span style="color:#e6db74">$</span>x<span style="color:#e6db74">$</span>
+, ylabel=<span style="color:#e6db74">$</span>y<span style="color:#e6db74">$</span>
+, zlabel=<span style="color:#e6db74">$</span>z<span style="color:#e6db74">$</span>
+, zmin=-8
+, zmax=8
+]
+
+<span style="color:#75715e">% Parabola and cubic shadow curves
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=40
+, samples y=0
+, thick 
+, cyan 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{t^2},{-8});
+
+<span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=40
+, samples y=0
+, thick
+, red 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{-1},{t^3});
+
+<span style="color:#75715e">%  Lines
+</span><span style="color:#75715e">%  (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them. See also pgfplotsinvokeforeach._
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">\draw</span> [cyan] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) --  ({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, -8)
+};
+
+<span style="color:#66d9ef">\draw</span> [red] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) -- ({<span style="color:#66d9ef">\a</span>}, -1, {(<span style="color:#66d9ef">\a</span>)^3})
+};
+
+<span style="color:#75715e">% Twisted cubic
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=51
+, samples y=0
+, thick
+, black 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{t^2},{t^3});
+
+<span style="color:#66d9ef">\end</span>{axis}
+<span style="color:#66d9ef">\end</span>{tikzpicture}
+<span style="color:#66d9ef">\end</span>{document}
+</code></pre></div><p>El código genera el siguiente diagrama de la cúbica.
+$$
+x\to(t,t^2,t^3)
+$$</p>
+<p><img src="/fig-twistedCubic2.png" alt="Twisted Cubic"></p>
+<p>Acá sigue el texto.</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

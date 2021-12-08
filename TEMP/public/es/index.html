@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Enrique Acosta Jaramillo</title>
+  <meta name="description" content="El blog en español" />
+
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="css/poole.css">
+  <link type="text/css" rel="stylesheet" href="css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="/es/index.xml" rel="alternate" type="application/rss+xml" title="Enrique Acosta Jaramillo" />
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="/">English</a>
+    
+      <a href="/es/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       El blog en español 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/es">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="posts">
+<article class="post">
+  <h1 class="post-title">
+    <a href="/es/posts/where-i-learned/">Where I Learned</a>
+  </h1>
+  <time datetime="2021-12-06T22:49:34-0500" class="post-date">Mon, Dec 6, 2021</time>
+  https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="/es/posts/hello-world/">Tikz 3D - La Twisted Cubic</a>
+  </h1>
+  <time datetime="2021-12-06T22:28:53-0500" class="post-date">Mon, Dec 6, 2021</time>
+  Hay una sección en Twisted Cubics y decidí hacer un diagrama de Tikz .
+Un par de horas después terminé con en siguiente coódigo del cual estoy muy orgulloso. Me he convertido en todo un fan de Tikz.
+\documentclass[border=0pt, tikz]{standalone} \usepackage{pgfplots} \pgfplotsset{compat=1.17} \usetikzlibrary{calc} \begin{document} \begin{tikzpicture} \begin{axis}% [ scale=0.8 , view={235}{15} % {rotation angle}{elevation angle} , xlabel=$x$ , ylabel=$y$ , zlabel=$z$ , zmin=-8 , zmax=8 ] % Parabola and cubic shadow curves \addplot3% [ samples=40 , samples y=0 , thick , cyan , domain=-2:2 , variable=\t ] ({t},{t^2},{-8}); \addplot3% [ samples=40 , samples y=0 , thick , red , domain=-2:2 , variable=\t ] ({t},{-1},{t^3}); % Lines % (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them.
+  
+  <div class="read-more-link">
+    <a href="/es/posts/hello-world/">Read More…</a>
+  </div>
+  
+</article>
+</div>
+    </main>
+
+    
+      
+    
+  </body>
+</html>
