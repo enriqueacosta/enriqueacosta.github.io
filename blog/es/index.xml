@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Enrique Acosta Jaramillo</title>
-    <link>/es/</link>
+    <link>https://enriqueacosta.github.io/blog/es/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>De dónde aprendí</title>
-      <link>/es/posts/where-i-learned/</link>
+      <link>https://enriqueacosta.github.io/blog/es/posts/where-i-learned/</link>
       <pubDate>Mon, 06 Dec 2021 22:49:34 -0500</pubDate>
       
-      <guid>/es/posts/where-i-learned/</guid>
+      <guid>https://enriqueacosta.github.io/blog/es/posts/where-i-learned/</guid>
       <description>https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</description>
     </item>
     
     <item>
       <title>Tikz 3D - La Twisted Cubic</title>
-      <link>/es/posts/hello-world/</link>
+      <link>https://enriqueacosta.github.io/blog/es/posts/hello-world/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
-      <guid>/es/posts/hello-world/</guid>
+      <guid>https://enriqueacosta.github.io/blog/es/posts/hello-world/</guid>
       <description>Hay una sección en Twisted Cubics y decidí hacer un diagrama de Tikz .
 Un par de horas después terminé con en siguiente coódigo del cual estoy muy orgulloso. Me he convertido en todo un fan de Tikz.
 El código genera el siguiente diagrama de la cúbica. $$ x\to(t,t^2,t^3) $$

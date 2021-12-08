@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Enrique Acosta Jaramillo</title>
-    <link>/posts/</link>
+    <link>https://enriqueacosta.github.io/blog/en/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Where I Learned</title>
-      <link>/posts/where-i-learned/</link>
+      <link>https://enriqueacosta.github.io/blog/en/posts/where-i-learned/</link>
       <pubDate>Mon, 06 Dec 2021 22:49:34 -0500</pubDate>
       
-      <guid>/posts/where-i-learned/</guid>
+      <guid>https://enriqueacosta.github.io/blog/en/posts/where-i-learned/</guid>
       <description>https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</description>
     </item>
     
     <item>
       <title>Tikz 3D - Twisted Cubic</title>
-      <link>/posts/hello-world/</link>
+      <link>https://enriqueacosta.github.io/blog/en/posts/hello-world/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
-      <guid>/posts/hello-world/</guid>
+      <guid>https://enriqueacosta.github.io/blog/en/posts/hello-world/</guid>
       <description>There was this section on Twisted Cubics and so I decided I wanted to make a Tikz picture for it.
 Hours later I ended up with the code and figure which I attached, which I am really proud of! I am becoming a huge Tikz fan.
 This generates the picture of the twisted cubic $$ x\to(t,t^2,t^3) $$
