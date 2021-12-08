@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Enrique Acosta Jaramillo</title>
-    <link>https://enriqueacosta.github.io/blog/posts/</link>
+    <link>https://enriqueacosta.github.io/blog/en/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Where I Learned</title>
-      <link>https://enriqueacosta.github.io/blog/posts/where-i-learned/</link>
+      <link>https://enriqueacosta.github.io/blog/en/posts/where-i-learned/</link>
       <pubDate>Mon, 06 Dec 2021 22:49:34 -0500</pubDate>
       
-      <guid>https://enriqueacosta.github.io/blog/posts/where-i-learned/</guid>
+      <guid>https://enriqueacosta.github.io/blog/en/posts/where-i-learned/</guid>
       <description>https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</description>
     </item>
     
     <item>
       <title>Tikz 3D - Twisted Cubic</title>
-      <link>https://enriqueacosta.github.io/blog/posts/hello-world/</link>
+      <link>https://enriqueacosta.github.io/blog/en/posts/hello-world/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
-      <guid>https://enriqueacosta.github.io/blog/posts/hello-world/</guid>
+      <guid>https://enriqueacosta.github.io/blog/en/posts/hello-world/</guid>
       <description>There was this section on Twisted Cubics and so I decided I wanted to make a Tikz picture for it.
 Hours later I ended up with the code and figure which I attached, which I am really proud of! I am becoming a huge Tikz fan.
 \documentclass[border=0pt, tikz]{standalone} \usepackage{pgfplots} \pgfplotsset{compat=1.17} \usetikzlibrary{calc} \begin{document} \begin{tikzpicture} \begin{axis}% [ scale=0.8 , view={235}{15} % {rotation angle}{elevation angle} , xlabel=$x$ , ylabel=$y$ , zlabel=$z$ , zmin=-8 , zmax=8 ] % Parabola and cubic shadow curves \addplot3% [ samples=40 , samples y=0 , thick , cyan , domain=-2:2 , variable=\t ] ({t},{t^2},{-8}); \addplot3% [ samples=40 , samples y=0 , thick , red , domain=-2:2 , variable=\t ] ({t},{-1},{t^3}); % Lines % (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them.</description>

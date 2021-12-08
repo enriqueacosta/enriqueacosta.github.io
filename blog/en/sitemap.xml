@@ -2,80 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/</loc>
     <lastmod>2021-12-06T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/"
+                href="https://enriqueacosta.github.io/blog/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
     <lastmod>2021-12-06T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/posts/"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/posts/"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
                 />
   </url><url>
-    <loc>/posts/where-i-learned/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/where-i-learned/</loc>
     <lastmod>2021-12-06T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/posts/where-i-learned/"
+                href="https://enriqueacosta.github.io/blog/es/posts/where-i-learned/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/posts/where-i-learned/"
+                href="https://enriqueacosta.github.io/blog/en/posts/where-i-learned/"
                 />
   </url><url>
-    <loc>/posts/hello-world/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/hello-world/</loc>
     <lastmod>2021-12-06T22:28:53-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/posts/hello-world/"
+                href="https://enriqueacosta.github.io/blog/es/posts/hello-world/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/posts/hello-world/"
+                href="https://enriqueacosta.github.io/blog/en/posts/hello-world/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/categories/"
+                href="https://enriqueacosta.github.io/blog/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/tags/"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
   </url>
 </urlset>
