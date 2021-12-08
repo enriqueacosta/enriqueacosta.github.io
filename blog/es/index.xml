@@ -23,7 +23,6 @@
       <guid>https://enriqueacosta.github.io/blog/es/posts/hello-world/</guid>
       <description>Hay una sección en Twisted Cubics y decidí hacer un diagrama de Tikz .
 Un par de horas después terminé con en siguiente coódigo del cual estoy muy orgulloso. Me he convertido en todo un fan de Tikz.
-El código genera el siguiente diagrama de la cúbica. $$ x\to(t,t^2,t^3) $$
 \documentclass[border=0pt, tikz]{standalone} \usepackage{pgfplots} \pgfplotsset{compat=1.17} \usetikzlibrary{calc} \begin{document} \begin{tikzpicture} \begin{axis}% [ scale=0.8 , view={235}{15} % {rotation angle}{elevation angle} , xlabel=$x$ , ylabel=$y$ , zlabel=$z$ , zmin=-8 , zmax=8 ] % Parabola and cubic shadow curves \addplot3% [ samples=40 , samples y=0 , thick , cyan , domain=-2:2 , variable=\t ] ({t},{t^2},{-8}); \addplot3% [ samples=40 , samples y=0 , thick , red , domain=-2:2 , variable=\t ] ({t},{-1},{t^3}); % Lines % (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them.</description>
     </item>
     
