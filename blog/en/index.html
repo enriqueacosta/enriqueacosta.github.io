@@ -27,8 +27,39 @@
   <link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="alternate" type="application/rss+xml" title="Enrique Acosta Jaramillo" />
   
 
-  
-  <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
 </head>
 
   <body class="theme-base-08 ">
@@ -72,15 +103,15 @@
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://enriqueacosta.github.io/blog/en/posts/hello-world/">Tikz 3D - Twisted Cubic</a>
+    <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">Tikz 3D - Twisted Cubic</a>
   </h1>
   <time datetime="2021-12-06T22:28:53-0500" class="post-date">Mon, Dec 6, 2021</time>
-  There was this section on Twisted Cubics and so I decided I wanted to make a Tikz picture for it.
-Hours later I ended up with the code and figure which I attached, which I am really proud of! I am becoming a huge Tikz fan.
-\documentclass[border=0pt, tikz]{standalone} \usepackage{pgfplots} \pgfplotsset{compat=1.17} \usetikzlibrary{calc} \begin{document} \begin{tikzpicture} \begin{axis}% [ scale=0.8 , view={235}{15} % {rotation angle}{elevation angle} , xlabel=$x$ , ylabel=$y$ , zlabel=$z$ , zmin=-8 , zmax=8 ] % Parabola and cubic shadow curves \addplot3% [ samples=40 , samples y=0 , thick , cyan , domain=-2:2 , variable=\t ] ({t},{t^2},{-8}); \addplot3% [ samples=40 , samples y=0 , thick , red , domain=-2:2 , variable=\t ] ({t},{-1},{t^3}); % Lines % (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them.
+  As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the Twisted Cubic is &ldquo;everybody&rsquo;s first example or a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;
+In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
+As I was working through all the exercises in the book (I still am!) I decided I wanted to make a Tikz picture for it to learn to do 3D figures in Tikz.
   
   <div class="read-more-link">
-    <a href="/blog/en/posts/hello-world/">Read More…</a>
+    <a href="/blog/en/posts/tikz-twisted-cubic/">Read More…</a>
   </div>
   
 </article>

@@ -17,13 +17,13 @@
     
     <item>
       <title>Tikz 3D - La Twisted Cubic</title>
-      <link>https://enriqueacosta.github.io/blog/es/posts/hello-world/</link>
+      <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
-      <guid>https://enriqueacosta.github.io/blog/es/posts/hello-world/</guid>
-      <description>Hay una sección en Twisted Cubics y decidí hacer un diagrama de Tikz .
-Un par de horas después terminé con en siguiente coódigo del cual estoy muy orgulloso. Me he convertido en todo un fan de Tikz.
-\documentclass[border=0pt, tikz]{standalone} \usepackage{pgfplots} \pgfplotsset{compat=1.17} \usetikzlibrary{calc} \begin{document} \begin{tikzpicture} \begin{axis}% [ scale=0.8 , view={235}{15} % {rotation angle}{elevation angle} , xlabel=$x$ , ylabel=$y$ , zlabel=$z$ , zmin=-8 , zmax=8 ] % Parabola and cubic shadow curves \addplot3% [ samples=40 , samples y=0 , thick , cyan , domain=-2:2 , variable=\t ] ({t},{t^2},{-8}); \addplot3% [ samples=40 , samples y=0 , thick , red , domain=-2:2 , variable=\t ] ({t},{-1},{t^3}); % Lines % (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them.</description>
+      <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
+      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos o una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
+En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
+Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
     </item>
     
   </channel>
