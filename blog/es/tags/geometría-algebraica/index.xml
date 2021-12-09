@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geometría Algebraica on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/tags/geometr%C3%ADa-algebraica/</link>
+    <description>Recent content in Geometría Algebraica on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/geometr%C3%ADa-algebraica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz 3D - La Twisted Cubic</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
+      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos o una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
+En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
+Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
+    </item>
+    
+  </channel>
+</rss>

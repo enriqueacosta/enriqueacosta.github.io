@@ -4,6 +4,43 @@
     <title>Tags on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algebraic Geometry</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Curves</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/curves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
