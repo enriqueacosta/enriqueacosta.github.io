@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: "Garamond", serif;   /* EAJ - Font change from the original Hyde theme */
   font-size: 3.25rem;
 }
 
@@ -247,4 +247,15 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+
+/* EAJ - additions to the Hyde theme */
+
+.hugo-ref {
+  font-size: 16px;
+}
+
+.license {
+  font-size: 18px;
 }
