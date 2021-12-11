@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/categories/hugo/</link>
+    <description>Recent content in Hugo on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La creación de este blog</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
+      <pubDate>Mon, 06 Dec 2021 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</guid>
+      <description>https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</description>
+    </item>
+    
+  </channel>
+</rss>
