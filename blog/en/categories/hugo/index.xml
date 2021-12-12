@@ -12,8 +12,8 @@
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</guid>
-      <description>What got me started was Hui Gong&amp;rsquo;s excellent blog entry on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,but not about Hugo. Following the steps in the blog entry had me in no time running Hugo and my own skeleton version of this blog using the very nice and minimal Hyde theme.
-I wanted three important things for my blog that the Hyde theme did not have:</description>
+      <description>What got me started was Hui Gong&amp;rsquo;s excellent blog entry on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,but not about Hugo. I had Hugo running and my own skeleton version of this blog using the very nice and minimal Hyde theme by following the blog.
+The Hyde theme is extremely minimal (nice), but I wanted three important things for my blog that the Hyde theme did not have:</description>
     </item>
     
   </channel>

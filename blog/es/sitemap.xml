@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enriqueacosta.github.io/blog/es/tags/blog-setup/</loc>
-    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/blog-setup/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/categories/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
@@ -28,18 +15,8 @@
                 href="https://enriqueacosta.github.io/blog/es/categories/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/categories/coding/</loc>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/configuraci%C3%B3n-del-blog/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/categories/coding/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/categories/coding/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
@@ -93,6 +70,9 @@
                 href="https://enriqueacosta.github.io/blog/es/posts/"
                 />
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/</loc>
+    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/tags/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
@@ -139,9 +119,6 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</loc>
-    <lastmod>2021-12-06T22:28:53-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/</loc>
     <lastmod>2021-12-06T22:28:53-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/tags/tikz/</loc>

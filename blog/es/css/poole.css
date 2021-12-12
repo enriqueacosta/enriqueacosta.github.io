@@ -151,7 +151,7 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 code {
-  padding: .25em .5em;
+  padding: .25em .15em;  /*EAJ - changed from default .25em .5em (the 0.5 was the side padding, which seemed too big. */
   font-size: 85%;
   color: #b3555e;
   background-color: #f9f9f9;

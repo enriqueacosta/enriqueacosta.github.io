@@ -7,12 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>La creación de este blog: Hugo, agregar a tema Hyde soporte para varios lenguajes y soporte de Latex.</title>
+      <title>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex.</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</guid>
-      <description>https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</description>
+      <description>Lo que me hizo empezar fue la excelente entrada del blog de Hui Gong sobre como crear un blog personal usando GitHub Pages y Hugo. Sabía sobre las páginas de GitHub, pero no sobre Hugo. Siguiendo los pasos en la entrada del blog, tuve una versión esqueleto del blog con el tema minimal Hyde.
+El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tres cosas importantes para mi blog que el tema Hyde no tenía:</description>
     </item>
     
     <item>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>La creación de este blog: Hugo, agregar a tema Hyde soporte para varios lenguajes y soporte de Latex. &middot; Enrique Acosta Jaramillo</title>
+  <title>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex. &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
@@ -100,14 +100,74 @@
 
     <main class="content container">
     <div class="post">
-  <h1>La creación de este blog: Hugo, agregar a tema Hyde soporte para varios lenguajes y soporte de Latex.</h1>
+  <h1>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex.</h1>
   <time datetime=2021-12-10T22:49:34-0500 class="post-date">10 de diciembre de 2021</time>
   
     
       <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">English: Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support.</a>)</h4>
     
   
-  <p><a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/">https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/</a></p>
+  <p>Lo que me hizo empezar fue la excelente <a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/">entrada del blog</a> de Hui Gong sobre como crear un blog personal usando GitHub Pages y Hugo. Sabía sobre las páginas de GitHub, pero no sobre <a href="https://gohugo.io">Hugo</a>. Siguiendo los pasos en la entrada del blog, tuve una versión esqueleto del blog con el tema minimal <a href="https://github.com/spf13/hyde">Hyde</a>.</p>
+<p>El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tres cosas importantes para mi blog que el tema Hyde no tenía:</p>
+<ul>
+<li><strong>Navegación por etiquetas:</strong> Permitir que los lectores encuentren otras entradas del blog  sobre temas relacionados en lugar de ver solo una lista de entradas organizada por fecha.</li>
+<li><strong>Multilingüe:</strong> Publicaciones y navegación en inglés y español.</li>
+<li><strong>Soporte de $\LaTeX$:</strong> Quería poder escribir entradas con símbolos matemáticos, y para mí $\LaTeX$ sigue siendo la única manera sensata de escribir matemáticas.</li>
+</ul>
+<p>Lograr agregar esta funcionalidad al tema Hyde me permitió entender cómo funciona Hugo. ¡Debo decir que me ha gustado mucho es sistema! Hugo ahora se encarga todo aparte del contenido, y eso me parece genial.</p>
+<h2 id="navegación-por-etiquetas-o-categorías">Navegación por etiquetas o categorías</h2>
+<p>¡Esto no puede haber sido más sencillo! Hugo tiene dos formas predeterminadas de categorizar el contenido: <code>Etiquetas</code> (<code>tags</code>) y <code>Categorías</code> (<code>categories</code>). El tema HYDE viene configurado para mostrarlos en el menú lateral. Uno solo necesita definir las entradas del menú en el archivo <code>config.toml</code> que controla la configuración global del sitio y los temas.</p>
+<p>¡Solo tuve que agregar las siguientes líneas a ese archivo, y estaba todo listo!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+</code></pre></div><p>Ahora solo me tengo que asegurar que el encabezado de cada entrada de blog incluya la lista de etiquetas y categorías, como el siguiente ejemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating this Blog&#34;</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-12-06T22:49:34</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
+<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>]
+<span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
+---
+</code></pre></div><p>Las páginas &lsquo;Categorías&rsquo; y &lsquo;Etiquetas&rsquo; vinculadas desde el menú se construyen automáticamente a partir de los archivos de las entradas de blog mismas. ¡Genial!</p>
+<h2 id="configurar-soporte-multilingüe">Configurar soporte multilingüe</h2>
+<p>Esto requerió mucha prueba y error, pero finalmente lo logré hacer funcionar.</p>
+<h3 id="configuración-inicial">Configuración inicial</h3>
+<p>El archivo &lsquo;config.toml&rsquo;, que controla la configuración global del sitio y los temas, tiene el código para  permitir cambiar entre inglés y español:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#39;en&#39;</span>
+
+[<span style="color:#a6e22e">languages</span>]
+  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+    <span style="color:#a6e22e">baseURL</span>= <span style="color:#e6db74">&#39;https://enriqueacosta.github.io/blog/en/&#39;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Enrique Acosta Jaramillo&#39;</span>
+    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#39;English&#39;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+    <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#39;Personal Blog&#39;</span>
+
+  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>]
+    <span style="color:#a6e22e">baseURL</span>= <span style="color:#e6db74">&#39;https://enriqueacosta.github.io/blog/es/&#39;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Enrique Acosta Jaramillo&#39;</span>
+    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#39;Español&#39;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+    <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#39;Blog personal&#39;</span>
+</code></pre></div><p>El código se asegura de que Hugo exporte el sitio HTML estático de una manera muy simétrica: si hay una entrada de blog (por ejemplo esta, <code>posts/creating-this-blog.md</code>) con su versión en español correspondiente (<code>posts/creating-this-blog.es.md</code>), entonces las entradas tendrán URL paralelos:</p>
+<ul>
+<li>ht<!-- raw HTML omitted -->tps:<!-- raw HTML omitted -->//enriqueacosta.github.io/blog<code>/en/</code>creating-this-blog/</li>
+<li>ht<!-- raw HTML omitted -->tps:<!-- raw HTML omitted -->//enriqueacosta.github.io/blog<code>/es/</code>creating-this-blog/</li>
+</ul>
+<p>(La asimetría de los nombres de archivo con el inglés que no necesita el <code>.en.</code> viene de usar el comando <code>defaultContentlanguage = 'en'</code> en el código anterior).</p>
+<p>Esta configuración me parece excelente, ¡pero por desgracia daña la forma en que Hugo procesa las imágenes! Solucionar ese problema requirió algunos ajustes adicionales que describo [más abajo] (https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/#fixing-image-support-with-the-above-multilingual-setup).</p>
+<h3 id="agregar-un-enlace-al-otro-idioma-a-cada-entrada-de-blog">Agregar un enlace al otro idioma a cada entrada de blog</h3>
+<p>Quería que cada entrada de blog tuviera un enlace a su versión correspondiente en el otro idioma. ¡Esto resultó ser mucho más simple de lo que imaginaba!</p>
+<p>El archivo <code>themes/hyde/layouts/_default/single.html</code> es la plantilla de la página de una entrada de blog. Lo copié a <code>layouts/_default/single.html</code>, que me da una versión que puedo editar y que por su ubicación toma precedencia sobre el otro archivo.</p>
 
 </div>
 

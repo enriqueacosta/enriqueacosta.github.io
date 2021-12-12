@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Enrique Acosta Jaramillo</title>
-    <link>https://enriqueacosta.github.io/blog/es/categories/hugo/</link>
-    <description>Recent content in Hugo on Enrique Acosta Jaramillo</description>
+    <title>Configuración del blog on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/tags/configuraci%C3%B3n-del-blog/</link>
+    <description>Recent content in Configuración del blog on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/configuraci%C3%B3n-del-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex.</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
