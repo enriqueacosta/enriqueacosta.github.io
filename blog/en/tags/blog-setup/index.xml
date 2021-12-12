@@ -5,11 +5,11 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
     <description>Recent content in Blog setup on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating this Blog</title>
+      <title>Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support.</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</link>
-      <pubDate>Mon, 06 Dec 2021 22:49:34 -0500</pubDate>
+      <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</guid>
       <description>What got me started was Hui Gong&amp;rsquo;s excellent blog entry on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,but not about Hugo. Following the steps in the blog entry had me in no time running Hugo and my own skeleton version of this blog using the very nice and minimal Hyde theme.
