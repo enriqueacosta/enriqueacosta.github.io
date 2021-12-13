@@ -31,6 +31,19 @@
                 href="https://enriqueacosta.github.io/blog/es/"
                 />
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/hugo/</loc>
+    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/hugo/"
+                />
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/categories/hugo/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
@@ -42,6 +55,19 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://enriqueacosta.github.io/blog/es/categories/hugo/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/katex/</loc>
+    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/katex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/katex/"
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</loc>
