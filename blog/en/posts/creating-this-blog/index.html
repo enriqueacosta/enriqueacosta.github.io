@@ -144,7 +144,7 @@
 <h2 id="setting-up-multilingual-support">Setting up Multilingual Support</h2>
 <p>This required lots of trial and error, but I finally got it to run.</p>
 <h3 id="initial-setup">Initial setup</h3>
-<p>The <code>config.toml</code> file, which controls global settings of the site and themes, has the following content to allow switching between English and Spanish:</p>
+<p>I added the following code to the <code>config.toml</code> file, which controls global settings of the site and themes, to allow switching between English and Spanish:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#39;en&#39;</span>
 
 [<span style="color:#a6e22e">languages</span>]
@@ -178,11 +178,11 @@
    {{ <span style="color:#a6e22e">end</span> }}
 {{ <span style="color:#a6e22e">end</span> }}
 {{ .<span style="color:#a6e22e">Content</span> }}
-</code></pre></div><p>What is does is pretty cool! The <code>if</code> statement checks to see if there is another post with a <code>.es.</code> (or without if has the <code>.es.</code> already). If so, it sets up a loop (this is the <code>range</code>) over the available translations and for each one it adds the following link inside the h4 heading <code>&lt;h4&gt;(....)&lt;/h4&gt;</code> :</p>
+</code></pre></div><p>What is does is pretty cool! The <code>if</code> statement checks to see if there is a translation (it knows this just from checking if there are other files with the same filename with or without an <code>.es.</code>). If so, it sets up a loop (this is the <code>range</code>) over the available translations and for each one it adds the following link inside the h4 heading <code>&lt;h4&gt;(....)&lt;/h4&gt;</code> :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Language.LanguageName }}: {{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>Here:</p>
 <ul>
-<li><code>href=&quot;{{ .Permalink }}&quot;</code> is the path of the post in the other language.</li>
+<li><code>{{ .Permalink }}</code> is the path of the post in the other language.</li>
 <li><code>{{ .Language.LanguageName }}</code> will get replaced by the language of the translation (note the <code>config.toml</code> lines above have a <code>languageName = </code> property &mdash; this is the name that gets used).</li>
 <li><code>{{ .Title }}</code> is the title of the post of the translation it is linking to.</li>
 </ul>
@@ -266,8 +266,8 @@
     <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
 </code></pre></div><p>Note the <code>url</code> entry in English and Spanish is the same. This is the very important because it has Hugo stops Hugo from showing Spanish tags in the list of tags when Site is in English, and vice versa.</p>
 <h2 id="adding-latex-support">Adding $\LaTeX$ support</h2>
-<p>Adding $\LaTeX$ support ended up being also way simpler than I expected. I discovered there were some annoyances using <a href="https://www.mathjax.org">Mathjax</a> and Hugo, like having to escape <code>_</code> characters, which are used very often in Latex, by writting <code>\_</code>. Apparently in some setups it also involved using <code>\\</code> instead of <code>\</code> all over the place (even worse since all Latex commands start with <code>\</code>). I discovered that <a href="https://katex.org">KaTeX</a> integration had less of these pitfalls, so even though MathJax is more widely used than Katex, I decided to go with KaTeX integration.</p>
-<p>Following this <a href="https://kevcaz.github.io/notes/hugo/katex_and_goldmark/">blog post</a>, to have Katex support I only needed the following code inside the <code>&lt;head&gt;</code> tag in any page I wanted it, so I decided to add it to my <code>hook_head_end.html</code> file. This is the code:</p>
+<p>Adding $\LaTeX$ support also ended up being way simpler than I expected. I discovered there were some annoyances with using <a href="https://www.mathjax.org">Mathjax</a> and Hugo, like having to escape <code>_</code> characters, which are used very often in Latex, by writting <code>\_</code>. Apparently in some setups it also involved using <code>\\</code> instead of <code>\</code> all over the place (even worse since all Latex commands start with <code>\</code>). I discovered that <a href="https://katex.org">KaTeX</a> integration had less of these pitfalls, so even though MathJax is more widely used than Katex, I decided to go with KaTeX integration.</p>
+<p>Following this <a href="https://kevcaz.github.io/notes/hugo/katex_and_goldmark/">blog post</a>, adding Katex support one involved adding the following code inside the <code>&lt;head&gt;</code> tag in any page I wanted it, so I decided to add it to my <code>hook_head_end.html</code> file. This is the code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- Katex Support--&gt;</span>
 <span style="color:#75715e">&lt;!-- For a way to do this that only loads KaTeX if it is &#34;invoked&#34; in a post, see:
 </span><span style="color:#75715e">https://dzhg.dev/posts/2020/08/how-to-add-latex-support-in-hugo/ --&gt;</span>
@@ -293,8 +293,8 @@
         });
     });
 &lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p>With this I can write math in any place using <code>$...$</code>. For example, <code>$\int_a^b f(t)\thinspace dt$</code> renders like this: $\int_a^b f(t)\thinspace dt$.</p>
-<p>I can now also have &ldquo;displayed math&rdquo; (centered in a new line) with the usual $\LaTeX$ delimiters <code>$$...$$</code>. For example, <code>$$\int_a^b f(t)\thinspace dt$$</code> renders like this: $$\int_a^b f(t)\thinspace dt$$</p>
+</code></pre></div><p>With this, I can now write math in any place using <code>$...$</code>. For example, <code>$\int_{a_1}^{b_1} f_1(t)\thinspace dt$</code> renders like this: $\int_{a_1}^{b_1} f_1(t)\thinspace dt$.</p>
+<p>I  also can now have &ldquo;displayed math&rdquo; (centered in a new line) with the usual $\LaTeX$ delimiters <code>$$...$$</code>. For example, <code>$$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</code> renders like this: $$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</p>
 
 </div>
 
@@ -304,6 +304,7 @@
     <p>
       &copy 2021 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
     </p>
   </div>
