@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/en/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 17:19:54 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About this Blog</title>
+      <link>https://enriqueacosta.github.io/blog/en/about/about/</link>
+      <pubDate>Mon, 13 Dec 2021 17:19:54 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/about/about/</guid>
+      <description>I am always learning new things (including how to make my own personal blog site!), and I am trying out writing about these personal excursions. I am guessing I might enjoy it. Making it public in case anyone finds any of it useful/interesting!
+Contact me if you have any questions or comments about what you find.
+You can find more about me in the Grupo LEMA site (in Spanish) or an old personal site (in English) which I no longer update.</description>
+    </item>
+    
     <item>
       <title>Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support.</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</link>

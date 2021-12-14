@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/es/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Dec 2021 17:19:54 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acerca de este blog</title>
+      <link>https://enriqueacosta.github.io/blog/es/about/about/</link>
+      <pubDate>Mon, 13 Dec 2021 17:19:54 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/about/about/</guid>
+      <description>Siempre estoy aprendiendo cosas nuevas (¡incluyendo cómo hacer mi propio sitio de blog personal!), y estoy probando a escribir sobre estas excursiones personales. Creo que puede que lo disfrute. Lo estoy haciendo público en caso de que alguien encuentre algo de eso útil o interesante.
+Contácteme si tiene alguna pregunta o comentario sobre lo que encuentra.
+Puede averiguar más sobre mí en el sitio de Grupo LEMA (en español) o en una página personal antigua (en inglés) que ya no actualizo.</description>
+    </item>
+    
     <item>
       <title>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex.</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
