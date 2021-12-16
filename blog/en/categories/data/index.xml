@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/categories/data/</link>
+    <description>Recent content in Data on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Covid-19 Delta Variant % Share of Cases Grew Logistically</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</guid>
+      <description>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
+The graph below, which started all of this, should come up if one follows this Our World In Data link. (Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
+    </item>
+    
+  </channel>
+</rss>

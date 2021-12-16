@@ -5,9 +5,19 @@
     <link>https://enriqueacosta.github.io/blog/en/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support.</title>
+      <title>Covid-19 Delta Variant % Share of Cases Grew Logistically</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</guid>
+      <description>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
+The graph below, which started all of this, should come up if one follows this Our World In Data link. (Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
+    </item>
+    
+    <item>
+      <title>Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</link>
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       

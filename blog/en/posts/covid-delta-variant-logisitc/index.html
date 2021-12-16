@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Covid-19 Delta Variant % Share of Cases Grew Logistically &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2021
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Covid-19 Delta Variant % Share of Cases Grew Logistically</h1>
+  
+  
+  <time datetime=2021-12-15T18:48:00-0500 class="post-date">December 15, 2021</time>
+  
+  
+  <div>
+    <strong>Tags: </strong>
+      
+      <a href="https://enriqueacosta.github.io/blog/en/tags/covid-19">Covid-19</a> 
+      , 
+      <a href="https://enriqueacosta.github.io/blog/en/tags/data">Data</a> 
+      , 
+      <a href="https://enriqueacosta.github.io/blog/en/tags/logistic">Logistic</a> 
+      , 
+      <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a> 
+    
+  </div>
+  
+  
+  
+  <div>
+  <p>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
+<p>The graph below, which started all of this, should come up if one follows this <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta+variant+%28share%29&amp;Interval=Weekly&amp;Relative+to+Population=true&amp;Align+outbreaks=false&amp;country=IND~USA~BRA~GBR">Our World In Data link</a>. (Image downloaded from Our World in Data, open access under the Creative Commons BY license.)</p>
+<p><img src="DeltaShareLogisitc.png" alt="Our World in Data Plot"></p>
+<p>The curves clearly look &ldquo;logistic-like&rdquo;, meaning sigmoid shaped and symmetric. The general logistic function is of the form
+$$f(t)=\frac{L}{1+e^{-k(t-a)}}$$
+and its graphs look as follows (figures created by me with Tikz, I&rsquo;ll post the code below!)</p>
+<figure><img src="LogisticFunctionParams.png" width="450"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Now, not everything that looks sigmoid shaped will be modeled well by a logistic, and there are clever ways to check this related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">appendix below</a>), but I have lately grown fond of checking if something is logistic by just plotting it and with sliders trying to fit a logistic curve through the data, or making a spreadsheet model in which I can teak the parameters to see the plot fit. So this is what I set out to do, and was completely baffled by what I found!</p>
+<h2 id="logistic-fit-for-uk-delta-variant--share">Logistic fit for UK delta variant % share</h2>
+<p>A really good model for the delta variant share in the UK, where $t=0$ is February 8, 2021 is given by</p>
+<ul>
+<li>$L=1$ (Delta variant reached $100\%$ share in 2021 before Omicron hit).</li>
+<li>$k=0.09$ (related to $9\%$ initial exponential growth rate in the % share).</li>
+<li>$a=139$ (this is just a horizontal shift in the curve and has not mathematically important meaning &ndash; it is just the moment of the year in which the growth rate of the delta share was highest, in $\%$ share per day).</li>
+</ul>
+<figure><img src="UKDeltaVariantLogistic.png" width="350"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<p>Concisely:
+$$
+\begin{array}{c}
+\text{Share of delta variant}\cr
+\text{cases in the UK} \cr
+\text{$t$ days after Feb 8, 2021}
+\end{array}  = \frac{1}{1+e^{-0.09(t-139)}}
+$$</p>
+<p>You can play around with the logistic fit yourself if the desmos app loads below. If it does not load, just follow <a href="https://www.desmos.com/calculator/saydhyssyq">this link</a>, or download the data and play for yourself in the <a href="DeltaShareIndiaUKUSBra.xls">spreadsheet I created</a></p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/ht3gvoopty" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h2 id="other-fancier-ways-to-tell-if-something-is-logistic">Other (fancier) ways to tell if something is logistic</h2>
+<p>Of course, just because something looks sigmoid shaped does not mean that a logistic function is a good fit. In fact, logistic growth is governed by the differential equation
+$$
+\frac{dy}{dt}=ky\left(1-\frac{y}{L}\right)
+$$
+which can also be written as:
+$$
+\frac{y'}{y}=k(1-y/L)
+$$
+and this says that the relative growth, $y'/y$, (% change in one unit of time) is decreasing linearly as a function of $y$ from $y'/y=k$ when $y=0$ (growing at the beginning exponentially at continuous rate $k$) to $y'/y=0$ when $y=L$. These two ways to see the differential equation indicate two ways to see if something is growing logistically:</p>
+<h3 id="is-the-plot-of-yy-against-y-a-line">Is the plot of $y'/y$ against $y$ a line?</h3>
+<figure><img src="LogisticRelativeAgainstP.png" width="300"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<h3 id="is-the-plot-of-y-against-y-a-parabola">Is the plot of $y'$ against $y$ a parabola?</h3>
+<figure><img src="LogisticDerivativeAgainstFunction.png" width="350"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2021 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
