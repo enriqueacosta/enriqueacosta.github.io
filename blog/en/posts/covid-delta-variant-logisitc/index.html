@@ -116,7 +116,7 @@
   
   
   <div>
-  <p>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett et.al. Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
+  <p>Today as part of my work <!-- raw HTML omitted --> I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
 <p>The graph below, which started all of this, should come up if one follows this <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta+variant+%28share%29&amp;Interval=Weekly&amp;Relative+to+Population=true&amp;Align+outbreaks=false&amp;country=IND~USA~BRA~GBR">Our World In Data link</a>.</p>
 <figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
             <p>Image downloaded from Our World in Data, open access under the Creative Commons BY license.</p>
@@ -130,7 +130,11 @@ and its graph looks as follows (figure created by me with Tikz, I&rsquo;ll show 
 <figure><img src="LogisticFunctionParams.png" width="450"/>
 </figure>
 
-<p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">discussion below</a>). However, I have lately grown fond of checking if something is logistic by just plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data (or making a spreadsheet model in which I can teak the parameters to see the plot fit).</p>
+<p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">discussion below</a>). However, I have lately grown fond of checking if something is logistic by either just:</p>
+<ul>
+<li>plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data.</li>
+<li>setting up a spreadsheet in which I plot the data together with the values given by a model with special cells that I reference of the parameters. Then I can tweak the parameters and the plot gets updated, and by trial and error I see if there is a good graphical fit.</li>
+</ul>
 <p>This curve-fitting approach is what I set out to do, and I was completely baffled by what I found!</p>
 <h2 id="logistic-fit-for-delta-variant--share-in-the-us">Logistic fit for delta variant % share in the US</h2>
 <p>A really good model for the delta variant share in the US, where $t=0$ is February 8, 2021 is given by</p>
