@@ -103,6 +103,8 @@
       
       <a href="https://enriqueacosta.github.io/blog/en/tags/covid-19">Covid-19</a> 
       , 
+      <a href="https://enriqueacosta.github.io/blog/en/tags/delta-variant">Delta variant</a> 
+      , 
       <a href="https://enriqueacosta.github.io/blog/en/tags/data">Data</a> 
       , 
       <a href="https://enriqueacosta.github.io/blog/en/tags/logistic">Logistic</a> 
@@ -114,28 +116,31 @@
   
   
   <div>
-  <p>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
-<p>The graph below, which started all of this, should come up if one follows this <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta+variant+%28share%29&amp;Interval=Weekly&amp;Relative+to+Population=true&amp;Align+outbreaks=false&amp;country=IND~USA~BRA~GBR">Our World In Data link</a>. (Image downloaded from Our World in Data, open access under the Creative Commons BY license.)</p>
-<p><img src="DeltaShareLogisitc.png" alt="Our World in Data Plot"></p>
-<p>The curves clearly look &ldquo;logistic-like&rdquo;, meaning sigmoid shaped and symmetric. The general logistic function is of the form
+  <p>Today as part of my work with the Mathematics Consortium Working Group (Hughes-Hallett et.al. Calculus textbooks) I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
+<p>The graph below, which started all of this, should come up if one follows this <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta+variant+%28share%29&amp;Interval=Weekly&amp;Relative+to+Population=true&amp;Align+outbreaks=false&amp;country=IND~USA~BRA~GBR">Our World In Data link</a>.</p>
+<figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
+            <p>Image downloaded from Our World in Data, open access under the Creative Commons BY license.</p>
+        </figcaption>
+</figure>
+
+<p>The curves clearly look &ldquo;logistic-like&rdquo;, meaning sigmoid shaped (s-shaped) and symmetric. However, not everything that looks sigmoid shaped will be modeled well by a logistic function.</p>
+<p>The general logistic function is of the form
 $$f(t)=\frac{L}{1+e^{-k(t-a)}}$$
-and its graphs look as follows (figures created by me with Tikz, I&rsquo;ll post the code below!)</p>
+and its graph looks as follows (figure created by me with Tikz, I&rsquo;ll show the code in another post!)</p>
 <figure><img src="LogisticFunctionParams.png" width="450"/>
 </figure>
 
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Now, not everything that looks sigmoid shaped will be modeled well by a logistic, and there are clever ways to check this related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">appendix below</a>), but I have lately grown fond of checking if something is logistic by just plotting it and with sliders trying to fit a logistic curve through the data, or making a spreadsheet model in which I can teak the parameters to see the plot fit. So this is what I set out to do, and was completely baffled by what I found!</p>
-<h2 id="logistic-fit-for-uk-delta-variant--share">Logistic fit for UK delta variant % share</h2>
-<p>A really good model for the delta variant share in the UK, where $t=0$ is February 8, 2021 is given by</p>
+<p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">discussion below</a>). However, I have lately grown fond of checking if something is logistic by just plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data (or making a spreadsheet model in which I can teak the parameters to see the plot fit).</p>
+<p>This curve-fitting approach is what I set out to do, and I was completely baffled by what I found!</p>
+<h2 id="logistic-fit-for-delta-variant--share-in-the-us">Logistic fit for delta variant % share in the US</h2>
+<p>A really good model for the delta variant share in the US, where $t=0$ is February 8, 2021 is given by</p>
 <ul>
-<li>$L=1$ (Delta variant reached $100\%$ share in 2021 before Omicron hit).</li>
-<li>$k=0.09$ (related to $9\%$ initial exponential growth rate in the % share).</li>
-<li>$a=139$ (this is just a horizontal shift in the curve and has not mathematically important meaning &ndash; it is just the moment of the year in which the growth rate of the delta share was highest, in $\%$ share per day).</li>
+<li>$L=1$ (the Delta variant reached $100\%$ share in 2021 &mdash; before Omicron hit).</li>
+<li>$k=0.09$ ($k$ affects how fast the logistic rises, and its value $0.09=9\%$ is related to the initial exponential growth rate in the % share of cases).</li>
+<li>$a=139$ (this is just a horizontal shift in the curve and has no mathematically important meaning &mdash; it is just the moment of the year in which the growth rate of the delta share was highest, in $\%$ share per day).</li>
 </ul>
-<figure><img src="UKDeltaVariantLogistic.png" width="350"/>
+<p>The fit is shown in the following figure:</p>
+<figure><img src="USDeltaVariantLogistic.png" width="400"/>
 </figure>
 
 <!-- raw HTML omitted -->
@@ -143,35 +148,66 @@ and its graphs look as follows (figures created by me with Tikz, I&rsquo;ll post
 $$
 \begin{array}{c}
 \text{Share of delta variant}\cr
-\text{cases in the UK} \cr
+\text{cases in the US} \cr
 \text{$t$ days after Feb 8, 2021}
 \end{array}  = \frac{1}{1+e^{-0.09(t-139)}}
 $$</p>
-<p>You can play around with the logistic fit yourself if the desmos app loads below. If it does not load, just follow <a href="https://www.desmos.com/calculator/saydhyssyq">this link</a>, or download the data and play for yourself in the <a href="DeltaShareIndiaUKUSBra.xls">spreadsheet I created</a></p>
+<p>You can play around with the logistic fit yourself if the desmos app loads below (use the sliders for $a$ and $k$). If it does not load, just follow <a href="https://www.desmos.com/calculator/saydhyssyq">this link</a>, or download the data and play for yourself in the <a href="DeltaShareIndiaUKUSBra.xls">spreadsheet I created</a></p>
 <div>
     <iframe src="https://www.desmos.com/calculator/ht3gvoopty" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div>
+<h2 id="logistic-fit-for-delta-variant--share-in-the-uk">Logistic fit for delta variant % share in the UK</h2>
+<p>The very good fit is not just for data for the US. I tried the same with the data for the UK and got a similarly good fit.</p>
+<p>In this case, $k=0.11$, $a=104$, $L=1$. It is interesting that that $k$ is different, because it says that the Delta variant overtook other variants slightly faster in the UK than the US.</p>
+<p>Here is the plot:
+<figure><img src="USDeltaVariantLogistic.png" width="400"/>
+</figure>
+</p>
+<p>And here is the desmos plot with sliders that I created (<a href="https://www.desmos.com/calculator/ih9yhwoqxx">link</a>, in case it does not load). Try changing $k$ to 0.09 to see de difference in the way Delta overtook other variants between the US and UK.
+<div>
+    <iframe src="https://www.desmos.com/calculator/ih9yhwoqxx" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div></p>
+<h2 id="not-all-sigmoid-shaped-data-can-be-fit-well-by-a-logistic">Not all Sigmoid Shaped data can be fit well by a logistic</h2>
+<p>The best way to see this is with an example!</p>
+<p>Try with the sliders in the desmos applet below to fit a logistic model to the total (cumulative) number of cases in the first Covid-19 wave in Italy in 2020 (here is a <a href="https://www.desmos.com/calculator/xigjjslhlr">link</a> in case it does not load). By trying to fit the curve to the data with the sliders you will soon understand why it is not going to work.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/xigjjslhlr" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<p>(data from John&rsquo;s Hopkins University).</p>
+<p>Here is a screnshot in case the applet does not load:</p>
+<figure><img src="ItalyCovidLogisticFail.png" width="400"/>
+</figure>
+
 <h2 id="other-fancier-ways-to-tell-if-something-is-logistic">Other (fancier) ways to tell if something is logistic</h2>
-<p>Of course, just because something looks sigmoid shaped does not mean that a logistic function is a good fit. In fact, logistic growth is governed by the differential equation
+<p>Logistic growth is governed by the differential equation
 $$
-\frac{dy}{dt}=ky\left(1-\frac{y}{L}\right)
+\frac{dy}{dt}=ky\left(1-\frac{y}{L}\right)\tag{1}
 $$
 which can also be written as:
 $$
-\frac{y'}{y}=k(1-y/L)
+\frac{y'}{y}=k(1-y/L).\tag{2}
 $$
-and this says that the relative growth, $y'/y$, (% change in one unit of time) is decreasing linearly as a function of $y$ from $y'/y=k$ when $y=0$ (growing at the beginning exponentially at continuous rate $k$) to $y'/y=0$ when $y=L$. These two ways to see the differential equation indicate two ways to see if something is growing logistically:</p>
-<h3 id="is-the-plot-of-yy-against-y-a-line">Is the plot of $y'/y$ against $y$ a line?</h3>
+This last equation says that the relative growth $y'/y$ (which can be interpreted as percent change in one unit of time) is decreasing linearly as a function of $y$.</p>
+<p>Note:</p>
+<ul>
+<li>$y'/y\approx k$ when $y\approx 0$ (corresponding to $y$ growing exponentially with continuous growth rate $k$ at the beginning of the growth)</li>
+<li>$y'/y\approx 0$ (corresponding to $y$ being approximately constant constant) when $y$ approaches $L$.</li>
+</ul>
+<p>The two ways $(1)$ and $(2)$ to write the differential equation indicate two ways to see if some data is growing logistically (one can estimate $y'$ numerically from the data by computing the rate of change between the entries in the table).</p>
+<p><strong>Is the plot of $y'/y$ against $y$ a line?</strong><br>
+Equation $(2)$ says that for logistic growth the plot of $y'/y$ against $y$ should be a line. If one makes this plot for exactly logistic data, this is what one would see:
 <figure><img src="LogisticRelativeAgainstP.png" width="300"/>
 </figure>
-
+</p>
 <!-- raw HTML omitted -->
-<h3 id="is-the-plot-of-y-against-y-a-parabola">Is the plot of $y'$ against $y$ a parabola?</h3>
+<p><strong>Is the plot of $y'$ against $y$ a parabola?</strong>
+Equation $(1)$ says that for logistic growth the plot of $y'$ against $y$ should be a parabola going through the origin and the point $(y,y')=(0,L)$. If one makes this plot for exactly logistic data, this is what one would see:
 <figure><img src="LogisticDerivativeAgainstFunction.png" width="350"/>
 </figure>
-
+</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
+<p>But once again I say, I have lately grown fond of checking if something is logistic by just plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data, as I illustrated above.</p>
 
   </div>
 

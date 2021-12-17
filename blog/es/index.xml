@@ -18,7 +18,7 @@ Puede averiguar más sobre mí en el sitio de Grupo LEMA (en español) o en una 
     </item>
     
     <item>
-      <title>La creación de este blog: Hugo, agregar al tema Hyde soporte para varios lenguajes y soporte de Latex</title>
+      <title>La creación de este blog: Hugo, agregar al tema Hyde soporte de varios idiomas y soporte de Latex</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
@@ -33,7 +33,7 @@ El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tr
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
-      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos o una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
+      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
 En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
 Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
     </item>

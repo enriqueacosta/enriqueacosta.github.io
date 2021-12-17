@@ -126,7 +126,7 @@
     
   
   <div>
-  <p>Como menciona Joe Harris en su libro &ldquo;Algebraic Geometry: A First Course&rdquo;, la curva llamada la <em>Twisted Cubic</em> es &ldquo;el primer ejemplo de todos o una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&rdquo;.</p>
+  <p>Como menciona Joe Harris en su libro &ldquo;Algebraic Geometry: A First Course&rdquo;, la curva llamada la <em>Twisted Cubic</em> es &ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&rdquo;.</p>
 <p>En el espacio afín, está dado por la imagen de
 $$t\mapsto(t,t^2,t^3).$$</p>
 <p>Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</p>
@@ -199,6 +199,11 @@ $$t\mapsto(t,t^2,t^3).$$</p>
 $$t\mapsto(x,y)=(t,t^2).$$
 Esta parábola es claramente visible en la figura (¡a propósito!).</p>
 <p>Lo mismo sucede con la sombra en el plano $(x,z)$ que es la curva cúbica $z=x^3$.</p>
+<p>Volviendo al código, esta es una parte que me gusta mucho, ¡es casi como si estuviera escrito en inglés!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\draw</span> [cyan] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) --  ({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, -8)
+};
+</code></pre></div><p>Dice &ldquo;dibuja, en color cian, para cada <em>a</em> entre -2 y 2 en pasos de 0.1, la línea (&hellip;) &mdash; (&hellip;) entre los puntos. ¡Esas son las líneas verticales azules en la figura!</p>
 
   </div>
 

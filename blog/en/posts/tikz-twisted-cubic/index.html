@@ -127,10 +127,10 @@
   
   <div>
   <!-- raw HTML omitted -->
-<p>As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the <em>Twisted Cubic</em> is &ldquo;everybody&rsquo;s first example or a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;</p>
+<p>As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the <em>Twisted Cubic</em> is &ldquo;everybody&rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;</p>
 <p>In affine space, it is given by the image of
 $$t\mapsto(t,t^2,t^3).$$</p>
-<p>As I was working through all the exercises in the book (I still am!) I decided I wanted to make a Tikz picture for it to learn to do 3D figures in Tikz.</p>
+<p>As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</p>
 <p>A couple of days later I ended up with the following code, which I am really proud of! I am becoming a huge Tikz fan.</p>
 <p>What I really enjoy about the code is how easy it is to read: each block serves a specific purpose, and even if one does not know the details of $\LaTeX$, or the Tikz package, it is easy to guess what is happening.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=0pt, tikz]</span>{standalone}
@@ -200,6 +200,11 @@ $$t\mapsto(t,t^2,t^3).$$</p>
 $$t\mapsto(x,y)=(t,t^2).$$
 This parabola is clearly visible in the figure (on purpose!).</p>
 <p>The same happens with the shadow on the $(x,z)$ plane which is the cubic curve $z=x^3$.</p>
+<p>Back to the code, this is a piece I really like, it is almost like plain English!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\draw</span> [cyan] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) --  ({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, -8)
+};
+</code></pre></div><p>It says &ldquo;Draw, in cyan color, for each <em>a</em> between -2 and 2 in steps of 0.1, the line  (&hellip;) &mdash; (&hellip;) between the points.&rdquo; Those are the vertical blue lines in the figure!</p>
 
   </div>
 

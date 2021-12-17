@@ -12,9 +12,9 @@
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</guid>
-      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example or a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
+      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
 In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
-As I was working through all the exercises in the book (I still am!) I decided I wanted to make a Tikz picture for it to learn to do 3D figures in Tikz.</description>
+As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</description>
     </item>
     
   </channel>
