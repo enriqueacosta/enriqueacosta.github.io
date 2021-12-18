@@ -5,14 +5,25 @@
     <link>https://enriqueacosta.github.io/blog/es/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Dec 2021 17:19:54 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
+      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
+La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data.
+ Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+    </item>
+    
     <item>
       <title>Acerca de este blog</title>
       <link>https://enriqueacosta.github.io/blog/es/about/about/</link>
       <pubDate>Mon, 13 Dec 2021 17:19:54 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/about/about/</guid>
-      <description>Siempre estoy aprendiendo cosas nuevas (¡incluyendo cómo hacer mi propio blog!), y estoy probando a escribir sobre estas excursiones personales. Creo que lo voy a distrutar. Lo estoy haciendo público en caso de que alguien encuentre algo de eso útil o interesante.
+      <description>Me gusta siempre estar aprendiendo cosas nuevas (¡como por ejemplo hacer mi propio blog!), y estoy probando escribir sobre estas excursiones personales. Creo que lo voy a distrutar. Lo estoy haciendo público en caso de que alguien encuentre algo de eso útil o interesante.
 Contácteme si tiene alguna pregunta o comentario sobre lo que encuentra.
 Puede averiguar más sobre mí en el sitio de Grupo LEMA (en español) o en una página personal antigua (en inglés) que ya no actualizo.</description>
     </item>

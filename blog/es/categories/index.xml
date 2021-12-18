@@ -5,7 +5,34 @@
     <link>https://enriqueacosta.github.io/blog/es/categories/</link>
     <description>Recent content in Categorias on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Dec 2021 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datos</title>
+      <link>https://enriqueacosta.github.io/blog/es/categories/datos/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/categories/datos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matemáticas</title>
+      <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelación</title>
+      <link>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hugo</title>
       <link>https://enriqueacosta.github.io/blog/es/categories/hugo/</link>
@@ -30,15 +57,6 @@
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/categories/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matemáticas</title>
-      <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
-      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</guid>
       <description></description>
     </item>
     

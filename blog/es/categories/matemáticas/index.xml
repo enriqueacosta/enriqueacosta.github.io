@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
     <description>Recent content in Matemáticas on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
+      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
+La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data.
+ Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+    </item>
+    
     <item>
       <title>Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>

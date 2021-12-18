@@ -2,6 +2,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://enriqueacosta.github.io/blog/es/categories/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/covid-19/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/covid-19/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/covid-19/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/datos/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/categories/datos/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/logistics/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/posts/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/tikz/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/tags/variante-delta/</loc>
+    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/about/</loc>
     <lastmod>2021-12-13T17:19:54-05:00</lastmod>
     <xhtml:link
@@ -28,47 +137,8 @@
                 href="https://enriqueacosta.github.io/blog/es/about/about/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/</loc>
-    <lastmod>2021-12-13T17:19:54-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/categories/</loc>
-    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/categories/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/tags/configuraci%C3%B3n-del-blog/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/tags/</loc>
-    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/tags/hugo/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
@@ -122,19 +192,6 @@
                 href="https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/posts/</loc>
-    <lastmod>2021-12-10T22:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/</loc>
     <lastmod>2021-12-10T22:49:34-05:00</lastmod>
   </url><url>
@@ -168,22 +225,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://enriqueacosta.github.io/blog/es/categories/latex/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</loc>
-    <lastmod>2021-12-06T22:28:53-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/tags/tikz/</loc>
-    <lastmod>2021-12-06T22:28:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</loc>
