@@ -44,8 +44,7 @@ You can find more about me in the Grupo LEMA site (in Spanish) or an old persona
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</guid>
-      <description>What got me started was Hui Gong&amp;rsquo;s excellent blog entry on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,but not about Hugo. I had Hugo running and my own skeleton version of this blog using the very nice and minimal Hyde theme by following the blog.
-The Hyde theme is extremely minimal (nice), but I wanted three important things for my blog that the Hyde theme did not have:</description>
+      <description>This blog does not live in a commercial platform for bloggers. It is what is technically called a &amp;ldquo;static site&amp;rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled Hugo. In this blog entry I explain how I set it up.</description>
     </item>
     
     <item>

@@ -126,7 +126,7 @@
 <figure><img src="LogisticFunctionParams.es.png" width="450"/>
 </figure>
 
-<p>Lo que me gusta mucho de TikZ y su paquete <code>pfgplots</code> es que la curva en la figura es de verdad una curva logística, y no solo una curva de Bezier, o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por
+<p>Lo que me gusta mucho de TikZ y su paquete <code>pfgplots</code> es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por
 $$
 f(t) = \frac{1}{1+e^{-4(x-2.5)}}.
 $$
@@ -159,7 +159,7 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <span style="color:#66d9ef">\end</span>{axis} 
 <span style="color:#66d9ef">\end</span>{tikzpicture}
 <span style="color:#66d9ef">\end</span>{document}
-</code></pre></div><p>En realidad, el código que produce la figura se encuentra entre los comandos <code>\begin{tikzpicture}</code> y <code>\end{tikzpicture}</code>. El resto son los comandos requeridos para indicar a $\LaTeX$ que debe crear un documento que contiene la figura. Así, el código de la figura en realidad es solo:</p>
+</code></pre></div><p>En realidad, el código que produce la figura se encuentra entre los comandos <code>\begin{tikzpicture}</code> y <code>\end{tikzpicture}</code>. El resto son los comandos requeridos para indicar a $\LaTeX$ que debe crear un documento que contiene la figura. Así, el código de la figura en realidad es solo el siguiente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
 </span><span style="color:#75715e"></span>   [ axis lines = middle
    , width=200pt
@@ -179,11 +179,11 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <span style="color:#66d9ef">\end</span>{axis} 
 </code></pre></div><p>Y este último solo tiene un par de partes:</p>
 <ul>
-<li>El <code>\begin{axis}[...]</code> le dice a TikZ que debe crear unos ejes con algunas propiedades (que se encuentran  dentro del <code>[...] </code>).</li>
+<li>El <code>\begin{axis}[...]</code> le dice a TikZ que debe crear unos ejes con algunas propiedades que se encuentran  dentro del <code>[...]</code>.</li>
 <li>El comando <code>\addplot[...]{...}</code>, le dice a TikZ que agregue la gráfica de la función que se encuentra dentro de <code>{...}</code> y que use las propiedades dentro del <code>[...]</code> (como color azul, línea gruesa, etc.).</li>
-<li>La segunda parte en <code>\addplot[...]{...}node[...]{...};</code> le dice a Tikz que agregue un texto con el comando <code>node</code>. El texto está dentro de <code>{...}</code> y las propiedades una vez más se encuentran dentro de <code>[...]</code>.</li>
+<li>La segunda parte en <code>\addplot[...]{...}node[...]{...};</code> le dice a Tikz que agregue un texto con el comando <code>node</code>. El texto está dentro del <code>{...}</code> que le sigue al <code>node</code> y las propiedades una vez más se encuentran dentro de <code>[...]</code>.</li>
 </ul>
-<p>Para obtener la figura con las etiquetas y los parámetros, uno simplemente debe hacer ajustes graduales que lo lleven allí.</p>
+<p>Para obtener la figura con las etiquetas, las líneas punteadas, y los parámetros en los ejes, uno simplemente debe hacer ajustes graduales que lo lleven allí.</p>
 <h2 id="hacer-que-las-marcas-en-los-ejes-ejes-sean-parámetros-generales-en-lugar-de-números">Hacer que las marcas en los ejes ejes sean parámetros generales en lugar de números.</h2>
 <p>Estas son las propiedades del <code>axis</code> que logran esto.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
@@ -208,7 +208,7 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <figure><img src="LogisticFunctionParamsPartial.png" width="450"/>
 </figure>
 
-<h2 id="agregar-las-líneas-discontinuas-y-flecha-al-punto-de-inflexión">Agregar las líneas discontinuas y flecha al punto de inflexión</h2>
+<h2 id="agregar-las-líneas-punteadas-y-la-flecha-al-punto-de-inflexión">Agregar las líneas punteadas y la flecha al punto de inflexión</h2>
 <p><strong>Línea horizontal superior, con su etiqueta:</strong> se obtiene gratificando la función $f(x)=1$.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
 </span><span style="color:#75715e"></span>   [ style=dashed
@@ -244,7 +244,7 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <ul>
 <li>El <code>\draw</code> dice que vamos a dibujar.</li>
 <li>El <code>[style = dashed]</code> es el estilo de línea.</li>
-<li>El <code>(...) -- (...)</code> dibuja una línea entre los dos puntos.</li>
+<li>El <code>(...) -- (...)</code> dibuja un segmento de recta entre los dos puntos.</li>
 <li>El <code>(axis cs:</code> permite que uno use el sistema de coordenadas de los ejes en lugar del sistema de coordenadas absolutas de la figura (relacionado con el ancho de la figura, por ejemplo). El <code>cs</code> viene de <code>cooordinate system</code>.</li>
 </ul>
 <p><strong>La etiqueta &ldquo;Punto de inflexión&rdquo; apuntando con una flecha al punto <code>(axis cs:2.5,0.5)</code>:</strong></p>

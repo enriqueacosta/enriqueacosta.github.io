@@ -12,8 +12,7 @@
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</guid>
-      <description>Todo empezó con la excelente entrada del blog de Hui Gong sobre como crear un blog personal usando GitHub Pages y Hugo. Sabía sobre las páginas de GitHub, pero no sobre Hugo. Siguiendo los pasos en la entrada del blog, tuve en poco tiempo una versión esqueleto de este blog con el tema Hyde.
-El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tres cosas importantes para mi blog que el tema no tenía:</description>
+      <description>Este blog no se encuentra en una plataforma comercial para bloggers. Es lo que se llama técnicamente un &amp;ldquo;sitio estático&amp;rdquo;, lo cual significa que es solo una colección de archivos HTML que están vinculados entre sí, junto con algunos otros archivos que dan formato (por ejemplo, archivos css). Como tal, este blog se puede alojar en cualquier lugar y no está atado a ninguna plataforma en particular. Además, se creó con una fantástica herramienta de código abierto llamada Hugo.</description>
     </item>
     
     <item>

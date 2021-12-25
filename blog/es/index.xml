@@ -13,7 +13,7 @@
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</guid>
       <description>Prometí en otra entrada de blog que mostraría el código en TikZ que produce la siguiente figura:
- Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística, y no solo una curva de Bezier, o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+ Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
     </item>
     
     <item>
@@ -43,8 +43,7 @@ Puede averiguar más sobre mí en el sitio de Grupo LEMA (en español) o en una 
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</guid>
-      <description>Todo empezó con la excelente entrada del blog de Hui Gong sobre como crear un blog personal usando GitHub Pages y Hugo. Sabía sobre las páginas de GitHub, pero no sobre Hugo. Siguiendo los pasos en la entrada del blog, tuve en poco tiempo una versión esqueleto de este blog con el tema Hyde.
-El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tres cosas importantes para mi blog que el tema no tenía:</description>
+      <description>Este blog no se encuentra en una plataforma comercial para bloggers. Es lo que se llama técnicamente un &amp;ldquo;sitio estático&amp;rdquo;, lo cual significa que es solo una colección de archivos HTML que están vinculados entre sí, junto con algunos otros archivos que dan formato (por ejemplo, archivos css). Como tal, este blog se puede alojar en cualquier lugar y no está atado a ninguna plataforma en particular. Además, se creó con una fantástica herramienta de código abierto llamada Hugo.</description>
     </item>
     
     <item>
