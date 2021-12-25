@@ -88,6 +88,16 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</loc>
     <lastmod>2021-12-23T19:40:37-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/covid-19/</loc>
     <lastmod>2021-12-15T18:48:00-05:00</lastmod>
