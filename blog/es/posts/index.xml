@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/es/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 18:25:45 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Traducción de los textos escolares de matemáticas Illustrative Mathematics para grados K-8</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/translating-im/</link>
+      <pubDate>Mon, 17 Jan 2022 18:25:45 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/translating-im/</guid>
+      <description>Illustrative Mathematics me invitó a participar en un seminario web (webinar) por el trabajo que hice dirigiendo la traducción al español de sus textos escolares de matemáticas (ver aquí). Querían que compartiera con los asistentes detalles del proceso de traducción y por qué una traducción palabra por palabra (tipo Google translate) era insuficiente.
+Como preparación, decidí escribir esta entrada de blog sobre el proceso de traducción.
+Los textos escolares de Illustrative Mathematics (Matemáticas Ilustrativas) consisten de una propuesta actividades para la clase día a día junto con las guías del docente correspondientes, problemas de práctica (tareas) y materiales de apoyo para las familias.</description>
+    </item>
+    
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>
