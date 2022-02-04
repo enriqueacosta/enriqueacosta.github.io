@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creating This Blog Part 2 &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Creating This Blog Part 2</h1>
+  
+  
+  <time datetime=2022-02-01T21:12:04-0500 class="post-date">February 1, 2022</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup">Blog setup</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/hugo">Hugo</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n">Multilingual i18n</a>
+    
+  </p>
+  
+  
+  
+  <div>
+  <p>This is a follow-up to a <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe a couple of extra pieces of the setup including more elaborate multilingual support, the creation of a multilingual footer for all posts, and the about page.</p>
+<h2 id="multilingual-text-snippets-using-i18n">Multilingual Text &ldquo;Snippets&rdquo; Using i18n</h2>
+<p>Hugo comes built in with with a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. All I had to do was create the files <code>en.toml</code> and <code>es.toml</code> in the already-existing <code>i18n</code> folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &ldquo;translation dictionaries&rdquo;.</p>
+<p>For example, I added to the <code>en.toml</code> the lines:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">cc-license</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;This work is licensed under a&#34;</span>
+</code></pre></div><p>and to the <code>es.toml</code> the corresponding lines</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">cc-license</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Liberado bajo una licencia de uso&#34;</span>
+</code></pre></div><p>What these say is that when I invoke the multilingual snippet called <code>cc-license</code>, it should display the text <code>This work is licensed under a</code> if the page is in English and it should display the text <code>Liberado bajo una licencia de uso</code> if the site is in Spanish. (The <code>other=</code> says this is a generic version of the text. One can specify <code>one=</code> for example, if the texts are different when it is singular. More details in the <a href="https://gohugo.io/content-management/multilingual/#query-a-singularplural-translation">official Hugo documentation</a> about this.)</p>
+<p>How the snippet is invoked: I just use the code <code>{{ i18n &quot;cc-license&quot; }}</code> in any page template. Pretty simple!</p>
+<p>This is the current status of my i18n files:</p>
+<p><strong>en.toml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">cc-license</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;This work is licensed under a&#34;</span>
+
+[<span style="color:#a6e22e">cc-license-url</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;</span>
+
+[<span style="color:#a6e22e">cc-license-linkText</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Creative Commons CC-BY-SA 4.0 License&#34;</span>
+
+[<span style="color:#a6e22e">Read-More</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Read More&#34;</span>
+
+[<span style="color:#a6e22e">Categories</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>
+
+[<span style="color:#a6e22e">Tags</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+</code></pre></div><p><strong>es.toml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">cc-license</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Liberado bajo una licencia de uso&#34;</span>
+
+[<span style="color:#a6e22e">cc-license-url</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;https://creativecommons.org/licenses/by-sa/4.0/deed.es&#34;</span>
+
+[<span style="color:#a6e22e">cc-license-linkText</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Creative Commons CC-BY-SA 4.0&#34;</span>
+
+[<span style="color:#a6e22e">Read-More</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Leer más&#34;</span>
+
+[<span style="color:#a6e22e">Categories</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Categorias&#34;</span>
+
+[<span style="color:#a6e22e">Tags</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Etiquetas&#34;</span>
+</code></pre></div><h2 id="making-the-read-more-links-in-the-post-list-be-multilingual">Making the &ldquo;Read More&rdquo; Links in The Post List be Multilingual</h2>
+<p>This shows how multilingual snippets using i18n work in practice.</p>
+<p>FINISH</p>
+<h2 id="adding-a-multilingual-footer-to-all-posts">Adding a Multilingual Footer to All Posts</h2>
+<p>At the end of all posts on this site (including this one) you will see a footer with horizontal line and a copyright and licensing text. I accomplished this as follows:</p>
+<ol>
+<li>In the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts, I added the following command at the end:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> . }}
+</code></pre></div><ol start="2">
+<li>Then, I created the <code>footer.html</code> file in the folder <code>layouts/partials/footer.html</code> with the following  content (layout specification):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">footer</span>&gt;
+  &lt;<span style="color:#f92672">hr</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;license&#34;</span>&gt;
+      &lt;<span style="color:#f92672">p</span>&gt; <span style="color:#960050;background-color:#1e0010">&amp;</span>copy {{ now.Format &#34;2006&#34;}} Enrique Acosta. &lt;/<span style="color:#f92672">br</span>&gt;
+         {{ i18n &#34;cc-license&#34; }} 
+         &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ i18n &#34;</span><span style="color:#a6e22e">cc-license-url</span><span style="color:#960050;background-color:#1e0010">&#34;}}&#34;</span>&gt;
+            {{ i18n &#34;cc-license-linkText&#34; }}
+         &lt;/<span style="color:#f92672">a</span>&gt;
+         &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;</span>&gt;&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Creative Commons License&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-width:0&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://i.creativecommons.org/l/by-sa/4.0/88x31.png&#34;</span> /&gt;&lt;/<span style="color:#f92672">a</span>&gt;
+      &lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">footer</span>&gt;
+</code></pre></div><p>Here:</p>
+<ul>
+<li>The <code>&lt;hr style...</code> adds the horizontal line.</li>
+<li>The <code>&lt;div class=&quot;license&quot;&gt;....&lt;/div&gt;</code> is just an html container that has the <code>&lt;p&gt;...&lt;/p&gt;</code> paragraph inside of it. The <code>class=&quot;license&quot;</code> allows me to control display style from the css file. Currently, the <code>hyde.css</code> has the line <code>.license {font-size: 18px; }</code> which tells it at what font size to display.</li>
+</ul>
+<p>Regarding what is inside the <code>&lt;p&gt;...&lt;/p&gt;</code> tags (the actual content of the footer):</p>
+<ul>
+<li>The <code>&amp;copy</code> just displays the copyright symbol: ©</li>
+<li>The <code>{{ now.Format &quot;2006&quot;}}</code> gets replaced by the current year.</li>
+<li>The <code>{{ i18n &quot;cc-license&quot; }}</code> is the <code>cc-license</code> multilingual snippet I defined in my <code>en.toml</code> and <code>es.toml</code> files which gets expanded in English to &ldquo;This work is licensed under a&rdquo;.</li>
+<li>The <code>&lt;a rel=&quot;license&quot; href=&quot;{{ i18n &quot;cc-license-url&quot;}}&quot;&gt; {{ i18n &quot;cc-license-linkText&quot; }} &lt;/a&gt;</code> is a link which has as text the <code>cc-license-linkText</code> multilingual snippet I defined in the i18n toml files. Moreover, the link URL is also a multilingual snippet, controlled by the href <code>href=&quot;{{ i18n &quot;cc-license-url&quot;}}&quot;</code>. The link points to different places according to the language, determined by the <code>cc-license-url</code> snippet!</li>
+<li>The second <code>&lt;a ...&gt;&lt;img ... .png&quot;/&gt;&lt;/a&gt;</code> is the little CC-image, loaded from i.creativecommons.org, that links to the same license.</li>
+</ul>
+<h2 id="listing-the-tags-for-each-post">Listing the Tags For Each Post</h2>
+<p>The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface. Here is how I did it.</p>
+<p>To specify the tags of a post, the header of a post should have a <code>tags:</code> entry, such as this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating This Blog Part 2&#34;</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2022-02-01T21:12:04</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
+<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>, <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Multilingual i18n&#34;</span>]
+<span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
+---
+</code></pre></div><p>To get the tags to show up at the beginning of the post, one can add a simple code to the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;<span style="color:#a6e22e">p</span>&gt; 
+  &lt;<span style="color:#a6e22e">strong</span>&gt;{{ <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;Tags&#34;</span>}}: &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">strong</span>&gt;
+  {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span> }}
+      &lt;<span style="color:#a6e22e">br</span><span style="color:#f92672">/</span>&gt; <span style="color:#f92672">--</span> {{ . }} 
+  {{ <span style="color:#a6e22e">end</span> }}
+&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</code></pre></div><p>In this case, the output would be:</p>
+<p><strong>Tags:</strong><br>
+&ndash; Blog setup<br>
+&ndash; Hugo<br>
+&ndash; Multilingual i18n</p>
+<p>Here:</p>
+<ul>
+<li>The <code>&lt;strong&gt;{{ i18n &quot;Tags&quot;}}: &lt;/strong&gt;</code> adds in bold the multilingual <code>Tags</code> snippet which accodding to the files en.toml and es.toml shows up as &ldquo;Tags&rdquo; if the page is in English, or &ldquo;Etiquetas&rdquo; if the page is in Spanish.</li>
+<li>The <code>{{ range .Params.tags }} ... {{ end }}</code> loops over the <code>.Params.tags</code>, which are the tags that are defined in the post.</li>
+<li>The <code>&lt;br/&gt; -- {{ . }} </code> adds a line break, a dash <code>--</code>, and the <code>{{ . }}</code> displays the tag name.</li>
+</ul>
+<p>I wanted something fancier, which listed tags in a single line separated by commas, and more importantly, linked to the page that Hugo automatically generates for each tag. After several tweaks, this was the final code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;<span style="color:#a6e22e">p</span>&gt; 
+  &lt;<span style="color:#a6e22e">strong</span>&gt;{{ <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;Tags&#34;</span>}}: &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">strong</span>&gt;
+  {{ <span style="color:#66d9ef">range</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span>,  <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span> }}
+      {{<span style="color:#f92672">-</span> <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span>}}, {{ <span style="color:#a6e22e">end</span> <span style="color:#f92672">-</span>}}
+      &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}tags/{{ . | urlize }}&#34;</span>&gt;{{ . }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
+  {{ <span style="color:#a6e22e">end</span> }}
+&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
+</code></pre></div><p>What the fancier pieces of the code do is:</p>
+<ul>
+<li>The <code>range $i,</code> in the loop definition is a loop counter, to allow adding a comma after each tag link only after the first tag is listed (one does not want a comma at the beginning of the end of the list).</li>
+<li>The <code>{{- if $i -}}, {{ end -}}</code> adds a comma between each tag link only after the first tag is listed.</li>
+<li>The fancy looking <code>&lt;a href...</code> creates a link to the Hugo automatically-generated page of the corresponding tag (of the form <code>BASE_URL/blog/en/tags/katex/</code> if the tag is &ldquo;KaTeX&rdquo;).</li>
+</ul>
+<h2 id="adding-browsing-by-tags-and-categories-to-the-sidebar">Adding Browsing by &ldquo;Tags&rdquo; and &ldquo;Categories&rdquo; to the Sidebar.</h2>
+<h2 id="adding-an-about-page-which-does-not-use-the-layout-of-the-posts">Adding an &ldquo;About&rdquo; Page Which Does Not Use the Layout of the Posts.</h2>
+<h2 id="dont-forget-to-add-reference-in-the-old-post-to-this-one">DONT FORGET TO ADD REFERENCE IN THE OLD POST TO THIS ONE</h2>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
