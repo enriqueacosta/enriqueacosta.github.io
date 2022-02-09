@@ -5,16 +5,27 @@
     <link>https://enriqueacosta.github.io/blog/es/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 17 Jan 2022 18:25:45 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creación de una imagen vectorial del mensaje Arrecibo para imprimir</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</link>
+      <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</guid>
+      <description>Hace poco recordé el mensaje de Arrecibo y descubrí que el artículo de Wikipedia es excelente (la versión en inglés es un poco más completa). Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.
+Este es el mensaje:
+ Mensaje de Arrecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.</description>
+    </item>
+    
     <item>
       <title>Traducción de los textos escolares de matemáticas Illustrative Mathematics para grados K-8</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/translating-im/</link>
       <pubDate>Mon, 17 Jan 2022 18:25:45 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/translating-im/</guid>
-      <description>Illustrative Mathematics me invitó a participar en un seminario web (webinar) por el trabajo que hice dirigiendo la traducción al español de sus textos escolares de matemáticas (ver aquí). Querían que compartiera con los asistentes detalles del proceso de traducción y por qué una traducción palabra por palabra (tipo Google translate) era insuficiente.
+      <description>Illustrative Mathematics me invitó a participar en un seminario web (webinar) por el trabajo que hice dirigiendo la traducción al español de sus textos escolares de matemáticas (ver aquí). Querían que compartiera con los asistentes detalles del proceso de traducción y explicara por qué una traducción palabra por palabra (tipo Google translate) era insuficiente.
 Como preparación, decidí escribir esta entrada de blog sobre el proceso de traducción.
-Los textos escolares de Illustrative Mathematics (Matemáticas Ilustrativas) consisten en una propuesta día a día de actividades para la clase junto con las guías del docente correspondientes, problemas de práctica (tareas) y materiales de apoyo para las familias.</description>
+Los textos escolares de Illustrative Mathematics (Matemáticas Ilustrativas) consisten en una propuesta de actividades para la clase día a día, junto con las guías del docente correspondientes, problemas de práctica (tareas) y materiales de apoyo para las familias.</description>
     </item>
     
     <item>

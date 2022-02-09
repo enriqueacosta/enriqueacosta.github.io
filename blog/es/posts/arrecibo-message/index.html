@@ -8,14 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Creating A Vector Graphics Version Of The Arrecibo Message &middot; Enrique Acosta Jaramillo</title>
+  <title>Creación de una imagen vectorial del mensaje Arrecibo para imprimir &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
@@ -30,7 +30,7 @@
 
 
    
-   <base href="https://enriqueacosta.github.io/blog/en/">
+   <base href="https://enriqueacosta.github.io/blog/es/">
 
 
    
@@ -74,16 +74,16 @@
   
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
       <p class="lead">
-       Personal Blog 
+       Blog personal 
       </p>
     </div>
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="/blog/en">Home</a> </li>
-        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
     <p>2022
@@ -100,47 +100,47 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Creating A Vector Graphics Version Of The Arrecibo Message</h1>
+  <h1>Creación de una imagen vectorial del mensaje Arrecibo para imprimir</h1>
   
   
-  <time datetime=2022-02-03T18:56:42-0500 class="post-date">February 3, 2022</time>
+  <time datetime=2022-02-03T18:56:42-0500 class="post-date">3 de febrero de 2022</time>
   
   
   <p> 
-    <strong>Tags: </strong>
+    <strong>Etiquetas: </strong>
      
-    <a href="https://enriqueacosta.github.io/blog/en/tags/arrecibo-message">Arrecibo Message</a>
+    <a href="https://enriqueacosta.github.io/blog/es/tags/mensaje-de-arrecibo">Mensaje de Arrecibo</a>
      , 
-    <a href="https://enriqueacosta.github.io/blog/en/tags/processing">Processing</a>
+    <a href="https://enriqueacosta.github.io/blog/es/tags/processing">Processing</a>
     
   </p>
   
   
   
     
-      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/">Español: Creación de una imagen vectorial del mensaje Arrecibo para imprimir</a>)</h4>
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/">English: Creating A Vector Graphics Version Of The Arrecibo Message</a>)</h4>
     
   
   <div>
-  <p>I recently remembered the very cool Arrecibo message and I discovered today that the <a href="https://en.wikipedia.org/wiki/Arecibo_message">Wikipedia article</a> on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.</p>
-<p>Here is the message:</p>
+  <p>Hace poco recordé el mensaje de Arrecibo y descubrí que el <a href="https://es.wikipedia.org/wiki/Mensaje_de_Arecibo">artículo de Wikipedia</a> es excelente (la versión en <a href="https://en.wikipedia.org/wiki/Arecibo_message">inglés</a> es un poco más completa). Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.</p>
+<p>Este es el mensaje:</p>
 <figure><img src="240px-Arecibo_message.svg.png"
-         alt="Arrecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.0" width="200px"/><figcaption>
-            <p>Arrecibo Message. Image from <a href="https://commons.wikimedia.org/w/index.php?curid=365130">Wikipedia</a> by Arne Nordmann (norro), CC BY-SA 3.0</p>
+         alt="Mensaje de Arrecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.0" width="200px"/><figcaption>
+            <p>Mensaje de Arrecibo. Imagen de <a href="https://commons.wikimedia.org/w/index.php?curid=365130">Wikipedia</a> elaborada por Arne Nordmann (norro), CC BY-SA 3.0</p>
         </figcaption>
 </figure>
 
-<p>In the Wikipedia article they explain in detail the meaning of all the parts (I will not go into the details because the Wikipedia article is already doing a fantastic job). It is so cool!</p>
-<p>The message has an incredible amount of information packed into just 1,679 ones and zeros (colors are not part of the original). Then again, the fact that $1,\negthinspace679=23\times73$ is a product of two primes means that there are only two ways to organize the ones and zeros into a rectangle, one of which gives gives the message. So clever!</p>
-<p>Here is the full message in its raw binary form with 0s and 1s:</p>
+<p>En el artículo de Wikipedia explican en detalle el significado de cada una de las partes del mensaje (no entro en detalles porque en el artículo de verdad hace una excelente labor). ¡Es muy interesante!</p>
+<p>El mensaje tiene una cantidad impresionante de información en tan solo 1,679 unos y ceros (los colores no hacen parte del mensaje original). Algo muy ingenioso es que $1,\negthinspace679=23\times73$ es el producto de dos números primos, entonces hay solo dos formas de organizar esos 1,679 unos y ceros en un rectángulo, y una de esas formas da el mensaje.</p>
+<p>Este es el mensaje en su forma binaria sin procesar:</p>
 <pre tabindex="0"><code>00000010101010000000000001010000010100000001001000100010001001011001010101010101010100100100000000000000000000000000000000000001100000000000000000001101000000000000000000011010000000000000000001010100000000000000000011111000000000000000000000000000000001100001110001100001100010000000000000110010000110100011000110000110101111101111101111101111100000000000000000000000000100000000000000000100000000000000000000000000001000000000000000001111110000000000000111110000000000000000000000011000011000011100011000100000001000000000100001101000011000111001101011111011111011111011111000000000000000000000000001000000110000000001000000000001100000000000000010000011000000000011111100000110000001111100000000001100000000000001000000001000000001000001000000110000000100000001100001100000010000000000110001000011000000000000000110011000000000000011000100001100000000011000011000000100000001000000100000000100000100000001100000000100010000000011000000001000100000000010000000100000100000001000000010000000100000000000011000000000110000000011000000000100011101011000000000001000000010000000000000010000011111000000000000100001011101001011011000000100111001001111111011100001110000011011100000000010100000111011001000000101000001111110010000001010000011000000100000110110000000000000000000000000000000000011100000100000000000000111010100010101010101001110000000001010101000000000000000010100000000000000111110000000000000000111111111000000000000111000000011100000000011000000000001100000001101000000000101100000110011000000011001100001000101000001010001000010001001000100100010000000010001010001000000000000100001000010000000000001000000000100000000000000100101000000000001111001111101001111000
-</code></pre><p>If one were to restrict the width of the text above to exactly 23 characters, one would see a faint version of the wikipedia image made out of 1s and 0s. As I wrote this I could not stop myself from attempting this, so here it is!</p>
+</code></pre><p>Si uno restringe el ancho del texto a exactamente 23 caracteres, uno vería una &ldquo;sombra&rdquo; de la imagen de Wikipedia hecha con los caracteres <code>0</code> y <code>1</code>. Al escribir esto no pude resistir intentar hacerlo. ¡Así se ve!</p>
 <figure><img src="ArreciboOnesAndZeros.png" width="170px"/>
 </figure>
 
-<h2 id="creating-a-high-quality-two-color-version-for-printing">Creating a high quality two-color version for printing</h2>
-<p>The Wikipedia image can be downloaded as an svg vector graphic (suitable for printing), but I did not like the added colors. I wanted a simpler version the 1s being dark boxes and the 0s being white space. After some Googling I bumped into a code to generate it by <a href="http://rupert.id.au/tutorials/processing/examples/Arecibo_message_001/index.php">Rupert Russell</a>. His code generates a png version (not so suitable for printing), but after some tweaking I had a code that generates an svg image.</p>
-<p>Here is my adapted code:</p>
+<h2 id="creación-de-una-versión-del-mensaje-en-dos-colores-de-buena-calidad-para-impresión">Creación de una versión del mensaje en dos colores de buena calidad para impresión</h2>
+<p>La imagen de Wikipedia se puede descargar como una imagen vectorial en formato svg (bueno para impresión), pero no me gustaba que tuviera colores. Quería una versión más simple, con cuadrados blancos para los <code>0</code> y negros para los <code>1</code>. En una breve búsqueda en internet me topé con un código de <a href="http://rupert.id.au/tutorials/processing/examples/Arecibo_message_001/index.php">Rupert Russell</a> para generar algo por el estilo. Su código generaba un archivo png, que no es tan bueno para impresión, pero después de algunos ajustes al código logré que generara un archivo vectorial svg.</p>
+<p>Este es el código ajustado:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/* Enrique Acosta, 2022
 </span><span style="color:#75715e"> * Runs with Processing 4 (beta)
 </span><span style="color:#75715e"> * Based on the code by Rupert Russell downloaded from
@@ -197,8 +197,8 @@
 </span><span style="color:#75715e"></span>  println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Finished.&#34;</span><span style="color:#f92672">);</span>
   exit<span style="color:#f92672">();</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>This code runs on Procesing 4, a really nice &ldquo;learn to code by producing graphics&rdquo; language and open source compiler. There is a very fun Youtube Channel, <a href="https://www.youtube.com/c/TheCodingTrain/videos?view=0&amp;sort=p&amp;flow=grid">The Coding Train</a>, in which one can quickly see the very cool things one can do with relatively simple code. See also the official <a href="https://processing.org">Processing site</a>.</p>
-<p>Anyway, back to the code, here is the image it creates. Ready for printing!</p>
+</code></pre></div><p>El código corre en <code>Procesing 4</code>, un lenguaje de programación y compilador de código abierto muy interesante, con un enfoque de &ldquo;aprende a programar haciendo dibujos y obras artísticas digitales&rdquo;. Hay un canal de Youtube muy divertido en el que se puede ver rápidamente el tipo de cosas tan interesantes que uno puede hacer. El canal se llama  <a href="https://www.youtube.com/c/TheCodingTrain/videos?view=0&amp;sort=p&amp;flow=grid">The Coding Train</a>. También vale la pena mirar la <a href="https://processing.org">página oficial de Processing</a>.</p>
+<p>De regreso al código que adapté, esta es la imagen que produce. ¡Listo para imprimir!</p>
 <figure><img src="Arrecibo.svg" width="100%"/>
 </figure>
 
@@ -212,7 +212,7 @@
   <div class="license">
     <p>
       &copy 2022 Enrique Acosta. </br>
-      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
     </p>

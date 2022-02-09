@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/arrecibo-message/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -19,13 +19,13 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -37,46 +37,8 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/processing/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/processing/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</loc>
-    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
-    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -89,7 +51,7 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/hugo/</loc>
-    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -100,6 +62,80 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/categories/hugo/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/arrecibo-message/</loc>
+    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</loc>
+    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/processing/</loc>
+    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/processing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/processing/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/processing/</loc>
+    <lastmod>2022-02-03T18:56:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/processing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/processing/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</loc>
+    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
     <lastmod>2022-02-01T21:12:04-05:00</lastmod>

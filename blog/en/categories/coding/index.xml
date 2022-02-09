@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
     <description>Recent content in Coding on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Feb 2022 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 3: Tag Functionality and Listings, and Adding an About Page.</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</guid>
+      <description>This is a follow-up to two previous posts (here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
+Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface.</description>
+    </item>
+    
     <item>
       <title>Creating A Vector Graphics Version Of The Arrecibo Message</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</link>
@@ -18,13 +28,13 @@ Here is the message:
     </item>
     
     <item>
-      <title>Creating This Blog Part 2</title>
+      <title>Creating This Blog Part 2: More Multilingual Support Using i18n</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</link>
       <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</guid>
-      <description>This is a follow-up to a previous post describing how I set up this blog. Here I describe a couple of extra pieces of the setup including more elaborate multilingual support, the creation of a multilingual footer for all posts, and the about page.
-Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in with with a very nice and simple way to specify fixed texts that should change according to the language.</description>
+      <description>This is a follow-up to a previous post describing how I set up this blog. Here I describe setting up more elaborate multilingual support using i18n.
+Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in with i18n support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &amp;ldquo;multilingual snippets&amp;rdquo;. To start using it all I had to do was create the files en.</description>
     </item>
     
     <item>

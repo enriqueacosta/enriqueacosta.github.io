@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/</link>
     <description>Recent content in Programación on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creación de una imagen vectorial del mensaje Arrecibo para imprimir</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</link>
+      <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</guid>
+      <description>Hace poco recordé el mensaje de Arrecibo y descubrí que el artículo de Wikipedia es excelente (la versión en inglés es un poco más completa). Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.
+Este es el mensaje:
+ Mensaje de Arrecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.</description>
+    </item>
+    
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Creating This Blog Part 2 &middot; Enrique Acosta Jaramillo</title>
+  <title>Creating This Blog Part 2: More Multilingual Support Using i18n &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
@@ -92,7 +92,7 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Creating This Blog Part 2</h1>
+  <h1>Creating This Blog Part 2: More Multilingual Support Using i18n</h1>
   
   
   <time datetime=2022-02-01T21:12:04-0500 class="post-date">February 1, 2022</time>
@@ -112,9 +112,9 @@
   
   
   <div>
-  <p>This is a follow-up to a <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe a couple of extra pieces of the setup including more elaborate multilingual support, the creation of a multilingual footer for all posts, and the about page.</p>
+  <p>This is a follow-up to a <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe setting up more elaborate multilingual support using <a href="https://github.com/nicksnyder/go-i18n">i18n</a>.</p>
 <h2 id="multilingual-text-snippets-using-i18n">Multilingual Text &ldquo;Snippets&rdquo; Using i18n</h2>
-<p>Hugo comes built in with with a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. All I had to do was create the files <code>en.toml</code> and <code>es.toml</code> in the already-existing <code>i18n</code> folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &ldquo;translation dictionaries&rdquo;.</p>
+<p>Hugo comes built in with <code>i18n</code> support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. To start using it all I had to do was create the files <code>en.toml</code> and <code>es.toml</code> in the already-existing <code>i18n</code> folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &ldquo;translation dictionaries&rdquo;.</p>
 <p>For example, I added to the <code>en.toml</code> the lines:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">cc-license</span>]
    <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;This work is licensed under a&#34;</span>
@@ -160,11 +160,44 @@
 
 [<span style="color:#a6e22e">Tags</span>]
    <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Etiquetas&#34;</span>
-</code></pre></div><h2 id="making-the-read-more-links-in-the-post-list-be-multilingual">Making the &ldquo;Read More&rdquo; Links in The Post List be Multilingual</h2>
-<p>This shows how multilingual snippets using i18n work in practice.</p>
-<p>FINISH</p>
-<h2 id="adding-a-multilingual-footer-to-all-posts">Adding a Multilingual Footer to All Posts</h2>
-<p>At the end of all posts on this site (including this one) you will see a footer with horizontal line and a copyright and licensing text. I accomplished this as follows:</p>
+</code></pre></div><h2 id="making-the-read-more-links-in-the-post-list-be-multilingual">Making the &ldquo;Read More&rdquo; Links in the Post List be Multilingual</h2>
+<p>This shows how multilingual snippets using i18n work in practice. The <code>Read More ...</code> link is added in the list of all posts right after the little preview with the first lines of each post. See screenshot below:</p>
+<figure><img src="readMoreScreenshot.png" width="60%"/>
+</figure>
+
+<p>The whole post list together with the read more links are automatically generated using the layout file <code>layouts/index.html</code>. The original contents of this file for the Hyde theme are the following (the generation of the <code>Read More ...</code> link is in line <code>14</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>{{ define &#34;main&#34; -}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#75715e">&lt;!-- This is the &#34;truncated blog posts page --&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>{{ range .Site.RegularPages -}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>  {{ if ne .Type &#34;about&#34; }}  <span style="color:#75715e">&lt;!-- skips the static page with type about in content/about --&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>    &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>      &lt;/<span style="color:#f92672">h1</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>      &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02T15:04:05Z0700</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>      {{ .Summary }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>      {{ if .Truncated }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;read-more-link&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;Read More ...&lt;/<span style="color:#f92672">a</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>      &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>      {{ end }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    &lt;/<span style="color:#f92672">article</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>  {{ end }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>{{- end }}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>&lt;/<span style="color:#f92672">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>{{- end }}
+</code></pre></div><p>All I had to do to make this link be multilingual was add an entry to the <code>en.toml</code> and <code>es.toml</code> dictionaries defining a <code>read-more</code> snippet:</p>
+<p><strong>en.toml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">Read-More</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Read More&#34;</span>
+</code></pre></div><p><strong>es.toml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">Read-More</span>]
+   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Leer más&#34;</span>
+</code></pre></div><p>And then change line <code>14</code> to</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ i18n &#34;Read-More&#34; }} ...&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><h2 id="adding-a-multilingual-footer-to-all-posts">Adding a Multilingual Footer to All Posts</h2>
+<p>At the end of all posts on this site (including this one) you will see a footer after a horizontal line with a copyright notice and some licensing text. I accomplished this as follows:</p>
 <ol>
 <li>In the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts, I added the following command at the end:</li>
 </ol>
@@ -197,51 +230,8 @@
 <li>The <code>&lt;a rel=&quot;license&quot; href=&quot;{{ i18n &quot;cc-license-url&quot;}}&quot;&gt; {{ i18n &quot;cc-license-linkText&quot; }} &lt;/a&gt;</code> is a link which has as text the <code>cc-license-linkText</code> multilingual snippet I defined in the i18n toml files. Moreover, the link URL is also a multilingual snippet, controlled by the href <code>href=&quot;{{ i18n &quot;cc-license-url&quot;}}&quot;</code>. The link points to different places according to the language, determined by the <code>cc-license-url</code> snippet!</li>
 <li>The second <code>&lt;a ...&gt;&lt;img ... .png&quot;/&gt;&lt;/a&gt;</code> is the little CC-image, loaded from i.creativecommons.org, that links to the same license.</li>
 </ul>
-<h2 id="listing-the-tags-for-each-post">Listing the Tags For Each Post</h2>
-<p>The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface. Here is how I did it.</p>
-<p>To specify the tags of a post, the header of a post should have a <code>tags:</code> entry, such as this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating This Blog Part 2&#34;</span>
-<span style="color:#f92672">date</span>: <span style="color:#e6db74">2022-02-01T21:12:04</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
-<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
-<span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>, <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Multilingual i18n&#34;</span>]
-<span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
----
-</code></pre></div><p>To get the tags to show up at the beginning of the post, one can add a simple code to the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;<span style="color:#a6e22e">p</span>&gt; 
-  &lt;<span style="color:#a6e22e">strong</span>&gt;{{ <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;Tags&#34;</span>}}: &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">strong</span>&gt;
-  {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span> }}
-      &lt;<span style="color:#a6e22e">br</span><span style="color:#f92672">/</span>&gt; <span style="color:#f92672">--</span> {{ . }} 
-  {{ <span style="color:#a6e22e">end</span> }}
-&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
-</code></pre></div><p>In this case, the output would be:</p>
-<p><strong>Tags:</strong><br>
-&ndash; Blog setup<br>
-&ndash; Hugo<br>
-&ndash; Multilingual i18n</p>
-<p>Here:</p>
-<ul>
-<li>The <code>&lt;strong&gt;{{ i18n &quot;Tags&quot;}}: &lt;/strong&gt;</code> adds in bold the multilingual <code>Tags</code> snippet which accodding to the files en.toml and es.toml shows up as &ldquo;Tags&rdquo; if the page is in English, or &ldquo;Etiquetas&rdquo; if the page is in Spanish.</li>
-<li>The <code>{{ range .Params.tags }} ... {{ end }}</code> loops over the <code>.Params.tags</code>, which are the tags that are defined in the post.</li>
-<li>The <code>&lt;br/&gt; -- {{ . }} </code> adds a line break, a dash <code>--</code>, and the <code>{{ . }}</code> displays the tag name.</li>
-</ul>
-<p>I wanted something fancier, which listed tags in a single line separated by commas, and more importantly, linked to the page that Hugo automatically generates for each tag. After several tweaks, this was the final code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;<span style="color:#a6e22e">p</span>&gt; 
-  &lt;<span style="color:#a6e22e">strong</span>&gt;{{ <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;Tags&#34;</span>}}: &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">strong</span>&gt;
-  {{ <span style="color:#66d9ef">range</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span>,  <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">tags</span> }}
-      {{<span style="color:#f92672">-</span> <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span>}}, {{ <span style="color:#a6e22e">end</span> <span style="color:#f92672">-</span>}}
-      &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}tags/{{ . | urlize }}&#34;</span>&gt;{{ . }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
-  {{ <span style="color:#a6e22e">end</span> }}
-&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">p</span>&gt;
-</code></pre></div><p>What the fancier pieces of the code do is:</p>
-<ul>
-<li>The <code>range $i,</code> in the loop definition is a loop counter, to allow adding a comma after each tag link only after the first tag is listed (one does not want a comma at the beginning of the end of the list).</li>
-<li>The <code>{{- if $i -}}, {{ end -}}</code> adds a comma between each tag link only after the first tag is listed.</li>
-<li>The fancy looking <code>&lt;a href...</code> creates a link to the Hugo automatically-generated page of the corresponding tag (of the form <code>BASE_URL/blog/en/tags/katex/</code> if the tag is &ldquo;KaTeX&rdquo;).</li>
-</ul>
-<h2 id="adding-browsing-by-tags-and-categories-to-the-sidebar">Adding Browsing by &ldquo;Tags&rdquo; and &ldquo;Categories&rdquo; to the Sidebar.</h2>
-<h2 id="adding-an-about-page-which-does-not-use-the-layout-of-the-posts">Adding an &ldquo;About&rdquo; Page Which Does Not Use the Layout of the Posts.</h2>
-<h2 id="dont-forget-to-add-reference-in-the-old-post-to-this-one">DONT FORGET TO ADD REFERENCE IN THE OLD POST TO THIS ONE</h2>
+<h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
+<p>See other posts under the <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
 
   </div>
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Listing Tags on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</link>
+    <description>Recent content in Listing Tags on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 05 Feb 2022 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/listing-tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 3: Tag Functionality and Listings, and Adding an About Page.</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</guid>
+      <description>This is a follow-up to two previous posts (here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
+Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface.</description>
+    </item>
+    
+  </channel>
+</rss>

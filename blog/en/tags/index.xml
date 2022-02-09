@@ -5,7 +5,34 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Feb 2022 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog setup</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/hugo/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Listing Tags</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Arrecibo Message</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/arrecibo-message/</link>
@@ -21,24 +48,6 @@
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog setup</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
-      <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/hugo/</link>
-      <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/hugo/</guid>
       <description></description>
     </item>
     
