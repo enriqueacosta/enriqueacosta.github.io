@@ -70,6 +70,7 @@ html {
   }
 }
 
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;
@@ -257,5 +258,9 @@ a.sidebar-nav-item:focus {
 }
 
 .license {
-  font-size: 18px;
+  font-size: 1rem;
+}
+
+.katex { 
+  font-size: 1.0rem !important; 
 }

@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -18,14 +15,17 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/climate-change/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/data/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/data/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -36,6 +36,59 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/exponential/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/mauna-loa/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/modeling/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/quadratic/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2022-02-09T16:02:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
@@ -65,32 +118,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/arrecibo-message/</loc>
     <lastmod>2022-02-03T18:56:42-05:00</lastmod>
@@ -188,9 +215,6 @@
     <loc>https://enriqueacosta.github.io/blog/en/tags/logistic/</loc>
     <lastmod>2021-12-23T19:40:37-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
-    <lastmod>2021-12-23T19:40:37-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
     <lastmod>2021-12-23T19:40:37-05:00</lastmod>
     <xhtml:link
@@ -243,16 +267,7 @@
                 href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/data/</loc>
-    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/data/</loc>
-    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/delta-variant/</loc>
-    <lastmod>2021-12-15T18:48:00-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/modeling/</loc>
     <lastmod>2021-12-15T18:48:00-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/about/about/</loc>
