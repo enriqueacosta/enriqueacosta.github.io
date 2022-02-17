@@ -258,10 +258,10 @@ a.sidebar-nav-item:focus {
 }
 
 .license {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 .katex { 
   /*font-size: 1.1rem !important; */
-  font-size: 1.1rem; 
+  font-size: 1.1em; 
 }

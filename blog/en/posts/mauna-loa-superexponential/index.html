@@ -120,12 +120,12 @@
 $$f(t)=P_0(b+mt)^t.$$</p>
 <p>Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:
 $$g(t)= C+Ba^{t}.$$
-This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then started to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &ldquo;super-exponential&rdquo; growth.</p>
-<p>Finally, I found a quadratic function which also gives a good fit!
+This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then began to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &ldquo;super-exponential&rdquo; growth.</p>
+<p>Finally, I found a quadratic function that also gives a good fit!
 $$
 h(t)= a_2x^2+a_1x+a_0.
 $$
-These three functions all give very good fits to almost $70$ years worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
+These three functions all give very good fits for almost $70$ years' worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
 <p>Here are some interesting details about this little modeling &ldquo;telenovela&rdquo;.</p>
 <h2 id="source-of-the-data----the-keeling-curve">Source of the Data &ndash; the Keeling Curve</h2>
 <p>The graph below shows the monthly mean CO$_2$ concentration data the from Mauna Loa observatory in Hawaii, 11,135ft above sea level, which has been continuously collecting data related to climate change since the 1950s. This is known as the <a href="https://en.wikipedia.org/wiki/Keeling_Curve">Keeling Curve</a>, named after Charles David Keeling who started the monitoring program.</p>
@@ -142,9 +142,9 @@ These three functions all give very good fits to almost $70$ years worth of data
 </figure>
 
 <!-- raw HTML omitted -->
-<p>The fact that the best exponential fit according to a spreadsheet does not grow as fast as the data is a clear indication that faster-than-exponential growth <em>could</em> be happening. But this <em>could</em> has to be taken with care! Saying &ldquo;the spreadsheet could not do it&rdquo; is not a definite reason/explanation for anything.</p>
+<p>The fact that the best exponential fit according to a spreadsheet does not grow as fast as the data is a clear indication that faster-than-exponential growth <em>could</em> be happening. But this &ldquo;<em>could</em>&rdquo; has to be taken with care! Saying &ldquo;the spreadsheet could not do it&rdquo; is not a definite reason/explanation for anything.</p>
 <h4 id="knowing-for-sure-that-there-is-no-exponential-fit-to-the-data">Knowing for Sure That There is no Exponential Fit to the Data</h4>
-<p>The following is a log-plot of the same data (technically, a semi-log plot because only the vertical axis got a log scale). Forgive the lack of numbers on the vertical axis, I could not get libreOffice to display any more of them on the axis. I tried plenty!</p>
+<p>The following is a log-plot of the same data (technically, a semi-log plot because only the vertical axis got a log scale). Forgive the lack of numbers on the vertical axis, I could not get LibreOffice to display any more of them on the axis. I tried plenty!</p>
 <figure><img src="Mauna-loa-exponential-fit-log-plot.png"/>
 </figure>
 
@@ -155,8 +155,8 @@ These three functions all give very good fits to almost $70$ years worth of data
         </figcaption>
 </figure>
 
-<p>The fact that the data still bends upward in these figures that use a log scale on the vertical axis is a definite indication that there is no exponential fit to the data. Why this is so: the log plot of any exponential function (i.e., of the form $P_0a^t$ for constants $P_0$ and $a$) will look like a straight line. You can see this in the figures above in the fact that the plot of $309.837e^{0.0045t}$ looks like a straight line instead of bending upwards.</p>
-<p>In fact, this &ldquo;straightening exponential functions&rdquo; is precisely what placing a logarithmic scale on the vertical axis accomplishes &ndash; it straightens out exponential growth by speeding up the labels on the vertical axis in exactly the right way. Pretty cool, if you ask me!</p>
+<p>The fact that the data still bends upward in these figures that use a log scale on the vertical axis is a definite indication that there is no exponential fit to the data. Why this is so: the log plot of any exponential function (i.e., of the form $P_0a^t$ for constants $P_0$ and $a$) will look like a straight line. You can see this in the figures above: the plot of $309.837e^{0.0045t}$ looks like a straight line instead of bending upwards.</p>
+<p>In fact, this &ldquo;straightening exponential functions&rdquo; is precisely what placing a logarithmic scale on the vertical axis accomplishes &ndash; it straightens out exponential growth by speeding up the labels on the vertical axis in exactly the right way. Pretty cool if you ask me!</p>
 <!-- raw HTML omitted -->
 <h4 id="looking-at-the-growth-factors-in-the-data">Looking at the Growth Factors in the Data</h4>
 <p>So, $\text{CO}_2$ seems to be growing faster than any exponential $P_0a^t$. How much faster?</p>
@@ -174,17 +174,21 @@ So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;b
 <figure><img src="MaunaLoaGrowthFactors.png"/>
 </figure>
 
-<p>Note the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential of the form $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$), and for an approximately exponential function we would see it jump up and down about a constant value.</p>
+<p>Note that the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$). For an approximately exponential we would see it jump up and down about a constant value.</p>
 <h5 id="what-if-we-assume-this-upward-trend-in-the-growth-factors-were-linear-finding-a-model-for-the-data-of-the-form-p_0bmtt">What if we Assume This Upward Trend in the Growth Factors Were Linear? Finding a Model for the Data of the Form $P_0(b+mt)^t$</h5>
-<p>Below is a linear trend line to the growth factor data, found using a spreadsheet.</p>
+<p>The figure below shows a linear trend line for the growth factor data. It was found using a spreadsheet.</p>
 <figure><img src="MaunaLoaGrowthFactorsTrendLine.png"/>
 </figure>
 
-<p>Identifying this trend line as how $a$ should change in a super-exponential model, we would guess a model of the form $P_0(b+mt)^t$ like this:
+<p>Identifying this trend line formula as the way the $a$ should change in a super-exponential model, we would guess a model for the CO$_2$ levels of the form $P_0(b+mt)^t$, as follows:
 $$
 315.98(1.002615+0.000059t)^t.
 $$
-Here $P_0=315.98$ is the CO$_2$ measurement in Mauna Loa in the year 1950 corresponding to $t=0$, and the $b+mt=1.002615+0.000059t$ is the trend line we found with the spreadsheet. It tells us the factor by which to multiply from one year to the next (increasing with the year $t$).</p>
+Here</p>
+<ul>
+<li>$P_0=315.98$ is the CO$_2$ measurement in Mauna Loa in the year 1950 corresponding to $t=0$, and</li>
+<li>$b+mt=1.002615+0.000059t$ is the trend line we found with the spreadsheet. It tells us the factor by which to multiply from one year to the next (increasing with the year $t$).</li>
+</ul>
 <p>If one plots this model one sees it does not give a great fit, but tweaking the parameters a little, one does get a very good fit. The final model, graphed below together with the data, is given by
 $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 <p>Very good fit!</p>
@@ -193,7 +197,7 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 
 <h2 id="second-model-the-exponential-plus-constant-cbat">Second Model: the Exponential Plus Constant $C+Ba^{t}$</h2>
 <p>So, all that I showed above seems to indicate no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
-<p>The thing is, log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential, just that it is not well modeled by any exponential function of the form $P_0a^t$. This is a common misconception with log plots, which I feel into myself!</p>
+<p>In reality, log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential, just that it is not well modeled by any exponential function of the form $P_0a^t$. This is a common misconception with log plots, which I feel into myself!</p>
 <p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the quantity amount when $t=0$).</p>
 <p>So,  I set out to look for possible parameter values for $a,B$, and $C$ that would give a good fit to the data. This is not as straightforward to do with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
 <h4 id="how-i-found-good-parameter-values">How I found good parameter values</h4>
@@ -206,7 +210,7 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 </figure>
 
 <h4 id="difference-between-the-two-models-exponential--constant-vs-super-exponential">Difference Between the two Models (exponential + constant vs. super-exponential)</h4>
-<p>Here they are together (now as an awesome TikZ+pgfplots figure that allows me to generate figures for different ranges in a breeze). Making a plot with so similar curves that would allow to differentiate between them was not that simple! Using different markers for each curve (also very important for accessibility related to color-blindness) definitely helps.</p>
+<p>Here they are together (now as an awesome TikZ+pgfplots figure that allows me to generate figures for different ranges in a breeze). Making a plot with curves that are so similar and that still allows to differentiate between them was not that simple! Using different markers for each curve (also very important for accessibility related to color-blindness) definitely helps.</p>
 <figure><img src="MaunaLoaTwoModelsTikz65.png"/>
 </figure>
 
@@ -264,6 +268,20 @@ $$</p>
 <figure><img src="MaunaLoaThreeModelsTikz100.png"/>
 </figure>
 </p>
+<h2 id="what-to-take-away-from-all-of-this">What to take away from all of this</h2>
+<ul>
+<li>Which model is better? Any of the three of the models is equally valid in the sense that they all give very tight fits to the data.</li>
+<li>It is pretty amazing that there are such simple formulas that model the growth of CO$_2$ levels for over 70 years.</li>
+<li>Even though the three models give radically different long-term behaviors, they do so at time-scales that are far larger than what it would make sense to expect the models to be valid.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>The model that may make more sense physically is the exponential plus constant, because it starts if from a constant base level, and many modern world phenomena increase exponentially (including world population).</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>CO$_2$ levels are most certainly rising at an increasing rate (graph bending upwards). Even if rising rate stops increasing, it is likely to expect them to stabilize above 600 ppm.</li>
+</ul>
 
   </div>
 
