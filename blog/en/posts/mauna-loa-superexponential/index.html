@@ -174,7 +174,7 @@ So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;b
 <figure><img src="MaunaLoaGrowthFactors.png"/>
 </figure>
 
-<p>Note that the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$). For an approximately exponential we would see it jump up and down about a constant value.</p>
+<p>Note that the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$). <!-- raw HTML omitted --></p>
 <h5 id="what-if-we-assume-this-upward-trend-in-the-growth-factors-were-linear-finding-a-model-for-the-data-of-the-form-p_0bmtt">What if we Assume This Upward Trend in the Growth Factors Were Linear? Finding a Model for the Data of the Form $P_0(b+mt)^t$</h5>
 <p>The figure below shows a linear trend line for the growth factor data. It was found using a spreadsheet.</p>
 <figure><img src="MaunaLoaGrowthFactorsTrendLine.png"/>
@@ -196,10 +196,10 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 </figure>
 
 <h2 id="second-model-the-exponential-plus-constant-cbat">Second Model: the Exponential Plus Constant $C+Ba^{t}$</h2>
-<p>So, all that I showed above seems to indicate no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
-<p>In reality, log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential, just that it is not well modeled by any exponential function of the form $P_0a^t$. This is a common misconception with log plots, which I feel into myself!</p>
+<p>All that I showed above seems to indicate that no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
+<p>In reality, lines in log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential. It just means that it is not modeled well by any exponential function (of the form $P_0a^t$). This is a common misconception with log plots, which I had myself!</p>
 <p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the quantity amount when $t=0$).</p>
-<p>So,  I set out to look for possible parameter values for $a,B$, and $C$ that would give a good fit to the data. This is not as straightforward to do with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
+<p>Finding possible parameter values for $a,B$, and $C$ that give a good fit to the data is not as straightforward with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
 <h4 id="how-i-found-good-parameter-values">How I found good parameter values</h4>
 <p>I tried out different values of $C$ to make the quantity &ldquo;$\text{CO}_2~\text{level}-C$&rdquo; behave like an exponential by computing its growth factors and trying to make them constant (this would not be possible if there was no good model of the form $C+Ba^{t}$).</p>
 <h4 id="resulting-model">Resulting model</h4>
