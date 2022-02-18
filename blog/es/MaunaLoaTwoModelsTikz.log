@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  15 FEB 2022 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  17 FEB 2022 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,10 +551,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./MaunaLoaTwoModelsTikz.aux) ) 
 Here is how much of TeX's memory you used:
- 22302 strings out of 480608
- 594555 string characters out of 5903631
+ 22305 strings out of 480608
+ 594628 string characters out of 5903631
  963444 words of memory out of 5000000
- 37872 multiletter control sequences out of 15000+600000
+ 37875 multiletter control sequences out of 15000+600000
  532338 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,18n,107p,717b,2219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -562,7 +562,7 @@ Here is how much of TeX's memory you used:
 public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr7.pfb>
-Output written on MaunaLoaTwoModelsTikz.pdf (1 page, 39680 bytes).
+Output written on MaunaLoaTwoModelsTikz.pdf (1 page, 40650 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
