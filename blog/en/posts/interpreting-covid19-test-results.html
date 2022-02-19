@@ -1066,9 +1066,14 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>"Interpreting Covid-19 Test Results"</title></head><body><article class="markdown-body"><p>Ever since the pandemic started, the subject of interpreting a Covid-19 test result has been coming back to bite me over and over again. I knew that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but every time I tried to read about this I ended up reading articles with lots of tables with made up numbers that did not help me  gain any clarity or understanding on the matter. I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that got me a bit closer.</p>
-<p>I encourage whoever reads this post to go ahead and read the column. The author really does a fantastic job at explaining why the interpretation of a Covid-19 tests depends on the portion of the population that is infected at that moment. In what follows I give a brief summary, provide some extra explanations, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
-<p>Here is the short summary. Hope it makes sense!</p>
+</style><title>"Interpreting Covid-19 Test Results"</title></head><body><article class="markdown-body"><p>Ever since the pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again. </p>
+<p>I knew that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter. </p>
+<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a brief summary, provide some extra explanations, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
+<!-- I encourage whoever reads this post to go ahead and read the column. The author really does a fantastic job at explaining why the interpretation of a Covid-19 tests depends on the portion of the population that is infected at that moment. In what follows I give a brief summary, provide some extra explanations, and show some nice interactive plots that I made to play around with the ideas in the column. -->
+
+<!-- Here is the short summary. Hope it makes sense! -->
+
+<p>Before going any further, I need to establish some terminology.</p>
 <h3 id="some-terminology">Some terminology<a class="headerlink" href="#some-terminology" title="Permanent link"></a></h3>
 <ul>
 <li>A Covid-19 test may give a positive result when the person is not infected. This is called a <em>false positive</em>.</li>
@@ -1078,14 +1083,15 @@ body .markdown-body
 </ul>
 <!-- ### What probability has to do with any of this -->
 
-<h3 id="guaranteed-to-have-less-than-1-false-negatives">&ldquo;Guaranteed to have less than 1% false negatives!&rdquo;<a class="headerlink" href="#guaranteed-to-have-less-than-1-false-negatives" title="Permanent link"></a></h3>
+<h3 id="dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives">Don&rsquo;t believe a test saying &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;<a class="headerlink" href="#dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives" title="Permanent link"></a></h3>
 <p>A natural assumption is to believe that the percentage of each of these cases (false negatives, true positives, etc.) depends on the quality of the test:</p>
 <ul>
 <li>a high quality test has few false negatives, and few false positives.</li>
 <li>a low quality test has more false negatives, and more false positives.</li>
 </ul>
-<p>Now, the thing is, this is not entirely true, and the percentage of each case depends on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-18 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this cannot be given.</p>
-<p>Wrapping one&rsquo;s head around this and understanding why this is so is the content of the column I linked above.</p>
+<p>Now, the thing is, this is not entirely true! The percentage of each case depends on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
+<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that I mentioned above. </p>
+<p>I will try my best to be self contained in what follows, I encourage whoever reads this post to go ahead and read the column. The author really does a fantastic job at explaining the phenomenon. </p>
 <h3 id="pre-test-probability">Pre-test probability<a class="headerlink" href="#pre-test-probability" title="Permanent link"></a></h3>
 <p>Explain that it is not the portion of the population. More like:</p>
 <ul>
