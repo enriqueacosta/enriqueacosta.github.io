@@ -1,0 +1,118 @@
+\documentclass[border=1pt, 12pt, tikz]{standalone}
+
+\newcommand\wideOne{3cm}
+\newcommand\wideTwo{4cm}
+\newcommand\wideThree{2.7cm}
+\newcommand\wideFour{3cm}
+\newcommand\distOne{2cm}
+\newcommand\distTwo{1cm}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+
+% 1st level
+\draw[thick]%
+   (0,0) 
+   -- node[above, sloped, align=center]
+      {infected} 
+   (\wideOne,\distOne);
+\draw[thick] 
+   (0,0) 
+   -- node[below, sloped, align=center]
+      {not infected} 
+   (\wideOne,-\distOne);
+
+% 2nd, 3rd and 4th Level
+\draw[thick] 
+   (\wideOne,\distOne)
+   -- node[above, align=center, sloped]
+      {test says positive\\(sensitivity $a\%$)}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {true positive}
+   ; 
+\draw[very thick, blue] 
+   (\wideOne,\distOne) 
+   -- node[below, align=center, sloped]
+      {\textcolor{black}{test says negative}\\{\bf($100\%-a\%$)}}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {\textcolor{black}{false negative}}
+   ;
+\draw[very thick, blue] 
+   (\wideOne,-\distOne) 
+   -- node[above, align=center, sloped]
+      {\textcolor{black}{test says positive}\\{\bf ($100\%-b\%$)}}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {\textcolor{black}{false positive}}
+   ;  
+\draw[thick] 
+   (\wideOne,-\distOne)
+   -- node[below, align=center, sloped]
+      {test says negative\\(specificity $b\%$)}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {true negative}
+   ; 
+\end{tikzpicture}
+\end{document}
+
+
+% \newcommand\wideOne{3cm}
+% \newcommand\wideTwo{3.5cm}
+% \newcommand\wideThree{2.7cm}
+% \newcommand\wideFour{3cm}
+% \newcommand\distOne{2cm}
+% \newcommand\distTwo{1cm}
+
+% \begin{document}
+% \begin{tikzpicture}[scale=1]
+
+% % 1st level
+% \draw[thick]%
+%    (0,0) 
+%    -- node[above, sloped, align=center]
+%       {1st is heart} 
+%    (\wideOne,\distOne);
+% \draw[thick] 
+%    (0,0) 
+%    -- node[below, sloped, align=center]
+%       {1st is not heart} 
+%    (\wideOne,-\distOne);
+
+% % 2nd, 3rd and 4th Level
+% \draw[thick] 
+%    (\wideOne,\distOne)
+%    -- node[above, align=center, sloped]
+%       {2nd is heart}
+%    ++ (\wideTwo,\distTwo) 
+%       node[right, align=center, text width=\wideThree]
+%       {1st is heart and\\2nd is heart}
+%    ; 
+% \draw[thick] 
+%    (\wideOne,\distOne) 
+%    -- node[below, align=center, sloped]
+%       {2nd is not heart}
+%    ++ (\wideTwo,-\distTwo) 
+%       node[right, align=center, text width=\wideThree]
+%       {1st is heart and 2nd not heart}
+%    ;
+% \draw[thick] 
+%    (\wideOne,-\distOne) 
+%    -- node[above, align=center, sloped]
+%       {2nd is heart}
+%    ++ (\wideTwo,\distTwo) 
+%       node[right, align=center, text width=\wideThree]
+%       {1st not heart and 2nd heart}
+%    ;  
+% \draw[thick] 
+%    (\wideOne,-\distOne)
+%    -- node[below, align=center, sloped]
+%       {2nd is not heart}
+%    ++ (\wideTwo,-\distTwo) 
+%       node[right, align=center, text width=\wideThree]
+%       {1st not heart and 2nd not heart}
+%    ; 
+% \end{tikzpicture}
+% \end{document}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El % de casos de Covid de la variante Delta creció como una función logística &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>El % de casos de Covid de la variante Delta creció como una función logística</h1>
+  
+  
+  <time datetime=2021-12-15T18:48:00-0500 class="post-date">15 de diciembre de 2021</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/covid-19">Covid-19</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/variante-delta">Variante Delta</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/datos">Datos</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/crecimiento-log%C3%ADstico">Crecimiento Logístico</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/tikz">Tikz</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/">English: Covid-19 Delta Variant % Share of Cases Grew Logistically</a>)</h4>
+    
+  
+  <div>
+  <p>Hoy, como parte de mi trabajo, <!-- raw HTML omitted --> me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.</p>
+<p>La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta+variant+%28share%29&amp;Interval=Weekly&amp;Relative+to+Population=true&amp;Align+outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA">Our World In Data</a>. <!-- raw HTML omitted --></p>
+<figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
+            <p>Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</p>
+        </figcaption>
+</figure>
+
+<p>Las curvas de la imagen parecen &ldquo;logísticas&rdquo; en el sentido de tener forma sigmoide (forma de S) y ser simétricas. Sin embargo, no todo lo que tiene forma sigmoide se puede modelar bien por una función logística.</p>
+<p>La función logística general es de la forma
+$$f(t)=\frac{L}{1+e^{-k(t-a)}}$$
+y su gráfica se ve como sigue (figura creada por mí con Tikz, ¡mostraré el código en otra entrada de blog!)</p>
+<figure><img src="LogisticFunctionParams.es.png" width="450"/>
+</figure>
+
+<p>Hay formas elaboradas de verificar si unos datos se puede modelar con una función logística, como por ejemplo, usando con la ecuación diferencial del crecimiento logístico (ver la <a href="https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/#otras-formas-m%C3%A1s-elaboradas-para-saber-si-algo-es-log%C3%ADstico">discusión abajo</a>). Sin embargo, últimamente prefiero revisar si algo es logístico, ya sea:</p>
+<ul>
+<li>graficando los puntos de datos y tratando de ajustar una curva logística a los datos usando controles deslizantes para los parámetros $L$, $a$ y $k$.</li>
+<li>organizando una hoja de cálculo con los datos, la gráfica de los datos, y la gráfica de los valores de un modelo logístico que hacen referencia a los valores para los parámetros $L$, $a$ y $k$ en celdas especiales. Así, al modificar los valores de los parámetros la gráfica se actualiza, y con prueba y error, veo si hay un buen ajuste gráfico.</li>
+</ul>
+<p>Este enfoque gráfico es lo que me propuse hacer, ¡y me sorprendió mucho lo que encontré!</p>
+<h2 id="ajuste-logístico-al--de-casos-de-covid-en-los-estados-unidos-que-son-de-la-variante-delta">Ajuste logístico al % de casos de Covid en los Estados Unidos que son de la variante Delta</h2>
+<p>Tomando $t=0$ como el 8 de febrero de 2021, un modelo que se ajusta muy bien a los datos está dado por:</p>
+<ul>
+<li>$L = 1$ (la variante Delta alcanzó a ser el $100\%$ de los casos en 2021 antes de la llegada de la variante Omicron).</li>
+<li>$k = 0.09$ (el valor de $k$ dice qué tan rápido es el crecimiento en una curva logística, y su valor $0.09 = 9 \%$ está relacionado con la tasa inicial de crecimiento exponencial en el % de los casos).</li>
+<li>$a=139$ (esto solo corresponde a una traslación horizontal de la curva y no tiene mucha importancia desde el punto de vista matemático &mdash;  es solo el momento del año en que la tasa de crecimiento de la proporción de Delta fue la más alta, en $\%$ por día).</li>
+</ul>
+<p>El modelo logístico se muestra en la siguiente figura:</p>
+<figure><img src="USDeltaVariantLogistic.png" width="400"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<p>Otra forma de decir esto:
+$$
+\begin{array}{c}
+\text{Proporción de casos en los Estados}\cr
+\text{Unidos que son de la variante Delta} \cr
+\text{$t$ días después de febrero 8 de 2021}
+\end{array}  = \frac{1}{1+e^{-0.09(t-139)}}
+$$</p>
+<p>Puede encontrar usted mismo este ajuste logístico si la siguiente aplicación de Desmos se carga (use los controles deslizantes para $A$ y $k$). Si no se carga, simplemente siga <a href="https://www.desmos.com/calculator/saydhyssyq">este enlace</a> o descargue los datos y juegue usted mismo en la <a href="Data-DeltaShareIndiaUKUSBra.xls">hoja de cálculo que creé</a>.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/ht3gvoopty?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h2 id="ajuste-logístico-al--de-casos-de-covid-en-el-reino-unido-que-son-de-la-variante-delta">Ajuste logístico al % de casos de Covid en el Reino Unido que son de la variante Delta</h2>
+<p>El buen ajuste no es solo para datos de los Estados Unidos. Intenté lo mismo con los datos del Reino Unido y obtuve un ajuste similar.</p>
+<p>En este caso $k=0.11$, $a=104$ y $L=1$. Es interesante que $k$ sea diferente, ya que dice que la variante Delta superó a otras variantes ligeramente más rápido en el Reino Unido que en los Estados Unidos.</p>
+<p>Aquí está la gráfica:</p>
+<figure><img src="USDeltaVariantLogistic.png" width="400"/>
+</figure>
+
+<p>Y aquí está la aplicación de Demos con controles deslizantes (siga <a href="https://www.desmos.com/calculator/ih9yhwoqxx">este enlace</a> si no se carga). Intente cambiar $k$ a 0.09 para ver de la diferencia en la forma en que la variante Delta superó otras variantes entre los Estados Unidos y el Reino Unido.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/ih9yhwoqxx?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h2 id="no-hay-buen-ajuste-con-una-función-logística-para-todos-los-datos-en-forma-sigmoide">No hay buen ajuste con una función logística para todos los datos en forma sigmoide</h2>
+<p>¡La mejor forma de ver esto es con un ejemplo!</p>
+<p>Intente ajustar a un modelo logístico con los controles deslizantes en la siguiente aplicación de Desmos. Los datos son del número total (acumulativo) de casos en la primera ola de Covid-19 en Italia en 2020 (aquí hay un <a href="https://www.desmos.com/calculator/xigjjslhlr">enlace</a> en caso de que no se cargue).</p>
+<p>Al intentar ajustar la curva a los datos con los controles deslizantes, pronto entenderá por qué no va a encontrar un buen ajuste.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/xigjjslhlr?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<p>(datos de John&rsquo;s Hopkins University).</p>
+<p>Esta es una captura de pantalla por si la aplicación de Desmos no se carga:</p>
+<figure><img src="ItalyCovidLogisticFail.png" width="400"/>
+</figure>
+
+<h2 id="otras-formas-más-elaboradas-para-saber-si-algo-es-logístico">Otras formas (más elaboradas) para saber si algo es logístico</h2>
+<p>El crecimiento logístico se rige por la ecuación diferencial
+$$
+\frac{dy}{dt}=ky\left(1-\frac{y}{L}\right)\tag{1}
+$$
+que también se puede escribir como
+$$
+\frac{y'}{y}=k(1-y/L).\tag{2}
+$$
+Esta última ecuación dice que el crecimiento relativo $y'/y$ (que se puede interpretar en un cambio porcentual en una unidad de tiempo) está disminuyendo linealmente como función de $y$.</p>
+<p>Note:</p>
+<ul>
+<li>$y'/y\approx k$ cuando $y\approx0$ (que corresponde a crecimiento exponencial de $y$ con una tasa de crecimiento continua $k$ al inicio del crecimiento)</li>
+<li>$y'/y\approx 0$ cuando $y\approx L$ (que corresponde a que $y$ es aproximadamente constante cuando $y$ se acerca a $L$.</li>
+</ul>
+<p>Las dos formas $(1)$ y $(2)$ de escribir la ecuación diferencial dan dos formas de ver si unos datos están creciendo logísticamente (se puede estimar $y'$ numéricamente a partir de los datos calculando la tasa de cambio entre datos consecutivos).</p>
+<p><strong>¿Es la gráfica de $y'/y$ contra $y$ una línea?</strong><br>
+La ecuación $(2)$ dice que para el crecimiento logístico, la gráfica de $y'/y$ contra $y$ debe ser una línea. Si uno hace esta gráfica para datos exactamente logísticos, esto es lo que uno ve:</p>
+<figure><img src="LogisticRelativeAgainstP.png" width="300"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<p><strong>¿Es la gráfica de $y'$ contra $y$ una parábola?</strong><br>
+La ecuación $(1)$ dice que para el crecimiento logístico, la gráfica de $y'$ contra $y$ debe ser una parábola que pasa por el origen y por el punto $(y,y')=(L,0)$. Si uno hace esta gráfica con datos exactamente logísticos, esto es lo que uno ve:
+<figure><img src="LogisticDerivativeAgainstFunction.png" width="350"/>
+</figure>
+</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Pero una vez más digo, últimamente he preferido revisar si algo es logístico simplemente graficando los datos e intentado ajustar una curva logística a través a los datos con controles deslizantes para $L$, $a$ y $k$. Tal como lo mostré en esta entrada de Blog.</p>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

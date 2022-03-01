@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mauna Loa CO2 Growing Super-Exponentially? &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Mauna Loa CO2 Growing Super-Exponentially?</h1>
+  
+  
+  <time datetime=2022-02-09T16:02:00-0500 class="post-date">February 9, 2022</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/mauna-loa">Mauna Loa</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/climate-change">Climate Change</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/data">Data</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/exponential">Exponential</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/quadratic">Quadratic</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">Español: Mauna Loa CO2 Growing Super-Exponentially?</a>)</h4>
+    
+  
+  <div>
+  <p>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our <a href="https://www.wiley.com/en-us/Applied+Calculus%2C+7th+Edition-p-9781119799085">Applied Calculus book</a>), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form
+$$f(t)=P_0(b+mt)^t.$$</p>
+<p>Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:
+$$g(t)= C+Ba^{t}.$$
+This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then began to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &ldquo;super-exponential&rdquo; growth.</p>
+<p>Finally, I found a quadratic function that also gives a good fit!
+$$
+h(t)= a_2x^2+a_1x+a_0.
+$$
+These three functions all give very good fits for almost $70$ years' worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
+<p>Here are some interesting details about this little modeling &ldquo;telenovela&rdquo;.</p>
+<h2 id="source-of-the-data----the-keeling-curve">Source of the Data &ndash; the Keeling Curve</h2>
+<p>The graph below shows the monthly mean CO$_2$ concentration data the from Mauna Loa observatory in Hawaii, 11,135ft above sea level, which has been continuously collecting data related to climate change since the 1950s. This is known as the <a href="https://en.wikipedia.org/wiki/Keeling_Curve">Keeling Curve</a>, named after Charles David Keeling who started the monitoring program.</p>
+<figure><img src="Mauna_Loa_CO2_monthly_mean_concentration.png"
+         alt="(Keeling Curve. Image and data from NOAA)" width="100%"/><figcaption>
+            <p>(Keeling Curve. Image and data from <a href="https://gml.noaa.gov/ccgg/trends/mlo.html">NOAA</a>)</p>
+        </figcaption>
+</figure>
+
+<p>In what follows I will be looking at the annual mean CO$_2$ data, which smooths out seasonal variation. This data is downloaded from the official <a href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA site</a>.</p>
+<h2 id="first-model-the-super-exponential-p_0bmtt">First Model: the Super-Exponential $P_0(b+mt)^t$</h2>
+<p>One way to realize that the $\text{CO}_2$ concentration is not exponential is by plotting it in a spreadsheet and asking it to give an exponential fit. Here is the result:</p>
+<figure><img src="Mauna-loa-exponential-fit.png"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<p>The fact that the best exponential fit according to a spreadsheet does not grow as fast as the data is a clear indication that faster-than-exponential growth <em>could</em> be happening. But this &ldquo;<em>could</em>&rdquo; has to be taken with care! Saying &ldquo;the spreadsheet could not do it&rdquo; is not a definite reason/explanation for anything.</p>
+<h4 id="knowing-for-sure-that-there-is-no-exponential-fit-to-the-data">Knowing for Sure That There is no Exponential Fit to the Data</h4>
+<p>The following is a log-plot of the same data (technically, a semi-log plot because only the vertical axis got a log scale). Forgive the lack of numbers on the vertical axis, I could not get LibreOffice to display any more of them on the axis. I tried plenty!</p>
+<figure><img src="Mauna-loa-exponential-fit-log-plot.png"/>
+</figure>
+
+<p>Here is a TikZ+pgfplots figure I created after having given up with LibreOffice. Such a huge TikZ+pgfplots fan! This is the <a href="MaunaLoaLogPlotTikz.tex">source code</a>.</p>
+<figure><img src="MaunaLoaLogPlotTikz.png"
+         alt="Log plot of mean CO$_2$ data from Mauna Loa together with best exponential fit $309.837e^{0.0045t}$ (which looks like a straight line because of the logarithmic scale on the vertical axis)"/><figcaption>
+            <p>Log plot of mean CO$_2$ data from Mauna Loa together with best exponential fit $309.837e^{0.0045t}$ (which looks like a straight line because of the logarithmic scale on the vertical axis)</p>
+        </figcaption>
+</figure>
+
+<p>The fact that the data still bends upward in these figures that use a log scale on the vertical axis is a definite indication that there is no exponential fit to the data. Why this is so: the log plot of any exponential function (i.e., of the form $P_0a^t$ for constants $P_0$ and $a$) will look like a straight line. You can see this in the figures above: the plot of $309.837e^{0.0045t}$ looks like a straight line instead of bending upwards.</p>
+<p>In fact, this &ldquo;straightening exponential functions&rdquo; is precisely what placing a logarithmic scale on the vertical axis accomplishes &ndash; it straightens out exponential growth by speeding up the labels on the vertical axis in exactly the right way. Pretty cool if you ask me!</p>
+<!-- raw HTML omitted -->
+<h4 id="looking-at-the-growth-factors-in-the-data">Looking at the Growth Factors in the Data</h4>
+<p>So, $\text{CO}_2$ seems to be growing faster than any exponential $P_0a^t$. How much faster?</p>
+<p>One way to investigate this is to figure out how the $a$ would be changing with time if we forced the data to follow $P_0a^t$. Here is what I mean by this: note the $a$ in $P_0a^t$ is the factor by which the quantity gets multiplied in one unit of time, as the following equations show
+$$
+\begin{aligned}
+(\text{quantity at time}~t+1) &amp; = P_0a^{t+1} \\
+&amp; = P_0\left(a^t\times a\right)  \\
+&amp; = a \times P_0a^t \\
+&amp; = a \times (\text{quantity at time}~t).
+\end{aligned}
+$$
+So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;by what factor do I need to multiply the data of one year to get the next year?&rdquo;. These multiplication factors from one year to the next are technically called the <em>growth factors</em>, and figuring them out is easy: you just divide the next years' CO$_2$ levels by the current one!</p>
+<p>Here is a plot of the growth factors as a function of time (so, a plot of &ldquo;how the $a$ is changing&rdquo;):</p>
+<figure><img src="MaunaLoaGrowthFactors.png"/>
+</figure>
+
+<p>Note that the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$). <!-- raw HTML omitted --></p>
+<h5 id="what-if-we-assume-this-upward-trend-in-the-growth-factors-were-linear-finding-a-model-for-the-data-of-the-form-p_0bmtt">What if we Assume This Upward Trend in the Growth Factors Were Linear? Finding a Model for the Data of the Form $P_0(b+mt)^t$</h5>
+<p>The figure below shows a linear trend line for the growth factor data. It was found using a spreadsheet.</p>
+<figure><img src="MaunaLoaGrowthFactorsTrendLine.png"/>
+</figure>
+
+<p>Identifying this trend line formula as the way the $a$ should change in a super-exponential model, we would guess a model for the CO$_2$ levels of the form $P_0(b+mt)^t$, as follows:
+$$
+315.98(1.002615+0.000059t)^t.
+$$
+Here</p>
+<ul>
+<li>$P_0=315.98$ is the CO$_2$ measurement in Mauna Loa in the year 1950 corresponding to $t=0$, and</li>
+<li>$b+mt=1.002615+0.000059t$ is the trend line we found with the spreadsheet. It tells us the factor by which to multiply from one year to the next (increasing with the year $t$).</li>
+</ul>
+<p>If one plots this model one sees it does not give a great fit, but tweaking the parameters a little, one does get a very good fit. The final model, graphed below together with the data, is given by
+$$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
+<p>Very good fit!</p>
+<figure><img src="MaunaLoaSuperExponentialFit.png"/>
+</figure>
+
+<h2 id="second-model-the-exponential-plus-constant-cbat">Second Model: the Exponential Plus Constant $C+Ba^{t}$</h2>
+<p>All that I showed above seems to indicate that no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
+<p>In reality, lines in log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential. It just means that it is not modeled well by any exponential function (of the form $P_0a^t$). This is a common misconception with log plots, which I had myself!</p>
+<p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the amount when $t=0$).</p>
+<p>Finding possible parameter values for $a,B$, and $C$ that give a good fit to the data is not as straightforward with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
+<h4 id="how-i-found-good-parameter-values">How I found good parameter values</h4>
+<p>I tried out different values of $C$ to make the quantity $[\text{CO}_2~\text{level}-C]$ behave like an exponential by computing its growth factors and trying to make them constant (this would not be possible if there was no good model of the form $C+Ba^{t}$).</p>
+<h4 id="resulting-model">Resulting model</h4>
+<p>Here is the model, and its plot:</p>
+<p>$$g(t)= C+Ba^{t}=267.277+48.703(1.01823)^t$$</p>
+<p>Very good fit too!</p>
+<figure><img src="MaunaLoaExponPlusConstFit.png"/>
+</figure>
+
+<h2 id="difference-between-the-two-models-exponential--constant-vs-super-exponential">Difference Between the two Models (exponential + constant vs. super-exponential)</h2>
+<p>Here they are together (now as an awesome TikZ+pgfplots figure that allows me to generate figures for different ranges in a breeze). Making a plot with curves that are so similar and that still allows to differentiate between them was not that simple! Using different markers for each curve (also very important for accessibility related to color-blindness) definitely helps.</p>
+<figure><img src="MaunaLoaTwoModelsTikz65.png"/>
+</figure>
+
+<p>They look incredibly similar, but one is super exponential, and one is not, so the super-exponential one will eventually outpace the non-super one.</p>
+<h4 id="here-are-some-plots-looking-into-the-future">Here are some plots looking into the future</h4>
+<p>After 150 years (since 1950) the exponential one seems to be growing faster, but this can only be temporary&hellip;
+<figure><img src="MaunaLoaTwoModelsTikz150.png"/>
+</figure>
+</p>
+<p>After 350 years the super-exponential overtakes&hellip;
+<figure><img src="MaunaLoaTwoModelsTikz350.png"/>
+</figure>
+</p>
+<p>After 450 years the super-exponential starts to show what it means to be super-exponential&hellip;
+<figure><img src="MaunaLoaTwoModelsTikz450.png"/>
+</figure>
+</p>
+<p>And after 550 years the super-exponential is in a different league&hellip;
+<figure><img src="MaunaLoaTwoModelsTikz550.png"/>
+</figure>
+</p>
+<p>If the desmos applet below loads, you can play around with this by zooming in and out interactively. Note however that zooming out and seeing the figures I show above is not as simple as one might think &ndash; one needs to re-adjust the ranges of the axis constantly as one zooms out.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/n5chdjjnij" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<!-- raw HTML omitted -->
+<h4 id="one-final-note">One Final Note:</h4>
+<p>Looking 500 years into the future is pretty meaningless for this model. Note that the C0$_2$ level in ppm reaches a million ppm. This would say all air molecules would be CO$_2$ (silly), and anything beyond that million ppm is meaningless. The CO$_2$ is more likely to stabilize at some point in the future with an absurd theoretical limit of a million parts per million. Maybe it is already starting to stabilize!</p>
+<h2 id="third-model-the-quadratic-a_2x2a_1xa_0">Third Model: the Quadratic $a_2x^2+a_1x+a_0$</h2>
+<p>What I showed above indicates that an exponential+constant function can also model the data. So, it could be growing super-exponentially, or exponentially+constant. Surely nothing like a los degree polynomial, which grows much slower, could model the growth. Right? Well, not really!</p>
+<p>The following quadratic model is found using a spreadsheet directly using the &ldquo;trend-line&rdquo; option with polynomial of degree 2 as a choice of trend. The resulting model is given by
+$$
+h(t)=0.013t^2+0.8055t+315.5219
+$$</p>
+<p>Here is a plot together with the Mauna Loa data. Fantastic fit too!
+<figure><img src="MaunaLoaQuadraticTikz.png"/>
+</figure>
+</p>
+<h2 id="graphical-comparison-between-the-three-models">Graphical Comparison Between the Three Models</h2>
+<p>They say a picture says more than a thousand words&hellip;</p>
+<p>Here are the three models against together with data up to 2022. Basically indistinguishable!</p>
+<figure><img src="MaunaLoaThreeModelsTikz65.png"/>
+</figure>
+
+<h4 id="150-years-into-the-future-since-data-collection-began-1950">150 years into the future since data collection began (1950)</h4>
+<figure><img src="MaunaLoaThreeModelsTikz150.png"/>
+</figure>
+
+<h4 id="350-years-into-the-future-since-data-collection-began">350 years into the future since data collection began</h4>
+<figure><img src="MaunaLoaThreeModelsTikz350.png"/>
+</figure>
+
+<h4 id="550-years-into-the-future-since-data-collection-began">550 years into the future since data collection began</h4>
+<figure><img src="MaunaLoaThreeModelsTikz550.png"/>
+</figure>
+
+<h3 id="back-into-a-more-sensible-range">Back into a more sensible range</h3>
+<p>Here is the plot of the three models up to the year 2050, about 25 years from now:
+<figure><img src="MaunaLoaThreeModelsTikz100.png"/>
+</figure>
+</p>
+<p>If you want to play with the ranges yourself, all you have to do is adjust the number in the <code>\newcommand\Max{550}</code> in the TikZ+pgfplots <a href="MaunaLoaThreeModelsTikz.tex">source file</a> and then run pdf$\LaTeX$ on it.</p>
+<h2 id="what-to-take-away-from-all-of-this">What to Take Away From all of This</h2>
+<ul>
+<li>
+<p>Which model is better? Any of the three of the models is equally valid in the sense that they all give very tight fits to the data.</p>
+</li>
+<li>
+<p>It is pretty amazing that there are such simple formulas that model the growth of CO$_2$ levels for over 70 years.</p>
+</li>
+<li>
+<p>Even though the three models give radically different long-term behaviors, they do so at time-scales that are far larger than what it would make sense to expect the models to be valid.</p>
+</li>
+<li>
+<p>The model that may make more sense physically is the exponential plus constant, because it starts off from a constant base level pre-<a href="https://en.wikipedia.org/wiki/Anthropocene">antropocene</a>, and then follows exponential growth like many modern-world phenomena (including world population).</p>
+</li>
+<li>
+<p>CO$_2$ levels are most certainly rising at an increasing rate (graph bending upwards). Even if the rising rate stops increasing and they start leveling off, it is unlikely this will happen below 600&ndash;700 ppm (just from looking at the plots).</p>
+</li>
+</ul>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

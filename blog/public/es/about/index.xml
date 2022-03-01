@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/about/</link>
+    <description>Recent content in Abouts on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Dec 2021 17:19:54 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acerca de este blog</title>
+      <link>https://enriqueacosta.github.io/blog/es/about/about/</link>
+      <pubDate>Mon, 13 Dec 2021 17:19:54 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/about/about/</guid>
+      <description>Me gusta siempre estar aprendiendo cosas nuevas (¡como por ejemplo hacer mi propio blog!), y estoy probando escribir sobre estas excursiones personales. Creo que lo voy a distrutar. Lo estoy haciendo público en caso de que alguien encuentre algo de eso útil o interesante.
+Contácteme si tiene alguna pregunta o comentario sobre lo que encuentra.
+Puede averiguar más sobre mí en el sitio de Grupo LEMA (en español) o en una página personal antigua (en inglés) que ya no actualizo.</description>
+    </item>
+    
+  </channel>
+</rss>

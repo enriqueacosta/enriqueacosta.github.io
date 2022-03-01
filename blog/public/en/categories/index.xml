@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/categories/</link>
+    <description>Recent content in Categories on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 23 Feb 2022 15:25:05 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/math/</link>
+      <pubDate>Wed, 23 Feb 2022 15:25:05 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probability</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/probability/</link>
+      <pubDate>Wed, 23 Feb 2022 15:25:05 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/data/</link>
+      <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modeling</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/modeling/</link>
+      <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/hugo/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Processing</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/processing/</link>
+      <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Translating Mathematics Resources</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/translating-mathematics-resources/</link>
+      <pubDate>Mon, 17 Jan 2022 18:25:45 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/translating-mathematics-resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/latex/</link>
+      <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/latex/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

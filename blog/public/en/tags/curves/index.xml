@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Curves on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
+    <description>Recent content in Curves on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/curves/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz 3D - Twisted Cubic</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</guid>
+      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
+In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
+As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</description>
+    </item>
+    
+  </channel>
+</rss>

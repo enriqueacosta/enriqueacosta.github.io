@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
+    <description>Recent content in Coding on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 05 Feb 2022 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 3: Tag Functionality and Listings, and Adding an About Page.</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</guid>
+      <description>This is a follow-up to two previous posts (here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
+Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Vector Graphics Version of the Arrecibo Message</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</link>
+      <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</guid>
+      <description>I recently remembered the very cool Arrecibo message and I discovered today that the Wikipedia article on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.
+Here is the message:
+ Arrecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.</description>
+    </item>
+    
+    <item>
+      <title>Creating This Blog Part 2: More Multilingual Support Using i18n</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</link>
+      <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</guid>
+      <description>This is a follow-up to a previous post describing how I set up this blog. Here I describe setting up more elaborate multilingual support using i18n.
+Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in with i18n support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &amp;ldquo;multilingual snippets&amp;rdquo;. To start using it all I had to do was create the files en.</description>
+    </item>
+    
+    <item>
+      <title>Tikz Figure for a Function With Parameters</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</link>
+      <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</guid>
+      <description>I promised in another post that I would show the code for the TikZ figure I included in that post, reproduced below:
+ What is very nice about TikZ and its pfgplots package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+    </item>
+    
+    <item>
+      <title>Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</link>
+      <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</guid>
+      <description>This blog does not live in a commercial platform for bloggers. It is what is technically called a &amp;ldquo;static site&amp;rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled Hugo. In this blog entry I explain how I set it up.</description>
+    </item>
+    
+    <item>
+      <title>Tikz 3D - Twisted Cubic</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</link>
+      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</guid>
+      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
+In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
+As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</description>
+    </item>
+    
+  </channel>
+</rss>

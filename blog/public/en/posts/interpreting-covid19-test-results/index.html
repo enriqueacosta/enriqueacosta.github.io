@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interpreting Covid-19 Test Results &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Interpreting Covid-19 Test Results</h1>
+  
+  
+  <time datetime=2022-02-23T15:25:05-0500 class="post-date">February 23, 2022</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/covid-19">Covid-19</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/medical-tests">Medical tests</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/probability">Probability</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/desmos">Desmos</a>
+    
+  </p>
+  
+  
+  
+  <div>
+  <p>Ever since the Covid-19 pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again.</p>
+<p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the detials or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
+<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Feature Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Before going any further, I need to establish some terminology.</p>
+<h3 id="some-terminology">Some terminology</h3>
+<ul>
+<li>A Covid-19 test may give a positive result when the person is not infected. This is called a <em>false positive</em>.</li>
+<li>Similarly, a Covid-19 test may negative result when the person is in fact infected infected. This is called a <em>false negative</em>.</li>
+<li>The two remaining outcomes are when the test tells the truth. These are the <em>true positive</em> and <em>true negative</em>.</li>
+</ul>
+<p>Which of these four possible outcomes of a Covid-19 test is more important depends on who you are and what you are worrying about. From a societal perspective, the false negatives are probably the most serious ones: they make people think they are not infected when they in fact are, and so increase the chances of them spreading the disease.</p>
+<!-- raw HTML omitted -->
+<h3 id="dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives">Don&rsquo;t believe a test saying &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;</h3>
+<p>A natural assumption is to believe that the percentage of each of these cases (false negatives, true positives, etc.) depends on the quality of the test:</p>
+<ul>
+<li>a high quality test has few false negatives, and few false positives.</li>
+<li>a low quality test has more false negatives, and more false positives.</li>
+</ul>
+<p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
+<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman, and what I show and explain in this blob post.</p>
+<p>I will try my best to be self contained in what follows so there is no need to read the column before going on. Hopefully the column will make even more sense after reading this!</p>
+<h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!</h3>
+<p>The applet below gives the chances that a test result is actually true (true negative, or true positive).</p>
+<!-- raw HTML omitted -->
+<div>
+    <iframe src="https://www.desmos.com/calculator/0hqs7ihwqm" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<!-- raw HTML omitted -->
+<h4 id="how-it-works-and-what-it-says">How it works, and what it says:</h4>
+<ul>
+<li>Move the point $p$ (on the horizontal axis) to specify the &ldquo;amount of covid-19 around you&rdquo;, as a percentage (which we are identifying here as the &ldquo;percentage of infected population&rdquo;, but later we will try to make this more precise).</li>
+<li>The vertical axis tells you what the chances are of a test result being actually true (true negative, or true positive) given the value of $p$ you chose.</li>
+<li>The &ldquo;quality&rdquo; of the test is determined by the values of $a$ and $b$ which you can adjust with the sliders. These are also numbers between $0\%$ and $100\%$ and have fancy names:
+<ul>
+<li>$a$: the <em>sensitivity</em> of the test.</li>
+<li>$b$: the <em>specificity</em> of the test.</li>
+</ul>
+</li>
+</ul>
+<p>I&rsquo;ll explain more what the sensitivity and the specificity mean below &mdash; they are the numbers that you do  find in a specification sheet of a Covid-19 test!</p>
+<h4 id="and-here-is-its-complement-applet-about-false-test-results">And here is its complement applet, about false test results:</h4>
+<p>The applet below shows the chances of a test result being false (false negative, or false positive). Move the point $p$, and change the quality of the test by changing $a$ and $b$!</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/plddkxiq0r" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<!-- raw HTML omitted -->
+<h4 id="here-they-are-together-all-true-and-false-possible-outcomes-in-all-their-messy-glory">Here they are together (all true and false possible outcomes), in all their messy glory:</h4>
+<div>
+    <iframe src="https://www.desmos.com/calculator/4i3v7br7mm" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="how-are-these-applets-generated">How are these applets generated?</h2>
+<p>The short answer is that I created them using <a href="https://www.desmos.com/calculator">desmos</a> by building on what Bill Casselman explains in his <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a>, but I provide a detailed explanation with lots of pictures below!</p>
+<h3 id="some-background---probability-trees">Some background - probability trees</h3>
+<p>Probabilities multiply, and it is often useful to visualize this in trees.</p>
+<p>Here is an example:
+Say I take a card from a deck of cards, and then I take a second one. What is the probability that I grab a heart and then another heart? To answer this it helps thinking about the two steps separately.</p>
+<!-- raw HTML omitted -->
+<p>There are 4 possible outcomes in total:</p>
+<ul>
+<li>heart then heart</li>
+<li>heart then not heart</li>
+<li>not heart then heart, and</li>
+<li>not heart and then not heart</li>
+</ul>
+<p>These four outcomes show up at the far right in the tree-diagram below:
+<figure><img src="ProbabilityTreeCards.png" width="700em"/>
+</figure>
+</p>
+<p>So, what is the chance for each outcome? The nice thing about the tree is that we can separate thinking about each step separately, and then multiply.</p>
+<p>Specifically, for the first card:</p>
+<ul>
+<li>The probability that the first card is a heart is $1/4$ (since a quarter of the cards are hearts). So, there is a $25\%$ chance of grabbing a heart.</li>
+<li>The probability that the first one is <em>not</em> a heart is $3/4$ (all the other cards). So, there is a $75\%$ chance of not grabbing a heart.</li>
+</ul>
+<p>We put these probabilities in the tree:
+<figure><img src="ProbabilityTreeCardsFirstDetails.png" width="700em"/>
+</figure>
+</p>
+<p>For the second car the chances are not the same since there are less cards, and the number of hearts varies!</p>
+<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em> (regularly part of the high school curriculum, but most people rarely remember it).</p>
+<p>We put this new information in the tree:
+<figure><img src="ProbabilityTreeCardsSecondDetails.png" width="700em"/>
+</figure>
+</p>
+<p>What if the first card was not a heart? Well, then all the 13 hearts are present in the renaming 51 hearts, so there is a $13/51=25.49\%$ chance that the second card is a heart if the first one was not a heart (as expected, higher than $25\%$, since the there are the same amount of hearts but less cards).</p>
+<p>We put this new information in the tree too:
+<figure><img src="ProbabilityTreeCardsThirdDetails.png" width="700em"/>
+</figure>
+</p>
+<p>The thick blue paths above correspond to the two ways that one can obtain a heart in the second draw:</p>
+<ul>
+<li>1st is heart and 2nd is heart (path at the top)</li>
+<li>1st is not hear and 2nd is heart (the other path)</li>
+</ul>
+<p>Similar reasoning allows one to complete the whole tree. This is what one gets:
+<figure><img src="ProbabilityTreeCardsFourthDetails.png" width="700em"/>
+</figure>
+</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Now, we can put them together and multiply! The percentages on the right are the probability of each outcome:</p>
+<figure><img src="ProbabilityTreeDetailsCards.png" width="700em"/>
+</figure>
+
+<p>What this says:</p>
+<ul>
+<li>There is a $5.88\%$ chance that the first card is a heart and the second one is a heart.</li>
+<li>There is a $19.12\%$ chance that the first card is a heart and the second one is not a heart (same as in the opposite order, which is the third outcome in the tree).</li>
+<li>There is a $58.88\%$ chance that the first card is not a heart, and the second card is also not a heart.</li>
+</ul>
+<p>So, there is a $5.88\%$ chance that one grabs two hearts. Much lower than the $55.88\%$ chance of not grabbing any hearts.</p>
+<p>Note that all the percentages on the right add up to $100\%$, as they should since they cover all the possible outcomes!</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="back-to-covid-19">Back to Covid-19</h3>
+<p>This is the tree related to Covid-19 testing:
+<figure><img src="ProbabilityTreeCovid.png" width="700em"/>
+</figure>
+</p>
+<h4 id="what-probabilities-do-we-know-in-this-tree">What probabilities do we know in this tree?</h4>
+<p>This is where the <em>sensitivity</em> and <em>specificity</em> of the test come in. When a test is created, medical studies are conducted to figure out:</p>
+<ul>
+<li>Test sensitivity ($a\%$): Chances that a test will correctly identify an infected person (i.e. say positive if the person is infected).</li>
+<li>Test specificity ($b\%$): Chances that a test will correctly identify a non infected person (i.e. say negative if the person is not infected).</li>
+</ul>
+<p>These are what one could call &ldquo;quality&rdquo; parameters of the test. The important fact is that they do <em>not</em> depend on the population one is testing. They also happen to be the numbers in our tree!</p>
+<figure><img src="ProbabilityTreeCovidFirstDetails.png" width="700em"/>
+</figure>
+
+<p>If we know these, then we know the other two chances in this same &ldquo;branch level&rdquo;, since they are complementary events:
+<figure><img src="ProbabilityTreeCovidSecondDetails.png" width="700em"/>
+</figure>
+</p>
+<h4 id="what-about-the-first-two-branches-of-the-tree">What about the first two branches of the tree?</h4>
+<p>Well, the chances of being infected change according to the proportion of people sick at the current moment. If $p\%$ people are infected, then we can take this as the chance of being infected (more on this later). Similarly, the chance of not being infected is $(100-p)\%$ (all the other people).</p>
+<p>So, our tree with the chances of each step is now complete!</p>
+<figure><img src="ProbabilityTreeCovidThirdDetails.png" width="700em"/>
+</figure>
+
+<p>We can now multiply the chances to calculate the probability of each outcome. Note that everything depends on two things: the parameters of the test ($a\%$ and $b\%$), and on the current proportion $p\%$ of the  population that is infected (which is independent of the test).</p>
+<figure><img src="ProbabilityTreeCovidDetails.png"/>
+</figure>
+
+<h3 id="so-where-do-the-crazy-curves-in-the-applets-above-come-from">So, where do the crazy curves in the applets above come from?</h3>
+<!-- raw HTML omitted -->
+<p>The natural sort of questions one asks oneself after getting a Covid-19 tests are of the form:</p>
+<ol>
+<li>&ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;</li>
+<li>&ldquo;I got a negative test result, what are the chances that it is true? Can I trust the result?&rdquo;</li>
+<li>&ldquo;I got a positive test result, what are the chances that the test is wrong?&rdquo;</li>
+<li>&ldquo;I got a positive test result, what are the chances that it is correct?&rdquo;</li>
+</ol>
+<p>These are not questions about the probability of an outcome in the tree, but one can figure out what one needs to compute from the tree to be able to answer them.</p>
+<h4 id="this-is-how-it-works-example-with-question-1">This is how it works: example with question (1).</h4>
+<p>Say, we want to answer the question (1): &ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;</p>
+<p>In question (1) the test result came out negative. These are all the paths in the tree with a negative test result:
+<figure><img src="ProbabilityTreeCovidDetailsConditional.png"/>
+</figure>
+</p>
+<p>Looking at this tree, the question we want to answer is: out of those two possible outcomes giving a negative test result, what are the chances that I am really on the top path (the one corresponding to being truly infected)? Well, you just divide the chances:</p>
+<p>$$
+\frac{\text{chance of infected path}}{\text{sum of chances of all negative paths}}
+=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<p>That is it! Those are the chances of actually being infected given a negative Covid-19 test result:</p>
+<p>$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\end{array}=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<h4 id="how-does-this-look-like-with-actual-numbers">How does this look like with actual numbers?</h4>
+<p>Say the PCR test that was taken has sensitivity $a\%=95\%$, and specificity $b\%=85\%$, then
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\end{array}=\frac{p\%\times 5\%}{p\%\times 5\%+(100\%-p\%)\times 85\%}
+$$
+&hellip; still depends on $p$!</p>
+<p>Ok, so what if I assume the chances in my community of being infected at that particular moment are $30\%$? Then one does get a number:
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\\
+\text{assuming $p=30$}\end{array}=\frac{30\%\times 5\%}{30\%\times 5\%+70\%\times 85\%}=2.459\%
+$$
+It is a small chance!</p>
+<p>But now, say I have Covid-19 related symptoms, and was with someone who tested positive. Then talking $p\%$ to be $30\%$ seems to be a mistake, since I am not a randomly selected member of my population. Maybe it should be $80\%$ instead?
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\\
+\text{assuming $p=80$}\end{array}=\frac{80\%\times 5\%}{80\%\times 5\%+20\%\times 85\%}=19.05\%
+$$
+This increases the chances&hellip;.</p>
+<p>And then again, since $p$ varies with time and depends on my surroundings, maybe instead of repeating this computation over and over again, one should just plot the chances as a function of $p$!</p>
+<p>Here is the plot, for a test with $a\%=95\%$, and specificity $b\%=85\%$:</p>
+<figure><img src="CovidFalseNegative.png" width="500em"/>
+</figure>
+
+<p>You can see in the figure the chances for $p=30$ and $p=80$ we computed above. Just follow what the curve says! See below.</p>
+<figure><img src="CovidFalseNegativeTwoPoints.png" width="500em"/>
+</figure>
+
+<p>As you may be starting to see, the answer to the simple questions one makes about a Covid-19 tests results are not that simple to answer!</p>
+<h4 id="plots-for-different-values-of-a-and-b">Plots for different values of $a$ and $b$</h4>
+<p>Below is an interactive desmos plot of the above plot, with sliders for the sensitivity and specificity $a$, $b$ of the test, so that you can see how they affect the curve that answers the question (1) “I got a negative test result, what are the chances I am really infected?&quot;</p>
+<p>(it may be better to open this in its own screen, so if you want to play with it, follow this <a href="https://www.desmos.com/calculator/qujtozkacg">link</a>)
+<div>
+    <iframe src="https://www.desmos.com/calculator/yjcszjppgd" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div></p>
+<!-- raw HTML omitted -->
+<p>You can also generate plots for other values of $a$ and $b$ using the TikZ+pgfplots <a href="CovidFalseNegative.tex">souce file</a> I created to make the figures in this post. You just need to change the numbers in the <code>\pgfmathsetmacro{\SensA}{0.95}</code> and <code>\pgfmathsetmacro{\SpecB}{0.85}</code> (they need to be given in decimal form, not percentages) and run pdflatex on them.</p>
+<h2 id="probability-of-being-infected-p-pre-test-probability">Probability of being infected $p$: pre-test probability</h2>
+<p>One final thing before wrapping up&hellip;.</p>
+<p>As mentioned above, one should take as $p$ not the percentage of the population that is infected, but take into account the particular situation of the person for which one is interpreting the test.</p>
+<p>The person-and-time-specific estimate of $p$ should involve considering at least:</p>
+<ul>
+<li>What % of the population has Covid-19 right now? (not the reported one, but the true expected one). This is the first estimate for $p$.</li>
+<li>Does the person have symptoms? If so, the estimate of $p$ should increase.</li>
+<li>Has the person been in contact with someone with symptoms or that who has tested positive? If so, the estimate of $p$ should increase.</li>
+<li>&hellip;</li>
+</ul>
+<p>The final $p$ is what is sometimes called the <em>pre-test</em> infection probability. It depends both on the moment of time and on the particular situation of the person. It can only be very roughly estimated.</p>
+<p>With it, one can look at the test result and interpret the result accordingly, but it is all based on assumptions and estimates!</p>
+<p>Then there are issues about the time of the test and possible time of infection&hellip; the values of $a$ and $b$ may change for a specific test if it is &ldquo;too early&rdquo; or &ldquo;too late&rdquo; to test. Estimates have to be made everywhere&hellip;</p>
+<h2 id="desmos-applets-again">Desmos Applets again!</h2>
+<p>Ok, so I think this covers all that was needed to understand what went into generating the desmos plots to figure out the chances that a covid-19 tests results are true or false.</p>
+<p>Here they are again. So many moving parts that it is hard to understand what is going on! Try thinking of a specific case you have gone through, and figure out what it would say in that case. Also consider opening the appled in full size by following this <a href="https://www.desmos.com/calculator/eeywplgqef">link</a>.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/gr87mrclsf" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h2 id="what-to-take-from-all-of-this">What to take from all of this?</h2>
+<ul>
+<li>The chances that Covid-19 tests results are true or false depend on:
+<ul>
+<li>the initial chance of infection $p$ (pre-test chance of infection), and this chance depends both on the moment of time and particular person.</li>
+<li>the Sensitivity and Specificity of the test.</li>
+</ul>
+</li>
+<li>Sensitivity and Specificity are conditional probability &ldquo;quality&rdquo; paramaters for a Covid-19 test that are independent of the population that is being tested.</li>
+<li>Then Sensitivity and Specificity, however, are not completely constant, and may be different if it is &ldquo;too early&rdquo; or &ldquo;too late&rdquo; to test.</li>
+<li>The chances that Covid-19 tests results are true or false are different if the test results are positive or negative! Maybe this is one of the most important things to take home!</li>
+</ul>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

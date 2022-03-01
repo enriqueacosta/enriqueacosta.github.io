@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelación on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</link>
+    <description>Recent content in Modelación on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
+      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
+La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data.  Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+    </item>
+    
+  </channel>
+</rss>

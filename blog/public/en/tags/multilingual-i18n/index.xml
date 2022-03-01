@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multilingual i18n on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</link>
+    <description>Recent content in Multilingual i18n on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Feb 2022 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 2: More Multilingual Support Using i18n</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</link>
+      <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</guid>
+      <description>This is a follow-up to a previous post describing how I set up this blog. Here I describe setting up more elaborate multilingual support using i18n.
+Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in with i18n support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &amp;ldquo;multilingual snippets&amp;rdquo;. To start using it all I had to do was create the files en.</description>
+    </item>
+    
+  </channel>
+</rss>

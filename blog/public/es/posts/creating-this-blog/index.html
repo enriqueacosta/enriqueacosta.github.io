@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La creación de este blog: Hugo, agregar al tema Hyde soporte de varios idiomas y soporte de Latex &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>La creación de este blog: Hugo, agregar al tema Hyde soporte de varios idiomas y soporte de Latex</h1>
+  
+  
+  <time datetime=2021-12-10T22:49:34-0500 class="post-date">10 de diciembre de 2021</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/configuraci%C3%B3n-del-blog">Configuración del blog</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/hugo">Hugo</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/katex">Katex</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">English: Creating this Blog: Hugo, making the Hyde theme multilingual, and adding Latex support</a>)</h4>
+    
+  
+  <div>
+  <p>Este blog no se encuentra en una plataforma comercial para bloggers. Es lo que se llama técnicamente un &ldquo;sitio estático&rdquo;, lo cual significa que es solo una colección de archivos HTML que están vinculados entre sí, junto con algunos otros archivos que dan formato (por ejemplo, archivos css). Como tal, este blog se puede alojar en cualquier lugar y no está atado a ninguna plataforma en particular. Además, se creó con una fantástica herramienta de código abierto llamada <a href="https://gohugo.io">Hugo</a>. En esta entrada de blog explico cómo lo creé.</p>
+<p>Todo empezó con la excelente <a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/">entrada del blog</a> de Hui Gong sobre como crear un blog personal usando GitHub Pages y Hugo. Sabía sobre las páginas de GitHub, pero no sobre <a href="https://gohugo.io">Hugo</a>. Siguiendo los pasos en la entrada del blog, tuve en poco tiempo una versión esqueleto de este blog con el tema <a href="https://github.com/spf13/hyde">Hyde</a>.</p>
+<p>El tema Hyde es extremadamente minimal (lo cual me gusta mucho), pero quería tres cosas importantes para mi blog que el tema no tenía:</p>
+<ul>
+<li><strong>Navegación por etiquetas:</strong> Permitir que los lectores puedan encontrar otras entradas del blog sobre temas relacionados (en lugar de ver solo una lista de entradas organizada por fecha).</li>
+<li><strong>Multilingüe:</strong> Publicaciones y navegación en inglés y español.</li>
+<li><strong>Soporte de $\LaTeX$:</strong> Poder escribir entradas de blog con símbolos matemáticos usando $\LaTeX$ (que para mí sigue siendo la única manera sensata de escribir matemáticas).</li>
+</ul>
+<p>Lograr agregar esta funcionalidad al tema Hyde me permitió entender cómo funciona Hugo. ¡Debo decir que me ha gustado mucho el sistema! Hugo ahora se encarga todo aparte del contenido, y eso me parece genial.</p>
+<h2 id="navegación-por-etiquetas-o-categorías">Navegación por etiquetas o categorías</h2>
+<p>¡Esto no puede haber sido más sencillo! Hugo tiene dos formas predeterminadas de categorizar el contenido: <code>Etiquetas</code> (<code>tags</code>) y <code>Categorías</code> (<code>categories</code>). El tema Hyde viene configurado para mostrarlos en el menú lateral. Uno solo necesita definir las entradas del menú en el archivo <code>config.toml</code> que controla la configuración global del sitio y los temas.</p>
+<p>Solo tuve que agregar las siguientes líneas a ese archivo, ¡y estaba todo listo!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+</code></pre></div><p>Ahora solo me tengo que asegurar que el encabezado de cada entrada de blog incluya la lista de etiquetas y categorías, como el siguiente ejemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating this Blog&#34;</span>
+<span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-12-06T22:49:34</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
+<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>]
+<span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
+---
+</code></pre></div><p>Las páginas <code>Categorías</code> y <code>Etiquetas</code> vinculadas desde el menú se construyen automáticamente a partir de los archivos de las entradas de blog mismas. ¡Genial!</p>
+<h2 id="configurar-soporte-multilingüe">Configurar soporte multilingüe</h2>
+<p>Esto requirió mucha prueba y error, pero finalmente lo logré hacer funcionar.</p>
+<h3 id="configuración-inicial">Configuración inicial</h3>
+<p>Le agregué al archivo <code>config.toml</code>, que controla la configuración global del sitio y los temas, el siguiente código para permitir cambiar entre inglés y español:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#39;en&#39;</span>
+
+[<span style="color:#a6e22e">languages</span>]
+  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+    <span style="color:#a6e22e">baseURL</span>= <span style="color:#e6db74">&#39;https://enriqueacosta.github.io/blog/en/&#39;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Enrique Acosta Jaramillo&#39;</span>
+    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#39;English&#39;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+    <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#39;Personal Blog&#39;</span>
+
+  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>]
+    <span style="color:#a6e22e">baseURL</span>= <span style="color:#e6db74">&#39;https://enriqueacosta.github.io/blog/es/&#39;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Enrique Acosta Jaramillo&#39;</span>
+    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#39;Español&#39;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+    <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#39;Blog personal&#39;</span>
+</code></pre></div><p>El código se asegura de que Hugo exporte el las páginas HTML de una manera muy simétrica: si hay una entrada de blog (por ejemplo esta, <code>posts/creating-this-blog.md</code>) con su versión en español correspondiente (<code>posts/creating-this-blog.es.md</code>), entonces las entradas tendrán URL paralelos:</p>
+<ul>
+<li>ht<!-- raw HTML omitted -->tps:<!-- raw HTML omitted -->//enriqueacosta.github.io/blog<code>/en/</code>creating-this-blog/</li>
+<li>ht<!-- raw HTML omitted -->tps:<!-- raw HTML omitted -->//enriqueacosta.github.io/blog<code>/es/</code>creating-this-blog/</li>
+</ul>
+<p>(La asimetría de los nombres de archivo con el inglés que no necesita el <code>.en.</code> viene de usar el comando <code>defaultContentlanguage = 'en'</code> en el código anterior).</p>
+<p>Esta configuración me parece excelente, pero por desgracia daña la forma en que Hugo procesa las imágenes. Solucionar ese problema requirió algunos ajustes adicionales que describo <a href="https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/#arreglar-el-manejo-de-las-im%C3%A1genes-con-la-configuraci%C3%B3n-multiling%C3%BCe">más abajo</a>.</p>
+<h3 id="agregar-un-enlace-al-otro-idioma-a-cada-entrada-de-blog">Agregar un enlace al otro idioma a cada entrada de blog</h3>
+<p>Quería que cada entrada de blog tuviera un enlace a su versión correspondiente en el otro idioma. ¡Esto resultó ser mucho más simple de lo que imaginaba!</p>
+<p>El archivo <code>themes/hyde/layouts/_default/single.html</code> es la plantilla de las páginas de entrada de blog. Lo copié a <code>layouts/_default/single.html</code>, que me da una versión que puedo editar sin dañar los archivos del tema y que por su ubicación toma precedencia sobre el otro archivo.</p>
+<p>En el archivo <code>single.html</code>, el <code>{{ .content }}</code> es lo que le dice a Hugo que en ese lugar debe ir el contenido de la entrada blog. Agregué el siguiente código antes de ese comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">IsTranslated</span> }}
+   {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">Translations</span> }}
+      &lt;<span style="color:#a6e22e">h4</span>&gt;(&lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .<span style="color:#a6e22e">Language</span>.<span style="color:#a6e22e">LanguageName</span> }}: {{ .<span style="color:#a6e22e">Title</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;)&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h4</span>&gt;
+   {{ <span style="color:#a6e22e">end</span> }}
+{{ <span style="color:#a6e22e">end</span> }}
+{{ .<span style="color:#a6e22e">Content</span> }}
+</code></pre></div><p>Lo que hace es genial: el <code>if</code> comprueba si hay una traducción (que sabe a partir de la existencia de archivos con el mismo nombre con o sin el <code>.es.</code>). De ser así, hace un ciclo (este es el <code>range</code>) sobre las traducciones disponibles (que es el <code>.Translations</code>) y para cada una agrega el siguiente enlace dentro del encabezado h4 <code>&lt;h4&gt; (....) &lt;/h4&gt;</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Language.LanguageName }}: {{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>Aquí:</p>
+<ul>
+<li><code>{{ .Permalink }}</code> es la ruta del archivo con la traducción (por eso se pone como la href).</li>
+<li><code>{{ .Language.languageName }}</code> se va a reemplazar con el nombre del idioma de la traducción (note que en las definiciones de los idiomas en el archivo <code>config.toml</code> hay una propiedad <code>languageName =</code>, ese es el nombre que se usa).</li>
+<li><code>{{ .Title }}</code> es el título de la entrada el blog en el idioma de la traducción.</li>
+</ul>
+<p>¡Eso es todo! Hugo se encarga de agregar esos enlaces a todas las entradas de blog:</p>
+<p><img src="PostTranslationLink.png" alt="Screenshot of post translation link"></p>
+<p>Todo esto ayuda a entender cómo funciona Hugo: es una colección de &ldquo;plantillas/fragmentos de HTML&rdquo; que le dicen a Hugo cómo construir todas las páginas HTML para mostrar el contenido que uno escribe. ¡Muy bueno!</p>
+<h3 id="hacer-que-las-fechas-cambien-de-idioma-automáticamente">Hacer que las fechas cambien de idioma automáticamente.</h3>
+<p>Todas las fechas en las entradas del Blog se muestran por defecto en inglés, incluso si la entrada está en español. Arreglar esto también resultó ser bastante simple. La línea original en el archivo <code>index.html</code> que le dice a Hugo que debe agregar la fecha de fecha de la entrada de blog es la siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Date</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Format</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">2006-01-02T15:04:05Z0700</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+</code></pre></div><p>Aquí, el <code>{{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }}</code> es lo que pone la fecha. Después de una búsqueda en Internet, descubrí que lo podía  cambiar por un comando que era &ldquo;consciente del idioma&rdquo; dado por <code>{{ .Date | time.Format &quot;:date_long&quot; }}</code>.</p>
+<p>De acuerdo al idioma <code>{{ .Date | time.Format &quot;:date_long&quot; }}</code>  mostrará (note que el mes va correctamente con mayúscula en inglés):</p>
+<ul>
+<li>December 6, 2021</li>
+<li>6 de diciembre de 2021</li>
+</ul>
+<p>Por lo tanto, la entrada de la fecha de publicación en el archivo <code>index.html</code> ahora se ve así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Date</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Format</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">2006-01-02T15:04:05Z0700</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date | time.Format &#34;:date_long&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+</code></pre></div><p>¡Y eso es todo! Ahora cambian de idioma las fechas de las entradas del blog según el idioma.</p>
+<h3 id="arreglar-el-manejo-de-las-imágenes-con-la-configuración-multilingüe">Arreglar el manejo de las imágenes con la configuración multilingüe</h3>
+<p>(Nota: Este hack es necesario para la versión V0.89.4 + extendida, puede que no sea necesario para versiones posteriores.)</p>
+<p>El problema con las imágenes y la configuración multilingüe que mostré <a href="https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/#configuraci%C3%B3n-inicial">arriba</a> viene del hecho de que quería que la URL base del blog fuera <code>https://enriqueacosta.github.io/blog/</code>, pero a Hugo no le gustan las URL de base que tienen estructura de directorios (<code>/blog/</code> en este caso). El sistema estaba quitando el <code>\blog\</code> de la href de las imágenes y esto hacía que el navegador buscara en el lugar equivocado en los archivos de imagen. Este es un problema conocido con Hugo que no se ha solucionado (ver <a href="https://github.com/gohugoio/hugo/issues/5226">acá</a> y <a href="https://github.com/gohugoio/hugo/issues/7714">acá</a>).</p>
+<p>Nota: El hack/arreglo que sigue <em>no</em> es necesario si la URL base cambia a algo como <code>https://enriqueacosta.github.io</code>.</p>
+<p>El arreglo involucró aprender sobre la etiqueta <code>&lt;base&gt;</code> de HTML. Si uno usa la etiqueta <code>&lt;base&gt;</code> en el <code>&lt;head&gt;</code> de cualquier archivo HTML, esta especifica la &ldquo;ruta anterior&rdquo; de todas las rutas relativas que se usan en la página (ver <a href="https://www.w3schools.com/tags/tag_base.asp">acá</a>). Por lo tanto, si una imagen en HTML tiene un <code>href=&quot;/aqui/alla/image.png&quot;</code>, entonces la etiqueta <code>&lt;base&gt;</code> le dice al navegador que busque la imagen en <code>{{ base }}/aqui/alla/image.png</code>. Así, una forma de solucionar el problema que estaba teniendo era asegurarme que el siguiente código quedara dentro del <code>&lt;head&gt;</code> de las todas páginas HTML:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span>&gt;
+</code></pre></div><p>Esto se logra agregando esa línea al archivo <code>hook_head_end.html</code> en</p>
+<pre tabindex="0"><code>/layouts/partials/hook_head_end.html
+</code></pre><p>(este archivo se debe copiar del archivo con el mismo nombre en el tema).</p>
+<pre tabindex="0"><code>/temes/hyde/layouts/partials/hook_head_end.html
+</code></pre><p>El archivo <code>hook_head_end.html</code> se carga al final del archivo <code>layouts/partials/head.html</code> (es la forma en la que está organizado el tema).</p>
+<p>Después de esto, puedo referenciar la imagen ubicada en <code>static/fig-twistedCubic2.png</code> en el código de markdown de una entrada de blog usando</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">![<span style="color:#f92672">Twisted Cubic</span>](<span style="color:#a6e22e">fig-twistedCubic2.png</span>)
+</code></pre></div><p>Nota: esto es distinto de la instrucción regular para insertar imágenes en Hugo, ya que sin el hack de <code>&lt;base&gt;</code>, la referencia de la figura debe usar un <code>/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#75715e">&lt;!--- 
+</span><span style="color:#75715e">Regular Hugo syntax for imputing the 
+</span><span style="color:#75715e">image at &#34;static/fig-twistedCubic2.png&#34; 
+</span><span style="color:#75715e">--&gt;</span>
+![<span style="color:#f92672">Twisted Cubic</span>](<span style="color:#a6e22e">/fig-twistedCubic2.png</span>)
+</code></pre></div><p>Nota: Esto también (desafortunadamente) daña las tablas de contenidos en Hugo, ya que estas se generan usando  enlaces relativos en la forma <code>href=&quot;#encabezado-título&quot;</code> que debido al comando <code>&lt;base&gt;</code> apuntan a</p>
+<pre tabindex="0"><code>href dañado: {{base url}}/#heading-title
+</code></pre><p>en vez de</p>
+<pre tabindex="0"><code>href correcto: {{base url}}/{{ Lang }}/posts/{{post title}}#heading-title
+</code></pre><p>Nota: Todavía estoy buscando una mejor solución a este problema, porque el uso de una etiqueta <code>&lt;base&gt;</code> parece bastante radical y puede que dañe otras cosas aparte de la funcionalidad de la tablas de contenido.</p>
+<h3 id="agregar-a-la-barra-lateral-un-selector-de-idioma">Agregar a la barra lateral un selector de idioma</h3>
+<p>Tener los enlaces al otro idioma en cada publicación estaba bien, pero quería que el blog se sintiera realmente multilingüe y para eso me parecía que debía haber una parte en la barra lateral en la que uno seleccionaba el idioma de todo el blog. Quería que si se presionaba &ldquo;inglés&rdquo; o &ldquo;español&rdquo; en la barra lateral, toda la página cambiara de idioma.</p>
+<p>Increíblemente, esto también resultó ser bastante simple. Debo decir que estoy muy impresionado por todas las cosas que hace Hugo por su propia cuenta.</p>
+<p>La plantilla para la barra lateral está en <code>layouts/partials/sidebar.html</code> y a mi copia (que toma precedencia sobre la del tema) le agregué las líneas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">IsTranslated</span> }}
+  &lt;<span style="color:#a6e22e">nav</span> <span style="color:#a6e22e">class</span>=<span style="color:#e6db74">&#34;LangNav&#34;</span>&gt;
+  {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">AllTranslations</span> }}
+    &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .<span style="color:#a6e22e">Language</span>.<span style="color:#a6e22e">LanguageName</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
+  {{ <span style="color:#a6e22e">end</span> }}
+  &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">nav</span>&gt;
+{{ <span style="color:#a6e22e">end</span> }}
+</code></pre></div><p>¡Y eso es todo lo que se necesitó! Parece que toda la estrategia que utiliza Hugo de identificar el idioma a partir del nombre del archivo hace que esos cambios de idioma sean fáciles de implementar.</p>
+<h3 id="hacer-que-los-menús-cambien-de-idioma-también">Hacer que los menús cambien de idioma también</h3>
+<p>Lo último que faltaba para para que el sitio se sintiera verdaderamente multilingüe era hacer que el menú de la barra lateral también cambiara de idioma. Reemplacé las líneas que había agregado al archivo <code>config.toml</code> para definir el menú (ver <a href="https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/#configuraci%C3%B3n-inicial">arriba</a>) por las siguientes líneas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">
+[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+
+[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+
+[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Etiquetas&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+
+[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categorias&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+</code></pre></div><p>La clave con ese código es que la entrada de <code>url = </code> en inglés y español es la misma. Esto es lo que evita que Hugo muestre las etiquetas en español en la lista de etiquetas cuando el sitio está en inglés, y viceversa.</p>
+<h2 id="agregar-soporte-de-latex">Agregar soporte de $\LaTeX$</h2>
+<p>Agregar soporte de $\LaTeX$ terminó siendo también más sencillo de lo que esperaba. Descubrí que había algunos inconvenientes al utilizar <a href="https://www.mathjax.org">Mathjax</a> con Hugo, como por ejemplo, tener que &ldquo;escapar&rdquo; los caracteres <code>_</code>, que se usan muy a menudo en el LaTeX, escribiendo <code>\_</code>. Al parecer, en algunas formas de implemetar soporte de Mathjax, también es necesario usar <code>\\</code> en lugar de <code>\</code> en todas partes (muy inconveniente, pues todos los comandos de LaTeX comienzan con <code>\</code>). Descubrí que la integración de Hugo con <a href="https://katex.org">Katex</a> tiene menos de estos inconvenientes, así que decidí usar Katex en vez de Mathjax a pesar de que Mathjax se usa más ampliamente que Katex.</p>
+<p>Siguiendo esta <a href="https://kevcaz.github.io/notes/hugo/katex_and_goldmark/">entrada de blog</a>, para habilitar el soporte de Katex, solo se necesita el siguiente código dentro de la etiqueta <code>&lt;head&gt;</code> en cualquier página que necesite cargar Katex, así que decidí agregarlo a mi archivo <code>hook_head_end.html</code>. Este es el código:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- Katex Support--&gt;</span>
+<span style="color:#75715e">&lt;!-- For a way to do this that only loads KaTeX if it is &#34;invoked&#34; in a post, see:
+</span><span style="color:#75715e">https://dzhg.dev/posts/2020/08/how-to-add-latex-support-in-hugo/ --&gt;</span>
+
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+
+<span style="color:#75715e">&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+<span style="color:#75715e">&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI&#34;</span>
+<span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+<span style="color:#a6e22e">onload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;renderMathInElement(document.body);&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+    document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#66d9ef">function</span>() {
+        <span style="color:#a6e22e">renderMathInElement</span>(document.<span style="color:#a6e22e">body</span>, {
+            <span style="color:#a6e22e">delimiters</span><span style="color:#f92672">:</span> [
+                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>},
+                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;\\[&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;\\]&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>},
+                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>},
+                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;\\(&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;\\)&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>}
+            ]
+        });
+    });
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Ya con esto, puedo escribir matemáticas en cualquier lugar usando <code>$...$</code>. Por ejemplo, <code>$\int_{a_1}^{b_1} f_1(t)\thinspace dt$</code> se ve así: $\int_{a_1}^{b_1} f_1(t)\thinspace dt$.</p>
+<p>También puedo usar &ldquo;Matemáticas en modo ecuación&rdquo; (centradas y en una nueva línea) con los símbolos usuales de LaTeX <code>$$ ... $$</code>. Por ejemplo, <code>$$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</code> se ve así:
+$$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</p>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tikz 3D - Twisted Cubic &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Tikz 3D - Twisted Cubic</h1>
+  
+  
+  <time datetime=2021-12-06T22:28:53-0500 class="post-date">December 6, 2021</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry">Algebraic Geometry</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/curves">Curves</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/latex">LaTeX</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">Español: Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</a>)</h4>
+    
+  
+  <div>
+  <!-- raw HTML omitted -->
+<p>As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the <em>Twisted Cubic</em> is &ldquo;everybody&rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;</p>
+<p>In affine space, it is given by the image of
+$$t\mapsto(t,t^2,t^3).$$</p>
+<p>As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</p>
+<p>A couple of days later I ended up with the following code, which I am really proud of! I am becoming a huge Tikz fan.</p>
+<p>What I really enjoy about the code is how easy it is to read: each block serves a specific purpose, and even if one does not know the details of $\LaTeX$, or the Tikz package, it is easy to guess what is happening.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=0pt, tikz]</span>{standalone}
+<span style="color:#66d9ef">\usepackage</span>{pgfplots}
+<span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
+<span style="color:#66d9ef">\usetikzlibrary</span>{calc}
+
+<span style="color:#66d9ef">\begin</span>{document}
+
+<span style="color:#66d9ef">\begin</span>{tikzpicture}
+<span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ scale=0.8
+, view={235}{15} <span style="color:#75715e">% {rotation angle}{elevation angle}
+</span><span style="color:#75715e"></span>, xlabel=<span style="color:#e6db74">$</span>x<span style="color:#e6db74">$</span>
+, ylabel=<span style="color:#e6db74">$</span>y<span style="color:#e6db74">$</span>
+, zlabel=<span style="color:#e6db74">$</span>z<span style="color:#e6db74">$</span>
+, zmin=-8
+, zmax=8
+]
+
+<span style="color:#75715e">% Parabola and cubic shadow curves
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=40
+, samples y=0
+, thick 
+, cyan 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{t^2},{-8});
+
+<span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=40
+, samples y=0
+, thick
+, red 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{-1},{t^3});
+
+<span style="color:#75715e">%  Lines
+</span><span style="color:#75715e">%  (pgfplots cannot handle a \foreach commands inside the {axis} environment, so the draw commands need to have the foreach inside of them. See also pgfplotsinvokeforeach._
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">\draw</span> [cyan] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) --  ({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, -8)
+};
+
+<span style="color:#66d9ef">\draw</span> [red] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) -- ({<span style="color:#66d9ef">\a</span>}, -1, {(<span style="color:#66d9ef">\a</span>)^3})
+};
+
+<span style="color:#75715e">% Twisted cubic
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span>3<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>[ samples=51
+, samples y=0
+, thick
+, black 
+, domain=-2:2
+, variable=<span style="color:#66d9ef">\t</span>
+] ({t},{t^2},{t^3});
+
+<span style="color:#66d9ef">\end</span>{axis}
+<span style="color:#66d9ef">\end</span>{tikzpicture}
+<span style="color:#66d9ef">\end</span>{document}
+</code></pre></div><p>And of course, I also enjoy the very pretty figure the code creates!</p>
+<p><img src="fig-twistedCubic2.png" alt="Twisted Cubic"></p>
+<p>Note that if one calls the 3D coordinates $(x,y,z)$, then the shadow in the $(x,y)$ plane of the twisted cubic is the parabola $y=x^2$:
+$$t\mapsto(x,y)=(t,t^2).$$
+This parabola is clearly visible in the figure (on purpose!).</p>
+<p>The same happens with the shadow on the $(x,z)$ plane which is the cubic curve $z=x^3$.</p>
+<p>Back to the code, this is a piece I really like, it is almost like plain English!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\draw</span> [cyan] foreach <span style="color:#66d9ef">\a</span> in {-2,-1.9,...,2} {
+({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, {(<span style="color:#66d9ef">\a</span>)^3}) --  ({<span style="color:#66d9ef">\a</span>}, {(<span style="color:#66d9ef">\a</span>)^2}, -8)
+};
+</code></pre></div><p>It says &ldquo;Draw, in cyan color, for each <em>a</em> between -2 and 2 in steps of 0.1, the line  (&hellip;) &mdash; (&hellip;) between the points.&rdquo; Those are the vertical blue lines in the figure!</p>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

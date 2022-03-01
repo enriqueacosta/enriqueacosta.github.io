@@ -1,0 +1,55 @@
+\documentclass[border=0pt, 12pt, tikz]{standalone}
+\usepackage{pgfplots}
+
+\pgfmathsetmacro{\SensA}{0.95}
+\pgfmathsetmacro{\SpecB}{0.85}
+\pgfmathsetmacro{\SensAComp}{1-\SensA}
+\pgfmathsetmacro{\SpecBComp}{1-\SpecB}
+% \pgfplotsset{domain = \Min : \Max}
+
+\begin{document}
+\begin{tikzpicture} 
+\begin{axis}%   
+[ axis lines = left 
+, width=200pt
+, height=300pt
+, samples=75 
+, xlabel = {Infection probability, $p$}
+, ylabel = {Chance that person is infected if test is negative}     
+, ymin=0
+, ymax=1
+, xmin=0
+, xmax=1
+, grid=both
+%, xticklabel={$a=(\ln A)/k$}
+%, ytick ={1/2,1}
+%, yticklabels={$L/2$,$L$}
+% , every axis x label/.style={at={(current axis.right of origin)},above right}        
+% , every axis y label/.style={at={(current axis.above origin)},above}
+, xticklabel={\pgfmathparse{\tick*100}\pgfmathprintnumber{\pgfmathresult}\%}
+, yticklabel={\pgfmathparse{\tick*100}\pgfmathprintnumber{\pgfmathresult}\%}
+, xtick={0, 0.3, 0.8, 1}
+] 
+\addplot%
+[ color=blue
+, domain=0:1
+, thick
+] {(x)*(1-\SensA)/((x)*(1-\SensA)+(1-x)*\SpecB)} 
+  node
+  [ above left
+  , pos=0.8
+  , fill=white
+  ]{$f(p)=\displaystyle\frac{\SensAComp p}{0.05p+0.85(1-p)}$};
+\draw[red, thick] 
+  (axis cs: 0,0.02459) 
+    node[above right]{$2.459\%$} 
+  -| 
+  (axis cs: 0.3,0);
+\draw[red, thick] 
+  (axis cs: 0,0.1905)
+    node[above right]{$19.05\%$} 
+  -| 
+  (axis cs: 0.8,0);
+\end{axis} 
+\end{tikzpicture}
+\end{document}

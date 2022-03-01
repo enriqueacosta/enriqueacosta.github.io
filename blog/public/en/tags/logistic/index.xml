@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logistic on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/logistic/</link>
+    <description>Recent content in Logistic on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/logistic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz Figure for a Function With Parameters</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</link>
+      <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</guid>
+      <description>I promised in another post that I would show the code for the TikZ figure I included in that post, reproduced below:
+ What is very nice about TikZ and its pfgplots package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+    </item>
+    
+    <item>
+      <title>Covid-19 Delta Variant % Share of Cases Grew Logistically</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</link>
+      <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</guid>
+      <description>Today, as part of my work, I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
+The graph below, which started all of this, should come up if one follows this Our World In Data link.
+ Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
+    </item>
+    
+  </channel>
+</rss>

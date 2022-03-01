@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mauna Loa on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/tags/mauna-loa/</link>
+    <description>Recent content in Mauna Loa on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Feb 2022 16:02:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/mauna-loa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mauna Loa CO2 Growing Super-Exponentially?</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</link>
+      <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
+      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de calculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;súper-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
+Después, aún convencido de lo preocupante y serio que era esto (el crecimiento súper-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos.</description>
+    </item>
+    
+  </channel>
+</rss>
