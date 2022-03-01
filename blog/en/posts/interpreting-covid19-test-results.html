@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="categories" content="[&quot;Math&quot;, &quot;Probability&quot;]">
 <meta name="tags" content="[ &quot;Covid-19&quot;, &quot;Medical tests&quot;, &quot;Probability&quot;, &quot;Desmos&quot;]">
-<meta name="date" content="2022-02-18T15:23:05-05:00">
-<meta name="draft" content="true"><style>body {
+<meta name="draft" content="true">
+<meta name="date" content="2022-02-23T15:25:05-05:00"><style>body {
   max-width: 980px;
   border: 1px solid #ddd;
   outline: 1300px solid #fff;
@@ -1068,7 +1068,7 @@ body .markdown-body
 .highlight .gc{color:#999;background-color:#EAF2F5}
 </style><title>"Interpreting Covid-19 Test Results"</title></head><body><article class="markdown-body"><p>Ever since the pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again. </p>
 <p>I knew that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter. </p>
-<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a brief summary, provide some extra explanations, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
+<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
 <!-- I encourage whoever reads this post to go ahead and read the column. The author really does a fantastic job at explaining why the interpretation of a Covid-19 tests depends on the portion of the population that is infected at that moment. In what follows I give a brief summary, provide some extra explanations, and show some nice interactive plots that I made to play around with the ideas in the column. -->
 
 <!-- Here is the short summary. Hope it makes sense! -->
@@ -1078,9 +1078,9 @@ body .markdown-body
 <ul>
 <li>A Covid-19 test may give a positive result when the person is not infected. This is called a <em>false positive</em>.</li>
 <li>Similarly, a Covid-19 test may negative result when the person is in fact infected infected. This is called a <em>false negative</em>.</li>
-<li>The two remaining cases are when the test tells the truth. These are the <em>true positive</em> and <em>true negative</em>.</li>
-<li>Which of these is more important depends on who you are and what you are worrying about, but from a soscietal perspective, the false negatives most definitely are the most serious ones: they make people think they are not infected when they in fact are and increase the chances of them spreading the disease.</li>
+<li>The two remaining outcomes are when the test tells the truth. These are the <em>true positive</em> and <em>true negative</em>.</li>
 </ul>
+<p>Which of these four possible outcomes of a Covid-19 test is more important depends on who you are and what you are worrying about. From a societal perspective, the false negatives most definitely are the most serious ones: they make people think they are not infected when they in fact are and increase the chances of them spreading the disease.</p>
 <!-- ### What probability has to do with any of this -->
 
 <h3 id="dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives">Don&rsquo;t believe a test saying &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;<a class="headerlink" href="#dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives" title="Permanent link"></a></h3>
@@ -1089,10 +1089,187 @@ body .markdown-body
 <li>a high quality test has few false negatives, and few false positives.</li>
 <li>a low quality test has more false negatives, and more false positives.</li>
 </ul>
-<p>Now, the thing is, this is not entirely true! The percentage of each case depends on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
+<p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
 <p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman that I mentioned above. </p>
 <p>I will try my best to be self contained in what follows, I encourage whoever reads this post to go ahead and read the column. The author really does a fantastic job at explaining the phenomenon. </p>
-<h3 id="pre-test-probability">Pre-test probability<a class="headerlink" href="#pre-test-probability" title="Permanent link"></a></h3>
+<h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!<a class="headerlink" href="#before-moving-on-here-are-the-cool-applets-i-made" title="Permanent link"></a></h3>
+<p>The applet below gives the chances that a test result is actually true (true negative, or true positive).
+{{&lt; desmos iqgb5omaw1 &gt;}}</p>
+<h4 id="how-it-works-and-what-it-says">How it works, and what it says:<a class="headerlink" href="#how-it-works-and-what-it-says" title="Permanent link"></a></h4>
+<ul>
+<li>Move the point $P$ (on the horizontal axis) to specify the &ldquo;amount of covid-19 around you&rdquo;, as a percentage.</li>
+<li>The vertical axis tells you what the chances are of a test result being actually true (true negative, or true positive).</li>
+<li>The &ldquo;quality&rdquo; of the test is determined by the values of $a$ and $b$ which you can adjust with the sliders. These are also numbers between $0\%$ and $100\%$ and have fancy names:</li>
+<li>$a$: the <em>sensitivity</em> of the test.</li>
+<li>$b$: the <em>specificity</em> of the test.</li>
+</ul>
+<p>I&rsquo;ll explain more what the sensitivity and the specificity mean below &mdash; they are the numbers that you will find in a specification sheet of a Covid-19 test!</p>
+<h4 id="and-here-is-its-complement-applet-about-false-test-results">And here is its complement applet, about false test results:<a class="headerlink" href="#and-here-is-its-complement-applet-about-false-test-results" title="Permanent link"></a></h4>
+<p>The applet below shows the chances of a test result being false (false negative, or false positive). Move the point P, and change the quality of the test by changing $a$ and $b$!</p>
+<p>{{&lt; desmos kofal4qbsz &gt;}}</p>
+<h4 id="here-they-are-together-all-true-and-false-possible-outcomes-in-all-their-messy-glory">Here they are together (all true and false possible outcomes), in all their messy glory:<a class="headerlink" href="#here-they-are-together-all-true-and-false-possible-outcomes-in-all-their-messy-glory" title="Permanent link"></a></h4>
+<p>{{&lt; desmos 6fjtvzhh3i &gt;}}
+<!-- {{< desmos hlqlimldv0 >}} --></p>
+<h2 id="how-are-these-applets-generated">How are these applets generated?<a class="headerlink" href="#how-are-these-applets-generated" title="Permanent link"></a></h2>
+<p>The short answer is that they were created using <a href="https://www.desmos.com/calculator">desmos</a> and by building on what Bill Casselman explains in his <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a>, but I provide an explanation with lots of pictures below!</p>
+<h3 id="some-background-probability-trees">Some background - probability trees<a class="headerlink" href="#some-background-probability-trees" title="Permanent link"></a></h3>
+<p>Probabilities multiply, and it is often useful to visualize this in trees. </p>
+<p>Here is an example:
+Say I take a card from a deck of cards, and then I take a second one. What is the probability that I grab a heart and then another heart? To answer this it helps thinking about the two steps separately. </p>
+<!-- First, when I grab the card, I may grab a heart, or not, and then when I grab the second one, it may be a heart, or not.  -->
+
+<p>There are 4 possible outcomes in total: 
+* heart then heart
+* heart then not heart
+* not heart then heart, and 
+* not heart and then not heart</p>
+<p>These four outcomes show up at the far right in the tree-diagram below:
+{{&lt; figure src=&rdquo;ProbabilityTreeCards.png&rdquo; &gt;}}</p>
+<p>So, what is the chance for each outcome? The nice thing about the tree is that we can separate thinking about each step separately, and then multiply. </p>
+<p>Specifically, for the first card:</p>
+<ul>
+<li>The probability that the first card is a heart is $1/4$ (since a quarter of the cards are hearts). So, there is a $25\%$ chance of grabbing a heart.</li>
+<li>The probability that the first one is <em>not</em> a heart is $3/4$ (all the other cards). So, there is a $75\%$ chance of not grabbing a heart.</li>
+</ul>
+<p>We put these probabilities in the tree:
+{{&lt; figure src=&rdquo;ProbabilityTreeCardsFirstDetails.png&rdquo; &gt;}}</p>
+<p>For the second car the chances are not the same since there are less cards, and the number of hearts varies!</p>
+<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em> (regularly part of the high school curriculum, but most people rarely remember it).</p>
+<p>We put this new information in the tree:
+{{&lt; figure src=&rdquo;ProbabilityTreeCardsSecondDetails.png&rdquo; &gt;}}</p>
+<p>What if the first card was not a heart? Well, then all the 13 hearts are present in the renaming 51 hearts, so there is a $13/51=25.49\%$ chance that the second card is a heart if the first one was not a heart (as expected, higher than $25\%$, since the there are the same amount of hearts but less cards). </p>
+<p>We put this new information in the tree too:
+{{&lt; figure src=&rdquo;ProbabilityTreeCardsThirdDetails.png&rdquo; &gt;}}</p>
+<p>The thick blue paths above correspond to the two ways that one can obtain a heart in the second draw:
+*  1st is heart and 2nd is heart (path at the top)
+*  1st is not hear and 2nd is heart (the other path)</p>
+<p>Similar reasoning allows one to complete the whole tree. This is what one gets:
+{{&lt; figure src=&rdquo;ProbabilityTreeCardsFourthDetails.png&rdquo; &gt;}}
+<!-- Similarly,
+*  if the first card was a heart, then there are 39 non-heart cards in the remaining 51 cards. This gives a $39/51=76.47\\%$ chance that the second card is not a heart if the first one was a heart. -->
+Now, we can put them together and multiply! The percentages on the right are the probability of each outcome:</p>
+<p>{{&lt; figure src=&rdquo;ProbabilityTreeDetailsCards.png&rdquo; &gt;}}</p>
+<p>What this says:
+*  There is a $5.88\%$ chance that the first card is a heart and the second one is a heart.
+*  There is a $19.12\%$ chance that the first card is a heart and the second one is not a heart (same as in the opposite order, which is the third outcome in the tree).
+*  There is a $58.88\%$ chance that the first card is not a heart, and the second card is also not a heart. </p>
+<p>So, there is a $5.88\%$ chance that one grabs two hearts. Much lower than the $55.88\%$ chance of not grabbing any hearts.</p>
+<p>Note that all the percentages on the right add up to $100\%$, as they should since they cover all the possible outcomes!</p>
+<!-- Here is an example:
+Say I take a card from a deck of cards, and then roll a 6-sided die. What is the probability that I grab a heart and roll a number divisible by 3 (so a 3 or a 6). To answer this it helps thinking about all the possibilities. First, when I grab the card, I may grab a heart, or not, and then when I roll the die, I may get a number divisible by 6, or not.
+
+There are 4 possible outcomes in total (one of which is the grab a heart and roll a number divisible by 3 that we are wondering about):
+{{< figure src="ProbabilityTree-600.png" >}}
+
+So, what is the chance for each outcome? The nice thing about the tree is that we can separate thinking about each step separately, and then multiply. 
+
+Specifically, about the cards:
+
+*  The probability of grabbing a heart is $1/4$ (since a quarter of the cards are hearts). So, there is a $25\\%$ chance of grabbing a heart.
+*  The probability of not grabbing a heart is $3/4$ (all the other cards). So, there is a $75\\%$ chance of not grabbing a heart.
+
+And about the roll of the die:
+*  The probability of rolling a number divisible by $3$ is $2/6=1/3$ since there are two numbers ($3$ and $6$ among the six total that are divisible by $3$). This is a $33.33\\%$ chance.
+*  The probability of rolling a number divisible by $3$ is $4/6=2/3$ since there are four numbers ($1,2,4$, and $5$ among the six total that are not divisible by $3$). This is a $66.67\\%$ chance.
+
+Now, we can put them together and multiply! The percentages on the right are the probability of each outcome:
+
+{{< figure src="ProbabilityTreeDetails-600.png" >}}
+
+
+So, there is a $8.33\\%$ chance that one grabs a heart and then rolls a number divisible by 3. Much lower than the $50\\%$ chance of not grabbing a heart and then rolling a number not divisible by 3!
+
+Note that all the percentages on the right add up to $100\\%$, as they should since they cover all the possible outcomes! -->
+
+<!-- ### One example that will be important later on -->
+
+<!-- Here is a question in the toy example that is related to the Covid-19 false positives, or negatives:  -->
+
+<!-- ``` -->
+
+<!-- What is the probability that I did not grab a heart, given that I rolled a number divisible by 3? -->
+
+<!-- ``` -->
+
+<!-- Using the tree helps to think about this. We are asking ourselves about a chance of something happening given that we rolled a number divisible by $3$. So, we first restrict to the universe in which we rolled a number divisible by $3$ (blue and bold in the figure below): -->
+
+<!-- {{< figure src="ProbabilityTreeDetailsDivThree-600.png" >}} -->
+
+<!-- So, the universe of rolling a number divisible by $3$ is the sum of the outcomes where this happens: $8.33\\%+25\\%=33.33\\%$. -->
+
+<!-- And put of this $33.33\\%$ universe, $25\\%$ corresponds to the ones where I did not roll a heart. So: -->
+
+<!--$$ \text{prob}=\frac{25\\%}{33.33\\%}=75\\% $$ -->
+
+<h3 id="back-to-covid-19">Back to Covid-19<a class="headerlink" href="#back-to-covid-19" title="Permanent link"></a></h3>
+<p>This is the tree related to Covid-19 testing:
+{{&lt; figure src=&rdquo;ProbabilityTreeCovid.png&rdquo; &gt;}}</p>
+<h4 id="what-probabilities-do-we-know-in-this-tree">What probabilities do we know in this tree?<a class="headerlink" href="#what-probabilities-do-we-know-in-this-tree" title="Permanent link"></a></h4>
+<p>This is where the <em>sensitivity</em> and <em>specificity</em> of the test come in! When a test is created, medical studies are conducted to figure out:
+*  Sensitivity ($a\%$): Chances that a test will correctly identify an infected person (i.e. say positive if the person is infected).
+*  Specificity ($b\%$): Chances that a test will correctly identify a non infected person (i.e. say negative if the person is not infected).</p>
+<p>These are what one could call &ldquo;quality&rdquo; parameters of the test. The important fact is that they do <em>not</em> depend on the population one is testing. They also happen to be the numbers in our tree!</p>
+<p>{{&lt; figure src=&rdquo;ProbabilityTreeCovidFirstDetails.png&rdquo; &gt;}}</p>
+<p>If we know these, then we know the other two at these level, since they are complementary events:
+{{&lt; figure src=&rdquo;ProbabilityTreeCovidSecondDetails.png&rdquo; &gt;}}</p>
+<h4 id="what-about-the-first-two-branches-of-the-tree">What about the first two branches of the tree?<a class="headerlink" href="#what-about-the-first-two-branches-of-the-tree" title="Permanent link"></a></h4>
+<p>Well, the chances of being infected change according to the moment (proportion of people sick at the current moment). If $p\%$ people are infected, then we can take that as the chance of being infected (more on this later). Similarly, the chance of not being infected is $(100-p)\%$ (all the other people).</p>
+<p>{{&lt; figure src=&rdquo;ProbabilityTreeCovidThirdDetails.png&rdquo; &gt;}}</p>
+<p>So, here is the final tree, with the probabilities of each outcome. Note that everything depends on two things: the parameters of the test ($a\%$ and $b\%$), and on the current proportion $p\%$ of the tested population that is infected (which is independent of the test!).</p>
+<p>{{&lt; figure src=&rdquo;ProbabilityTreeCovidDetails.png&rdquo; &gt;}}</p>
+<h3 id="so-where-do-the-crazy-curves-in-the-applets-above-come-from">So, where do the crazy curves in the applets above come from?<a class="headerlink" href="#so-where-do-the-crazy-curves-in-the-applets-above-come-from" title="Permanent link"></a></h3>
+<p>It is nice we know the probabilities of each outcome now, but a regular person who gets a test result does not really ask about the probabilities of these outcomes. The natural sort of questions one asks oneself after getting a Covid-19 tests are of the form: 
+* &ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;
+* &ldquo;I got a negative test result, what are the chances that it is true? Can I trust the result?&rdquo;
+* &ldquo;I got a positive test result, what are the chances that the test is wrong?&rdquo;
+* &ldquo;I got a positive test result, what are the chances that it is correct?&rdquo;</p>
+<p>These are not questions about the probability of an outcome in the tree, but one can figure out what one needs to compute from the tree. </p>
+<p>This is how it works:</p>
+<p>Say, we want to answer the question: &ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;</p>
+<p>So, the result came out negative. These are all the paths in the tree with a negative result:
+{{&lt; figure src=&rdquo;ProbabilityTreeCovidDetailsConditional.png&rdquo; &gt;}}</p>
+<p>Looking at this tree, the question we want to answer is: out of those two possible outcomes giving a negative test result, what are the chances that I am really on the top path (the one corresponding to being truly infected)? Well, you just divide the chances:</p>
+<p>$$
+\frac{\text{chance of infected path}}{\text{sum of chances of all negative paths}}
+=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<p>That is it! Those are the chances of actually being infected given a negative Covid-19 test result:</p>
+<p>$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\end{array}=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<h4 id="how-does-this-look-like-with-actual-numbers">How does this look like with actual numbers?<a class="headerlink" href="#how-does-this-look-like-with-actual-numbers" title="Permanent link"></a></h4>
+<p>Say the PCR test that was taken has sensitivity $a\%=95\%$, and specificity $b\%=85\%$, then 
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\end{array}=\frac{p\%\times 5\%}{p\%\times 5\%+(100\%-p\%)\times 85\%}
+$$
+&hellip; still depends on $p$! </p>
+<p>Ok, so what if I assume the chances in my community of being infected at that particular moment are $30\%$? Then one does get a number:
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\\
+\text{assuming $p=30$}\end{array}=\frac{30\%\times 5\%}{30\%\times 5\%+70\%\times 85\%}=2.459\%
+$$
+It is a small chance! </p>
+<p>But now, say I have Covid-19 related symptoms, and was with someone who tested positive. Then talking $p\%$ to be $30\%$ seems to be a mistake, since I am not a randomly selected member of my population. Maybe it should be $80\%$ instead?
+$$
+\begin{array}{c}\text{Chance of having}\\
+\text{Covid-19 if the test }\\
+\text{result is negative}\\
+\text{assuming $p=80$}\end{array}=\frac{80\%\times 5\%}{80\%\times 5\%+20\%\times 85\%}=19.05\%
+$$
+This increases the chances....</p>
+<p>And then again, since $p$ varies with time and depends on my surroundings, maybe instead of repeating this computation over and over again, one should just plot the chances as a function of $p$! </p>
+<p>Here is the plot, for a test with $a\%=95\%$, and specificity $b\%=85\%$:</p>
+<p>{{&lt; figure src=&rdquo;CovidFalseNegative.png&rdquo; &gt;}}</p>
+<p>As you may be starting to see, the answer to the simple questions one makes about a Covid-19 tests results are not that simple to answer!</p>
+<p>Here is an interactive desmos plot of the above plot, with sliders for the sensitivity and specificity $a$, $b$ of the test, so that you can see how they affect the curve that answers the question &ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;:</p>
+<p>{{&lt; desmos xlrk2fnjes &gt;}}</p>
+<h4 id="pre-test-probability">Pre-test probability<a class="headerlink" href="#pre-test-probability" title="Permanent link"></a></h4>
 <p>Explain that it is not the portion of the population. More like:</p>
 <ul>
 <li>What % of the population has Covid-19 right now? (not the reported one, but the true expected one).</li>
@@ -1100,5 +1277,4 @@ body .markdown-body
 <li>Does the person have symptoms? This increases the pre-test probability.</li>
 <li>Has the person been in contact with someone with symptoms or that who has tested positive. This increases the pre-test probability.</li>
 <li>This is an aproximation to the pre-test probability. With it, one can now look at the test result and interpret the result accordingly.</li>
-</ul>
-<p><a class="wikilink" href="/DESMOS_APPLET/">DESMOS APPLET</a></p></article></body></html>
+</ul></article></body></html>
