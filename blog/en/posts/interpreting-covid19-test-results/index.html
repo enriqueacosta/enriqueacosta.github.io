@@ -95,7 +95,7 @@
   <h1>Interpreting Covid-19 Test Results</h1>
   
   
-  <time datetime=2022-02-23T15:25:05-0500 class="post-date">February 23, 2022</time>
+  <time datetime=2022-02-28T15:25:05-0500 class="post-date">February 28, 2022</time>
   
   
   <p> 
@@ -115,7 +115,7 @@
   
   <div>
   <p>Ever since the Covid-19 pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again.</p>
-<p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the detials or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
+<p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the details or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
 <p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Feature Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -123,7 +123,7 @@
 <h3 id="some-terminology">Some terminology</h3>
 <ul>
 <li>A Covid-19 test may give a positive result when the person is not infected. This is called a <em>false positive</em>.</li>
-<li>Similarly, a Covid-19 test may negative result when the person is in fact infected infected. This is called a <em>false negative</em>.</li>
+<li>Similarly, a Covid-19 test may give a negative result when the person is in fact infected infected. This is called a <em>false negative</em>.</li>
 <li>The two remaining outcomes are when the test tells the truth. These are the <em>true positive</em> and <em>true negative</em>.</li>
 </ul>
 <p>Which of these four possible outcomes of a Covid-19 test is more important depends on who you are and what you are worrying about. From a societal perspective, the false negatives are probably the most serious ones: they make people think they are not infected when they in fact are, and so increase the chances of them spreading the disease.</p>
@@ -135,7 +135,7 @@
 <li>a low quality test has more false negatives, and more false positives.</li>
 </ul>
 <p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
-<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman, and what I show and explain in this blob post.</p>
+<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman, and what I show and explain in this blog post.</p>
 <p>I will try my best to be self contained in what follows so there is no need to read the column before going on. Hopefully the column will make even more sense after reading this!</p>
 <h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!</h3>
 <p>The applet below gives the chances that a test result is actually true (true negative, or true positive).</p>
@@ -196,8 +196,8 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <figure><img src="ProbabilityTreeCardsFirstDetails.png" width="700em"/>
 </figure>
 </p>
-<p>For the second car the chances are not the same since there are less cards, and the number of hearts varies!</p>
-<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em> (regularly part of the high school curriculum, but most people rarely remember it).</p>
+<p>For the second card the chances are not the same since there are less cards, and the number of hearts varies!</p>
+<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em>. <!-- raw HTML omitted --></p>
 <p>We put this new information in the tree:
 <figure><img src="ProbabilityTreeCardsSecondDetails.png" width="700em"/>
 </figure>
@@ -275,8 +275,8 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <!-- raw HTML omitted -->
 <p>The natural sort of questions one asks oneself after getting a Covid-19 tests are of the form:</p>
 <ol>
-<li>&ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;</li>
-<li>&ldquo;I got a negative test result, what are the chances that it is true? Can I trust the result?&rdquo;</li>
+<li>&ldquo;I got a negative test result, what are the chances I am in reality infected?&rdquo;</li>
+<li>&ldquo;I got a negative test result, what are the chances that it is true (I am not infected)?&rdquo;</li>
 <li>&ldquo;I got a positive test result, what are the chances that the test is wrong?&rdquo;</li>
 <li>&ldquo;I got a positive test result, what are the chances that it is correct?&rdquo;</li>
 </ol>
@@ -367,7 +367,7 @@ This increases the chances&hellip;.</p>
 <li>the Sensitivity and Specificity of the test.</li>
 </ul>
 </li>
-<li>Sensitivity and Specificity are conditional probability &ldquo;quality&rdquo; paramaters for a Covid-19 test that are independent of the population that is being tested.</li>
+<li>Sensitivity and Specificity are conditional probability &ldquo;quality&rdquo; parameters for a Covid-19 test that are independent of the population that is being tested.</li>
 <li>Then Sensitivity and Specificity, however, are not completely constant, and may be different if it is &ldquo;too early&rdquo; or &ldquo;too late&rdquo; to test.</li>
 <li>The chances that Covid-19 tests results are true or false are different if the test results are positive or negative! Maybe this is one of the most important things to take home!</li>
 </ul>

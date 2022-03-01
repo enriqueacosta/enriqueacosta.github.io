@@ -5,11 +5,11 @@
     <link>https://enriqueacosta.github.io/blog/es/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 09 Feb 2022 16:02:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Feb 2022 16:02:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Los niveles de CO2 crecen súper-exponencial?</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</link>
-      <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
+      <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
       <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de calculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;súper-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
