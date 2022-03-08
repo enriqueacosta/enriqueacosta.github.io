@@ -12,7 +12,7 @@
       <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
-      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de calculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
+      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
 Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos.</description>
     </item>
     
