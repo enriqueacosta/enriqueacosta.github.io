@@ -149,6 +149,7 @@ These three functions all give very good fits for almost $70$ years' worth of da
 
 <p>In what follows I will be looking at the annual mean CO$_2$ data, which smooths out seasonal variation. This data is downloaded from the official <a href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA site</a>.</p>
 <h2 id="first-model-the-super-exponential-p_0bmtt">First Model: the Super-Exponential $P_0(b+mt)^t$</h2>
+<h4 id="growth-is-not-exponential">Growth is not exponential</h4>
 <p>One way to realize that the $\text{CO}_2$ concentration is not exponential is by plotting it in a spreadsheet and asking it to give an exponential fit. Here is the result:</p>
 <figure><img src="Mauna-loa-exponential-fit.png"/>
 </figure>
@@ -252,7 +253,7 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 <h4 id="one-final-note">One Final Note:</h4>
 <p>Looking 500 years into the future is pretty meaningless for this model. Note that the C0$_2$ level in ppm reaches a million ppm. This would say all air molecules would be CO$_2$ (silly), and anything beyond that million ppm is meaningless. The CO$_2$ is more likely to stabilize at some point in the future with an absurd theoretical limit of a million parts per million. Maybe it is already starting to stabilize!</p>
 <h2 id="third-model-the-quadratic-a_2x2a_1xa_0">Third Model: the Quadratic $a_2x^2+a_1x+a_0$</h2>
-<p>What I showed above indicates that an exponential+constant function can also model the data. So, it could be growing super-exponentially, or exponentially+constant. Surely nothing like a los degree polynomial, which grows much slower, could model the growth. Right? Well, not really!</p>
+<p>What I showed above indicates that an exponential+constant function can also model the data. So, it could be growing super-exponentially, or exponentially+constant. Surely nothing like a low degree polynomial, which grows much slower, could model the growth. Right? Well, not really!</p>
 <p>The following quadratic model is found using a spreadsheet directly using the &ldquo;trend-line&rdquo; option with polynomial of degree 2 as a choice of trend. The resulting model is given by
 $$
 h(t)=0.013t^2+0.8055t+315.5219
@@ -288,7 +289,7 @@ $$</p>
 <h2 id="what-to-take-away-from-all-of-this">What to Take Away From all of This</h2>
 <ul>
 <li>
-<p>Which model is better? Any of the three of the models is equally valid in the sense that they all give very tight fits to the data.</p>
+<p>Which model is better? Any of the three the models is equally valid in the sense that they all give very tight fits to the data.</p>
 </li>
 <li>
 <p>It is pretty amazing that there are such simple formulas that model the growth of CO$_2$ levels for over 70 years.</p>

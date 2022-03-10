@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Probability on Enrique Acosta Jaramillo</title>
-    <link>https://enriqueacosta.github.io/blog/en/tags/probability/</link>
-    <description>Recent content in Probability on Enrique Acosta Jaramillo</description>
+    <title>Conditional Probability on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/conditional-probability/</link>
+    <description>Recent content in Conditional Probability on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Feb 2022 15:25:05 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 15:25:05 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/conditional-probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interpreting Covid-19 Test Results</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/</link>

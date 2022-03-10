@@ -1,0 +1,74 @@
+\documentclass[border=1pt, 12pt, tikz]{standalone}
+
+\newcommand\wideOne{2cm}%{3cm}
+\newcommand\wideTwo{3cm}%{3.5cm}
+\newcommand\wideThree{2.2cm}%{2.2cm}
+\newcommand\wideFour{2.6cm}%{3cm}
+\newcommand\distOne{2cm}
+\newcommand\distTwo{1cm}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+
+% 1ra level
+\draw[thick]%
+   (0,0) 
+   -- node[above, sloped, align=center]
+      {1ra es $\heartsuit$\\($1/4=25\%$)} 
+   (\wideOne,\distOne);
+\draw[thick] 
+   (0,0) 
+   -- node[below, sloped, align=center]
+      {1ra no es $\heartsuit$\\($3/4=75\%$)} 
+   (\wideOne,-\distOne);
+
+% 2da, 3rd and 4th Level
+\draw[thick] 
+   (\wideOne,\distOne)
+   -- node[above, align=center, sloped]
+      {2da es $\heartsuit$\\($12/51=23.53\%$)}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra es $\heartsuit$ y\\2da es $\heartsuit$}
+   ++ (\wideFour,0) 
+      node[right]
+      {$(1/4)\times(12/51)=5.88\%$}
+   ++ (0,1)
+      node[right]
+      {Probabilidad de resultado}
+   ; 
+\draw[thick] 
+   (\wideOne,\distOne) 
+   -- node[below, align=center, sloped]
+      {2da no es $\heartsuit$\\($39/51=76.47\%$)}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra es $\heartsuit$ y 2da no $\heartsuit$}
+   ++ (\wideFour,0) 
+      node[right]
+      {$(1/4)\times(39/51)=19.12\%$}
+   ;
+\draw[thick] 
+   (\wideOne,-\distOne) 
+   -- node[above, align=center, sloped]
+      {2da es $\heartsuit$\\($13/51=25.49\%$)}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra no $\heartsuit$ y 2da es $\heartsuit$}
+   ++ (\wideFour,0) 
+      node[right]
+      {$(3/4)\times(13/51)=19.12\%$}
+   ;  
+\draw[thick] 
+   (\wideOne,-\distOne)
+   -- node[below, align=center, sloped]
+      {2da no es $\heartsuit$\\($38/51=74.51\%$)}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra no $\heartsuit$ y 2da no $\heartsuit$}
+   ++ (\wideFour,0) 
+      node[right]
+      {$(3/4)\times(38/51)=55.88\%$}
+   ; 
+\end{tikzpicture}
+\end{document}

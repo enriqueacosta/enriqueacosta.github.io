@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -14,6 +14,70 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/illustrative-mathematics/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/im-good-examples/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/mathematics-curriculum/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/mathematics-resources-for-teaching-and-learning/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/conditional-probability/</loc>
+    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/covid-19/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
@@ -30,22 +94,29 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/desmos/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/"
+                href="https://enriqueacosta.github.io/blog/es/tags/desmos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/"
+                href="https://enriqueacosta.github.io/blog/en/tags/desmos/"
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/interpreting-covid19-test-results/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
@@ -53,37 +124,8 @@
     <loc>https://enriqueacosta.github.io/blog/en/tags/medical-tests/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/probability/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/probability/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/climate-change/</loc>
     <lastmod>2022-02-09T16:02:00-05:00</lastmod>
@@ -214,19 +256,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
     <lastmod>2022-02-01T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</loc>
-    <lastmod>2022-01-17T18:25:45-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/illustrative-mathematics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/translating-mathematics-resources/</loc>
     <lastmod>2022-01-17T18:25:45-05:00</lastmod>

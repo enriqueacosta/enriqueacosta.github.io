@@ -1,0 +1,59 @@
+\documentclass[border=1pt, 12pt, tikz]{standalone}
+
+\newcommand\wideOne{3cm}
+\newcommand\wideTwo{4cm}
+\newcommand\wideThree{2.7cm}
+\newcommand\wideFour{3cm}
+\newcommand\distOne{2cm}
+\newcommand\distTwo{1cm}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+
+% 1st level
+\draw[thick]%
+   (0,0) 
+   -- node[above, sloped, align=center]
+      {1ra es $\heartsuit$} 
+   (\wideOne,\distOne);
+\draw[thick] 
+   (0,0) 
+   -- node[below, sloped, align=center]
+      {1ra no es $\heartsuit$} 
+   (\wideOne,-\distOne);
+
+% 2nd, 3rd and 4th Level
+\draw[thick] 
+   (\wideOne,\distOne)
+   -- node[above, align=center, sloped]
+      {2da es $\heartsuit$}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra es $\heartsuit$ y\\2da es $\heartsuit$}
+   ; 
+\draw[thick] 
+   (\wideOne,\distOne) 
+   -- node[below, align=center, sloped]
+      {2da no es $\heartsuit$}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra es $\heartsuit$ y 2da no $\heartsuit$}
+   ;
+\draw[thick] 
+   (\wideOne,-\distOne) 
+   -- node[above, align=center, sloped]
+      {2da es $\heartsuit$}
+   ++ (\wideTwo,\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra no $\heartsuit$ y 2da es $\heartsuit$}
+   ;  
+\draw[thick] 
+   (\wideOne,-\distOne)
+   -- node[below, align=center, sloped]
+      {2da no es $\heartsuit$}
+   ++ (\wideTwo,-\distTwo) 
+      node[right, align=center, text width=\wideThree]
+      {1ra no $\heartsuit$ y 2da no $\heartsuit$}
+   ; 
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interpretación de resultados de pruebas de laboratorio de Covid-19 &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/interpreting-covid19-test-results/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Interpretación de resultados de pruebas de laboratorio de Covid-19</h1>
+  
+  
+  <time datetime=2022-03-07T15:25:05-0500 class="post-date">7 de marzo de 2022</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/covid-19">Covid-19</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/examenes-de-laboratorio">Examenes de laboratorio</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/probabilidad-condicional">Probabilidad condicional</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/desmos">Desmos</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/">English: Interpreting Covid-19 Test Results</a>)</h4>
+    
+  
+  <div>
+  <p>Desde el inicio de la pandemia de Covid-19 me ha estado persiguiendo el asunto de interpretar de manera correcta los resultados de los las pruebas de laboratorio de Covid-19.</p>
+<p>Sabía que la probabilidad de que una prueba de laboratorio de Covid-19 diera información correcta depende de la proporción de la población que se encuentra infectada en el momento que se hizo la prueba, pero no conocía los detalles ni entendía por qué podía pasar esto. Cada vez que trataba de leer al respecto terminaba leyendo artículos en internet con muchas tablas y números inventados de casos positivos y negativos que no me ayudaban a entender el asunto con claridad.</p>
+<p>Finalmente encontré una <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a> escrita por Bill Casselman que me permitió entender mejor el asunto. En esta entrada de blog doy una explicación muy gráfica usando árboles de probabilidad algo distinta a la de la columna, doy algunos detalles adicionales, y muestro algunas gráficas interactivas que hice para explorar las ideas relacionadas.</p>
+<p>Antes de continuar es necesario establecer terminología clave.</p>
+<h3 id="terminología">Terminología</h3>
+<ul>
+<li>Una prueba de laboratorio de Covid-19 puede dar un resultado positivo cuando la persona en realidad no en está infectada. A esto se le llama un <em>falso positivo</em>.</li>
+<li>Igualmente, una prueba de laboratorio de Covid-19 puede dar un resultado negativo cuando la persona en realidad está infectada. A esto se le llama un <em>falso negativo</em>.</li>
+<li>Las dos opciones restantes son cuando la prueba dice la verdad: estos son los <em>verdaderos positivos</em> y <em>verdaderos negativos</em>.</li>
+</ul>
+<p>Desde una perspectiva de la sociedad, los falsos negativos son probablemente los más serios: hacen que las personas piensen que no están infectadas cuando, de hecho lo están, por lo que aumentan las posibilidades de que propaguen la enfermedad. Desde una perspectiva personal, cuál de estas cuatro posibles opciones <!-- raw HTML omitted --> es más importante depende de quién sea usted y de qué se está preocupando en ese momento en particular.</p>
+<!-- raw HTML omitted -->
+<h3 id="no-crea-en-una-prueba-que-diga-menos-de-1-falsos-negativos">No crea en una prueba que diga &ldquo;¡Menos de 1% falsos negativos!&rdquo;</h3>
+<p>Una suposición natural es creer que el porcentaje de cada uno de estos casos (falsos negativos, verdaderos positivos, etc.) depende tan solo de la calidad de la prueba:</p>
+<ul>
+<li>Una prueba de alta calidad tiene pocos falsos negativos y pocos falsos positivos.</li>
+<li>Una prueba de baja calidad tiene más falsos negativos y más falsos positivos.</li>
+</ul>
+<p>¡Esto no es del todo cierto! Los porcentajes para cada caso dependen de la población en la que se hizo la prueba y el momento en el que se hizo. ¡Uno no puede mirar la hoja de especificación de una prueba de PCR Covid-19 y leer &ldquo;¡Menos de 1% falsos negativos!&rdquo;. Una afirmación de este estilo simplemente no se puede dar.</p>
+<p>Entender el por qué de este hecho es el contenido de la <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a> de Bill Casselman y lo que muestro y explico en esta entrada de blog.</p>
+<p>Haré todo lo posible para ser auto-contenido en lo que sigue, por lo que no es necesario leer la columna antes de continuar. ¡Ojalá la columna sea más fácil de entender después de leer esto!</p>
+<h3 id="antes-de-continuar-estas-son-las-gráficas-interactivas-que-hice">Antes de continuar, ¡estas son las gráficas interactivas que hice!</h3>
+<p>La gráfica a continuación da las probabilidades de que un resultado de prueba sea realmente verdadero (verdadero negativo o verdadero positivo).
+<div>
+    <iframe src="https://www.desmos.com/calculator/cqwush4kle?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div></p>
+<h4 id="cómo-funciona-y-qué-dice">Cómo funciona, y qué dice:</h4>
+<ul>
+<li>Mueva el punto $p$ (en el eje horizontal) para especificar la &ldquo;cantidad de Covid-19 a su alrededor&rdquo;, como porcentaje (lo estamos identificando aquí con el &ldquo;porcentaje infectado de la población&rdquo;, pero luego haremos esto más preciso).</li>
+<li>El eje vertical indica las probabilidades de que un resultado de prueba sea realmente verdadero dado el valor de $p$ que eligió. Hay una curva para la probabilidad de un <em>verdadero negativo</em> y una curva para la probabilidad de un <em>verdadero positivo</em>. Note que son distintas!</li>
+<li>La &ldquo;calidad&rdquo; de la prueba está determinada por los valores de $a$ y $b$ que pueden ajustar con los deslizadores. Estos son números entre $0\% $ y $100\% $ que tienen nombres técnicos:
+<ul>
+<li>$a$: la <em>sensibilidad</em> de la prueba.</li>
+<li>$b$: la <em>especificidad</em> de la prueba.</li>
+</ul>
+</li>
+</ul>
+<p>Explicaré lo que significa la sensibilidad y la especificidad más adelante. Por ahora tan solo menciono que son los números que sí va a encontrar en las especificaciones técnicas de una prueba de Covid-19.</p>
+<h4 id="esta-es-la-gráfica-interactiva-complementaria-sobre-los-resultados-de-prueba-falsos">Esta es la gráfica interactiva complementaria sobre los resultados de prueba falsos:</h4>
+<p>La siguiente gráfica muestra las probabilidades de que un resultado de prueba sea falso (falso negativo o falso positivo). ¡Mueva el punto $p$, y ajuste la calidad de la prueba cambiando $a$ y $b$!</p>
+<!-- raw HTML omitted -->
+<div>
+    <iframe src="https://www.desmos.com/calculator/d21mrfxpd1?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h4 id="y-estas-son-todas-las-gráficas-juntas-todos-los-resultados-verdaderos-y-falsos-posibles">Y estas son todas las gráficas juntas (todos los resultados verdaderos y falsos posibles):</h4>
+<!-- raw HTML omitted -->
+<div>
+    <iframe src="https://www.desmos.com/calculator/gr7crrmmcj?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<!-- raw HTML omitted -->
+<h2 id="cómo-hice-esas-gráficas-interactivas">¿Cómo hice esas gráficas interactivas?</h2>
+<p>La respuesta corta es que las creé usando <a href="https://www.desmos.com/calculator?lang=es">desmos</a> basado en  lo que explica Bill Casselman en su <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a>. La respuesta larga la doy a continuación en donde explico en detalle y de manera muy gráfica de donde salen esas gráficas.</p>
+<h3 id="algunos-conceptos-previos----árboles-de-probabilidad">Algunos conceptos previos -  árboles de probabilidad</h3>
+<p>Las probabilidades se multiplican y a menudo es útil visualizar esto usando árboles.</p>
+<p>Este es un ejemplo:</p>
+<p>Supongamos que tomo una carta de una baraja de cartas, y luego tomo una segunda. ¿Cuál es la probabilidad de que saque un corazón y luego otro corazón? (Una baraja tiene 52 cartas de las cuales 13 &ndash; un cuarto &ndash; son corazones).</p>
+<p>Para responder esta pregunta sirve pensar en los dos pasos por separado.</p>
+<p>Hay 4 posibles resultados:</p>
+<ul>
+<li>Primero corazón y después corazón</li>
+<li>Primero corazón y después no corazón</li>
+<li>Primero no corazón y después corazón</li>
+<li>Primero no corazón y después no corazón.</li>
+</ul>
+<p>Estos cuatro resultados aparecen en el extremo derecho del siguiente diagrama de árbol:
+<figure><img src="ProbabilityTreeCards.es.png" width="700em"/>
+</figure>
+</p>
+<p>¿Cuál es la posibilidad de cada resultado del extremo derecho? Lo bueno de representar la situación con un árbol es que podemos analizar cada paso por separado, y luego multiplicar.</p>
+<p>Específicamente, para la primera carta:</p>
+<ul>
+<li>La probabilidad de que la primera carta sea un corazón es $1/4$ (pues un cuarto de las cartas son corazones). Es decir, hay una probabilidad de $25\%$ de que la carta que uno saque sea un corazón.</li>
+<li>La probabilidad de que la primera carta <em>no sea</em> un corazón es $3/4$ (todas las otras cartas). Es decir, hay una probabilidad de $75\%$ de que la primera carta que uno saque no sea un corazón.</li>
+</ul>
+<p>Ponemos estas probabilidades en el árbol:
+<figure><img src="ProbabilityTreeCardsFirstDetails.es.png" width="700em"/>
+</figure>
+</p>
+<p>Para la segunda carta, las posibilidades <strong>no son las mismas</strong>, ya que hay menos cartas, ¡y el número de corazones varía!</p>
+<p>Por ejemplo, si la primera carta es un corazón, entonces solo quedan 12 corazones en las 51 cartas restantes. Así, si la primera carta es un corazón, las posibilidades de sacar un segundo corazón son $12/51$, o $23.53\%$ (menor que $25\%$, como era de esperarse, pues ya se había sacado un corazón). Esta segunda probabilidad es lo que se conoce como una <em>probabilidad condicional</em>, pues es una probabilidad que asume que ya ocurrió otro evento.</p>
+<p>Ponemos esta nueva información en el árbol:
+<figure><img src="ProbabilityTreeCardsSecondDetails.es.png" width="700em"/>
+</figure>
+</p>
+<p>¿Qué pasa si la primera carta no es un corazón? Bueno, entonces en las 51 cartas restantes todavía están todos los 13 corazones, por lo que hay un chance de $13/51 = 25.49\%$ de que la segunda carta sea un corazón si la primera no fue un corazón (mayor que $25\%$, como era de esperarse, ya que sigue habiendo la misma cantidad de corazones, pero menos cartas).</p>
+<p>También ponemos esta nueva información en el árbol:
+<figure><img src="ProbabilityTreeCardsThirdDetails.es.png" width="700em"/>
+</figure>
+</p>
+<p>Las caminos azules gruesos en la figura anterior corresponden a las dos formas en que se puede obtener un corazón en la segunda carta:</p>
+<ul>
+<li>1ra carta es el corazón y la 2da es corazón (camino en la parte superior)</li>
+<li>1ra carta no es corazon y la 2da es corazón (el otro camino)</li>
+</ul>
+<p>Un razonamiento similar permite completar el resto del árbol. Esto es lo que se obtiene:
+<figure><img src="ProbabilityTreeCardsFourthDetails.es.png" width="700em"/>
+</figure>
+</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>¡Y ahora podemos multiplicar las probabilidades!</p>
+<p>Los porcentajes a la derecha en la siguiente figura son la probabilidad de que ocurra cada resultado:</p>
+<figure><img src="ProbabilityTreeDetailsCards.es.png" width="700em"/>
+</figure>
+
+<p>Lo que esto dice:</p>
+<ul>
+<li>Hay $5.88\%$ de probabilidad de que la primera carta sea un corazón y la segunda también sea un corazón.</li>
+<li>Hay $19.12\%$ de probabilidad de que la primera carta sea un corazón y la segunda no sea un corazón (igual que en el tercer resultado en el árbol, que corresponde al orden opuesto).</li>
+<li>Hay $58.88\%$ de probabilidad de que la primera carta no sea un corazón, y la segunda carta tampoco sea un corazón.</li>
+</ul>
+<p>Así, hay $5.88\%$ de probabilidad de que uno saque dos corazones. Mucho menor que la probabilidad $55.88\%$ de que uno no saque ningún corazón.</p>
+<p>Note todos los porcentajes en la derecha suman $100\%$, como era de esperarse, ya que son todos los resultados posibles.</p>
+<h3 id="de-regreso-al-covid-19">De regreso al Covid-19</h3>
+<p>Este es el árbol relacionado con las pruebas de laboratorio de Covid-19:
+<figure><img src="ProbabilityTreeCovid.es.png" width="700em"/>
+</figure>
+</p>
+<h4 id="qué-probabilidades-conocemos-en-este-árbol">¿Qué probabilidades conocemos en este árbol?</h4>
+<p>Acá es donde entran en juego la <em>sensibilidad</em> y la <em>especificidad</em> de la prueba. Cuando se crea una prueba, se realizan estudios médicos para averiguar:</p>
+<ul>
+<li>Sensibilidad de prueba ($a\%$): probabilidad de que una prueba identifique correctamente a una persona infectada (es decir, de resultado positivo si la persona está infectada).</li>
+<li>Especificidad de la prueba ($b\%$): probabilidad de que una prueba identifique correctamente a una persona no infectada (es decir, de resultado negativo si la persona no está infectada).</li>
+</ul>
+<p>Estos dos números son lo que uno podría llamar &ldquo;parámetros de calidad&rdquo; de la prueba. Lo importante es que <em>no</em> dependen de la población en la que uno está haciendo las pruebas. ¡También son unos de los números en nuestro árbol!</p>
+<figure><img src="ProbabilityTreeCovidFirstDetails.es.png" width="700em"/>
+</figure>
+
+<p>Si conocemos estos dos números, entonces conocemos también las otras dos probabilidades en el mismo &ldquo;nivel de rama&rdquo; en el árbol, pues son eventos complementarios:
+<figure><img src="ProbabilityTreeCovidSecondDetails.es.png" width="700em"/>
+</figure>
+</p>
+<h4 id="y-qué-pasa-con-las-dos-primeras-ramas-del-árbol">¿Y qué pasa con las dos primeras ramas del árbol?</h4>
+<p>Las probabilidades de infección cambian de acuerdo con la proporción de personas enfermas en el momento que se hizo la prueba. Si $p\%$ de las personas están infectadas, podemos tomar este porcentaje como la probabilidad de infectarse (más adelante elaboro sobre esto). De manera similar, la probabilidad de no estar infectado es $(100-p)\% $ (todas las demás personas).</p>
+<p>Así, ¡nuestro árbol con las probabilidades de cada paso está completo!</p>
+<figure><img src="ProbabilityTreeCovidThirdDetails.es.png" width="700em"/>
+</figure>
+
+<p>Ahora podemos multiplicar las probabilidades para encontrar las probabilidades de cada resultado. Tenga en cuenta que todo depende de dos cosas: los parámetros de la prueba ($a\%$ y $b\%$), y la proporción $p\%$ de la población que está infectada (que es independiente del examen).</p>
+<figure><img src="ProbabilityTreeCovidDetails.es.png"/>
+</figure>
+
+<h3 id="entonces-de-dónde-salen-las-curvas-en-los-gráficos-interactivos">Entonces, ¿de dónde salen las curvas en los gráficos interactivos?</h3>
+<!-- raw HTML omitted -->
+<p>Nos falta un poco más, pues las preguntas que uno se hace después de obtener los resultados de una prueba de laboratorio no son precisamente las probabilidades del árbol. Las preguntas que uno se hace en realidad son de la forma:</p>
+<ol>
+<li>&ldquo;La prueba dió resultado negativo, ¿cuáles son las posibilidades de que en realidad esté infectado?&rdquo;</li>
+<li>&ldquo;La prueba dió resultado negativo, ¿cuáles son las posibilidades de que sea cierta (no estoy infectado)?&rdquo;</li>
+<li>&ldquo;La prueba dió resultado positivo, ¿cuáles son las posibilidades de que la prueba esté se haya equivocado?&rdquo;</li>
+<li>&ldquo;La prueba dió resultado positivo, ¿cuáles son las posibilidades de que el resultado sea correcto?&rdquo;</li>
+</ol>
+<p>Estas no son preguntas sobre la probabilidad de un resultado en el árbol, pero uno puede usar el árbol para entender lo que se debe calcular para poder responderlas.</p>
+<h4 id="así-es-como-funciona-ejemplo-con-la-pregunta-1">Así es como funciona: Ejemplo con la pregunta (1).</h4>
+<p>Asumamos que queremos responder a la pregunta (1): &ldquo;La prueba dió resultado negativo, ¿cuáles son las posibilidades de que en realidad esté infectado?&rdquo;</p>
+<p>En la pregunta (1) partimos del hecho de que la prueba dió un resultado negativo. Los siguientes (azul, líneas gruesas) son todos los caminos en el árbol con un resultado de prueba negativo:</p>
+<figure><img src="ProbabilityTreeCovidDetailsConditional.es.png"/>
+</figure>
+
+<p>Mirando el árbol, la pregunta que queremos responder es: de esos dos posibles caminos con resultado de prueba negativo, ¿cuáles son las posibilidades de que esté realmente en el camino superior (el que corresponde a estar realmente infectado)? Para responder se simplemente dividen las posibilidades:</p>
+<p>$$
+\frac{\text{probabilidad del camino infectado}}{\text{suma de las probabilidades de los caminos negativos}}
+=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<p>¡Eso es todo! Esa es la probabilidad de estar infectado aunque uno haya recibido un resultado de prueba negativo:</p>
+<p>$$
+\begin{array}{c}\text{Probabilidad de tener}\\
+\text{Covid-19 si la prueba da un}\\
+\text{resultado negativo}\end{array}=\frac{p\%(100\%-a\%)}{p\%(100\%-a\%)+(100\%-p\%)b\%}
+$$</p>
+<h4 id="cómo-se-ve-esto-con-números-reales">¿Cómo se ve esto con números reales?</h4>
+<p>Por ejemplo, digamos que la prueba PCR que se tomó tiene la sensibilidad $a\%=95\%$, y una especificidad $b\%=85\%$ (números posibles), entonces</p>
+<p>$$
+\begin{array}{c}\text{Probabilidad de tener}\\
+\text{Covid-19 si la prueba da un}\\
+\text{resultado negativo}\end{array}=\frac{p\%\times 5\%}{p\%\times 5\%+(100\%-p\%)\times 85\%}
+$$
+&hellip; ¡todavía depende de $p$!</p>
+<p>Bueno, entonces, ¿y si asumimos que las posibilidades en mi comunidad de estar infectado en ese momento en particular son $30\%$? Ahí si se obtiene un número:
+$$
+\begin{array}{c}\text{Probabilidad de tener}\\
+\text{Covid-19 si la prueba da un}\\
+\text{resultado negativo}\\
+\text{asumiendo $p=30$}\end{array}=\frac{30\%\times 5\%}{30\%\times 5\%+70\%\times 85\%}=2.459\%
+$$
+¡Es una probabilidad pequeña!</p>
+<p>Pero ahora, digamos que tengo síntomas relacionados con Covid-19 y estuve con alguien que tuvo una prueba con resultado positivo. En ese caso, pensar que $p\%$ es $30\% $ parece ser un error, pues no soy un miembro de mi población seleccionado al azar. ¿Tal vez debería ser $80\%$?
+$$
+\begin{array}{c}\text{Probabilidad de tener}\\
+\text{Covid-19 si la prueba da un}\\
+\text{resultado negativo}\\
+\text{asumiendo $p=80$}\end{array}=\frac{80\%\times 5\%}{80\%\times 5\%+20\%\times 85\%}=19.05\%
+$$
+Esto aumenta las posibilidades &hellip;.</p>
+<p>Pero además, como $p$ varía con el tiempo y depende de mi entorno, tal vez en lugar de repetir este cálculo una y otra vez, ¡uno debería simplemente graficar la probabilidad en función de $p$!</p>
+<p>Esta es la gráfica para una prueba con sensibilidad $a\% = 95 \%$, y especificidad $ b \% = 85 \% $:</p>
+<figure><img src="CovidFalseNegative.es.png" width="500em"/>
+</figure>
+
+<p>En esa gráfica se pueden ver la probabilidades que calculamos para $p= 30 $ y $ p = 80 $. Tan sólo hay que seguirle la pista a la curva. Ver la gráfica que sigue:</p>
+<figure><img src="CovidFalseNegativeTwoPoints.es.png" width="500em"/>
+</figure>
+
+<p>Como puede comenzar a ver, ¡no es simple dar respuesta a las preguntas que uno se hace sobre los resultados de las pruebas Covid-19!</p>
+<h4 id="gráficas-para-diferentes-valores-de--a--y--b-">Gráficas para diferentes valores de $ a $ y $ b $</h4>
+<p>A continuación se muestra una gráfica interactiva de Desmos de la gráfica anterior que incluye deslizadores para la sensibilidad y especificidad $a$, $b$ de la prueba. Con ella puede ver cómo afectan $a$ y $b$ la curva que responde la pregunta (1) &ldquo;La prueba dió resultado negativo, ¿cuáles son las posibilidades de que en realidad esté infectado?&rdquo;
+(Puede que sea mejor abrir esto en su propia pantalla siguiendo este <a href="https://www.desmos.com/calculator/yoowkigjaa?lang=es">enlace</a>)
+<div>
+    <iframe src="https://www.desmos.com/calculator/yoowkigjaa?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div></p>
+<!-- raw HTML omitted -->
+<p>También puede generar gráficas para otros valores de $ a $ y $ b $ utilizando el <a href="covidfalsenegative.tex">código de Tikz+PGFPlots</a> que escribí para esta entrada de blog. Simplemente hay que cambiar los números en los comandos <code>\pgfmathsetmacro{\SensA}{0.95}</code> y <code>\pgfmathsetmacro{\SpecB}{0.85}</code> para ajustar los valoes de $a$ y $b$ (se deben dar en forma decimal, no porcentajes) y ejecutar pdfLaTeX.</p>
+<h2 id="probabilidad-de-infección-p-probabilidad-pre-prueba">Probabilidad de infección $p$: probabilidad pre-prueba</h2>
+<p>Una cosa más antes de cerrar &hellip;</p>
+<p>Como se mencioné anteriormente, en vez de asumir que $p$ es el porcentaje de la población que está infectado, uno debería tener en cuenta la situación particular de la persona para la cual se está interpretando el resultado de la prueba.</p>
+<p>Para la estimación de $p$, que depende de la persona y el momento, se debe considerar al menos:</p>
+<ul>
+<li>¿Qué procentaje de la población tiene Covid-19 en este momento? (No el porcentaje reportado, sino el valor verdadero esperado). Esta es la primera aproximación al valor de $p$.</li>
+<li>¿La persona tiene síntomas? De ser así, se debe aumentar $p$.</li>
+<li>¿La persona ha estado en contacto con alguien con síntomas o que tenga una prueba positiva? De ser así, se debe aumentar $p$.</li>
+<li>&hellip;</li>
+</ul>
+<p>El valor final de $p$ es lo que a veces se llama la probabilidad de infección <em>pre-prueba</em>. Depende tanto del momento, como de la situación particular de la persona. Solo se puede estimar muy aproximadamente.</p>
+<p>Teniendo ese valor, uno puede revisar el resultado de la prueba e interpretarla de acuerdo al resultado, ¡pero todo se basa en supuestos y estimaciones!</p>
+<p>Además, está el asunto que no he tocado sobre el momento en el que se hizo la prueba en relación con el posible momento de infección &hellip; Los valores de $a$ y $b$ pueden cambiar para una prueba específica si es &ldquo;demasiado temprano&rdquo; o &ldquo;demasiado tarde&rdquo; para hacer la prueba. Se deben hacer estimaciones en todas partes &hellip;</p>
+<h2 id="gráfico-interactivo-de-desmos-de-nuevo">¡Gráfico interactivo de desmos de nuevo!</h2>
+<p>Bueno, ahora sí creo que esto cubre todo lo que se necesita para entender lo que se necesitó para generar las gráficas interactivas de desmos que dan las posibilidades de que los resultados de las pruebas Covid-19 sean verdaderos o falsos.</p>
+<p>Incluyo la grafica completa de nuevo a continuación.</p>
+<p>¡Tantas partes móviles que es difícil de entender lo que está pasando! Intente pensar en un caso específico que le haya pasado, y revise lo que le diría en ese caso. También considere abrir las gráficas en una pantalla aparte en este <a href="https://www.desmos.com/calculator/cqbhotn6yl?lang=es">link</a>.</p>
+<div>
+    <iframe src="https://www.desmos.com/calculator/cqbhotn6yl?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+<h2 id="qué-llevarse-de-todo-esto">¿Qué llevarse de todo esto?</h2>
+<ul>
+<li>La probabilidad de que los resultados de una prueba de Covid-19 sean verdaderos o falsos depende de:
+<ul>
+<li>La probabilidad inicial de infección $p$ (probabilidad previa a prueba de infección) que depende tanto del momento del tiempo como de la persona en particular.</li>
+<li>La sensibilidad y especificidad de la prueba.</li>
+</ul>
+</li>
+<li>La sensibilidad y la especificidad son parámetros de &ldquo;calidad&rdquo; de probabilidad condicional para una prueba Covid-19 que son independientes de la población en la que se está haciendo la prueba.</li>
+<li>Sin ebargo, la sensibilidad y la especificidad, no son completamente constantes, y pueden ser diferentes si es &ldquo;demasiado temprano&rdquo; o &ldquo;demasiado tarde&rdquo; para hacer la prueba.</li>
+<li>¡La probabilidad de que el resultado de una prueba de Covid-19 sea verdadero o falso es distinta si el resultado de la prueba es positivo o negativo! ¡Tal vez esta es última es una las cosas más importantes para recordar de esta entrada!</li>
+</ul>
+
+  </div>
+
+</div>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
