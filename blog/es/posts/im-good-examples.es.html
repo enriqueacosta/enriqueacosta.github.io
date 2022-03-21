@@ -1,7 +1,7 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="categories" content="[&quot;Data&quot;, &quot;Math&quot;, &quot;Modeling&quot;]">
-<meta name="tags" content="[ &quot;Mauna Loa&quot;, &quot;Climate Change&quot;, &quot;Data&quot;, &quot;Exponential&quot;, &quot;Quadratic&quot;]">
-<meta name="date" content="2022-02-09T16:02:00-05:00">
-<meta name="draft" content="false"><style>body {
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="date" content="2022-03-19T14:19:56-05:00">
+<meta name="tags" content="[&quot;Illustrative Mathematics&quot;, &quot;Matemáticas Ilustrativas&quot;, &quot;Curriculo de Matemáticas&quot;]">
+<meta name="draft" content="false">
+<meta name="categories" content="[&quot;Recursos educativos de Matemáticas&quot;]"><style>body {
   max-width: 980px;
   border: 1px solid #ddd;
   outline: 1300px solid #fff;
@@ -1066,130 +1066,185 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>"Mauna Loa CO2 Growing Super-Exponentially?"</title></head><body><article class="markdown-body"><p>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our <a href="https://www.wiley.com/en-us/Applied+Calculus%2C+7th+Edition-p-9781119799085">Applied Calculus book</a>), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form 
-$$f(t)=P_0(b+mt)^t.$$ </p>
-<p>Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:
-$$g(t)= C+Ba^{t}.$$
-This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then began to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &ldquo;super-exponential&rdquo; growth.</p>
-<p>Finally, I found a quadratic function that also gives a good fit! 
-$$
-h(t)= a_2x^2+a_1x+a_0.
-$$
-These three functions all give very good fits for almost $70$ years&rsquo; worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
-<p>Here are some interesting details about this little modeling &ldquo;telenovela&rdquo;.</p>
-<h2 id="source-of-the-data-the-keeling-curve">Source of the Data &ndash; the Keeling Curve<a class="headerlink" href="#source-of-the-data-the-keeling-curve" title="Permanent link"></a></h2>
-<p>The graph below shows the monthly mean CO$_2$ concentration data the from Mauna Loa observatory in Hawaii, 11,135ft above sea level, which has been continuously collecting data related to climate change since the 1950s. This is known as the <a href="https://en.wikipedia.org/wiki/Keeling_Curve">Keeling Curve</a>, named after Charles David Keeling who started the monitoring program. </p>
-<p>{{&lt; figure src=&rdquo;Mauna_Loa_CO2_monthly_mean_concentration.png&rdquo; width=&rdquo;100%&rdquo; caption=&rdquo;(Keeling Curve. Image and data from <a href="https://gml.noaa.gov/ccgg/trends/mlo.html">NOAA</a>)&rdquo;&gt;}}</p>
-<p>In what follows I will be looking at the annual mean CO$_2$ data, which smooths out seasonal variation. This data is downloaded from the official <a href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA site</a>.</p>
-<h2 id="first-model-the-super-exponential-p_0bmtt">First Model: the Super-Exponential $P_0(b+mt)^t$<a class="headerlink" href="#first-model-the-super-exponential-p_0bmtt" title="Permanent link"></a></h2>
-<p>One way to realize that the $\text{CO}_2$ concentration is not exponential is by plotting it in a spreadsheet and asking it to give an exponential fit. Here is the result:</p>
-<p>{{&lt; figure src=&rdquo;Mauna-loa-exponential-fit.png&rdquo; &gt;}}</p>
-<!-- ![](Mauna-loa-exponential-fit.png) -->
+</style><title>"Illustrative Mathematics: Ejemplos de buenas actividades"</title></head><body><article class="markdown-body"><p>El currículo/los recursos educativos de Illustrative Mathematics (Matemáticas Ilustrativas) son una colección de planes de lecciones de matemáticas, problemas de práctica de tareas y materiales de apoyo familiar para <em>todos</em> los grados K&ndash;12 del currículo especificado por el <a href="http://www.corestandards.org/Math/">Common Core State Standards</a> de Matemáticas en Estados Unidos.</p>
+<p>Fueron creados durante los años 2016&ndash;2021 y tienen la muy buena licencia de uso [Creative Commons Attribution 4.0] (<a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>) (la misma de este blog) que le permite a uno compartirlos y adaptarlos libremente siempre y cuando uno mantenga la misma licencia y uno dé el debido crédito.
+Son de muy alta calidad, promoviendo el aprendizaje matemático profundo a través de la resolución de problemas, y han sido calificados muy altamente por entidades independientes(ver <a href="https://www.edreports.org/reports/overview/kendall-hunts-illustrative-mathematics-6-8-math-2019">acá</a> y <a href="https://www.edreports.org/reports/detail/kendall-hunts-illustrative-mathematics-traditional-2019-HS">acá</a>).
+Puede encontrar más información sobre los recursos en el sitio oficial de  <a href="https://illustrativemathematics.org">Illustrative Mathematics</a>.</p>
+<p>Aparte de decir &ldquo;Estos recursos son altamente calificados&rdquo;, o &ldquo;Personalmente creo que estos recursos son muy buenos&rdquo;, me gusta tener ejemplos a la mano que ilustran explícitamente por qué creo que los recursos son muy buenos. El propósito de esta entrada de blog es mostrar algunos de estos ejemplos concretos junto con algunas explicaciones relevantes.</p>
+<p>Yo lideré y diseñé el proceso de traducción al español de los grados 6&ndash;8 en 2018 e hize lo mismo para el los grados K&ndash;5 en 2021.
+Puede leer sobre este proceso en <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/%7B%7B%3Cref%20translating-im.ex%20%3E%7D%7D">la entrada de blog</a> que escribí al respecto.
+Uno de mis &ldquo;grandes objetivos&rdquo; es crear una versión optimizada para su uso en Colombia y América Latina, y siempre estoy buscando apoyo/financiación para poder hacer esto.</p>
+<p>En todo caso, creo que incluso sin una adaptación, estos recursos ya pueden empezar a tener un impacto duradero en la calidad de la educación matemática en Colombia. Ya estoy acompañando a algunas instituciones a implementarlos.</p>
+<h2 id="primero-una-nota-sobre-licencias">Primero, una nota sobre licencias<a class="headerlink" href="#primero-una-nota-sobre-licencias" title="Permanent link"></a></h2>
+<p>Como mencioné anteriormente, los recursos de Illustrative Mathematics para grados K&ndash;12 tienen licencia de uso Creative Commons Attribution 4.0, por lo que puedo reproducir legalmente cualquier parte de estos recursos siempre y cuando de crédito apropiado (esta es una manifestación concreta de por qué creo que tienen una licencia tan buena).</p>
+<p>Entonces, aquí está la atribución correspondiente ;-)</p>
+<div class="highlight"><pre>Los problemas y enunciados de actividad que se reproducen a continuación son tienen copyright de Illustrative Mathematics y se liberaron con licencia de uso Creative Commons Attribution 4.0. Los enuncuados en español se descargaron de https://im.kendallhunt.com/k5/curriculum.html
+</pre></div>
 
-<p>The fact that the best exponential fit according to a spreadsheet does not grow as fast as the data is a clear indication that faster-than-exponential growth <em>could</em> be happening. But this &ldquo;<em>could</em>&rdquo; has to be taken with care! Saying &ldquo;the spreadsheet could not do it&rdquo; is not a definite reason/explanation for anything. </p>
-<h4 id="knowing-for-sure-that-there-is-no-exponential-fit-to-the-data">Knowing for Sure That There is no Exponential Fit to the Data<a class="headerlink" href="#knowing-for-sure-that-there-is-no-exponential-fit-to-the-data" title="Permanent link"></a></h4>
-<p>The following is a log-plot of the same data (technically, a semi-log plot because only the vertical axis got a log scale). Forgive the lack of numbers on the vertical axis, I could not get LibreOffice to display any more of them on the axis. I tried plenty!</p>
-<p>{{&lt; figure src=&rdquo;Mauna-loa-exponential-fit-log-plot.png&rdquo; &gt;}}</p>
-<p>Here is a TikZ figure I created after having given up with LibreOffice. Such a huge TikZ+pgfplots fan! This is the <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/MaunaLoaLogPlotTikz.tex">source code</a>.</p>
-<p>{{&lt; figure src=&rdquo;MaunaLoaLogPlotTikz.png&rdquo; caption=&rdquo;Log plot of mean CO$_2$ data from Mauna Loa together with best exponential fit $309.837e^{0.0045t}$ (which looks like a straight line because of the logarithmic scale on the vertical axis)&rdquo;&gt;}}</p>
-<p>The fact that the data still bends upward in these figures that use a log scale on the vertical axis is a definite indication that there is no exponential fit to the data. Why this is so: the log plot of any exponential function (i.e., of the form $P_0a^t$ for constants $P_0$ and $a$) will look like a straight line. You can see this in the figures above: the plot of $309.837e^{0.0045t}$ looks like a straight line instead of bending upwards. </p>
-<p>In fact, this &ldquo;straightening exponential functions&rdquo; is precisely what placing a logarithmic scale on the vertical axis accomplishes &ndash; it straightens out exponential growth by speeding up the labels on the vertical axis in exactly the right way. Pretty cool if you ask me!</p>
-<!-- So, no exponential function of the form $P_0a^t$ will fit $\text{CO}_2$ concentration data and from the graphs, it seems to be growing faster than the best exponential fit. -->
-
-<h4 id="looking-at-the-growth-factors-in-the-data">Looking at the Growth Factors in the Data<a class="headerlink" href="#looking-at-the-growth-factors-in-the-data" title="Permanent link"></a></h4>
-<p>So, $\text{CO}_2$ seems to be growing faster than any exponential $P_0a^t$. How much faster? </p>
-<p>One way to investigate this is to figure out how the $a$ would be changing with time if we forced the data to follow $P_0a^t$. Here is what I mean by this: note the $a$ in $P_0a^t$ is the factor by which the quantity gets multiplied in one unit of time, as the following equations show
-$$
+<p>¡Y listo! Podemos seguir.</p>
+<h2 id="los-ejemplos">Los ejemplos<a class="headerlink" href="#los-ejemplos" title="Permanent link"></a></h2>
+<h3 id="ejemplo-1">Ejemplo 1<a class="headerlink" href="#ejemplo-1" title="Permanent link"></a></h3>
+<p>Problema de practica 6 de
+* Grado 5 
+* Unidad 5 (Patrones entre valores posicionales y operaciones con decimales) 
+* Sección D (Dividamos decimales)</p>
+<h4 id="enunciado">Enunciado<a class="headerlink" href="#enunciado" title="Permanent link"></a></h4>
+<p>Noah tiene una balanza que mide el peso a la onza más cercana. La tabla muestra los pesos de distintas cantidades de clips, en onzas.</p>
+<p>¿Cuántas onzas crees que pesa cada clip? Explica o muestra cómo razonaste.</p>
+<table>
+<thead>
+<tr>
+<th align="center">clips</th>
+<th align="center">peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">100</td>
+<td align="center">3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="que-es-tan-bueno-o-interesante-sobre-este-ejemplo">¿Qué es tan bueno o interesante sobre este ejemplo?<a class="headerlink" href="#que-es-tan-bueno-o-interesante-sobre-este-ejemplo" title="Permanent link"></a></h4>
+<p>Pues, debido al redondeo de los pesos, ¡la tabla dice que al aparecer un clip pesa 0 onzas!</p>
+<p>El peso, por supuesto, no es cero, y los estudiantes deben darse cuenta de que se debe a la redondeo.
+También deben darse cuenta de que obtendrán la mejor estimación para el peso de un clip de la medición del peso de 100 clips:</p>
+<p>$$
 \begin{aligned}
-(\text{quantity at time}~t+1) &amp; = P_0a^{t+1} \\
-&amp; = P_0\left(a^t\times a\right)  \\
-&amp; = a \times P_0a^t \\
-&amp; = a \times (\text{quantity at time}~t).
+\frac{3~\text{onzas}}{100~\text{clips}}&amp; =\frac{3}{100}~\text{onzas}/\text{clip}\\
+&amp; =0.03~\text{onzas por cada clip}
 \end{aligned}
 $$
-So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;by what factor do I need to multiply the data of one year to get the next year?&rdquo;. These multiplication factors from one year to the next are technically called the <em>growth factors</em>, and figuring them out is easy: you just divide the next years&rsquo; CO$_2$ levels by the current one! </p>
-<p>Here is a plot of the growth factors as a function of time (so, a plot of &ldquo;how the $a$ is changing&rdquo;):</p>
-<p>{{&lt; figure src=&rdquo;MaunaLoaGrowthFactors.png&rdquo; &gt;}}</p>
-<p>Note that the growth factors seem to be jumping up and down somewhat erratically, but there seems to be a clear upward trend. This upward trend is a manifestation that the data is not an exponential $P_0a^t$, since for exactly exponential data you would just be seeing a horizontal line (the constant value of $a$). <!-- For an approximately exponential we would see it jump up and down about a constant value. --></p>
-<h5 id="what-if-we-assume-this-upward-trend-in-the-growth-factors-were-linear-finding-a-model-for-the-data-of-the-form-p_0bmtt">What if we Assume This Upward Trend in the Growth Factors Were Linear? Finding a Model for the Data of the Form $P_0(b+mt)^t$<a class="headerlink" href="#what-if-we-assume-this-upward-trend-in-the-growth-factors-were-linear-finding-a-model-for-the-data-of-the-form-p_0bmtt" title="Permanent link"></a></h5>
-<p>The figure below shows a linear trend line for the growth factor data. It was found using a spreadsheet.</p>
-<p>{{&lt; figure src=&rdquo;MaunaLoaGrowthFactorsTrendLine.png&rdquo; &gt;}}</p>
-<p>Identifying this trend line formula as the way the $a$ should change in a super-exponential model, we would guess a model for the CO$_2$ levels of the form $P_0(b+mt)^t$, as follows:
-$$
-315.98(1.002615+0.000059t)^t.
-$$
-Here 
-*  $P_0=315.98$ is the CO$_2$ measurement in Mauna Loa in the year 1950 corresponding to $t=0$, and 
-*  $b+mt=1.002615+0.000059t$ is the trend line we found with the spreadsheet. It tells us the factor by which to multiply from one year to the next (increasing with the year $t$).</p>
-<p>If one plots this model one sees it does not give a great fit, but tweaking the parameters a little, one does get a very good fit. The final model, graphed below together with the data, is given by 
-$$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$ </p>
-<p>Very good fit!</p>
-<p>{{&lt; figure src = &ldquo;MaunaLoaSuperExponentialFit.png&rdquo; &gt;}}</p>
-<h2 id="second-model-the-exponential-plus-constant-cbat">Second Model: the Exponential Plus Constant $C+Ba^{t}$<a class="headerlink" href="#second-model-the-exponential-plus-constant-cbat" title="Permanent link"></a></h2>
-<p>All that I showed above seems to indicate that no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
-<p>In reality, lines in log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential. It just means that it is not modeled well by any exponential function (of the form $P_0a^t$). This is a common misconception with log plots, which I had myself!</p>
-<p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the quantity amount when $t=0$). </p>
-<p>Finding possible parameter values for $a,B$, and $C$ that give a good fit to the data is not as straightforward with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
-<h4 id="how-i-found-good-parameter-values">How I found good parameter values<a class="headerlink" href="#how-i-found-good-parameter-values" title="Permanent link"></a></h4>
-<p>I tried out different values of $C$ to make the quantity &ldquo;$\text{CO}_2~\text{level}-C$&rdquo; behave like an exponential by computing its growth factors and trying to make them constant (this would not be possible if there was no good model of the form $C+Ba^{t}$). </p>
-<h4 id="resulting-model">Resulting model<a class="headerlink" href="#resulting-model" title="Permanent link"></a></h4>
-<p>Here is the model, and its plot:</p>
-<p>$$g(t)= C+Ba^{t}=267.277+48.703(1.01823)^t$$</p>
-<p>Very good fit too!</p>
-<p>{{&lt; figure src = &ldquo;MaunaLoaExponPlusConstFit.png&rdquo; &gt;}}</p>
-<h4 id="difference-between-the-two-models-exponential-constant-vs-super-exponential">Difference Between the two Models (exponential + constant vs. super-exponential)<a class="headerlink" href="#difference-between-the-two-models-exponential-constant-vs-super-exponential" title="Permanent link"></a></h4>
-<p>Here they are together (now as an awesome TikZ+pgfplots figure that allows me to generate figures for different ranges in a breeze). Making a plot with curves that are so similar and that still allows to differentiate between them was not that simple! Using different markers for each curve (also very important for accessibility related to color-blindness) definitely helps.</p>
-<p>{{&lt; figure src=&rdquo;MaunaLoaTwoModelsTikz65.png&rdquo; &gt;}}</p>
-<p>They look incredibly similar, but one is super exponential, and one is not, so the super-exponential one will eventually outpace the non-super one. </p>
-<h4 id="here-are-some-plots-looking-into-the-future">Here are some plots looking into the future<a class="headerlink" href="#here-are-some-plots-looking-into-the-future" title="Permanent link"></a></h4>
-<p>After 150 years (since 1950) the exponential one seems to be growing faster, but this can only be temporary&hellip;
-{{&lt; figure src=&rdquo;MaunaLoaTwoModelsTikz150.png&rdquo; &gt;}}</p>
-<p>After 350 years the super-exponential overtakes&hellip;
-{{&lt; figure src=&rdquo;MaunaLoaTwoModelsTikz350.png&rdquo; &gt;}}</p>
-<p>After 450 years the super-exponential starts to show what it means to be super-exponential&hellip;
-{{&lt; figure src=&rdquo;MaunaLoaTwoModelsTikz450.png&rdquo; &gt;}}</p>
-<p>And after 550 years the super-exponential is in a different league&hellip;
-{{&lt; figure src=&rdquo;MaunaLoaTwoModelsTikz550.png&rdquo; &gt;}}</p>
-<p>If the desmos applet below loads, you can play around with this by zooming in and out interactively. Note however that zooming out and seeing the figures I show above is not as simple as one might think &ndash; one needs to re-adjust the ranges of the axis constantly as one zooms out.</p>
-<p>{{&lt; desmos n5chdjjnij &gt;}}
-<!-- {{< desmos hokra3rqow >}} --></p>
-<h4 id="one-final-note">One Final Note:<a class="headerlink" href="#one-final-note" title="Permanent link"></a></h4>
-<p>Looking 500 years into the future is pretty meaningless for this model. Note that the C0$_2$ level in ppm reaches a million ppm. This would say all air molecules would be CO$_2$ (silly), and anything beyond that million ppm is meaningless. The CO$_2$ is more likely to stabilize at some point in the future with an absurd theoretical limit of a million parts per million. Maybe it is already starting to stabilize!</p>
-<h2 id="third-model-the-quadratic-a_2x2a_1xa_0">Third Model: the Quadratic $a_2x^2+a_1x+a_0$<a class="headerlink" href="#third-model-the-quadratic-a_2x2a_1xa_0" title="Permanent link"></a></h2>
-<p>What I showed above indicates that an exponential+constant function can also model the data. So, it could be growing super-exponentially, or exponentially+constant. Surely nothing like a polynomial, which grows much slower, could model the growth. Right? Well, not really!</p>
-<p>The following quadratic model is found using a spreadsheet directly using the &ldquo;trend-line&rdquo; option with polynomial of degree 2 as a choice of trend. The resulting model is given by
-$$
-h(t)=0.013t^2+0.8055t+315.5219
-$$</p>
-<p>Here is a plot together with the Mauna Loa data. Fantastic fit too!
-{{&lt; figure src=&rdquo;MaunaLoaQuadraticTikz.png&rdquo; &gt;}}</p>
-<h2 id="graphical-comparison-between-the-three-models">Graphical Comparison Between the Three Models<a class="headerlink" href="#graphical-comparison-between-the-three-models" title="Permanent link"></a></h2>
-<p>They say a picture says more than a thousand words&hellip;</p>
-<p>Here are the three models against together with data up to 2022. Basically indistinguishable!</p>
-<p>{{&lt; figure src=&rdquo;MaunaLoaThreeModelsTikz65.png&rdquo; &gt;}}</p>
-<h4 id="150-years-into-the-future-since-data-collection-began-1950">150 years into the future since data collection began (1950)<a class="headerlink" href="#150-years-into-the-future-since-data-collection-began-1950" title="Permanent link"></a></h4>
-<p>{{&lt; figure src=&rdquo;MaunaLoaThreeModelsTikz150.png&rdquo; &gt;}}</p>
-<h4 id="350-years-into-the-future-since-data-collection-began">350 years into the future since data collection began<a class="headerlink" href="#350-years-into-the-future-since-data-collection-began" title="Permanent link"></a></h4>
-<p>{{&lt; figure src=&rdquo;MaunaLoaThreeModelsTikz350.png&rdquo; &gt;}}</p>
-<h3 id="back-into-a-more-sensible-range">Back into a more sensible range<a class="headerlink" href="#back-into-a-more-sensible-range" title="Permanent link"></a></h3>
-<p>Here is the plot of the three models up to the year 2050, about 25 years from now:
-{{&lt; figure src=&rdquo;MaunaLoaThreeModelsTikz100.png&rdquo; &gt;}}</p>
-<p>If you want to play with the ranges yourself, all you have to do is adjust the number in the <code>\newcommand\Max{550}</code> in the TikZ+pgfplots <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/MaunaLoaThreeModelsTikz.tex">source file</a> and then run $\LaTeX$ on it.</p>
-<h2 id="what-to-take-away-from-all-of-this">What to Take Away From all of This<a class="headerlink" href="#what-to-take-away-from-all-of-this" title="Permanent link"></a></h2>
+Esto nos dice que un clip pesa alrededor de 0.03 onzas (otras filas de la tabla dicen otras cosas, pero esta es la mejor estimación).</p>
+<p>También hay que notar el &ldquo;Explica o muestra cómo razonaste&rdquo; en el enunciado.
+Se les pide a los estudiantes que expliquen cómo pensaron. </p>
+<h3 id="ejemplo-2">Ejemplo 2<a class="headerlink" href="#ejemplo-2" title="Permanent link"></a></h3>
+<p>Actividad de clase 1 de
+*  Grado 4
+*  Unidad 6 (Multipliquemos y dividamos números de varios dígitos)
+*  Lección 3 (De patrones visuales a patrones numéricos)</p>
+<h4 id="enunciado_1">Enunciado<a class="headerlink" href="#enunciado_1" title="Permanent link"></a></h4>
+<p>Este patrón de rectángulos sigue una regla.</p>
+<p>{{&lt; figure src=&rdquo;tikz-file-150276.es.svg&rdquo; width=&rdquo;800px&rdquo; &gt;}}</p>
 <ul>
-<li>
-<p>Which model is better? Any of the three of the models is equally valid in the sense that they all give very tight fits to the data.</p>
-</li>
-<li>
-<p>It is pretty amazing that there are such simple formulas that model the growth of CO$_2$ levels for over 70 years.</p>
-</li>
-<li>
-<p>Even though the three models give radically different long-term behaviors, they do so at time-scales that are far larger than what it would make sense to expect the models to be valid.</p>
-</li>
-<li>
-<p>The model that may make more sense physically is the exponential plus constant, because it starts off from a constant base level pre-<a href="https://en.wikipedia.org/wiki/Anthropocene">antropocene</a>, and then follows exponential growth like many modern-world phenomena (including world population).</p>
-</li>
-<li>
-<p>CO$_2$ levels are most certainly rising at an increasing rate (graph bending upwards). Even if the rising rate stops increasing and they start leveling off, it is unlikely this will happen below 600&ndash;700 ppm (just from looking at the plots).</p>
-</li>
-</ul></article></body></html>
+<li>Priya dice: &ldquo;En cada paso, aumenta 1&rdquo;.</li>
+<li>Noah dice: &ldquo;En cada paso, aumenta 4&rdquo;.</li>
+<li>Lin dice: &ldquo;En cada paso, aumenta 2&rdquo;.</li>
+</ul>
+<ol>
+<li>Aunque todos ellos describen los patrones de distintas maneras, ¿puedes pensar por qué lo que cada uno dice puede ser correcto? Da algunas razones posibles.</li>
+<li>Ajusta la afirmación de cada estudiante para que lo que quiere decir sea más claro y preciso.</li>
+<li>Priya escribe la lista de números 1, 2, 3, 4, 5, 6 para representar los primeros seis pasos del patrón que ella observa. Escribe una lista de números que represente los primeros seis pasos del patrón que observa Noah. Haz lo mismo para el patrón de Lin.</li>
+<li>Predice qué número escribirán Priya, Noah y Lin en el paso 20 si el patrón de rectángulos continúa. Explica o muestra cómo razonaste.</li>
+</ol>
+<h4 id="que-es-tan-bueno-o-interesante-sobre-este-ejemplo_1">¿Qué es tan bueno o interesante sobre este ejemplo?<a class="headerlink" href="#que-es-tan-bueno-o-interesante-sobre-este-ejemplo_1" title="Permanent link"></a></h4>
+<p>Las tres descripciones de Priya, Noah y Lin son correctas, y se les pide a los estudiantes que las justifiquen todas. Es un excelente ejemplo de cómo los estudiantes pueden ver problemas de matemáticas que con <em>múltiples respuestas correctas</em>. </p>
+<p>Además, se les pide a los estudiantes que justifiquen cada respuesta correcta, eliminen la ambigüedad de cada afirmación y predigan el 20avo número de cada secuencia. ¡Fantástico!</p>
+<p>Esto sucede durante la clase, con una propuesta para los profesores de como poner a los estudiantes a trabajar en grupos y luego ponerlos a compartir sus ideas.
+Es posible que algunos estudiantes o grupos no identifiquen las razones por las que Priya, Noah y Lin pueden todos tener razón. Esta es una de las razones por las cuales se van a beneficiar tanto de escuchar a otros grupos cuando compartan su trabajo.
+Los estudiantes aprenderán juntos. El razonamiento matemático, la resolución de problemas y la comunicación son parte integral de la actividad.</p>
+<p>Igualmente importante es que las soluciones y algunas ideas de como moderar la discusión de la clase están disponibles en los recursos para los profesores. Así, por ejemplo, en caso de que no sepa cómo la descripción de Lin &ldquo;cada paso aumenta de 2&rdquo; podría ser correcta, ¡la guía de clase para profesor está ahí para apoyarlo!</p>
+<h3 id="ejemplo-3">Ejemplo 3<a class="headerlink" href="#ejemplo-3" title="Permanent link"></a></h3>
+<p>Actividad de calentamiento de
+*  Grado 5
+*  Unidad 7 (Figuras en el plano de coordenadas)
+*  Section C (Patrones numéricos)
+*  Lección 13 (El perímetro y el área de los rectángulos)</p>
+<h4 id="enunciado_2">Enunciado<a class="headerlink" href="#enunciado_2" title="Permanent link"></a></h4>
+<p>¿Cuál es el área de una ventana?</p>
+<p>Escribe una estimación que sea:</p>
+<table>
+<thead>
+<tr>
+<th align="center">muy baja</th>
+<th align="center">razonable</th>
+<th align="center">muy alta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&nbsp;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>{{&lt; figure src=&rdquo;victor-garcia-0yL6nXhn0pI-unsplash.jpg&rdquo; attr=&rdquo;Image attribution: Victor Garcia. CC0 license. Unsplash. <a href="https://unsplash.com/photos/0yL6nXhn0pI">Source</a>.&rdquo; &gt;}}</p>
+<h4 id="que-es-tan-bueno-o-interesante-sobre-este-ejemplo_2">¿Qué es tan bueno o interesante sobre este ejemplo?<a class="headerlink" href="#que-es-tan-bueno-o-interesante-sobre-este-ejemplo_2" title="Permanent link"></a></h4>
+<p>Las actividades de calentamiento son las actividades de apertura de la lección, diseñadas para llamar la atención, hacer que las neuronas comiencen a funcionar y preparar a los estudiantes para lo que van a aprender ese día.
+¡Incluso sin el contexto de la lección, este calentamiento sin duda alguna llama la atención y pone a las neuronas a funcionar!</p>
+<p>El punto principal acá es <em>estimación de área</em>, pero a los estudiantes también se les pide que dan estimaciones razonables e irrazonables.</p>
+<p>Muchas discusiones <em>matemáticas</em> interesantes pueden suceder en esta actividad.
+Pero además, ¡el aprendizaje real en la lección sucederá después, no aquí!</p>
+<h3 id="ejemplo-4">Ejemplo 4<a class="headerlink" href="#ejemplo-4" title="Permanent link"></a></h3>
+<p>Problema de practica 8 de
+* Grado 1
+* Unidad 7 (Geometría y tiempo)
+* Sección A (Figuras planas y sólidas).</p>
+<h4 id="enunciado_3">Enunciado<a class="headerlink" href="#enunciado_3" title="Permanent link"></a></h4>
+<p>¿Esta figura es un triángulo? ¿Por qué sí o por qué no?</p>
+<p>{{&lt; figure src=&rdquo;tikz-file-151954.svg&rdquo; &gt;}}</p>
+<h4 id="que-es-tan-bueno-o-interesante-sobre-este-ejemplo_3">¿Qué es tan bueno o interesante sobre este ejemplo?<a class="headerlink" href="#que-es-tan-bueno-o-interesante-sobre-este-ejemplo_3" title="Permanent link"></a></h4>
+<p>Este es un problema de tarea. Los estudiantes en este punto en el grado 1 se están familiarizando con algunas figuras geométricas básicas (triángulo, cuadrado, rectángulo, círculo, &hellip;).
+Es una gran pregunta para detectar posibles ideas erróneas que los estudiantes aún pueden tener: ¡Parece un triángulo, pero no lo es!
+Una &ldquo;pequeña torcedura&rdquo; en uno de los lado crea un nuevo lado en la figura, por lo que esta figura tiene 4 lados, no tres.</p>
+<p>Además, es importante resaltar de nuevo que el enunciado le pide a los estudiantes que justifiquen su respuesta. Desde grado 1 se le está pidiendo a los estudiantes que expliquen, den razones, justifiquen desde el nivel de desarrollo en el que se encuentran.</p>
+<h3 id="examples-from-grades-6-12">Examples from grades 6&ndash;12<a class="headerlink" href="#examples-from-grades-6-12" title="Permanent link"></a></h3>
+<p>I purposefully only selected examples from grades 1&ndash;5 to make them accessible to a general audience. 
+There are similar examples throughout the whole resources in all grades, and I hope to at some point make another post with examples from other grades.</p>
+<h2 id="but-maybe-even-more-important-than-these-examples">But maybe even more important than these examples &hellip;<a class="headerlink" href="#but-maybe-even-more-important-than-these-examples" title="Permanent link"></a></h2>
+<p>What I think is most important in the end is that these are not just a collection of good, but loose, activities and problems. 
+Instead, they are part of a fully sequenced day-to-day proposal for math classes, structured in such a way to promote deep learning and understanding.</p>
+<p>These are the sort of things that are lacking in Colombia, where we don&rsquo;t even have a grade-by-grade public policy with learning goals for the Mathematics education for our children. 
+The closest thing we have are our 1&ndash;3, 4&ndash;5, 6&ndash;7, 9&ndash;11 <em>Mathematics Competencies Standards</em>, which require something akin to a degree in math education to be understood (if at all possible in some cases). 
+Not good, since primary teachers often don&rsquo;t have math related degrees. </p>
+<p>But I digress &ndash; this lack of year-by-year unified Math Curriculum in Colombia should be the subject for another post. 
+Back to the Illustrative Mathematics resources! </p>
+<p>My point is that our students and teachers can really benefit from having mathematics resources like these. 
+A plan that teachers can follow to help them support deep learning in a coherent way through grades (even if they only play a role in one of these grades). 
+This would be an improvement even if the activities were not as good as the examples that I showed above. 
+So, by the fact that they are that good, this is even better!</p>
+<p>Again, I feel I should emphasize that this is <em>already freely available in Spanish</em> for teachers and schools to use! (only student statements &mdash; most of the texts in the teacher guides remain in English only.) </p>
+<p>They are, right now, the only Math learning resources for all grades which are in Spanish (currently grades K-8, but more to come!) and have an open license. 
+I am proud to have been part of their translation to Spanish, and I hope to eventually be proud of helping them achieve the impact I think they can have.</p>
+<h2 id="where-to-access-the-resources">Where to access the resources<a class="headerlink" href="#where-to-access-the-resources" title="Permanent link"></a></h2>
+<p>This list is up to date on the date this post was published but some links may break in the future. 
+If so, it may be safest to visit the official <a href="https://illustrativemathematics.org/">Illustrative Mathematics site</a>.</p>
+<h3 id="grades-k-5">Grades K-5:<a class="headerlink" href="#grades-k-5" title="Permanent link"></a></h3>
+<ul>
+<li>(English) <a href="https://curriculum.illustrativemathematics.org/K5/curriculum.html">https://curriculum.illustrativemathematics.org/K5/curriculum.html</a></li>
+<li>(English) <a href="https://openupresources.org/math-curriculum/open-up-resources-k-5-math/">https://openupresources.org/math-curriculum/open-up-resources-k-5-math/</a></li>
+<li>(English and Spanish texts for students, Spanish prompts for teachers) <a href="https://im.kendallhunt.com/k5/curriculum.html">https://im.kendallhunt.com/k5/curriculum.html</a></li>
+</ul>
+<h3 id="grades-6-8">Grades 6-8:<a class="headerlink" href="#grades-6-8" title="Permanent link"></a></h3>
+<ul>
+<li>(English) <a href="https://curriculum.illustrativemathematics.org/K5/curriculum.html">https://curriculum.illustrativemathematics.org/K5/curriculum.html</a></li>
+<li>(English and Spanish) <a href="https://openupresources.org/math-curriculum/6-8-math/">https://openupresources.org/math-curriculum/6-8-math/</a></li>
+</ul>
+<h3 id="grades-9-1112">Grades 9-11(12):<a class="headerlink" href="#grades-9-1112" title="Permanent link"></a></h3>
+<ul>
+<li>(English) <a href="https://curriculum.illustrativemathematics.org/HS/index.html">https://curriculum.illustrativemathematics.org/HS/index.html</a></li>
+</ul>
+<h2 id="more-examples">More examples<a class="headerlink" href="#more-examples" title="Permanent link"></a></h2>
+<p>With <em>Grupo LEMA</em> (<a href="http://www.grupolema.org">www.grupolema.org</a>), a group I helped create to promote the use of openly licensed math education resources at all levels, we are building a collection of sample good activities in all grades. 
+I will post the relevant link here once it is published!</p></article></body></html>

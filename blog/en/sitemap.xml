@@ -43,6 +43,16 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/im-good-examples/</loc>
     <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/im-good-examples/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/im-good-examples/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/mathematics-curriculum/</loc>
     <lastmod>2022-03-07T14:19:56-05:00</lastmod>
@@ -358,6 +368,32 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/about/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/subscribe/subscribe/</loc>
+    <lastmod>2021-12-13T17:19:54-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/subscribe/subscribe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/subscribe/subscribe/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/subscribe/</loc>
+    <lastmod>2021-12-13T17:19:54-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/subscribe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/subscribe/"
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/</loc>

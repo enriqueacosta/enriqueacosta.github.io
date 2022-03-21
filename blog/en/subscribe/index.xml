@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subscribes on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/subscribe/</link>
+    <description>Recent content in Subscribes on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Dec 2021 17:19:54 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/subscribe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Subscribe to This Blog</title>
+      <link>https://enriqueacosta.github.io/blog/en/subscribe/subscribe/</link>
+      <pubDate>Mon, 13 Dec 2021 17:19:54 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/subscribe/subscribe/</guid>
+      <description>Subscribe text.</description>
+    </item>
+    
+  </channel>
+</rss>
