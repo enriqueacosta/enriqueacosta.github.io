@@ -146,7 +146,7 @@
 <li>a high quality test has few false negatives, and few false positives.</li>
 <li>a low quality test has more false negatives, and more false positives.</li>
 </ul>
-<p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing it. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
+<p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing so. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
 <p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman, and what I show and explain in this blog post.</p>
 <p>I will try my best to be self contained in what follows so there is no need to read the column before going on. Hopefully the column will make even more sense after reading this!</p>
 <h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!</h3>
@@ -201,8 +201,8 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <p>So, what is the chance for each outcome? The nice thing about the tree is that we can separate thinking about each step separately, and then multiply.</p>
 <p>Specifically, for the first card:</p>
 <ul>
-<li>The probability that the first card is a heart is $1/4$ (since a quarter of the cards are hearts). So, there is a $25\%$ chance of grabbing a heart.</li>
-<li>The probability that the first one is <em>not</em> a heart is $3/4$ (all the other cards). So, there is a $75\%$ chance of not grabbing a heart.</li>
+<li>The probability that the first card is a heart is $13/52$ (since there are 13 hearts and 52 cards in total). Note that $13/52=1/4$ which gives us another way to understand this: probability that the first card is a heart is $1/4$ (since a quarter of the cards are hearts). So, there is a $25\%$ chance of grabbing a heart.</li>
+<li>The probability that the first one is <em>not</em> a heart is $39/52=3/4$ (all the other cards). So, there is a $75\%$ chance of not grabbing a heart.</li>
 </ul>
 <p>We put these probabilities in the tree:
 <figure><img src="ProbabilityTreeCardsFirstDetails.png" width="700em"/>
@@ -274,7 +274,7 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 </figure>
 </p>
 <h4 id="what-about-the-first-two-branches-of-the-tree">What about the first two branches of the tree?</h4>
-<p>Well, the chances of being infected change according to the proportion of people sick at the current moment. If $p\%$ people are infected, then we can take this as the chance of being infected (more on this later). Similarly, the chance of not being infected is $(100-p)\%$ (all the other people).</p>
+<p>Well, the chances of being infected change according to the proportion of people sick at the current moment. If $p\%$ of the people are infected, then we can take this as the chance of being infected (more on this later). Similarly, the chance of not being infected is $(100-p)\%$ (all the other people).</p>
 <p>So, our tree with the chances of each step is now complete!</p>
 <figure><img src="ProbabilityTreeCovidThirdDetails.png" width="700em"/>
 </figure>
