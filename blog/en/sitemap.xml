@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -15,8 +15,11 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -27,6 +30,77 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/latex/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/latex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/latex/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/latex/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/latex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/latex/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</loc>
     <lastmod>2022-03-07T14:19:56-05:00</lastmod>
@@ -59,32 +133,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/mathematics-resources-for-teaching-and-learning/</loc>
     <lastmod>2022-03-07T14:19:56-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2022-03-07T14:19:56-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/conditional-probability/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
@@ -127,9 +175,6 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/posts/interpreting-covid19-test-results/"
                 />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
-    <lastmod>2022-02-28T15:25:05-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/medical-tests/</loc>
     <lastmod>2022-02-28T15:25:05-05:00</lastmod>
@@ -182,9 +227,6 @@
     <lastmod>2022-02-09T16:02:00-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
@@ -286,34 +328,8 @@
     <loc>https://enriqueacosta.github.io/blog/en/tags/translation/</loc>
     <lastmod>2022-01-17T18:25:45-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/latex/</loc>
-    <lastmod>2021-12-23T19:40:37-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/categories/latex/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/categories/latex/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/logistic/</loc>
     <lastmod>2021-12-23T19:40:37-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
-    <lastmod>2021-12-23T19:40:37-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</loc>
     <lastmod>2021-12-23T19:40:37-05:00</lastmod>
@@ -427,19 +443,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/curves/</loc>
     <lastmod>2021-12-06T22:28:53-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/latex/</loc>
-    <lastmod>2021-12-06T22:28:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/latex/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/latex/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</loc>
     <lastmod>2021-12-06T22:28:53-05:00</lastmod>

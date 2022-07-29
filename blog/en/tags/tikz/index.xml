@@ -5,7 +5,27 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
     <description>Recent content in Tikz on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TikZ Web Export</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</link>
+      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</guid>
+      <description>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a plain text file) and gets as output a beautiful looking pdf. See the Wikipedia page for more info.
+For a detailed example, you can see this post in which I explain the TikZ code of the following image, or this other post in which I go into even more details of the TikZ syntax to create the plot of a function with fancy mathematics LaTeX labels.</description>
+    </item>
+    
+    <item>
+      <title>Mauna Loa CO2 Growing Super-Exponentially?</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/</link>
+      <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/</guid>
+      <description>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our Applied Calculus book), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &amp;ldquo;super-exponential&amp;rdquo; function of the form $$f(t)=P_0(b+mt)^t.$$
+Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &amp;ldquo;almost exponential&amp;rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this: $$g(t)= C+Ba^{t}.</description>
+    </item>
+    
     <item>
       <title>Tikz Figure for a Function With Parameters</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</link>

@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
     <description>Recent content in LaTeX on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TikZ Web Export</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</link>
+      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</guid>
+      <description>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a plain text file) and gets as output a beautiful looking pdf. See the Wikipedia page for more info.
+For a detailed example, you can see this post in which I explain the TikZ code of the following image, or this other post in which I go into even more details of the TikZ syntax to create the plot of a function with fancy mathematics LaTeX labels.</description>
+    </item>
+    
     <item>
       <title>Tikz 3D - Twisted Cubic</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</link>

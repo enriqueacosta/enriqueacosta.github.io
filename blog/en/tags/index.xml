@@ -5,7 +5,25 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 07 Mar 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTeX</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
+      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
+      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Illustrative Mathematics</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</link>
@@ -178,15 +196,6 @@
     </item>
     
     <item>
-      <title>Tikz</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
-      <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Delta variant</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/delta-variant/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
@@ -219,15 +228,6 @@
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/curves/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LaTeX</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
-      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
       <description></description>
     </item>
     
