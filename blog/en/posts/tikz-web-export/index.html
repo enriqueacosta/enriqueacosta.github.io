@@ -118,7 +118,7 @@
         </figcaption>
 </figure>
 
-<p>TikZ plays a very important role in this blog because I enjoy explaining things graphically (see for example all posts with the <a href="https://enriqueacosta.github.io/blog/en/tags/tikz/">TikZ</a> tag). Once I dedicate the time to generate a good TikZ figure to explain something in a post, I can very often reuse the code with minor tweaks to generate many more images to further illustrate the ideas I am trying to convey. <em>It becomes a very efficient high quality tool when this happens.</em></p>
+<p>TikZ plays a very important role in this Blog because I enjoy explaining things graphically (see for example all posts with the <a href="https://enriqueacosta.github.io/blog/en/tags/tikz/">TikZ</a> tag). Once I dedicate the time to generate a good TikZ figure to explain something in a post, I can very often reuse the code with minor tweaks to generate many more images to further illustrate the ideas I am trying to convey. <em>It becomes a very efficient high quality tool when this happens, sometimes even changing the overall plan I had initially for the post.</em></p>
 <!-- raw HTML omitted -->
 <p>One of the key things I had to figure out to be able to use TikZ for this blog was a way to change the vector graphic <a href="https://en.wikipedia.org/wiki/PDF">pdf</a> files it generates into more web-friendly formats (webpages do not load pdf images). There are two possible paths one can take:</p>
 <ul>
@@ -254,7 +254,13 @@ select png as output format). The downside is that exports somewhat big compared
 <figure><img src="MaunaLoaThreeModelsTikz150-Preview.png"/>
 </figure>
 
-
+<p>In my high resolution screen, I can barely notice any differences between each version.</p>
+<h2 id="summary">Summary</h2>
+<p>The summary is short! If you want to generate a small size high resolution png from a TikZ image, just make sure you have ImageMagick installed, and in the terminal run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> filename.pdf filename.png
+</code></pre></div><p>or (if you want a white background instead of transparent one)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
+</code></pre></div>
   </div>
 
 </div>
