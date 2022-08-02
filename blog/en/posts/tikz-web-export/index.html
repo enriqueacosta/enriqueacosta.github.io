@@ -110,35 +110,41 @@
   
   
   <div>
-  <p>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> file) and gets as output a beautiful looking pdf. See the <a href="https://en.wikipedia.org/wiki/PGF/TikZ">Wikipedia</a> page for more info.</p>
-<p>For a detailed example, you can see this <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with fancy mathematics LaTeX labels.</p>
+  <p>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> file) and gets as output a beautiful looking pdf. <!-- raw HTML omitted --></p>
+<p>For a detailed example, you can see this <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</p>
 <figure><img src="fig-twistedCubic2.png"
          alt="TikZ figure generated from this .tex file. This is the original pdf output."/><figcaption>
             <p>TikZ figure generated from this <a href="fig-twistedCubic2.tex">.tex file</a>. This is the original <a href="fig-twistedCubic2.pdf">pdf output</a>.</p>
         </figcaption>
 </figure>
 
-<p>TikZ plays a very important role in this Blog because I enjoy explaining things graphically (see for example all posts with the <a href="https://enriqueacosta.github.io/blog/en/tags/tikz/">TikZ</a> tag). Once I dedicate the time to generate a good TikZ figure to explain something in a post, I can very often reuse the code with minor tweaks to generate many more images to further illustrate the ideas I am trying to convey. <em>It becomes a very efficient high quality tool when this happens, sometimes even changing the overall plan I had initially for the post.</em></p>
+<p>TikZ plays an important role in this blog because I enjoy both explaining things graphically and the actual process of creating the TikZ code for images. Once I dedicate the time to generate a good TikZ figure with well thought out code, I can often reuse the code with minor tweaks to very easily generate many more images to further illustrate the ideas I am trying to convey.
+TikZ becomes a very efficient high quality tool when this happens.
+This is part of the benefit of &ldquo;coding&rdquo; and image instead of creating it with graphical software.</p>
 <!-- raw HTML omitted -->
-<p>One of the key things I had to figure out to be able to use TikZ for this blog was a way to change the vector graphic <a href="https://en.wikipedia.org/wiki/PDF">pdf</a> files it generates into more web-friendly formats (webpages do not load pdf images). There are two possible paths one can take:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>One of the key things I had to figure out to be able to use TikZ for this blog was a way to change the vector graphic <a href="https://en.wikipedia.org/wiki/PDF">pdf</a> files it generates into more web-friendly formats, since webpages do not support pdf images. There are two possible paths one can take:</p>
 <ul>
 <li>Create a bitmap (<a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>) high quality version. A good format widely supported format for this right now is <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">png</a>.</li>
 <li>Transform into a web-friendly <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector graphic</a> format. The current way to go for the web is <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">svg</a>.</li>
 </ul>
 <p>The key things one wants from these conversions are:</p>
 <ol>
-<li>Maintain high quality (no noticeable pixelation) and professional look.</li>
-<li>Maintain small file sizes to not have long-loading sluggish blog posts (TikZ pdf output is very small, but pdf images cannot be used in webpages).</li>
+<li>Maintain high quality (no noticeable pixelation).</li>
+<li>Maintain small file sizes to not have long-loading sluggish blog posts.</li>
 </ol>
-<p>The bitmap (raster) pngs are often more useful than the vector graphics svg because, unlike svgs, one can use them in different contexts easily like:</p>
+<p>The raster pngs are often more useful than the vector graphics svg because, unlike svgs, one can use them in different contexts easily like:</p>
 <ul>
-<li>including in emails</li>
-<li>importing into google documents, word files</li>
-<li>sharing in Slack</li>
+<li>including in emails.</li>
+<li>importing into LibreOffice, google documents, word files.</li>
+<li>sharing in Slack.</li>
 </ul>
-<p>The downside of bitmap (raster) images is that (1) and (2) above are conflicting conditions, and one needs to find the right compromises to get a bit of both.</p>
-<p>I found several websites claiming that (1) and (2) cannot be accomplished together in a conversion from pdf to png, and after several failed experiments I was starting to believe them. But I finally came up with a workflow that lets me have my cake and eat it too. In this blog post I explain how I do these conversions.</p>
-<h2 id="first-a-note-about-about-bitmap-raster-vs-vector-graphics-formats">First, a note about about bitmap (raster) vs vector graphics formats</h2>
+<p>The downside of raster images is that (1) and (2) above are conflicting conditions, and one needs to find the right compromises to get a bit of both.</p>
+<p>I found several websites claiming that (1) and (2) cannot be accomplished together in a conversion from pdf to png, and after several failed experiments I was starting to believe them. But I finally came up with a workflow that lets me have my cake and eat it too.</p>
+<p>In this blog post I explain how I do these conversions.</p>
+<h2 id="first-a-note-about-about-raster-vs-vector-graphics-formats">First, a note about about raster vs vector graphics formats</h2>
+<p>The difference between raster and vector images is summed up in the following figure.</p>
 <figure><img src="Bitmap_VS_SVG.svg"
          alt="Demonstration of differences between bitmap and SVG images. Image by Yug, modifications by Cfaerber et al. from Wikipedia. CC-BY 2.5 license."/><figcaption>
             <p>Demonstration of differences between bitmap and SVG images. Image by Yug, modifications by Cfaerber et al. from <a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg">Wikipedia</a>. CC-BY 2.5 license.</p>
@@ -147,7 +153,7 @@
 
 <p>Bitmap (raster) images are images built out of pixels, each one of a specific color. The more pixels the image has, the higher quality it has, but the larger the filesize.</p>
 <p>For example, my MacBook saves screenshots using the bitmap (raster) format png: this file specifies the color of every single pixel the screen was showing. Since my MacBook has a high resolution screen, these screenshots are usually unnecessarily big (in filesize).</p>
-<p>Vector images are different in that they have &ldquo;pen stroke instructions&rdquo; in some internal code. This has two main advantages:</p>
+<p>Vector images are different in that they have &ldquo;pen stroke instructions&rdquo; in some internal code. This has two main advantages when the images are schematic-diagram-like (not photography-like):</p>
 <ul>
 <li>filesizes can be very small (since describing the &ldquo;pen strokes&rdquo; to generate a diagram is usually much more efficient than saying whether a pixel should be colored or not.</li>
 <li>infinitely scalable with no quality reduction: images can be zoomed in forever without pixels ever appearing (no pixelation occurs).</li>
@@ -172,7 +178,7 @@ and even closer!
 <h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
 <ul>
 <li>Install the fantastic Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.</li>
-<li>Install the also fantastic <a href="https://imagemagick.org/">ImageMagick</a> from the terminal using homebrew by executing the command:
+<li>Install the also fantastic <a href="https://imagemagick.org/">ImageMagick</a> from the terminal using Homebrew by executing the command:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install imagemagick
 </code></pre></div></li>
 </ul>
@@ -187,10 +193,10 @@ and even closer!
 </ul>
 <p>That is it! You should now have a the png image <code>filename.png</code> in the same folder, with both a very high resolution (the <code>-density 600</code> part of the command specifies that the png should have a resolution of 600pixels/inch) and a reasonably small filesize (about half as big as the Preview.app export).</p>
 <h3 id="further-tweaks---background-color">Further tweaks - background color</h3>
-<p>The png exports using ImageMagick have by default transparent background. If you for some reason want your image to have a specific background color, then adding <code>-background white -flatten</code> to the command will make the background white. Like this:</p>
+<p>The png exports using ImageMagick have by default transparent background. If you want your image to have a specific background color, then adding <code>-background white -flatten</code> to the command will make the background white. Like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
 </code></pre></div><h3 id="further-tweaks---">Further tweaks - ???</h3>
-<p>ImageMagick is a very capable program with many many options to fit many needs. Try some internet searches about the options, or type the following command directly in the terminal:</p>
+<p>ImageMagick has tons of options and capabilities. Try some internet searches about the options, or type the following command directly in the terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --help
 </code></pre></div><h3 id="note-using-native-macos-tools">Note: using native MacOS tools</h3>
 <p>The Preview.app in MacOS can export any pdf into png format in any resolution (<code>file &gt; Export...</code>,
@@ -199,10 +205,10 @@ select png as output format). The downside is that exports somewhat big compared
 <p>As I mention above, I decided to go with raster pngs because I could use them in different context besides websites. In any case, I did test several methods to get svgs out of the TikZ pdfs, but with the methods I got working, I always got similar file sizes than the very sharp 600pixels/inch pngs.</p>
 <h3 id="tikz----pdf----svg-path">TikZ &ndash;&gt; pdf &ndash;&gt; svg path</h3>
 <p>One can generate an svg directly from the pdf TikZ output by using David Barton&rsquo;s <a href="https://cityinthesky.co.uk/opensource/pdf2svg/">pdf2svg</a> (<a href="https://github.com/dawbarton/pdf2svg">source code</a>).</p>
-<p>Homebrew comes to the rescue with a simple way to install pdf2svg in MacOS. Simply run the following command on the terminal:</p>
+<p>Installing pdf2svg is a breeze with Homebrew (run command on the terminal): <!-- raw HTML omitted --></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install pdf2svg
 </code></pre></div><p>Once installed, conversion is accomplished by using:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdf2svg filename.pdf filename.svg
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdf2svg input_filename.pdf output_filename.svg
 </code></pre></div><p>The pdf2svg does not seem to have many options (see <code>pdf2svg --help</code>).</p>
 <h3 id="tikz----dvi----svg-path">TikZ &ndash;&gt; dvi &ndash;&gt; svg path</h3>
 <p>This uses <a href="https://dvisvgm.de/">dvisvgm</a>. I have briefly looked into into this but could not get it to work with my images (was complaining about PostScript specials). I do not know if it is better than the other svg option I described above. Good places to start troubleshoting issues may be <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/">here</a> and <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/">here</a>.</p>
@@ -221,7 +227,7 @@ select png as output format). The downside is that exports somewhat big compared
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">TikZ <a href="MaunaLoaThreeModelsTikz150.tex">source file</a></td>
+<td style="text-align:left">TikZ <a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (tiny!)</td>
 <td style="text-align:center">3kb</td>
 </tr>
 <tr>
@@ -256,7 +262,7 @@ select png as output format). The downside is that exports somewhat big compared
 
 <p>In my high resolution screen, I can barely notice any differences between each version.</p>
 <h2 id="summary">Summary</h2>
-<p>The summary is short! If you want to generate a small size high resolution png from a TikZ image, just make sure you have ImageMagick installed, and in the terminal run</p>
+<p>If you want to generate a relatively small size high resolution png for a TikZ image, just make sure you have ImageMagick installed, and in the terminal run</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> filename.pdf filename.png
 </code></pre></div><p>or (if you want a white background instead of transparent one)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
