@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/en/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cool Paper Plane</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/paper-plane/</link>
+      <pubDate>Wed, 03 Aug 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/paper-plane/</guid>
+      <description>While trying to remember how to fold the current long distance record-breaking paper plane, y enden up inventing my own paper plane!
+It is pretty similar to the record breaking plane, but it is no exactly the same. I think it has a different balance point, which may make it a better glider (an maybe not long distance record breaking?) It glides very nicely.
+These are folding instructions which I created using IPE, an open source verctor image editing software with LaTeX support which I enjoy using.</description>
+    </item>
+    
     <item>
       <title>TikZ Web Export</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</link>

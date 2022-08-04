@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -15,11 +15,21 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/paper-plane/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/paper-plane/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/paper-plane/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -30,6 +40,74 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/ipe/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/ipe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/ipe/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/origami/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/origami/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/origami/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/origami/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/origami/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/origami/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2022-08-03T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
+    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/latex/</loc>
     <lastmod>2022-07-28T19:56:53-05:00</lastmod>
@@ -59,32 +137,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
     <lastmod>2022-07-28T19:56:53-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2022-07-28T19:56:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
     <lastmod>2022-07-28T19:56:53-05:00</lastmod>
