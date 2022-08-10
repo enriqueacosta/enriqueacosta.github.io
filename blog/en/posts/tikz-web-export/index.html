@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TikZ Web Export &middot; Enrique Acosta Jaramillo</title>
+  <title>TikZ Web Export (pdf to png or svg) &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
@@ -64,6 +64,14 @@
   <body class="theme-base-08 ">
   <aside class="sidebar">
   
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/">Español</a>
+    
+    </nav>
+  
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
@@ -92,7 +100,7 @@
 
     <main class="content container">
     <div class="post">
-  <h1>TikZ Web Export</h1>
+  <h1>TikZ Web Export (pdf to png or svg)</h1>
   
   
   <time datetime=2022-07-28T19:56:53-0500 class="post-date">July 28, 2022</time>
@@ -104,13 +112,19 @@
     <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a>
      , 
     <a href="https://enriqueacosta.github.io/blog/en/tags/latex">LaTeX</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/converting-png-to-pdf">converting png to pdf</a>
     
   </p>
   
   
   
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/">Español: Exportar figuras de TikZ para la web (de pdf a png o svg)</a>)</h4>
+    
+  
   <div>
-  <p>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> file) and gets as output a beautiful looking pdf. <!-- raw HTML omitted --></p>
+  <p>TikZ is, in very concise terms, a programing language to generate images based on <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>. One runs PdfLateX on a TikZ source file (a <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> file) and gets as output a beautiful looking pdf. <!-- raw HTML omitted --></p>
 <p>For a detailed example, you can see this <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</p>
 <figure><img src="fig-twistedCubic2.png"
          alt="TikZ figure generated from this .tex file. This is the original pdf output."/><figcaption>
@@ -151,7 +165,7 @@ This is part of the benefit of &ldquo;coding&rdquo; an image instead of creating
         </figcaption>
 </figure>
 
-<p>Bitmap (raster) images are images built out of pixels, each one of a specific color. The more pixels the image has, the higher quality it has, but the larger the filesize.</p>
+<p>Bitmap (raster) images are images built out of pixels, each one of a specific color. The more pixels the image has, the higher quality it has, but the larger the file size.</p>
 <p>For example, my MacBook saves screenshots using the bitmap (raster) format png: this file specifies the color of every single pixel the screen was showing. Since my MacBook has a high resolution screen, these screenshots are usually unnecessarily big (in filesize).</p>
 <p>Vector images are different in that they have &ldquo;pen stroke instructions&rdquo; in some internal code. This has two main advantages when the images are schematic-diagram-like (not photography-like):</p>
 <ul>
@@ -173,7 +187,7 @@ and even closer!
 <figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom.png"/>
 </figure>
 </p>
-<h2 id="high-quality-png-conversion-of-tikz-pdf-output">High quality png conversion of TikZ pdf output</h2>
+<h2 id="how-i-do-the-conversions-from-pdf-tikz-output-to-png">How I do the conversions: from pdf TikZ output to png</h2>
 <p>Here is the conversion to png method I have settled upon. It uses the MacOS terminal and ImageMagick.</p>
 <h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
 <ul>
@@ -184,7 +198,7 @@ and even closer!
 </ul>
 <p>If steps above work well, then typing the following command in the terminal should provide relevant information (mentioning ImageMagick and its version) instead of an error message:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --version
-</code></pre></div><h3 id="conversion-to-png-using-imagemagick">Conversion to png using Imagemagick</h3>
+</code></pre></div><h3 id="conversion-from-pdf-to-png-using-imagemagick">Conversion from pdf to png using Imagemagick</h3>
 <ul>
 <li>Navigate inside the terminal to the folder that contains the pdf file (say <code>filename.pdf</code>) that was created by TikZ.</li>
 <li>Execute the following command in the terminal:
@@ -201,8 +215,8 @@ and even closer!
 </code></pre></div><h3 id="note-using-native-macos-tools">Note: using native MacOS tools</h3>
 <p>The Preview.app in MacOS can export any pdf into png format in any resolution (<code>file &gt; Export...</code>,
 select png as output format). The downside is that exports somewhat big compared to the other method I described above, and it is hard to &ldquo;automate&rdquo;. Nonetheless, it may be easier for many people!</p>
-<h2 id="conversion-into-svg">Conversion into svg</h2>
-<p>As I mention above, I decided to go with raster pngs because I could use them in different context besides websites. In any case, I did test several methods to get svgs out of the TikZ pdfs, but with the methods I got working, I always got similar file sizes than the very sharp 600pixels/inch pngs.</p>
+<h2 id="conversion-from-pdf-to-svg">Conversion from pdf to svg</h2>
+<p>As I mention above, I decided to go with raster pngs because I could use them in different context besides websites. In any case, I did test several methods to get svgs out of the TikZ pdfs, and I did find a method to get an avg with similar file sizes to the very sharp 600 pixels/inch pngs.</p>
 <h3 id="tikz----pdf----svg-path">TikZ &ndash;&gt; pdf &ndash;&gt; svg path</h3>
 <p>One can generate an svg directly from the pdf TikZ output by using David Barton&rsquo;s <a href="https://cityinthesky.co.uk/opensource/pdf2svg/">pdf2svg</a> (<a href="https://github.com/dawbarton/pdf2svg">source code</a>).</p>
 <p>Installing pdf2svg is a breeze with Homebrew (run command on the terminal): <!-- raw HTML omitted --></p>
@@ -211,7 +225,7 @@ select png as output format). The downside is that exports somewhat big compared
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdf2svg input_filename.pdf output_filename.svg
 </code></pre></div><p>The pdf2svg does not seem to have many options (see <code>pdf2svg --help</code>).</p>
 <h3 id="tikz----dvi----svg-path">TikZ &ndash;&gt; dvi &ndash;&gt; svg path</h3>
-<p>This uses <a href="https://dvisvgm.de/">dvisvgm</a>. I have briefly looked into into this but could not get it to work with my images (was complaining about PostScript specials). I do not know if it is better than the other svg option I described above. Good places to start troubleshoting issues may be <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/">here</a> and <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/">here</a>.</p>
+<p>This is an alternate path that I did not get to work. It uses <a href="https://dvisvgm.de/">dvisvgm</a>. I do not know if it is better than the other svg option I described above. My MacOS was complaining about PostScript specials. Good places to start troubleshoting issues for anyone interested may be <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/">here</a> and <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/">here</a>.</p>
 <h2 id="complete-example">Complete Example</h2>
 <p>This is an image I used in this <a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">post</a> in which using TikZ saved me hours of work because I could generate plots for different time periods by just changing one number in the TikZ code.</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
@@ -248,19 +262,22 @@ select png as output format). The downside is that exports somewhat big compared
 </tr>
 </tbody>
 </table>
-<p><strong>svg version using pdf2svg:</strong> MaunaLoaThreeModelsTikz150.svg</p>
+<p>In my high resolution screen, I can barely notice any differences between each version. See below.</p>
+<h3 id="svg-version-using-pdf2svg">svg version using pdf2svg:</h3>
+<!-- raw HTML omitted -->
 <figure><img src="MaunaLoaThreeModelsTikz150.svg" width="700px"/>
 </figure>
 
-<p><strong>png version using ImageMagick:</strong> MaunaLoaThreeModelsTikz150.png</p>
+<h3 id="png-version-using-imagemagick">png version using ImageMagick:</h3>
+<!-- raw HTML omitted -->
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 
-<p><strong>png version using Preview.app:</strong> MaunaLoaThreeModelsTikz150.png</p>
+<h3 id="png-version-using-previewapp">png version using Preview.app:</h3>
+<!-- raw HTML omitted -->
 <figure><img src="MaunaLoaThreeModelsTikz150-Preview.png"/>
 </figure>
 
-<p>In my high resolution screen, I can barely notice any differences between each version.</p>
 <h2 id="summary">Summary</h2>
 <p>If you want to generate a relatively small size high resolution png for a TikZ image, just make sure you have ImageMagick installed, and in the terminal run</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> filename.pdf filename.png

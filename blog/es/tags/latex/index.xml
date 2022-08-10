@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/es/tags/latex/</link>
     <description>Recent content in LaTeX on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Dec 2021 22:28:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exportar figuras de TikZ para la web (de pdf a png o svg)</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</link>
+      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</guid>
+      <description>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de LaTeX. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de texto sin formato) y obtiene como resultado un pdf de la imagen que describe el código.
+Para ver un ejemplo detallado, puede ver esta entrada en la que muestro el código TikZ de la siguiente imagen, o esta otra entrada en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</description>
+    </item>
+    
     <item>
       <title>Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>

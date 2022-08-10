@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.89.4" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Exportar figuras de TikZ para la web (de pdf a png o svg) &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2022
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Exportar figuras de TikZ para la web (de pdf a png o svg)</h1>
+  
+  
+  <time datetime=2022-07-28T19:56:53-0500 class="post-date">28 de julio de 2022</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/tikz">Tikz</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/latex">LaTeX</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/conversi%C3%B3n-de-pdf-a-png">conversión de pdf a png</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">English: TikZ Web Export (pdf to png or svg)</a>)</h4>
+    
+  
+  <div>
+  <p>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de <a href="https://es.wikipedia.org/wiki/LaTeX">LaTeX</a>. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de <a href="https://en.wikipedia.org/wiki/plain_text">texto sin formato</a>) y obtiene como resultado un pdf de la imagen que describe el código.</p>
+<p>Para ver un ejemplo detallado, puede ver esta <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">entrada</a> en la que muestro el código TikZ de la siguiente imagen, o esta otra <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/">entrada</a> en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</p>
+<figure><img src="fig-twistedCubic2.png"
+         alt="Figura TikZ con código fuente en archivo .tex. Este es el pdf que produce."/><figcaption>
+            <p>Figura TikZ con código fuente en <a href="fig-twistedCubic2.tex">archivo .tex</a>. Este es el <a href="fig-twistedCubic2.pdf">pdf</a> que produce.</p>
+        </figcaption>
+</figure>
+
+<p>TikZ juega un papel importante en este blog porque disfruto explicar cosas gráficamente y disfruto el proceso mismo de crear el código TikZ de las imágenes. Cuando le dedico tiempo a hacer una buena figura de TikZ, a menudo puedo reutilizar el código con ajustes menores para generar fácilmente muchas más imágenes para explicar las ideas que estoy tratando de transmitir.
+TikZ se convierte en una herramienta muy eficiente cuando esto sucede.
+Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de crearla con software gráfico.</p>
+<p>Una de las cosas que tuve que descifrar para poder usar TikZ para este blog fue una forma de transformar los archivos gráficos en formato <a href="https://en.wikipedia.org/wiki/pdf">pdf</a> que genera TikZ en formatos más amigables para la web (las páginas web no permiten el uso de imágenes en formato pdf). Hay dos caminos posibles que uno puede tomar para lograr esto:</p>
+<ul>
+<li>
+<p>Convertir el pdf en una <a href="https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits">imagen de mapa de bits</a>. Un buen formato para esto en este momento es <a href="https://es.wikipedia.org/wiki/Portable_Network_Graphics">png</a>.</p>
+</li>
+<li>
+<p>Transformar el pdf en otro formato <a href="https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial">gráfico vectorial</a>. El formato más compatible con la web en la actualidad es <a href="https://es.wikipedia.org/wiki/Gr%C3%A1ficos_vectoriales_escalables">svg</a>.</p>
+</li>
+</ul>
+<p>Lo que uno espera al hacer estas conversiones es:</p>
+<ol>
+<li>Mantener la alta calidad (que no se produzca &ldquo;pixelación&rdquo;).</li>
+<li>Mantener tamaños de archivo pequeños para que las entradas de blog no sean lentas al cargar.</li>
+</ol>
+<p>Los png (imágenes de mapa de bits) a menudo son más útiles que los gráficos vectoriales svg porque, a diferencia de los svg, uno puede usarlos fácilmente en otros contextos como:</p>
+<ul>
+<li>Incluir en correos electrónicos.</li>
+<li>Importar a LibreOffice, documentos de Google, o archivos de Word.</li>
+<li>Compartir en Slack.</li>
+</ul>
+<p>La desventaja de las imágenes imágenes de mapa de bits es que (1) y (2) son condiciones relativamente contradictorias. Uno necesita encontrar un buen punto medio entre las dos de acuerdo a sus necesidades.</p>
+<p>Encontré varios sitios web afirmando que (1) y (2) no se pueden lograr juntos en una conversión de pdf a png y después de varios experimentos fallidos estaba empezando a creerles. Pero finalmente encontré una estrategia que me permite obtener buenos png de tamaño relativamente pequeño.</p>
+<p>En esta entrada de blog explico cómo hago estas conversiones.</p>
+<h2 id="primero-algo-sobre-los-formatos-de-gráficos-vectoriales-y-de-mapa-de-bits">Primero, algo sobre los formatos de gráficos vectoriales y de mapa de bits</h2>
+<p>La diferencia entre las imágenes de mapa de bits y vectoriales se resume en la siguiente figura.</p>
+<figure><img src="Bitmap_VS_SVG.svg"
+         alt="Demostración de diferencias entre imágenes de mapa de bits y svg. Imagen por Yug, modificaciones de cfaerber et al. De Wikipedia. CC-BY 2.5 license."/><figcaption>
+            <p>Demostración de diferencias entre imágenes de mapa de bits y svg. Imagen por Yug, modificaciones de cfaerber et al. De  <a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg">Wikipedia</a>. CC-BY 2.5 license.</p>
+        </figcaption>
+</figure>
+
+<p>Las imágenes de mapa de bits (ráster) son imágenes construidas a partir de pixeles. Cada pixel tiene un color específico. Entre más pixeles tenga la imagen, mayor calidad tiene, pero también corresponde a un archivo que ocupa más memoria.</p>
+<p>Por ejemplo, mi MacBook guarda capturas de pantalla utilizando el formato de mapa de bits png: este archivo especifica el color de cada pixel que mostraba la pantalla. Dado que mi MacBook tiene una pantalla de alta resolución, estas capturas de pantalla suelen ser innecesariamente grandes (tamaño del archivo), por lo que a menudo no son tan apropiadas para la web o para compartir en correos email.</p>
+<p>Las imágenes vectoriales son diferentes pues tienen &ldquo;instrucciones de trazo&rdquo; en algún código interno en vez de información sobre cada pixel. Esto tiene dos ventajas principales para imágenes esquemáticas (tipo diagrama de matemáticas):</p>
+<ul>
+<li>
+<p>Los tamaños de archivo pueden ser muy pequeños (ya que describir las &ldquo;instrucciones de trazo&rdquo; para generar un diagrama suele ser mucho más eficiente que decir el color de cada pixel).</p>
+</li>
+<li>
+<p>Las imágenes son infinitamente escalables sin reducción de calidad: no se agrandan los pixeles al hacer zoom, pues los trazos siguen siendo trazos en cualquier escala. Así, no se produce pixelación.</p>
+</li>
+</ul>
+<h3 id="un-ejemplo-que-muestra-los-pfd-vectoriales-que-produce-tikz">Un ejemplo que muestra los pfd vectoriales que produce TikZ</h3>
+<p>Esta figura que hice con TikZ para esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a>:</p>
+<figure><img src="MaunaLoaThreeModelsTikz150.png"/>
+</figure>
+
+<p>Si abro el pdf, y hago zoom, ¡siempre se ve muy nítido! Esta es la parte superior izquierda:
+<figure><img src="MaunaLoaThreeModelsTikz150-zoom.png"/>
+</figure>
+</p>
+<p>Y esto es acercándose aún más. Cero pixelación.
+<figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom.png"/>
+</figure>
+</p>
+<h2 id="cómo-hago-las-conversiones-conversión-de-pdf-a-png">Cómo hago las conversiones: conversión de pdf a png</h2>
+<p>El método de conversión de pdf a png que actualmente uso involucra usar la terminal de MacOS e ImageMagick.</p>
+<h3 id="requisitos-previos-instalar-imagemagick">Requisitos previos: instalar ImageMagick</h3>
+<ul>
+<li>
+<p>Instale el fantástico Homebrew para la Terminal.App si todavía no lo tiene. Instrucciones en su <a href="https://brew.sh">sitio web</a>.</p>
+</li>
+<li>
+<p>Instale el también el fantástico <a href="https://imagemagick.org/">ImageMagick</a> desde la terminal usando Homebrew ejecutando el comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install imagemagick
+</code></pre></div></li>
+</ul>
+<p>Una forma de asegurarse que los pasos anteriores se ejecutaron de manera correcta es escribir el siguiente comando en la terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --version
+</code></pre></div><p>Si todo está bien, la terminal debe responder con información sobre ImageMagick y su versión, en lugar de un mensaje de error.</p>
+<h3 id="conversión-de-pdf-a-png-con-imagemagick">Conversión de pdf a png con ImageMagick</h3>
+<ul>
+<li>Navegue dentro del terminal a la carpeta que contiene el archivo pdf que fue creado por TikZ (digamos <code>fileName.pdf</code>) .</li>
+<li>Ejecute el siguiente comando en el terminal:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> filename.pdf filename.png
+</code></pre></div></li>
+</ul>
+<p>¡Eso es todo! Ahora debería tener una imagen png <code>filename.png</code> en la misma carpeta, con una resolución muy alta y un tamaño de archivo razonablemente pequeño. La parte<code> densidad 600</code> del comando especifica que el png debe tener una resolución de 600 píxeles/pulgadas.</p>
+<h3 id="ajustes-adicionales---color-de-fondo">Ajustes adicionales - Color de fondo</h3>
+<p>Las conversiones a png con ImageMagick tienen fondo transparente por defecto. Si desea que su imagen tenga un color (blanco, por ejemplo), entonces debe agregar <code>-background white -flatten</code> al comando. Así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
+</code></pre></div><h3 id="ajustes-adicionales---">Ajustes adicionales - ???</h3>
+<p>ImageMagick tiene muchas opciones. Pruebe algunas búsquedas en Internet sobre las opciones, o escriba el siguiente comando directamente en el terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --help
+</code></pre></div><h3 id="nota-uso-de-herramientas-incluidas-en-macos">Nota: Uso de herramientas incluidas en MacOS</h3>
+<p>La aplicación de vista previa de MacOS (Preview.app) puede exportar cualquier pdf en formato png en cualquier resolución (<code>Archivo&gt; Exportar ...</code>, y seleccione png como formato de salida). La desventaja es que estas conversiones son algo grandes en comparación con el método que describí anteriormente, y es difícil &ldquo;automatizar&rdquo;. Sin embargo, ¡puede ser más fácil para muchas personas!</p>
+<h2 id="conversión-de-pdf-a-svg">Conversión de pdf a svg</h2>
+<p>Como mencioné anteriormente, decidí usar archivos png en este blog porque podía usarlos en diferentes contextos aparte de este sitio web. En todo caso, probé varios métodos para producir svg a partir de los pdf de TikZ y encontré al menos un método que produce tamaños de archivo similares que los png de 600 pixeles/pulgada.</p>
+<h3 id="la-ruta-tikz---pdf---svg">La ruta TikZ -&gt; pdf -&gt; svg</h3>
+<p>Se puede generar un svg directamente desde el pdf de TikZ con el programa <a href="https://cityinthesky.co.uk/opensource/pdf2svg/">pdf2svg</a> de David Barton (<a href="https://github.com/dawbarton/pdf2svg">código fuente</a>).</p>
+<p>Instalar pdf2svg es muy fácil con Homebrew (ejecute el comando en la terminal):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install pdf2svg
+</code></pre></div><p>Una vez instalado, la conversión se realiza con el comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdf2svg input_filename.pdf output_filename.svg
+</code></pre></div><h3 id="la-ruta-tikz---dvi---svg">La ruta TikZ -&gt; dvi -&gt; svg</h3>
+<p>Esta es una ruta alterna que no logré hacer que funcionara con mis imágenes. Usa <a href="https://dvisvgm.de/">dvisvgm</a>. No sé si es mejor que la otra opción svg que describí anteriormente.  Mi computador se quejaba de los especiales de PostScript. Estos son dos enlaces que pueden ayudar a alguien que quiere tratar con esta ruta en MacOS: <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/">uno</a> y <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/">dos</a>.</p>
+<h2 id="ejemplo-completo">Ejemplo completo</h2>
+<p>Esta es una imagen que utilicé en esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a> en la cual usar TikZ me mucho tiempo pues pude generar con facilidad gráficas para diferentes períodos de tiempo simplemente cambiando un número en el código TikZ.</p>
+<figure><img src="MaunaLoaThreeModelsTikz150.png"/>
+</figure>
+
+<p>Estos son los tamaños de archivo de varios formatos asociados con esta imagen.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Formato</th>
+<th style="text-align:center">Tamaño de archivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TikZ <a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (tiny!)</td>
+<td style="text-align:center">3kb</td>
+</tr>
+<tr>
+<td style="text-align:left">Gráfica vectorial pdf de TikZ <a href="MaunaLoaThreeModelsTikz150.pdf">output</a></td>
+<td style="text-align:center">42kb</td>
+</tr>
+<tr>
+<td style="text-align:left">Conversión a svg con pdf2svg</td>
+<td style="text-align:center">128kb</td>
+</tr>
+<tr>
+<td style="text-align:left">Conversión a png con ImageMagick y 600 pixeles/pulgada</td>
+<td style="text-align:center">156kb</td>
+</tr>
+<tr>
+<td style="text-align:left">Conversión a png con Preview.app de MacOS a 600 pixeles/pulgada</td>
+<td style="text-align:center">309kb</td>
+</tr>
+</tbody>
+</table>
+<p>En mi pantalla no alcanzo a notar muchas diferencias entre cada versión. Ver las imágenes a continuación.</p>
+<h3 id="versión-svg-creada-con-pdf2svg">Versión svg creada con pdf2svg:</h3>
+<!-- raw HTML omitted -->
+<figure><img src="MaunaLoaThreeModelsTikz150.svg" width="700px"/>
+</figure>
+
+<h3 id="versión-png-creada-con-imagemagick">Versión png creada con ImageMagick:</h3>
+<!-- raw HTML omitted -->
+<figure><img src="MaunaLoaThreeModelsTikz150.png"/>
+</figure>
+
+<h3 id="versión-png-creada-con-previewapp">Versión png creada con Preview.app:</h3>
+<!-- raw HTML omitted -->
+<figure><img src="MaunaLoaThreeModelsTikz150-Preview.png"/>
+</figure>
+
+<h2 id="resumen">Resumen</h2>
+<p>Si desea generar un png de alta resolución de tamaño relativamente pequeño para una imagen TikZ, solo asegúrese de tener ImageMagick instalado y en la Terminal correr:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> filename.pdf filename.png
+</code></pre></div><p>o (si desea un fondo blanco en lugar de uno transparente)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
+</code></pre></div>
+  </div>
+
+</div>
+
+<h2>
+Suscríbase
+</h2>
+<p>
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2022 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
