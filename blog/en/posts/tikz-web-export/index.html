@@ -183,10 +183,14 @@ This is part of the benefit of &ldquo;coding&rdquo; an image instead of creating
 <figure><img src="MaunaLoaThreeModelsTikz150-zoom.png"/>
 </figure>
 
-and even closer!
+and even closer! Super sharp.
 <figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom.png"/>
 </figure>
 </p>
+<p>Compare this to what you see when you zoom into the same image when it is in png format:</p>
+<figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom-png.png"/>
+</figure>
+
 <h2 id="how-i-do-the-conversions-from-pdf-tikz-output-to-png">How I do the conversions: from pdf TikZ output to png</h2>
 <p>Here is the conversion to png method I have settled upon. It uses the MacOS terminal and ImageMagick.</p>
 <h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
@@ -209,7 +213,7 @@ and even closer!
 <h3 id="further-tweaks---background-color">Further tweaks - background color</h3>
 <p>The png exports using ImageMagick have by default transparent background. If you want your image to have a specific background color, then adding <code>-background white -flatten</code> to the command will make the background white. Like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
-</code></pre></div><h3 id="further-tweaks---">Further tweaks - ???</h3>
+</code></pre></div><h3 id="further-tweaks-">Further tweaks &hellip;</h3>
 <p>ImageMagick has tons of options and capabilities. Try some internet searches about the options, or type the following command directly in the terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --help
 </code></pre></div><h3 id="note-using-native-macos-tools">Note: using native MacOS tools</h3>

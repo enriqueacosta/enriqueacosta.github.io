@@ -124,7 +124,7 @@
     
   
   <div>
-  <p>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de <a href="https://es.wikipedia.org/wiki/LaTeX">LaTeX</a>. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de <a href="https://en.wikipedia.org/wiki/plain_text">texto sin formato</a>) y obtiene como resultado un pdf de la imagen que describe el código.</p>
+  <p>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de <a href="https://es.wikipedia.org/wiki/LaTeX">LaTeX</a>. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de <a href="https://es.wikipedia.org/wiki/Archivo_de_texto">texto sin formato</a>) y obtiene como resultado un pdf de la imagen que describe el código.</p>
 <p>Para ver un ejemplo detallado, puede ver esta <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">entrada</a> en la que muestro el código TikZ de la siguiente imagen, o esta otra <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/">entrada</a> en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</p>
 <figure><img src="fig-twistedCubic2.png"
          alt="Figura TikZ con código fuente en archivo .tex. Este es el pdf que produce."/><figcaption>
@@ -132,7 +132,7 @@
         </figcaption>
 </figure>
 
-<p>TikZ juega un papel importante en este blog porque disfruto explicar cosas gráficamente y disfruto el proceso mismo de crear el código TikZ de las imágenes. Cuando le dedico tiempo a hacer una buena figura de TikZ, a menudo puedo reutilizar el código con ajustes menores para generar fácilmente muchas más imágenes para explicar las ideas que estoy tratando de transmitir.
+<p>TikZ juega un papel importante en este blog porque disfruto explicar cosas gráficamente y disfruto el proceso mismo de crear el código TikZ de las imágenes. Cuando le dedico tiempo a hacer una buena figura de TikZ, a menudo puedo reutilizar el código con ajustes menores para generar fácilmente muchas más imágenes y poder explicar las ideas que estoy tratando de transmitir.
 TikZ se convierte en una herramienta muy eficiente cuando esto sucede.
 Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de crearla con software gráfico.</p>
 <p>Una de las cosas que tuve que descifrar para poder usar TikZ para este blog fue una forma de transformar los archivos gráficos en formato <a href="https://en.wikipedia.org/wiki/pdf">pdf</a> que genera TikZ en formatos más amigables para la web (las páginas web no permiten el uso de imágenes en formato pdf). Hay dos caminos posibles que uno puede tomar para lograr esto:</p>
@@ -155,7 +155,7 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <li>Importar a LibreOffice, documentos de Google, o archivos de Word.</li>
 <li>Compartir en Slack.</li>
 </ul>
-<p>La desventaja de las imágenes imágenes de mapa de bits es que (1) y (2) son condiciones relativamente contradictorias. Uno necesita encontrar un buen punto medio entre las dos de acuerdo a sus necesidades.</p>
+<p>La desventaja de las imágenes de mapa de bits es que (1) y (2) son condiciones relativamente contradictorias. Uno necesita encontrar un buen punto medio entre las dos de acuerdo a sus necesidades.</p>
 <p>Encontré varios sitios web afirmando que (1) y (2) no se pueden lograr juntos en una conversión de pdf a png y después de varios experimentos fallidos estaba empezando a creerles. Pero finalmente encontré una estrategia que me permite obtener buenos png de tamaño relativamente pequeño.</p>
 <p>En esta entrada de blog explico cómo hago estas conversiones.</p>
 <h2 id="primero-algo-sobre-los-formatos-de-gráficos-vectoriales-y-de-mapa-de-bits">Primero, algo sobre los formatos de gráficos vectoriales y de mapa de bits</h2>
@@ -177,7 +177,7 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <p>Las imágenes son infinitamente escalables sin reducción de calidad: no se agrandan los pixeles al hacer zoom, pues los trazos siguen siendo trazos en cualquier escala. Así, no se produce pixelación.</p>
 </li>
 </ul>
-<h3 id="un-ejemplo-que-muestra-los-pfd-vectoriales-que-produce-tikz">Un ejemplo que muestra los pfd vectoriales que produce TikZ</h3>
+<h3 id="un-ejemplo-que-muestra-los-pdf-vectoriales-que-produce-tikz">Un ejemplo que muestra los pdf vectoriales que produce TikZ</h3>
 <p>Esta figura que hice con TikZ para esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a>:</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
@@ -190,6 +190,10 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom.png"/>
 </figure>
 </p>
+<p>En comparación, si se hace un zoom en un png, se pixela la imagen (se agrandan los pixeles) y se ve  así:</p>
+<figure><img src="MaunaLoaThreeModelsTikz150-zoom-zoom-png.png"/>
+</figure>
+
 <h2 id="cómo-hago-las-conversiones-conversión-de-pdf-a-png">Cómo hago las conversiones: conversión de pdf a png</h2>
 <p>El método de conversión de pdf a png que actualmente uso involucra usar la terminal de MacOS e ImageMagick.</p>
 <h3 id="requisitos-previos-instalar-imagemagick">Requisitos previos: instalar ImageMagick</h3>
@@ -216,7 +220,7 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <h3 id="ajustes-adicionales---color-de-fondo">Ajustes adicionales - Color de fondo</h3>
 <p>Las conversiones a png con ImageMagick tienen fondo transparente por defecto. Si desea que su imagen tenga un color (blanco, por ejemplo), entonces debe agregar <code>-background white -flatten</code> al comando. Así:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">600</span> -background white -flatten filename.pdf filename.png
-</code></pre></div><h3 id="ajustes-adicionales---">Ajustes adicionales - ???</h3>
+</code></pre></div><h3 id="ajustes-adicionales-">Ajustes adicionales &hellip;</h3>
 <p>ImageMagick tiene muchas opciones. Pruebe algunas búsquedas en Internet sobre las opciones, o escriba el siguiente comando directamente en el terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert --help
 </code></pre></div><h3 id="nota-uso-de-herramientas-incluidas-en-macos">Nota: Uso de herramientas incluidas en MacOS</h3>
@@ -232,7 +236,7 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 </code></pre></div><h3 id="la-ruta-tikz---dvi---svg">La ruta TikZ -&gt; dvi -&gt; svg</h3>
 <p>Esta es una ruta alterna que no logré hacer que funcionara con mis imágenes. Usa <a href="https://dvisvgm.de/">dvisvgm</a>. No sé si es mejor que la otra opción svg que describí anteriormente.  Mi computador se quejaba de los especiales de PostScript. Estos son dos enlaces que pueden ayudar a alguien que quiere tratar con esta ruta en MacOS: <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/">uno</a> y <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/">dos</a>.</p>
 <h2 id="ejemplo-completo">Ejemplo completo</h2>
-<p>Esta es una imagen que utilicé en esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a> en la cual usar TikZ me mucho tiempo pues pude generar con facilidad gráficas para diferentes períodos de tiempo simplemente cambiando un número en el código TikZ.</p>
+<p>Esta es una imagen que utilicé en esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a> en la cual usar TikZ me ahorró mucho tiempo pues pude generar con facilidad gráficas para diferentes períodos de tiempo simplemente cambiando un número en el código TikZ.</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 
