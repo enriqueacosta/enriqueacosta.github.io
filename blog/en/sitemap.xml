@@ -69,6 +69,16 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/origami-flower/</loc>
     <lastmod>2022-08-16T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/origami-flower/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/origami-flower/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
     <lastmod>2022-08-16T14:19:56-05:00</lastmod>
