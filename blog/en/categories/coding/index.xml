@@ -5,7 +5,18 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
     <description>Recent content in Coding on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Jul 2022 19:56:53 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplots</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</guid>
+      <description>The animation above is a gif file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.
+There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:
+ LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</description>
+    </item>
+    
     <item>
       <title>TikZ Web Export (pdf to png or svg)</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</link>

@@ -5,20 +5,11 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/</link>
     <description>Recent content in Categories on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Origami</title>
-      <link>https://enriqueacosta.github.io/blog/en/categories/origami/</link>
-      <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/categories/origami/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding</title>
       <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
-      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/categories/coding/</guid>
       <description></description>
@@ -27,7 +18,7 @@
     <item>
       <title>LaTeX</title>
       <link>https://enriqueacosta.github.io/blog/en/categories/latex/</link>
-      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/categories/latex/</guid>
       <description></description>
@@ -36,9 +27,18 @@
     <item>
       <title>Math</title>
       <link>https://enriqueacosta.github.io/blog/en/categories/math/</link>
-      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Origami</title>
+      <link>https://enriqueacosta.github.io/blog/en/categories/origami/</link>
+      <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/categories/origami/</guid>
       <description></description>
     </item>
     

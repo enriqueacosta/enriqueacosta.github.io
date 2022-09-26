@@ -5,7 +5,34 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curves</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/curves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>IPE</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/ipe/</link>
@@ -30,24 +57,6 @@
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/converting-png-to-pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LaTeX</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
-      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tikz</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
-      <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
       <description></description>
     </item>
     
@@ -246,15 +255,6 @@
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Curves</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
-      <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/curves/</guid>
       <description></description>
     </item>
     
