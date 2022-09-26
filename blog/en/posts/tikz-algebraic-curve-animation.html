@@ -1069,15 +1069,15 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>"Gif Animation of Family of Algebraic Curves using Tikz and Gnuplots"</title></head><body><article class="markdown-body"><p>{{&lt; figure width=&rdquo;450px&rdquo; src=&rdquo;gnuplotTest.gif&rdquo;&gt;}}</p>
-<p>The animation above is a <code>gif</code> file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time, and I finally figured out how to do it. In this blog post I describe all the steps.</p>
+</style><title>"Gif Animation of Family of Algebraic Curves using Tikz and Gnuplots"</title></head><body><article class="markdown-body"><p>{{&lt; figure width=&rdquo;500px&rdquo; src=&rdquo;gnuplotTest.gif&rdquo;&gt;}}</p>
+<p>The animation above is a <code>gif</code> file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.</p>
 <p>There were two &ldquo;complicated pieces&rdquo; to sort out:
-*  LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).
-*  Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly <code>gif</code> format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).</p>
+1.  LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).
+2.  Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly <code>gif</code> format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).</p>
 <p>Given these complications, one may very well wonder why I kept trying to do it. My answer to that is that TikZ is fantastic in several ways:
 *  Highly supported, and will probably be for a very long time. LaTeX runs basically on all computers.
 *  TikZ gives full graphic control, while still allowing one to have high quality mathematical notation using LaTeX.
-*  Images are &ldquo;programmed&rdquo;, which can be re-tooled/re-used very easily. Just change some lines in the code and re-compile to get a new pdf!
+*  Images are &ldquo;programmed&rdquo; so they can be re-tooled/re-used very easily. Just change some lines in the code and re-compile to get a new pdf!
 *  Output is easy to share (pdf, or can be converted to png or svg for the web).
 *  Open source.</p>
 <p>Thinking in the opposite direction, alternate ways to do these &ldquo;animations&rdquo; have downsides:
@@ -1086,10 +1086,16 @@ body .markdown-body
 *  Desmos: Fantastic for interactivity, but there is no &ldquo;file&rdquo; that I can store. I can only create a link, which depends on desmos.com existing in the future.</p>
 <p>This is why I kept trying to do it with TikZ! Here are the details which I figured out after plenty of web surfing and testing.</p>
 <h2 id="producing-one-frame-of-the-animation-graphing-an-algebraic-curve">Producing One Frame of the Animation - Graphing an Algebraic Curve<a class="headerlink" href="#producing-one-frame-of-the-animation-graphing-an-algebraic-curve" title="Permanent link"></a></h2>
-<p>As I mentioned above, LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomials $f$ and $g$) because this requires very precise numerical calculations which LaTeX was not built for. It is already marvelous that the graphical programing language TikZ can live inside LateX, given that LaTeX is a typesetting system!</p>
-<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running tikz code. This involves using <a href="http://www.gnuplot.info">Gnuplot</a> which TikZ knows how to use internally. </p>
+<p>As I mentioned above, LaTeX and TikZ do not natively support graphing algebraic curves because this requires very precise numerical calculations which LaTeX was not built for. It is already marvelous that the graphical programing language TikZ can live inside LateX, given that LaTeX is a typesetting system!</p>
+<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using <a href="http://www.gnuplot.info">Gnuplot</a> which TikZ knows how to use internally. </p>
+<p>There don&rsquo;t seem to be many sources on the internet on how to accomplish this. I constructed the following workflow from things I learned from the following links:
+* <a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a>
+* <a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a>
+* <a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></p>
 <h3 id="requirements-gnuplot">Requirements: Gnuplot<a class="headerlink" href="#requirements-gnuplot" title="Permanent link"></a></h3>
-<p>See the <a href="http://www.gnuplot.info">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh">homebrew</a> &ndash; just run in the terminal:
+<p>See the <a href="http://www.gnuplot.info">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh">homebrew</a>.
+*  Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.
+*  To install Gnuplot, just run:
    <div class="highlight"><pre>brew install gnuplot
 </pre></div></p>
 <h3 id="implicit-plots-in-tikz-using-gnuplot">Implicit plots in TikZ using Gnuplot<a class="headerlink" href="#implicit-plots-in-tikz-using-gnuplot" title="Permanent link"></a></h3>
@@ -1145,8 +1151,8 @@ body .markdown-body
 <p>And here is the beautiful output:</p>
 <p>{{&lt; figure  width=&rdquo;600px&rdquo; src=&rdquo;ChaslesCubic.png&rdquo;&gt;}}</p>
 <p>The curve is a <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml">Chasles Cubic</a> of the form
-$$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$</p>
-<p>If it loads, you can play with the parameters $a,b,c,d$ yourself in the following desmos interactive I built. Desmos, is <em>very good</em> at interactivity!</p>
+$$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
+<p>You can play with the parameters $a,b,c,d$ yourself in the following desmos interactive I built. Desmos, is <em>very good</em> at interactivity!</p>
 <p>{{&lt; desmos vdfa8tdiiv &gt;}}</p>
 <p>Back to the TikZ code, here are some details:</p>
 <ul>
@@ -1169,10 +1175,13 @@ $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$</p>
     <span class="nb">}</span>;
 </pre></div></li>
 </ul>
-<p>This produces, using Gnuplot, the surface plot for $F(x,y)=0$, so for <code>y-(\a*x^3+\b*x^2*y+\c*x*y^2+\d*y^3)</code>
+<p>This produces, using Gnuplot, the surface plot for $F(x,y)=0$, so for 
+   $$
+   y-\left(\backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3\right)=0,
+   $$
    which one can rewrite as
    $$
-   y= \backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3
+   y= \backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3.
    $$</p>
 <ul>
 <li>
@@ -1184,24 +1193,129 @@ $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$</p>
 </pre></div></p>
 </li>
 <li>
-<p>So, the TikZ code is really a &ldquo;ChaslesCubic pdf generator&rdquo;, in which one gets a different cubic by changing the values of <code>\a</code>, <code>\b</code>, <code>\c</code> and <code>\d</code>.</p>
+<p>So, the TikZ code is really a &ldquo;ChaslesCubic pdf generator&rdquo;, giving the graph of the cubic
+$$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$
+for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> and <code>\d</code>.</p>
 </li>
 <li>
-<p>To run the code one needs to run LaTeX in a special mode that allows it to execute gnuplot. So, one needs to run:
+<p>To run the code one needs to run LaTeX in a special mode that allows it to execute Gnuplot. Specifically, one needs to run <code>pdflatex</code> with the <code>shell-escape</code> flag, as follows:
    <div class="highlight"><pre>pdflatex -shell-escape ChaslesCubic.tex
 </pre></div></p>
 </li>
 </ul>
 <p>That is it! Looks like TikZ code, is compiled just like TikZ code, but uses Gnuplot to handle the delicate numerical calculations.</p>
+<h3 id="one-final-note-on-use-of-gnuplot-here">One final note on use of Gnuplot here<a class="headerlink" href="#one-final-note-on-use-of-gnuplot-here" title="Permanent link"></a></h3>
+<div class="highlight"><pre><span class="k">\documentclass</span><span class="na">[border=2pt, tikz]</span><span class="nb">{</span>standalone<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>pgfplots<span class="nb">}</span>
+<span class="k">\pgfplotsset</span><span class="nb">{</span>compat=1.17<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+    <span class="k">\def\a</span><span class="nb">{</span>0<span class="nb">}</span>
+    <span class="k">\def\b</span><span class="nb">{</span>5.8<span class="nb">}</span>
+
+    <span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+    <span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[view=<span class="nb">{</span>0<span class="nb">}{</span>90<span class="nb">}</span>, xmin=-3, xmax=3]
+
+    <span class="k">\addplot</span>3 [
+        domain=-3:3,
+        domain y=-8:8,
+        samples=150,
+        thick,
+        <span class="c">% contour gnuplot={number=14},</span>
+        contour gnuplot=<span class="nb">{</span>levels=<span class="nb">{</span>0<span class="nb">}</span>, labels=false<span class="nb">}</span>,
+    ]<span class="nb">{</span>x*(x<span class="nb">^</span>2+y<span class="nb">^</span>2)-(<span class="k">\a*</span>y+<span class="k">\b*</span>x)<span class="nb">}</span>;
+
+    <span class="c">% Equation with white around it</span>
+    <span class="k">\node</span><span class="na">[right, blue, fill=white]</span> at (-2,6) <span class="nb">{</span><span class="s">$</span><span class="nb">x</span><span class="o">(</span><span class="nb">x^</span><span class="m">2</span><span class="o">+</span><span class="nb">y^</span><span class="m">2</span><span class="o">)=(</span><span class="nb">ay</span><span class="o">+</span><span class="nv">\b</span><span class="nb"> x</span><span class="o">)</span><span class="s">$</span><span class="nb">}</span>;
+
+    <span class="c">% Print the value of a</span>
+    <span class="k">\pgfkeys</span><span class="nb">{</span>/pgf/number format/.cd,fixed<span class="nb">}</span>;
+    <span class="k">\node</span><span class="na">[right]</span> at (-2.7,-6) <span class="nb">{</span><span class="s">$</span><span class="nb">a</span><span class="o">=</span><span class="nv">\pgfmathprintnumber</span><span class="nb">{</span><span class="nv">\a</span><span class="nb">}</span><span class="s">$</span><span class="nb">}</span>;
+
+    <span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
 <h2 id="making-the-gif-animation">Making the gif Animation<a class="headerlink" href="#making-the-gif-animation" title="Permanent link"></a></h2>
 <p>Making the gif animation is surprisingly simple after on frame is set up. It relies on the following facts:
-*  Adding another <code>\begin{tikzpicture}...\end{tikzpicture}</code> to the latex file creates a new page in the output pdf, and includes the figures specified by this second set of instructions in this new page.
-*  One can create a loop in Tikz that creates many of these <code>\begin{tikzpicture}...\end{tikzpicture}</code> automagically! Code just looks like this:
-   <div class="highlight"><pre><span class="k">\foreach</span> <span class="k">\a</span> in <span class="nb">{</span>0,0.5,1.0,...,10<span class="nb">}{</span>
+*  Adding another <code>\begin{tikzpicture}...\end{tikzpicture}</code> to the LaTeX file creates a new page in the output pdf, and includes the figured specified by this second set of instructions in this new page.
+*  One can create a loop in TikZ that creates many of these new pages <code>\begin{tikzpicture}...\end{tikzpicture}</code> using varying parameter. Think of this as being able to create the animation frames automatically using a loop!
+*  It is very easy to grab these multi-page pdfs and make a gif out of them using ImageMagick.</p>
+<p>Here are the details:</p>
+<h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick<a class="headerlink" href="#prerequisites-install-imagemagick" title="Permanent link"></a></h3>
+<p>I had mentioned ImageMagick in <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/%7B%7B%3Cref%20tikz-web-export%3E%7D%7D">another post</a> in which it played a crucial role in getting good quality pngs for the web out of vector graphic pdfs. Here it plays an equally important role. </p>
+<p>How to get ImageMagick for MacOS:
+*  Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.
+*  Install <a href="https://imagemagick.org/">ImageMagick</a> from the terminal using Homebrew by executing the command:
+   <div class="highlight"><pre>brew install imagemagick
+</pre></div></p>
+<h3 id="making-multiple-tikz-figures-with-a-varying-parameter">Making multiple TikZ figures with a varying parameter<a class="headerlink" href="#making-multiple-tikz-figures-with-a-varying-parameter" title="Permanent link"></a></h3>
+<p>This is surprisingly simple. The code just looks like this:
+<div class="highlight"><pre><span class="k">\foreach</span> <span class="k">\a</span> in <span class="nb">{</span>0,0.5,1.0,...,10<span class="nb">}{</span>
    <span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
-      ... &lt;figure specifications for the picture with value <span class="k">\a</span>&gt;
+      ... 
+         figure specifications for the picture with value <span class="k">\a</span>
+      ...
    <span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
 <span class="nb">}</span>
 </pre></div>
-   This will create one new pdf page with a new figure using the value of $a$. Page 1 will correspond to $a=0$, page 2 will be $a=0.5$, page 3 will be $a=0.5$, and so on, up to $a=10$.
-*  It is very easy to grab this multi-page pdf and make a gif out of it using ImageMagic.</p></article></body></html>
+This will create one new pdf page with a new figure using the value of $a$. Page 1 will correspond to $a=0$, page 2 will be $a=0.5$, page 3 will be $a=1.0$, and so on up to $a=10$.</p>
+<p>In the case of the animation at the beginning of this post, the code is the following (warp it around the usual TikZ code (\documentclass[border=2pt, tikz]{standalone}\usepackage{pgfplots}.....\end{document}):</p>
+<div class="highlight"><pre><span class="k">\foreach</span> <span class="k">\a</span> in <span class="nb">{</span>-4, -3.8, ..., 4<span class="nb">}{</span>
+    <span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+    <span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[xmin=-3, xmax=3, ymin=-8, ymax=8]
+    <span class="k">\addplot</span>[blue,
+        no markers,
+        raw gnuplot,
+        thick,
+        empty line = jump <span class="c">% this is the default behaviour</span>
+     ] gnuplot <span class="nb">{</span>
+        f(x,y)=x*(x<span class="nb">^</span>2+y<span class="nb">^</span>2)-(<span class="k">\a*</span>y+5.8*x);
+        set xrange [-3:3];
+        set yrange [-8:8];
+        set cntrparam levels incremental 0.001, 0.001, 0.001;
+        set cont base;
+        set view 0,0;
+        unset surface;
+        set isosamples 100,100;
+        splot f(x,y);
+    <span class="nb">}</span>;
+
+    <span class="c">% Equation with white around it</span>
+    <span class="k">\node</span><span class="na">[right, blue, fill=white]</span> at (-2,6) <span class="nb">{</span><span class="s">$</span><span class="nb">x</span><span class="o">(</span><span class="nb">x^</span><span class="m">2</span><span class="o">+</span><span class="nb">y^</span><span class="m">2</span><span class="o">)=(</span><span class="nb">ay</span><span class="o">+</span><span class="m">5</span><span class="nb">.</span><span class="m">8</span><span class="nb">x</span><span class="o">)</span><span class="s">$</span><span class="nb">}</span>;
+
+    <span class="c">% Print the value of a</span>
+    <span class="k">\pgfkeys</span><span class="nb">{</span>/pgf/number format/.cd,fixed<span class="nb">}</span>;
+    <span class="k">\node</span><span class="na">[right]</span> at (-2.7,-6) <span class="nb">{</span><span class="s">$</span><span class="nb">a</span><span class="o">=</span><span class="nv">\pgfmathprintnumber</span><span class="nb">{</span><span class="nv">\a</span><span class="nb">}</span><span class="s">$</span><span class="nb">}</span>;
+
+    <span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+
+<p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
+<p>The last lines in the code add the nice looking LaTeX equation with a white background on top of the curve, and the value of $a$ in the display <code>a=___</code> on the bottom left.</p>
+<p>This is the frame corresponding to $a=1.2$:</p>
+<p>{{&lt; figure width=&rdquo;500px&rdquo; src=&rdquo;gnuplotTestOneFrame1.2.png&rdquo;&gt;}}</p>
+<p>And this is the interesting frame corresponding to $a=0$:</p>
+<p>{{&lt; figure width=&rdquo;500px&rdquo; src=&rdquo;gnuplotTestOneFrame0.png&rdquo;&gt;}}</p>
+<p>This last frame shows actually shows the union of two lower degree curves since when $a=0$, the curve 
+$$x(x^2+y^2)=a y+5.8 x,$$
+becomes
+$$x(x^2+y^2)=5.8 x,$$
+which factors as:
+$$x(x^2+y^2-5.8)=0.$$ 
+The last equation shows that the cubic curve for $a=0$ is the union of the vertical line $x=0$ and the degree two circle $x^2+y^2=5.8$.</p>
+<h3 id="creating-the-gif-out-of-the-multi-page-pdf">Creating the gif out of the multi-page pdf<a class="headerlink" href="#creating-the-gif-out-of-the-multi-page-pdf" title="Permanent link"></a></h3>
+<p>This is a breeze with imageMagick once one has the pdf with one frame per page. Just run in the terminal:
+<div class="highlight"><pre>convert -density <span class="m">300</span> -delay <span class="m">5</span> -loop <span class="m">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
+</pre></div></p>
+<p>The density parameter determines the size and quality of each frame (300 is pretty high), the delay determines the speed of the animation.</p>
+<p>Here is the gif once more:</p>
+<p>{{&lt; figure width=&rdquo;500px&rdquo; src=&rdquo;gnuplotTest.gif&rdquo;&gt;}}</p>
+<h2 id="more-samples">More Samples<a class="headerlink" href="#more-samples" title="Permanent link"></a></h2>
+<p>Just now started playing with this, but it seems pretty useful! This next one is less elaborate since it does not require the use of Gnuplot (no implicit curve plotting is needed):</p>
+<p>{{&lt; figure width=&rdquo;450px&rdquo; src=&rdquo;TikzAnimationLines.gif&rdquo;&gt;}}</p>
+<p>The code for this last animation is <a href="/Users/enriqueacosta/Dropbox/hugo-site/content/posts/TikzLineAnimation.tex">here</a>.</p></article></body></html>

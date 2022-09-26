@@ -348,7 +348,38 @@ The last equation shows that the cubic curve for $a=0$ is the union of the verti
 </figure>
 
 <p>The code for this last animation is <a href="TikzLineAnimation.tex">here</a>.</p>
+<h2 id="one-final-note-on-use-of-gnuplot">One final note on use of Gnuplot</h2>
+<p>The method I described to do the implicit plot using Gnuplot uses raw Gnuplot. There seems to be an even more straightforward method in newer versions of pgfplots that use <code>[contour gnuplot={levels={0}]</code> in a regular 3d plot. I played around with this a bit, and it seemed to be both slower and not deal with singularities as well as the method I outlined above. Here is how the code to plot $x(x^2+y^2)=(ay+5.8 x)$ would look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
+<span style="color:#66d9ef">\usepackage</span>{pgfplots}
+<span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
 
+<span style="color:#66d9ef">\begin</span>{document}
+    <span style="color:#66d9ef">\def\a</span>{1.2}
+
+    <span style="color:#66d9ef">\begin</span>{tikzpicture}
+    <span style="color:#66d9ef">\begin</span>{axis}[view={0}{90}, xmin=-3, xmax=3]
+    
+    <span style="color:#66d9ef">\addplot</span>3 [
+        domain=-3:3,
+        domain y=-8:8,
+        samples=150,
+        thick,
+        contour gnuplot={levels={0}, labels=false},
+    ]{x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+<span style="color:#66d9ef">\b*</span>x)};
+
+    <span style="color:#75715e">% Equation with white around it
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span> x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+
+    <span style="color:#75715e">% Print the value of a
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
+    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
+
+    <span style="color:#66d9ef">\end</span>{axis}
+    <span style="color:#66d9ef">\end</span>{tikzpicture}
+
+<span style="color:#66d9ef">\end</span>{document}
+</code></pre></div>
   </div>
 
 </div>
