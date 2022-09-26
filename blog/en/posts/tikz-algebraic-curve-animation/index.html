@@ -112,7 +112,7 @@
   
   
   <div>
-  <figure><img src="gnuplotTest.gif" width="450px"/>
+  <figure><img src="gnuplotTest.gif" width="500px"/>
 </figure>
 
 <p>The animation above is a <code>gif</code> file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.</p>
@@ -320,26 +320,26 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
 </code></pre></div><p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf <a href="gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
 <p>The last lines in the code add the nice looking LaTeX equation with a white background on top of the curve, and the value of $a$ in the display <code>a=___</code> on the bottom left.</p>
 <p>This is the frame corresponding to $a=1.2$:</p>
-<figure><img src="gnuplotTestOneFrame1.2.png" width="450px"/>
+<figure><img src="gnuplotTestOneFrame1.2.png" width="500px"/>
 </figure>
 
 <p>And this is the interesting frame corresponding to $a=0$:</p>
-<figure><img src="gnuplotTestOneFrame0.png" width="450px"/>
+<figure><img src="gnuplotTestOneFrame0.png" width="500px"/>
 </figure>
 
-<p>This last frame shows a curve really corresponds to the union of two lower degree curves since when $a=0$, the curve
+<p>This last frame shows actually shows the union of two lower degree curves since when $a=0$, the curve
 $$x(x^2+y^2)=a y+5.8 x,$$
 becomes
 $$x(x^2+y^2)=5.8 x,$$
 which factors as:
 $$x(x^2+y^2-5.8)=0.$$
-The last equation shows that the curve for $a=0$ is the union of the vertical line $x=0$ and the circle $x^2+y^2=5.8$.</p>
+The last equation shows that the cubic curve for $a=0$ is the union of the vertical line $x=0$ and the degree two circle $x^2+y^2=5.8$.</p>
 <h3 id="creating-the-gif-out-of-the-multi-page-pdf">Creating the gif out of the multi-page pdf</h3>
 <p>This is a breeze with imageMagick once one has the pdf with one frame per page. Just run in the terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">300</span> -delay <span style="color:#ae81ff">5</span> -loop <span style="color:#ae81ff">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
 </code></pre></div><p>The density parameter determines the size and quality of each frame (300 is pretty high), the delay determines the speed of the animation.</p>
 <p>Here is the gif once more:</p>
-<figure><img src="gnuplotTest.gif" width="450px"/>
+<figure><img src="gnuplotTest.gif" width="500px"/>
 </figure>
 
 <h2 id="more-samples">More Samples</h2>
