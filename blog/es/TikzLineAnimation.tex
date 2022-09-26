@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enrique Acosta, 2022
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *  Make gif with convert:
+%    convert -density 300 -delay 5 -loop 0 -alpha remove TikzAnimation.pdf TikzAnimation.gif
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[border=0pt, 12pt, tikz]{standalone}
+\usepackage{pgfplots}
+
+\def\xMin{0}
+\def\xMax{350}
+
+\newcommand{\plotF}{
+   \addplot[color = magenta, thick , domain = \xMin:\xMax] {4*x};
+   \addlegendentry{$f(x)=4x$};
+}
+
+\newcommand{\plotFandG}{
+   \plotF
+   \addplot[color = cyan , thick , domain = \xMin:\xMax ] {2*x+500};
+   \addlegendentry{$g(x)=2x+500$};
+   \node[fill,circle,inner sep=1.5pt] at (axis cs: 250,1000) {};
+}
+
+\newcommand{\plotFandGandH}{
+   \plotFandG
+   \addplot[color = violet , thick , domain = \xMin:\xMax] {x+600};
+   \addlegendentry{$h(x)=x+600$};
+   \node[fill,circle,inner sep=1.5pt] at (axis cs: 200,800) {};
+   \node[fill,circle,inner sep=1.5pt] at (axis cs: 100,700) {};
+}
+
+\newenvironment{newFrame}{
+      \begin{tikzpicture}\begin{axis}[
+      axis lines = left
+      , xlabel = {$x$}
+      , ylabel = {$y$}   
+      , xmin=0  
+      , xmax=\xMax  
+      , ymin=0
+      , ymax=1400
+      , ylabel near ticks 
+      , scaled ticks=false % removes scaling on axis
+      , yticklabel style={/pgf/number format/fixed} %avoids scientific notation on axis
+      , legend pos=north west
+      , every axis x label/.style={at={(current axis.right of origin)},above right}
+      , every axis y label/.style={at={(current axis.above origin)},above left}
+      , legend cell align = {left}
+      ]
+   }
+      % contents of environment get inserted here, then close environment
+   {\end{axis}\end{tikzpicture}}
+
+\begin{document}
+
+\begin{newFrame} 
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotF
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotFandG
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotFandGandH
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotFandGandH
+   \addplot[color = black, ultra thick, domain = \xMin:100] {max(4*x,2*x+500,x+600)};
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotFandGandH 
+   \addplot[color = black, ultra thick, domain = \xMin:250] {max(4*x,2*x+500,x+600)};
+\end{newFrame}
+
+\begin{newFrame} 
+   \plotFandGandH 
+   \addplot[color = black, ultra thick, domain = \xMin:\xMax] {max(4*x,2*x+500,x+600)};
+\end{newFrame}
+
+\end{document}
