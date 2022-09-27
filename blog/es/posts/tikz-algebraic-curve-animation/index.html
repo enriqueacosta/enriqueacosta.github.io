@@ -131,7 +131,7 @@
 <p>Había dos aspectos &ldquo;complicados&rdquo; que tocaba resolver:</p>
 <ol>
 <li>
-<p>LaTeX y TikZ to tienen funcionanlidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere de cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición textos).</p>
+<p>LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere de cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición textos).</p>
 </li>
 <li>
 <p>LaTeX y TikZ tampoco se pensaron para hacer animaciones, y no producen archivos gif. Parece haber cierta funcionalidad de animación con el formato SVG, y parece haber habido alguna funcionalidad de animación en PDF, pero ni los navegadores modernos ni los visores de PDF parecen comportarse bien con estas animaciones. Por otro lado, el formato gif es el estándar de facto de las animaciones de baja resolución en la web (piense en los íconos 3D que rotaban de la web de los años noventa &ndash; esos eran gifs).</p>
@@ -376,7 +376,7 @@ La última ecuación muestra que la curva cúbica del valor $ a = 0 $ es la uni�
 </figure>
 
 <p>El código para esta última animación es <a href="TikzLineAnimation.tex">este</a>.</p>
-<h2 id="one-final-note-on-use-of-gnuplot">One final note on use of Gnuplot</h2>
+<h2 id="nota-final-sobre-el-uso-de-gnuplot-en-tikz">Nota final sobre el uso de Gnuplot en TikZ</h2>
 <p>El método que describí para hacer la gráfica implícita usando Gnuplot usa lo que se llama <code>raw Gnuplot</code>. Al parecer, en las nuevas versiones de pgfplots (la parte de TikZ que hace estas gráficas) parece haber un método aún más sencillo que usa el comando <code>[contour gnuplot={levels={0}]</code> en la especificación de una gráfica 3D regular. Jugué un poco con esto, y me pareció más lento y menos robusto en el manejo de singularidades en las curvas (como el caso $a=0$ que mostré arriba). En todo caso, vale la pena tenerlo presente. Así es como se ve el código para graficar $x(x^2+y^2) = (ay+5.8 x)$ con este método que no usa <code>raw Gnuplot</code> (el código es más corto):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
 <span style="color:#66d9ef">\usepackage</span>{pgfplots}
@@ -407,7 +407,8 @@ La última ecuación muestra que la curva cúbica del valor $ a = 0 $ es la uni�
     <span style="color:#66d9ef">\end</span>{tikzpicture}
 
 <span style="color:#66d9ef">\end</span>{document}
-</code></pre></div>
+</code></pre></div><p>También parece haber una forma de no depender de Gnuplot y usar luaLaTeX. Pero eso es tema para otra entrada de blog en el futuro.</p>
+
   </div>
 
 </div>
