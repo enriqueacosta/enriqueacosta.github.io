@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enrique Acosta, 2022
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To make gif
+% ----------------------------------------
+% *  Have gnuplot installed (brew install gnuplot)
+% 
+% *  Compile this with shellscape: 
+%    pdflatex -shell-escape gnuplotTest.tex
+% 
+% *  Make gif with convert:
+%    convert -density 300 -delay 5 -loop 0 -alpha remove gnuplotTest.pdf gnuplotTest.gif
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[border=2pt, tikz]{standalone}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=newest}
+
+\begin{document}
+
+    \def\a{1}
+    \def\b{5.8}
+
+\foreach \a in {-4, -3.8, ..., 4}{
+    \begin{tikzpicture}
+    \begin{axis}[xmin=-3, xmax=3, ymin=-8, ymax=8]
+    
+    \addplot +[
+        no markers,
+        raw gnuplot,
+        thick,
+        empty line = jump % not strictly necessary, as this is the default behaviour in the development version of PGFPlots
+     ] gnuplot {
+        f(x,y)=x*(x^2+y^2)-(\a*y+\b*x);
+        set xrange [-3:3];
+        set yrange [-8:8];
+        set cntrparam levels incremental 0.001, 0.001, 0.001;
+        set cont base;
+        set view 0,0;
+        unset surface;
+        set isosamples 100,100;
+        splot f(x,y);
+    };
+
+    % Equation with white around it
+    \node[right, blue, fill=white] at (-2,6) {$x(x^2+y^2)=(ay+\b x)$};
+
+    % Print the value of a
+    \pgfkeys{/pgf/number format/.cd,fixed};
+    \node[right] at (-2.7,-6) {$a=\pgfmathprintnumber{\a}$};
+
+    \end{axis}
+    \end{tikzpicture}
+}
+
+\end{document}

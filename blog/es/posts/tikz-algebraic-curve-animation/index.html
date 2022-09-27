@@ -8,14 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot &middot; Enrique Acosta Jaramillo</title>
+  <title>Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
@@ -30,7 +30,7 @@
 
 
    
-   <base href="https://enriqueacosta.github.io/blog/en/">
+   <base href="https://enriqueacosta.github.io/blog/es/">
 
 
    
@@ -74,16 +74,16 @@
   
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
       <p class="lead">
-       Personal Blog 
+       Blog personal 
       </p>
     </div>
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="/blog/en">Home</a> </li>
-        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
     <p>2022
@@ -100,74 +100,81 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</h1>
+  <h1>Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot</h1>
   
   
-  <time datetime=2022-09-22T14:19:56-0500 class="post-date">September 22, 2022</time>
+  <time datetime=2022-09-22T14:19:56-0500 class="post-date">22 de septiembre de 2022</time>
   
   
   <p> 
-    <strong>Tags: </strong>
+    <strong>Etiquetas: </strong>
      
-    <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a>
+    <a href="https://enriqueacosta.github.io/blog/es/tags/tikz">Tikz</a>
      , 
-    <a href="https://enriqueacosta.github.io/blog/en/tags/latex">LaTeX</a>
+    <a href="https://enriqueacosta.github.io/blog/es/tags/latex">LaTeX</a>
      , 
-    <a href="https://enriqueacosta.github.io/blog/en/tags/curves">Curves</a>
+    <a href="https://enriqueacosta.github.io/blog/es/tags/curvas">Curvas</a>
     
   </p>
   
   
   
     
-      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/">Español: Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot</a>)</h4>
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/">English: Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</a>)</h4>
     
   
   <div>
   <figure><img src="gnuplotTest.gif" width="500px"/>
 </figure>
 
-<p>The animation above is a <code>gif</code> file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.</p>
-<p>There were two &ldquo;complicated pieces&rdquo; to sort out:</p>
+<p>Esta animación es un archivo <code>gif</code> que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.</p>
+<p>Había dos aspectos &ldquo;complicados&rdquo; que tocaba resolver:</p>
 <ol>
-<li>LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</li>
-<li>Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly <code>gif</code> format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).</li>
+<li>
+<p>LaTeX y TikZ to tienen funcionanlidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere de cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición textos).</p>
+</li>
+<li>
+<p>LaTeX y TikZ tampoco se pensaron para hacer animaciones, y no producen archivos gif. Parece haber cierta funcionalidad de animación con el formato SVG, y parece haber habido alguna funcionalidad de animación en PDF, pero ni los navegadores modernos ni los visores de PDF parecen comportarse bien con estas animaciones. Por otro lado, el formato gif es el estándar de facto de las animaciones de baja resolución en la web (piense en los íconos 3D que rotaban de la web de los años noventa &ndash; esos eran gifs).</p>
+</li>
 </ol>
-<p>Given these complications, one may very well wonder why I kept trying to do it. My answer to that is that TikZ is fantastic in several ways:</p>
+<p>Con estas complicaciones, no sobra preguntar por qué seguí intentando. Mi respuesta es que TikZ es fantástico de varias maneras:</p>
 <ul>
-<li>Highly supported, and will probably be for a very long time. LaTeX runs basically on all computers.</li>
-<li>TikZ gives full graphic control, while still allowing one to have high quality mathematical notation using LaTeX.</li>
-<li>Images are &ldquo;programmed&rdquo; so they can be re-tooled/re-used very easily. Just change some lines in the code and re-compile to get a new pdf!</li>
-<li>Output is easy to share (pdf, or can be converted to png or svg for the web).</li>
-<li>Open source.</li>
+<li>Es compatible con la mayoría de los computadores modernos, y probablemente lo será por mucho tiempo. LaTeX ha sido parte del ecosistema de la computación durante aproximadamente 40 años.</li>
+<li>TikZ permite tener mucho control sobre los elementos gráficos y al mismo tiempo permite que uno tenga notación matemática de alta calidad con LaTeX.</li>
+<li>Las imágenes están &ldquo;programadas&rdquo;, por lo que se pueden modificar y usar para otras imágenes con mucha facilidad. Simplemente se cambian algunas líneas en el código, se vuelve a compilar con LaTeX, ¡y se obtiene una imagen!</li>
+<li>Los formatos que produce TikZ son fáciles de compartir (PDF, o puede convertirse en PNG o SVG para la web).</li>
+<li>Licencia de código abierto. Software &ldquo;de la humanidad para la humanidad&rdquo;.</li>
 </ul>
-<p>Thinking in the opposite direction, alternate ways to do these &ldquo;animations&rdquo; have downsides:</p>
+<p>Pensando en la dirección opuesta, le veo desventajas a formas alternativas de hacer estas animaciones:</p>
 <ul>
-<li>Animation software: difficulty with LaTeX equations, and curve plotting.</li>
-<li>Geogebra: Not so easy to share &ndash; either .ggb files, or hosting it geogebratube and embedding it here, which relies on geogebratube still existing!</li>
-<li>Desmos: Fantastic for interactivity, but there is no &ldquo;file&rdquo; that I can store. I can only create a link, which depends on desmos.com existing in the future.</li>
+<li>Software de animación &ldquo;estándar&rdquo;: Dificultad con símbolos de matemáticas y graficando expresiones algebraicas.</li>
+<li>Geogebra: No es tan fácil de compartir &ndash; las opciones son (1) compartir un archivo .ggb con el que muchas personas no saben qué hacer, o (2) alojarlo en geogebra.org e insertarlo en esta página web, que depende de que la página de geogebra siga manteniendo esa funcionalidad.</li>
+<li>Desmos: Es fantástico para la interactividad y graficando curvas implicitas, pero no hay archivo que pueda almacenar. Solo puedo crear un enlace, que depende de desmos.com exista en el futuro.</li>
 </ul>
-<p>This is why I kept trying to do it with TikZ! Here are the details which I figured out after plenty of web surfing and testing.</p>
-<h2 id="producing-one-frame-of-the-animation---graphing-an-algebraic-curve">Producing One Frame of the Animation - Graphing an Algebraic Curve</h2>
-<p>As I mentioned above, LaTeX and TikZ do not natively support graphing algebraic curves because this requires very precise numerical calculations which LaTeX was not built for. It is already marvelous that the graphical programing language TikZ can live inside LateX, given that LaTeX is a typesetting system!</p>
-<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using <a href="http://www.gnuplot.info">Gnuplot</a> which TikZ knows how to use internally.</p>
-<p>There don&rsquo;t seem to be many sources on the internet on how to accomplish this. I constructed the following workflow from things I learned from the following links:</p>
+<p>¡Por eso seguí tratando de hacerlo con TikZ! A continuación los detalles de cómo lograr hacer una animación de ese estilo.</p>
+<h2 id="producir-una-imagen-de-la-animación-la-gráfica-de-una-curva-algebraica">Producir una imagen de la animación: la gráfica de una curva algebraica</h2>
+<p>Como mencioné anteriormente, en LaTeX y TikZ no se pueden hacer gráficas de ecuaciones implícitas porque esto requiere cálculos numéricos muy precisos que van más allá del alcance de LaTeX. De por sí, es maravilloso que el lenguaje de programación gráfico TikZ pueda vivir dentro de LaTeX, ¡dado que el LaTeX es un sistema de composición textos!</p>
+<p>No obstante, hay una manera bastante simple de &ldquo;encargar&rdquo; los cálculos numéricos a <a href="http://www.gnuplot.info">Gnuplot</a> que TikZ sabe cómo usar internamente.</p>
+<p>Parece no haber muchas fuentes en Internet sobre cómo lograr esto. Construí el siguiente proceso a partir de cosas que aprendí de los siguientes enlaces:</p>
 <ul>
 <li><a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a></li>
 <li><a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a></li>
 <li><a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></li>
 </ul>
-<h3 id="requirements-gnuplot">Requirements: Gnuplot</h3>
-<p>See the <a href="http://www.gnuplot.info">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh">homebrew</a>.</p>
+<h3 id="requisito-gnuplot">Requisito: Gnuplot</h3>
+<p>Consulte el <a href="http://www.gnuplot.info">sitio web de Gnuplot</a> para obtener instrucciones de instalación. En MacOS, esto es muy fácil de hacer con <a href="https://brew.sh">HomeBrew</a>.</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.</li>
-<li>To install Gnuplot, just run:
+<li>
+<p>Instale el Homebrew (instrucciones en su <a href="https://brew.sh">sitio web</a>).</p>
+</li>
+<li>
+<p>Para instalar Gnuplot usando Homebrew tan solo hay que ejecutar el siguiente comando en la terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install gnuplot
 </code></pre></div></li>
 </ul>
-<h3 id="implicit-plots-in-tikz-using-gnuplot">Implicit plots in TikZ using Gnuplot</h3>
-<p>To plot $f(x,y)=g(x,y)$ in Gnuplot, one plots the slice $z=0$ of the surface $$z=f(x,y)-g(x,y).$$ The code to do this in TikZ is pretty clean.</p>
-<p>Here is a sample:</p>
+<h3 id="gráficos-implícitos-en-tikz-con-gnuplot">Gráficos implícitos en TikZ con Gnuplot</h3>
+<p>Para graficar $ f (x, y) = g (x, y) $ con Gnuplot, uno produce la gráfica de la tajada $ z = 0 $ de la superficie $$ z = f (x, y) -g (x, y). $$ El código para hacer esto dentro de TikZ es bastante simple.</p>
+<p>Este es un ejemplo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 </span><span style="color:#75715e">% Enrique Acosta, 2022
 </span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,20 +221,20 @@
 <span style="color:#66d9ef">\end</span>{tikzpicture}
 <span style="color:#66d9ef">\end</span>{document}
 
-</code></pre></div><p>And here is the beautiful output:</p>
+</code></pre></div><p>Y está es la curva que produce:</p>
 <figure><img src="ChaslesCubic.png" width="600px"/>
 </figure>
 
-<p>The curve is a <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml">Chasles Cubic</a> of the form
+<p>La curva es una <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml">Cúbica de Chasles</a>, es decir, de la forma
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
-<p>You can play with the parameters $a,b,c,d$ yourself in the following desmos interactive I built. Desmos, is <em>very good</em> at interactivity!</p>
+<p>Puede ver el efecto de los parámetros $a, b, c, d$ en la forma de la curva con el siguiente applet de Desmos que construí.</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/vdfa8tdiiv" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/vdfa8tdiiv?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div>
-<p>Back to the TikZ code, here are some details:</p>
+<p>De regreso al código de TikZ de la imagen, estos son unos aspectos clave:</p>
 <ul>
 <li>
-<p>Gnuplot is run inside the TikZ code in the following piece:</p>
+<p>El llamado a Gnuplot desde TikZ se hace en esta parte del código:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\addplot</span>[blue,
         no markers,
         raw gnuplot,
@@ -244,61 +251,65 @@ $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
         set isosamples 100,100;
         splot F(x,y);
     };
-</code></pre></div><p>This produces, using Gnuplot, the surface plot for $F(x,y)=0$, so for
+</code></pre></div><p>El código produce, con Gnuplot, la gráfica de $F(x,y)=0$. Es decir, la gráfica de
 $$
 y-\left(\backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3\right)=0,
 $$
-which one can rewrite as
+que se puede reescribir como
 $$
 y= \backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3.
 $$</p>
 </li>
 <li>
-<p>The <code>\a</code>, <code>\b</code>, <code>\c</code> and <code>\d</code> are the parameters, which one can change by changing their definitions in this piece of the code:</p>
+<p>Los <code>\a</code>, <code>\b</code>, <code>\c</code> y <code>\d</code> son los parámetros de la cúbica, que se pueden cambiar con en esta parte de código:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\def\a</span>{-3.3}
 <span style="color:#66d9ef">\def\b</span>{5.4}
 <span style="color:#66d9ef">\def\c</span>{1.5}
 <span style="color:#66d9ef">\def\d</span>{4}
 </code></pre></div></li>
 <li>
-<p>So, the TikZ code is really a &ldquo;ChaslesCubic pdf generator&rdquo;, giving the graph of the cubic
+<p>Así, el código de TikZ es en realidad un &ldquo;graficador de cúbicas de Chasles&rdquo;, pues da la gráfica de la cúbica
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$
-for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> and <code>\d</code>.</p>
+para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code> y <code>\d</code>.</p>
 </li>
 <li>
-<p>To run the code one needs to run LaTeX in a special mode that allows it to execute Gnuplot. Specifically, one needs to run <code>pdflatex</code> with the <code>shell-escape</code> flag, as follows:</p>
+<p>Para compilar este código de TikZ se debe usar PdfLaTeX en un modo especial que le permita ejecutar Gnuplot. Específicamente, se debe ejecutar <code>pdflatex</code> con la opción <code>shell-escape</code>, de la siguiente forma:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdflatex -shell-escape ChaslesCubic.tex
 </code></pre></div></li>
 </ul>
-<p>That is it! Looks like TikZ code, is compiled just like TikZ code, but uses Gnuplot to handle the delicate numerical calculations.</p>
-<h2 id="making-the-gif-animation">Making the gif Animation</h2>
-<p>Making the gif animation is surprisingly simple after on frame is set up. It relies on the following facts:</p>
+<p>¡Eso es todo! El código para graficar curvas implícitas se compila igual que el código TikZ normal, pero utiliza Gnuplot para hacer los cálculos numéricos de alta precisión.</p>
+<h2 id="creación-de-la-animación-en-formato-gif">Creación de la animación en formato gif</h2>
+<p>Hacer la animación en formato gif es sorprendentemente simple después de que se descifró como hacer una sola imagen de la animación. Se basa en los siguientes hechos:</p>
 <ul>
-<li>Adding another <code>\begin{tikzpicture}...\end{tikzpicture}</code> to the LaTeX file creates a new page in the output pdf, and includes the figured specified by this second set of instructions in this new page.</li>
-<li>One can create a loop in TikZ that creates many of these new pages <code>\begin{tikzpicture}...\end{tikzpicture}</code> using varying parameter. Think of this as being able to create the animation frames automatically using a loop!</li>
-<li>It is very easy to grab these multi-page pdfs and make a gif out of them using ImageMagick.</li>
+<li>Agregar otro <code>\begin{tikzpicture}...\end{tikzpicture}</code> en el archivo de LaTeX crea una nueva página en el PDF, con una nueva imagen.</li>
+<li>Uno puede crear un ciclo (en el sentido de programación) en TikZ que crea muchas de estas nuevas páginas <code>\begin{tikzpicture}...\end{tikzpicture}</code> con un parámetro variable. Con esto, ¡se pueden crear las imágenes estáticas de la animación automáticamente con un ciclo! (este fenómeno &ndash; que lograr hacer una buena figura simplifica enormemente futuros usos &ndash; parece ser una constante al usar TikZ).</li>
+<li>Es fácil tomar estos PDF de varias páginas y hacer un GIF con ellos usando ImageMagick.</li>
 </ul>
-<p>Here are the details:</p>
-<h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
-<p>I had mentioned ImageMagick in <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">another post</a> in which it played a crucial role in getting good quality pngs for the web out of vector graphic pdfs. Here it plays an equally important role.</p>
-<p>How to get ImageMagick for MacOS:</p>
+<p>Estos son los detalles:</p>
+<h3 id="requisitos-imagemagick">Requisitos: ImageMagick</h3>
+<p>Mencioné ImageMagick en <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/">otra entrada de blog</a> en donde jugó un papel crucial para obtener un PNG de buena calidad para la web a partir de un PDF con un gráfico vectorial. Aquí juega un papel igualmente importante.</p>
+<p>Para instalar ImageMagick en MacOS:</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.</li>
-<li>Install <a href="https://imagemagick.org/">ImageMagick</a> from the terminal using Homebrew by executing the command:
+<li>
+<p>Instale el Homebrew (instrucciones en su <a href="https://brew.sh">sitio web</a>).</p>
+</li>
+<li>
+<p>Instale <a href="https://imagemagick.org/">ImageMagick</a> desde la terminal usando Homebrew ejecutando el comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install imagemagick
 </code></pre></div></li>
 </ul>
-<h3 id="making-multiple-tikz-figures-with-a-varying-parameter">Making multiple TikZ figures with a varying parameter</h3>
-<p>This is surprisingly simple. The code just looks like this:</p>
+<h3 id="creación-de-varias-figuras-con-tikz-con-un-parámetro-variable">Creación de varias figuras con TikZ con un parámetro variable</h3>
+<p>El código se ve así:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {0,0.5,1.0,...,10}{
    <span style="color:#66d9ef">\begin</span>{tikzpicture}
       ... 
-         figure specifications for the picture with value <span style="color:#66d9ef">\a</span>
+         especificaciones de figura para la imagen con valor <span style="color:#66d9ef">\a</span>
       ...
    <span style="color:#66d9ef">\end</span>{tikzpicture}
 }
-</code></pre></div><p>This will create one new pdf page with a new figure using the value of $a$. Page 1 will correspond to $a=0$, page 2 will be $a=0.5$, page 3 will be $a=1.0$, and so on up to $a=10$.</p>
-<p>In the case of the animation at the beginning of this post, the code is the following:</p>
+</code></pre></div><p>Esto crea una página en el PDF para cada valor de $a$. En el caso que se muestra arriba con <code>\a in {0,0.5,1.0,...,10}</code>, la página 1 corresponde a $a= 0$, la página 2 corresponde a $ a = 0.5 $, la página 3 corresponde a $ a = 1.0 $ etc., hasta $ a = 10 $.</p>
+<h4 id="ejemplo">Ejemplo</h4>
+<p>Para obtener la animación al comienzo de esta entrada de blog, el código es el siguiente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {-4, -3.8, ..., 4}{
     <span style="color:#66d9ef">\begin</span>{tikzpicture}
     <span style="color:#66d9ef">\begin</span>{axis}[xmin=-3, xmax=3, ymin=-8, ymax=8]
@@ -329,40 +340,44 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
     <span style="color:#66d9ef">\end</span>{axis}
     <span style="color:#66d9ef">\end</span>{tikzpicture}
 }
-</code></pre></div><p>(code must be warpped around the usual TikZ commands &ndash; full code can be downloaded <a href="gnuplotTest.tex">here</a>.)</p>
-<p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf <a href="gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
-<p>The last lines in the code add the nice looking LaTeX equation with a white background on top of the curve, and the value of $a$ in the display <code>a=___</code> on the bottom left.</p>
-<p>This is the frame corresponding to $a=1.2$:</p>
+</code></pre></div><p>(hay que rodearlo con los comandos de TikZ usuales &ndash; puede descargar el código completo <a href="gnuplotTest.tex">acá</a>).</p>
+<p>Esto traza la curva algebraica
+$$ x (x^2+y^2) = a y+5.8 x, $$
+para distintos valores de $ a $.  Un valor por página. El parámetro $a$ varía así:
+$$ a = -4, -3.8, -3.6, &hellip;, 0.0,0.2, &hellip;, 4.0, $$
+¡por lo que este código crea un pdf de 41 páginas! Si está interesado, puede descargar el PDF <a href="gnuplotTest.pdf">acá</a>. Es bastante pequeño (188 kb).</p>
+<p>Las últimas líneas en el código agregan la ecuación de LaTeX bonita en la parte superior de la curva  con el fondo blanco y el valor de $ a $ en la parte inferior izquierda ( <code>a = ___</code> ).</p>
+<p>Esta es la imagen que corresponde a $a = 1.2$:</p>
 <figure><img src="gnuplotTestOneFrame1.2.png" width="500px"/>
 </figure>
 
-<p>And this is the interesting frame corresponding to $a=0$:</p>
+<p>Y esta es la imagen que corresponde al valor interesante $a = 0$:</p>
 <figure><img src="gnuplotTestOneFrame0.png" width="500px"/>
 </figure>
 
-<p>This last frame shows actually shows the union of two lower degree curves since when $a=0$, the curve
+<p>Esta última imagen en realidad muestra la unión de dos curvas de grado menor, ya que cuando $a=0$ la curva
 $$x(x^2+y^2)=a y+5.8 x,$$
-becomes
+es en realidad
 $$x(x^2+y^2)=5.8 x,$$
-which factors as:
+que se puede factorizar como:
 $$x(x^2+y^2-5.8)=0.$$
-The last equation shows that the cubic curve for $a=0$ is the union of the vertical line $x=0$ and the degree two circle $x^2+y^2=5.8$.</p>
-<h3 id="creating-the-gif-out-of-the-multi-page-pdf">Creating the gif out of the multi-page pdf</h3>
-<p>This is a breeze with imageMagick once one has the pdf with one frame per page. Just run in the terminal:</p>
+La última ecuación muestra que la curva cúbica del valor $ a = 0 $ es la unión de la línea vertical $ x = 0 $ y el círculo $ x^2+y^2 = 5.8 $.</p>
+<h3 id="creación-del-gif-a-partir-del-pdf-con-varias-páginas">Creación del GIF a partir del PDF con varias páginas</h3>
+<p>¡Esto lo hace ImageMagick con mucha facilidad! Una vez uno tiene el PDF con una imagen por página, simplemente hay que ejecutar en la terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">300</span> -delay <span style="color:#ae81ff">5</span> -loop <span style="color:#ae81ff">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
-</code></pre></div><p>The density parameter determines the size and quality of each frame (300 is pretty high), the delay determines the speed of the animation.</p>
-<p>Here is the gif once more:</p>
+</code></pre></div><p>El parámetro de densidad determina el tamaño y la calidad de cada imagen (300 es bastante alto), el <code>delay</code> determina la velocidad de la animación.</p>
+<p>Este es, una vez más, el GIF que produce:</p>
 <figure><img src="gnuplotTest.gif" width="500px"/>
 </figure>
 
-<h2 id="more-samples">More Samples</h2>
-<p>Just now started playing with this, but it seems pretty useful! This next one is less elaborate since it does not require the use of Gnuplot (no implicit curve plotting is needed):</p>
+<h2 id="más-ejemplos">Más ejemplos</h2>
+<p>Hasta ahora empecé a explorar las posibilidades de esto, ¡pero parece bastante útil! El siguiente ejemplo es menos elaborado, ya que no requiere el uso de Gnuplot (no requiere gráficas de curva implícitas):</p>
 <figure><img src="TikzAnimationLines.gif" width="500px"/>
 </figure>
 
-<p>The code for this last animation is <a href="TikzLineAnimation.tex">here</a>.</p>
+<p>El código para esta última animación es <a href="TikzLineAnimation.tex">este</a>.</p>
 <h2 id="one-final-note-on-use-of-gnuplot">One final note on use of Gnuplot</h2>
-<p>The method I described to do the implicit plot using Gnuplot uses raw Gnuplot. There seems to be an even more straightforward method in newer versions of pgfplots that use <code>[contour gnuplot={levels={0}]</code> in a regular 3d plot. I played around with this a bit, and it seemed to be both slower and not deal with singularities as well as the method I outlined above. Here is how the code to plot $x(x^2+y^2)=(ay+5.8 x)$ would look like:</p>
+<p>El método que describí para hacer la gráfica implícita usando Gnuplot usa lo que se llama <code>raw Gnuplot</code>. Al parecer, en las nuevas versiones de pgfplots (la parte de TikZ que hace estas gráficas) parece haber un método aún más sencillo que usa el comando <code>[contour gnuplot={levels={0}]</code> en la especificación de una gráfica 3D regular. Jugué un poco con esto, y me pareció más lento y menos robusto en el manejo de singularidades en las curvas (como el caso $a=0$ que mostré arriba). En todo caso, vale la pena tenerlo presente. Así es como se ve el código para graficar $x(x^2+y^2) = (ay+5.8 x)$ con este método que no usa <code>raw Gnuplot</code> (el código es más corto):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
 <span style="color:#66d9ef">\usepackage</span>{pgfplots}
 <span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
@@ -398,10 +413,10 @@ The last equation shows that the cubic curve for $a=0$ is the union of the verti
 </div>
 
 <h2>
-Subscribe
+Suscríbase
 </h2>
 <p>
-   Want to get an email when a new post is added? If so, subscribe <a href="subscribe/subscribe"> here</a>.
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
 </p>
 
 <footer>
@@ -409,7 +424,7 @@ Subscribe
   <div class="license">
     <p>
       &copy 2022 Enrique Acosta. </br>
-      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
     </p>
