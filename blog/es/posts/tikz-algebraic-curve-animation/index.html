@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot &middot; Enrique Acosta Jaramillo</title>
+  <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot &middot; Enrique Acosta Jaramillo</title>
   <meta name="description" content="" />
 
   
@@ -100,7 +100,7 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot</h1>
+  <h1>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</h1>
   
   
   <time datetime=2022-09-22T14:19:56-0500 class="post-date">22 de septiembre de 2022</time>
@@ -128,18 +128,18 @@
 </figure>
 
 <p>Esta animación es un archivo <code>gif</code> que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.</p>
-<p>Había dos aspectos &ldquo;complicados&rdquo; que tocaba resolver:</p>
+<p>Había dos aspectos &ldquo;complicados&rdquo; que había que resolver:</p>
 <ol>
 <li>
-<p>LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere de cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición textos).</p>
+<p>LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).</p>
 </li>
 <li>
-<p>LaTeX y TikZ tampoco se pensaron para hacer animaciones, y no producen archivos gif. Parece haber cierta funcionalidad de animación con el formato SVG, y parece haber habido alguna funcionalidad de animación en PDF, pero ni los navegadores modernos ni los visores de PDF parecen comportarse bien con estas animaciones. Por otro lado, el formato gif es el estándar de facto de las animaciones de baja resolución en la web (piense en los íconos 3D que rotaban de la web de los años noventa &ndash; esos eran gifs).</p>
+<p>LaTeX y TikZ tampoco se pensaron para hacer animaciones, y no producen archivos gif. Parece haber cierta funcionalidad de animación con el formato SVG, y parece haber habido alguna funcionalidad de animación en PDF, pero ni los navegadores modernos ni los visores de PDF parecen comportarse bien con estas animaciones. Además, el formato gif es el estándar de facto de las animaciones de baja resolución en la web (piense en los íconos 3D que rotaban de la web de los años noventa &ndash; esos eran gifs).</p>
 </li>
 </ol>
-<p>Con estas complicaciones, no sobra preguntar por qué seguí intentando. Mi respuesta es que TikZ es fantástico de varias maneras:</p>
+<p>Con estas complicaciones, no sobra preguntar por qué seguí intentándolo. Mi respuesta es que TikZ es fantástico de varias maneras:</p>
 <ul>
-<li>Es compatible con la mayoría de los computadores modernos, y probablemente lo será por mucho tiempo. LaTeX ha sido parte del ecosistema de la computación durante aproximadamente 40 años.</li>
+<li>Es compatible con la mayoría de los computadores modernos, y probablemente lo será por mucho tiempo. LaTeX ha sido parte del ecosistema de la computación desde hace aproximadamente 40 años.</li>
 <li>TikZ permite tener mucho control sobre los elementos gráficos y al mismo tiempo permite que uno tenga notación matemática de alta calidad con LaTeX.</li>
 <li>Las imágenes están &ldquo;programadas&rdquo;, por lo que se pueden modificar y usar para otras imágenes con mucha facilidad. Simplemente se cambian algunas líneas en el código, se vuelve a compilar con LaTeX, ¡y se obtiene una imagen!</li>
 <li>Los formatos que produce TikZ son fáciles de compartir (PDF, o puede convertirse en PNG o SVG para la web).</li>
@@ -149,11 +149,11 @@
 <ul>
 <li>Software de animación &ldquo;estándar&rdquo;: Dificultad con símbolos de matemáticas y graficando expresiones algebraicas.</li>
 <li>Geogebra: No es tan fácil de compartir &ndash; las opciones son (1) compartir un archivo .ggb con el que muchas personas no saben qué hacer, o (2) alojarlo en geogebra.org e insertarlo en esta página web, que depende de que la página de geogebra siga manteniendo esa funcionalidad.</li>
-<li>Desmos: Es fantástico para la interactividad y graficando curvas implicitas, pero no hay archivo que pueda almacenar. Solo puedo crear un enlace, que depende de desmos.com exista en el futuro.</li>
+<li>Desmos: Es fantástico para la interactividad y graficando curvas implícitas, pero no hay archivo que pueda almacenar. Solo puedo crear un enlace, que depende de que desmos.com exista en el futuro.</li>
 </ul>
-<p>¡Por eso seguí tratando de hacerlo con TikZ! A continuación los detalles de cómo lograr hacer una animación de ese estilo.</p>
+<p>¡Por eso seguí tratando de hacerlo con TikZ! A continuación describo los detalles de cómo lograr hacer una animación de este estilo.</p>
 <h2 id="producir-una-imagen-de-la-animación-la-gráfica-de-una-curva-algebraica">Producir una imagen de la animación: la gráfica de una curva algebraica</h2>
-<p>Como mencioné anteriormente, en LaTeX y TikZ no se pueden hacer gráficas de ecuaciones implícitas porque esto requiere cálculos numéricos muy precisos que van más allá del alcance de LaTeX. De por sí, es maravilloso que el lenguaje de programación gráfico TikZ pueda vivir dentro de LaTeX, ¡dado que el LaTeX es un sistema de composición textos!</p>
+<p>Como mencioné anteriormente, en LaTeX y TikZ no se pueden hacer gráficas de ecuaciones implícitas porque esto requiere cálculos numéricos muy precisos que van más allá del alcance de LaTeX. De por sí, es maravilloso que el lenguaje de programación gráfico TikZ pueda vivir dentro de LaTeX, ¡dado que el LaTeX es un sistema de composición de textos!</p>
 <p>No obstante, hay una manera bastante simple de &ldquo;encargar&rdquo; los cálculos numéricos a <a href="http://www.gnuplot.info">Gnuplot</a> que TikZ sabe cómo usar internamente.</p>
 <p>Parece no haber muchas fuentes en Internet sobre cómo lograr esto. Construí el siguiente proceso a partir de cosas que aprendí de los siguientes enlaces:</p>
 <ul>
@@ -221,7 +221,7 @@
 <span style="color:#66d9ef">\end</span>{tikzpicture}
 <span style="color:#66d9ef">\end</span>{document}
 
-</code></pre></div><p>Y está es la curva que produce:</p>
+</code></pre></div><p>Y esta es la curva que produce:</p>
 <figure><img src="ChaslesCubic.png" width="600px"/>
 </figure>
 
@@ -261,14 +261,14 @@ y= \backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslas
 $$</p>
 </li>
 <li>
-<p>Los <code>\a</code>, <code>\b</code>, <code>\c</code> y <code>\d</code> son los parámetros de la cúbica, que se pueden cambiar con en esta parte de código:</p>
+<p>Los <code>\a</code>, <code>\b</code>, <code>\c</code> y <code>\d</code> son los parámetros de la Cúbica, que se pueden cambiar con en esta parte del código:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\def\a</span>{-3.3}
 <span style="color:#66d9ef">\def\b</span>{5.4}
 <span style="color:#66d9ef">\def\c</span>{1.5}
 <span style="color:#66d9ef">\def\d</span>{4}
 </code></pre></div></li>
 <li>
-<p>Así, el código de TikZ es en realidad un &ldquo;graficador de cúbicas de Chasles&rdquo;, pues da la gráfica de la cúbica
+<p>Así, el código de TikZ es en realidad un &ldquo;Graficador de Cúbicas de Chasles&rdquo;, pues da la gráfica de la cúbica
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$
 para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code> y <code>\d</code>.</p>
 </li>
@@ -279,10 +279,10 @@ para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code>
 </ul>
 <p>¡Eso es todo! El código para graficar curvas implícitas se compila igual que el código TikZ normal, pero utiliza Gnuplot para hacer los cálculos numéricos de alta precisión.</p>
 <h2 id="creación-de-la-animación-en-formato-gif">Creación de la animación en formato gif</h2>
-<p>Hacer la animación en formato gif es sorprendentemente simple después de que se descifró como hacer una sola imagen de la animación. Se basa en los siguientes hechos:</p>
+<p>Hacer la animación en formato gif es sorprendentemente simple después de que se descifró cómo hacer una sola imagen de la animación. Se basa en los siguientes hechos:</p>
 <ul>
 <li>Agregar otro <code>\begin{tikzpicture}...\end{tikzpicture}</code> en el archivo de LaTeX crea una nueva página en el PDF, con una nueva imagen.</li>
-<li>Uno puede crear un ciclo (en el sentido de programación) en TikZ que crea muchas de estas nuevas páginas <code>\begin{tikzpicture}...\end{tikzpicture}</code> con un parámetro variable. Con esto, ¡se pueden crear las imágenes estáticas de la animación automáticamente con un ciclo! (este fenómeno &ndash; que lograr hacer una buena figura simplifica enormemente futuros usos &ndash; parece ser una constante al usar TikZ).</li>
+<li>Uno puede crear un ciclo (en el sentido de programación) en TikZ el que crea muchas de estas nuevas páginas <code>\begin{tikzpicture}...\end{tikzpicture}</code> con un parámetro variable. Con esto, ¡se pueden crear las imágenes estáticas de la animación automáticamente con un ciclo! (este fenómeno &ndash; que lograr hacer una buena figura simplifica enormemente futuros usos &ndash; parece ser una constante al usar TikZ).</li>
 <li>Es fácil tomar estos PDF de varias páginas y hacer un GIF con ellos usando ImageMagick.</li>
 </ul>
 <p>Estos son los detalles:</p>
@@ -345,8 +345,8 @@ para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code>
 $$ x (x^2+y^2) = a y+5.8 x, $$
 para distintos valores de $ a $.  Un valor por página. El parámetro $a$ varía así:
 $$ a = -4, -3.8, -3.6, &hellip;, 0.0,0.2, &hellip;, 4.0, $$
-¡por lo que este código crea un pdf de 41 páginas! Si está interesado, puede descargar el PDF <a href="gnuplotTest.pdf">acá</a>. Es bastante pequeño (188 kb).</p>
-<p>Las últimas líneas en el código agregan la ecuación de LaTeX bonita en la parte superior de la curva  con el fondo blanco y el valor de $ a $ en la parte inferior izquierda ( <code>a = ___</code> ).</p>
+¡por lo que este código crea un pdf de 41 páginas! Si está interesado, puede descargar el PDF <a href="gnuplotTest.pdf">acá</a>. Es muy pequeño (188 kb).</p>
+<p>Las últimas líneas en el código agregan la ecuación de LaTeX bonita con el fondo blanco que se muestra en la parte superior de la imagen y el valor de $ a $ en la parte inferior izquierda ( <code>a = ___</code> ).</p>
 <p>Esta es la imagen que corresponde a $a = 1.2$:</p>
 <figure><img src="gnuplotTestOneFrame1.2.png" width="500px"/>
 </figure>

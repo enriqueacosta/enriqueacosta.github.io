@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/curvas/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Animación gif de una familia de curvas algebraícas usando Tikz y Gnuplot</title>
+      <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</guid>
       <description>Esta animación es un archivo gif que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.
-Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que tocaba resolver:
-  LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere de cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición textos).</description>
+Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:
+  LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).</description>
     </item>
     
     <item>
