@@ -253,49 +253,13 @@ var ptx_lunr_docs = [
   "body": " BORRADOR: Lección 17        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "solutions-1",
+  "id": "lec-3-4-C-17",
   "level": "1",
-  "url": "solutions-1.html",
-  "type": "Apéndice",
+  "url": "lec-3-4-C-17.html",
+  "type": "Sección",
   "number": "",
-  "title": "Selected Hints",
-  "body": " Selected Hints  "
-},
-{
-  "id": "solutions-2",
-  "level": "1",
-  "url": "solutions-2.html",
-  "type": "Apéndice",
-  "number": "",
-  "title": "Selected Solutions",
-  "body": " Selected Solutions  "
-},
-{
-  "id": "appendix-1",
-  "level": "1",
-  "url": "appendix-1.html",
-  "type": "Apéndice",
-  "number": "",
-  "title": "List of Symbols",
-  "body": " List of Symbols   "
-},
-{
-  "id": "index-1",
-  "level": "1",
-  "url": "index-1.html",
-  "type": "Índice alfabético",
-  "number": "",
-  "title": "Index",
-  "body": " Index   "
-},
-{
-  "id": "colophon-2",
-  "level": "1",
-  "url": "colophon-2.html",
-  "type": "Licencia de uso",
-  "number": "",
-  "title": "Licencia de uso",
-  "body": " This book was authored in PreTeXt .  "
+  "title": "Glosario unidad 3-4",
+  "body": " Glosario unidad 3-4    algoritmo  Una serie de pasos que, si se siguen correctamente, siempre funciona para obtener un resultado.    área  El número de unidades cuadradas que cubren una figura plana sin dejar espacios ni superponerse.    arreglo  Una organización de objetos en filas y columnas. Cada columna debe tener el mismo número de objetos que las otras columnas y cada fila debe tener el mismo número de objetos que las otras filas.    centímetro cuadrado  Un cuadrado con lados que miden 1 centímetro.    cociente  El resultado de una expresión de división.    "
 }
 ]
 
