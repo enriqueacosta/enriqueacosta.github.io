@@ -199,58 +199,49 @@ var ptx_lunr_docs = [
   "body": " BORRADOR: Lección 17        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "lec-3-4-C-12",
+  "id": "lec-3-4-D-18",
   "level": "1",
-  "url": "lec-3-4-C-12.html",
+  "url": "lec-3-4-D-18.html",
   "type": "Sección",
   "number": "",
   "title": "BORRADOR: Lección 12",
   "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "lec-3-4-C-13",
+  "id": "lec-3-4-D-19",
   "level": "1",
-  "url": "lec-3-4-C-13.html",
+  "url": "lec-3-4-D-19.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 13",
-  "body": " BORRADOR: Lección 13        Calentamiento  Calentamiento   XXXXXXXX  TEXTO     Actividad 1  Actividad 1   XXXXXXXX  TEXTO     Actividad 2  Actividad 2   XXXXXXXX  TEXTO     Actividad 3  Actividad 3   XXXXXXXX  TEXTO     Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx  Texto    "
+  "title": "BORRADOR: Lección 12",
+  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "lec-3-4-C-14",
+  "id": "lec-3-4-D-20",
   "level": "1",
-  "url": "lec-3-4-C-14.html",
+  "url": "lec-3-4-D-20.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 14",
-  "body": " BORRADOR: Lección 14        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 12",
+  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "lec-3-4-C-15",
+  "id": "lec-3-4-D-21",
   "level": "1",
-  "url": "lec-3-4-C-15.html",
+  "url": "lec-3-4-D-21.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 15",
-  "body": " BORRADOR: Lección 15        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 12",
+  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
-  "id": "lec-3-4-C-16",
+  "id": "lec-3-4-D-22",
   "level": "1",
-  "url": "lec-3-4-C-16.html",
+  "url": "lec-3-4-D-22.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 16",
-  "body": " BORRADOR: Lección 16        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
-},
-{
-  "id": "lec-3-4-C-17",
-  "level": "1",
-  "url": "lec-3-4-C-17.html",
-  "type": "Sección",
-  "number": "",
-  "title": "BORRADOR: Lección 17",
-  "body": " BORRADOR: Lección 17        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 12",
+  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-C-17",
