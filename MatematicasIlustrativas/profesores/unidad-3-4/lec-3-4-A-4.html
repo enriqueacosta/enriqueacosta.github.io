@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="es-ES">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lección 4 - Interpretemos expresiones de división</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Matemáticas Ilustrativas">
+<meta property="book:author" content="Adaptación del Grupo LEMA ()">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_green_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Salta al contenido principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="unidad-3-4.html"><span class="title">Matemáticas Ilustrativas:</span> <span class="subtitle">Grado 3 - Unidad 4</span></a></h1>
+<p class="byline">Adaptación del Grupo LEMA (<a class="external" href="https://www.grupolema.org" target="_blank"><code class="code-inline tex2jax_ignore">https://www.grupolema.org</code></a>)</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>[search-results-heading]: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>[no-search-results].</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Índice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Índice alfabético">Índice alfabético</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="lec-3-4-A-3.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="lec-3-4-A.html" title="Arriba">Arriba</a><a id="nextbutton" class="next-button button toolbar-item" href="lec-3-4-A-5.html" title="Siguiente">Siguiente</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Índice</button><a class="previous-button toolbar-item button" href="lec-3-4-A-3.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="lec-3-4-A.html" title="Arriba">Arriba</a><a class="next-button button toolbar-item" href="lec-3-4-A-5.html" title="Siguiente">Siguiente</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Grado 3 - Unidad 4</span></a><ul>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Presentación de la unidad</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Licencia de uso</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2" class="internal">Código fuente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="lec-3-4-A.html" data-scroll="lec-3-4-A" class="internal"><span class="codenumber">1</span> <span class="title">Sección A - ¿Qué es la división?</span></a><ul>
+<li><a href="lec-3-4-A-1.html" data-scroll="lec-3-4-A-1" class="internal">Lección 1</a></li>
+<li><a href="lec-3-4-A-2.html" data-scroll="lec-3-4-A-2" class="internal">Lección 2</a></li>
+<li><a href="lec-3-4-A-3.html" data-scroll="lec-3-4-A-3" class="internal">Lección 3</a></li>
+<li><a href="lec-3-4-A-4.html" data-scroll="lec-3-4-A-4" class="active">Lección 4</a></li>
+<li><a href="lec-3-4-A-5.html" data-scroll="lec-3-4-A-5" class="internal">Lección 5</a></li>
+<li><a href="lec-3-4-A-PPs.html" data-scroll="lec-3-4-A-PPs" class="internal">Problemas de práctica</a></li>
+<li><a href="lec-3-4-A-resumen.html" data-scroll="lec-3-4-A-resumen" class="internal">Resumen de la Sección</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">BORRADOR: Sección B - Relacionemos la multiplicación y la división</span></a><ul>
+<li><a href="lec-3-4-B-6.html" data-scroll="lec-3-4-B-6" class="internal">BORRADOR: Lección 6 - La división como un factor desconocido</a></li>
+<li><a href="lec-3-4-B-7.html" data-scroll="lec-3-4-B-7" class="internal">BORRADOR: Lección 7 - Relacionemos multiplicación y división</a></li>
+<li><a href="lec-3-4-B-8.html" data-scroll="lec-3-4-B-8" class="internal">BORRADOR: Lección 8</a></li>
+<li><a href="lec-3-4-B-9.html" data-scroll="lec-3-4-B-9" class="internal">BORRADOR: Lección 9</a></li>
+<li><a href="lec-3-4-B-10.html" data-scroll="lec-3-4-B-10" class="internal">BORRADOR: Lección 10</a></li>
+<li><a href="lec-3-4-B-11.html" data-scroll="lec-3-4-B-11" class="internal">BORRADOR: Lección 11</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">BORRADOR: Sección C - Multipliquemos números más grandes</span></a><ul>
+<li><a href="lec-3-4-C-12.html" data-scroll="lec-3-4-C-12" class="internal">BORRADOR: Lección 12</a></li>
+<li><a href="lec-3-4-C-13.html" data-scroll="lec-3-4-C-13" class="internal">BORRADOR: Lección 13</a></li>
+<li><a href="lec-3-4-C-14.html" data-scroll="lec-3-4-C-14" class="internal">BORRADOR: Lección 14</a></li>
+<li><a href="lec-3-4-C-15.html" data-scroll="lec-3-4-C-15" class="internal">BORRADOR: Lección 15</a></li>
+<li><a href="lec-3-4-C-16.html" data-scroll="lec-3-4-C-16" class="internal">BORRADOR: Lección 16</a></li>
+<li><a href="lec-3-4-C-17.html" data-scroll="lec-3-4-C-17" class="internal">BORRADOR: Lección 17</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4" class="internal"><span class="codenumber">4</span> <span class="title">BORRADOR: Sección D - Dividamos números más grandes</span></a><ul>
+<li><a href="lec-3-4-C-12.html" data-scroll="lec-3-4-C-12" class="internal">BORRADOR: Lección 12</a></li>
+<li><a href="lec-3-4-C-13.html" data-scroll="lec-3-4-C-13" class="internal">BORRADOR: Lección 13</a></li>
+<li><a href="lec-3-4-C-14.html" data-scroll="lec-3-4-C-14" class="internal">BORRADOR: Lección 14</a></li>
+<li><a href="lec-3-4-C-15.html" data-scroll="lec-3-4-C-15" class="internal">BORRADOR: Lección 15</a></li>
+<li><a href="lec-3-4-C-16.html" data-scroll="lec-3-4-C-16" class="internal">BORRADOR: Lección 16</a></li>
+<li><a href="lec-3-4-C-17.html" data-scroll="lec-3-4-C-17" class="internal">BORRADOR: Lección 17</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Licencia de uso</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Realizado con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="lec-3-4-A-4"><h2 class="heading hide-type">
+<span class="type">Sección</span> <span class="codenumber"></span> <span class="title">Lección 4 - Interpretemos expresiones de división</span>
+</h2>
+<article class="objectives goal-like" id="objectives-5"><h3 class="heading"><span class="type">Objetivos</span></h3>
+<ul class="disc"><li id="li-121"><p id="p-180">Démosle sentido a expresiones de división.</p></li></ul></article><section class="introduction" id="introduction-3"><h3 class="heading">Nota para el profesor.<span></span>
+</h3> <p id="p-181">La idea en esta lección es que los estudiantes interpreten expresiones de situaciones de división y entiendan que la misma expresión se puede usar para representar dos tipos de situaciones (el divisor puede ser en número de grupos, o en número de objetos en un grupo).</p> <p id="p-182">En esta clase se presenta a los estudiantes el término <dfn class="terminology">divisor</dfn> (ver la <a href="lec-3-4-A-4.html#lec-3-4-A-4-2" class="internal" title="Subsección: Actividad 2">Actividad 2 </a>).</p></section><section class="subsection" id="lec-3-4-A-4-0"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Calentamiento</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-15"><h4 class="heading"><span class="title">Conversación numérica: ¿Más o menos?</span></h4>
+<p id="p-183">Encuentra mentalmente el valor de cada expresión.</p>
+<ol id="p-184" class="decimal">
+<li id="li-122"><p id="p-derived-li-122"><span class="process-math">\(\displaystyle 500 - 475\)</span></p></li>
+<li id="li-123"><p id="p-derived-li-123"><span class="process-math">\(\displaystyle 504 - 475\)</span></p></li>
+<li id="li-124"><p id="p-derived-li-124"><span class="process-math">\(\displaystyle 512 - 475\)</span></p></li>
+<li id="li-125"><p id="p-derived-li-125"><span class="process-math">\(\displaystyle 512 - 449\)</span></p></li>
+</ol></article><section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<p id="p-185">Tiempo recomendado: 10 mins.</p>
+<section class="paragraphs" id="paragraphs-61"><h5 class="heading"><span class="title">Fase 1 - Trabajo individual con una expresión (1 min).</span></h5> <p id="p-186">Muestre una expresión y pida a los estudiantes que hagan una señal cuando tengan una respuesta y puedan explicar cómo la obtuvieron.</p></section><section class="paragraphs" id="paragraphs-62"><h5 class="heading"><span class="title">Fase 2 - Socialización sobre esa expresión (4 mins).</span></h5> <p id="p-187">Anote las respuestas de los estudiantes y sus estrategias.</p></section><section class="paragraphs" id="paragraphs-63"><h5 class="heading"><span class="title">Fase 3 - Repetición con las otras expresiones (5 mins).</span></h5> <p id="p-188">Al llegar a la tercera expresión, considere preguntar: ¿Por qué el valor de <span class="process-math">\(512 - 475\)</span> es mayor que el valor de <span class="process-math">\(504 - 475\text{?}\)</span></p> <p id="p-189">Complemente con preguntas más generales, como:</p>
+<ul class="disc">
+<li id="li-126"><p id="p-derived-li-126">¿Alguien puede expresar el razonamiento de ________ de otra forma?</p></li>
+<li id="li-127"><p id="p-derived-li-127">¿Alguien usó la misma estrategia, pero la explicaría de otra forma?</p></li>
+<li id="li-128"><p id="p-derived-li-128">¿Alguien pensó en el problema de otra forma?</p></li>
+<li id="li-129"><p id="p-derived-li-129">¿Alguien quiere agregar algo a la estrategia de ________?</p></li>
+</ul></section><section class="paragraphs" id="paragraphs-64"><h5 class="heading"><span class="title">Ejemplos de respuestas.</span></h5> <ol id="p-190" class="decimal">
+<li id="li-130"><p id="p-derived-li-130">25. Le sumé 25 a 475 para llegar a 500.</p></li>
+<li id="li-131"><p id="p-derived-li-131">29. Pensé en el primer problema y le sumé 4 a 25 para llegar a 504.</p></li>
+<li id="li-132"><p id="p-derived-li-132">37. Comencé en 475 y le sumé 25 para llegar a 500. Luego, le sumé 10 para llegar a 510 y le sumé 2 más para llegar a 512. <span class="process-math">\(25 + 10 + 2 = 37\text{.}\)</span></p></li>
+<li id="li-133"><p id="p-derived-li-133">63. Sé que a 449 le faltan 51 para llegar a 500 y después le sumé 12 más a 51.</p></li>
+</ol></section><section class="paragraphs" id="paragraphs-65"><h5 class="heading"><span class="title">Lo que se espera de esta actividad.</span></h5> <p id="p-191">La idea es recolectar estrategias y comprensiones que tienen los estudiantes para hacer restas con números hasta 1,000. En particular, se busca que los estudiantes revisiten la estrategia de sumar para encontrar la diferencia.</p></section></section></section><section class="subsection" id="lec-3-4-A-4-1"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 1</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-16"><h4 class="heading"><span class="title">Trompos.</span></h4>
+<p id="p-192">Los trompos son populares en todo el mundo. Estos son trompos de diferentes culturas.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:20%;"><img src="external/V1%203.4.A.4%20Mexican%20Trompo.jpg" class="contained" alt="Mexican trompo (spinning top)"></div>
+<div class="sbspanel top" style="width:20%;"><img src="external/V1%203.4.A.4%20Dreidels.jpg" class="contained" alt="Dreidels"></div>
+<div class="sbspanel top" style="width:20%;"><img src="external/V1%203.4.A.4%20Indonesian%20Gasing.jpg" class="contained" alt="Indonesian gasing (spinning tops)"></div>
+<div class="sbspanel top" style="width:20%;"><img src="external/V1%203.4.A.4%20German%20Kreisel%20Copy.png" class="contained" alt="German kreisel (spinning top)"></div>
+<div class="sbspanel top" style="width:20%;"><img src="external/V1%203.4.A.4%20Colorful%20Top.jpg" class="contained" alt="Spinning top toy"></div>
+</div></div>
+<p id="p-193">Empareja cada situación sobre trompos con una expresión que pueda representarla.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:55.5555555555556%;"><p id="p-194">1. Clare tiene una colección de 24 trompos de cuatro colores: negro, blanco, rojo y verde. Tiene el mismo número de trompos de cada color. ¿Cuántos trompos tiene de cada color?</p></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><p id="p-195">A. <span class="process-math">\(24 \div 2\)</span></p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:55.5555555555556%;"><p id="p-196">2. Priya y su amigo están decorando con pintura 24 trompos de madera. Si cada persona pinta el mismo número de trompos, ¿cuántos trompos pinta cada persona?</p></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><p id="p-197">B. <span class="process-math">\(24 \div 4\)</span></p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:55.5555555555556%;"><p id="p-198">3. En una tienda tienen 24 trompos de todo el mundo exhibidos en 6 cajas. Cada caja contiene el mismo número de trompos. ¿Cuántos trompos hay en cada caja?</p></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><p id="p-199">C. <span class="process-math">\(24 \div 4\)</span></p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:55.5555555555556%;"><p id="p-200">4. Diego tiene 12 trompos que quiere regalar. Si a cada amigo le da 2 trompos, ¿cuántos amigos recibirán trompos?</p></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><p id="p-201">D. <span class="process-math">\(12 \div 6\)</span></p></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:55.5555555555556%;"><p id="p-202">5. Seis amigos están jugando con 12 <em class="emphasis">dreidels</em>. Si cada uno juega con el mismo número de <em class="emphasis">dreidels</em> que los demás, ¿cuántos <em class="emphasis">dreidels</em> tiene cada persona?</p></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><p id="p-203">E. <span class="process-math">\(24 \div 6\)</span></p></div>
+</div></div></article><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<p id="p-204">Tiempo recomendado: 10 mins.</p>
+<section class="paragraphs" id="paragraphs-66"><h5 class="heading"><span class="title">Fase 1 - Trabajo en parejas (3-5 mins).</span></h5> <p id="p-205">Pida a los estudiantes que trabajen en el problema. Esté atento de estudiantes que puedan justificar sus parejas explicando cómo los números en la expresión corresponden a la situación.</p></section><section class="paragraphs" id="paragraphs-67"><h5 class="heading"><span class="title">Fase 2 - Socialización con toda la clase (5 mins).</span></h5> <p id="p-206">Pida a los estudiantes que identificó que expliquen sus respuestas.</p> <p id="p-207">Pregunte a toda la clase:</p>
+<ul class="disc"><li id="li-134"><p id="p-derived-li-134">¿Cómo representan los números de la expresión lo que hay en la situación?</p></li></ul></section><section class="paragraphs" id="paragraphs-68"><h5 class="heading"><span class="title">Respuestas.</span></h5> <ol id="p-208" class="decimal">
+<li id="li-135"><p id="p-derived-li-135">C</p></li>
+<li id="li-136"><p id="p-derived-li-136">A</p></li>
+<li id="li-137"><p id="p-derived-li-137">E</p></li>
+<li id="li-138"><p id="p-derived-li-138">B</p></li>
+<li id="li-139"><p id="p-derived-li-139">D</p></li>
+</ol></section><section class="paragraphs" id="paragraphs-69"><h5 class="heading"><span class="title">Lo que se espera de esta actividad.</span></h5> <p id="p-209">La idea es que los estudiantes aprendan a justificar cómo los números en la expresión se relacionan con la situación correspondiente.</p></section></section></section><section class="subsection" id="lec-3-4-A-4-2"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 2</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-17"><h4 class="heading"><span class="title">Autos en cajas.</span></h4>
+<p id="p-210">Considera estas dos situaciones.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-211">A. Han tiene 21 autos de juguete y 3 cajas. Él pone el mismo número de autos en cada caja. ¿Cuántos autos habrá en cada caja?</p></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-212">B. Han tiene 21 autos de juguete y varias cajas. Él quiere poner 3 autos en cada caja. ¿Cuántas cajas necesitará?</p></div>
+</div></div>
+<p id="p-213">¿Cuál situación está representada por la expresión <span class="process-math">\(21\div 3\text{?}\)</span> Explica tu razonamiento.</p></article><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<p id="p-214">Tiempo recomendado: 10 mins.</p>
+<section class="paragraphs" id="paragraphs-70"><h5 class="heading"><span class="title">Fase 1 - Lectura en silencio (1 mins).</span></h5> <p id="p-215">Pida que lean con atención las dos situaciones.</p></section><section class="paragraphs" id="paragraphs-71"><h5 class="heading"><span class="title">Fase 2 - Trabajo en parejas (2-3 mins).</span></h5> <p id="p-216">Pida a los estudiantes que con su pareja respondan a la pregunta.</p> <p id="p-217">La parte interesante de su conversación ocurrirá a partir del hecho que <span class="process-math">\(21\div 3\)</span> representa las <em class="emphasis">dos</em> situaciones. No se esfuerce por que todas las parejas entiendan esto durante el trabajo en grupo -- esto se discutirá a fondo en la socialización con toda la clase.</p></section><section class="paragraphs" id="paragraphs-72"><h5 class="heading"><span class="title">Fase 3 - Socialización con toda la clase (5 mins).</span></h5> <p id="p-218">Invite a los estudiantes que compartan lo que pensaron. Profundice con la pregunta:</p>
+<ul class="disc"><li id="li-140"><p id="p-derived-li-140">¿Cómo puede la misma expresión representar dos situaciones diferentes?</p></li></ul> <p id="p-219">La idea es que los estudiantes se aproximen a articular el hecho que el <span class="process-math">\(3\)</span> en una situación corresponde al número de objetos en un grupo, y en la otra es el número de grupos. Ambas situaciones son sobre 21 dividido entre 3, pero de distintas formas.</p></section><section class="paragraphs" id="paragraphs-73"><h5 class="heading"><span class="title">Fase 4 - Cierre - presentación del término <em class="emphasis">divisor</em> (1 min).</span></h5> <p id="p-220">Cierre presentando a los estudiantes el término <dfn class="terminology">divisor</dfn>: cuando dividimos <span class="process-math">\(21\div 3\text{,}\)</span> el número entre el que dividimos se llama el divisor. En la expresión <span class="process-math">\(27\div 3\text{,}\)</span> el divisor es 3.</p></section><section class="paragraphs" id="paragraphs-74"><h5 class="heading"><span class="title">Ejemplos de respuestas.</span></h5> <p id="p-221">Ambas situaciones están representadas por la expresión <span class="process-math">\(21\div 3\text{.}\)</span> El 3 en la situación A es en número de cajas y el 3 en la situación B es el número de autos que va en cada caja.</p></section><section class="paragraphs" id="paragraphs-75"><h5 class="heading"><span class="title">Lo que se espera de esta actividad.</span></h5> <p id="p-222">La idea es que los estudiantes entiendan que:</p>
+<ul class="disc">
+<li id="li-141"><p id="p-derived-li-141">una expresión de división puede representar dos situaciones de división muy distintas.</p></li>
+<li id="li-142"><p id="p-derived-li-142">el número entre el que dividen se llama el <dfn class="terminology">divisor</dfn>.</p></li>
+<li id="li-143"><p id="p-derived-li-143">el divisor puede representar la cantidad de grupos, o el número de objetos en cada grupo.</p></li>
+</ul></section></section></section><section class="subsection" id="lec-3-4-A-4-3"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 3</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-18"><h4 class="heading"><span class="title">Pilas de bloques.</span></h4>
+<p id="p-223">Asocia cada situación con un dibujo y con una expresión que representan la situación. Prepárate para explicar tu razonamiento.</p>
+<ol id="p-224" class="decimal">
+<li id="li-144"><p id="p-derived-li-144">Kiran usa 6 bloques para hacer pilas. Cada pila tiene 2 bloques. ¿Cuántas pilas hay?</p></li>
+<li id="li-145"><p id="p-derived-li-145">Han usa 6 bloques para hacer dos pilas iguales. ¿Cuántos bloques hay en cada pila?</p></li>
+<li id="li-146"><p id="p-derived-li-146">Jada usa 6 bloques para construir pilas que tienen 3 bloques cada una. ¿Cuántas pilas hay?</p></li>
+<li id="li-147"><p id="p-derived-li-147">Mai usa 6 bloques para hacer 3 pilas iguales. ¿Cuántos bloques hay en cada pila?</p></li>
+</ol>
+<p id="p-225">Dibujos</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-226">A</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><img src="external/tikz-file-149316.svg" role="img" class="contained" alt="Drawing. 2 stacks of 3 blocks."></div>
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-227">B</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><img src="external/tikz-file-149317.svg" role="img" class="contained" alt="Drawing. 3 stacks of 2 blocks."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-229">C</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><div class="displaymath process-math" data-contains-math-knowls="" id="p-230">
+\begin{equation*}
+6\div 2
+\end{equation*}
+</div></div>
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-231">D</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><div class="displaymath process-math" data-contains-math-knowls="" id="p-232">
+\begin{equation*}
+6\div 3
+\end{equation*}
+</div></div>
+</div></div></article><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<p id="p-233">Tiempo recomendado: 15 mins.</p>
+<section class="paragraphs" id="paragraphs-76"><h5 class="heading"><span class="title">Fase 1 - Lectura en silencio (1 mins).</span></h5> <p id="p-234">Pida que lean con atención las dos situaciones.</p></section><section class="paragraphs" id="paragraphs-77"><h5 class="heading"><span class="title">Fase 2 - Trabajo en parejas (5-8 mins).</span></h5> <p id="p-235">Pida a los estudiantes que discutan con su pareja en qué se parecen y en qué se diferencian estas situaciones (2-3 mins), y que después solucionen en problema (3-5 mins).</p></section><section class="paragraphs" id="paragraphs-78"><h5 class="heading"><span class="title">Fase 3 - Discusión con toda la clase (7 mins).</span></h5> <p id="p-236">Comience preguntando a la clase: "Consideremos las primeras dos situaciones sobre Kiran y Han. ¿Por qué podemos usar la misma expresión para representar estas situaciones, pero tenemos que usar dibujos diferentes?"</p> <p id="p-237">Ayúdelos a articular sus ideas. La idea es que se aproximen a algo como: Ambas situaciones son de 6 dividido entre 2, pero en la primera situación, el divisor 2 es cuántos bloques hay en cada pila, y el la segunda el 2 es el número de bloques en cada pila.</p> <p id="p-238">Pase después a la situaciones de Han y Jada y pregunte: "Ahora examinemos las situaciones de Han y Jada. ¿Por qué podemos usar el mismo dibujo para representar estas situaciones, pero no la misma expresión?"</p> <p id="p-239">Ayúdelos a aproximarse a la explicación de que ambas situaciones son sobre 2 grupos de 3 objetos (bloques), por lo que corresponden al mismo dibujo, pero en la situación de Han son 6 objetos que se dividen en 2 pilas, y en la situación de Jada son 6 objetos que se dividen en pilas de 3 bloques cada una.</p></section><section class="paragraphs" id="paragraphs-79"><h5 class="heading"><span class="title">Respuestas.</span></h5> <ol id="p-240" class="decimal">
+<li id="li-148"><p id="p-derived-li-148">B y C</p></li>
+<li id="li-149"><p id="p-derived-li-149">A y C</p></li>
+<li id="li-150"><p id="p-derived-li-150">A y D</p></li>
+<li id="li-151"><p id="p-derived-li-151">B y D</p></li>
+</ol></section><section class="paragraphs" id="paragraphs-80"><h5 class="heading"><span class="title">Lo que se espera de esta actividad.</span></h5> <p id="p-241">La idea en esta actividad es que los estudiantes apliquen todo lo que han aprendido en cuatro situaciones que en conjunto tienen todas las posibles correspondencias entre dibujos y expresiones. Lo importante, como siempre, es que los estudiantes entiendan por qué un dibujo o una expresión corresponde a una situación. No debe haber nada memorístico de por medio.</p> <p id="p-242">El trabajo en esta actividad le permite a los estudiantes establecer conexiones entre las tres representaciones (palabras, dibujos, expresiones) antes de escribir sus propias expresiones de división y de solucionar problemas de división en lecciones posteriores.</p></section></section></section><section class="subsection" id="lec-3-4-A-4-s"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Resumen</span>
+</h3>
+<p id="p-243">Considera algunas expresiones, como estas:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+6\div 2
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+6\div 3
+\end{equation*}
+</div>
+<p id="p-244">¿Hay alguna manera de distinguir las expresiones que representan un problema de "¿cuántos grupos?" de las expresiones que representan un problema de "¿cuántos hay en cada grupo?"?</p>
+<section class="paragraphs" id="paragraphs-81"><h4 class="heading"><span class="title">Respuesta.</span></h4> <p id="p-245">No -- las expresiones de división se pueden interpretar de dos formas y no podemos realmente saber qué tipo de situación de división representa, a menos que tengamos una situación o un dibujo que vaya con la expresión.</p></section><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<section class="paragraphs" id="paragraphs-82"><h5 class="heading"><span class="title">Recomendaciones.</span></h5> <p id="p-246">Intente hacer la pregunta a los estudiantes sin mostrar la respuesta. Deles tiempo para pensar e intentar articular sus ideas.</p></section></section></section><section class="subsection" id="lec-3-4-A-4-cool"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad de cierre</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-19"><h4 class="heading"><span class="title">Los trompos de Han.</span></h4>
+<p id="p-247">Han tiene 14 trompos. Él reparte los trompos equitativamente en 2 cajas. ¿Cuántos trompos habrá en cada caja?</p>
+<p id="p-248">Selecciona <em class="alert">todas</em> las formas en las que podemos representar la situación.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-249">A</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><img src="external/tikz-file-151100.svg" role="img" class="contained" alt="2 groups of 7 dots."></div>
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-250">B</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><img src="external/tikz-file-151101.svg" role="img" class="contained" alt="Groups of dots."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-252">C</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><div class="displaymath process-math" data-contains-math-knowls="" id="p-253">
+\begin{equation*}
+6\div 2
+\end{equation*}
+</div></div>
+<div class="sbspanel top" style="width:2.030456852791878%;"><p id="p-254">D</p></div>
+<div class="sbspanel top" style="width:45.6852791878173%;"><div class="displaymath process-math" data-contains-math-knowls="" id="p-255">
+\begin{equation*}
+6\div 3
+\end{equation*}
+</div></div>
+</div></div></article><section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type">
+<span class="type">Subsubsección</span> <span class="codenumber"></span> <span class="title">Notas para el profesor</span>
+</h4>
+<section class="paragraphs" id="paragraphs-83"><h5 class="heading"><span class="title">Respuesta.</span></h5> <p id="p-256">A y C.</p></section><section class="paragraphs" id="paragraphs-84"><h5 class="heading"><span class="title">Si los estudiantes responden incorrectamente.</span></h5> <p id="p-257">Pida a los estudiantes al inicio de la siguiente lección que trabajen en parejas en este problema.</p></section></section></section></section></div></main>
+</div>
+</body>
+</html>
