@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "",
   "title": "Lección 1 - ¿Cuántos grupos?",
-  "body": " Lección 1 - ¿Cuántos grupos?  Lección 1    Representemos y resolvamos problemas.           Calentamiento  Calentamiento   Cuántos ves: Manzanas  ¿Cuántas ves? ¿Cómo lo sabes?, ¿qué ves?        Actividad 1  Actividad 1   ¿Cuántas manzanas?  Resuelve cada problema. Muestra cómo pensaste. Usa objetos, un dibujo o un diagrama.    Si 24 manzanas se ponen en cajas y en cada caja se ponen 8 manzanas, ¿cuántas cajas hay?  Si 42 manzanas se ponen en cajas y en cada caja se ponen 6 manzanas, ¿cuántas cajas hay?  Si 32 manzanas se ponen en cajas y en cada caja se ponen 4 manzanas, ¿cuántas cajas hay?       Actividad 2  Actividad 2   Recorrido por el salón: Manzanas en cajas    Con tu compañero, ve a ver los pósteres alrededor del salón. Discute con tu compañero en qué se parecen y en qué se diferencian las ideas que se muestran en los pósteres.  Reflexiona sobre lo que viste. Escribe una cosa en la que se parecen y una cosa en la que se diferencian las ideas que se muestran en los pósteres.       Resumen   Hoy resolvimos problemas acerca de poner manzanas en cajas. ¿En qué se parecían estos problemas a la multiplicación? ¿En qué eran diferentes?  Los problemas que resolvimos hoy son problemas de división. ¿Cómo definirían la división basándose en los problemas que vimos hoy?     Actividad de cierre  Actividad de cierre   ¿Cuántas bolsas?  Lin tiene 30 manzanas para compartirlas con sus amigos. Las pone en bolsas y pone 6 manzanas en cada bolsa. ¿Cuántas bolsas necesita? Explica o muestra tu razonamiento.    "
+  "body": " Lección 1 - ¿Cuántos grupos?  Lección 1    Representemos y resolvamos problemas.          Calentamiento  Calentamiento   Cuántos ves: Manzanas  ¿Cuántas ves? ¿Cómo lo sabes?, ¿qué ves?        Actividad 1  Actividad 1   ¿Cuántas manzanas?  Resuelve cada problema. Muestra cómo pensaste. Usa objetos, un dibujo o un diagrama.    Si 24 manzanas se ponen en cajas y en cada caja se ponen 8 manzanas, ¿cuántas cajas hay?  Si 42 manzanas se ponen en cajas y en cada caja se ponen 6 manzanas, ¿cuántas cajas hay?  Si 32 manzanas se ponen en cajas y en cada caja se ponen 4 manzanas, ¿cuántas cajas hay?       Actividad 2  Actividad 2   Recorrido por el salón: Manzanas en cajas    Con tu compañero, ve a ver los pósteres alrededor del salón. Discute con tu compañero en qué se parecen y en qué se diferencian las ideas que se muestran en los pósteres.  Reflexiona sobre lo que viste. Escribe una cosa en la que se parecen y una cosa en la que se diferencian las ideas que se muestran en los pósteres.       Resumen   Hoy resolvimos problemas acerca de poner manzanas en cajas. ¿En qué se parecían estos problemas a la multiplicación? ¿En qué eran diferentes?  Los problemas que resolvimos hoy son problemas de división. ¿Cómo definirían la división basándose en los problemas que vimos hoy?     Actividad de cierre  Actividad de cierre   ¿Cuántas bolsas?  Lin tiene 30 manzanas para compartirlas con sus amigos. Las pone en bolsas y pone 6 manzanas en cada bolsa. ¿Cuántas bolsas necesita? Explica o muestra tu razonamiento.    "
 },
 {
   "id": "lec-3-4-A-2",
@@ -52,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "",
   "title": "Lección 3 - Dibujos de situaciones de división",
-  "body": " Lección 3 - Dibujos de situaciones de división  Lección 3    Representemos situaciones de división con dibujos.     Calentamiento  Calentamiento   Conversación numérica: Cuanto más cambien las cosas...  Encuentra mentalmente el valor de cada expresión.                     Actividad 1  Actividad 1   Grupos de estudiantes    ¿Qué observaste acerca de cómo los estudiantes se organizaron en grupos de 2?  ¿Qué observaste acerca de cómo los estudiantes se organizaron en 2 grupos?       Actividad 2  Actividad 2   Los lápices de colores de Elena  Elena tiene 12 lápices de colores. Ella tiene 2 cajas y quiere poner el mismo número de lápices en cada caja. ¿Cuántos lápices irán en cada caja?  ¿Cuál dibujo corresponde a la situación? Explica tu razonamiento.   A   2 groups of 6 dots.   B   6 groups of 2 dots.     A.  El dibujo B no es correcto pues muestra 6 grupos de 2 lápices de colores. Eso sería como si ella tuviera 6 cajas, en vez de 2 cajas.      Actividad 3  Actividad 3   ¿Cuál dibujo corresponde?  Asocia cada situación con un dibujo. Prepárate para explicar tu razonamiento.     Mai tiene 8 marcadores y varias cajas. Ella pone 4 marcadores en cada caja. ¿Cuántas cajas con marcadores hay?  Kiran tiene 20 bolígrafos y varias mesas. Él pone 2 bolígrafos en cada mesa. ¿En cuántas mesas puede poner bolígrafos?  Lin tiene 8 lápices de colores. Ella los pone en 2 bolsas. En cada bolsa pone el mismo número de lápices de colores. ¿Cuántos lápices de colores habrá en cada bolsa?  Priya tiene 15 crayones y varios pupitres. Ella pone 5 crayones en cada pupitre. ¿Cuántos pupitres tendrán crayones?  Noah tiene 20 lápices y 10 cajas. Él pone el mismo número de lápices en cada caja. ¿Cuántos lápices habrá en cada caja?  Jada tiene 15 marcadores y 3 mesas. Ella pone el mismo número de marcadores en cada mesa. ¿Cuántos marcadores habrá en cada mesa?     A.  2 groups of 4 dots.  A    B.  10 groups of 2 dots.    C.  3 groups of 5 dots.         Resumen  Hoy asociamos dibujos con situaciones de división. Hay dos tipos de situaciones de división y hoy vimos que el mismo dibujo puede representar ambos tipos de situaciones.  Considera este grupo:    2 groups of 4 dots.  A   Mai tiene 8 marcadores y varias cajas. Ella pone 4 marcadores en cada caja. ¿Cuántas cajas con marcadores hay?  Lin tiene 8 lápices de colores. Ella los pone en 2 bolsas. En cada bolsa pone el mismo número de lápices de colores. ¿Cuántos lápices de colores habrá en cada bolsa?    ¿En qué se parecen y en qué se diferencian estas situaciones de división?   En la primera situación, debemos averiguar cuántos grupos hay. Sabemos que hay 4 marcadores en cada caja, pero no sabemos cuántas cajas hay. En la segunda situación, debemos averiguar cuántos hay en cada grupo. Sabemos que hay 2 bolsas, pero no sabemos cuántos lápices de colores hay en cada bolsa.  Ahora que estamos dividiendo, necesitamos un símbolo nuevo para escribir expresiones de división. Si queremos representar \"8 dividido en grupos de 4\", escribimos: .   ¿Qué expresión podríamos escribir para representar \"8 dividido en 2 grupos\"?     Actividad de cierre  Actividad de cierre   Regalitos para invitados  Clare tiene 48 marcadores. Ella pone 8 marcadores en cada bolsa de regalitos para su fiesta de cumpleaños. ¿Cuántas bolsas usará?  ¿Cuál dibujo corresponde a la situación? Explica tu razonamiento.   A.   10 groups of 2 dots.   B.   10 groups of 2 dots.      "
+  "body": " Lección 3 - Dibujos de situaciones de división  Lección 3    Representemos situaciones de división con dibujos.           Calentamiento  Calentamiento   Conversación numérica: Cuanto más cambien las cosas...  Encuentra mentalmente el valor de cada expresión.                     Actividad 1  Actividad 1   Grupos de estudiantes    ¿Qué observaste acerca de cómo los estudiantes se organizaron en grupos de 2?  ¿Qué observaste acerca de cómo los estudiantes se organizaron en 2 grupos?       Actividad 2  Actividad 2   Los lápices de colores de Elena  Elena tiene 12 lápices de colores. Ella tiene 2 cajas y quiere poner el mismo número de lápices en cada caja. ¿Cuántos lápices irán en cada caja?  ¿Cuál dibujo corresponde a la situación? Explica tu razonamiento.   A   2 groups of 6 dots.   B   6 groups of 2 dots.     A.  El dibujo B no es correcto pues muestra 6 grupos de 2 lápices de colores. Eso sería como si ella tuviera 6 cajas, en vez de 2 cajas.      Actividad 3  Actividad 3   ¿Cuál dibujo corresponde?  Asocia cada situación con un dibujo. Prepárate para explicar tu razonamiento.     Mai tiene 8 marcadores y varias cajas. Ella pone 4 marcadores en cada caja. ¿Cuántas cajas con marcadores hay?  Kiran tiene 20 bolígrafos y varias mesas. Él pone 2 bolígrafos en cada mesa. ¿En cuántas mesas puede poner bolígrafos?  Lin tiene 8 lápices de colores. Ella los pone en 2 bolsas. En cada bolsa pone el mismo número de lápices de colores. ¿Cuántos lápices de colores habrá en cada bolsa?  Priya tiene 15 crayones y varios pupitres. Ella pone 5 crayones en cada pupitre. ¿Cuántos pupitres tendrán crayones?  Noah tiene 20 lápices y 10 cajas. Él pone el mismo número de lápices en cada caja. ¿Cuántos lápices habrá en cada caja?  Jada tiene 15 marcadores y 3 mesas. Ella pone el mismo número de marcadores en cada mesa. ¿Cuántos marcadores habrá en cada mesa?     A.  2 groups of 4 dots.  A    B.  10 groups of 2 dots.    C.  3 groups of 5 dots.         Resumen  Hoy asociamos dibujos con situaciones de división. Hay dos tipos de situaciones de división y hoy vimos que el mismo dibujo puede representar ambos tipos de situaciones.  Considera este grupo:    2 groups of 4 dots.  A   Mai tiene 8 marcadores y varias cajas. Ella pone 4 marcadores en cada caja. ¿Cuántas cajas con marcadores hay?  Lin tiene 8 lápices de colores. Ella los pone en 2 bolsas. En cada bolsa pone el mismo número de lápices de colores. ¿Cuántos lápices de colores habrá en cada bolsa?    ¿En qué se parecen y en qué se diferencian estas situaciones de división?   En la primera situación, debemos averiguar cuántos grupos hay. Sabemos que hay 4 marcadores en cada caja, pero no sabemos cuántas cajas hay. En la segunda situación, debemos averiguar cuántos hay en cada grupo. Sabemos que hay 2 bolsas, pero no sabemos cuántos lápices de colores hay en cada bolsa.  Ahora que estamos dividiendo, necesitamos un símbolo nuevo para escribir expresiones de división. Si queremos representar \"8 dividido en grupos de 4\", escribimos: .   ¿Qué expresión podríamos escribir para representar \"8 dividido en 2 grupos\"?     Actividad de cierre  Actividad de cierre   Regalitos para invitados  Clare tiene 48 marcadores. Ella pone 8 marcadores en cada bolsa de regalitos para su fiesta de cumpleaños. ¿Cuántas bolsas usará?  ¿Cuál dibujo corresponde a la situación? Explica tu razonamiento.   A.   10 groups of 2 dots.   B.   10 groups of 2 dots.      "
 },
 {
   "id": "lec-3-4-A-4",
@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "",
   "title": "BORRADOR: Lección 13",
-  "body": " BORRADOR: Lección 13        Calentamiento  Calentamiento   XXXXXXXX  TEXTO     Actividad 1  Actividad 1   XXXXXXXX  TEXTO     Actividad 2  Actividad 2   XXXXXXXX  TEXTO     Actividad 3  Actividad 3   XXXXXXXX  TEXTO     Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx  Texto    "
+  "body": " BORRADOR: Lección 13        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-C-14",
@@ -204,8 +204,8 @@ var ptx_lunr_docs = [
   "url": "lec-3-4-D-18.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 12",
-  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 18",
+  "body": " BORRADOR: Lección 18        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-D-19",
@@ -213,8 +213,8 @@ var ptx_lunr_docs = [
   "url": "lec-3-4-D-19.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 12",
-  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 19",
+  "body": " BORRADOR: Lección 19        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-D-20",
@@ -222,8 +222,8 @@ var ptx_lunr_docs = [
   "url": "lec-3-4-D-20.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 12",
-  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 20",
+  "body": " BORRADOR: Lección 20        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-D-21",
@@ -231,8 +231,8 @@ var ptx_lunr_docs = [
   "url": "lec-3-4-D-21.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 12",
-  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 21",
+  "body": " BORRADOR: Lección 21        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-D-22",
@@ -240,8 +240,8 @@ var ptx_lunr_docs = [
   "url": "lec-3-4-D-22.html",
   "type": "Sección",
   "number": "",
-  "title": "BORRADOR: Lección 12",
-  "body": " BORRADOR: Lección 12        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
+  "title": "BORRADOR: Lección 22",
+  "body": " BORRADOR: Lección 22        Calentamiento  Calentamiento   XXXXXXXX       Actividad 1  Actividad 1   XXXXXXXX       Actividad 2  Actividad 2   XXXXXXXX       Actividad 3  Actividad 3   XXXXXXXX       Resumen      Actividad de cierre  Actividad de cierre   xxxxxxxxxx      "
 },
 {
   "id": "lec-3-4-C-17",
@@ -250,7 +250,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "",
   "title": "Glosario unidad 3-4",
-  "body": " Glosario unidad 3-4    algoritmo  Una serie de pasos que, si se siguen correctamente, siempre funciona para obtener un resultado.    área  El número de unidades cuadradas que cubren una figura plana sin dejar espacios ni superponerse.    arreglo  Una organización de objetos en filas y columnas. Cada columna debe tener el mismo número de objetos que las otras columnas y cada fila debe tener el mismo número de objetos que las otras filas.    centímetro cuadrado  Un cuadrado con lados que miden 1 centímetro.    cociente  El resultado de una expresión de división.    "
+  "body": " Glosario unidad 3-4     algoritmo  Una serie de pasos que, si se siguen correctamente, siempre funciona para obtener un resultado.    centímetro cuadrado  Un cuadrado con lados que miden 1 centímetro.    área  El número de unidades cuadradas que cubren una figura plana sin dejar espacios ni superponerse.    arreglo  Una organización de objetos en filas y columnas. Cada columna debe tener el mismo número de objetos que las otras columnas y cada fila debe tener el mismo número de objetos que las otras filas.    cociente  El resultado de una expresión de división.     "
 }
 ]
 
