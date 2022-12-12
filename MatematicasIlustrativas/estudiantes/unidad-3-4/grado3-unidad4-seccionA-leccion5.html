@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="es-ES">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lección 5 - Escribamos expresiones de división</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Matemáticas Ilustrativas">
+<meta property="book:author" content="Adaptación del Grupo LEMA ()">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_orange_navy.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Salta al contenido principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="grado3-unidad4.html"><span class="title">Matemáticas Ilustrativas:</span> <span class="subtitle">Grado 3 - Unidad 4</span></a></h1>
+<p class="byline">Adaptación del Grupo LEMA (<a class="external" href="https://www.grupolema.org" target="_blank"><code class="code-inline tex2jax_ignore">https://www.grupolema.org</code></a>)</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>[search-results-heading]: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>[no-search-results].</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Índice</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="grado3-unidad4-seccionA-leccion4.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="grado3-unidad4-seccionA.html" title="Arriba">Arriba</a><a id="nextbutton" class="next-button button toolbar-item" href="grado3-unidad4-seccionA-ProblemasPractica.html" title="Siguiente">Siguiente</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Índice</button><a class="previous-button toolbar-item button" href="grado3-unidad4-seccionA-leccion4.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="grado3-unidad4-seccionA.html" title="Arriba">Arriba</a><a class="next-button button toolbar-item" href="grado3-unidad4-seccionA-ProblemasPractica.html" title="Siguiente">Siguiente</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Introducción a la unidad</span></a><ul>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Presentación de la unidad</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Licencia de uso</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2" class="internal">Código fuente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionA.html" data-scroll="grado3-unidad4-seccionA" class="internal"><span class="title">Sección A - ¿Qué es la división?</span></a><ul>
+<li><a href="grado3-unidad4-seccionA-leccion1.html" data-scroll="grado3-unidad4-seccionA-leccion1" class="internal">Lección 1</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion2.html" data-scroll="grado3-unidad4-seccionA-leccion2" class="internal">Lección 2</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion3.html" data-scroll="grado3-unidad4-seccionA-leccion3" class="internal">Lección 3</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion4.html" data-scroll="grado3-unidad4-seccionA-leccion4" class="internal">Lección 4</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion5.html" data-scroll="grado3-unidad4-seccionA-leccion5" class="active">Lección 5</a></li>
+<li><a href="grado3-unidad4-seccionA-ProblemasPractica.html" data-scroll="grado3-unidad4-seccionA-ProblemasPractica" class="internal">Problemas de práctica</a></li>
+<li><a href="grado3-unidad4-seccionA-resumen.html" data-scroll="grado3-unidad4-seccionA-resumen" class="internal">Resumen de la Sección</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionB.html" data-scroll="grado3-unidad4-seccionB" class="internal"><span class="title">BORRADOR: Sección B - Relacionemos la multiplicación y la división</span></a><ul>
+<li><a href="grado3-unidad4-seccionB-leccion6.html" data-scroll="grado3-unidad4-seccionB-leccion6" class="internal">BORRADOR: Lección 6 - La división como un factor desconocido</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion7.html" data-scroll="grado3-unidad4-seccionB-leccion7" class="internal">BORRADOR: Lección 7 - Relacionemos multiplicación y división</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion8.html" data-scroll="grado3-unidad4-seccionB-leccion8" class="internal">BORRADOR: Lección 8</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion9.html" data-scroll="grado3-unidad4-seccionB-leccion9" class="internal">BORRADOR: Lección 9</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion10.html" data-scroll="grado3-unidad4-seccionB-leccion10" class="internal">BORRADOR: Lección 10</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion11.html" data-scroll="grado3-unidad4-seccionB-leccion11" class="internal">BORRADOR: Lección 11</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionC.html" data-scroll="grado3-unidad4-seccionC" class="internal"><span class="title">BORRADOR: Sección C - Multipliquemos números más grandes</span></a><ul>
+<li><a href="grado3-unidad4-seccionC-leccion12.html" data-scroll="grado3-unidad4-seccionC-leccion12" class="internal">BORRADOR: Lección 12</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion13.html" data-scroll="grado3-unidad4-seccionC-leccion13" class="internal">BORRADOR: Lección 13</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion14.html" data-scroll="grado3-unidad4-seccionC-leccion14" class="internal">BORRADOR: Lección 14</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion15.html" data-scroll="grado3-unidad4-seccionC-leccion15" class="internal">BORRADOR: Lección 15</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion16.html" data-scroll="grado3-unidad4-seccionC-leccion16" class="internal">BORRADOR: Lección 16</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion17.html" data-scroll="grado3-unidad4-seccionC-leccion17" class="internal">BORRADOR: Lección 17</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionD.html" data-scroll="grado3-unidad4-seccionD" class="internal"><span class="title">BORRADOR: Sección D - Dividamos números más grandes</span></a><ul>
+<li><a href="grado3-unidad4-seccionD-leccion18.html" data-scroll="grado3-unidad4-seccionD-leccion18" class="internal">BORRADOR: Lección 18</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion19.html" data-scroll="grado3-unidad4-seccionD-leccion19" class="internal">BORRADOR: Lección 19</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion20.html" data-scroll="grado3-unidad4-seccionD-leccion20" class="internal">BORRADOR: Lección 20</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion21.html" data-scroll="grado3-unidad4-seccionD-leccion21" class="internal">BORRADOR: Lección 21</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion22.html" data-scroll="grado3-unidad4-seccionD-leccion22" class="internal">BORRADOR: Lección 22</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="title">Glosario</span></a><ul><li><a href="grado3-unidad4-Glosario.html" data-scroll="grado3-unidad4-Glosario" class="internal">Glosario unidad 3-4</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Realizado con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="grado3-unidad4-seccionA-leccion5"><h2 class="heading hide-type">
+<span class="type">Sección</span> <span class="codenumber"></span> <span class="title">Lección 5 - Escribamos expresiones de división</span>
+</h2>
+<article class="objectives goal-like" id="objectives-6"><h3 class="heading"><span class="type">Objetivos</span></h3>
+<ul class="disc"><li id="li-49"><p id="p-93">Objetivo: Escribamos expresiones de división y resolvamos problemas de “¿cuántos grupos?” y “¿cuántos hay en cada grupo?”</p></li></ul></article><section class="subsection" id="grado3-unidad4-seccionA-leccion5-0"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Calentamiento</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-20"><h4 class="heading"><span class="title">Calentamiento.</span></h4>
+<p id="p-94">Encuentra mentalmente el valor de cada expresión.</p>
+<ol id="p-95" class="decimal">
+<li id="li-50"><p id="p-derived-li-50"><span class="process-math">\(\displaystyle 225 - 100\)</span></p></li>
+<li id="li-51"><p id="p-derived-li-51"><span class="process-math">\(\displaystyle 227 - 102\)</span></p></li>
+<li id="li-52"><p id="p-derived-li-52"><span class="process-math">\(\displaystyle 230 - 105\)</span></p></li>
+<li id="li-53"><p id="p-derived-li-53"><span class="process-math">\(\displaystyle 220 - 95\)</span></p></li>
+</ol></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion5-1"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 1</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-21"><h4 class="heading"><span class="title">Clasificación de tarjetas: Todo sobre bichos.</span></h4>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/v1%203.4.A5%20Launch.png" class="contained" alt="Insectos"></div>
+<ol id="p-96" class="decimal">
+<li id="li-54">
+<p id="p-97">Tu profesor te dará un grupo de tarjetas que muestran situaciones. Elige dos categorías y clasifica las tarjetas en esas dos categorías. Prepárate para explicar el significado de tus categorías.</p>
+<ol class="upper-alpha">
+<li id="li-55"><p id="p-98">El grillo topo tiene unas patas especiales para cavar. Diez patas especiales pertenecen a 5 grillos topo. ¿Cuántas patas especiales tiene cada grillo topo?</p></li>
+<li id="li-56"><p id="p-99">Un escarabajo tiene un par de antenas para detectar el calor, tocar, oler y otras cosas más. Si hay 8 antenas, ¿cuántos escarabajos hay?</p></li>
+<li id="li-57"><p id="p-100">Catorce antenas pertenecen a un grupo de abejas. Si cada abeja tiene 2 antenas, ¿cuántas abejas hay?</p></li>
+<li id="li-58"><p id="p-101">Hay 12 alas. Si cada libélula tiene 4 alas, ¿cuántas libélulas hay?</p></li>
+<li id="li-59"><p id="p-102">Treinta patas pertenecen a 5 hormigas. Si todas las hormigas tienen el mismo número de patas, ¿cuántas patas tiene cada hormiga?</p></li>
+<li id="li-60"><p id="p-103">En total, hay 50 manchas en 5 mariposas. Si todas las mariposas tienen el mismo número de manchas, ¿cuántas manchas tiene cada mariposa?</p></li>
+</ol>
+</li>
+<li id="li-61"><p id="p-derived-li-61">Escribe una expresión de división para representar cada situación. Prepárate para explicar tu razonamiento.</p></li>
+</ol></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion5-2"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 2</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-22"><h4 class="heading"><span class="title">Resolvamos un problema sobre bichos.</span></h4>
+<p id="p-104">Tu profesor les va a asignar un problema.</p>
+<p id="p-105">Haz una presentación visual que muestre cómo pensaste y que muestre tu solución al problema.</p></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion5-s"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Resumen</span>
+</h3>
+<p id="p-106">En las últimas lecciones hemos aprendido sobre la división. Representamos y resolvimos dos tipos de problemas de división.</p>
+<p id="p-107">¿Cuáles son algunas de las ideas principales que hemos aprendido sobre la división?</p></section><section class="subsection" id="grado3-unidad4-seccionA-leccion5-cool"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad de Cierre</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-23"><h4 class="heading"><span class="title">Actividad de Cierre.</span></h4>
+<p id="p-108">Veinticuatro patas pertenecen a 4 hormigas. Todas las hormigas tienen el mismo número de patas.</p>
+<ol id="p-109" class="decimal">
+<li id="li-62"><p id="p-derived-li-62">Escribe una expresión de división que represente esta situación.</p></li>
+<li id="li-63"><p id="p-derived-li-63">¿Cuántas patas tiene cada hormiga? Explica o muestra tu razonamiento.</p></li>
+</ol></article></section></section></div></main>
+</div>
+</body>
+</html>

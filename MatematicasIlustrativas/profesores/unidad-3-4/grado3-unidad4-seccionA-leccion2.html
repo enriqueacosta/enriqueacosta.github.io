@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="es-ES">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lección 2 - ¿Cuántos hay en cada grupo?</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Matemáticas Ilustrativas">
+<meta property="book:author" content="Adaptación del Grupo LEMA ()">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_green_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Salta al contenido principal</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="grado3-unidad4.html"><span class="title">Matemáticas Ilustrativas:</span> <span class="subtitle">Grado 3 - Unidad 4</span></a></h1>
+<p class="byline">Adaptación del Grupo LEMA (<a class="external" href="https://www.grupolema.org" target="_blank"><code class="code-inline tex2jax_ignore">https://www.grupolema.org</code></a>)</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>[search-results-heading]: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>[no-search-results].</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Índice</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="grado3-unidad4-seccionA-leccion1.html" title="Anterior">Anterior</a><a id="upbutton" class="up-button button toolbar-item" href="grado3-unidad4-seccionA.html" title="Arriba">Arriba</a><a id="nextbutton" class="next-button button toolbar-item" href="grado3-unidad4-seccionA-leccion3.html" title="Siguiente">Siguiente</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Índice</button><a class="previous-button toolbar-item button" href="grado3-unidad4-seccionA-leccion1.html" title="Anterior">Anterior</a><a class="up-button button toolbar-item" href="grado3-unidad4-seccionA.html" title="Arriba">Arriba</a><a class="next-button button toolbar-item" href="grado3-unidad4-seccionA-leccion3.html" title="Siguiente">Siguiente</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Introducción a la unidad</span></a><ul>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Presentación de la unidad</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Licencia de uso</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2" class="internal">Código fuente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionA.html" data-scroll="grado3-unidad4-seccionA" class="internal"><span class="title">Sección A - ¿Qué es la división?</span></a><ul>
+<li><a href="grado3-unidad4-seccionA-leccion1.html" data-scroll="grado3-unidad4-seccionA-leccion1" class="internal">Lección 1</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion2.html" data-scroll="grado3-unidad4-seccionA-leccion2" class="active">Lección 2</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion3.html" data-scroll="grado3-unidad4-seccionA-leccion3" class="internal">Lección 3</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion4.html" data-scroll="grado3-unidad4-seccionA-leccion4" class="internal">Lección 4</a></li>
+<li><a href="grado3-unidad4-seccionA-leccion5.html" data-scroll="grado3-unidad4-seccionA-leccion5" class="internal">Lección 5</a></li>
+<li><a href="grado3-unidad4-seccionA-ProblemasPractica.html" data-scroll="grado3-unidad4-seccionA-ProblemasPractica" class="internal">Problemas de práctica</a></li>
+<li><a href="grado3-unidad4-seccionA-resumen.html" data-scroll="grado3-unidad4-seccionA-resumen" class="internal">Resumen de la Sección</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionB.html" data-scroll="grado3-unidad4-seccionB" class="internal"><span class="title">BORRADOR: Sección B - Relacionemos la multiplicación y la división</span></a><ul>
+<li><a href="grado3-unidad4-seccionB-leccion6.html" data-scroll="grado3-unidad4-seccionB-leccion6" class="internal">BORRADOR: Lección 6 - La división como un factor desconocido</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion7.html" data-scroll="grado3-unidad4-seccionB-leccion7" class="internal">BORRADOR: Lección 7 - Relacionemos multiplicación y división</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion8.html" data-scroll="grado3-unidad4-seccionB-leccion8" class="internal">BORRADOR: Lección 8</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion9.html" data-scroll="grado3-unidad4-seccionB-leccion9" class="internal">BORRADOR: Lección 9</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion10.html" data-scroll="grado3-unidad4-seccionB-leccion10" class="internal">BORRADOR: Lección 10</a></li>
+<li><a href="grado3-unidad4-seccionB-leccion11.html" data-scroll="grado3-unidad4-seccionB-leccion11" class="internal">BORRADOR: Lección 11</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionC.html" data-scroll="grado3-unidad4-seccionC" class="internal"><span class="title">BORRADOR: Sección C - Multipliquemos números más grandes</span></a><ul>
+<li><a href="grado3-unidad4-seccionC-leccion12.html" data-scroll="grado3-unidad4-seccionC-leccion12" class="internal">BORRADOR: Lección 12</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion13.html" data-scroll="grado3-unidad4-seccionC-leccion13" class="internal">BORRADOR: Lección 13</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion14.html" data-scroll="grado3-unidad4-seccionC-leccion14" class="internal">BORRADOR: Lección 14</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion15.html" data-scroll="grado3-unidad4-seccionC-leccion15" class="internal">BORRADOR: Lección 15</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion16.html" data-scroll="grado3-unidad4-seccionC-leccion16" class="internal">BORRADOR: Lección 16</a></li>
+<li><a href="grado3-unidad4-seccionC-leccion17.html" data-scroll="grado3-unidad4-seccionC-leccion17" class="internal">BORRADOR: Lección 17</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="grado3-unidad4-seccionD.html" data-scroll="grado3-unidad4-seccionD" class="internal"><span class="title">BORRADOR: Sección D - Dividamos números más grandes</span></a><ul>
+<li><a href="grado3-unidad4-seccionD-leccion18.html" data-scroll="grado3-unidad4-seccionD-leccion18" class="internal">BORRADOR: Lección 18</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion19.html" data-scroll="grado3-unidad4-seccionD-leccion19" class="internal">BORRADOR: Lección 19</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion20.html" data-scroll="grado3-unidad4-seccionD-leccion20" class="internal">BORRADOR: Lección 20</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion21.html" data-scroll="grado3-unidad4-seccionD-leccion21" class="internal">BORRADOR: Lección 21</a></li>
+<li><a href="grado3-unidad4-seccionD-leccion22.html" data-scroll="grado3-unidad4-seccionD-leccion22" class="internal">BORRADOR: Lección 22</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5" class="internal"><span class="title">Glosario</span></a><ul><li><a href="grado3-unidad4-Glosario.html" data-scroll="grado3-unidad4-Glosario" class="internal">Glosario unidad 3-4</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Realizado con PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="grado3-unidad4-seccionA-leccion2"><h2 class="heading hide-type">
+<span class="type">Sección</span> <span class="codenumber"></span> <span class="title">Lección 2 - ¿Cuántos hay en cada grupo?</span>
+</h2>
+<article class="objectives goal-like" id="objectives-2"><h3 class="heading"><span class="type">Objetivos de aprendizaje</span></h3>
+<ul class="disc"><li id="li-41"><p id="p-derived-li-41">Solucionar problemas de “¿cuántos hay en cada grupo?” usando alguna estrategia que tenga sentido para ellos.</p></li></ul></article><article class="remark remark-like" id="remark-9"><h3 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span>
+</h3> <p id="p-59">En esta lección los estudiantes solucionan problemas de división de “¿cuántos hay en cada grupo?” usando alguna estrategia que tenga sentido para ellos.</p> <p id="p-60">En la <a href="grado3-unidad4-seccionA-leccion2.html#grado3-unidad4-seccionA-leccion2-3" class="internal" title="Subsección: Actividad 3">última actividad en esta lección </a> conectan sus ideas con lo que hicieron en la lección anterior. Es decir, reflexionan sobre las similitudes y diferencias entre los problemas de “¿cuántos hay en cada grupo?” con los problemas de “¿cuántos grupos?”.</p></article><section class="subsection" id="grado3-unidad4-seccionA-leccion2-0"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Calentamiento</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-5"><h4 class="heading"><span class="title">Observa y pregúntate: Más manzanas.</span></h4>
+<p id="p-61">¿Qué observas? ¿Qué te preguntas?</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/3.4.A2%20Warrm-up.jpg" class="contained" alt="An apple orchard."></div></article><article class="remark remark-like" id="remark-10"><h4 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span>
+</h4> <p id="p-62">Tiempo recomendado: 10 mins.</p> <p id="p-63"><section class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Fase 1 - Reflexión individual (1 min).</span></h5> <p id="p-64">Muestre a los estudiantes la imagen y pida que piensen individualmente en las preguntas.</p></section> <section class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Fase 2 - Discusión en parejas (1 mins).</span></h5> <p id="p-65">Pida que compartan lo que pensaron con su compañero, y vaya recolectando las respuestas.</p></section> <section class="paragraphs" id="paragraphs-21"><h5 class="heading"><span class="title">Fase 3 - Socialización con toda la clase (8 mins).</span></h5> <p id="p-66">Insista si los estudiantes no postulan preguntas matemáticas: "¿Qué preguntas matemáticas podemos hacer sobre esta imagen?"</p> <p id="p-67">La idea es que se aproximen a preguntas del estilo de:</p>
+<ul class="disc">
+<li id="li-42"><p id="p-derived-li-42">¿Cuántas manzanas hay en cada caja?</p></li>
+<li id="li-43"><p id="p-derived-li-43">¿Hay más manzanas en las cajas que en los árboles?</p></li>
+<li id="li-44"><p id="p-derived-li-44">¿Cuántas manzanas hay en total en las cajas?</p></li>
+</ul></section> <section class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title">Posibles Respuestas.</span></h5> <p id="p-68">Ante la pregunta del enunciado, los estudiantes pueden observar:</p>
+<ul class="disc">
+<li id="li-45"><p id="p-derived-li-45">Algunas manzanas están en cajas.</p></li>
+<li id="li-46"><p id="p-derived-li-46">Algunas manzanas todavía están en el árbol.</p></li>
+<li id="li-47"><p id="p-derived-li-47">Hay 9 cajas de manzanas.</p></li>
+</ul> <p id="p-69">Los estudiantes pueden preguntarse:</p>
+<ul class="disc">
+<li id="li-48"><p id="p-derived-li-48">¿Cómo se metieron las manzanas en las cajas?</p></li>
+<li id="li-49"><p id="p-derived-li-49">¿Cuántas manzanas hay en las cajas?</p></li>
+<li id="li-50"><p id="p-derived-li-50">¿Cada caja tiene el mismo número de manzanas?</p></li>
+</ul></section> <section class="paragraphs" id="paragraphs-23"></section> <section class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Lo que se busca con esta actividad.</span></h5> <p id="p-70">Mostrar a los estudiantes que hay muchas preguntas matemáticas que se puede hacer a partir de una situación.</p></section></p></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion2-1"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 1</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-6"><h4 class="heading"><span class="title">¿Cuántas manzanas?</span></h4>
+<p id="p-71">Resuelve cada problema. Muestra cómo pensaste. Usa objetos, un dibujo o un diagrama.</p>
+<ol id="p-72" class="decimal">
+<li id="li-51"><p id="p-derived-li-51">Si 20 manzanas se empacan en 4 cajas y en cada caja hay el mismo número de manzanas, ¿cuántas manzanas hay en cada caja?</p></li>
+<li id="li-52"><p id="p-derived-li-52">Si 36 manzanas se empacan en 6 cajas y en cada caja hay el mismo número de manzanas, ¿cuántas manzanas hay en cada caja?</p></li>
+<li id="li-53"><p id="p-derived-li-53">Si 45 manzanas se empacan en 9 cajas y en cada caja hay el mismo número de manzanas, ¿cuántas manzanas hay en cada caja?</p></li>
+</ol></article><article class="remark remark-like" id="remark-11"><h4 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span>
+</h4> <p id="p-73">Tiempo recomendado: 15 mins.</p> <p id="p-74"><section class="paragraphs" id="paragraphs-25"><h5 class="heading"><span class="title">Fase 1 - Trabajo individual (6-8 mins).</span></h5> <p id="p-75">Reparta cubos y fichas de contar a cada estudiante. Invite a que discutan con un compañero cómo solucionarían cada problema (1 min). Después, invite a los estudiantes a solucionar <em class="emphasis">individualmente</em> cada problema (5-7 minutos). Mientras que lo solucionan, considere preguntarles:</p> <ul class="disc">
+<li id="li-54"><p id="p-derived-li-54">¿Cómo pueden representar lo que están pensando?</p></li>
+<li id="li-55"><p id="p-derived-li-55">¿En qué parte de su trabajo pueden ver las cajas?</p></li>
+<li id="li-56"><p id="p-derived-li-56">¿En qué parte de su trabajo pueden ver cuántas manzanas hay en cada caja?</p></li>
+</ul> <p id="p-76">A medida que los estudiantes trabajan, identifique estudiantes que solucionaron el primer problema de la misma manera y póngalos en parejas para la fase 2.</p></section> <section class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Fase 2 - Creación de pósteres en parejas para el primer problema (5-6 mins).</span></h5> <p id="p-77">Invite a los estudiantes a hacer un póster para mostrar cómo pensaron en el primer problema. Aclare que van a estar trabajando con un compañero que solucionó el primer problema de la misma manera.</p> <p id="p-78">A medida que los estudiantes trabajan, identifique grupos que hayan representado la situación con:</p>
+<ul class="disc">
+<li id="li-57"><p id="p-derived-li-57">objetos concretos: agrupar 20 cubos en 4 grupos.</p></li>
+<li id="li-58"><p id="p-derived-li-58">dibujos: dibujar 20 manzanas y después separarlas o encerrarlas en 4 grupos.</p></li>
+<li id="li-59"><p id="p-derived-li-59">arreglos: dibujar 4 filas con 5 manzanas cada una.</p></li>
+</ul></section> <section class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Fase 3 - Organización de los pósteres (1 min).</span></h5> <p id="p-79">Organice los pósteres alrededor del salón. Los discutirán en la siguiente actividad.</p></section> <section class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Ejemplos de respuestas.</span></h5> <ol class="decimal">
+<li id="li-60"><p id="p-80">5 manzanas. Ejemplo de razonamiento: Los estudiantes dibujan las manzanas una por una en 4 filas y descubren que al final hay 5 manzanas en cada fila.</p></li>
+<li id="li-61"><p id="p-81">6 manzanas. Ejemplo de razonamiento: Los estudiantes dibujan 36 manzanas y piensan en cómo separarlas en 6 grupos del mismo tamaño. Luego, marcan 6 grupos de 6.</p></li>
+<li id="li-62"><p id="p-82">5 manzanas. Ejemplo de razonamiento: Los estudiantes toma 45 cubos y los ponen 1 por 1 en 9 grupos para representar cada caja.</p></li>
+</ol></section> <section class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Qué se busca con esta actividad.</span></h5> <p id="p-83">La idea es que los estudiantes usen lo que saben para representar y solucionar problemas de "¿Cuántos en cada grupo?" de una forma que tenga sentido para ellos.</p></section></p></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion2-2"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 2</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-7"><h4 class="heading"><span class="title">Recorrido por el salón.</span></h4>
+<p id="p-84">Con tu compañero, ve a ver los pósteres alrededor del salón. Discute con tu compañero en qué se parecen y en qué se diferencian las ideas que se muestran en los pósteres.</p></article><article class="remark remark-like" id="remark-12"><h4 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">13</span><span class="period">.</span>
+</h4> <p id="p-85">Tiempo recomendado: 10 mins.</p> <p id="p-86"><section class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">Fase 1 - Recorrido por el salón (5-7 mins).</span></h5> <p id="p-87">Asegúrese que los estudiantes lean el enunciado de la actividad antes de empezar. Deben tener claro qué es lo que deben discutir mientras recorren el salón.</p> <p id="p-88">A medida que los estudiantes hacen el recorrido, identifique 2-3 parejas que hicieron pósteres particularmente claros, en los que se entienda que el problema es sobre encontrar ¿Cuántos hay en cada grupo?".</p></section> <section class="paragraphs" id="paragraphs-31"><h5 class="heading"><span class="title">Fase 2 - Discusión con toda la clase (3-5 mins).</span></h5> <p id="p-89">Pregunte a los estudiantes si tienen preguntas sobre los pósteres que vieron. Después, pregunte lo que identificaron de parecido o diferente en los pósteres.</p></section> <section class="paragraphs" id="paragraphs-32"><h5 class="heading"><span class="title">Ejemplos de respuestas.</span></h5> <ul class="disc">
+<li id="li-63"><p id="p-90">En cada póster, la idea es poner 20 manzanas en 4 grupos.</p></li>
+<li id="li-64"><p id="p-91">En todos los casos, hay 5 manzanas en cada caja.</p></li>
+<li id="li-65"><p id="p-92">En algunos pósteres, podemos ver cómo se ponen las manzanas en cada grupo. En otros pósteres, solo podemos ver el resultado final.</p></li>
+</ul></section> <section class="paragraphs" id="paragraphs-33"><h5 class="heading"><span class="title">Lo qué se busca con esta actividad.</span></h5> <p id="p-93">La idea es que a partir de ver el trabajo de sus compañeros, los estudiantes identifiquen en qué se parecen y se diferencian distintas estrategias de resolver un problema de "¿Cuántos hay en cada grupo?".</p></section></p></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion2-3"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad 3</span>
+</h3>
+<article class="assemblage assemblage-like" id="grado3-unidad4-seccionA-leccion2-3-enunciado"><h4 class="heading"><span class="title">Todas las manzanas.</span></h4>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-94">Si 24 manzanas se ponen en cajas y en cada caja se ponen 8 manzanas, ¿cuántas cajas hay?</p></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p id="p-95">Si 20 manzanas se empacan en 4 cajas y cada caja tiene el mismo número de manzanas, ¿cuántas manzanas hay en cada caja?</p></div>
+</div></div>
+<p id="p-96">Discute con tu compañero:</p>
+<ul id="p-97" class="disc">
+<li id="li-66"><p id="p-derived-li-66">¿En qué se parecen estos problemas?</p></li>
+<li id="li-67"><p id="p-derived-li-67">¿En qué se diferencian?</p></li>
+<li id="li-68"><p id="p-derived-li-68">¿En qué se parecen y en qué se diferencian las formas de representar y resolver estos problemas?</p></li>
+</ul></article><article class="remark remark-like" id="remark-13"><h4 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span>
+</h4> <p id="p-98">Tiempo recomendado: 10 mins.</p> <p id="p-99"><section class="paragraphs" id="paragraphs-34"><h5 class="heading"><span class="title">Fase 1 - Trabajo en parejas (3-5 mins).</span></h5> <p id="p-100">Junto con el enunciado, muestre a los estudiantes dos o tres pósteres para cada problema (uno es de la clase pasada y otro es de la actividad anterior). Pida a los estudiantes que discutan las preguntas en el enunciado teniendo en cuenta también los pósteres.</p></section> <section class="paragraphs" id="paragraphs-35"><h5 class="heading"><span class="title">Fase 2 - Socialización (5 mins).</span></h5> <p id="p-101">Cuando los estudiantes estén compartiendo lo que pensaron, invítelos a usar los pósteres para explicar sus ideas.</p> <p id="p-102">Asegúrese que salga a la luz que en un problema de "¿Cuántos grupos?" se sabe cuántos hay en cada grupo y en un problema de "¿Cuántos hay en cada grupo?" se sabe cuántos grupos hay.</p></section> <section class="paragraphs" id="paragraphs-36"><h5 class="heading"><span class="title">Ejemplos de respuestas.</span></h5> <ul id="p-103" class="disc">
+<li id="li-69"><p id="p-104">Ambos problemas eran sobre manzanas.</p></li>
+<li id="li-70"><p id="p-105">En ambos problemas había el mismo número de manzanas en cada caja.</p></li>
+<li id="li-71"><p id="p-106">En ambos problemas sabíamos el número total de manzanas.</p></li>
+<li id="li-72"><p id="p-107">En el primer problema, queríamos averiguar cuántas cajas de manzanas podíamos llenar, pero sabíamos cuántas manzanas había en cada caja.</p></li>
+<li id="li-73"><p id="p-108">En el problema de hoy, sabíamos cuántas cajas había, pero no sabíamos cuántas manzanas había en cada caja.</p></li>
+</ul></section> <section class="paragraphs" id="paragraphs-37"><h5 class="heading"><span class="title">Lo que se espera de esta actividad.</span></h5> <p id="p-109">La idea es que los estudiantes comiencen a pensar en qué se parecen y en qué se diferencian los problemas de "¿Cuántos grupos?" y los problemas de "¿Cuántos hay en cada grupo?".</p></section></p></article></section><section class="subsection" id="grado3-unidad4-seccionA-leccion2-s"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Resumen</span>
+</h3>
+<p id="p-110">Ayer, resolvimos problemas en los que preguntaban cuántos grupos podíamos hacer. Hoy resolvimos problemas en los que preguntaban cuántas cosas hay en cada grupo. Ambas ideas se conocen con el nombre de división.</p>
+<p id="p-111">La <em class="alert">división</em> es encontrar el número de grupos o encontrar el tamaño de cada grupo cuando repartimos algo en grupos de igual tamaño.</p></section><section class="subsection" id="grado3-unidad4-seccionA-leccion2-cool"><h3 class="heading hide-type">
+<span class="type">Subsección</span> <span class="codenumber"></span> <span class="title">Actividad de cierre</span>
+</h3>
+<article class="assemblage assemblage-like" id="assemblage-9"><h4 class="heading"><span class="title">Bolsas de manzanas.</span></h4>
+<p id="p-112">Lin tiene 30 manzanas. Ella prepara 6 bolsas con el mismo número de manzanas en cada bolsa para dárselas a sus amigos. ¿Cuántas manzanas hay en cada bolsa? Explica o muestra tu razonamiento.</p></article><article class="remark remark-like" id="remark-14"><h4 class="heading">
+<span class="type">Notas para el profesor</span><span class="space"> </span><span class="codenumber">15</span><span class="period">.</span>
+</h4> <p id="p-113"><section class="paragraphs" id="paragraphs-38"><h5 class="heading"><span class="title">Solución.</span></h5> <p id="p-114">Cada bolsa tiene 5 manzanas. Si pongo 30 manzanas, una por una, en 6 grupos, habrá 5 manzanas en cada grupo.</p> <p id="p-115"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/tikz-file-147472.svg" role="img" class="contained" alt="equal sized groups. 30 objects in groups of 5"></div></p></section></p></article></section></section></div></main>
+</div>
+</body>
+</html>
