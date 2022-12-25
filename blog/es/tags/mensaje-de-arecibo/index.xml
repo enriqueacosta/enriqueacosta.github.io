@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Processing on Enrique Acosta Jaramillo</title>
-    <link>https://enriqueacosta.github.io/blog/es/tags/processing/</link>
-    <description>Recent content in Processing on Enrique Acosta Jaramillo</description>
+    <title>Mensaje de Arecibo on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/es/tags/mensaje-de-arecibo/</link>
+    <description>Recent content in Mensaje de Arecibo on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/mensaje-de-arecibo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creación de una imagen vectorial del mensaje Arecibo para imprimir</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</link>
