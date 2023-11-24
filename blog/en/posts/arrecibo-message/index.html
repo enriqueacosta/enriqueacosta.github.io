@@ -122,11 +122,13 @@
     
   
   <div>
-  <p>I recently remembered the very cool Arecibo message and I discovered today that the <a href="https://en.wikipedia.org/wiki/Arecibo_message" target="_blank" rel="noopener">Wikipedia article</a> on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.</p>
+  <p>I recently remembered the very cool Arecibo message and I discovered today that the 
+<a href="https://en.wikipedia.org/wiki/Arecibo_message" target="_blank" rel="noopener">Wikipedia article</a> on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.</p>
 <p>Here is the message:</p>
 <figure><img src="240px-Arecibo_message.svg.png"
          alt="Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.0" width="200px"/><figcaption>
-            <p>Arecibo Message. Image from <a href="https://commons.wikimedia.org/w/index.php?curid=365130" target="_blank" rel="noopener">Wikipedia</a> by Arne Nordmann (norro), CC BY-SA 3.0</p>
+            <p>Arecibo Message. Image from 
+<a href="https://commons.wikimedia.org/w/index.php?curid=365130" target="_blank" rel="noopener">Wikipedia</a> by Arne Nordmann (norro), CC BY-SA 3.0</p>
         </figcaption>
 </figure>
 
@@ -139,7 +141,8 @@
 </figure>
 
 <h2 id="creating-a-high-quality-two-color-version-for-printing">Creating a high quality two-color version for printing</h2>
-<p>The Wikipedia image can be downloaded as an svg vector graphic (suitable for printing), but I did not like the added colors. I wanted a simpler version the 1s being dark boxes and the 0s being white space. After some Googling I bumped into a code to generate it by <a href="http://rupert.id.au/tutorials/processing/examples/Arecibo_message_001/index.php" target="_blank" rel="noopener">Rupert Russell</a>. His code generates a png version (not so suitable for printing), but after some tweaking I had a code that generates an svg image.</p>
+<p>The Wikipedia image can be downloaded as an svg vector graphic (suitable for printing), but I did not like the added colors. I wanted a simpler version the 1s being dark boxes and the 0s being white space. After some Googling I bumped into a code to generate it by 
+<a href="http://rupert.id.au/tutorials/processing/examples/Arecibo_message_001/index.php" target="_blank" rel="noopener">Rupert Russell</a>. His code generates a png version (not so suitable for printing), but after some tweaking I had a code that generates an svg image.</p>
 <p>Here is my adapted code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* Enrique Acosta, 2022
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Runs with Processing 4 (beta)
@@ -197,7 +200,9 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Finished.&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>  exit<span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>This code runs on Procesing 4, a really nice &ldquo;learn to code by producing graphics&rdquo; language and open source compiler. There is a very fun Youtube Channel, <a href="https://www.youtube.com/c/TheCodingTrain/videos?view=0&amp;sort=p&amp;flow=grid" target="_blank" rel="noopener">The Coding Train</a>, in which one can quickly see the very cool things one can do with relatively simple code. See also the official <a href="https://processing.org" target="_blank" rel="noopener">Processing site</a>.</p>
+</span></span></code></pre></div><p>This code runs on Procesing 4, a really nice &ldquo;learn to code by producing graphics&rdquo; language and open source compiler. There is a very fun Youtube Channel, 
+<a href="https://www.youtube.com/c/TheCodingTrain/videos?view=0&amp;sort=p&amp;flow=grid" target="_blank" rel="noopener">The Coding Train</a>, in which one can quickly see the very cool things one can do with relatively simple code. See also the official 
+<a href="https://processing.org" target="_blank" rel="noopener">Processing site</a>.</p>
 <p>Anyway, back to the code, here is the image it creates. Ready for printing!</p>
 <figure><img src="Arrecibo.svg" width="100%"/>
 </figure>

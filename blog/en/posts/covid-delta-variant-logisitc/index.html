@@ -130,6 +130,7 @@
   <div>
   <p>Today, as part of my work, <!-- raw HTML omitted --> I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
 <p>The graph below, which started all of this, should come up if one follows this
+
 <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta&#43;variant&#43;%28share%29&amp;Interval=Weekly&amp;Relative&#43;to&#43;Population=true&amp;Align&#43;outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA" target="_blank" rel="noopener">Our World In Data link</a>.</p>
 <!-- raw HTML omitted -->
 <figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
@@ -144,7 +145,8 @@ and its graph looks as follows (figure created by me with Tikz, I&rsquo;ll show 
 <figure><img src="LogisticFunctionParams.png" width="450"/>
 </figure>
 
-<p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">discussion below</a>). However, I have lately grown fond of checking if something is logistic by either just:</p>
+<p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see 
+<a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/#other-fancier-ways-to-tell-if-something-is-logistic">discussion below</a>). However, I have lately grown fond of checking if something is logistic by either just:</p>
 <ul>
 <li>plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data.</li>
 <li>setting up a spreadsheet in which I plot the data together with the values given by a model with special cells that I reference of the parameters. Then I can tweak the parameters and the plot gets updated, and by trial and error I see if there is a good graphical fit.</li>
@@ -170,7 +172,9 @@ $$
 \text{$t$ days after Feb 8, 2021}
 \end{array}  = \frac{1}{1+e^{-0.09(t-139)}}
 $$</p>
-<p>You can play around with the logistic fit yourself if the desmos app loads below (use the sliders for $a$ and $k$). If it does not load, just follow <a href="https://www.desmos.com/calculator/saydhyssyq" target="_blank" rel="noopener">this link</a>, or download the data and play for yourself in the <a href="Data-DeltaShareIndiaUKUSBra.xls">spreadsheet I created</a></p>
+<p>You can play around with the logistic fit yourself if the desmos app loads below (use the sliders for $a$ and $k$). If it does not load, just follow 
+<a href="https://www.desmos.com/calculator/saydhyssyq" target="_blank" rel="noopener">this link</a>, or download the data and play for yourself in the 
+<a href="Data-DeltaShareIndiaUKUSBra.xls">spreadsheet I created</a></p>
 <div>
     <iframe src="https://www.desmos.com/calculator/ht3gvoopty" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/ht3gvoopty" target="_blank">link</a> if the interactive does not load.</p>
@@ -182,14 +186,16 @@ $$</p>
 <figure><img src="USDeltaVariantLogistic.png" width="400"/>
 </figure>
 </p>
-<p>And here is the desmos plot with sliders that I created (<a href="https://www.desmos.com/calculator/ih9yhwoqxx" target="_blank" rel="noopener">link</a>, in case it does not load). Try changing $k$ to 0.09 to see de difference in the way Delta overtook other variants between the US and UK.
+<p>And here is the desmos plot with sliders that I created (
+<a href="https://www.desmos.com/calculator/ih9yhwoqxx" target="_blank" rel="noopener">link</a>, in case it does not load). Try changing $k$ to 0.09 to see de difference in the way Delta overtook other variants between the US and UK.
 <div>
     <iframe src="https://www.desmos.com/calculator/ih9yhwoqxx" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/ih9yhwoqxx" target="_blank">link</a> if the interactive does not load.</p>
 </div></p>
 <h2 id="not-all-sigmoid-shaped-data-can-be-fit-well-by-a-logistic">Not all Sigmoid Shaped data can be fit well by a logistic</h2>
 <p>The best way to see this is with an example!</p>
-<p>Try with the sliders in the desmos applet below to fit a logistic model to the total (cumulative) number of cases in the first Covid-19 wave in Italy in 2020 (here is a <a href="https://www.desmos.com/calculator/xigjjslhlr" target="_blank" rel="noopener">link</a> in case it does not load). By trying to fit the curve to the data with the sliders you will soon understand why it is not going to work.</p>
+<p>Try with the sliders in the desmos applet below to fit a logistic model to the total (cumulative) number of cases in the first Covid-19 wave in Italy in 2020 (here is a 
+<a href="https://www.desmos.com/calculator/xigjjslhlr" target="_blank" rel="noopener">link</a> in case it does not load). By trying to fit the curve to the data with the sliders you will soon understand why it is not going to work.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/xigjjslhlr" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/xigjjslhlr" target="_blank">link</a> if the interactive does not load.</p>

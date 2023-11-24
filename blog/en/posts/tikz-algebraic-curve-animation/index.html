@@ -150,17 +150,24 @@
 <p>This is why I kept trying to do it with TikZ! Here are the details which I figured out after plenty of web surfing and testing.</p>
 <h2 id="producing-one-frame-of-the-animation---graphing-an-algebraic-curve">Producing One Frame of the Animation - Graphing an Algebraic Curve</h2>
 <p>As I mentioned above, LaTeX and TikZ do not natively support graphing algebraic curves because this requires very precise numerical calculations which LaTeX was not built for. It is already marvelous that the graphical programing language TikZ can live inside LateX, given that LaTeX is a typesetting system!</p>
-<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using <a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot</a> which TikZ knows how to use internally.</p>
+<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using 
+<a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot</a> which TikZ knows how to use internally.</p>
 <p>There don&rsquo;t seem to be many sources on the internet on how to accomplish this. I constructed the following workflow from things I learned from the following links:</p>
 <ul>
-<li><a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/" target="_blank" rel="noopener">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a></li>
-<li><a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a></li>
-<li><a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></li>
+<li>
+<a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/" target="_blank" rel="noopener">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a></li>
+<li>
+<a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a></li>
+<li>
+<a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></li>
 </ul>
 <h3 id="requirements-gnuplot">Requirements: Gnuplot</h3>
-<p>See the <a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh" target="_blank" rel="noopener">homebrew</a>.</p>
+<p>See the 
+<a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using 
+<a href="https://brew.sh" target="_blank" rel="noopener">homebrew</a>.</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
+<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their 
+<a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
 <li>To install Gnuplot, just run:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install gnuplot
 </span></span></code></pre></div></li>
@@ -217,7 +224,8 @@
 <figure><img src="ChaslesCubic.png" width="600px"/>
 </figure>
 
-<p>The curve is a <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml" target="_blank" rel="noopener">Chasles Cubic</a> of the form
+<p>The curve is a 
+<a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml" target="_blank" rel="noopener">Chasles Cubic</a> of the form
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
 <p>You can play with the parameters $a,b,c,d$ yourself in the following desmos interactive I built. Desmos, is <em>very good</em> at interactivity!</p>
 <div>
@@ -280,11 +288,14 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
 </ul>
 <p>Here are the details:</p>
 <h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
-<p>I had mentioned ImageMagick in <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">another post</a> in which it played a crucial role in getting good quality pngs for the web out of vector graphic pdfs. Here it plays an equally important role.</p>
+<p>I had mentioned ImageMagick in 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">another post</a> in which it played a crucial role in getting good quality pngs for the web out of vector graphic pdfs. Here it plays an equally important role.</p>
 <p>How to get ImageMagick for MacOS:</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
-<li>Install <a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:
+<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their 
+<a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
+<li>Install 
+<a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install imagemagick
 </span></span></code></pre></div></li>
 </ul>
@@ -329,8 +340,10 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{axis}
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{tikzpicture}
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>(code must be warpped around the usual TikZ commands &ndash; full code can be downloaded <a href="gnuplotTest.tex">here</a>.)</p>
-<p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf <a href="gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
+</span></span></code></pre></div><p>(code must be warpped around the usual TikZ commands &ndash; full code can be downloaded 
+<a href="gnuplotTest.tex">here</a>.)</p>
+<p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf 
+<a href="gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
 <p>The last lines in the code add the nice looking LaTeX equation with a white background on top of the curve, and the value of $a$ in the display <code>a=___</code> on the bottom left.</p>
 <p>This is the frame corresponding to $a=1.2$:</p>
 <figure><img src="gnuplotTestOneFrame1.2.png" width="500px"/>
@@ -360,7 +373,8 @@ The last equation shows that the cubic curve for $a=0$ is the union of the verti
 <figure><img src="TikzAnimationLines.gif" width="500px"/>
 </figure>
 
-<p>The code for this last animation is <a href="TikzLineAnimation.tex">here</a>.</p>
+<p>The code for this last animation is 
+<a href="TikzLineAnimation.tex">here</a>.</p>
 <h2 id="one-final-note-on-use-of-gnuplot">One final note on use of Gnuplot</h2>
 <p>The method I described to do the implicit plot using Gnuplot uses raw Gnuplot. There seems to be an even more straightforward method in newer versions of pgfplots that use <code>[contour gnuplot={levels={0}]</code> in a regular 3d plot. I played around with this a bit, and it seemed to be both slower and not deal with singularities as well as the method I outlined above. Here is how the code to plot $x(x^2+y^2)=(ay+5.8 x)$ would look like:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}

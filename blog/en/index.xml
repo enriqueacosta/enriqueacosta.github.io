@@ -96,7 +96,7 @@ Then, while convinced of how alarming and serious this was (super-exponential gr
       <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</guid>
-      <description>This is a follow-up to two previous posts (here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
+      <description>This is a follow-up to two previous posts ( here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
 Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface.</description>
     </item>
     

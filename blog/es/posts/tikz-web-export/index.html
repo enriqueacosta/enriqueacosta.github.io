@@ -124,24 +124,35 @@
     
   
   <div>
-  <p>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de <a href="https://es.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de <a href="https://es.wikipedia.org/wiki/Archivo_de_texto" target="_blank" rel="noopener">texto sin formato</a>) y obtiene como resultado un pdf de la imagen que describe el código.</p>
-<p>Para ver un ejemplo detallado, puede ver esta <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">entrada</a> en la que muestro el código TikZ de la siguiente imagen, o esta otra <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/">entrada</a> en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</p>
+  <p>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de 
+<a href="https://es.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de 
+<a href="https://es.wikipedia.org/wiki/Archivo_de_texto" target="_blank" rel="noopener">texto sin formato</a>) y obtiene como resultado un pdf de la imagen que describe el código.</p>
+<p>Para ver un ejemplo detallado, puede ver esta 
+<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/">entrada</a> en la que muestro el código TikZ de la siguiente imagen, o esta otra 
+<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/">entrada</a> en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</p>
 <figure><img src="fig-twistedCubic2.png"
          alt="Figura TikZ con código fuente en archivo .tex. Este es el pdf que produce."/><figcaption>
-            <p>Figura TikZ con código fuente en <a href="fig-twistedCubic2.tex">archivo .tex</a>. Este es el <a href="fig-twistedCubic2.pdf">pdf</a> que produce.</p>
+            <p>Figura TikZ con código fuente en 
+<a href="fig-twistedCubic2.tex">archivo .tex</a>. Este es el 
+<a href="fig-twistedCubic2.pdf">pdf</a> que produce.</p>
         </figcaption>
 </figure>
 
 <p>TikZ juega un papel importante en este blog porque disfruto explicar cosas gráficamente y disfruto el proceso mismo de crear el código TikZ de las imágenes. Cuando le dedico tiempo a hacer una buena figura de TikZ, a menudo puedo reutilizar el código con ajustes menores para generar fácilmente muchas más imágenes y poder explicar las ideas que estoy tratando de transmitir.
 TikZ se convierte en una herramienta muy eficiente cuando esto sucede.
 Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de crearla con software gráfico.</p>
-<p>Una de las cosas que tuve que descifrar para poder usar TikZ para este blog fue una forma de transformar los archivos gráficos en formato <a href="https://en.wikipedia.org/wiki/pdf" target="_blank" rel="noopener">pdf</a> que genera TikZ en formatos más amigables para la web (las páginas web no permiten el uso de imágenes en formato pdf). Hay dos caminos posibles que uno puede tomar para lograr esto:</p>
+<p>Una de las cosas que tuve que descifrar para poder usar TikZ para este blog fue una forma de transformar los archivos gráficos en formato 
+<a href="https://en.wikipedia.org/wiki/pdf" target="_blank" rel="noopener">pdf</a> que genera TikZ en formatos más amigables para la web (las páginas web no permiten el uso de imágenes en formato pdf). Hay dos caminos posibles que uno puede tomar para lograr esto:</p>
 <ul>
 <li>
-<p>Convertir el pdf en una <a href="https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits" target="_blank" rel="noopener">imagen de mapa de bits</a>. Un buen formato para esto en este momento es <a href="https://es.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" rel="noopener">png</a>.</p>
+<p>Convertir el pdf en una 
+<a href="https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits" target="_blank" rel="noopener">imagen de mapa de bits</a>. Un buen formato para esto en este momento es 
+<a href="https://es.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" rel="noopener">png</a>.</p>
 </li>
 <li>
-<p>Transformar el pdf en otro formato <a href="https://es.wikipedia.org/wiki/Gr%c3%a1fico_vectorial" target="_blank" rel="noopener">gráfico vectorial</a>. El formato más compatible con la web en la actualidad es <a href="https://es.wikipedia.org/wiki/Gr%c3%a1ficos_vectoriales_escalables" target="_blank" rel="noopener">svg</a>.</p>
+<p>Transformar el pdf en otro formato 
+<a href="https://es.wikipedia.org/wiki/Gr%c3%a1fico_vectorial" target="_blank" rel="noopener">gráfico vectorial</a>. El formato más compatible con la web en la actualidad es 
+<a href="https://es.wikipedia.org/wiki/Gr%c3%a1ficos_vectoriales_escalables" target="_blank" rel="noopener">svg</a>.</p>
 </li>
 </ul>
 <p>Lo que uno espera al hacer estas conversiones es:</p>
@@ -162,7 +173,8 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <p>La diferencia entre las imágenes de mapa de bits y vectoriales se resume en la siguiente figura.</p>
 <figure><img src="Bitmap_VS_SVG.svg"
          alt="Demostración de diferencias entre imágenes de mapa de bits y svg. Imagen por Yug, modificaciones de cfaerber et al. De Wikipedia. CC-BY 2.5 license."/><figcaption>
-            <p>Demostración de diferencias entre imágenes de mapa de bits y svg. Imagen por Yug, modificaciones de cfaerber et al. De  <a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg" target="_blank" rel="noopener">Wikipedia</a>. CC-BY 2.5 license.</p>
+            <p>Demostración de diferencias entre imágenes de mapa de bits y svg. Imagen por Yug, modificaciones de cfaerber et al. De  
+<a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg" target="_blank" rel="noopener">Wikipedia</a>. CC-BY 2.5 license.</p>
         </figcaption>
 </figure>
 
@@ -178,7 +190,8 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 </li>
 </ul>
 <h3 id="un-ejemplo-que-muestra-los-pdf-vectoriales-que-produce-tikz">Un ejemplo que muestra los pdf vectoriales que produce TikZ</h3>
-<p>Esta figura que hice con TikZ para esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a>:</p>
+<p>Esta figura que hice con TikZ para esta 
+<a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a>:</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 
@@ -199,10 +212,12 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <h3 id="requisitos-previos-instalar-imagemagick">Requisitos previos: instalar ImageMagick</h3>
 <ul>
 <li>
-<p>Instale el fantástico Homebrew para la Terminal.App si todavía no lo tiene. Instrucciones en su <a href="https://brew.sh" target="_blank" rel="noopener">sitio web</a>.</p>
+<p>Instale el fantástico Homebrew para la Terminal.App si todavía no lo tiene. Instrucciones en su 
+<a href="https://brew.sh" target="_blank" rel="noopener">sitio web</a>.</p>
 </li>
 <li>
-<p>Instale el también el fantástico <a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> desde la terminal usando Homebrew ejecutando el comando:</p>
+<p>Instale el también el fantástico 
+<a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> desde la terminal usando Homebrew ejecutando el comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install imagemagick
 </span></span></code></pre></div></li>
 </ul>
@@ -228,15 +243,21 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 <h2 id="conversión-de-pdf-a-svg">Conversión de pdf a svg</h2>
 <p>Como mencioné anteriormente, decidí usar archivos png en este blog porque podía usarlos en diferentes contextos aparte de este sitio web. En todo caso, probé varios métodos para producir svg a partir de los pdf de TikZ y encontré al menos un método que produce tamaños de archivo similares que los png de 600 pixeles/pulgada.</p>
 <h3 id="la-ruta-tikz---pdf---svg">La ruta TikZ -&gt; pdf -&gt; svg</h3>
-<p>Se puede generar un svg directamente desde el pdf de TikZ con el programa <a href="https://cityinthesky.co.uk/opensource/pdf2svg/" target="_blank" rel="noopener">pdf2svg</a> de David Barton (<a href="https://github.com/dawbarton/pdf2svg" target="_blank" rel="noopener">código fuente</a>).</p>
+<p>Se puede generar un svg directamente desde el pdf de TikZ con el programa 
+<a href="https://cityinthesky.co.uk/opensource/pdf2svg/" target="_blank" rel="noopener">pdf2svg</a> de David Barton (
+<a href="https://github.com/dawbarton/pdf2svg" target="_blank" rel="noopener">código fuente</a>).</p>
 <p>Instalar pdf2svg es muy fácil con Homebrew (ejecute el comando en la terminal):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install pdf2svg
 </span></span></code></pre></div><p>Una vez instalado, la conversión se realiza con el comando:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdf2svg input_filename.pdf output_filename.svg
 </span></span></code></pre></div><h3 id="la-ruta-tikz---dvi---svg">La ruta TikZ -&gt; dvi -&gt; svg</h3>
-<p>Esta es una ruta alterna que no logré hacer que funcionara con mis imágenes. Usa <a href="https://dvisvgm.de/" target="_blank" rel="noopener">dvisvgm</a>. No sé si es mejor que la otra opción svg que describí anteriormente.  Mi computador se quejaba de los especiales de PostScript. Estos son dos enlaces que pueden ayudar a alguien que quiere tratar con esta ruta en MacOS: <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/" target="_blank" rel="noopener">uno</a> y <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/" target="_blank" rel="noopener">dos</a>.</p>
+<p>Esta es una ruta alterna que no logré hacer que funcionara con mis imágenes. Usa 
+<a href="https://dvisvgm.de/" target="_blank" rel="noopener">dvisvgm</a>. No sé si es mejor que la otra opción svg que describí anteriormente.  Mi computador se quejaba de los especiales de PostScript. Estos son dos enlaces que pueden ayudar a alguien que quiere tratar con esta ruta en MacOS: 
+<a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/" target="_blank" rel="noopener">uno</a> y 
+<a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/" target="_blank" rel="noopener">dos</a>.</p>
 <h2 id="ejemplo-completo">Ejemplo completo</h2>
-<p>Esta es una imagen que utilicé en esta <a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a> en la cual usar TikZ me ahorró mucho tiempo pues pude generar con facilidad gráficas para diferentes períodos de tiempo simplemente cambiando un número en el código TikZ.</p>
+<p>Esta es una imagen que utilicé en esta 
+<a href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/">entrada</a> en la cual usar TikZ me ahorró mucho tiempo pues pude generar con facilidad gráficas para diferentes períodos de tiempo simplemente cambiando un número en el código TikZ.</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 
@@ -250,11 +271,13 @@ Esto es parte del beneficio de &ldquo;programar&rdquo; una imagen en lugar de cr
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">TikZ <a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (¡diminuto!)</td>
+<td style="text-align:left">TikZ 
+<a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (¡diminuto!)</td>
 <td style="text-align:center">3kb</td>
 </tr>
 <tr>
-<td style="text-align:left">Gráfica vectorial pdf de TikZ <a href="MaunaLoaThreeModelsTikz150.pdf">output</a></td>
+<td style="text-align:left">Gráfica vectorial pdf de TikZ 
+<a href="MaunaLoaThreeModelsTikz150.pdf">output</a></td>
 <td style="text-align:center">42kb</td>
 </tr>
 <tr>

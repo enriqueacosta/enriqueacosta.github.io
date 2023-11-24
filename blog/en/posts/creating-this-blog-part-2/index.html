@@ -112,7 +112,9 @@
   
   
   <div>
-  <p>This is a follow-up to a <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe setting up more elaborate multilingual support using <a href="https://github.com/nicksnyder/go-i18n" target="_blank" rel="noopener">i18n</a>.</p>
+  <p>This is a follow-up to a 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe setting up more elaborate multilingual support using 
+<a href="https://github.com/nicksnyder/go-i18n" target="_blank" rel="noopener">i18n</a>.</p>
 <h2 id="multilingual-text-snippets-using-i18n">Multilingual Text &ldquo;Snippets&rdquo; Using i18n</h2>
 <p>Hugo comes built in with <code>i18n</code> support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. To start using it all I had to do was create the files <code>en.toml</code> and <code>es.toml</code> in the already-existing <code>i18n</code> folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &ldquo;translation dictionaries&rdquo;.</p>
 <p>For example, I added to the <code>en.toml</code> the lines:</p>
@@ -121,7 +123,8 @@
 </span></span></code></pre></div><p>and to the <code>es.toml</code> the corresponding lines</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">cc-license</span>]
 </span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Liberado bajo una licencia de uso&#34;</span>
-</span></span></code></pre></div><p>What these say is that when I invoke the multilingual snippet called <code>cc-license</code>, it should display the text <code>This work is licensed under a</code> if the page is in English and it should display the text <code>Liberado bajo una licencia de uso</code> if the site is in Spanish. (The <code>other=</code> says this is a generic version of the text. One can specify <code>one=</code> for example, if the texts are different when it is singular. More details in the <a href="https://gohugo.io/content-management/multilingual/#query-a-singularplural-translation" target="_blank" rel="noopener">official Hugo documentation</a> about this.)</p>
+</span></span></code></pre></div><p>What these say is that when I invoke the multilingual snippet called <code>cc-license</code>, it should display the text <code>This work is licensed under a</code> if the page is in English and it should display the text <code>Liberado bajo una licencia de uso</code> if the site is in Spanish. (The <code>other=</code> says this is a generic version of the text. One can specify <code>one=</code> for example, if the texts are different when it is singular. More details in the 
+<a href="https://gohugo.io/content-management/multilingual/#query-a-singularplural-translation" target="_blank" rel="noopener">official Hugo documentation</a> about this.)</p>
 <p>How the snippet is invoked: I just use the code <code>{{ i18n &quot;cc-license&quot; }}</code> in any page template. Pretty simple!</p>
 <p>This is the current status of my i18n files:</p>
 <p><strong>en.toml</strong></p>
@@ -231,7 +234,8 @@
 <li>The second <code>&lt;a ...&gt;&lt;img ... .png&quot;/&gt;&lt;/a&gt;</code> is the little CC-image, loaded from i.creativecommons.org, that links to the same license.</li>
 </ul>
 <h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
-<p>See other posts under the <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
+<p>See other posts under the 
+<a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
 
   </div>
 

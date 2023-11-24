@@ -124,8 +124,12 @@
     
   
   <div>
-  <p>This blog does not live in a commercial platform for bloggers. It is what is technically called a &ldquo;static site&rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. In this blog entry I explain how I set it up.</p>
-<p>What got me started was Hui Gong&rsquo;s excellent <a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/" target="_blank" rel="noopener">blog entry</a> on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,<!-- raw HTML omitted --> but not about <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a><!-- raw HTML omitted -->. <!-- raw HTML omitted --> I had Hugo running and my own skeleton version of this blog using the very nice and minimal <a href="https://github.com/spf13/hyde" target="_blank" rel="noopener">Hyde</a> theme by following the blog.</p>
+  <p>This blog does not live in a commercial platform for bloggers. It is what is technically called a &ldquo;static site&rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled 
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. In this blog entry I explain how I set it up.</p>
+<p>What got me started was Hui Gong&rsquo;s excellent 
+<a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/" target="_blank" rel="noopener">blog entry</a> on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,<!-- raw HTML omitted --> but not about 
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a><!-- raw HTML omitted -->. <!-- raw HTML omitted --> I had Hugo running and my own skeleton version of this blog using the very nice and minimal 
+<a href="https://github.com/spf13/hyde" target="_blank" rel="noopener">Hyde</a> theme by following the blog.</p>
 <p>The Hyde theme is extremely minimal (nice), but I wanted three important things for my blog that the Hyde theme did not have:</p>
 <ul>
 <li><strong>Browsing by tags:</strong> Allow readers to find posts about related topics instead of only seeing a post list by date.</li>
@@ -185,7 +189,8 @@
 <li>ht<!-- raw HTML omitted -->tps:<!-- raw HTML omitted -->//enriqueacosta.github.io/blog<code>/es/</code>creating-this-blog/</li>
 </ul>
 <p>(The asymmetry of the filenames with the English one not needing the <code>.en.</code> comes from using the command <code>defaultContentLanguage = 'en'</code> in the above code.)</p>
-<p>The setup is great, but it broke the way Hugo deals with images! This required some extra tweaking which I describe <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#fixing-image-support-with-the-above-multilingual-setup">below</a>.</p>
+<p>The setup is great, but it broke the way Hugo deals with images! This required some extra tweaking which I describe 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#fixing-image-support-with-the-above-multilingual-setup">below</a>.</p>
 <h3 id="adding-a-link-to-each-post-in-the-other-language">Adding a link to each post in the other language.</h3>
 <p>I wanted each post to link to its corresponding version in the other language. This turned out to be much simpler than I imagined!</p>
 <p>The file <code>themes/hyde/layouts/_default/single.html</code> is the layout template for a single post. I copied it to <code>layouts/_default/single.html</code>, which gives me a version I can edit and overrides the theme&rsquo;s file.</p>
@@ -221,9 +226,13 @@
 </span></span></code></pre></div><p>And that was it! Now post dates change according to language.</p>
 <h3 id="fixing-image-support-with-the-above-multilingual-setup">Fixing image support with the above multilingual setup</h3>
 <p>(Note: this hack is needed for Hugo version v0.89.4+extended, it may not be needed for later versions.)</p>
-<p>The issue with images and the multilingual setup in the <code>config.toml</code> I described <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#initial-setup">above</a> came from the fact that I wanted the base url to be <code>https://enriqueacosta.github.io/blog/</code>, but Hugo does not like base urls having directory structure (<code>/blog/</code> in this case). It was stripping it from the hrefs for the images in the output, so the browser would point to the wrong place in the output html files when trying to load the image. This is a known issue that has not been fixed (see <a href="https://github.com/gohugoio/hugo/issues/5226" target="_blank" rel="noopener">here</a> and <a href="https://github.com/gohugoio/hugo/issues/7714" target="_blank" rel="noopener">here</a>).</p>
+<p>The issue with images and the multilingual setup in the <code>config.toml</code> I described 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#initial-setup">above</a> came from the fact that I wanted the base url to be <code>https://enriqueacosta.github.io/blog/</code>, but Hugo does not like base urls having directory structure (<code>/blog/</code> in this case). It was stripping it from the hrefs for the images in the output, so the browser would point to the wrong place in the output html files when trying to load the image. This is a known issue that has not been fixed (see 
+<a href="https://github.com/gohugoio/hugo/issues/5226" target="_blank" rel="noopener">here</a> and 
+<a href="https://github.com/gohugoio/hugo/issues/7714" target="_blank" rel="noopener">here</a>).</p>
 <p>Note: The hack/fix that follows is <em>not</em> needed if the base URL changes to something like <code>https://enriqueacosta.github.io</code>.</p>
-<p>The fix involved learning about the <code>&lt;base&gt;</code> tag in html. It turns out the <code>&lt;base&gt;</code> tag can be used in the <code>&lt;head&gt;</code> in <a href="https://www.w3schools.com/tags/tag_base.asp" target="_blank" rel="noopener">plain html</a> to specify the &ldquo;previous&rdquo; path of all relative paths in the page. So, if an image in HTML has an <code>href=&quot;/here/there/image.png&quot;</code>, then the <code>&lt;base&gt;</code> tag instructs the broswer to look for the image in <code>&lt;base href&gt;/here/there/image.png</code>. Thus, getting the following code inside the <code>&lt;head&gt;</code> of the output html pages would do the trick:</p>
+<p>The fix involved learning about the <code>&lt;base&gt;</code> tag in html. It turns out the <code>&lt;base&gt;</code> tag can be used in the <code>&lt;head&gt;</code> in 
+<a href="https://www.w3schools.com/tags/tag_base.asp" target="_blank" rel="noopener">plain html</a> to specify the &ldquo;previous&rdquo; path of all relative paths in the page. So, if an image in HTML has an <code>href=&quot;/here/there/image.png&quot;</code>, then the <code>&lt;base&gt;</code> tag instructs the broswer to look for the image in <code>&lt;base href&gt;/here/there/image.png</code>. Thus, getting the following code inside the <code>&lt;head&gt;</code> of the output html pages would do the trick:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span>&gt;
 </span></span></code></pre></div><p>This is accomplished by adding the line to the <code>hook_head_end.html</code> file in</p>
 <pre tabindex="0"><code>/layouts/partials/hook_head_end.html
@@ -257,7 +266,8 @@
 </span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
 </span></span></code></pre></div><p>And that is all! Since Hugo knows the language of the content just from the filename, changing the language in the navigation has Hugo look for the content with the right language filename.</p>
 <h3 id="making-the-menus-be-multilingual-too">Making the menus be multilingual too</h3>
-<p>The last little piece to make the site feel truly multilingual was getting the sidebar menu to change language. I replaced the lines that created the Categories and Tags menu entries in the <code>config.toml</code> file y described <a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#initial-setup">above</a> by the following Language-specific ones:</p>
+<p>The last little piece to make the site feel truly multilingual was getting the sidebar menu to change language. I replaced the lines that created the Categories and Tags menu entries in the <code>config.toml</code> file y described 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/#initial-setup">above</a> by the following Language-specific ones:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
@@ -284,8 +294,11 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
 </span></span></code></pre></div><p>Note the <code>url</code> entry in English and Spanish is the same. This is the very important because it has Hugo stops Hugo from showing Spanish tags in the list of tags when Site is in English, and vice versa.</p>
 <h2 id="adding-latex-support">Adding $\LaTeX$ support</h2>
-<p>Adding $\LaTeX$ support also ended up being way simpler than I expected. I discovered there were some annoyances with using <a href="https://www.mathjax.org" target="_blank" rel="noopener">Mathjax</a> and Hugo, like having to escape <code>_</code> characters, which are used very often in Latex, by writting <code>\_</code>. Apparently in some setups it also involved using <code>\\</code> instead of <code>\</code> all over the place (even worse since all Latex commands start with <code>\</code>). I discovered that <a href="https://katex.org" target="_blank" rel="noopener">KaTeX</a> integration had less of these pitfalls, so even though MathJax is more widely used than Katex, I decided to go with KaTeX integration.</p>
-<p>Following this <a href="https://kevcaz.github.io/notes/hugo/katex_and_goldmark/" target="_blank" rel="noopener">blog post</a>, adding Katex support one involved adding the following code inside the <code>&lt;head&gt;</code> tag in any page I wanted it, so I decided to add it to my <code>hook_head_end.html</code> file. This is the code:</p>
+<p>Adding $\LaTeX$ support also ended up being way simpler than I expected. I discovered there were some annoyances with using 
+<a href="https://www.mathjax.org" target="_blank" rel="noopener">Mathjax</a> and Hugo, like having to escape <code>_</code> characters, which are used very often in Latex, by writting <code>\_</code>. Apparently in some setups it also involved using <code>\\</code> instead of <code>\</code> all over the place (even worse since all Latex commands start with <code>\</code>). I discovered that 
+<a href="https://katex.org" target="_blank" rel="noopener">KaTeX</a> integration had less of these pitfalls, so even though MathJax is more widely used than Katex, I decided to go with KaTeX integration.</p>
+<p>Following this 
+<a href="https://kevcaz.github.io/notes/hugo/katex_and_goldmark/" target="_blank" rel="noopener">blog post</a>, adding Katex support one involved adding the following code inside the <code>&lt;head&gt;</code> tag in any page I wanted it, so I decided to add it to my <code>hook_head_end.html</code> file. This is the code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Katex Support--&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- For a way to do this that only loads KaTeX if it is &#34;invoked&#34; in a post, see:
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">https://dzhg.dev/posts/2020/08/how-to-add-latex-support-in-hugo/ --&gt;</span>
@@ -314,7 +327,8 @@
 </span></span></code></pre></div><p>With this, I can now write math in any place using <code>$...$</code>. For example, <code>$\int_{a_1}^{b_1} f_1(t)\thinspace dt$</code> renders like this: $\int_{a_1}^{b_1} f_1(t)\thinspace dt$.</p>
 <p>I  also can now have &ldquo;displayed math&rdquo; (centered in a new line) with the usual $\LaTeX$ delimiters <code>$$...$$</code>. For example, <code>$$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</code> renders like this: $$\int_{a_1}^{b_1} f_1(t)\thinspace dt$$</p>
 <h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
-<p>See other posts under the <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
+<p>See other posts under the 
+<a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
 
   </div>
 

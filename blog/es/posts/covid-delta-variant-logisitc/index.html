@@ -129,7 +129,8 @@
   
   <div>
   <p>Hoy, como parte de mi trabajo, <!-- raw HTML omitted --> me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.</p>
-<p>La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta&#43;variant&#43;%28share%29&amp;Interval=Weekly&amp;Relative&#43;to&#43;Population=true&amp;Align&#43;outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA" target="_blank" rel="noopener">Our World In Data</a>. <!-- raw HTML omitted --></p>
+<p>La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  
+<a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta&#43;variant&#43;%28share%29&amp;Interval=Weekly&amp;Relative&#43;to&#43;Population=true&amp;Align&#43;outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA" target="_blank" rel="noopener">Our World In Data</a>. <!-- raw HTML omitted --></p>
 <figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
             <p>Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</p>
         </figcaption>
@@ -142,7 +143,8 @@ y su gráfica se ve como sigue (figura creada por mí con Tikz, ¡mostraré el c
 <figure><img src="LogisticFunctionParams.es.png" width="450"/>
 </figure>
 
-<p>Hay formas elaboradas de verificar si unos datos se puede modelar con una función logística, como por ejemplo, usando con la ecuación diferencial del crecimiento logístico (ver la <a href="https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/#otras-formas-m%c3%a1s-elaboradas-para-saber-si-algo-es-log%c3%adstico">discusión abajo</a>). Sin embargo, últimamente prefiero revisar si algo es logístico, ya sea:</p>
+<p>Hay formas elaboradas de verificar si unos datos se puede modelar con una función logística, como por ejemplo, usando con la ecuación diferencial del crecimiento logístico (ver la 
+<a href="https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/#otras-formas-m%c3%a1s-elaboradas-para-saber-si-algo-es-log%c3%adstico">discusión abajo</a>). Sin embargo, últimamente prefiero revisar si algo es logístico, ya sea:</p>
 <ul>
 <li>graficando los puntos de datos y tratando de ajustar una curva logística a los datos usando controles deslizantes para los parámetros $L$, $a$ y $k$.</li>
 <li>organizando una hoja de cálculo con los datos, la gráfica de los datos, y la gráfica de los valores de un modelo logístico que hacen referencia a los valores para los parámetros $L$, $a$ y $k$ en celdas especiales. Así, al modificar los valores de los parámetros la gráfica se actualiza, y con prueba y error, veo si hay un buen ajuste gráfico.</li>
@@ -168,7 +170,9 @@ $$
 \text{$t$ días después de febrero 8 de 2021}
 \end{array}  = \frac{1}{1+e^{-0.09(t-139)}}
 $$</p>
-<p>Puede encontrar usted mismo este ajuste logístico si la siguiente aplicación de Desmos se carga (use los controles deslizantes para $A$ y $k$). Si no se carga, simplemente siga <a href="https://www.desmos.com/calculator/saydhyssyq" target="_blank" rel="noopener">este enlace</a> o descargue los datos y juegue usted mismo en la <a href="Data-DeltaShareIndiaUKUSBra.xls">hoja de cálculo que creé</a>.</p>
+<p>Puede encontrar usted mismo este ajuste logístico si la siguiente aplicación de Desmos se carga (use los controles deslizantes para $A$ y $k$). Si no se carga, simplemente siga 
+<a href="https://www.desmos.com/calculator/saydhyssyq" target="_blank" rel="noopener">este enlace</a> o descargue los datos y juegue usted mismo en la 
+<a href="Data-DeltaShareIndiaUKUSBra.xls">hoja de cálculo que creé</a>.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/ht3gvoopty?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div>
@@ -179,13 +183,15 @@ $$</p>
 <figure><img src="USDeltaVariantLogistic.png" width="400"/>
 </figure>
 
-<p>Y aquí está la aplicación de Demos con controles deslizantes (siga <a href="https://www.desmos.com/calculator/ih9yhwoqxx" target="_blank" rel="noopener">este enlace</a> si no se carga). Intente cambiar $k$ a 0.09 para ver de la diferencia en la forma en que la variante Delta superó otras variantes entre los Estados Unidos y el Reino Unido.</p>
+<p>Y aquí está la aplicación de Demos con controles deslizantes (siga 
+<a href="https://www.desmos.com/calculator/ih9yhwoqxx" target="_blank" rel="noopener">este enlace</a> si no se carga). Intente cambiar $k$ a 0.09 para ver de la diferencia en la forma en que la variante Delta superó otras variantes entre los Estados Unidos y el Reino Unido.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/ih9yhwoqxx?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div>
 <h2 id="no-tiene-por-que-haber-un-buen-ajuste-con-una-función-logística-para-datos-en-forma-sigmoide">No tiene por que haber un buen ajuste con una función logística para datos en forma sigmoide</h2>
 <p>¡La mejor forma de ver esto es con un ejemplo!</p>
-<p>Intente ajustar a un modelo logístico con los controles deslizantes en la siguiente aplicación de Desmos. Los datos son del número total (acumulativo) de casos en la primera ola de Covid-19 en Italia en 2020 (aquí hay un <a href="https://www.desmos.com/calculator/xigjjslhlr" target="_blank" rel="noopener">enlace</a> en caso de que no se cargue).</p>
+<p>Intente ajustar a un modelo logístico con los controles deslizantes en la siguiente aplicación de Desmos. Los datos son del número total (acumulativo) de casos en la primera ola de Covid-19 en Italia en 2020 (aquí hay un 
+<a href="https://www.desmos.com/calculator/xigjjslhlr" target="_blank" rel="noopener">enlace</a> en caso de que no se cargue).</p>
 <p>Al intentar ajustar la curva a los datos con los controles deslizantes, pronto entenderá por qué no va a encontrar un buen ajuste.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/xigjjslhlr?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

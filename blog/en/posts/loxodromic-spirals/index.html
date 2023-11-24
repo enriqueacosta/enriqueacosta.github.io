@@ -116,11 +116,13 @@
   
   
   <div>
-  <p>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">coloring book</a> using complex functions and Möbius transformations.</p>
+  <p>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">coloring book</a> using complex functions and Möbius transformations.</p>
 <p>Here is the figure:</p>
 <figure><img src="loxodromic-coloring-patterns-crop.jpg"
          alt="Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris." width="600px"/><figcaption>
-            <p>Page from <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> by  Alex Bellos and Edmund Harris.</p>
+            <p>Page from 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> by  Alex Bellos and Edmund Harris.</p>
         </figcaption>
 </figure>
 
@@ -128,21 +130,25 @@
 <figure><img src="loxodromic-coloring-elias.jpg" width="600px"/>
 </figure>
 
-<p>I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles. Because of the right angles I guessed there should be a <a href="https://en.wikipedia.org/wiki/Conformal_map" target="_blank" rel="noopener">complex conformal map</a> involved, and I wanted to figure out how it was constructed and what the equations for the functions that produced this curvy grid looked like.</p>
+<p>I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles. Because of the right angles I guessed there should be a 
+<a href="https://en.wikipedia.org/wiki/Conformal_map" target="_blank" rel="noopener">complex conformal map</a> involved, and I wanted to figure out how it was constructed and what the equations for the functions that produced this curvy grid looked like.</p>
 <p>According to the book, the figure shows the projection on to the 2D plane of the paths one follows on a sphere from the North Pole when heading south and a bit east at a constant angle (and perpendicular directions to those paths). The book does not provide many additional details, but this was enough to get started!</p>
 <p>I searched around on the internet for a while and could not find good references, so I set out to figure it out myself and write this up. I thoroughly enjoyed figuring out the ideas and details involved, and came across many interesting facts and figures along the way. I hope you do too!</p>
 <h2 id="first-piece-spirals-on-a-sphere-loxodromic-spirals">First piece: Spirals on a sphere (loxodromic spirals)</h2>
-<p>A <em>loxodromic spiral</em>, also known as a <a href="https://en.wikipedia.org/wiki/Rhumb_line" target="_blank" rel="noopener"><em>rhumb line</em></a> or a <em>loxodrome</em>, is a curve on a sphere that cuts longitudes at the same angle. It is the path of a ship that maintains a constant compass direction.</p>
+<p>A <em>loxodromic spiral</em>, also known as a 
+<a href="https://en.wikipedia.org/wiki/Rhumb_line" target="_blank" rel="noopener"><em>rhumb line</em></a> or a <em>loxodrome</em>, is a curve on a sphere that cuts longitudes at the same angle. It is the path of a ship that maintains a constant compass direction.</p>
 <figure><img src="loxodromic-loxodrome-wiki.svg"
          alt="Image of a loxodrome, or rhumb-line, spiraling towards the North Pole. From Wikipedia. Created by Alvesgaspar, licensed with open CC BY-SA 2.5 licence." width="600px"/><figcaption>
-            <p>Image of a loxodrome, or rhumb-line, spiraling towards the North Pole. From <a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikipedia</a>. Created by Alvesgaspar, licensed with open CC BY-SA 2.5 licence.</p>
+            <p>Image of a loxodrome, or rhumb-line, spiraling towards the North Pole. From 
+<a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikipedia</a>. Created by Alvesgaspar, licensed with open CC BY-SA 2.5 licence.</p>
         </figcaption>
 </figure>
 
 <p>A loxodromic spiral can also be pictured on a 2D plane by using <em>stereographic projection</em>. This projection maps the sphere to the plane by sending each point on the sphere to its &ldquo;shadow&rdquo; on the plane. The setup involves placing the sphere on top of the plane, with the South Pole touching the origin and the North Pole directly above it. A light source is placed at the top of the sphere. The &ldquo;shadow&rdquo; of a point is where the line from the North Pole to the point meets the plane.</p>
 <figure><img src="loxodromic-stereographic.svg"
          alt="Stereographic projection. From Wikimedia commons. Created by S.Wetzel, licensed with open CC BY-SA 4.0 licence." width="600px"/><figcaption>
-            <p>Stereographic projection. From <a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikimedia commons</a>. Created by S.Wetzel, licensed with open CC BY-SA 4.0 licence.</p>
+            <p>Stereographic projection. From 
+<a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikimedia commons</a>. Created by S.Wetzel, licensed with open CC BY-SA 4.0 licence.</p>
         </figcaption>
 </figure>
 
@@ -168,7 +174,8 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 </div></p>
 <p>Note that most online plotters do not plot parametric curves which involve complex numbers, so to be able to plot these curves (for example, in Desmos in the interactive above) one needs to write out explicitly the real and imaginary components of $z(t)=x(t)+iy(t)$ and plot $(x(t),y(t))$ instead. In this case, $x(t)=e^{a t} \cos(t)$ and $y(t)= e^{a t} \sin(t)$.</p>
 <p>Logarithmic spirals have many interesting properties. They have even been called
-&ldquo;miraculous spirals&rdquo; and &ldquo;eternal lines&rdquo;. See the <a href="https://en.wikipedia.org/wiki/Logarithmic_spiral" target="_blank" rel="noopener">Wikipedia article</a> for more.</p>
+&ldquo;miraculous spirals&rdquo; and &ldquo;eternal lines&rdquo;. See the 
+<a href="https://en.wikipedia.org/wiki/Logarithmic_spiral" target="_blank" rel="noopener">Wikipedia article</a> for more.</p>
 <!-- raw HTML omitted -->
 <h2 id="second-piece-transforming-a-spiral-that-goes-to-infinity-into-a-double-spiral-möbius-transformations">Second piece: Transforming a spiral that goes to infinity into a double spiral (Möbius transformations)</h2>
 <p>A loxodromic spiral on a 3D sphere goes from the North Pole to the South Pole. When we stereographically project it to the 2D plane, the North Pole becomes the &ldquo;infinite point&rdquo; which is infinitely far away from the origin and the projected spiral grows forever as if trying to reach it. To see the two poles as finite points in the 2D plane, we need to tilt the sphere.</p>
@@ -179,11 +186,14 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 <!-- raw HTML omitted -->
 <figure><img src="loxodromic-mobius.svg"
          alt="Image of a square grid under a Möbius transformation created with desmos here. The desmos link is a modification of a Desmos link I found online. It had no authorship reference. Here is another interesting one I found" width="100%"/><figcaption>
-            <p>Image of a square grid under a Möbius transformation created with desmos <a href="https://www.desmos.com/calculator/fplcgzmy85" target="_blank" rel="noopener">here</a>. The desmos link is a modification of a Desmos link I found online. It had no authorship reference. Here is <a href="https://www.desmos.com/calculator/z9oz7r3v7m" target="_blank" rel="noopener">another interesting one</a> I found</p>
+            <p>Image of a square grid under a Möbius transformation created with desmos 
+<a href="https://www.desmos.com/calculator/fplcgzmy85" target="_blank" rel="noopener">here</a>. The desmos link is a modification of a Desmos link I found online. It had no authorship reference. Here is 
+<a href="https://www.desmos.com/calculator/z9oz7r3v7m" target="_blank" rel="noopener">another interesting one</a> I found</p>
         </figcaption>
 </figure>
 
-<p>If you want to know more about Möbius trasnformations, I highly recommend starting off by watching a <a href="https://www.youtube.com/watch?v=0z1fIsUNhO4&amp;t=33s" target="_blank" rel="noopener">gorgeous video</a> that was made several years ago.</p>
+<p>If you want to know more about Möbius trasnformations, I highly recommend starting off by watching a 
+<a href="https://www.youtube.com/watch?v=0z1fIsUNhO4&amp;t=33s" target="_blank" rel="noopener">gorgeous video</a> that was made several years ago.</p>
 <p>To see the North and South poles, we want a Möbius transformation that maps $z=0$ to $z=−1$ and $z=\infty$ to $z=1$ (they choice of $1$ and $-1$ is arbitrary, any two numbers will do). One such function is</p>
 <p>$$f(z) = \frac{z - 1}{z + 1}$$</p>
 <p>This is the curve that will result from transforming the spiral $z(t)$ with the Möbius transformation $f(z)$: &ndash;&gt;</p>
@@ -191,7 +201,8 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 $$
 f(z(t)) = \frac{e^{at}e^{it} - 1}{e^{at}e^{it} + 1}
 $$</p>
-<p>To plot it, we need to separate the real and imaginary parts. This is sort of painful to do by hand, but computers can do it easily! For example, WorlframAlpha may give them to you if you follow <a href="https://www.wolframalpha.com/input/?i=%5Cfrac%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;-&#43;1%7D%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;%2B&#43;1%7D" target="_blank" rel="noopener">this link</a></p>
+<p>To plot it, we need to separate the real and imaginary parts. This is sort of painful to do by hand, but computers can do it easily! For example, WorlframAlpha may give them to you if you follow 
+<a href="https://www.wolframalpha.com/input/?i=%5Cfrac%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;-&#43;1%7D%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;%2B&#43;1%7D" target="_blank" rel="noopener">this link</a>. Either way, you get</p>
 <p>$$f(z(t))=x(t)+iy(t)$$
 where
 $$
@@ -230,7 +241,8 @@ $$</p>
 <p>Now we can transform them with our Möbius transformation to get double spirals that twist around each other! Here is the figure:</p>
 <figure><img src="loxodromic-4DoubleSpirals.svg"
          alt="Created with Desmos. Follow this link if you want to play around with the figure." width="100%"/><figcaption>
-            <p>Created with Desmos. Follow this <a href="https://www.desmos.com/calculator/cgqvp0exmp" target="_blank" rel="noopener">link</a> if you want to play around with the figure.</p>
+            <p>Created with Desmos. Follow this 
+<a href="https://www.desmos.com/calculator/cgqvp0exmp" target="_blank" rel="noopener">link</a> if you want to play around with the figure.</p>
         </figcaption>
 </figure>
 
@@ -271,21 +283,24 @@ $$</p>
 <p>Here it is:</p>
 <figure><img src="loxodromic-orthogonalDoublesSpirals.svg"
          alt="Created with Desmos. Follow this link to interact with it." width="100%"/><figcaption>
-            <p>Created with Desmos. Follow this <a href="https://www.desmos.com/calculator/hdir5xzd0p" target="_blank" rel="noopener">link</a> to interact with it.</p>
+            <p>Created with Desmos. Follow this 
+<a href="https://www.desmos.com/calculator/hdir5xzd0p" target="_blank" rel="noopener">link</a> to interact with it.</p>
         </figcaption>
 </figure>
 
 <p>And the following  one is like the one in the coloring book (with 10 and 20 spirals in different directions – this is why it looks a bit off – but it is on purpose)</p>
 <figure><img src="loxodromic-orthogonalDoublesSpirals-10-20.svg"
          alt="Created with Desmos. Follow this link to interact with it." width="100%"/><figcaption>
-            <p>Created with Desmos. Follow this <a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank" rel="noopener">link</a> to interact with it.</p>
+            <p>Created with Desmos. Follow this 
+<a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank" rel="noopener">link</a> to interact with it.</p>
         </figcaption>
 </figure>
 
 <p>Here is the original one from the book (rotated)
 <figure><img src="loxodromic-coloring-patterns-crop-rotate.jpg"
          alt="Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris." width="600px"/><figcaption>
-            <p>Page from <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> by  Alex Bellos and Edmund Harris.</p>
+            <p>Page from 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> by  Alex Bellos and Edmund Harris.</p>
         </figcaption>
 </figure>
 </p>
@@ -298,7 +313,8 @@ $$</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p>Once one figures something out in Math, it is very difficult to &ldquo;unfigure it out&rdquo;. Everything seems &ldquo;clear&rdquo; and &ldquo;obvious&rdquo; in hindsight!</p>
-<p>But getting there is not so smooth. I had many trials and errors and failed attempts to make these figures, and the <a href="https://en.wikipedia.org/wiki/Grapher" target="_blank" rel="noopener">MacOS Grapher app</a> was the best way to test things out.</p>
+<p>But getting there is not so smooth. I had many trials and errors and failed attempts to make these figures, and the 
+<a href="https://en.wikipedia.org/wiki/Grapher" target="_blank" rel="noopener">MacOS Grapher app</a> was the best way to test things out.</p>
 <p>So, here is a thank you to MacOS Grapher!</p>
 <!-- raw HTML omitted -->
 <p>Here is why it was so useful: I needed a tool to test my ideas. I needed a tool that could plot complex parametric plots of the form $f(t)=(az(t)+b)/(cz(t)+d)$ without having to figure out the real and imaginary parts (time consuming algebra and prone to error).</p>
@@ -307,7 +323,8 @@ $$</p>
 <p>Here is a screenshot of the app as I was working for this post. Note in the menu on the left how thinks make more sense &ndash; define the spiral, then apply the Möbius transformation with no need to do any messy algebra.
 <figure><img src="loxodrimic-grapher-screenshot.png"
          alt="Screenshot of the MacOS Grapher App while I was figuring out things for this post. You can download the file here" width="100%"/><figcaption>
-            <p>Screenshot of the MacOS Grapher App while I was figuring out things for this post. You can download the file <a href="loxodromic-MacOS.gcx.zip">here</a></p>
+            <p>Screenshot of the MacOS Grapher App while I was figuring out things for this post. You can download the file 
+<a href="loxodromic-MacOS.gcx.zip">here</a></p>
         </figcaption>
 </figure>
 </p>

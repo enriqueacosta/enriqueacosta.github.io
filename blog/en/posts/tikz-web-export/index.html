@@ -124,11 +124,17 @@
     
   
   <div>
-  <p>TikZ is, in very concise terms, a programing language to generate images based on <a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One runs PdfLateX on a TikZ source file (a <a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file) and gets as output a beautiful looking pdf. <!-- raw HTML omitted --></p>
-<p>For a detailed example, you can see this <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</p>
+  <p>TikZ is, in very concise terms, a programing language to generate images based on 
+<a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One runs PdfLateX on a TikZ source file (a 
+<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file) and gets as output a beautiful looking pdf. <!-- raw HTML omitted --></p>
+<p>For a detailed example, you can see this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</p>
 <figure><img src="fig-twistedCubic2.png"
          alt="TikZ figure generated from this .tex file. This is the original pdf output."/><figcaption>
-            <p>TikZ figure generated from this <a href="fig-twistedCubic2.tex">.tex file</a>. This is the original <a href="fig-twistedCubic2.pdf">pdf output</a>.</p>
+            <p>TikZ figure generated from this 
+<a href="fig-twistedCubic2.tex">.tex file</a>. This is the original 
+<a href="fig-twistedCubic2.pdf">pdf output</a>.</p>
         </figcaption>
 </figure>
 
@@ -138,10 +144,15 @@ This is part of the benefit of &ldquo;coding&rdquo; an image instead of creating
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>One of the key things I had to figure out to be able to use TikZ for this blog was a way to change the vector graphic <a href="https://en.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">pdf</a> files it generates into more web-friendly formats, since webpages do not support pdf images. There are two possible paths one can take:</p>
+<p>One of the key things I had to figure out to be able to use TikZ for this blog was a way to change the vector graphic 
+<a href="https://en.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">pdf</a> files it generates into more web-friendly formats, since webpages do not support pdf images. There are two possible paths one can take:</p>
 <ul>
-<li>Create a bitmap (<a href="https://en.wikipedia.org/wiki/Raster_graphics" target="_blank" rel="noopener">raster</a>) high quality version. A good format widely supported format for this right now is <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" rel="noopener">png</a>.</li>
-<li>Transform into a web-friendly <a href="https://en.wikipedia.org/wiki/Vector_graphics" target="_blank" rel="noopener">vector graphic</a> format. The current way to go for the web is <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank" rel="noopener">svg</a>.</li>
+<li>Create a bitmap (
+<a href="https://en.wikipedia.org/wiki/Raster_graphics" target="_blank" rel="noopener">raster</a>) high quality version. A good format widely supported format for this right now is 
+<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" rel="noopener">png</a>.</li>
+<li>Transform into a web-friendly 
+<a href="https://en.wikipedia.org/wiki/Vector_graphics" target="_blank" rel="noopener">vector graphic</a> format. The current way to go for the web is 
+<a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank" rel="noopener">svg</a>.</li>
 </ul>
 <p>The key things one wants from these conversions are:</p>
 <ol>
@@ -161,7 +172,8 @@ This is part of the benefit of &ldquo;coding&rdquo; an image instead of creating
 <p>The difference between raster and vector images is summed up in the following figure.</p>
 <figure><img src="Bitmap_VS_SVG.svg"
          alt="Demonstration of differences between bitmap and SVG images. Image by Yug, modifications by Cfaerber et al. from Wikipedia. CC-BY 2.5 license."/><figcaption>
-            <p>Demonstration of differences between bitmap and SVG images. Image by Yug, modifications by Cfaerber et al. from <a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg" target="_blank" rel="noopener">Wikipedia</a>. CC-BY 2.5 license.</p>
+            <p>Demonstration of differences between bitmap and SVG images. Image by Yug, modifications by Cfaerber et al. from 
+<a href="https://commons.wikimedia.org/wiki/File:Bitmap_VS_SVG.svg" target="_blank" rel="noopener">Wikipedia</a>. CC-BY 2.5 license.</p>
         </figcaption>
 </figure>
 
@@ -175,7 +187,8 @@ This is part of the benefit of &ldquo;coding&rdquo; an image instead of creating
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h3 id="an-example-showing-the-benefits-of-tikz-vector-graphic-pdf-output">An example showing the benefits of TikZ vector graphic pdf output</h3>
-<p>This a figure I made with TikZ is from this <a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">post</a>
+<p>This a figure I made with TikZ is from this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">post</a>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 </p>
@@ -195,8 +208,10 @@ and even closer! Super sharp.
 <p>Here is the conversion to png method I have settled upon. It uses the MacOS terminal and ImageMagick.</p>
 <h3 id="prerequisites-install-imagemagick">Prerequisites: Install ImageMagick</h3>
 <ul>
-<li>Install the fantastic Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
-<li>Install the also fantastic <a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:
+<li>Install the fantastic Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their 
+<a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
+<li>Install the also fantastic 
+<a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install imagemagick
 </span></span></code></pre></div></li>
 </ul>
@@ -222,16 +237,22 @@ select png as output format). The downside is that exports somewhat big compared
 <h2 id="conversion-from-pdf-to-svg">Conversion from pdf to svg</h2>
 <p>As I mention above, I decided to go with raster pngs because I could use them in different context besides websites. In any case, I did test several methods to get svgs out of the TikZ pdfs, and I did find a method to get an avg with similar file sizes to the very sharp 600 pixels/inch pngs.</p>
 <h3 id="tikz----pdf----svg-path">TikZ &ndash;&gt; pdf &ndash;&gt; svg path</h3>
-<p>One can generate an svg directly from the pdf TikZ output by using David Barton&rsquo;s <a href="https://cityinthesky.co.uk/opensource/pdf2svg/" target="_blank" rel="noopener">pdf2svg</a> (<a href="https://github.com/dawbarton/pdf2svg" target="_blank" rel="noopener">source code</a>).</p>
+<p>One can generate an svg directly from the pdf TikZ output by using David Barton&rsquo;s 
+<a href="https://cityinthesky.co.uk/opensource/pdf2svg/" target="_blank" rel="noopener">pdf2svg</a> (
+<a href="https://github.com/dawbarton/pdf2svg" target="_blank" rel="noopener">source code</a>).</p>
 <p>Installing pdf2svg is a breeze with Homebrew (run command on the terminal): <!-- raw HTML omitted --></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install pdf2svg
 </span></span></code></pre></div><p>Once installed, conversion is accomplished by using:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdf2svg input_filename.pdf output_filename.svg
 </span></span></code></pre></div><p>The pdf2svg does not seem to have many options (see <code>pdf2svg --help</code>).</p>
 <h3 id="tikz----dvi----svg-path">TikZ &ndash;&gt; dvi &ndash;&gt; svg path</h3>
-<p>This is an alternate path that I did not get to work. It uses <a href="https://dvisvgm.de/" target="_blank" rel="noopener">dvisvgm</a>. I do not know if it is better than the other svg option I described above. My MacOS was complaining about PostScript specials. Good places to start troubleshoting issues for anyone interested may be <a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/" target="_blank" rel="noopener">here</a> and <a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/" target="_blank" rel="noopener">here</a>.</p>
+<p>This is an alternate path that I did not get to work. It uses 
+<a href="https://dvisvgm.de/" target="_blank" rel="noopener">dvisvgm</a>. I do not know if it is better than the other svg option I described above. My MacOS was complaining about PostScript specials. Good places to start troubleshoting issues for anyone interested may be 
+<a href="https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/" target="_blank" rel="noopener">here</a> and 
+<a href="https://shagunjhaver.com/blog/2021/08/27/tikz-knitr-html-svg-fun/" target="_blank" rel="noopener">here</a>.</p>
 <h2 id="complete-example">Complete Example</h2>
-<p>This is an image I used in this <a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">post</a> in which using TikZ saved me hours of work because I could generate plots for different time periods by just changing one number in the TikZ code.</p>
+<p>This is an image I used in this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/">post</a> in which using TikZ saved me hours of work because I could generate plots for different time periods by just changing one number in the TikZ code.</p>
 <figure><img src="MaunaLoaThreeModelsTikz150.png"/>
 </figure>
 
@@ -245,11 +266,13 @@ select png as output format). The downside is that exports somewhat big compared
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">TikZ <a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (tiny!)</td>
+<td style="text-align:left">TikZ 
+<a href="MaunaLoaThreeModelsTikz150.tex">source file</a> (tiny!)</td>
 <td style="text-align:center">3kb</td>
 </tr>
 <tr>
-<td style="text-align:left">pdf vector TikZ <a href="MaunaLoaThreeModelsTikz150.pdf">output</a></td>
+<td style="text-align:left">pdf vector TikZ 
+<a href="MaunaLoaThreeModelsTikz150.pdf">output</a></td>
 <td style="text-align:center">42kb</td>
 </tr>
 <tr>
