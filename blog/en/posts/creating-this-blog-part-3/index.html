@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -116,21 +116,21 @@
 <h2 id="listing-the-tags-for-each-post">Listing the Tags for Each Post</h2>
 <p>The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface. Here is how I did it.</p>
 <p>To specify the tags of a post, the header of a post should have a <code>tags:</code> entry, such as this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating This Blog Part 2&#34;</span>
-<span style="color:#f92672">date</span>: <span style="color:#e6db74">2022-02-01T21:12:04</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
-<span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
-<span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>, <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Multilingual i18n&#34;</span>]
-<span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
----
-</code></pre></div><p>To get the tags to show up at the beginning of the post, one can add a simple code to the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt; 
-  &lt;<span style="color:#f92672">strong</span>&gt;{{ i18n &#34;Tags&#34;}}: &lt;/<span style="color:#f92672">strong</span>&gt;
-  {{ range .Params.tags }}
-      &lt;<span style="color:#f92672">br</span>/&gt; -- {{ . }} 
-  {{ end }}
-&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>In this case, the output would be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creating This Blog Part 2&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2022-02-01T21:12:04</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags </span>: [<span style="color:#e6db74">&#34;Blog setup&#34;</span>, <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Multilingual i18n&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Coding&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>To get the tags to show up at the beginning of the post, one can add a simple code to the file <code>/layouts/_default/single.html</code>, which controls the layout of all the posts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt; 
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">strong</span>&gt;{{ i18n &#34;Tags&#34;}}: &lt;/<span style="color:#f92672">strong</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ range .Params.tags }}
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">br</span>/&gt; -- {{ . }} 
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>In this case, the output would be:</p>
 <p><strong>Tags:</strong><br>
 &ndash; Blog setup<br>
 &ndash; Hugo<br>
@@ -142,14 +142,14 @@
 <li>The <code>&lt;br/&gt; -- {{ . }} </code> adds a line break, a dash <code>--</code>, and the <code>{{ . }}</code> displays the tag name.</li>
 </ul>
 <p>I wanted something fancier, which listed tags in a single line separated by commas, and more importantly, linked to the page that Hugo automatically generates for each tag. After several tweaks, this was the final code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt; 
-  &lt;<span style="color:#f92672">strong</span>&gt;{{ i18n &#34;Tags&#34;}}: &lt;/<span style="color:#f92672">strong</span>&gt;
-  {{ range $i,  $e := .Params.tags }}
-      {{- if $i -}}, {{ end -}}
-      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}tags/{{ . | urlize }}&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;
-  {{ end }}
-&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>What the fancier pieces of the code do is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt; 
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">strong</span>&gt;{{ i18n &#34;Tags&#34;}}: &lt;/<span style="color:#f92672">strong</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ range $i,  $e := .Params.tags }}
+</span></span><span style="display:flex;"><span>      {{- if $i -}}, {{ end -}}
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}tags/{{ . | urlize }}&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>What the fancier pieces of the code do is:</p>
 <ul>
 <li>The <code>range $i,</code> in the loop definition is a loop counter, to allow adding a comma after each tag link only after the first tag is listed (one does not want a comma at the beginning of the end of the list).</li>
 <li>The <code>{{- if $i -}}, {{ end -}}</code> adds a comma between each tag link only after the first tag is listed.</li>
@@ -157,59 +157,59 @@
 </ul>
 <h2 id="adding-an-about-page-which-does-not-use-the-layout-of-the-posts">Adding an &ldquo;About&rdquo; Page Which Does not use the Layout of the Posts.</h2>
 <p>This involved creating a new layout file. I created the layout <code>layouts/_default/about.html</code> with a very simple structure. Here are the contents of the file (it just adds a title, and the file contents through <code>{{ .Content }}</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
-   &lt;<span style="color:#f92672">header</span>&gt;
-     &lt;<span style="color:#f92672">h1</span>&gt;
-       {{ .Title }}
-     &lt;/<span style="color:#f92672">h1</span>&gt;
-   &lt;/<span style="color:#f92672">header</span>&gt;
-
-   {{ .Content }}
-{{ end }}
-</code></pre></div><p>Next step was to add the files <code>content/about/about.md</code> and <code>content/about/about.es.md</code> which had the actual contents of the about page. They also used a special <code>layout</code> and <code>type</code> in their headings:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;About This Blog&#34;</span>
-<span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-12-13T17:19:54</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
-<span style="color:#f92672">layout</span>: <span style="color:#ae81ff">about</span>
-<span style="color:#f92672">type</span>: <span style="color:#ae81ff">about</span>
----
-</code></pre></div><p>The <code>layout: about</code> is what makes sure this page is displayed with the <code>about</code> layout I showed above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>       {{ .Title }}
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   {{ .Content }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>Next step was to add the files <code>content/about/about.md</code> and <code>content/about/about.es.md</code> which had the actual contents of the about page. They also used a special <code>layout</code> and <code>type</code> in their headings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;About This Blog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-12-13T17:19:54</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#ae81ff">about</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">about</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>The <code>layout: about</code> is what makes sure this page is displayed with the <code>about</code> layout I showed above.</p>
 <p>Then, it was important to not list this about page in the listing of all the posts, so to the file <code>layouts/index.html</code> which controls the layout for the post listings I added lines <code>5</code> and <code>19</code> below, which check to see that the Page it is trying to display does not have <code>about</code> type.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>{{ define &#34;main&#34; -}}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#75715e">&lt;!-- This is the &#34;truncated blog posts page --&gt;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  {{ range .Site.RegularPages -}}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    {{ if ne .Type &#34;about&#34; }}  <span style="color:#75715e">&lt;!-- skips the static page with type about in content/about --&gt;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>      &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>        &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>        &lt;/<span style="color:#f92672">h1</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>        &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02T15:04:05Z0700</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date | time.Format &#34;:date_long&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>        <span style="color:#75715e">&lt;!-- &lt;time datetime=&#34;{{ .Date.Format &#34;2006-01-02T15:04:05Z0700&#34; }}&#34; class=&#34;post-date&#34;&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/time&gt; --&gt;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>        {{ .Summary }}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>        {{ if .Truncated }}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;read-more-link&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ i18n &#34;Read-More&#34; }} ...&lt;/<span style="color:#f92672">a</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>        &lt;/<span style="color:#f92672">div</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>        {{ end }}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>      &lt;/<span style="color:#f92672">article</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>    {{ end }}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>  {{- end }}
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>  &lt;/<span style="color:#f92672">div</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>{{- end }}
-</code></pre></div><p>Last step was to add the about link to the sidebar menu. This was accomplished by adding to the site configuration file <code>config.toml</code> the lines:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
-    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
-    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
-    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/about&#34;</span>
-
-[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Acerca de este blog&#34;</span>
-    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
-    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
-    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/about&#34;</span>
-</code></pre></div><h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{ define &#34;main&#34; -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#75715e">&lt;!-- This is the &#34;truncated blog posts page --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  {{ range .Site.RegularPages -}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    {{ if ne .Type &#34;about&#34; }}  <span style="color:#75715e">&lt;!-- skips the static page with type about in content/about --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>      &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Date.Format &#34;</span><span style="color:#a6e22e">2006-01-02T15:04:05Z0700</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-date&#34;</span>&gt;{{ .Date | time.Format &#34;:date_long&#34; }}&lt;/<span style="color:#f92672">time</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#75715e">&lt;!-- &lt;time datetime=&#34;{{ .Date.Format &#34;2006-01-02T15:04:05Z0700&#34; }}&#34; class=&#34;post-date&#34;&gt;{{ .Date.Format &#34;Mon, Jan 2, 2006&#34; }}&lt;/time&gt; --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        {{ .Summary }}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>        {{ if .Truncated }}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;read-more-link&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ i18n &#34;Read-More&#34; }} ...&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>        {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>      &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>    {{ end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>  {{- end }}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>{{- end }}
+</span></span></code></pre></div><p>Last step was to add the about link to the sidebar menu. This was accomplished by adding to the site configuration file <code>config.toml</code> the lines:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/about&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Acerca de este blog&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/about&#34;</span>
+</span></span></code></pre></div><h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
 <p>See other posts under the <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
 
   </div>
@@ -227,7 +227,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

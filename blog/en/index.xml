@@ -5,7 +5,20 @@
     <link>https://enriqueacosta.github.io/blog/en/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Nov 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recreating a Loxodromic Spiral Grid Using Complex Analysis</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</link>
+      <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</guid>
+      <description>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired coloring book using complex functions and Möbius transformations.
+Here is the figure:
+Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.
+Here is one of my son&amp;rsquo;s coloring of the curvy grid!
+I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles.</description>
+    </item>
+    
     <item>
       <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>
@@ -14,7 +27,7 @@
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</guid>
       <description>The animation above is a gif file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.
 There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:
- LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</description>
+LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</description>
     </item>
     
     <item>
@@ -95,7 +108,7 @@ Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based,
       <guid>https://enriqueacosta.github.io/blog/en/posts/arrecibo-message/</guid>
       <description>I recently remembered the very cool Arecibo message and I discovered today that the Wikipedia article on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.
 Here is the message:
- Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.</description>
+Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.</description>
     </item>
     
     <item>
@@ -125,7 +138,7 @@ As a preparation for this webinar, I decided to write this blog entry describing
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/</guid>
       <description>I promised in another post that I would show the code for the TikZ figure I included in that post, reproduced below:
- What is very nice about TikZ and its pfgplots package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+What is very nice about TikZ and its pfgplots package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
     </item>
     
     <item>
@@ -136,7 +149,7 @@ As a preparation for this webinar, I decided to write this blog entry describing
       <guid>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</guid>
       <description>Today, as part of my work, I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
 The graph below, which started all of this, should come up if one follows this Our World In Data link.
- Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
+Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
     </item>
     
     <item>

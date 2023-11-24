@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -130,7 +130,7 @@
     
   
   <div>
-  <p>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our <a href="https://www.wiley.com/en-us/Applied+Calculus%2C+7th+Edition-p-9781119799085">Applied Calculus book</a>), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form
+  <p>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our <a href="https://www.wiley.com/en-us/Applied&#43;Calculus%2C&#43;7th&#43;Edition-p-9781119799085" target="_blank" rel="noopener">Applied Calculus book</a>), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form
 $$f(t)=P_0(b+mt)^t.$$</p>
 <p>Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:
 $$g(t)= C+Ba^{t}.$$
@@ -139,17 +139,17 @@ This model may make more sense physically, since it seems reasonable to assume $
 $$
 h(t)= a_2x^2+a_1x+a_0.
 $$
-These three functions all give very good fits for almost $70$ years' worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
+These three functions all give very good fits for almost $70$ years&rsquo; worth of data, and then have radically different long term behaviors. It seems like all bets are off on what could happen to $\text{CO}_2$ levels besides the fact that they are most definitely rising!</p>
 <p>Here are some interesting details about this little modeling &ldquo;telenovela&rdquo;.</p>
 <h2 id="source-of-the-data----the-keeling-curve">Source of the Data &ndash; the Keeling Curve</h2>
-<p>The graph below shows the monthly mean CO$_2$ concentration data the from Mauna Loa observatory in Hawaii, 11,135ft above sea level, which has been continuously collecting data related to climate change since the 1950s. This is known as the <a href="https://en.wikipedia.org/wiki/Keeling_Curve">Keeling Curve</a>, named after Charles David Keeling who started the monitoring program.</p>
+<p>The graph below shows the monthly mean CO$_2$ concentration data the from Mauna Loa observatory in Hawaii, 11,135ft above sea level, which has been continuously collecting data related to climate change since the 1950s. This is known as the <a href="https://en.wikipedia.org/wiki/Keeling_Curve" target="_blank" rel="noopener">Keeling Curve</a>, named after Charles David Keeling who started the monitoring program.</p>
 <figure><img src="Mauna_Loa_CO2_monthly_mean_concentration.png"
          alt="(Keeling Curve. Image and data from NOAA)" width="100%"/><figcaption>
-            <p>(Keeling Curve. Image and data from <a href="https://gml.noaa.gov/ccgg/trends/mlo.html">NOAA</a>)</p>
+            <p>(Keeling Curve. Image and data from <a href="https://gml.noaa.gov/ccgg/trends/mlo.html" target="_blank" rel="noopener">NOAA</a>)</p>
         </figcaption>
 </figure>
 
-<p>In what follows I will be looking at the annual mean CO$_2$ data, which smooths out seasonal variation. This data is downloaded from the official <a href="https://gml.noaa.gov/ccgg/trends/data.html">NOAA site</a>.</p>
+<p>In what follows I will be looking at the annual mean CO$_2$ data, which smooths out seasonal variation. This data is downloaded from the official <a href="https://gml.noaa.gov/ccgg/trends/data.html" target="_blank" rel="noopener">NOAA site</a>.</p>
 <h2 id="first-model-the-super-exponential-p_0bmtt">First Model: the Super-Exponential $P_0(b+mt)^t$</h2>
 <h4 id="growth-is-not-exponential">Growth is not exponential</h4>
 <p>One way to realize that the $\text{CO}_2$ concentration is not exponential is by plotting it in a spreadsheet and asking it to give an exponential fit. Here is the result:</p>
@@ -184,7 +184,7 @@ $$
 &amp; = a \times (\text{quantity at time}~t).
 \end{aligned}
 $$
-So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;by what factor do I need to multiply the data of one year to get the next year?&rdquo;. These multiplication factors from one year to the next are technically called the <em>growth factors</em>, and figuring them out is easy: you just divide the next years' CO$_2$ levels by the current one!</p>
+So, what I mean by &ldquo;how the $a$ is changing&rdquo; in the data is &ldquo;by what factor do I need to multiply the data of one year to get the next year?&rdquo;. These multiplication factors from one year to the next are technically called the <em>growth factors</em>, and figuring them out is easy: you just divide the next years&rsquo; CO$_2$ levels by the current one!</p>
 <p>Here is a plot of the growth factors as a function of time (so, a plot of &ldquo;how the $a$ is changing&rdquo;):</p>
 <figure><img src="MaunaLoaGrowthFactors.png"/>
 </figure>
@@ -213,7 +213,7 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 <h2 id="second-model-the-exponential-plus-constant-cbat">Second Model: the Exponential Plus Constant $C+Ba^{t}$</h2>
 <p>All that I showed above seems to indicate that no exponential function could possibly model the data. It is growing too fast. Right? Well, not really!</p>
 <p>In reality, lines in log plots and exponential fits in spreadsheets only relate to the algebraic form $P_0a^t$ of exponential functions. Anything that is not of this form will look bendy in a log plot, and the fact that it curves upwards does not necessarily mean it is faster than any exponential. It just means that it is not modeled well by any exponential function (of the form $P_0a^t$). This is a common misconception with log plots, which I had myself!</p>
-<p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the amount when $t=0$).</p>
+<p>As seen in <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf" target="_blank" rel="noopener">this article</a>, there may be a good fit of the form $$C+Ba^{t}$$ (I changed the letters from $C+P_0a^{t}$ to $C+Ba^{t}$ since the constant in front of the $a^t$ is no longer the amount when $t=0$).</p>
 <p>Finding possible parameter values for $a,B$, and $C$ that give a good fit to the data is not as straightforward with a spreadsheet, because these do not have &ldquo;give me a trend-line of the form $C+Ba^{t}$&rdquo; functionality.</p>
 <h4 id="how-i-found-good-parameter-values">How I found good parameter values</h4>
 <p>I tried out different values of $C$ to make the quantity $[\text{CO}_2~\text{level}-C]$ behave like an exponential by computing its growth factors and trying to make them constant (this would not be possible if there was no good model of the form $C+Ba^{t}$).</p>
@@ -249,7 +249,8 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 </p>
 <p>If the desmos applet below loads, you can play around with this by zooming in and out interactively. Note however that zooming out and seeing the figures I show above is not as simple as one might think &ndash; one needs to re-adjust the ranges of the axis constantly as one zooms out.</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/n5chdjjnij" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/n5chdjjnij" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/n5chdjjnij" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <!-- raw HTML omitted -->
 <h4 id="one-final-note">One Final Note:</h4>
@@ -300,7 +301,7 @@ $$</p>
 <p>Even though the three models give radically different long-term behaviors, they do so at time-scales that are far larger than what it would make sense to expect the models to be valid.</p>
 </li>
 <li>
-<p>The model that may make more sense physically is the exponential plus constant, because it starts off from a constant base level pre-<a href="https://en.wikipedia.org/wiki/Anthropocene">antropocene</a>, and then follows exponential growth like many modern-world phenomena (including world population).</p>
+<p>The model that may make more sense physically is the exponential plus constant, because it starts off from a constant base level pre-<a href="https://en.wikipedia.org/wiki/Anthropocene" target="_blank" rel="noopener">antropocene</a>, and then follows exponential growth like many modern-world phenomena (including world population).</p>
 </li>
 <li>
 <p>CO$_2$ levels are most certainly rising at an increasing rate (graph bending upwards). Even if the rising rate stops increasing and they start leveling off, it is unlikely this will happen below 600&ndash;700 ppm (just from looking at the plots).</p>
@@ -322,7 +323,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

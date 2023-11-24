@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -135,49 +135,49 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 </figure>
 
 <p>El código que produce esta última figura es muy simple y bonito:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=5pt, 12pt, tikz]</span>{standalone}
-<span style="color:#66d9ef">\usepackage</span>{pgfplots}
-
-<span style="color:#66d9ef">\begin</span>{document}
-<span style="color:#66d9ef">\begin</span>{tikzpicture} 
-<span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span><span style="color:#75715e"></span>   [ axis lines = middle
-   , width=200pt
-   , samples=75 
-   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
-   , ymax=1.2       
-   ] 
-   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span><span style="color:#75715e"></span>      [ color=blue
-      , domain=0:4.5
-      , style=thick
-      ] {1/(1+exp(-4*(x-2.5))}<span style="color:#75715e">%
-</span><span style="color:#75715e"></span>      node
-      [ above left
-      , pos=0.7
-      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
-<span style="color:#66d9ef">\end</span>{axis} 
-<span style="color:#66d9ef">\end</span>{tikzpicture}
-<span style="color:#66d9ef">\end</span>{document}
-</code></pre></div><p>En realidad, el código que produce la figura se encuentra entre los comandos <code>\begin{tikzpicture}</code> y <code>\end{tikzpicture}</code>. El resto son los comandos requeridos para indicar a $\LaTeX$ que debe crear un documento que contiene la figura. Así, el código de la figura en realidad es solo el siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span><span style="color:#75715e"></span>   [ axis lines = middle
-   , width=200pt
-   , samples=75 
-   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
-   , ymax=1.2       
-   ] 
-   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span><span style="color:#75715e"></span>      [ color=blue
-      , domain=0:4.5
-      , style=thick
-      ] { 1/(1+exp(-4*(x-2.5)) }<span style="color:#75715e">%
-</span><span style="color:#75715e"></span>      node
-      [ above left
-      , pos=0.7
-      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
-<span style="color:#66d9ef">\end</span>{axis} 
-</code></pre></div><p>Y este último solo tiene un par de partes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=5pt, 12pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ axis lines = middle
+</span></span><span style="display:flex;"><span>   , width=200pt
+</span></span><span style="display:flex;"><span>   , samples=75 
+</span></span><span style="display:flex;"><span>   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
+</span></span><span style="display:flex;"><span>   , ymax=1.2       
+</span></span><span style="display:flex;"><span>   ] 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      [ color=blue
+</span></span><span style="display:flex;"><span>      , domain=0:4.5
+</span></span><span style="display:flex;"><span>      , style=thick
+</span></span><span style="display:flex;"><span>      ] {1/(1+exp(-4*(x-2.5))}<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      node
+</span></span><span style="display:flex;"><span>      [ above left
+</span></span><span style="display:flex;"><span>      , pos=0.7
+</span></span><span style="display:flex;"><span>      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>En realidad, el código que produce la figura se encuentra entre los comandos <code>\begin{tikzpicture}</code> y <code>\end{tikzpicture}</code>. El resto son los comandos requeridos para indicar a $\LaTeX$ que debe crear un documento que contiene la figura. Así, el código de la figura en realidad es solo el siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ axis lines = middle
+</span></span><span style="display:flex;"><span>   , width=200pt
+</span></span><span style="display:flex;"><span>   , samples=75 
+</span></span><span style="display:flex;"><span>   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
+</span></span><span style="display:flex;"><span>   , ymax=1.2       
+</span></span><span style="display:flex;"><span>   ] 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      [ color=blue
+</span></span><span style="display:flex;"><span>      , domain=0:4.5
+</span></span><span style="display:flex;"><span>      , style=thick
+</span></span><span style="display:flex;"><span>      ] { 1/(1+exp(-4*(x-2.5)) }<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      node
+</span></span><span style="display:flex;"><span>      [ above left
+</span></span><span style="display:flex;"><span>      , pos=0.7
+</span></span><span style="display:flex;"><span>      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis} 
+</span></span></code></pre></div><p>Y este último solo tiene un par de partes:</p>
 <ul>
 <li>El <code>\begin{axis}[...]</code> le dice a TikZ que debe crear unos ejes con algunas propiedades que se encuentran  dentro del <code>[...]</code>.</li>
 <li>El comando <code>\addplot[...]{...}</code>, le dice a TikZ que agregue la gráfica de la función que se encuentra dentro de <code>{...}</code> y que use las propiedades dentro del <code>[...]</code> (como color azul, línea gruesa, etc.).</li>
@@ -186,19 +186,19 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <p>Para obtener la figura con las etiquetas, las líneas punteadas, y los parámetros en los ejes, uno simplemente debe hacer ajustes graduales que lo lleven allí.</p>
 <h2 id="hacer-que-las-marcas-en-los-ejes-ejes-sean-parámetros-generales-en-lugar-de-números">Hacer que las marcas en los ejes ejes sean parámetros generales en lugar de números.</h2>
 <p>Estas son las propiedades del <code>axis</code> que logran esto.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span><span style="color:#75715e"></span>[ axis lines = middle
-, width=200pt
-, samples=75 
-, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
-, ymax=1.2
-, xtick={2.5}
-, xticklabel={<span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span>}
-, ytick ={1/2,1}
-, yticklabels={<span style="color:#e6db74">$</span>L<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>,<span style="color:#e6db74">$</span>L<span style="color:#e6db74">$</span>}
-, every axis x label/.style={at={(current axis.right of origin)},anchor=north west}        
-] 
-</code></pre></div><p>Aquí:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = middle
+</span></span><span style="display:flex;"><span>, width=200pt
+</span></span><span style="display:flex;"><span>, samples=75 
+</span></span><span style="display:flex;"><span>, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
+</span></span><span style="display:flex;"><span>, ymax=1.2
+</span></span><span style="display:flex;"><span>, xtick={2.5}
+</span></span><span style="display:flex;"><span>, xticklabel={<span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>, ytick ={1/2,1}
+</span></span><span style="display:flex;"><span>, yticklabels={<span style="color:#e6db74">$</span>L<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>,<span style="color:#e6db74">$</span>L<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>, every axis x label/.style={at={(current axis.right of origin)},anchor=north west}        
+</span></span><span style="display:flex;"><span>] 
+</span></span></code></pre></div><p>Aquí:</p>
 <ul>
 <li>Las opciones <code>xtick={2.5}, xticklabel={$a$}</code> quitan las marcas de $1,2,3,4$ en el eje horizontal y las reemplazan con una sola marca en $x = 2.5$ con etiqueta $a$.</li>
 <li>Las opciones <code>ytick ={1/2,1}, yticklabels={$L/2$,$L$}</code> hacen lo mismo, pero con las etiquetas del eje vertical.</li>
@@ -210,37 +210,37 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 
 <h2 id="agregar-las-líneas-punteadas-y-la-flecha-al-punto-de-inflexión">Agregar las líneas punteadas y la flecha al punto de inflexión</h2>
 <p><strong>Línea horizontal superior, con su etiqueta:</strong> se obtiene gratificando la función $f(x)=1$.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span><span style="color:#75715e"></span>   [ style=dashed
-   , color=black
-   , domain=0:5
-   ] {1} 
-   node
-   [ above
-   , pos=0.6
-   ] {top horizontal asymptote};
-</code></pre></div><p><strong>Línea horizontal del medio:</strong> se obtiene gratificando la función $f(x)=1/2$.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\addplot</span>
-   [ style=dashed
-   , color=black
-   , domain=0:2.5
-   ] {1/2};
-</code></pre></div><p><strong>Línea horizontal inferior, con su etiqueta:</strong> se obtiene gratificando la función $f(x)=0$.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\addplot</span>
-   [ color=black
-   , domain=0:4
-   ] {0} 
-   node
-   [above
-   , pos = 0.2
-   , text width = 2cm
-   , align=center
-   ] {bottom horizontal asymptote};
-</code></pre></div><p><strong>Línea vertical en $x = 2.5$:</strong> esta no se puede obtener como la gráfica de una función, por lo que hay que usar una nueva estrategia (el comando <code>draw</code>).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\draw</span>
-   [ style = dashed
-   ] (axis cs: 2.5,1/2) -- (axis cs: 2.5,0);
-</code></pre></div><p>Aquí:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ style=dashed
+</span></span><span style="display:flex;"><span>   , color=black
+</span></span><span style="display:flex;"><span>   , domain=0:5
+</span></span><span style="display:flex;"><span>   ] {1} 
+</span></span><span style="display:flex;"><span>   node
+</span></span><span style="display:flex;"><span>   [ above
+</span></span><span style="display:flex;"><span>   , pos=0.6
+</span></span><span style="display:flex;"><span>   ] {top horizontal asymptote};
+</span></span></code></pre></div><p><strong>Línea horizontal del medio:</strong> se obtiene gratificando la función $f(x)=1/2$.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span>
+</span></span><span style="display:flex;"><span>   [ style=dashed
+</span></span><span style="display:flex;"><span>   , color=black
+</span></span><span style="display:flex;"><span>   , domain=0:2.5
+</span></span><span style="display:flex;"><span>   ] {1/2};
+</span></span></code></pre></div><p><strong>Línea horizontal inferior, con su etiqueta:</strong> se obtiene gratificando la función $f(x)=0$.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span>
+</span></span><span style="display:flex;"><span>   [ color=black
+</span></span><span style="display:flex;"><span>   , domain=0:4
+</span></span><span style="display:flex;"><span>   ] {0} 
+</span></span><span style="display:flex;"><span>   node
+</span></span><span style="display:flex;"><span>   [above
+</span></span><span style="display:flex;"><span>   , pos = 0.2
+</span></span><span style="display:flex;"><span>   , text width = 2cm
+</span></span><span style="display:flex;"><span>   , align=center
+</span></span><span style="display:flex;"><span>   ] {bottom horizontal asymptote};
+</span></span></code></pre></div><p><strong>Línea vertical en $x = 2.5$:</strong> esta no se puede obtener como la gráfica de una función, por lo que hay que usar una nueva estrategia (el comando <code>draw</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span>
+</span></span><span style="display:flex;"><span>   [ style = dashed
+</span></span><span style="display:flex;"><span>   ] (axis cs: 2.5,1/2) -- (axis cs: 2.5,0);
+</span></span></code></pre></div><p>Aquí:</p>
 <ul>
 <li>El <code>\draw</code> dice que vamos a dibujar.</li>
 <li>El <code>[style = dashed]</code> es el estilo de línea.</li>
@@ -248,61 +248,61 @@ Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:
 <li>El <code>(axis cs:</code> permite que uno use el sistema de coordenadas de los ejes en lugar del sistema de coordenadas absolutas de la figura (relacionado con el ancho de la figura, por ejemplo). El <code>cs</code> viene de <code>cooordinate system</code>.</li>
 </ul>
 <p><strong>La etiqueta &ldquo;Punto de inflexión&rdquo; apuntando con una flecha al punto <code>(axis cs:2.5,0.5)</code>:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\draw</span>
-   [ -&gt;
-   , &gt; = latex
-   ] (axis cs:1.5,0.7) 
-      node 
-      [ left
-      , text width = 1cm
-      , align=center
-      ] {inflection point}
-      -- (axis cs:2.5,0.5);
-</code></pre></div><h2 id="código-completo">Código completo</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span>
+</span></span><span style="display:flex;"><span>   [ -&gt;
+</span></span><span style="display:flex;"><span>   , &gt; = latex
+</span></span><span style="display:flex;"><span>   ] (axis cs:1.5,0.7) 
+</span></span><span style="display:flex;"><span>      node 
+</span></span><span style="display:flex;"><span>      [ left
+</span></span><span style="display:flex;"><span>      , text width = 1cm
+</span></span><span style="display:flex;"><span>      , align=center
+</span></span><span style="display:flex;"><span>      ] {inflection point}
+</span></span><span style="display:flex;"><span>      -- (axis cs:2.5,0.5);
+</span></span></code></pre></div><h2 id="código-completo">Código completo</h2>
 <p>¡Y eso es todo!</p>
 <figure><img src="LogisticFunctionParams.png" width="450"/>
 </figure>
 
 <p>Este es el código completo, con menos indentación y menos saltos de línea.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=5pt, 12pt, tikz]</span>{standalone}
-<span style="color:#66d9ef">\usepackage</span>{pgfplots}
-
-<span style="color:#66d9ef">\begin</span>{document}
-<span style="color:#66d9ef">\begin</span>{tikzpicture} 
-<span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span><span style="color:#75715e"></span>[ axis lines = middle
-, width=200pt
-, samples=75 
-, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
-, ymax=1.2
-, xtick={2.5}
-, xticklabel={<span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span>}
-, ytick ={1/2,1}
-, yticklabels={<span style="color:#e6db74">$</span>L<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>,<span style="color:#e6db74">$</span>L<span style="color:#e6db74">$</span>}
-, every axis x label/.style={at={(current axis.right of origin)},anchor=north west}        
-]
-
-<span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[color=blue, domain=0:4.5,style=thick]</span>{1/(1+exp(-4*(x-2.5))} 
-   node[right,pos=0.6]{<span style="color:#e6db74">$</span> \displaystyle\frac{L}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span>k<span style="color:#f92672">(</span>t<span style="color:#f92672">-</span>a<span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
-
-<span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[style=dashed, color=black, domain=0:5]</span>{1} 
-   node[above,pos=0.6]{top horizontal asymptote};
-
-<span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[style=dashed, color=black, domain=0:2.5]</span>{1/2};
-
-<span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[color=black, domain=0:4]</span>{0} 
-   node[above,pos=0.2,text width=2cm, align=center]{bottom horizontal asymptote};
-
-<span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[style=dashed]</span> (axis cs: 2.5,1/2) -- (axis cs: 2.5,0);
-
-<span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;,&gt;=latex]</span>
-   (axis cs:1.5,0.7) 
-      node [left, text width=1cm, align=center]{inflection point}
-   --(axis cs:2.5,0.5);
-<span style="color:#66d9ef">\end</span>{axis} 
-<span style="color:#66d9ef">\end</span>{tikzpicture}
-<span style="color:#66d9ef">\end</span>{document}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=5pt, 12pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = middle
+</span></span><span style="display:flex;"><span>, width=200pt
+</span></span><span style="display:flex;"><span>, samples=75 
+</span></span><span style="display:flex;"><span>, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
+</span></span><span style="display:flex;"><span>, ymax=1.2
+</span></span><span style="display:flex;"><span>, xtick={2.5}
+</span></span><span style="display:flex;"><span>, xticklabel={<span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>, ytick ={1/2,1}
+</span></span><span style="display:flex;"><span>, yticklabels={<span style="color:#e6db74">$</span>L<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>,<span style="color:#e6db74">$</span>L<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>, every axis x label/.style={at={(current axis.right of origin)},anchor=north west}        
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[color=blue, domain=0:4.5,style=thick]</span>{1/(1+exp(-4*(x-2.5))} 
+</span></span><span style="display:flex;"><span>   node[right,pos=0.6]{<span style="color:#e6db74">$</span> \displaystyle\frac{L}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span>k<span style="color:#f92672">(</span>t<span style="color:#f92672">-</span>a<span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[style=dashed, color=black, domain=0:5]</span>{1} 
+</span></span><span style="display:flex;"><span>   node[above,pos=0.6]{top horizontal asymptote};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[style=dashed, color=black, domain=0:2.5]</span>{1/2};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#a6e22e">[color=black, domain=0:4]</span>{0} 
+</span></span><span style="display:flex;"><span>   node[above,pos=0.2,text width=2cm, align=center]{bottom horizontal asymptote};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[style=dashed]</span> (axis cs: 2.5,1/2) -- (axis cs: 2.5,0);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;,&gt;=latex]</span>
+</span></span><span style="display:flex;"><span>   (axis cs:1.5,0.7) 
+</span></span><span style="display:flex;"><span>      node [left, text width=1cm, align=center]{inflection point}
+</span></span><span style="display:flex;"><span>   --(axis cs:2.5,0.5);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div>
   </div>
 
 </div>
@@ -318,7 +318,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

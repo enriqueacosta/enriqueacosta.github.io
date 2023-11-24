@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -130,7 +130,7 @@
     
   
   <div>
-  <p>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro <a href="https://www.wiley.com/en-us/Applied+Calculus%2C+7th+Edition-p-9781119799085">libro de Matemáticas Aplicadas</a>), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &ldquo;super-exponencial&rdquo; de la siguiente forma:
+  <p>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro <a href="https://www.wiley.com/en-us/Applied&#43;Calculus%2C&#43;7th&#43;Edition-p-9781119799085" target="_blank" rel="noopener">libro de Matemáticas Aplicadas</a>), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &ldquo;super-exponencial&rdquo; de la siguiente forma:
 $$f(t)=P_0(b+mt)^t.$$</p>
 <p>Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &ldquo;casi exponencial&rdquo; que se ajustaba igual de bien a los datos. Este modelo asume que se dió crecimiento exponencial a partir de un nivel $C$ de base, en vez de iniciar en $0$, así:
 $$g(t)= C+Ba^{t}.$$
@@ -142,14 +142,14 @@ $$
 Estas tres funciones se ajustan muy bien a los más de 70 años de datos y después tienen comportamientos radicalmente distintos. No es claro lo que va a pasar con el nivel de $\text{CO}_2$ en la atmósfera aparte de que, sin lugar a dudas, está creciendo.</p>
 <p>A continuación muestro algunos detalles de esta pequeña &ldquo;telenovela&rdquo; de modelación matemática.</p>
 <h2 id="la-fuente-de-los-datos----la-curva-de-keeling">La fuente de los datos &ndash; la curva de Keeling</h2>
-<p>La siguiente gráfica muestra la concentración media de CO$_2$ en el Observatorio de Mauna Loa en Hawaii, a 3,400m sobre el nivel del mar, en el cual se han estado recolectando datos relacionados al cambio climático desde 1950. La curva se conoce como la <a href="http://localhost:1314/blog/es/posts/mauna-loa-superexponential/">Curva de Keeling</a>, en honor a Charles David Keeling quien inició el proyecto de monitoreo de CO$_2$.</p>
+<p>La siguiente gráfica muestra la concentración media de CO$_2$ en el Observatorio de Mauna Loa en Hawaii, a 3,400m sobre el nivel del mar, en el cual se han estado recolectando datos relacionados al cambio climático desde 1950. La curva se conoce como la <a href="http://localhost:1314/blog/es/posts/mauna-loa-superexponential/" target="_blank" rel="noopener">Curva de Keeling</a>, en honor a Charles David Keeling quien inició el proyecto de monitoreo de CO$_2$.</p>
 <figure><img src="Mauna_Loa_CO2_monthly_mean_concentration.png"
          alt="(Curva de Keeling. Imágenes y datos del National Oceanic and Atmospheric Administration )" width="100%"/><figcaption>
-            <p>(Curva de Keeling. Imágenes y datos del <a href="https://gml.noaa.gov/ccgg/trends/mlo.html">National Oceanic and Atmospheric Administration </a>)</p>
+            <p>(Curva de Keeling. Imágenes y datos del <a href="https://gml.noaa.gov/ccgg/trends/mlo.html" target="_blank" rel="noopener">National Oceanic and Atmospheric Administration </a>)</p>
         </figcaption>
 </figure>
 
-<p>A continuación voy a usar solo los promedios anuales de estos datos, ya que estos le quitan la variación periódica anual que se da debido a las estaciones. Estos promedios también se consiguen en la página oficial en este <a href="https://gml.noaa.gov/ccgg/trends/data.html">link</a>.</p>
+<p>A continuación voy a usar solo los promedios anuales de estos datos, ya que estos le quitan la variación periódica anual que se da debido a las estaciones. Estos promedios también se consiguen en la página oficial en este <a href="https://gml.noaa.gov/ccgg/trends/data.html" target="_blank" rel="noopener">link</a>.</p>
 <h2 id="primer-modelo-super-exponencial-de-la-forma-p_0bmtt">Primer modelo: super-exponencial de la forma $P_0(b+mt)^t$</h2>
 <h4 id="el-crecimiento-no-es-exponencial">El crecimiento no es exponencial</h4>
 <p>Una forma de ver que la concentración de $\text{CO}_2$ no crece de forma exponencial es graficar esta en una hoja de cálculo y pedir al programa que haga un ajuste exponencial a los datos. Esto es lo que se obtiene:</p>
@@ -183,7 +183,7 @@ $$
 \end{aligned}
 $$
 A lo que me refiero con &ldquo;cómo estaría variando la $a$&rdquo; en los datos es &ldquo;¿por cuál factor debo multiplicar el dato de un año para obtener el del siguiente?&rdquo;. Estos factores de multiplicación entre los datos de un año y el siguiente se llaman <em>factores de crecimiento</em>, y encontrarlos es bastante fácil: tan solo hay que dividir los niveles de CO$_2$ del siguiente año entre los niveles del año correspondiente.</p>
-<p>Esta es la gráfica de los <em>factores de crecimiento</em> como función del tiempo. Muestran &ldquo;cómo estaría variando la $a$&quot;:</p>
+<p>Esta es la gráfica de los <em>factores de crecimiento</em> como función del tiempo. Muestran &ldquo;cómo estaría variando la $a$&rdquo;:</p>
 <figure><img src="MaunaLoaGrowthFactors.png"/>
 </figure>
 
@@ -212,8 +212,8 @@ $$f(t)=P_0(b+mt)^t=315.98(1.0026+0.00003t)^t.$$</p>
 <p>Todo lo que mostré arriba parece indicar que no hay función exponencial que modele los datos. Está creciendo demasiado rápido. ¿Cierto? Pues, ¡sí, y no!</p>
 <p>El asunto es que los ajustes a datos con funciones exponenciales usando hojas de cálculo solo usan la forma algebraica $P_0a^t$ de la función exponencial.</p>
 <p>Igualmente, cuando se usa una escala logarítmica en el eje vertical, solo las funciones exponenciales se van a ver como rectas. La gráfica de cualquier función que no sea de la forma $P_0a^t$ se va a ver curva de una forma u otra si se usa escala logarítmica en el eje vertical, y el hecho de que sea curva hacia arriba no implica necesariamente que crezca más rápido que una exponencial. Simplemente significa que la función no es exponencial (no tiene la forma $P_0a^t$). Es común cometer este error de interpretación.</p>
-<p>Como se puede ver en este <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf">artículo</a>, es posible que haya un buen ajuste a los datos con una función de la forma $$C+Ba^{t}$$ (cambié las letras de $C+P_0a^{t}$ a $C+Ba^{t}$, pues la constante en frente de $a^t$ ya no es la cantidad cuando $t=0$).</p>
-<p>No es tan simple con una hoja de cálculo encontrar los posibles valores de $a,B$, y $C$ que dan un buen ajuste a los datos, pues las hojas de cálculo por lo general no tienen la funcionalidad de &ldquo;encontrar un ajuste a los datos de la forma $C+Ba^{t}$&rdquo; (a diferencia de casi siempre tener la funcionalidad de &ldquo;encontrar un ajuste a los datos de la forma $Ba^{t}$&quot;).</p>
+<p>Como se puede ver en este <a href="https://www.siam.org/Portals/0/Publications/SIURO/Vol12/S01753PDF.pdf" target="_blank" rel="noopener">artículo</a>, es posible que haya un buen ajuste a los datos con una función de la forma $$C+Ba^{t}$$ (cambié las letras de $C+P_0a^{t}$ a $C+Ba^{t}$, pues la constante en frente de $a^t$ ya no es la cantidad cuando $t=0$).</p>
+<p>No es tan simple con una hoja de cálculo encontrar los posibles valores de $a,B$, y $C$ que dan un buen ajuste a los datos, pues las hojas de cálculo por lo general no tienen la funcionalidad de &ldquo;encontrar un ajuste a los datos de la forma $C+Ba^{t}$&rdquo; (a diferencia de casi siempre tener la funcionalidad de &ldquo;encontrar un ajuste a los datos de la forma $Ba^{t}$&rdquo;).</p>
 <h4 id="cómo-encontré-buenos-valores-para-ab-y-c">Cómo encontré buenos valores para $a,B$, y $C$.</h4>
 <p>Probé distintos valores de $C$ para hacer que la cantidad $[\text{nivel}~\text{CO}_2-C]$ se comportara como una exponencial. Para cada uno verifiqué si se comportaba como una exponencial calculando los factores de crecimiento y ajustaba el valor de $C$ tratando de lograr que se volvieran constantes.</p>
 <h4 id="el-modelo-resultante">El modelo resultante</h4>
@@ -248,7 +248,8 @@ $$g(t)= C+Ba^{t}=267.277+48.703(1.01823)^t$$</p>
 </p>
 <p>Si se carga el applet de demos que incluyo abajo, el lector puede ajustar los rangos de la gráfica de forma interactiva. Sin embargo, note que &ldquo;alejarse&rdquo; para ver más años no es tan simple como uno creería en un principio: se debe ajustar la escala vertical constantemente a medida que uno se aleja para poder ver las gráficas bien.</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/n5chdjjnij" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/n5chdjjnij" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/n5chdjjnij" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <!-- raw HTML omitted -->
 <h4 id="una-última-nota">Una última nota:</h4>
@@ -299,7 +300,7 @@ $$</p>
 <p>Aunque los tres modelos tienen crecimientos a largo plazo radicalmente distintos, las diferencias se hacen evidentes en escalas de tiempo que son mayores al plazo de tiempo en que tiene sentido esperar que sean válidos estos modelos.</p>
 </li>
 <li>
-<p>El modelo que puede tener más sentido físico es el exponencial+constante, pues inicia de un nivel base pre-<a href="https://es.wikipedia.org/wiki/Antropoceno">antropoceno</a>, y crece de forma exponencial sobre esta base, como muchos fenómenos de la modernidad (incluyendo la población mundial).</p>
+<p>El modelo que puede tener más sentido físico es el exponencial+constante, pues inicia de un nivel base pre-<a href="https://es.wikipedia.org/wiki/Antropoceno" target="_blank" rel="noopener">antropoceno</a>, y crece de forma exponencial sobre esta base, como muchos fenómenos de la modernidad (incluyendo la población mundial).</p>
 </li>
 <li>
 <p>No hay duda alguna que los niveles de CO$_2$ están creciendo con una tasa de crecimiento creciente (gráfica que se curva hacia arriba). Incluso si para este incremento en la tasa de crecimiento y la curva se empieza a estabilizar, es poco probable que esto ocurra por debajo de 600&ndash;700 ppm (con tan solo mirar las gráficas).</p>
@@ -321,7 +322,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

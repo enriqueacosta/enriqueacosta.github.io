@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -150,101 +150,101 @@
 <p>This is why I kept trying to do it with TikZ! Here are the details which I figured out after plenty of web surfing and testing.</p>
 <h2 id="producing-one-frame-of-the-animation---graphing-an-algebraic-curve">Producing One Frame of the Animation - Graphing an Algebraic Curve</h2>
 <p>As I mentioned above, LaTeX and TikZ do not natively support graphing algebraic curves because this requires very precise numerical calculations which LaTeX was not built for. It is already marvelous that the graphical programing language TikZ can live inside LateX, given that LaTeX is a typesetting system!</p>
-<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using <a href="http://www.gnuplot.info">Gnuplot</a> which TikZ knows how to use internally.</p>
+<p>Nonetheless, there is a way to &ldquo;outsource&rdquo; the numerical calculations while still feeling one is just running TikZ code. This involves using <a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot</a> which TikZ knows how to use internally.</p>
 <p>There don&rsquo;t seem to be many sources on the internet on how to accomplish this. I constructed the following workflow from things I learned from the following links:</p>
 <ul>
-<li><a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a></li>
-<li><a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a></li>
-<li><a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></li>
+<li><a href="https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/" target="_blank" rel="noopener">https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</a></li>
+<li><a href="https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/18359/plotting-an-implicit-function-using-pgfplots</a></li>
+<li><a href="https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/405305/plotting-simple-implicit-equations</a></li>
 </ul>
 <h3 id="requirements-gnuplot">Requirements: Gnuplot</h3>
-<p>See the <a href="http://www.gnuplot.info">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh">homebrew</a>.</p>
+<p>See the <a href="http://www.gnuplot.info" target="_blank" rel="noopener">Gnuplot website</a> for installation instructions. In MacOS this is very easy to do using <a href="https://brew.sh" target="_blank" rel="noopener">homebrew</a>.</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.</li>
+<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
 <li>To install Gnuplot, just run:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install gnuplot
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install gnuplot
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="implicit-plots-in-tikz-using-gnuplot">Implicit plots in TikZ using Gnuplot</h3>
 <p>To plot $f(x,y)=g(x,y)$ in Gnuplot, one plots the slice $z=0$ of the surface $$z=f(x,y)-g(x,y).$$ The code to do this in TikZ is pretty clean.</p>
 <p>Here is a sample:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-</span><span style="color:#75715e">% Enrique Acosta, 2022
-</span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-</span><span style="color:#75715e">% To make pdf:
-</span><span style="color:#75715e">% ----------------------------------------
-</span><span style="color:#75715e">% *  Have gnuplot installed (brew install gnuplot)
-</span><span style="color:#75715e">% 
-</span><span style="color:#75715e">% *  Compile this with shellscape: 
-</span><span style="color:#75715e">%    pdflatex -shell-escape ChaslesCubic.tex
-</span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
-<span style="color:#66d9ef">\usepackage</span>{pgfplots}
-<span style="color:#66d9ef">\pgfplotsset</span>{compat=newest}
-<span style="color:#66d9ef">\begin</span>{document}
-
-<span style="color:#66d9ef">\def\a</span>{-3.3}
-<span style="color:#66d9ef">\def\b</span>{5.4}
-<span style="color:#66d9ef">\def\c</span>{1.5}
-<span style="color:#66d9ef">\def\d</span>{4}
-
-<span style="color:#66d9ef">\begin</span>{tikzpicture}
-<span style="color:#66d9ef">\begin</span>{axis}[xmin=-1, xmax=1, ymin=-1, ymax=1]
-
-    <span style="color:#66d9ef">\addplot</span>[blue,
-        no markers,
-        raw gnuplot,
-        thick,
-        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
-</span><span style="color:#75715e"></span>     ] gnuplot {
-        f(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
-        set xrange [-1:1];
-        set yrange [-1:1];
-        set cntrparam levels incremental 0.001, 0.001, 0.001;
-        set cont base;
-        set view 0,0;
-        unset surface;
-        set isosamples 100,100;
-        splot f(x,y);
-    };
-
-    <span style="color:#75715e">% Equation of the curve
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[blue, fill=white]</span> at (0,0.7) {<span style="color:#e6db74">$</span>y<span style="color:#f92672">=</span>\a x^{<span style="color:#ae81ff">3</span>}<span style="color:#f92672">+</span>\b x^{<span style="color:#ae81ff">2</span>}y<span style="color:#f92672">+</span>\c xy^{<span style="color:#ae81ff">2</span>}<span style="color:#f92672">+</span>\d y^{<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>};
-<span style="color:#66d9ef">\end</span>{axis}
-<span style="color:#66d9ef">\end</span>{tikzpicture}
-<span style="color:#66d9ef">\end</span>{document}
-
-</code></pre></div><p>And here is the beautiful output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% Enrique Acosta, 2022
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% To make pdf:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% ----------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% *  Have gnuplot installed (brew install gnuplot)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% *  Compile this with shellscape: 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%    pdflatex -shell-escape ChaslesCubic.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfplotsset</span>{compat=newest}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\a</span>{-3.3}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\b</span>{5.4}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\c</span>{1.5}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\d</span>{4}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}[xmin=-1, xmax=1, ymin=-1, ymax=1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\addplot</span>[blue,
+</span></span><span style="display:flex;"><span>        no markers,
+</span></span><span style="display:flex;"><span>        raw gnuplot,
+</span></span><span style="display:flex;"><span>        thick,
+</span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span><span style="display:flex;"><span>        f(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
+</span></span><span style="display:flex;"><span>        set xrange [-1:1];
+</span></span><span style="display:flex;"><span>        set yrange [-1:1];
+</span></span><span style="display:flex;"><span>        set cntrparam levels incremental 0.001, 0.001, 0.001;
+</span></span><span style="display:flex;"><span>        set cont base;
+</span></span><span style="display:flex;"><span>        set view 0,0;
+</span></span><span style="display:flex;"><span>        unset surface;
+</span></span><span style="display:flex;"><span>        set isosamples 100,100;
+</span></span><span style="display:flex;"><span>        splot f(x,y);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation of the curve
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[blue, fill=white]</span> at (0,0.7) {<span style="color:#e6db74">$</span>y<span style="color:#f92672">=</span>\a x^{<span style="color:#ae81ff">3</span>}<span style="color:#f92672">+</span>\b x^{<span style="color:#ae81ff">2</span>}y<span style="color:#f92672">+</span>\c xy^{<span style="color:#ae81ff">2</span>}<span style="color:#f92672">+</span>\d y^{<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>And here is the beautiful output:</p>
 <figure><img src="ChaslesCubic.png" width="600px"/>
 </figure>
 
-<p>The curve is a <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml">Chasles Cubic</a> of the form
+<p>The curve is a <a href="https://mathcurve.com/courbes2d.gb/cubicdechasles/cubicdechasles.shtml" target="_blank" rel="noopener">Chasles Cubic</a> of the form
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
 <p>You can play with the parameters $a,b,c,d$ yourself in the following desmos interactive I built. Desmos, is <em>very good</em> at interactivity!</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/vdfa8tdiiv" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/vdfa8tdiiv" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/vdfa8tdiiv" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <p>Back to the TikZ code, here are some details:</p>
 <ul>
 <li>
 <p>Gnuplot is run inside the TikZ code in the following piece:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\addplot</span>[blue,
-        no markers,
-        raw gnuplot,
-        thick,
-        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
-</span><span style="color:#75715e"></span>     ] gnuplot {
-        F(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
-        set xrange [-1:1];
-        set yrange [-1:1];
-        set cntrparam levels incremental 0.001, 0.001, 0.001;
-        set cont base;
-        set view 0,0;
-        unset surface;
-        set isosamples 100,100;
-        splot F(x,y);
-    };
-</code></pre></div><p>This produces, using Gnuplot, the surface plot for $F(x,y)=0$, so for
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span>[blue,
+</span></span><span style="display:flex;"><span>        no markers,
+</span></span><span style="display:flex;"><span>        raw gnuplot,
+</span></span><span style="display:flex;"><span>        thick,
+</span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span><span style="display:flex;"><span>        F(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
+</span></span><span style="display:flex;"><span>        set xrange [-1:1];
+</span></span><span style="display:flex;"><span>        set yrange [-1:1];
+</span></span><span style="display:flex;"><span>        set cntrparam levels incremental 0.001, 0.001, 0.001;
+</span></span><span style="display:flex;"><span>        set cont base;
+</span></span><span style="display:flex;"><span>        set view 0,0;
+</span></span><span style="display:flex;"><span>        unset surface;
+</span></span><span style="display:flex;"><span>        set isosamples 100,100;
+</span></span><span style="display:flex;"><span>        splot F(x,y);
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div><p>This produces, using Gnuplot, the surface plot for $F(x,y)=0$, so for
 $$
 y-\left(\backslash a * x^3+ \backslash b * x^2 * y+ \backslash c * x * y^2+ \backslash d * y^3\right)=0,
 $$
@@ -255,11 +255,11 @@ $$</p>
 </li>
 <li>
 <p>The <code>\a</code>, <code>\b</code>, <code>\c</code> and <code>\d</code> are the parameters, which one can change by changing their definitions in this piece of the code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\def\a</span>{-3.3}
-<span style="color:#66d9ef">\def\b</span>{5.4}
-<span style="color:#66d9ef">\def\c</span>{1.5}
-<span style="color:#66d9ef">\def\d</span>{4}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\a</span>{-3.3}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\b</span>{5.4}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\c</span>{1.5}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\d</span>{4}
+</span></span></code></pre></div></li>
 <li>
 <p>So, the TikZ code is really a &ldquo;ChaslesCubic pdf generator&rdquo;, giving the graph of the cubic
 $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}$$
@@ -267,8 +267,8 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
 </li>
 <li>
 <p>To run the code one needs to run LaTeX in a special mode that allows it to execute Gnuplot. Specifically, one needs to run <code>pdflatex</code> with the <code>shell-escape</code> flag, as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pdflatex -shell-escape ChaslesCubic.tex
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pdflatex -shell-escape ChaslesCubic.tex
+</span></span></code></pre></div></li>
 </ul>
 <p>That is it! Looks like TikZ code, is compiled just like TikZ code, but uses Gnuplot to handle the delicate numerical calculations.</p>
 <h2 id="making-the-gif-animation">Making the gif Animation</h2>
@@ -283,53 +283,53 @@ for the specified values of <code>\a</code>, <code>\b</code>, <code>\c</code> an
 <p>I had mentioned ImageMagick in <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">another post</a> in which it played a crucial role in getting good quality pngs for the web out of vector graphic pdfs. Here it plays an equally important role.</p>
 <p>How to get ImageMagick for MacOS:</p>
 <ul>
-<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh">website</a>.</li>
-<li>Install <a href="https://imagemagick.org/">ImageMagick</a> from the terminal using Homebrew by executing the command:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install imagemagick
-</code></pre></div></li>
+<li>Install Homebrew if you don&rsquo;t have it already (from the terminal.app). Instructions at their <a href="https://brew.sh" target="_blank" rel="noopener">website</a>.</li>
+<li>Install <a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install imagemagick
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="making-multiple-tikz-figures-with-a-varying-parameter">Making multiple TikZ figures with a varying parameter</h3>
 <p>This is surprisingly simple. The code just looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {0,0.5,1.0,...,10}{
-   <span style="color:#66d9ef">\begin</span>{tikzpicture}
-      ... 
-         figure specifications for the picture with value <span style="color:#66d9ef">\a</span>
-      ...
-   <span style="color:#66d9ef">\end</span>{tikzpicture}
-}
-</code></pre></div><p>This will create one new pdf page with a new figure using the value of $a$. Page 1 will correspond to $a=0$, page 2 will be $a=0.5$, page 3 will be $a=1.0$, and so on up to $a=10$.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {0,0.5,1.0,...,10}{
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>      ... 
+</span></span><span style="display:flex;"><span>         figure specifications for the picture with value <span style="color:#66d9ef">\a</span>
+</span></span><span style="display:flex;"><span>      ...
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This will create one new pdf page with a new figure using the value of $a$. Page 1 will correspond to $a=0$, page 2 will be $a=0.5$, page 3 will be $a=1.0$, and so on up to $a=10$.</p>
 <p>In the case of the animation at the beginning of this post, the code is the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {-4, -3.8, ..., 4}{
-    <span style="color:#66d9ef">\begin</span>{tikzpicture}
-    <span style="color:#66d9ef">\begin</span>{axis}[xmin=-3, xmax=3, ymin=-8, ymax=8]
-    <span style="color:#66d9ef">\addplot</span>[blue,
-        no markers,
-        raw gnuplot,
-        thick,
-        empty line = jump <span style="color:#75715e">% this is the default behaviour
-</span><span style="color:#75715e"></span>     ] gnuplot {
-        f(x,y)=x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+5.8*x);
-        set xrange [-3:3];
-        set yrange [-8:8];
-        set cntrparam levels incremental 0.001, 0.001, 0.001;
-        set cont base;
-        set view 0,0;
-        unset surface;
-        set isosamples 100,100;
-        splot f(x,y);
-    };
-
-    <span style="color:#75715e">% Equation with white around it
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
-
-    <span style="color:#75715e">% Print the value of a
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
-    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
-
-    <span style="color:#66d9ef">\end</span>{axis}
-    <span style="color:#66d9ef">\end</span>{tikzpicture}
-}
-</code></pre></div><p>(code must be warpped around the usual TikZ commands &ndash; full code can be downloaded <a href="gnuplotTest.tex">here</a>.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\a</span> in {-4, -3.8, ..., 4}{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{axis}[xmin=-3, xmax=3, ymin=-8, ymax=8]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\addplot</span>[blue,
+</span></span><span style="display:flex;"><span>        no markers,
+</span></span><span style="display:flex;"><span>        raw gnuplot,
+</span></span><span style="display:flex;"><span>        thick,
+</span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">% this is the default behaviour
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span><span style="display:flex;"><span>        f(x,y)=x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+5.8*x);
+</span></span><span style="display:flex;"><span>        set xrange [-3:3];
+</span></span><span style="display:flex;"><span>        set yrange [-8:8];
+</span></span><span style="display:flex;"><span>        set cntrparam levels incremental 0.001, 0.001, 0.001;
+</span></span><span style="display:flex;"><span>        set cont base;
+</span></span><span style="display:flex;"><span>        set view 0,0;
+</span></span><span style="display:flex;"><span>        unset surface;
+</span></span><span style="display:flex;"><span>        set isosamples 100,100;
+</span></span><span style="display:flex;"><span>        splot f(x,y);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation with white around it
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Print the value of a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{axis}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>(code must be warpped around the usual TikZ commands &ndash; full code can be downloaded <a href="gnuplotTest.tex">here</a>.)</p>
 <p>This plots the algebraic curve $$x(x^2+y^2)=a y+5.8 x$$ for varying values of $a$, one value per page. The parameter $a$ is varying as $a=-4,-3.8,-3.6, &hellip;,0.0,0.2,&hellip;,4.0$, so this code creates a 41 page pdf, one page and plot for each value of $a$! If interested, you can download the pdf <a href="gnuplotTest.pdf">here</a>. It is pretty small, at 188kb.</p>
 <p>The last lines in the code add the nice looking LaTeX equation with a white background on top of the curve, and the value of $a$ in the display <code>a=___</code> on the bottom left.</p>
 <p>This is the frame corresponding to $a=1.2$:</p>
@@ -349,8 +349,8 @@ $$x(x^2+y^2-5.8)=0.$$
 The last equation shows that the cubic curve for $a=0$ is the union of the vertical line $x=0$ and the degree two circle $x^2+y^2=5.8$.</p>
 <h3 id="creating-the-gif-out-of-the-multi-page-pdf">Creating the gif out of the multi-page pdf</h3>
 <p>This is a breeze with imageMagick once one has the pdf with one frame per page. Just run in the terminal:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#ae81ff">300</span> -delay <span style="color:#ae81ff">5</span> -loop <span style="color:#ae81ff">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
-</code></pre></div><p>The density parameter determines the size and quality of each frame (300 is pretty high), the delay determines the speed of the animation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert -density <span style="color:#ae81ff">300</span> -delay <span style="color:#ae81ff">5</span> -loop <span style="color:#ae81ff">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
+</span></span></code></pre></div><p>The density parameter determines the size and quality of each frame (300 is pretty high), the delay determines the speed of the animation.</p>
 <p>Here is the gif once more:</p>
 <figure><img src="gnuplotTest.gif" width="500px"/>
 </figure>
@@ -363,36 +363,36 @@ The last equation shows that the cubic curve for $a=0$ is the union of the verti
 <p>The code for this last animation is <a href="TikzLineAnimation.tex">here</a>.</p>
 <h2 id="one-final-note-on-use-of-gnuplot">One final note on use of Gnuplot</h2>
 <p>The method I described to do the implicit plot using Gnuplot uses raw Gnuplot. There seems to be an even more straightforward method in newer versions of pgfplots that use <code>[contour gnuplot={levels={0}]</code> in a regular 3d plot. I played around with this a bit, and it seemed to be both slower and not deal with singularities as well as the method I outlined above. Here is how the code to plot $x(x^2+y^2)=(ay+5.8 x)$ would look like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
-<span style="color:#66d9ef">\usepackage</span>{pgfplots}
-<span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
-
-<span style="color:#66d9ef">\begin</span>{document}
-    <span style="color:#66d9ef">\def\a</span>{1.2}
-
-    <span style="color:#66d9ef">\begin</span>{tikzpicture}
-    <span style="color:#66d9ef">\begin</span>{axis}[view={0}{90}, xmin=-3, xmax=3]
-    
-    <span style="color:#66d9ef">\addplot</span>3 [
-        domain=-3:3,
-        domain y=-8:8,
-        samples=150,
-        thick,
-        contour gnuplot={levels={0}, labels=false},
-    ]{x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+<span style="color:#66d9ef">\b*</span>x)};
-
-    <span style="color:#75715e">% Equation with white around it
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span> x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
-
-    <span style="color:#75715e">% Print the value of a
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
-    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
-
-    <span style="color:#66d9ef">\end</span>{axis}
-    <span style="color:#66d9ef">\end</span>{tikzpicture}
-
-<span style="color:#66d9ef">\end</span>{document}
-</code></pre></div><p>There also seems to be a way to do these implicit plots in TikZ without depending on Gnuplot, but relying on compiling the .tex file with LuaLaTeX instead of pdfLaTeX. But this is the subject of a possible future blog entry&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\def\a</span>{1.2}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\begin</span>{axis}[view={0}{90}, xmin=-3, xmax=3]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\addplot</span>3 [
+</span></span><span style="display:flex;"><span>        domain=-3:3,
+</span></span><span style="display:flex;"><span>        domain y=-8:8,
+</span></span><span style="display:flex;"><span>        samples=150,
+</span></span><span style="display:flex;"><span>        thick,
+</span></span><span style="display:flex;"><span>        contour gnuplot={levels={0}, labels=false},
+</span></span><span style="display:flex;"><span>    ]{x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+<span style="color:#66d9ef">\b*</span>x)};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation with white around it
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span> x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Print the value of a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{axis}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
+</span></span></code></pre></div><p>There also seems to be a way to do these implicit plots in TikZ without depending on Gnuplot, but relying on compiling the .tex file with LuaLaTeX instead of pdfLaTeX. But this is the subject of a possible future blog entry&hellip;</p>
 
   </div>
 
@@ -409,7 +409,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

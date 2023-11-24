@@ -279,6 +279,19 @@
     <loc>https://enriqueacosta.github.io/blog/es/tags/probabilidad-condicional/</loc>
     <lastmod>2022-03-07T15:25:05-05:00</lastmod>
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</loc>
+    <lastmod>2022-02-27T16:02:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/"
+                />
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/tags/cambio-climatico/</loc>
     <lastmod>2022-02-27T16:02:00-05:00</lastmod>
   </url><url>
@@ -309,19 +322,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</loc>
     <lastmod>2022-02-27T16:02:00-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</loc>
-    <lastmod>2022-02-27T16:02:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</loc>
     <lastmod>2022-02-03T18:56:42-05:00</lastmod>

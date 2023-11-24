@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -128,7 +128,7 @@
   <div>
   <p>Ever since the Covid-19 pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again.</p>
 <p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the details or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
-<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Feature Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
+<p>I finally found an <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">AMS Feature Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p>Before going any further, I need to establish some terminology.</p>
@@ -147,13 +147,14 @@
 <li>a low quality test has more false negatives, and more false positives.</li>
 </ul>
 <p>Now, the thing is, this is not entirely true! The percentages for each case depend on the population that one is testing and the moment of time one is doing so. One cannot look at the specification sheet of a PCR Covid-19 test and read &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;. A statement like this simply cannot be given.</p>
-<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a> by Bill Casselman, and what I show and explain in this blog post.</p>
+<p>Wrapping one&rsquo;s head around this fact, and understanding why it is so is the content of the <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">AMS Column</a> by Bill Casselman, and what I show and explain in this blog post.</p>
 <p>I will try my best to be self contained in what follows so there is no need to read the column before going on. Hopefully the column will make even more sense after reading this!</p>
 <h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!</h3>
 <p>The applet below gives the chances that a test result is actually true (true negative, or true positive).</p>
 <!-- raw HTML omitted -->
 <div>
-    <iframe src="https://www.desmos.com/calculator/0hqs7ihwqm" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/0hqs7ihwqm" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/0hqs7ihwqm" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <!-- raw HTML omitted -->
 <h4 id="how-it-works-and-what-it-says">How it works, and what it says:</h4>
@@ -171,17 +172,19 @@
 <h4 id="and-here-is-its-complement-applet-about-false-test-results">And here is its complement applet, about false test results:</h4>
 <p>The applet below shows the chances of a test result being false (false negative, or false positive). Move the point $p$, and change the quality of the test by changing $a$ and $b$!</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/plddkxiq0r" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/plddkxiq0r" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/plddkxiq0r" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <!-- raw HTML omitted -->
 <h4 id="here-they-are-together-all-true-and-false-possible-outcomes-in-all-their-messy-glory">Here they are together (all true and false possible outcomes), in all their messy glory:</h4>
 <div>
-    <iframe src="https://www.desmos.com/calculator/4i3v7br7mm" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/4i3v7br7mm" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/4i3v7br7mm" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="how-are-these-applets-generated">How are these applets generated?</h2>
-<p>The short answer is that I created them using <a href="https://www.desmos.com/calculator">desmos</a> by building on what Bill Casselman explains in his <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">AMS Column</a>, but I provide a detailed explanation with lots of pictures below!</p>
+<p>The short answer is that I created them using <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">desmos</a> by building on what Bill Casselman explains in his <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">AMS Column</a>, but I provide a detailed explanation with lots of pictures below!</p>
 <h3 id="some-background---probability-trees">Some background - probability trees</h3>
 <p>Probabilities multiply, and it is often useful to visualize this in trees.</p>
 <p>Here is an example:
@@ -346,9 +349,10 @@ This increases the chances&hellip;.</p>
 <p>As you may be starting to see, the answer to the simple questions one makes about a Covid-19 test result are not that simple to answer!</p>
 <h4 id="plots-for-different-values-of-a-and-b">Plots for different values of $a$ and $b$</h4>
 <p>Below is an interactive desmos plot of the above plot, with sliders for the sensitivity and specificity $a$, $b$ of the test, so that you can see how they affect the curve that answers the question (1) “I got a negative test result, what are the chances I am really infected?&quot;</p>
-<p>(it may be better to open this in its own screen, so if you want to play with it, follow this <a href="https://www.desmos.com/calculator/qujtozkacg">link</a>)
+<p>(it may be better to open this in its own screen, so if you want to play with it, follow this <a href="https://www.desmos.com/calculator/qujtozkacg" target="_blank" rel="noopener">link</a>)
 <div>
-    <iframe src="https://www.desmos.com/calculator/yjcszjppgd" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/yjcszjppgd" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/yjcszjppgd" target="_blank">link</a> if the interactive does not load.</p>
 </div></p>
 <!-- raw HTML omitted -->
 <p>You can also generate plots for other values of $a$ and $b$ using the TikZ+pgfplots <a href="CovidFalseNegative.tex">souce file</a> I created to make the figures in this post. You just need to change the numbers in the <code>\pgfmathsetmacro{\SensA}{0.95}</code> and <code>\pgfmathsetmacro{\SpecB}{0.85}</code> (they need to be given in decimal form, not percentages) and run pdflatex on them.</p>
@@ -367,9 +371,10 @@ This increases the chances&hellip;.</p>
 <p>Then there are issues about the time of the test and possible time of infection&hellip; the values of $a$ and $b$ may change for a specific test if it is &ldquo;too early&rdquo; or &ldquo;too late&rdquo; to test. Estimates have to be made everywhere&hellip;</p>
 <h2 id="desmos-applets-again">Desmos Applets again!</h2>
 <p>Ok, so I think this covers all that was needed to understand what went into generating the desmos plots to figure out the chances that a covid-19 tests results are true or false.</p>
-<p>Here they are again. So many moving parts that it is hard to understand what is going on! Try thinking of a specific case you have gone through, and figure out what it would say in that case. Also consider opening the appled in full size by following this <a href="https://www.desmos.com/calculator/eeywplgqef">link</a>.</p>
+<p>Here they are again. So many moving parts that it is hard to understand what is going on! Try thinking of a specific case you have gone through, and figure out what it would say in that case. Also consider opening the appled in full size by following this <a href="https://www.desmos.com/calculator/eeywplgqef" target="_blank" rel="noopener">link</a>.</p>
 <div>
-    <iframe src="https://www.desmos.com/calculator/gr87mrclsf" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <iframe src="https://www.desmos.com/calculator/gr87mrclsf" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
+    <p> Follow this <a href="https://www.desmos.com/calculator/gr87mrclsf" target="_blank">link</a> if the interactive does not load.</p>
 </div>
 <h2 id="what-to-take-from-all-of-this">What to take from all of this?</h2>
 <ul>
@@ -399,7 +404,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.110.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2022
+    <p>2023
       
       
       
@@ -128,7 +128,7 @@
   <div>
   <p>Desde el inicio de la pandemia de Covid-19 me ha estado persiguiendo el asunto de interpretar de manera correcta los resultados de las pruebas de laboratorio de Covid-19.</p>
 <p>Sabía que la probabilidad de que una prueba de laboratorio de Covid-19 diera información correcta depende de la proporción de la población que se encuentra infectada en el momento que se hizo la prueba, pero no conocía los detalles ni entendía por qué podía pasar esto. Cada vez que trataba de leer al respecto terminaba leyendo artículos en internet con muchas tablas y números inventados de casos positivos y negativos que no me ayudaban a entender el asunto con claridad.</p>
-<p>Finalmente encontré una <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a> escrita por Bill Casselman que me permitió entender mejor el asunto. En esta entrada de blog doy una explicación muy gráfica usando árboles de probabilidad algo distinta a la de la columna, doy algunos detalles adicionales y muestro algunas gráficas interactivas que hice para explorar las ideas relacionadas.</p>
+<p>Finalmente encontré una <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">columna en la página de la American Mathematical Society</a> escrita por Bill Casselman que me permitió entender mejor el asunto. En esta entrada de blog doy una explicación muy gráfica usando árboles de probabilidad algo distinta a la de la columna, doy algunos detalles adicionales y muestro algunas gráficas interactivas que hice para explorar las ideas relacionadas.</p>
 <p>Antes de continuar es necesario establecer terminología clave.</p>
 <h3 id="terminología">Terminología</h3>
 <ul>
@@ -145,7 +145,7 @@
 <li>Una prueba de baja calidad tiene más falsos negativos y más falsos positivos.</li>
 </ul>
 <p>¡Esto no es del todo cierto! Los porcentajes para cada caso dependen de la población en la que se hizo la prueba y el momento en el que se hizo. ¡Uno no puede mirar la hoja de especificación de una prueba de PCR Covid-19 y leer &ldquo;¡Menos de 1% falsos negativos!&rdquo;. Una afirmación de este estilo simplemente no se puede dar.</p>
-<p>Entender el por qué de este hecho es el contenido de la <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a> de Bill Casselman y lo que muestro y explico en esta entrada de blog.</p>
+<p>Entender el por qué de este hecho es el contenido de la <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">columna en la página de la American Mathematical Society</a> de Bill Casselman y lo que muestro y explico en esta entrada de blog.</p>
 <p>Haré todo lo posible para ser auto-contenido en lo que sigue, por lo que no es necesario leer la columna antes de continuar. ¡Ojalá la columna sea más fácil de entender después de leer esto!</p>
 <h3 id="antes-de-continuar-estas-son-las-gráficas-interactivas-que-hice">Antes de continuar, ¡estas son las gráficas interactivas que hice!</h3>
 <p>La gráfica a continuación da las probabilidades de que un resultado de prueba sea realmente verdadero (verdadero negativo o verdadero positivo).
@@ -177,7 +177,7 @@
 </div>
 <!-- raw HTML omitted -->
 <h2 id="cómo-hice-esas-gráficas-interactivas">¿Cómo hice esas gráficas interactivas?</h2>
-<p>La respuesta corta es que las creé usando <a href="https://www.desmos.com/calculator?lang=es">desmos</a> basado en  lo que explica Bill Casselman en su <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09">columna en la página de la American Mathematical Society</a>. La respuesta larga la doy a continuación en donde explico en detalle y de manera muy gráfica de donde salen esas gráficas.</p>
+<p>La respuesta corta es que las creé usando <a href="https://www.desmos.com/calculator?lang=es" target="_blank" rel="noopener">desmos</a> basado en  lo que explica Bill Casselman en su <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">columna en la página de la American Mathematical Society</a>. La respuesta larga la doy a continuación en donde explico en detalle y de manera muy gráfica de donde salen esas gráficas.</p>
 <h3 id="algunos-conceptos-previos----árboles-de-probabilidad">Algunos conceptos previos -  Árboles de Probabilidad</h3>
 <p>Las probabilidades se multiplican y a menudo es útil visualizar esto usando árboles.</p>
 <p>Este es un ejemplo:</p>
@@ -331,7 +331,7 @@ Esto aumenta las posibilidades &hellip;.</p>
 <p>Como puede comenzar a ver, ¡no es simple dar respuesta a las preguntas que uno se hace sobre los resultados de las pruebas Covid-19!</p>
 <h4 id="gráficas-para-diferentes-valores-de--a--y--b-">Gráficas para diferentes valores de $ a $ y $ b $</h4>
 <p>A continuación se muestra una gráfica interactiva de Desmos de la gráfica anterior que incluye deslizadores para la sensibilidad y especificidad $a$, $b$ de la prueba. Con ella puede ver cómo afectan $a$ y $b$ la curva que responde la pregunta (1) &ldquo;La prueba dió resultado negativo, ¿cuáles son las posibilidades de que en realidad esté infectado?&rdquo;
-(Puede que sea mejor abrir esto en su propia pantalla siguiendo este <a href="https://www.desmos.com/calculator/yoowkigjaa?lang=es">enlace</a>)
+(Puede que sea mejor abrir esto en su propia pantalla siguiendo este <a href="https://www.desmos.com/calculator/yoowkigjaa?lang=es" target="_blank" rel="noopener">enlace</a>)
 <div>
     <iframe src="https://www.desmos.com/calculator/yoowkigjaa?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div></p>
@@ -353,7 +353,7 @@ Esto aumenta las posibilidades &hellip;.</p>
 <h2 id="gráfico-interactivo-de-desmos-de-nuevo">¡Gráfico interactivo de Desmos de nuevo!</h2>
 <p>Bueno, ahora sí creo que esto cubre todo lo que se requiere para entender lo que se necesitó para generar las gráficas interactivas de desmos que dan las posibilidades de que los resultados de las pruebas Covid-19 sean verdaderos o falsos.</p>
 <p>Incluyo la gráfica completa de nuevo a continuación.</p>
-<p>¡Tantas partes móviles que es difícil de entender lo que está pasando! Intente pensar en un caso específico que le haya pasado, y revise lo que le diría en ese caso. También considere abrir las gráficas en una pantalla aparte en este <a href="https://www.desmos.com/calculator/cqbhotn6yl?lang=es">link</a>.</p>
+<p>¡Tantas partes móviles que es difícil de entender lo que está pasando! Intente pensar en un caso específico que le haya pasado, y revise lo que le diría en ese caso. También considere abrir las gráficas en una pantalla aparte en este <a href="https://www.desmos.com/calculator/cqbhotn6yl?lang=es" target="_blank" rel="noopener">link</a>.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/cqbhotn6yl?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 </div>
@@ -385,7 +385,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2022 Enrique Acosta. </br>
+      &copy 2023 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
