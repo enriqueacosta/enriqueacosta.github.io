@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/figures/</link>
     <description>Recent content in Figures on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Nov 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/figures/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/figures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating this blog part 4: Adding a Tikz Gallery</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>
+      <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</guid>
+      <description>TikZ is a programing language for creating images based on LaTeX. One writes TikZ code in a plain text file and gets as output a beautiful looking pdf image.
+The TikZ programming language was thought out to enable the code for an image to be surprisingly human-readable (not look like a bunch of numbers or obscure commands). When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.</description>
+    </item>
+    
     <item>
       <title>Recreating a Loxodromic Spiral Grid Using Complex Analysis</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</link>
