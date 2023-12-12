@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/tikz-gallery/3dproyectivecoords/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/tikz-gallery/3dproyectivecoords/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2023
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    
+  
+  
+  
+  
+
+<div class="tikz-gallery-entry">
+  <h1>Tikz Code Viewer </h1> 
+  
+
+  
+  <image src="3DProyectiveCoords.png" width="100%"/>
+
+  <h3>Source code</h3>
+  
+  
+  <p> 3DProyectiveCoords.tex </p>
+  
+  
+  
+  
+  
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Enrique Acosta
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% 2020
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=5pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\unitLength</span>{4cm}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}[x = (10:<span style="color:#66d9ef">\unitLength</span>), 
+</span></span><span style="display:flex;"><span>                    y = (130:0.6*<span style="color:#66d9ef">\unitLength</span>), 
+</span></span><span style="display:flex;"><span>                    z = (90:<span style="color:#66d9ef">\unitLength</span>),
+</span></span><span style="display:flex;"><span>                    line width=0.8pt]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usetikzlibrary</span>{calc}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usetikzlibrary</span>{3d} <span style="color:#75715e">%  To be able to use cylindrical coords
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Params
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% * lines extend \extra beyond the points [1,0,0], [0,1,0], [0,0,1]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% * circle centered at (-\extra,-\extra) through (0,1) and (1,0) 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   has radius \radius.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\pgfmathsetmacro</span>{<span style="color:#66d9ef">\extra</span>}{0.1}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfmathsetmacro</span>{<span style="color:#66d9ef">\radius</span>}{sqrt(2*<span style="color:#66d9ef">\extra</span>^2+2*<span style="color:#66d9ef">\extra</span>+1)}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Points
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\coordinate</span> (e0) at (0,0,0);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\coordinate</span> (e1) at (1,0,0);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\coordinate</span> (e2) at (0,1,0);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\coordinate</span> (e3) at (0,0,1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[below left]</span> at (e0) {<span style="color:#e6db74">$</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">]=(</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">)=</span>e_<span style="color:#ae81ff">0</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above right]</span> at (e1) {<span style="color:#e6db74">$</span>e_<span style="color:#ae81ff">1</span><span style="color:#f92672">=[</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">]</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=7pt, left=5pt ]</span> at (e2) {<span style="color:#e6db74">$</span><span style="color:#f92672">[</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span><span style="color:#f92672">]=</span>e_<span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above right]</span> at (e3) {<span style="color:#e6db74">$</span>e_<span style="color:#ae81ff">3</span><span style="color:#f92672">=[</span><span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">]</span><span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Lines
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[shorten &gt;=-10pt, shorten &lt;=-10pt]</span> 
+</span></span><span style="display:flex;"><span>    (e0) -- node[pos=0.4, below right]{<span style="color:#e6db74">$</span>\overline{e_<span style="color:#ae81ff">0</span>e_<span style="color:#ae81ff">1</span>}<span style="color:#f92672">=</span>\{x_<span style="color:#ae81ff">2</span><span style="color:#f92672">=</span>x_<span style="color:#ae81ff">3</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>\}<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>    (e1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[shorten &gt;=-10pt, shorten &lt;=-10pt]</span>  
+</span></span><span style="display:flex;"><span>    (e0) -- node[midway, below left] {<span style="color:#e6db74">$</span>\{x_<span style="color:#ae81ff">1</span><span style="color:#f92672">=</span>x_<span style="color:#ae81ff">3</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>\}<span style="color:#f92672">=</span>\overline{e_<span style="color:#ae81ff">0</span>e_<span style="color:#ae81ff">2</span>}<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>    (e2);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[shorten &gt;=-10pt, shorten &lt;=-10pt]</span>
+</span></span><span style="display:flex;"><span>    (e0) -- node[pos=0.65,  right] {<span style="color:#e6db74">$</span>\overline{e_<span style="color:#ae81ff">0</span>e_<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>}
+</span></span><span style="display:flex;"><span>    (e3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Arc notation is &#34;(starting pt) arc ...&#34;, so (starting pt) is computed by
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% adding the cylindrical coord (angle=0, radius=\radius, z=0) to the center.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[dashed]</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">$</span><span style="color:#f92672">(-</span>\extra,<span style="color:#f92672">-</span>\extra,<span style="color:#ae81ff">0</span><span style="color:#f92672">)+(</span>xyz cylindrical cs: angle<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, radius<span style="color:#f92672">=</span>\radius, z<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span>) 
+</span></span><span style="display:flex;"><span>arc[start angle=0, end angle=90, radius=<span style="color:#66d9ef">\radius</span>] 
+</span></span><span style="display:flex;"><span>node[midway, above ] {<span style="color:#e6db74">$</span>\overline{e_<span style="color:#ae81ff">1</span>e_<span style="color:#ae81ff">2</span>}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Arc notation in a different plane is &#34;(starting pt) [x=&lt;init vector in 1st
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% coord dir&gt;, y=&lt;init vector in 2st coord dir&gt;] arc ...&#34;, so (starting pt) is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% computed by adding the cylindrical coord (angle=0, radius=\radius, z=0) to
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% the center.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[red]</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">$</span><span style="color:#f92672">(</span><span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span>\extra,<span style="color:#f92672">-</span>\extra<span style="color:#f92672">)+(</span>xyz cylindrical cs: angle<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>, radius<span style="color:#f92672">=</span>\radius, z<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span>) 
+</span></span><span style="display:flex;"><span>[x={(0,1,0)},y={(0,0,1)}] arc [start angle=0, end angle=90, radius=<span style="color:#66d9ef">\radius</span>] 
+</span></span><span style="display:flex;"><span>node [pos=0.3, above left]{<span style="color:#e6db74">$</span>\{x_<span style="color:#ae81ff">0</span><span style="color:#f92672">=</span>x_<span style="color:#ae81ff">1</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>\}<span style="color:#f92672">=</span>\overline{e_<span style="color:#ae81ff">2</span>e_<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[blue]</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">$</span><span style="color:#f92672">(-</span>\extra,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span>\extra<span style="color:#f92672">)+(</span>xyz cylindrical cs: angle<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, radius<span style="color:#f92672">=</span>\radius, z<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span><span style="color:#e6db74">$</span>) 
+</span></span><span style="display:flex;"><span>[x={(1,0,0)},y={(0,0,1)}] arc [start angle=0, end angle=90, radius=<span style="color:#66d9ef">\radius</span>] 
+</span></span><span style="display:flex;"><span>node [pos=0.4, above right]{<span style="color:#e6db74">$</span>\overline{e_<span style="color:#ae81ff">1</span>e_<span style="color:#ae81ff">3</span>}<span style="color:#f92672">=</span>\{x_<span style="color:#ae81ff">0</span><span style="color:#f92672">=</span>x_<span style="color:#ae81ff">2</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>\}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Draw points
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\point</span> in {e0, e1, e2, e3}{ 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\fill</span><span style="color:#a6e22e">[black]</span> (<span style="color:#66d9ef">\point</span>) circle (0.08cm);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}</span></span></code></pre></div>
+  
+  <h3> pdf vector graphics version </h3>
+  Download <a href="3DProyectiveCoords.pdf">here</a>
+
+
+
+  <h3>Posts where this image appears</h3>
+  <ul>
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+  </ul>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+      
+    
+  
+
+  <div>
+  
+  </div>
+
+</div>
+
+<h2>
+Subscribe
+</h2>
+<p>
+   Want to get an email when a new post is added? If so, subscribe <a href="subscribe/subscribe"> here</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2023 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -163,5 +163,50 @@ En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
 Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/es/tikz-gallery/3dproyectivecoords/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tikz-gallery/3dproyectivecoords/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/es/tikz-gallery/complexexpzeros-complexnumbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tikz-gallery/complexexpzeros-complexnumbers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/es/tikz-gallery/covidfalsenegative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tikz-gallery/covidfalsenegative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/es/tikz-gallery/fig-twistedcubic2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tikz-gallery/fig-twistedcubic2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/es/tikz-gallery/probabilitytreecardsthirddetails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tikz-gallery/probabilitytreecardsthirddetails/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

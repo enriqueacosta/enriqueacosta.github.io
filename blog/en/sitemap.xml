@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/animations/</loc>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/asymptotics/</loc>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -16,13 +22,10 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -34,23 +37,11 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/mathematics/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -62,11 +53,8 @@
                 href="https://enriqueacosta.github.io/blog/en/posts/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -77,6 +65,27 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</loc>
+    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
     <lastmod>2022-09-22T14:19:56-05:00</lastmod>
@@ -570,6 +579,80 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/3dproyectivecoords/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/3dproyectivecoords/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/3dproyectivecoords/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/complexexpzeros-complexnumbers/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/complexexpzeros-complexnumbers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/complexexpzeros-complexnumbers/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/covidfalsenegative/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/covidfalsenegative/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/covidfalsenegative/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/fig-twistedcubic2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/fig-twistedcubic2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/fig-twistedcubic2/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/maunaloathreemodelstikz150/</loc>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/probabilitytreecardsthirddetails/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/probabilitytreecardsthirddetails/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/probabilitytreecardsthirddetails/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tikz-gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tikz-gallery/"
                 />
   </url>
 </urlset>

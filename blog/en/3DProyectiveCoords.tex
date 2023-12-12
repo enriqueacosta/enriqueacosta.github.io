@@ -1,0 +1,74 @@
+% Enrique Acosta
+% 2020
+
+\documentclass[border=5pt, tikz]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+
+\def\unitLength{4cm}
+
+\begin{tikzpicture}[x = (10:\unitLength), 
+                    y = (130:0.6*\unitLength), 
+                    z = (90:\unitLength),
+                    line width=0.8pt]
+\usetikzlibrary{calc}
+\usetikzlibrary{3d} %  To be able to use cylindrical coords
+
+% Params
+% * lines extend \extra beyond the points [1,0,0], [0,1,0], [0,0,1]
+% * circle centered at (-\extra,-\extra) through (0,1) and (1,0) 
+%   has radius \radius.
+\pgfmathsetmacro{\extra}{0.1}
+\pgfmathsetmacro{\radius}{sqrt(2*\extra^2+2*\extra+1)}
+
+% Points
+\coordinate (e0) at (0,0,0);
+\coordinate (e1) at (1,0,0);
+\coordinate (e2) at (0,1,0);
+\coordinate (e3) at (0,0,1);
+
+\node[below left] at (e0) {$[1,0,0,0]=(0,0,0)=e_0$};
+\node[above right] at (e1) {$e_1=[0,1,0,0]$};
+\node[above=7pt, left=5pt ] at (e2) {$[0,0,1,0]=e_2$};
+\node[above right] at (e3) {$e_3=[0,0,0,1]$};
+
+% Lines
+\draw[shorten >=-10pt, shorten <=-10pt] 
+    (e0) -- node[pos=0.4, below right]{$\overline{e_0e_1}=\{x_2=x_3=0\}$}
+    (e1);
+
+\draw[shorten >=-10pt, shorten <=-10pt]  
+    (e0) -- node[midway, below left] {$\{x_1=x_3=0\}=\overline{e_0e_2}$}
+    (e2);
+
+\draw[shorten >=-10pt, shorten <=-10pt]
+    (e0) -- node[pos=0.65,  right] {$\overline{e_0e_3}$}
+    (e3);
+
+% Arc notation is "(starting pt) arc ...", so (starting pt) is computed by
+% adding the cylindrical coord (angle=0, radius=\radius, z=0) to the center.
+\draw[dashed]
+($(-\extra,-\extra,0)+(xyz cylindrical cs: angle=0, radius=\radius, z=0)$) 
+arc[start angle=0, end angle=90, radius=\radius] 
+node[midway, above ] {$\overline{e_1e_2}$};
+
+% Arc notation in a different plane is "(starting pt) [x=<init vector in 1st
+% coord dir>, y=<init vector in 2st coord dir>] arc ...", so (starting pt) is
+% computed by adding the cylindrical coord (angle=0, radius=\radius, z=0) to
+% the center.
+\draw[red]
+($(0,-\extra,-\extra)+(xyz cylindrical cs: angle=90, radius=\radius, z=0)$) 
+[x={(0,1,0)},y={(0,0,1)}] arc [start angle=0, end angle=90, radius=\radius] 
+node [pos=0.3, above left]{$\{x_0=x_1=0\}=\overline{e_2e_3}$};
+
+\draw[blue]
+($(-\extra,0,-\extra)+(xyz cylindrical cs: angle=0, radius=\radius, z=0)$) 
+[x={(1,0,0)},y={(0,0,1)}] arc [start angle=0, end angle=90, radius=\radius] 
+node [pos=0.4, above right]{$\overline{e_1e_3}=\{x_0=x_2=0\}$};
+
+% Draw points
+\foreach \point in {e0, e1, e2, e3}{ 
+    \fill[black] (\point) circle (0.08cm);
+};
+\end{tikzpicture}
+\end{document}

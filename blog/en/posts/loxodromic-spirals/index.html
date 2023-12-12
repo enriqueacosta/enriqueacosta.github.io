@@ -75,7 +75,7 @@
     <nav>
       <ul class="sidebar-nav">
         <li><a href="/blog/en">Home</a> </li>
-        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
     <p>2023
@@ -233,7 +233,7 @@ $$</p>
 $$
 z(t),\quad e^{i\frac{2\pi}{n}}z(t),\quad e^{i2\frac{2\pi}{n}}z(t),\quad e^{i3\frac{2\pi}{n}}z(t),\quad \ldots,\quad e^{in\frac{2\pi}{n}}z(t)=z(t)
 $$</p>
-<p>Here is the result for $n=4$, with 4 spirals. You can play around with the values of $a$ and $T$. Once again, the complicated formulas from the curves come from computing explicitly the real an complex pieces of $z(t)=e^{at}e^{it}$, $e^{i\frac{\pi}{4}}z(t)$, $e^{i\frac{\pi}{2}}z(t)$, $e^{i\frac{3\pi}{4}}z(t)$.</p>
+<p>Here is the result for $n=4$, with 4 spirals. You can play around with the values of $a$ and $T$. Once again, the complicated formulas from the curves come from computing explicitly the real an complex parts of $z(t)=e^{at}e^{it}$, $e^{i\frac{\pi}{4}}z(t)$, $e^{i\frac{\pi}{2}}z(t)$, $e^{i\frac{3\pi}{4}}z(t)$.</p>
 <div>
     <iframe src="https://www.desmos.com/calculator/di5it0g9nl" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/di5it0g9nl" target="_blank">link</a> if the interactive does not load.</p>
@@ -317,11 +317,11 @@ $$</p>
 <a href="https://en.wikipedia.org/wiki/Grapher" target="_blank" rel="noopener">MacOS Grapher app</a> was the best way to test things out.</p>
 <p>So, here is a thank you to MacOS Grapher!</p>
 <!-- raw HTML omitted -->
-<p>Mac OS Grapher allowed me to plot complex parametric plots of the form $f(t)=(az(t)+b)/(cz(t)+d)$ without having to figure out the real and imaginary parts (time consuming algebra and prone to error). Basically allowed me to test out ideas quickly, to play around and experiment without getting bogged down with the Algebra.</p>
+<p>Mac OS Grapher allowed me to plot complex parametric plots of the form $f(t)=(az(t)+b)/(cz(t)+d)$ without having to figure out the real and imaginary parts (time-consuming algebra and prone to error). Basically allowed me to test out ideas quickly, to play around and experiment without getting bogged down with the Algebra.</p>
 <p>It&rsquo;s a little gem that comes free with every Mac.</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>Here is a screenshot of the app as I was working for this post. Note in the menu on the left how thinks make more sense &ndash; define the spiral, then apply the Möbius transformation with no need to do any messy algebra.
+<p>Here is a screenshot of the app as I was working for this post. Note in the menu on the left how things make more sense &ndash; define the spiral, then apply the Möbius transformation with no need to do any messy algebra.
 <figure><img src="loxodrimic-grapher-screenshot.png"
          alt="Screenshot of the MacOS Grapher App while I was figuring out things for this post. You can download the file here" width="100%"/><figcaption>
             <p>Screenshot of the MacOS Grapher App while I was figuring out things for this post. You can download the file 
@@ -334,10 +334,10 @@ $$</p>
 <p>If we call the first spiral $$z_1(t)=e^{at}e^{it},$$ then we can change the $e^{it}$ to $e^{-it}$ to get a  spiral that winds in the opposite direction, but we don&rsquo;t know the &ldquo;windiness parameter&rdquo; that can make the intersection be right angles. So, let&rsquo;s say
 $$z_2(t)=e^{h(a)t}e^{-it}$$
 where $h(a)$ is the unknown windiness parameter for $z_2$, so that $z_1$ and $z_2$ intersect at right angles. How do we know that such an $h(a)$ exists? And if so, how do we find $h(a)$?</p>
-<p>Well, we just <em>assume</em> such and $h(a)$ exists, and we try to figure out what it is! So, here it goes.</p>
+<p>Well, we just <em>assume</em> such an $h(a)$ exists, and we try to figure out what it is! So, here it goes.</p>
 <!-- raw HTML omitted -->
 <p>Say $z^{*}$ is a point at which the two spirals intersect. This corresponds to some value $t=t_1$ for $z_1$ and $t=t_2$ for $z_2$. In other words, $z_1(t_1)=z^{*}=z_2(t_2)$.</p>
-<p>If we want them to be perpendicular, then the tangent vectors $z_1^\prime(t)$ and $z_2^\prime(t)$ must be perpendicular, so they must differ by a multiple of $i$ (since pultiplication by $i$ corresponds to rotation by $90$ degrees. Thus, there must be some real $r\neq0$ for which
+<p>If we want them to be perpendicular, then the tangent vectors $z_1^\prime(t)$ and $z_2^\prime(t)$ must be perpendicular, so they must differ by a multiple of $i$ (since multiplication by $i$ corresponds to rotation by $90$ degrees). Thus, there must be some real $r\neq0$ for which
 $$
 z_1^\prime(t_1)=ri\cdot z_2^\prime(t_2).
 $$</p>
@@ -349,7 +349,7 @@ and cancelling the $z^{*}$, we find
 $$
 a+i=ri(h(a)-i)
 $$
-So, if the $h(a)$ we are looking for exists, it must satisfy the above equation for some real number $r$, but equating real and imaginary parts in this equation we see that $r=a$ and $h(a)=1/a$.</p>
+So, if the $h(a)$ we are looking for exists, it must satisfy the above equation for some real number $r$. We are almost there! If we equate the real and imaginary parts in this equation we see that $r=a$ and $h(a)=1/a$.</p>
 <p>So, we conclude that $h(a)$ does exist, and it must be $1/a$.</p>
 <p>In other words, the spiral perpendicular to $$z_1(t)=e^{at}e^{it},$$ is $$z_2(t)=e^{t/a}e^{-it}.$$</p>
 <p>Done!</p>

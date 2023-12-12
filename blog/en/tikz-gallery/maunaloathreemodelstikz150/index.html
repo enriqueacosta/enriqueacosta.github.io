@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2023
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    
+  
+  
+  
+  
+
+<div class="tikz-gallery-entry">
+  <h1>Tikz Code Viewer </h1> 
+  
+
+  
+  <image src="MaunaLoaThreeModelsTikz150.png" width="100%"/>
+
+  <h3>Source code</h3>
+  
+  
+  <p> MaunaLoaThreeModelsTikz150.tex </p>
+  
+  
+  
+  
+  
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=0pt, 12pt, tikz]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand\Min</span>{0}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand\Max</span>{150}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% \pgfplotsset{domain = \Min : \Max}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = left
+</span></span><span style="display:flex;"><span>, width=300pt
+</span></span><span style="display:flex;"><span>, height=200pt
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymode = log
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, xlabel = {years since 1950}
+</span></span><span style="display:flex;"><span>, ylabel = {Mean CO<span style="color:#e6db74">$</span>_<span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span> (ppm)}     
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% , y label style = {yshift = 1em}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, ylabel near ticks  <span style="color:#75715e">% fixes position of ylabel (so that it does not crash with ticks)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, scaled ticks=false <span style="color:#75715e">% removes scaling on axis
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, yticklabel style={/pgf/number format/fixed} <span style="color:#75715e">%avoids scientific notation on axis
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymax=420
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymin=300
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , xmax = 65
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , xmin = 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , log ticks with fixed point
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , grid = both
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ytick ={300,320, 340, ...,420}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, legend style = {at={(0.03,0.85)},anchor=west} <span style="color:#75715e">% The command for legend position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, legend cell align = {left} <span style="color:#75715e">% The command for legend alignment
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>] 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 1 - super exponential
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = magenta
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% , only marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, mark = square*
+</span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
+</span></span><span style="display:flex;"><span>, style = thick
+</span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
+</span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{315.98*(1.0026+0.00003*x)^x};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[above left,pos=0.7]{$f(t)=315.98(1.0026+0.00003t)^t$}; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>f<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{super<span style="color:#f92672">-</span>exponential}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 2 -  exponential plus constant
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = cyan
+</span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
+</span></span><span style="display:flex;"><span>, style = thick
+</span></span><span style="display:flex;"><span>, mark = triangle*
+</span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
+</span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{267.277+48.703*(1.01823)^x};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[below right,pos=0.3]{$g(t)=267.277+48.703(1.01823)^t$};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>g<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{exponential plus constant}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 3 - quadratic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = orange
+</span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
+</span></span><span style="display:flex;"><span>, style = thick
+</span></span><span style="display:flex;"><span>, mark = diamond*
+</span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
+</span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{0.013*x^2+0.8055*x+315.5219};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[below right,pos=0.3]{$g(t)=267.277+48.703(1.01823)^t$};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>h<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{quadratic}<span style="color:#e6db74">$</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% C02 data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = blue
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% , only marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, mark = *
+</span></span><span style="display:flex;"><span>, mark options = {scale = 0.4}
+</span></span><span style="display:flex;"><span>, style = thick
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% , mark=none
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>] coordinates {<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(0,  315.98)
+</span></span><span style="display:flex;"><span>(1,  316.91)
+</span></span><span style="display:flex;"><span>(2,  317.64)
+</span></span><span style="display:flex;"><span>(3,  318.45)
+</span></span><span style="display:flex;"><span>(4,  318.99)
+</span></span><span style="display:flex;"><span>(5,  319.62)
+</span></span><span style="display:flex;"><span>(6,  320.04)
+</span></span><span style="display:flex;"><span>(7,  321.37)
+</span></span><span style="display:flex;"><span>(8,  322.18)
+</span></span><span style="display:flex;"><span>(9,  323.05)
+</span></span><span style="display:flex;"><span>(10, 324.62)
+</span></span><span style="display:flex;"><span>(11, 325.68)
+</span></span><span style="display:flex;"><span>(12, 326.32)
+</span></span><span style="display:flex;"><span>(13, 327.46)
+</span></span><span style="display:flex;"><span>(14, 329.68)
+</span></span><span style="display:flex;"><span>(15, 330.19)
+</span></span><span style="display:flex;"><span>(16, 331.12)
+</span></span><span style="display:flex;"><span>(17, 332.03)
+</span></span><span style="display:flex;"><span>(18, 333.84)
+</span></span><span style="display:flex;"><span>(19, 335.41)
+</span></span><span style="display:flex;"><span>(20, 336.84)
+</span></span><span style="display:flex;"><span>(21, 338.76)
+</span></span><span style="display:flex;"><span>(22, 340.12)
+</span></span><span style="display:flex;"><span>(23, 341.48)
+</span></span><span style="display:flex;"><span>(24, 343.15)
+</span></span><span style="display:flex;"><span>(25, 344.85)
+</span></span><span style="display:flex;"><span>(26, 346.35)
+</span></span><span style="display:flex;"><span>(27, 347.61)
+</span></span><span style="display:flex;"><span>(28, 349.31)
+</span></span><span style="display:flex;"><span>(29, 351.69)
+</span></span><span style="display:flex;"><span>(30, 353.2)
+</span></span><span style="display:flex;"><span>(31, 354.45)
+</span></span><span style="display:flex;"><span>(32, 355.7)
+</span></span><span style="display:flex;"><span>(33, 356.54)
+</span></span><span style="display:flex;"><span>(34, 357.21)
+</span></span><span style="display:flex;"><span>(35, 358.96)
+</span></span><span style="display:flex;"><span>(36, 360.97)
+</span></span><span style="display:flex;"><span>(37, 362.74)
+</span></span><span style="display:flex;"><span>(38, 363.88)
+</span></span><span style="display:flex;"><span>(39, 366.84)
+</span></span><span style="display:flex;"><span>(40, 368.54)
+</span></span><span style="display:flex;"><span>(41, 369.71)
+</span></span><span style="display:flex;"><span>(42, 371.32)
+</span></span><span style="display:flex;"><span>(43, 373.45)
+</span></span><span style="display:flex;"><span>(44, 375.98)
+</span></span><span style="display:flex;"><span>(45, 377.7)
+</span></span><span style="display:flex;"><span>(46, 379.98)
+</span></span><span style="display:flex;"><span>(47, 382.09)
+</span></span><span style="display:flex;"><span>(48, 384.02)
+</span></span><span style="display:flex;"><span>(49, 385.83)
+</span></span><span style="display:flex;"><span>(50, 387.64)
+</span></span><span style="display:flex;"><span>(51, 390.1)
+</span></span><span style="display:flex;"><span>(52, 391.85)
+</span></span><span style="display:flex;"><span>(53, 394.06)
+</span></span><span style="display:flex;"><span>(54, 396.74)
+</span></span><span style="display:flex;"><span>(55, 398.87)
+</span></span><span style="display:flex;"><span>(56, 401.01)
+</span></span><span style="display:flex;"><span>(57, 404.41)
+</span></span><span style="display:flex;"><span>(58, 406.76)
+</span></span><span style="display:flex;"><span>(59, 408.72)
+</span></span><span style="display:flex;"><span>(60, 411.66)
+</span></span><span style="display:flex;"><span>(61, 414.24)
+</span></span><span style="display:flex;"><span>(62, 416.45)
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addlegendentry</span>{Mauna Loa CO<span style="color:#e6db74">$</span>_<span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span> data};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}</span></span></code></pre></div>
+  
+  <h3> pdf vector graphics version </h3>
+  Download <a href="MaunaLoaThreeModelsTikz150.pdf">here</a>
+
+
+
+  <h3>Posts where this image appears</h3>
+  <ul>
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+      <li><a href="/blog/en/posts/tikz-web-export/">TikZ Web Export (pdf to png or svg)</a></li>
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+      <li><a href="/blog/en/posts/mauna-loa-superexponential/">Mauna Loa CO2 Growing Super-Exponentially?</a></li>
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+  </ul>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  
+  
+
+  <div>
+  
+  </div>
+
+</div>
+
+<h2>
+Subscribe
+</h2>
+<p>
+   Want to get an email when a new post is added? If so, subscribe <a href="subscribe/subscribe"> here</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2023 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

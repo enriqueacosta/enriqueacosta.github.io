@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/mathematics/</link>
     <description>Recent content in Mathematics on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Nov 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zeros of the Exponential Function</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</link>
+      <pubDate>Sun, 10 Dec 2023 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</guid>
+      <description>Here is a cool animation I made in 2012.
+The animation shows the complex zeros of the Taylor polynomials of the exponential function $e^z$. In this post I will explain what this means, and why it is interesting. I will also show the code in Sage to recreate the animation (which I originaly created in Mathematica in 2012). Unlike Mathematica, which is not free or open source, Sage is a Python-based open source mathematics software system that builds on top of many existing open-source packages.</description>
+    </item>
+    
     <item>
       <title>Recreating a Loxodromic Spiral Grid Using Complex Analysis</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</link>
