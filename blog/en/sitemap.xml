@@ -8,9 +8,6 @@
     <loc>https://enriqueacosta.github.io/blog/en/tags/asymptotics/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
     <xhtml:link
@@ -24,13 +21,7 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
@@ -46,39 +37,7 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/hugo/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/hugo/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/categories/hugo/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/mathematics/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
@@ -107,23 +66,13 @@
                 href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
-    <lastmod>2023-12-11T10:49:34-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
-                />
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
     <lastmod>2023-11-19T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</loc>
@@ -137,6 +86,9 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
     <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
+    <lastmod>2022-09-22T14:19:56-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/curves/</loc>
     <lastmod>2022-09-22T14:19:56-05:00</lastmod>
@@ -182,6 +134,19 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
     <lastmod>2022-09-22T14:19:56-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
+    <lastmod>2022-09-22T14:19:56-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/tikz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/tikz/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/ipe/</loc>
     <lastmod>2022-08-16T14:19:56-05:00</lastmod>
@@ -388,8 +353,37 @@
     <loc>https://enriqueacosta.github.io/blog/en/tags/quadratic/</loc>
     <lastmod>2022-02-09T16:02:00-05:00</lastmod>
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/hugo/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/hugo/</loc>
+    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/hugo/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
@@ -437,6 +431,9 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</loc>
+    <lastmod>2022-02-01T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
     <lastmod>2022-02-01T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/translating-mathematics-resources/</loc>

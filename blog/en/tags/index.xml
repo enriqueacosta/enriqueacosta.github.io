@@ -16,47 +16,11 @@
     </item>
     
     <item>
-      <title>Blog setup</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
-      <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Complex Functions</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</link>
       <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/hugo/</link>
-      <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multilingual i18n</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</link>
-      <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tikz</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
-      <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
       <description></description>
     </item>
     
@@ -111,6 +75,15 @@
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
+      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
       <description></description>
     </item>
     
@@ -241,6 +214,24 @@
     </item>
     
     <item>
+      <title>Blog setup</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/hugo/</link>
+      <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Listing Tags</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</link>
       <pubDate>Sat, 05 Feb 2022 21:12:04 -0500</pubDate>
@@ -264,6 +255,15 @@
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multilingual i18n</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</link>
+      <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</guid>
       <description></description>
     </item>
     
