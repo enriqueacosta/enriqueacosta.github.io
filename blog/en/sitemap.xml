@@ -2,14 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/animations/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/asymptotics/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -22,10 +16,13 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -37,11 +34,23 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/mathematics/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -53,8 +62,11 @@
                 href="https://enriqueacosta.github.io/blog/en/posts/"
                 />
   </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
+    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -65,27 +77,6 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</loc>
-    <lastmod>2023-12-10T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
-    <lastmod>2023-11-19T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
     <lastmod>2022-09-22T14:19:56-05:00</lastmod>
