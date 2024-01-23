@@ -5,7 +5,16 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
     <description>Recent content in Coding on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 4: Adding a TikZ Gallery</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>
+      <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</guid>
+      <description>TikZ is a programing language for creating images based on LaTeX. One writes TikZ &amp;ldquo;programing code&amp;rdquo; in a plain text file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &amp;ldquo;drawing instructions for a human&amp;rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates.</description>
+    </item>
+    
     <item>
       <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>

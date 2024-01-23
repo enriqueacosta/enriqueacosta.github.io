@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creating This Blog Part 4: Adding a TikZ Gallery &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2024
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Creating This Blog Part 4: Adding a TikZ Gallery</h1>
+  
+  
+  <time datetime=2024-01-14T10:49:34-0500 class="post-date">January 14, 2024</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup">Blog Setup</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/hugo">Hugo</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n">Multilingual i18n</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a>
+    
+  </p>
+  
+  
+  
+  <div>
+  <p>TikZ is a programing language for creating images based on 
+<a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One writes TikZ &ldquo;programing code&rdquo; in a 
+<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &ldquo;drawing instructions for a human&rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates. When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.</p>
+<p>Developing clear, human-readable, and flexible TikZ code is art I cherish and practice. <!-- raw HTML omitted --> I really enjoy looking at well thought out, readable code, specially when displayed next to the image it creates (be it my code, or someone else&rsquo;s).</p>
+<p>I have wanted to create a system in this blog to display TikZ code for figures alongside the actual figures themselves, but had been holding off because I wanted an efficient setup that did not involve manually creating separate pages for each figure. Duplicating content goes against my belief in avoiding unnecessary repetition, which makes maintaining the content much more difficult, as any changes have to be replicated multiple times.</p>
+<!-- raw HTML omitted -->
+<p>Well, I finally figured out a way to do this! See the new 
+<a href="tikz-gallery/">Tikz-gallery</a> in the sidebar of this blog. It is automatically generated from the source image files. Each gallery entry also includes a list of the blog posts where it appears, all generated automatically.</p>
+<p>I explain the setup for this automated gallery in detail in this blog post. You can read more about how I have set up this blog in these these 
+<a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">blog posts</a>.</p>
+<h2 id="how-the-system-works-right-now">How the system works right now</h2>
+<p>Here is an example to illustrate how the automated Tikz gallery works.</p>
+<p>Below is a pretty Tikz image I made in 2020 (it is a schematic figure of the projective space $\mathbb{P}^3$, but that is the content of another future post):</p>
+<figure><img src="3DProyectiveCoords.png"/>
+</figure>
+
+<p>To be able to include this image in this post, I already have the following files:</p>
+<ul>
+<li>The Tikz source file 
+<a href="3DProyectiveCoords.tex"><code>3DProyectiveCoords.tex</code></a>. This is a tiny file with the &ldquo;programing code&rdquo; to generate the image.</li>
+<li>The pdf vector graphics file  
+<a href="3DProyectiveCoords.pdf">3DProyectiveCoords.pdf</a> which is what LaTeX generates when one compiles the Tikz source file.</li>
+<li>A web-friendly png file 
+<a href="3DProyectiveCoords.png">3DProyectiveCoords.png</a> (the one that is being displayed above) that I created with Image Magick out of the pdf (see this related 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/">blog post</a>).</li>
+</ul>
+<p>To add this image to the Tikz gallery, all I have to do is create a new file (say <code>3DProyectiveCoords.md</code>) with this simple content:</p>
+<p>
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>: <span style="color:#e6db74">&#34;3DProyectiveCoords&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div>
+(the key here is that the <code>source:</code> attribute points to <code>3DProyectiveCoords</code> which is the name of the source code <code>.tex</code> file, but without the <code>.tex</code> extension)</p>
+<p>Then I place this new tiny file in the <code>tikz-gallery</code> folder that lives next to the folder with all the regular post entry files:</p>
+<pre tabindex="0"><code>content
+├── posts
+|   ├── ...       &lt;-- where all the regular blog post texts are placed.
+|   └── ...
+└── tikz-gallery
+    └── 3DProyectiveCoords.md   &lt;-- new Tikz-gallery entry file here
+</code></pre><p>That&rsquo;s it! Hugo takes this tiny file and automatically:</p>
+<ul>
+<li>Adds it to the Tikz Gallery list with a thumbnail</li>
+<li>Creates an HTML page for the image in which it:
+<ul>
+<li>displays the png of the image</li>
+<li>displays the LaTeX code that produced the image with syntax highlighting</li>
+<li>makes a link to download the vector graphic pdf version of the image</li>
+<li>lists all the blog posts in which the image appears</li>
+</ul>
+</li>
+</ul>
+<p>No content duplication, no copy pasting of source, no repetitive creation of pages in which the only thing that changes is a filename&hellip; just as it should be!</p>
+<p>For the above example image, here is:</p>
+<ul>
+<li>
+<a href="tikz-gallery/3dproyectivecoords">the automatically generated page for the image</a></li>
+<li>
+<a href="tikz-gallery/">how it shows up in the automatically generated Tikz-gallery</a></li>
+</ul>
+<p>If there is a Spanish version of the image (say, in this case, named <code>3DProyectiveCoords.es</code>), then I just create the corresponding file <code>3DProyectiveCoords.es.md</code> with the contents</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>: <span style="color:#e6db74">&#34;3DProyectiveCoords.es&#34;</span>
+</span></span><span style="display:flex;"><span>--- 
+</span></span></code></pre></div><p>and everything just works!</p>
+<h2 id="the-pieces-of-the-system">The pieces of the system</h2>
+<p>This is all set up using Hugo, the system that I use to create this blog. These are all the pieces that go into making the system work:</p>
+<ul>
+<li>Hugo Template for a page to display one Tikz image: in the file <code>layouts/tikz-gallery/single.html</code></li>
+<li>Hugo Template for the page that shows the full gallery (list of thumbnails): in the file <code>layouts/tikz-gallery/single.html</code></li>
+<li>Add an entry to the sidebar menu for the Galley by adjusting the Hugo configuration file</li>
+<li>Adjust the multilingual dictionary for all the headings and common texts that need Spanish and English versions.</li>
+</ul>
+<p>In what follows, I explain the details for each piece. I&rsquo;ll start with the multilingual setup since it makes the code for the templates easier to understand.</p>
+<h3 id="multilingual-texts-for-the-templates">Multilingual texts for the templates</h3>
+<p>To have the templates work both in Spanish and English one needs to set up multilingual text “snippets”. For example, to get a title that says &ldquo;Tikz Code Viewer&rdquo; in English and &ldquo;Visualizador de Tikz&rdquo; in Spanish, one can define a text snippet (which I decided to call <code>tikz-gallery-single-title</code>) and then have the title in the template be</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-single-title&#34;</span><span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span></code></pre></div><p>Here, the code <code>{{ i18n &quot;tikz-gallery-single-title&quot;}}</code> gets replaced by the right text in Spanish or English. This avoids needing to create separate template files for each language (again, the principle of avoiding unnecessary duplication). You can read more about this in this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/">other post</a> in which I explain how that whole multilingual system is set up.</p>
+<h3 id="template-for-a-page-to-display-one-tikz-image-together-with-its-source-code">Template for a page to display one Tikz image together with its source code</h3>
+<p>The template file is placed here:</p>
+<pre tabindex="0"><code>layouts
+├── default
+|   ├── ...
+|   └── ...
+├── partials
+|   ├── ...
+|   └── ...
+├── shortcodes
+|   ├── ...
+|   └── ...
+└── tikz-gallery
+    └── single.html   &lt;-- Template file here
+</code></pre><p>This is the content of the <code>single.html</code> template file. I explain below what some key pieces in this template file do.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$source</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Params.source</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.tex&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFileWithPath</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;static/&#34;</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.tex&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.png&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pdfFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.pdf&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tikz-gallery-entry&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-single-title&#34;</span> <span style="color:#75715e">}}</span> &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">image</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h3</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-source-code&#34;</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span>&gt; <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFile</span> <span style="color:#75715e">}}</span> &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Load file contents --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$fileContents</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">readFile</span> <span style="color:#a6e22e">$sourceFileWithPath</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">safeHTML</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Display code with latex syntax highligthing --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">highlight</span> <span style="color:#a6e22e">$fileContents</span> <span style="color:#e6db74">&#34;latex&#34;</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h3</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-pdf-heading&#34;</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  Download &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pdfFile</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;here&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h3</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-posts-where-appears&#34;</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">.Site.Pages</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">.Content</span> <span style="color:#a6e22e">$source</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Content</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h4 id="generation-of-variables-with-all-the-relevant-filenames">Generation of variables with all the relevant filenames</h4>
+<p>Note first lines of the template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$source</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Params.source</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.tex&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFileWithPath</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;static/&#34;</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.tex&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.png&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$pdfFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.pdf&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><p>These lines generate all the filenames from the &ldquo;source&rdquo; property in the gallery file for that figure.
+For example, if the image we are adding to the gallery is <code>content/tikz-gallery/3DProyectiveCoords.md</code> and its contents are
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>: <span style="color:#e6db74">&#34;3DProyectiveCoords&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div>
+then those first lines in the template generate the variables:</p>
+<table>
+<thead>
+<tr>
+<th>variable</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$source</td>
+<td>&ldquo;3DProyectiveCoords&rdquo;</td>
+</tr>
+<tr>
+<td>$sourceFile</td>
+<td>&ldquo;3DProyectiveCoords.tex&rdquo;</td>
+</tr>
+<tr>
+<td>$sourceFileWithPath</td>
+<td>&ldquo;static/3DProyectiveCoords.tex&rdquo;</td>
+</tr>
+<tr>
+<td>$imageFile</td>
+<td>&ldquo;3DProyectiveCoords.png&rdquo;</td>
+</tr>
+<tr>
+<td>$pdfFile</td>
+<td>&ldquo;3DProyectiveCoords.pdf&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<p>With those filenames now stored in variables, the whole page for the image can be built easily and with very readable code.</p>
+<h4 id="inserting-the-png-image">Inserting the png image</h4>
+<p>The following piece of the template inserts the image <code>3DProyectiveCoords.png</code> in the webpage:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">image</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> /&gt;
+</span></span></code></pre></div><p>This uses the <code>$imageFile</code> variable that was created above.</p>
+<h4 id="inserting-the-tikz-source">Inserting the Tikz source</h4>
+<p>The following piece of the template displays the content of <code>3DProyectiveCoords.tex</code> using &ldquo;latex&rdquo; syntax highlighting. No manual copy-pasting involved!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span> <span style="color:#75715e">&lt;!-- Load file contents --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$fileContents</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">readFile</span> <span style="color:#a6e22e">$sourceFileWithPath</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">safeHTML</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Display code with latex syntax highlighting --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">highlight</span> <span style="color:#a6e22e">$fileContents</span> <span style="color:#e6db74">&#34;latex&#34;</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><h4 id="listing-all-the-post-entries-in-which-the-image-is-included">Listing all the post entries in which the image is included</h4>
+<p>This is probably the most interesting piece of the template in terms of automation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h3</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-posts-where-appears&#34;</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">.Site.Pages</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">.Content</span> <span style="color:#a6e22e">$source</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;<span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span> 
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span></code></pre></div><p>What it does: it lists all the post entries in which the image is included. It does this by</p>
+<ul>
+<li>looping over the blog post entries looking for the appearance of $source (this is what the <code>range</code> command does).</li>
+<li>whenever it finds the string specified by the variable <code>$source</code> in a post entry, it lists (the <code>&lt;li&gt;</code>) a link to the post (the <code>&lt;a&gt;</code>) with link text equal to the post title (the <code>{{ .Title }}</code>).</li>
+</ul>
+<h3 id="template-for-the-page-that-shows-the-list-of-thumbnails-the-gallery">Template for the page that shows the list of thumbnails (the gallery)</h3>
+<p>This is the other template file. It is placed right next to the other one, but this one is called <code>list.html</code> (this is standard Hugo setup &ndash; there always is a &ldquo;list&rdquo; layout and a &ldquo;single&rdquo; layout, corresponding to the list of blog posts and the posts themselves):</p>
+<pre tabindex="0"><code>layouts
+├── default
+|   ├── ...
+|   └── ...
+├── partials
+|   ├── ...
+|   └── ...
+├── shortcodes
+|   ├── ...
+|   └── ...
+└── tikz-gallery
+    ├── list.html     &lt;-- Template file here
+    └── single.html   
+</code></pre><p>Since this <code>list.html</code> template is inside the <code>layouts/tikz-gallery</code> folder, it works as a template to list the content placed in <code>content/tikz-gallery</code> (a manifestation of the clever design of Hugo: the folder and file organization corresponds to functionality of the website).</p>
+<p>Here is the <code>list.html</code> template (is is simple compared to the <code>single.html</code> template):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt; <span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-list-title&#34;</span> <span style="color:#75715e">}}</span> &lt;/<span style="color:#f92672">h1</span>&gt; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tikz-gallery&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">.Data.Pages</span> <span style="color:#75715e">-}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- create the filename with .png extension --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">.Params.source</span> <span style="color:#e6db74">&#34;.png&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Permalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Params.source</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">image</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$imageFile</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;350px&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">a</span>&gt; 
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><p>This template just loops over the <code>.Data.Pages</code>, which in this case are the files inside the <code>content/tikz-gallery</code> folder, and generates a list (the <code>&lt;ul&gt;</code>) in which each list entry (the <code>&lt;li&gt;</code>) is a link (the <code>&lt;a&gt;</code>) that points to the corresponding <code>single-tikz</code> page with link text equal to <code>{{ .Params.source }}</code> which is the image filename followed by the image (the <code>&lt;image&gt;</code>) with a reduced width to make images display small.</p>
+<h2 id="done">Done!</h2>
+<p>Then galley of Tikz images is now automatically generated and easy to maintain!</p>
+<h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
+<p>See other posts under the 
+<a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  </div>
+
+</div>
+
+<h2>
+Subscribe
+</h2>
+<p>
+   Want to get an email when a new post is added? If so, subscribe <a href="subscribe/subscribe"> here</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2024 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
