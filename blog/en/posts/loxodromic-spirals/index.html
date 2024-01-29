@@ -182,7 +182,7 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 <p>We could do some 3D math to find the parametric equations of the tilted curve, and then the formulas for the projection, but we can also stay in the plane and use the very cool Möbius transformations.</p>
 <p>Möbius transformations are special functions of the form</p>
 <p>$$f(z) = \frac{az + b}{cz + d}$$</p>
-<p>where $a, b, c, d$ are complex constants such that $ad - bc \neq 0$. Möbius transformations have the amazing property that they map circles and lines to circles and lines, and keep angles the same. They also correspond to rotations of the sphere. Here is an example of a square grid transformed by a Möbius transformation (note that all lines and circles intersect at right angles):</p>
+<p>where $a, b, c, d$ are complex constants such that $ad - bc \neq 0$. Möbius transformations have the amazing property that they map circles and lines to circles and lines, and keep angles the same. They also correspond to motions and rotations of the sphere. Here is an example of a square grid transformed by a Möbius transformation (note that all lines and circles intersect at right angles):</p>
 <!-- raw HTML omitted -->
 <figure><img src="loxodromic-mobius.svg"
          alt="Image of a square grid under a Möbius transformation created with desmos here. The desmos link is a modification of a Desmos link I found online. It had no authorship reference. Here is another interesting one I found" width="100%"/><figcaption>
@@ -201,7 +201,7 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 $$
 f(z(t)) = \frac{e^{at}e^{it} - 1}{e^{at}e^{it} + 1}
 $$</p>
-<p>To plot it, we need to separate the real and imaginary parts. This is sort of painful to do by hand, but computers can do it easily! For example, WorlframAlpha may give them to you if you follow 
+<p>To plot it, we need to separate the real and imaginary parts. This is sort of painful to do by hand, but computers can do it easily! For example, WolframAlpha may give them to you if you follow 
 <a href="https://www.wolframalpha.com/input/?i=%5Cfrac%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;-&#43;1%7D%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;%2B&#43;1%7D" target="_blank" rel="noopener">this link</a>. Either way, you get</p>
 <p>$$f(z(t))=x(t)+iy(t)$$
 where
