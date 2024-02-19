@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Entrega del secreto</title>
+    <script>
+        // Esta función se ejecuta cuando el usuario hace clic en el botón de enviar
+        function mostrarSecreto() {
+            // Obtenemos el valor del campo de entrada
+            var a = document.getElementById("entrada").value;
+            // Calculamos el valor de b según la fórmula
+            var b = 3 * a + 1234567;
+            // Mostramos el mensaje con los valores de a y b en el campo de respuesta
+            document.getElementById("respuesta").innerHTML = "Su secreto es (" + a + "," + b + ")";
+        }
+    </script>
+</head>
+<body>
+    <h1>Bienvenido a mi página web</h1>
+    <p>Introduzca un número en el campo de abajo y haga clic en el botón de enviar para ver su secreto.</p>
+    <input type="number" id="entrada" placeholder="Escriba un número aquí">
+    <button onclick="mostrarSecreto()">Enviar</button>
+    <p id="respuesta"></p>
+</body>
+</html>
