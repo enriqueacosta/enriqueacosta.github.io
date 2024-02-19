@@ -1,23 +1,51 @@
 <html>
 <head>
-    <title>Entrega del secreto</title>
+    <title>Mi página web</title>
+    <style>
+        /* Este código CSS se usa para centrar el campo de respuesta */
+        #respuesta {
+            text-align: center;
+        }
+        /* Este código CSS se usa para aumentar el tamaño del mensaje */
+        .grande {
+            font-size: 36px;
+        }
+        /* Este código CSS se usa para ocultar el botón de enviar después de la primera vez */
+        .oculto {
+            display: none;
+        }
+    </style>
     <script>
+        // Esta variable se usa para contar el número de veces que el usuario ha enviado el formulario
+        var contador = 0;
         // Esta función se ejecuta cuando el usuario hace clic en el botón de enviar
         function mostrarSecreto() {
             // Obtenemos el valor del campo de entrada
             var a = document.getElementById("entrada").value;
-            // Calculamos el valor de b según la fórmula
-            var b = 3 * a + 1234567;
-            // Mostramos el mensaje con los valores de a y b en el campo de respuesta
-            document.getElementById("respuesta").innerHTML = "Su secreto es (" + a + "," + b + ")";
+            // Verificamos que el valor sea un número válido
+            if (isNaN(a) || a == "") {
+                // Si no es un número válido, mostramos un mensaje de error
+                document.getElementById("respuesta").innerHTML = "<span class='grande'>Por favor, introduzca un número</span>";
+            } else {
+                // Si es un número válido, calculamos el valor de b según la fórmula
+                var b = 3 * a + 1234567;
+                // Mostramos el mensaje con los valores de a y b en el campo de respuesta
+                document.getElementById("respuesta").innerHTML = "<span class='grande'>Su secreto es (" + a + ", " + b + ")</span>";
+                // Incrementamos el contador
+                contador++;
+                // Si el contador es mayor o igual a 1, ocultamos el botón de enviar
+                if (contador >= 1) {
+                    document.getElementById("boton").className = "oculto";
+                }
+            }
         }
     </script>
 </head>
 <body>
     <h1>Bienvenido a mi página web</h1>
     <p>Introduzca un número en el campo de abajo y haga clic en el botón de enviar para ver su secreto.</p>
-    <input type="number" id="entrada" placeholder="Escriba un número aquí">
-    <button onclick="mostrarSecreto()">Enviar</button>
+    <input id="entrada" placeholder="Escriba su número">
+    <button id="boton" onclick="mostrarSecreto()">Solicitar secreto</button>
     <p id="respuesta"></p>
 </body>
 </html>
