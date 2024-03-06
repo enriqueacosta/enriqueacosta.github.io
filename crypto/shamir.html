@@ -2,6 +2,13 @@
 <head>
     <title>Mi página web</title>
     <style>
+        /* Este código CSS se usa para los p */
+        p {    
+            font-size: 25px;
+        }
+        h1 {    
+            font-size: 40px;
+        }
         /* Este código CSS se usa para centrar el campo de respuesta */
         #respuesta {
             text-align: center;
@@ -30,7 +37,7 @@
                 // Si es un número válido, calculamos el valor de b según la fórmula
                 var b = 3 * a + 1234567;
                 // Mostramos el mensaje con los valores de a y b en el campo de respuesta
-                document.getElementById("respuesta").innerHTML = "<span class='grande'>Su secreto es (" + a + ", " + b + ")</span>";
+                document.getElementById("respuesta").innerHTML = "<span class='grande'>Su llave es </br> (" + a + ", " + b + ")</span>";
                 // Incrementamos el contador
                 contador++;
                 // Si el contador es mayor o igual a 1, ocultamos el botón de enviar
@@ -42,8 +49,8 @@
     </script>
 </head>
 <body>
-    <h1>Bienvenido a mi página web</h1>
-    <p>Introduzca un número en el campo de abajo y haga clic en el botón de enviar para ver su secreto.</p>
+    <h1>Generador de llaves</h1>
+    <p>Ingrese un número en el campo de abajo y haga clic en el botón de enviar para ver su llave.</p>
     <input id="entrada" placeholder="Escriba su número">
     <button id="boton" onclick="mostrarSecreto()">Solicitar secreto</button>
     <p id="respuesta"></p>
