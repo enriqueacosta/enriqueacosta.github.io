@@ -1,0 +1,42 @@
+<!-- Enrique Acosta, 2024 -->
+<!-- Created with chatGPT -->
+<!-- Initial prompt: Greate a website that takes the user ip, strips all perios and trailing zeros, evaluates the function f(x)=3x+1234 at this ip, and displays the message: "your secret is: " with the corresponding f(ip). -->
+
+
+
+<html>
+<head>
+  <style>
+    h1 {
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 id="message"></h1>
+  </div>
+  <script>
+    // get the user's IP address using a free API
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        // store the IP address as a string
+        var ip = data.ip;
+
+        // strip all periods and trailing zeros from the IP address
+        ip = ip.replace(/\./g, ""); // remove all periods
+        ip = ip.replace(/0+$/, ""); // remove all zeros at the end
+
+        // convert the IP address to a number
+        ip = Number(ip);
+
+        // evaluate the function f(x) = 3x + 1234 at the IP address
+        var f = 3 * ip + 1234;
+
+        // display the message with the result
+        document.getElementById("message").innerHTML = "Your secret is: (" + ip + ", " + f + ")";
+      });
+  </script>
+</body>
+</html>
