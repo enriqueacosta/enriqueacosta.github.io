@@ -41,7 +41,7 @@
                 document.getElementById("respuesta").innerHTML = "<span class='grande'>Por favor, introduzca un número</span>";
             } else {
                 // Si es un número válido, calculamos el valor de b según la fórmula
-                var b = 3 * a + 1234567;
+                var b = 3 * a + 1234;
                 // Mostramos el mensaje con los valores de a y b en el campo de respuesta
                 document.getElementById("respuesta").innerHTML = "<span class='grande'>Su llave es </br> (" + a + ", " + b + ")</span>";
                 // Incrementamos el contador
@@ -59,7 +59,7 @@
     <p>Ingrese un número en el campo de abajo y haga clic en el botón de enviar para ver su llave.</p>
     <p>
         <input id="entrada" placeholder="Escriba su número">
-        <button id="boton" onclick="mostrarSecreto()">Solicitar secreto</button>
+        <button id="boton" onclick="mostrarSecreto()">Solicitar llave</button>
     </p>
     <p id="respuesta"></p>
 </body>
