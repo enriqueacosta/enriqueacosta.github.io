@@ -3,11 +3,17 @@
     <title>Mi página web</title>
     <style>
         /* Este código CSS se usa para los p */
-        p {    
+        p, input, button {    
             font-size: 25px;
+            text-align: center;
         }
         h1 {    
             font-size: 40px;
+            text-align: center;
+        }
+        input {
+            font-size: 25px;
+            text-align: center;
         }
         /* Este código CSS se usa para centrar el campo de respuesta */
         #respuesta {
@@ -51,8 +57,10 @@
 <body>
     <h1>Generador de llaves</h1>
     <p>Ingrese un número en el campo de abajo y haga clic en el botón de enviar para ver su llave.</p>
-    <input id="entrada" placeholder="Escriba su número">
-    <button id="boton" onclick="mostrarSecreto()">Solicitar secreto</button>
+    <p>
+        <input id="entrada" placeholder="Escriba su número">
+        <button id="boton" onclick="mostrarSecreto()">Solicitar secreto</button>
+    </p>
     <p id="respuesta"></p>
 </body>
 </html>
