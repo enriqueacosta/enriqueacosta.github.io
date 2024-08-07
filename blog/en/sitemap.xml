@@ -122,6 +122,16 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/</loc>
     <lastmod>2023-12-11T10:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/exponential-zeroes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/exponential-zeroes/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</loc>
     <lastmod>2023-11-19T22:49:34-05:00</lastmod>
@@ -645,6 +655,8 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tikz-gallery/probabilitytreecardsthirddetails/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals.es-draft/</loc>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/</loc>
     <xhtml:link
