@@ -263,7 +263,7 @@ a.sidebar-nav-item:focus {
 
 .katex { 
   /*font-size: 1.1rem !important; */
-  font-size: 1.1em;
+  font-size: 1em;
 
   /* EAJ - next ones add scrollbars to wide formulas (instead of making the page wider) */
   overflow: auto; 

@@ -64,6 +64,14 @@
   <body class="theme-base-08 ">
   <aside class="sidebar">
   
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/">Español</a>
+    
+    </nav>
+  
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
@@ -115,6 +123,10 @@
   
   
   
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/">Español: Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</a>)</h4>
+    
+  
   <div>
   <p>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired 
 <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">coloring book</a> using complex functions and Möbius transformations.</p>
@@ -126,7 +138,7 @@
         </figcaption>
 </figure>
 
-<p>Here is one of my son&rsquo;s coloring of the curvy grid!</p>
+<p>Here is one of the way we colored them with my sons!</p>
 <figure><img src="loxodromic-coloring-elias.jpg" width="600px"/>
 </figure>
 
@@ -169,8 +181,10 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 </ul>
 <p>Curve $z(t)= e^{at}e^{it}$ for $0\leq t\leq T$:
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/g4lnpio8lv" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/g4lnpio8lv" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div></p>
 <p>Note that most online plotters do not plot parametric curves which involve complex numbers, so to be able to plot these curves (for example, in Desmos in the interactive above) one needs to write out explicitly the real and imaginary components of $z(t)=x(t)+iy(t)$ and plot $(x(t),y(t))$ instead. In this case, $x(t)=e^{a t} \cos(t)$ and $y(t)= e^{a t} \sin(t)$.</p>
 <p>Logarithmic spirals have many interesting properties. They have even been called
@@ -196,7 +210,6 @@ where $a$ is a constant that controls the winding. The points $z(t)$ trace out t
 <a href="https://www.youtube.com/watch?v=0z1fIsUNhO4&amp;t=33s" target="_blank" rel="noopener">gorgeous video</a> that was made several years ago.</p>
 <p>To see the North and South poles, we want a Möbius transformation that maps $z=0$ to $z=−1$ and $z=\infty$ to $z=1$ (they choice of $1$ and $-1$ is arbitrary, any two numbers will do). One such function is</p>
 <p>$$f(z) = \frac{z - 1}{z + 1}$$</p>
-<p>This is the curve that will result from transforming the spiral $z(t)$ with the Möbius transformation $f(z)$: &ndash;&gt;</p>
 <p>If we apply this function to a logarithmic spiral $z(t)$, we expect to get a double spiral that winds around $z=−1$ and $z=1$. The formula for the transformed spiral is
 $$
 f(z(t)) = \frac{e^{at}e^{it} - 1}{e^{at}e^{it} + 1}
@@ -214,8 +227,10 @@ y(t)=\frac{2 e^{a t}\sin{t}}{e^{2 a t} + 2 e^{a t}\cos{t} + 1}
 $$
 let&rsquo;s plot it!</p>
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/8p7awxdzm9" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/8p7awxdzm9" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div>
 <p>Beautiful! Slide $a$ to change the “windiness” of this double spiral, and slide $T$ to see how it grows as $t$ changes.</p>
 <p>We can simplify $x(t)$ and $y(t)$ using hyperbolic trig functions ($\sinh$ and $\cosh$):
@@ -235,8 +250,10 @@ z(t),\quad e^{i\frac{2\pi}{n}}z(t),\quad e^{i2\frac{2\pi}{n}}z(t),\quad e^{i3\fr
 $$</p>
 <p>Here is the result for $n=4$, with 4 spirals. You can play around with the values of $a$ and $T$. Once again, the complicated formulas from the curves come from computing explicitly the real an complex parts of $z(t)=e^{at}e^{it}$, $e^{i\frac{\pi}{4}}z(t)$, $e^{i\frac{\pi}{2}}z(t)$, $e^{i\frac{3\pi}{4}}z(t)$.</p>
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/di5it0g9nl" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/di5it0g9nl" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div>
 <p>Now we can transform them with our Möbius transformation to get double spirals that twist around each other! Here is the figure:</p>
 <figure><img src="loxodromic-4DoubleSpirals.svg"
@@ -255,8 +272,10 @@ $$</p>
 
 <p>Here is an interactive too. The parameter $n$ determines the number of spirals</p>
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/kfhnfb1jnr" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/kfhnfb1jnr" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div>
 <h3 id="opposite-spirals-that-meet-at-right-angles">Opposite spirals that meet at right angles</h3>
 <p>Now on to the second task for our grid. We need a set of spirals winding in the opposite direction, so that the spirals always intersect at right angles with the other ones. Since Möbius transformations preserve angles, if we find a set of logarithmic spirals that intersect at right angles, then they Möbius transformations will also intersect at right angles. So all we need to do is find a family of logarithmic spirals that intersects at right angles to the other.</p>
@@ -270,8 +289,10 @@ $$</p>
 <p>We need to change the &ldquo;$a$-parameter&rdquo; for $z_2(t)$. Try it yourself in this interactive.</p>
 <p>Change $a_2$ in the interactive below so that the families intersect at right angles.
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/cbjsrgojwu" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/cbjsrgojwu" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div></p>
 <p>If you tried to find the $a_2$ above, you probably found that $a_2\approx 1.66$ when $a_1=0.6$. In fact, the exact value is $a_2=1/0.6=1.6666&hellip;$. In general, one needs $a_2=1/a_1$ so that the spirals intersect at right angles! (One can prove this with some complex-variable calculus that I leave for the end of this post).</p>
 <p>Here is the figure of the exactly perpendicular grid with $a=0.6$ and $1/a$ for the opposite spirals.</p>
@@ -306,8 +327,10 @@ $$</p>
 </p>
 <p>Finally, here is the interactive. Enjoy!
 <div>
+    
     <iframe src="https://www.desmos.com/calculator/g3ddmd56om" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank">link</a> if the interactive does not load.</p>
+    
 </div></p>
 <h2 id="a-closing-note-a-shout-out-to-macos-grapher">A closing note: A shout-out to MacOS Grapher</h2>
 <!-- raw HTML omitted -->

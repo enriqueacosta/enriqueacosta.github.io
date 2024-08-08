@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2024
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</h1>
+  
+  
+  <time datetime=2024-08-06T22:49:34-0500 class="post-date">6 de agosto de 2024</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/funciones-de-variable-compleja">Funciones de variable compleja</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/espiral-loxodr%C3%B3mica">Espiral loxodrómica</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/mapas-conformes">Mapas conformes</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/transformaciones-de-m%C3%B6bius">Transformaciones de Möbius</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/grapher-de-macos">Grapher de MacOS</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/">English: Recreating a Loxodromic Spiral Grid Using Complex Analysis</a>)</h4>
+    
+  
+  <div>
+  <p>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.</p>
+<p>Esta es la imagen:</p>
+<figure><img src="loxodromic-coloring-patterns-crop.jpg"
+         alt="Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris." width="600px"/><figcaption>
+            <p>Página del libro para colorear 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe</a> por Alex Bellos y Edmund Harris.</p>
+        </figcaption>
+</figure>
+
+<p>¡Y esta es una de las formas como las coloreamos con mis hijos!</p>
+<figure><img src="loxodromic-coloring-elias.jpg" width="600px"/>
+</figure>
+
+<p>Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos. Por los ángulos rectos, supuse que debía haber un 
+<a href="https://en.wikipedia.org/wiki/Conformal_map" target="_blank" rel="noopener">mapa conforme complejo</a> involucrado y quise averiguar cómo se construyó y cuáles eran las ecuaciones que generaban esta cuadrícula curva.</p>
+<p>Según el libro, la imagen muestra la proyección en un plano 2D de los caminos que uno sigue en una esfera desde el polo norte, dirigiéndose hacia el sur y un poco hacia el este en un ángulo constante (y en direcciones perpendiculares a esos caminos). El libro no da muchos detalles adicionales, pero esto fue suficiente para empezar.</p>
+<p>Busqué referencias en internet por un tiempo y no encontré buenas, así que decidí investigarlo por mi cuenta y escribir sobre ello. Disfruté mucho descubrir las ideas y detalles involucrados, y encontré muchos hechos y figuras interesantes en el proceso.</p>
+<h2 id="primera-parte-espirales-en-una-esfera-espirales-loxodrómicas">Primera parte: espirales en una esfera (espirales loxodrómicas)</h2>
+<p>Una <em>espiral loxodrómica</em>, también conocida como 
+<a href="https://en.wikipedia.org/wiki/Rhumb_line" target="_blank" rel="noopener"><em>línea de rumbo</em></a>, es una curva en una esfera que corta los meridianos en el mismo ángulo. Es el camino que sigue un barco que mantiene una dirección de brújula constante.</p>
+<figure><img src="loxodromic-loxodrome-wiki.svg"
+         alt="Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De Wikipedia. Imagen creada por Alvesgaspar, con licencia abierta CC BY-SA 2.5." width="600px"/><figcaption>
+            <p>Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De 
+<a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikipedia</a>. Imagen creada por Alvesgaspar, con licencia abierta CC BY-SA 2.5.</p>
+        </figcaption>
+</figure>
+
+<p>Una espiral loxodrómica también puede representarse en un plano 2D usando la <em>proyección estereográfica</em>. Esta proyección mapea la esfera en el plano enviando cada punto de la esfera a su &ldquo;sombra&rdquo; en el plano. Imagine colocar la esfera sobre el plano, con el polo sur tocando el origen y el polo norte directamente arriba. Una fuente de luz se coloca en la parte superior de la esfera. La &ldquo;sombra&rdquo; de un punto es donde la línea desde el polo norte hasta ese punto se encuentra con el plano.</p>
+<figure><img src="loxodromic-stereographic.svg"
+         alt="Proyección estereográfica. De Wikimedia Commons. Creada por S.Wetzel, con licencia abierta CC BY-SA 4.0." width="600px"/><figcaption>
+            <p>Proyección estereográfica. De 
+<a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikimedia Commons</a>. Creada por S.Wetzel, con licencia abierta CC BY-SA 4.0.</p>
+        </figcaption>
+</figure>
+
+<p>Bajo la proyección estereográfica, las espirales loxodrómicas se convierten en <em>espirales logarítmicas</em>, que son curvas fascinantes por sí mismas. Se ven así:
+<figure><img src="loxodromix-logarithmicSpiral.svg"
+         alt="Espiral logarítmica." width="600px"/><figcaption>
+            <p>Espiral logarítmica.</p>
+        </figcaption>
+</figure>
+</p>
+<p>Una espiral logarítmica puede describirse usando números complejos con una ecuación de la forma
+$$z(t)= e^{at}e^{it},\qquad t\in\mathbb{R},$$
+donde $a$ es una constante que controla qué tanto se enrolla la espiral. Los puntos $z(t)$ trazan la espiral a medida que $t$ varía de $-\infty$ a $\infty$. En la ecuación $z(t)=e^{at}e^{it}$, el término $e^{at}$ representa la distancia desde el origen, que crece exponencialmente con $t$, y el término $e^{it}$ representa una rotación por $t$ radianes (con números complejos, la multiplicación por $e^{i\theta}$ corresponde a una rotación por un ángulo $\theta$).</p>
+<p>Este es un gráfico interactivo de espiral logarítmica.</p>
+<ul>
+<li>Cambie $a$ para ver cómo cambia la espiral.</li>
+<li>Cambie $T$ para ver cómo se mueve el punto $z(t)$ en la curva.</li>
+</ul>
+<p>Curva $z(t)= e^{at}e^{it}$ para $0\leq t\leq T$:
+<div>
+    <iframe src="https://www.desmos.com/calculator/g4lnpio8lv?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/g4lnpio8lv" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+</div></p>
+<p>La mayoría de las herramientas tecnológicas para graficar no tienen la funcionalidad para curvas paramétricas que involucren números complejos, por lo que para poder graficar estas curvas (por ejemplo, en Desmos en el interactivo de arriba), es necesario escribir explícitamente las componentes real e imaginaria de $z(t)=x(t)+iy(t)$ y graficar $(x(t),y(t))$ en su lugar. En este caso, $x(t)=e^{a t} \cos(t)$ y $y(t)= e^{a t} \sin(t)$.</p>
+<p>Las espirales logarítmicas tienen muchas propiedades interesantes. Incluso se las ha llamado &ldquo;espirales milagrosas&rdquo; y &ldquo;líneas eternas&rdquo;. Consulte el 
+<a href="https://en.wikipedia.org/wiki/Logarithmic_spiral" target="_blank" rel="noopener">artículo de Wikipedia</a> si quiere saber más.</p>
+<h2 id="segunda-parte-transformar-una-espiral-que-va-al-infinito-en-una-espiral-doble-transformaciones-de-möbius">Segunda parte: transformar una espiral que va al infinito en una espiral doble (transformaciones de Möbius)</h2>
+<p>Una espiral loxodrómica en una esfera 3D va desde el polo norte hasta el polo sur. Cuando la proyectamos estereográficamente al plano 2D, el polo norte se convierte en el &ldquo;punto infinito&rdquo; que está infinitamente lejos del origen y la espiral proyectada crece indefinidamente como si intentara alcanzarlo. Para ver los dos polos como puntos finitos en el plano 2D, necesitamos inclinar la esfera.</p>
+<p>Podríamos hacer algunos cálculos en 3D para encontrar las ecuaciones paramétricas de la curva inclinada y luego las fórmulas para la proyección, pero también podemos quedarnos en el plano y usar las fascinantes transformaciones de Möbius.</p>
+<p>Las transformaciones de Möbius son funciones especiales de la forma</p>
+<p>$$f(z) = \frac{az + b}{cz + d}$$</p>
+<p>donde $a$, $b$, $c$ y $d$ son constantes complejas tales que $ad - bc \neq 0$. Las transformaciones de Möbius tienen la sorprendente propiedad de que mapean círculos y líneas a círculos y líneas, y preservan los ángulos. También corresponden a movimientos y rotaciones de la esfera. Este es un ejemplo de una cuadrícula cuadrada transformada por una transformación de Möbius (note que todas las líneas y círculos se intersectan en ángulos rectos):</p>
+<!-- raw HTML omitted -->
+<figure><img src="loxodromic-mobius.svg"
+         alt="Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos aquí. El enlace de desmos es una modificación de un enlace de Desmos que encontré en línea. No tenía referencia de autoría. Este es otro interesante que encontré." width="100%"/><figcaption>
+            <p>Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos 
+<a href="https://www.desmos.com/calculator/fplcgzmy85" target="_blank" rel="noopener">aquí</a>. El enlace de desmos es una modificación de un enlace de Desmos que encontré en línea. No tenía referencia de autoría. Este es 
+<a href="https://www.desmos.com/calculator/z9oz7r3v7m" target="_blank" rel="noopener">otro interesante</a> que encontré.</p>
+        </figcaption>
+</figure>
+
+<p>Si desea saber más sobre las transformaciones de Möbius, recomiendo comenzar con un 
+<a href="https://www.youtube.com/watch?v=0z1fIsUNhO4&amp;t=33s" target="_blank" rel="noopener">hermoso video</a> que se hizo hace varios años.</p>
+<p>Para ver los polos norte y sur, necesitamos una transformación de Möbius que mapee $z=0$ a $z=−1$ y $z=\infty$ a $z=1$ (la elección de $1$ y $-1$ es arbitraria, cualquier par de números serviría). Una función que hace esto es</p>
+<p>$$f(z) = \frac{z - 1}{z + 1}$$</p>
+<p>Si aplicamos esta función a una espiral logarítmica $z(t)$, esperamos obtener una espiral doble que se enrolla alrededor de $z=−1$ y $z=1$. La fórmula para la espiral transformada es
+$$
+f(z(t)) = \frac{e^{at}e^{it} - 1}{e^{at}e^{it} + 1}
+$$</p>
+<p>Para graficarla, necesitamos separar las partes real e imaginaria. Esto es algo tedioso de hacer a mano, ¡pero las computadoras lo hacen fácilmente! Por ejemplo, WolframAlpha puede dárnoslas si sigue 
+<a href="https://www.wolframalpha.com/input/?i=%5Cfrac%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;-&#43;1%7D%7Be%5E%7Bat%7De%5E%7Bit%7D&#43;%2B&#43;1%7D" target="_blank" rel="noopener">este enlace</a>. De cualquier manera, se obtiene</p>
+<p>$$f(z(t))=x(t)+iy(t)$$
+en donde
+$$
+x(t)=\frac{e^{2 a t} - 1}{e^{2 a t} + 2 e^{a t}\cos{t} + 1}
+$$
+y
+$$
+y(t)=\frac{2 e^{a t}\sin{t}}{e^{2 a t} + 2 e^{a t}\cos{t} + 1}
+$$
+¡Está es la gráfica!</p>
+<div>
+    
+    <iframe src="https://www.desmos.com/calculator/8p7awxdzm9?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/8p7awxdzm9" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+    
+</div>
+<p>Cambie el valor de $a$ con el control deslizante para cambiar el &ldquo;grado de enrollamiento&rdquo; de esta espiral doble, y cambie $T$ con el control deslizante para ver cómo crece a medida que $t$ cambia.</p>
+<p>Podemos simplificar $x(t)$ y $y(t)$ usando funciones trigonométricas hiperbólicas ($\sinh$ y $\cosh$):</p>
+<p>$$
+x(t)=\frac{\sinh{a t}}{\cosh{a t} + \cos{t}}\qquad  y(t)=\frac{\sin{t}}{\cosh{a t} + \cos{t}}
+$$</p>
+<h2 id="tercera-parte-una-cuadrícula-de-espirales-dobles">Tercera parte: una cuadrícula de espirales dobles</h2>
+<p>¡Ahora podemos ver los dos centros de la espiral infinita! ¿Cómo producimos la cuadrícula?</p>
+<p>Necesitamos dos grupos de espirales: un grupo que se enrosque en la misma dirección y otro grupo que se enrosque en la dirección opuesta, y que estos grupos se crucen siempre en ángulos rectos.</p>
+<p>Empecemos con el primer grupo de espirales.</p>
+<h3 id="grupo-de-espirales-que-se-enroscan-en-la-misma-dirección">Grupo de espirales que se enroscan en la misma dirección</h3>
+<p>¡Rotar alrededor del origen es fácil con números complejos! Para rotar por un ángulo $b$, solo hay que multiplicar por $e^{ib}$. Así que, podemos hacer un grupo de espirales logarítmicas alrededor del origen tomando una espiral $z(t)=e^{at}e^{it}$ y graficando varias rotaciones. Si queremos $n$ espirales &ldquo;igualmente espaciadas&rdquo;, podemos graficar:
+$$
+z(t),\quad e^{i\frac{2\pi}{n}}z(t),\quad e^{i2\frac{2\pi}{n}}z(t),\quad e^{i3\frac{2\pi}{n}}z(t),\quad \ldots,\quad e^{in\frac{2\pi}{n}}z(t)=z(t)
+$$</p>
+<p>Este es el resultado para $n=4$, con 4 espirales. Puede cambiar con los valores de $a$ y $T$ para ver cómo afectan las curvas. Una vez más, las fórmulas complicadas de las curvas que se ven provienen de calcular explícitamente las partes real e imaginaria de $z(t)=e^{at}e^{it}$, $e^{i\frac{\pi}{4}}z(t)$, $e^{i\frac{\pi}{2}}z(t)$, $e^{i\frac{3\pi}{4}}z(t)$.</p>
+<div>
+    
+    <iframe src="https://www.desmos.com/calculator/di5it0g9nl?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/di5it0g9nl" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+    
+</div>
+<p>¡Ahora podemos transformarlas con nuestra transformación de Möbius para obtener espirales dobles que giran alrededor de cada una! Esta es la imagen:</p>
+<figure><img src="loxodromic-4DoubleSpirals.svg"
+         alt="Creada con Desmos. Siga este enlace si quiere modificar los valores de los parámetros." width="100%"/><figcaption>
+            <p>Creada con Desmos. Siga este 
+<a href="https://www.desmos.com/calculator/cgqvp0exmp" target="_blank" rel="noopener">enlace</a> si quiere modificar los valores de los parámetros.</p>
+        </figcaption>
+</figure>
+
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Las fórmulas para estas espirales son más complicadas, pero el método para obtenerlas es simple: solo transforme las cuatro espirales logarítmicas con la transformación de Möbius, y luego encuentre las partes real e imaginaria para graficarlas.</p>
+<p>¡Ahora podemos hacer muchas de ellas a la vez! Esta imagen tiene 10 espirales dobles.</p>
+<figure><img src="loxodromic-manyDoubleSpirals.svg" width="100%"/>
+</figure>
+
+<p>Esta es una versión interactiva. El parámetro $n$ determina el número de espirales.</p>
+<div>
+    
+    <iframe src="https://www.desmos.com/calculator/kfhnfb1jnr?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/kfhnfb1jnr" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+    
+</div>
+<h3 id="espirales-opuestas-que-se-encuentran-en-ángulos-rectos">Espirales opuestas que se encuentran en ángulos rectos</h3>
+<p>Ahora sigamos a la segunda tarea para nuestra cuadrícula. Necesitamos un grupo de espirales que se enrosquen en la dirección opuesta, de modo que las espirales siempre se crucen en ángulos rectos con las otras. Dado que las transformaciones de Möbius preservan los ángulos, si encontramos un grupo de espirales logarítmicas que se crucen en ángulos rectos, entonces sus transformaciones de Möbius también se cruzarán en ángulos rectos. Así que todo lo que necesitamos hacer es encontrar una familia de espirales logarítmicas que se crucen en ángulos rectos con las otras.</p>
+<p>Si llamamos a la primera espiral $$z_1(t)=e^{at}e^{it},$$ entonces $e^{-it}$ corresponderá a una rotación de $-t$ grados, así que una espiral con el mismo &ldquo;grado de enrollamiento&rdquo; pero que se enrosca en la dirección opuesta es $$z_2(t)=e^{at}e^{-it}.$$</p>
+<p>Sin embargo, estas dos espirales no se cruzan en ángulos rectos, aunque resultan en imágenes muy bonitas. Esta es una (se graficaron varias espirales en cada dirección):</p>
+<figure><img src="loxodromic-nonOrthogonalSpirals.svg" width="100%"/>
+</figure>
+
+<p>¡Como girasoles! Pero no se cruzan en ángulos rectos.</p>
+<p>Necesitamos cambiar el &ldquo;parámetro $a$&rdquo; para $z_2(t)$. Inténtelo usted mismo en esta herramienta interactiva.</p>
+<p>Cambie $a_2$ en la herramienta interactiva a continuación para que las familias se crucen en ángulos rectos.
+<div>
+    
+    <iframe src="https://www.desmos.com/calculator/cbjsrgojwu?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/cbjsrgojwu" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+    
+</div></p>
+<p>Si intentó encontrar el $a_2$ arriba, probablemente encontró que $a_2 \approx 1.66$ cuando $a_1=0.6$. De hecho, el valor exacto es $a_2=1/0.6=1.6666&hellip;$. En general, se necesita $a_2=1/a_1$ para que las espirales se crucen en ángulos rectos. (Esto se puede demostrar con algo de cálculo de variable compleja que incluyo al final de esta entrada).</p>
+<p>Esta es la imagen de la cuadrícula exactamente perpendicular con $a=0.6$ y $1/a$ para las espirales opuestas.</p>
+<figure><img src="loxodromic-orthogonalSpirals.svg" width="100%"/>
+</figure>
+
+<h2 id="listo-la-imagen-final-y-la-herramienta-interactiva">¡Listo! La imagen final (y la herramienta interactiva)</h2>
+<p>Hemos creado una cuadrícula de espirales logarítmicas en ángulo recto. ¡Ahora usamos la magia de Möbius para ver los dos centros!</p>
+<p>Aquí está:</p>
+<figure><img src="loxodromic-orthogonalDoublesSpirals.svg"
+         alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"/><figcaption>
+            <p>Creada con Desmos. Siga este 
+<a href="https://www.desmos.com/calculator/hdir5xzd0p" target="_blank" rel="noopener">enlace</a> para interactuar con ella.</p>
+        </figcaption>
+</figure>
+
+<p>Y la siguiente imagen es como la del libro de colorear (con 10 y 20 espirales en direcciones diferentes, por eso parece un poco desajustada, pero es intencional)</p>
+<figure><img src="loxodromic-orthogonalDoublesSpirals-10-20.svg"
+         alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"/><figcaption>
+            <p>Creada con Desmos. Siga este 
+<a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank" rel="noopener">enlace</a> para interactuar con ella.</p>
+        </figcaption>
+</figure>
+
+<p>Esta es la imagen original del libro (rotada)
+<figure><img src="loxodromic-coloring-patterns-crop-rotate.jpg"
+         alt="Página del libro para colorear Patterns of the Universe Coloring book por Alex Bellos y Edmund Harris." width="600px"/><figcaption>
+            <p>Página del libro para colorear 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> por Alex Bellos y Edmund Harris.</p>
+        </figcaption>
+</figure>
+</p>
+<p>Finalmente, esta es la herramienta interactiva. ¡Disfrútela!
+<div>
+    
+    <iframe src="https://www.desmos.com/calculator/g3ddmd56om?lang=es" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <p> Visite esta <a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank">página</a> si la gráfica interactiva no carga.</p>
+    
+</div></p>
+
+  </div>
+
+</div>
+
+<h2>
+Suscríbase
+</h2>
+<p>
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2024 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

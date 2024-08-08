@@ -147,6 +147,16 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</loc>
     <lastmod>2023-11-19T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/curves/</loc>
     <lastmod>2022-09-22T14:19:56-05:00</lastmod>
@@ -655,8 +665,6 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tikz-gallery/probabilitytreecardsthirddetails/"
                 />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals.es-draft/</loc>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tikz-gallery/</loc>
     <xhtml:link
