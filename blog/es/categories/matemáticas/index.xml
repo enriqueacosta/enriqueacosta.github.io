@@ -5,20 +5,7 @@
     <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
     <description>Recent content in Matemáticas on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Aug 2024 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</title>
-      <link>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</link>
-      <pubDate>Tue, 06 Aug 2024 22:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</guid>
-      <description>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.
-Esta es la imagen:
-Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.
-¡Y esta es una de las formas como las coloreamos con mis hijos!
-Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 06 Aug 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ceros de la función exponencial</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/exponential-zeroes/</link>
@@ -27,6 +14,19 @@ Esta imagen es fascinante con su leve falta de simetría, espirales que van en d
       <guid>https://enriqueacosta.github.io/blog/es/posts/exponential-zeroes/</guid>
       <description>En 2012, creé la siguiente animación que muestra los ceros complejos de los polinomios de Taylor de la función exponencial $e^z$. En esta entrada, explicaré qué significa y por qué es interesante.
 También mostraré el código en Sage para recrear la animación (que originalmente creé en Mathematica en 2012). A diferencia de Mathematica, que no es gratuito ni de código abierto, Sage es un sistema de software matemático de código abierto basado en Python que se construye sobre muchos paquetes de código abierto existentes.</description>
+    </item>
+    
+    <item>
+      <title>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</link>
+      <pubDate>Sun, 06 Aug 2023 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</guid>
+      <description>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.
+Esta es la imagen:
+Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.
+¡Y esta es una de las formas como las coloreamos con mis hijos!
+Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos.</description>
     </item>
     
     <item>
