@@ -1,0 +1,18 @@
+% EAJ - svg generation needs to be run with -shell-escape:
+% pdflatex -shell-escape filename.tex
+\documentclass[grado3]{LEMA-Tikz-IM}
+\begin{document}
+\begin{tikzpicture}
+
+
+\newcommand{\hSep}{3.3*\midDotSize}
+\newcommand{\vSep}{2*\midDotSize}
+\midDotGroup{2}{1}
+\midDotGroup[shift={(1*\hSep,0)}]{2}{1}
+\midDotGroup[shift={(2*\hSep,0)}]{2}{1}
+\midDotGroup[shift={(0,1*\vSep)}]{2}{1}
+\midDotGroup[shift={(1*\hSep,1*\vSep)}]{2}{1}
+\midDotGroup[shift={(2*\hSep,1*\vSep)}]{2}{1}
+
+\end{tikzpicture}
+\end{document}

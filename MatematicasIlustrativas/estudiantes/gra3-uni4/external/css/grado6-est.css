@@ -1,0 +1,32 @@
+@import url("custom-styles-est.css");
+
+/* ajustes de fuente con estilo WIDE */
+    :root {
+        --content-font-size: 16px;
+    }
+    body.pretext{
+        font-size: var(--content-font-size);
+    }
+    .ptx-toc {
+        font-size: var(--content-font-size);
+    }
+
+/* ajustes de fuente con estilo CRC */
+    /* .ptx-page {
+        font-size: 20px;
+    }
+
+    .ptx-toc {
+        font-size: unset;
+    }
+
+    .pretext .ptx-content-footer .button.next-button,
+    .pretext .ptx-content-footer .button.previous-button,
+    .ptx-content-footer .top-button {
+        font-size: unset;
+        margin-top: 3em;
+    }
+
+    .ptx-navbar .button{
+        font-size: unset;
+    } */

@@ -1,0 +1,14 @@
+% EAJ - svg generation needs to be run with -shell-escape:
+% pdflatex -shell-escape filename.tex
+\documentclass[grado3]{LEMA-Tikz-IM}
+\begin{document}
+\begin{tikzpicture}
+\newcommand{\shiftedGroup}[1]{
+  \begin{scope}[shift={#1}]
+    \midDotGroup{3}{2}
+  \end{scope}
+}
+\midDotGroup{3}{2}
+\midDotGroup[shift={(4.8*\midDotSize,0)}]{3}{2}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[grado3]{LEMA-Tikz-IM}
+
+\begin{document}
+
+% stop hyphenation
+\hyphenpenalty=10000
+\tolerance=1000
+
+\begin{tikzpicture}
+\matrix[tablaVertical, % ver def en LEMA-Tikz-IM.sty
+        row 1/.append style={nodes={minimum height=7ex}},
+        row 2/.append style={nodes={minimum height=7ex}},
+        row 4/.append style={nodes={minimum height=7ex}},
+        column 1/.append style={nodes={text width = 9ex}},
+        column 2/.append style={nodes={text width = 22ex}},
+        column 4/.append style={nodes={text width = 13ex}},
+    ] (myTable) {
+        % Header Row 
+        \input{unaGranCantidadDeDolares-tab2-header.tex}\\
+        Andre & nueve billetes de \$10 y diez billetes de \$5 & $(9 \times 10) + (10 \times 5)$ & 140 \\
+        Clare & catorce billetes de \$10 & $14 \times 10$ & 140 \\
+        Jada & diez billetes de \$10 y tres billetes de \$50 & $(10 \times 10) + (3 \times 50)$ & 250 \\
+        Lin & ocho billetes de \$20 & $8 \times 20$ & 160 \\
+        Noah & seis billetes de \$50 & $6 \times 50$ & 160 \\
+        Tyler & veintiún billetes de \$10 & $21 \times 10$ & 210 \\
+  };
+
+\end{tikzpicture}
+
+
+\end{document}

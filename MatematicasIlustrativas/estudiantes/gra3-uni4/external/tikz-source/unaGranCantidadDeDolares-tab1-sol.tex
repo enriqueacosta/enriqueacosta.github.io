@@ -1,0 +1,27 @@
+\documentclass[grado3]{LEMA-Tikz-IM}
+
+\begin{document}
+
+\begin{tikzpicture}
+\matrix[tablaVertical, % ver def en LEMA-Tikz-IM.sty
+        row 1/.append style={nodes={minimum height=7ex}},
+        column 1/.append style={nodes={text width = 28ex}},
+        column 2/.append style={nodes={text width = 18ex}},
+        column 3/.append style={nodes={text width = 19ex}},
+    ] (myTable) {
+        % Header Row 
+        \input{unaGranCantidadDeDolares-tab1-header.tex}\\
+        un billete de \$100 & $1 \times 100$ & 100 \\
+        cuatro billetes de \$20 & $4 \times 20$ & 80 \\
+        diez billetes de \$10 & $10 \times 10$ & 100 \\
+        diez billetes de \$5 & $10 \times 5$ & 50 \\
+        cinco billetes de \$20 & $5 \times 20$ & 100 \\
+        veinte billetes de \$10 & $20 \times 10$ & 200 \\
+        veinte billetes de \$5 & $20 \times 5$ & 100 \\
+        dos billetes de \$50 & $2 \times 50$ & 100 \\
+  };
+
+\end{tikzpicture}
+
+
+\end{document}

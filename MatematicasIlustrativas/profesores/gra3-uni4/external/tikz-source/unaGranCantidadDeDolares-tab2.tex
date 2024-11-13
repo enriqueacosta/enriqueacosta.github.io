@@ -1,0 +1,26 @@
+\documentclass[grado3]{LEMA-Tikz-IM}
+
+\begin{document}
+
+% stop hyphenation
+\hyphenpenalty=10000
+\tolerance=1000
+
+\begin{tikzpicture}
+\matrix[tablaVertical, % ver def en LEMA-Tikz-IM.sty
+        row 1/.append style={nodes={minimum height=7ex}},
+        row 2/.append style={nodes={minimum height=7ex}},
+        row 4/.append style={nodes={minimum height=7ex}},
+        column 1/.append style={nodes={text width = 9ex}},
+        column 2/.append style={nodes={text width = 22ex}},
+        column 4/.append style={nodes={text width = 13ex}},
+    ] (myTable) {
+        % Header Row 
+        \input{unaGranCantidadDeDolares-tab2-header.tex}\\
+        \input{unaGranCantidadDeDolares-tab2-contenidoStatementyBLM.tex}\\
+  };
+
+\end{tikzpicture}
+
+
+\end{document}

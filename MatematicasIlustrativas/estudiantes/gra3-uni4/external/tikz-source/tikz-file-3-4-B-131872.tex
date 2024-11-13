@@ -1,0 +1,16 @@
+% EAJ - svg generation needs to be run with -shell-escape:
+% pdflatex -shell-escape filename.tex
+\documentclass[grado3]{LEMA-Tikz-IM}
+\begin{document}
+\begin{tikzpicture}
+
+\midDotGroup{5}{2}
+\midDotGroup[shift={(0,-3.5*\midDotSize)}]{5}{2}
+\midDotGroup[shift={(0,-7*\midDotSize)}]{5}{2}
+
+% \node[above] at (dot-2-2.north) {hello};
+% \node[right] at (roundedRect.east) {hello};
+
+
+\end{tikzpicture}
+\end{document}

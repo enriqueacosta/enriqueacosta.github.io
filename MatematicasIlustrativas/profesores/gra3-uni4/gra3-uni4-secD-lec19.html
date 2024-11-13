@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="es-ES" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lección 19 - Formas de dividir números más grandes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_crc.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_crc.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_crc.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_crc.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_green_blue.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/css/custom-styles.css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Salta al contenido principal</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="gra3-uni4.html"><span class="title">Matemáticas Ilustrativas:</span> <span class="subtitle">Grado 3 - Unidad 4</span></a></h1>
+<p class="byline">Adaptación del Grupo LEMA (<a class="external" href="https://www.grupolema.org" target="_blank"><code class="code-inline tex2jax_ignore">https://www.grupolema.org</code></a>)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Índice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Índice</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Resultados de búsqueda: </h2>
+<div id="searchempty" class="searchempty"><span>No se encontraron resultados.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="gra3-uni4-secD-lec18.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="up-button button" href="gra3-uni4-secD.html" title="Arriba"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Arriba</span></a><a class="next-button button" href="gra3-uni4-secD-lec20.html" title="Siguiente"><span class="name">Siguiente</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\boldcdot}{\boldsymbol{\cdot}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 focused" data-preexpanded-levels="2" data-max-levels="3"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="gra3-uni4-prefacio.html" class="internal"><span class="title">Introducción a la unidad</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-abstract"><div class="toc-title-box"><a href="gra3-uni4-prefacio.html#gra3-uni4-intro" class="internal"><span class="title">Presentación de la unidad</span></a></div></li>
+<li class="toc-item toc-abstract"><div class="toc-title-box"><a href="gra3-uni4-prefacio.html#meta-source" class="internal"><span class="title">Código fuente</span></a></div></li>
+<li class="toc-item toc-abstract"><div class="toc-title-box"><a href="gra3-uni4-prefacio.html#meta-copyright" class="internal"><span class="title">Licencia</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gra3-uni4-secA.html" class="internal"><span class="title">Sección A - ¿Qué es la división?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html" class="internal"><span class="title">Lección 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html#gra3-uni4-secA-lec1-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html#gra3-uni4-secA-lec1-actividad1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html#gra3-uni4-secA-lec1-actividad2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html#gra3-uni4-secA-lec1-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secA-lec1.html#gra3-uni4-secA-lec1-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html" class="internal"><span class="title">Lección 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-actividad1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-actividad2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-actividad3" class="internal"><span class="title">Actividad 3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-sintesis" class="internal"><span class="title">Síntesis de la lección (10 mins)</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secA-lec2.html#gra3-uni4-secA-lec2-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html" class="internal"><span class="title">Lección 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-act3" class="internal"><span class="title">Actividad 3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-sintesis" class="internal"><span class="title">Síntesis de la lección (5 mins)</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secA-lec3.html#gra3-uni4-secA-lec3-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html" class="internal"><span class="title">Lección 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-actividad1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-actividad2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-actividad3" class="internal"><span class="title">Actividad 3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-sintesis" class="internal"><span class="title">Síntesis de la lección (10 mins)</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secA-lec4.html#gra3-uni4-secA-lec4-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html" class="internal"><span class="title">Lección 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html#gra3-uni4-secA-lec5-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html#gra3-uni4-secA-lec5-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html#gra3-uni4-secA-lec5-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html#gra3-uni4-secA-lec5-sintesis" class="internal"><span class="title">Síntesis de la lección (10 mins)</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secA-lec5.html#gra3-uni4-secA-lec5-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="gra3-uni4-secA-ProblemasPractica.html" class="internal"><span class="title">Problemas de práctica</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="gra3-uni4-secA-resumen.html" class="internal"><span class="title">Resumen sección (estudiantes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gra3-uni4-secB.html" class="internal"><span class="title">Sección B - Relacionemos la multiplicación y la división</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html" class="internal"><span class="title">Lección 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html#gra3-uni4-secB-lec6-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html#gra3-uni4-secB-lec6-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html#gra3-uni4-secB-lec6-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html#gra3-uni4-secB-lec6-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec6.html#gra3-uni4-secB-lec6-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html" class="internal"><span class="title">Lección 7</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html#gra3-uni4-secB-lec7-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html#gra3-uni4-secB-lec7-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html#gra3-uni4-secB-lec7-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html#gra3-uni4-secB-lec7-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec7.html#gra3-uni4-secB-lec7-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html" class="internal"><span class="title">Lección 8</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html#gra3-uni4-secB-lec8-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html#gra3-uni4-secB-lec8-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html#gra3-uni4-secB-lec8-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html#gra3-uni4-secB-lec8-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec8.html#gra3-uni4-secB-lec8-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html" class="internal"><span class="title">Lección 9</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html#gra3-uni4-secB-lec9-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html#gra3-uni4-secB-lec9-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html#gra3-uni4-secB-lec9-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html#gra3-uni4-secB-lec9-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec9.html#gra3-uni4-secB-lec9-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html" class="internal"><span class="title">Lección 10</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html#gra3-uni4-secB-lec10-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html#gra3-uni4-secB-lec10-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html#gra3-uni4-secB-lec10-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html#gra3-uni4-secB-lec10-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec10.html#gra3-uni4-secB-lec10-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html" class="internal"><span class="title">Lección 11</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html#gra3-uni4-secB-lec11-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html#gra3-uni4-secB-lec11-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html#gra3-uni4-secB-lec11-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html#gra3-uni4-secB-lec11-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secB-lec11.html#gra3-uni4-secB-lec11-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="gra3-uni4-secB-ProblemasPractica.html" class="internal"><span class="title">Problemas de práctica</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="grado3-unidad4-seccion4-resumen.html" class="internal"><span class="title">Resumen sección (estudiantes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gra3-uni4-secC.html" class="internal"><span class="title">Sección C - Multipliquemos números más grandes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html" class="internal"><span class="title">Lección 12</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html#gra3-uni4-secC-lec12-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html#gra3-uni4-secC-lec12-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html#gra3-uni4-secC-lec12-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html#gra3-uni4-secC-lec12-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec12.html#gra3-uni4-secC-lec12-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html" class="internal"><span class="title">Lección 13</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html#gra3-uni4-secC-lec13-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html#gra3-uni4-secC-lec13-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html#gra3-uni4-secC-lec13-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html#gra3-uni4-secC-lec13-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec13.html#gra3-uni4-secC-lec13-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html" class="internal"><span class="title">Lección 14</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html#gra3-uni4-secC-lec14-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html#gra3-uni4-secC-lec14-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html#gra3-uni4-secC-lec14-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html#gra3-uni4-secC-lec14-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec14.html#gra3-uni4-secC-lec14-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html" class="internal"><span class="title">Lección 15</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html#gra3-uni4-secC-lec15-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html#gra3-uni4-secC-lec15-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html#gra3-uni4-secC-lec15-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html#gra3-uni4-secC-lec15-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec15.html#gra3-uni4-secC-lec15-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html" class="internal"><span class="title">Lección 16</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-act3" class="internal"><span class="title">Actividad 3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec16.html#gra3-uni4-secC-lec16-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html" class="internal"><span class="title">Lección 17</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html#gra3-uni4-secC-lec17-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html#gra3-uni4-secC-lec17-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html#gra3-uni4-secC-lec17-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html#gra3-uni4-secC-lec17-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secC-lec17.html#gra3-uni4-secC-lec17-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="gra3-uni4-secC-ProblemasPractica.html" class="internal"><span class="title">Problemas de práctica</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="graVV-uniXX-secYY-resumen.html" class="internal"><span class="title">Resumen sección (estudiantes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="gra3-uni4-secD.html" class="internal"><span class="title">Sección D - Dividamos números más grandes</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html" class="internal"><span class="title">Lección 18</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html#gra3-uni4-secD-lec18-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html#gra3-uni4-secD-lec18-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html#gra3-uni4-secD-lec18-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html#gra3-uni4-secD-lec18-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secD-lec18.html#gra3-uni4-secD-lec18-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection active">
+<div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html" class="internal"><span class="title">Lección 19</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html" class="internal"><span class="title">Lección 20</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-act3" class="internal"><span class="title">Actividad 3</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secD-lec20.html#gra3-uni4-secD-lec20-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html" class="internal"><span class="title">Lección 21</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html#gra3-uni4-secD-lec21-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html#gra3-uni4-secD-lec21-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html#gra3-uni4-secD-lec21-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html#gra3-uni4-secD-lec21-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gra3-uni4-secD-lec21.html#gra3-uni4-secD-lec21-cool" class="internal"><span class="title">Actividad de cierre</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="gra3-uni4-secD-lec22.html" class="internal"><span class="title">Lección 22</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec22.html#gra3-uni4-secD-lec22-warm" class="internal"><span class="title">Calentamiento</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec22.html#gra3-uni4-secD-lec22-act1" class="internal"><span class="title">Actividad 1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec22.html#gra3-uni4-secD-lec22-act2" class="internal"><span class="title">Actividad 2</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="gra3-uni4-secD-lec22.html#gra3-uni4-secD-lec22-sintesis" class="internal"><span class="title">Síntesis de la lección</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="gra3-uni4-secD-ProblemasPractica.html" class="internal"><span class="title">Problemas de práctica</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="gra3-uni4-secD-resumen.html" class="internal"><span class="title">Resumen sección (estudiantes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gra3-uni4-glo-acum.html" class="internal"><span class="title">Glosario</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gra3-uni4-glo.html" class="internal"><span class="title">Glosario unidad 3-4</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="centros-gra3-uni4.html" class="internal"><span class="title">Centros</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="BLM-gra3-uni4.html" class="internal"><span class="title">Hojas reproducibles</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-clasificacionDeTarjetas-todoSobreBichos-tarjetas.html" class="internal"><span class="title">Tarjetas (Clasificación de tarjetas: Todo sobre bichos)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-mesaRedondaDeDivision.html" class="internal"><span class="title">Hoja de registro (Mesa redonda de división)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-clasificacionDeTarjetas-multiplicacion-tarjetas.html" class="internal"><span class="title">Tarjetas (Clasificación de tarjetas: Multiplicación)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-clasificacionDeTarjetas-multiplicacion-hojaDeRegistro.html" class="internal"><span class="title">Hoja de registro (Clasificación de tarjetas: Multiplicación)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-clasificacionDeTarjetas-expresionesMultiplicacionRectangulos-tarjetas.html" class="internal"><span class="title">Tarjetas (Clasificación de tarjetas: Expresiones diferentes, mismo rectángulo)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-papelCuadriculadoCentimetro.html" class="internal"><span class="title">Papel cuadriculado de 1 centímetro</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-tarjetasDeDigitos.html" class="internal"><span class="title">Tarjetas de dígitos</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-cercaDe100Multiplicacion.html" class="internal"><span class="title">Tablero de juego para “Cerca de 100, multiplicación”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-comparaDivideHasta100-tarjetas.html" class="internal"><span class="title">Tarjetas (“Compara: Divide hasta 100” [OPCIONAL])</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-unaAventuraConManzanas-tabla.html" class="internal"><span class="title">Tabla (Una aventura con manzanas)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-siSeQueEntoncesSeQue-tabla.html" class="internal"><span class="title">Tabla (Si sé que …, entonces sé que …)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-siSeQueEntoncesSeQueMult-tabla.html" class="internal"><span class="title">Tabla (Si sé que …, entonces sé que …: Multiplicación)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-enElMercadoAgricola-tabla.html" class="internal"><span class="title">Tabla (En el mercado agrícola)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="blm-unaGranCantidadDeDolares-tablas.html" class="internal"><span class="title">Tablas (Una gran cantidad de dólares)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="gra3-uni4-11.html" class="internal"><span class="title">Atribuciones de imágenes</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="gra3-uni4-12.html" class="internal"><span class="title">Actividades de cierre</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gra3-uni4-13.html" class="internal"><span class="title">Actividades de cierre</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="subsection" id="gra3-uni4-secD-lec19"><h2 class="heading hide-type">
+<span class="type">Subsección</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Lección 19 - Formas de dividir números más grandes</span>
+</h2>
+<article class="objectives goal-like" id="gra3-uni4-secD-lec19-4"><h3 class="heading"><span class="type">Objetivos de aprendizaje</span></h3>
+<ul class="disc">
+<li id="gra3-uni4-secD-lec19-4-1-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-4-1-1">Reconocer que la división de números más grandes todavía puede significar encontrar el número de grupos o encontrar el tamaño de cada grupo.</div></li>
+<li id="gra3-uni4-secD-lec19-4-1-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-4-1-2">Usar bloques en base diez para representar la división donde el cociente es mayor que <span class="process-math">\(10\text{.}\)</span>
+</div></li>
+</ul></article><section class="introduction" id="gra3-uni4-secD-lec19-5"> <section class="paragraphs" id="gra3-uni4-secD-lec19-5-1"><h3 class="heading"><span class="title">Estándares CCSS asociados.</span></h3> <div class="para" id="gra3-uni4-secD-lec19-5-1-2">3.NBT.A.3, 3.OA.A.2, 3.OA.B.5, 3.OA.C.7</div></section>  <section class="paragraphs" id="gra3-uni4-secD-lec19-5-2"><h3 class="heading"><span class="title">Momentos de la lección.</span></h3> <div>
+<a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-warm" class="internal" title="Subsubsección: Calentamiento (10 mins)">Subsubsección </a> Calentamiento (10 mins)</div>
+<div>
+<a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-act1" class="internal" title="Subsubsección: Actividad 1 (20 mins)">Subsubsección </a> Actividad 1 (20 mins)</div>
+<div>
+<a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-act2" class="internal" title="Subsubsección: Actividad 2 (15 mins)">Subsubsección </a> Actividad 2 (15 mins)</div>
+<div>
+<a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-sintesis" class="internal" title="Subsubsección: Síntesis de la lección (10 mins)">Subsubsección </a> Síntesis de la lección (10 mins)</div>
+<div>
+<a href="gra3-uni4-secD-lec19.html#gra3-uni4-secD-lec19-cool" class="internal" title="Preguntas de comprensión: Actividad de cierre (5 mins)">Preguntas de comprensión </a> Actividad de cierre (5 mins)</div></section>  <section class="paragraphs" id="gra3-uni4-secD-lec19-5-3"><h3 class="heading"><span class="title">Propósito de la lección.</span></h3> <div class="para" id="gra3-uni4-secD-lec19-5-3-2">El propósito de esta lección es que los estudiantes reconozcan que las dos interpretaciones de la división siguen siendo válidas al dividir números más grandes y que utilicen diagramas en base diez para interpretar y representar la división hasta <span class="process-math">\(100\text{.}\)</span>
+</div></section>  <section class="paragraphs" id="gra3-uni4-secD-lec19-5-4"><h3 class="heading"><span class="title">Materiales.</span></h3> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-5-4-2-1">
+<div class="para" id="gra3-uni4-secD-lec19-5-4-2-1-1">Actividad 1</div>
+<ul class="circle"><li id="gra3-uni4-secD-lec19-5-4-2-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-5-4-2-1-2-1">Bloques en base diez</div></li></ul>
+</li>
+<li id="gra3-uni4-secD-lec19-5-4-2-2">
+<div class="para" id="gra3-uni4-secD-lec19-5-4-2-2-1">Actividad 2</div>
+<ul class="circle"><li id="gra3-uni4-secD-lec19-5-4-2-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-5-4-2-2-2-1">Bloques en base diez</div></li></ul>
+</li>
+</ul></section>  <section class="paragraphs" id="gra3-uni4-secD-lec19-5-5"><h3 class="heading"><span class="title">Narrativa de la lección.</span></h3> <div class="para" id="gra3-uni4-secD-lec19-5-5-2">Antes de esta lección, los estudiantes han interpretado y representado la división en términos de hacer grupos de igual tamaño. En esta lección, repasan las dos interpretaciones de la división y recuerdan que el divisor se puede ver como el número de grupos o el tamaño de cada grupo.</div> <div class="para" id="gra3-uni4-secD-lec19-5-5-3">Los estudiantes utilizan bloques en base diez y diagramas para analizar y representar expresiones de división como <span class="process-math">\(55 \div 5\)</span> y <span class="process-math">\(84 \div 7\text{.}\)</span> Ellos ven que, dependiendo de los números involucrados, una interpretación de la división puede ser más útil que la otra.</div> <div class="para" id="gra3-uni4-secD-lec19-5-5-4">Los estudiantes también reconocen que es útil usar decenas y unidades para hacer grupos iguales (por ejemplo, pensar en <span class="process-math">\(84\)</span> como <span class="process-math">\(8\)</span> decenas y <span class="process-math">\(4\)</span> unidades, en lugar de <span class="process-math">\(84\)</span> unidades), y descomponer las decenas en unidades según sea necesario.</div></section>  <section class="paragraphs" id="gra3-uni4-secD-lec19-5-6"><h3 class="heading"><span class="title">Preguntas de reflexión.</span></h3> <div class="para" id="gra3-uni4-secD-lec19-5-6-2">¿Cómo está ayudando el conocimiento de los estudiantes sobre el valor posicional y las propiedades de las operaciones a que comprendan las estrategias de división?</div></section></section><section class="subsubsection" id="gra3-uni4-secD-lec19-warm"><h3 class="heading hide-type">
+<span class="type">Subsubsección</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Calentamiento (10 mins)</span>
+</h3>
+<section class="paragraphs" id="gra3-uni4-secD-lec19-warm-4-4-1"><h5 class="heading"><span class="title">Tiempo recomendado.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-warm-4-4-1-2">10 minutos</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-warm-4-4-2"><h5 class="heading"><span class="title">Narrativa.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-warm-4-4-2-2">El propósito de este Verdadero o Falso es reforzar la relación entre decenas y unidades (que <span class="process-math">\(1\)</span> decena es igual a <span class="process-math">\(10\)</span> unidades, o <span class="process-math">\(1\)</span> grupo de <span class="process-math">\(10\)</span> es igual a <span class="process-math">\(10\)</span> grupos de <span class="process-math">\(1\)</span>). Esto será útil cuando los estudiantes utilicen bloques en base diez para representar la división y descompongan las decenas en unidades para facilitar el proceso de dividir. También permite a los estudiantes practicar encontrar el producto de un número entero de un solo dígito y un múltiplo de <span class="process-math">\(10\text{.}\)</span>
+</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-warm-4-4-3"><h5 class="heading"><span class="title">Lanzamiento.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-warm-4-4-3-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-4-3-2-1">Muestre una de las afirmaciones (igualdades).</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-4-3-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-4-3-2-2">“Hagan una señal cuando sepan si la afirmación es verdadera o no, y puedan explicar cómo lo saben.”</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-4-3-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-4-3-2-3">1 minuto: tiempo para pensar en silencio.</div></li>
+</ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-warm-4-4-4"><h5 class="heading"><span class="title">Desarrollo de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-warm-4-4-4-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-4-4-2-1">Comparta y registre respuestas y estrategias.</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-4-4-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-4-4-2-2">Repita con cada afirmación.</div></li>
+</ul></section><article class="exploration project-like" id="gra3-uni4-secD-lec19-warm-4"><h4 class="heading">
+<span class="type">Calentamiento</span><span class="space"> </span><span class="codenumber">77</span><span class="period">.</span><span class="space"> </span><span class="title">Verdadero o falso: Unidades, decenas, veintenas.</span>
+</h4>
+<div class="para" id="gra3-uni4-secD-lec19-warm-4-2-1">En cada caso, decide si la afirmación es verdadera o falsa. Prepárate para explicar tu razonamiento.</div> <ol class="upper-alpha">
+<li id="gra3-uni4-secD-lec19-warm-4-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-2-2-1"><span class="process-math">\(\displaystyle 4 \times 10 = 40 \times 1\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-2-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-2-2-2"><span class="process-math">\(\displaystyle 4 \times 20 = 4 \times 2 \times 10\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-2-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-2-2-3"><span class="process-math">\(\displaystyle 8 \times 20 = 8 \times 2 \times 1\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-2-2-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-2-2-4"><span class="process-math">\(\displaystyle 8 \times 20 = 16 \times 10\)</span></div></li>
+</ol>
+<div class="solutions"><details id="gra3-uni4-secD-lec19-warm-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solución</span><span class="period">.</span></summary><div class="solution solution-like"><ul class="disc">
+<li id="gra3-uni4-secD-lec19-warm-4-3-1-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-3-1-1">Verdadero: <span class="process-math">\(4\)</span> decenas son <span class="process-math">\(40\)</span> unidades. Ambos lados son iguales a <span class="process-math">\(40\text{.}\)</span>
+</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-3-1-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-3-1-2">Verdadero: <span class="process-math">\(2 \times 10\)</span> es <span class="process-math">\(20\text{,}\)</span> por eso ambos lados muestran <span class="process-math">\(4\)</span> grupos de <span class="process-math">\(20\text{.}\)</span>
+</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-3-1-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-3-1-3">Falso: En la izquierda hay <span class="process-math">\(8\)</span> grupos de <span class="process-math">\(20\text{.}\)</span> En la derecha hay <span class="process-math">\(8\)</span> grupos de <span class="process-math">\(2\text{,}\)</span> ya que <span class="process-math">\(2 \times 1\)</span> es <span class="process-math">\(2\text{.}\)</span>
+</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-3-1-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-3-1-4">Verdadero: <span class="process-math">\(20\)</span> es <span class="process-math">\(2 \times 10\text{,}\)</span> por eso <span class="process-math">\(8 \times 20\)</span> es lo mismo que <span class="process-math">\(8 \times 2 \times 10\text{,}\)</span> que es <span class="process-math">\(16 \times 10\text{.}\)</span>
+</div></li>
+</ul></div></details></div></article><section class="paragraphs" id="gra3-uni4-secD-lec19-warm-4-5-1"><h5 class="heading"><span class="title">Síntesis de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-warm-4-5-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-5-1-2-1">“¿Cómo pueden justificar su respuesta sin encontrar el valor de ambos lados?”</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-5-1-2-2">
+<div class="para" id="gra3-uni4-secD-lec19-warm-4-5-1-2-2-1">Considere preguntar:</div>
+<ul class="circle">
+<li id="gra3-uni4-secD-lec19-warm-4-5-1-2-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-5-1-2-2-2-1">“¿Alguien puede expresar el razonamiento de <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> de otra forma?”</div></li>
+<li id="gra3-uni4-secD-lec19-warm-4-5-1-2-2-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-warm-4-5-1-2-2-2-2">“¿Alguien quiere agregar algo al razonamiento de <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>?”</div></li>
+</ul>
+</li>
+</ul></section></section><section class="subsubsection" id="gra3-uni4-secD-lec19-act1"><h3 class="heading hide-type">
+<span class="type">Subsubsección</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Actividad 1 (20 mins)</span>
+</h3>
+<section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-4-1"><h5 class="heading"><span class="title">Tiempo recomendado.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act1-4-4-1-2">20 minutos</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-4-2"><h5 class="heading"><span class="title">Narrativa.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act1-4-4-2-2">El propósito de esta actividad es que los estudiantes utilicen estrategias basadas en el valor posicional para encontrar cocientes mayores que <span class="process-math">\(10\text{.}\)</span> Los estudiantes utilizan bloques en base diez para representar cocientes con divisores de un solo dígito, para los cuales es natural pensar en el divisor como el número de grupos. En una actividad posterior, se les recordará a los estudiantes que el divisor también puede interpretarse como el tamaño de cada grupo.</div> <div class="para" id="gra3-uni4-secD-lec19-act1-4-4-2-3">Trabajar con bloques en base diez incentiva a los estudiantes a dividir las decenas y luego las unidades, y a ver que a veces es necesario descomponer una o más decenas para terminar de poner el dividendo en grupos iguales. Cuando los estudiantes representan un cociente utilizando bloques en base diez, razonan de manera abstracta y cuantitativa (MP2).</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-4-3"><h5 class="heading"><span class="title">Materiales.</span></h5> <ul class="disc"><li id="gra3-uni4-secD-lec19-act1-4-4-3-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-3-2-1">Bloques en base diez</div></li></ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-4-4"><h5 class="heading"><span class="title">Lanzamiento.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-1">Grupos de 2.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-2">Entrega a cada grupo bloques en base diez.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-3">“Usen bloques en base diez para representar <span class="process-math">\(39 \div 3\text{.}\)</span>”</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-4">1–2 minutos: tiempo de trabajo independiente.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-5">
+<div class="para" id="gra3-uni4-secD-lec19-act1-4-4-4-2-5-1">Seleccione a un estudiante que dividió los bloques en <span class="process-math">\(3\)</span> grupos de <span class="process-math">\(13\)</span> para compartir su representación final, por ejemplo:</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/svg-source/tikz-file-149340.svg" role="img" class="contained" alt="Bloques en 3 grupos de 13"></div>
+</li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-6"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-6">“¿Por qué hay <span class="process-math">\(3\)</span> grupos?”</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-7"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-7">“¿Cómo se pudieron haber dividido los bloques para que terminaran de esta forma?” (Las decenas se colocaron en <span class="process-math">\(3\)</span> grupos y luego las unidades se colocaron una por una en <span class="process-math">\(3\)</span> grupos hasta que no quedó ninguna.)</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-4-2-8"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-4-2-8">Destaque que también se podrían haber dividido las decenas y luego las unidades.</div></li>
+</ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-4-5"><h5 class="heading"><span class="title">Desarrollo de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-1">“Trabajen con su compañero en el primer problema.”</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-2">5 minutos: tiempo de trabajo en pareja.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-3">Haga una pausa para tener una discusión.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-4">“¿En qué fue diferente usar los bloques para encontrar <span class="process-math">\(45 \div 3\)</span> a usarlos para encontrar <span class="process-math">\(55 \div 5\text{?}\)</span>” (Para <span class="process-math">\(45 \div 3\text{,}\)</span> fue necesario descomponer <span class="process-math">\(1\)</span> decena para terminar de colocar <span class="process-math">\(45\)</span> en <span class="process-math">\(3\)</span> grupos iguales. Eso no fue necesario para <span class="process-math">\(55 \div 5\)</span> porque ya había la cantidad correcta de decenas y unidades para hacer los <span class="process-math">\(5\)</span> grupos.)</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-5"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-5">“Ahora, individualmente, encuentren el valor de los cocientes del segundo problema.”</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-4-5-2-6"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-4-5-2-6">6 a 8 minutos: tiempo de trabajo independiente.</div></li>
+</ul></section><article class="activity project-like" id="gra3-uni4-secD-lec19-act1-4"><h4 class="heading">
+<span class="type">Actividad</span><span class="space"> </span><span class="codenumber">78</span><span class="period">.</span><span class="space"> </span><span class="title">Dividamos con bloques en base diez.</span>
+</h4>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:70%;"><ol class="decimal">
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-1">
+<div class="para" id="gra3-uni4-secD-lec19-act1-4-2-1-1-1-1">Usa bloques en base diez para representar cada expresión. Después, encuentra su valor.</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-2-1-1-1-2-1"><span class="process-math">\(\displaystyle 55 \div 5\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-1-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-2-1-1-1-2-2"><span class="process-math">\(\displaystyle 45 \div 3\)</span></div></li>
+</ol>
+</li>
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-2">
+<div class="para" id="gra3-uni4-secD-lec19-act1-4-2-1-1-2-1">Encuentra el valor de cada expresión. Usa bloques en base diez si crees que te pueden ayudar.</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-1"><span class="process-math">\(\displaystyle 63 \div 3\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-2"><span class="process-math">\(\displaystyle 84 \div 7\)</span></div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-2-1-1-2-2-3"><span class="process-math">\(\displaystyle 100 \div 5\)</span></div></li>
+</ol>
+</li>
+</ol></div>
+<div class="sbspanel top" style="width:20%;"><img src="external/png-source/CS%203.4%20Lesson%2019%20Activity%201.png" class="contained" alt="Bloques en base diez"></div>
+</div></div>
+<div class="solutions"><details id="gra3-uni4-secD-lec19-act1-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solución</span><span class="period">.</span></summary><div class="solution solution-like"><ol class="decimal">
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-3-1-1"><ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-1-1-1">
+<div class="para" id="gra3-uni4-secD-lec19-act1-4-3-1-1-1-1-1"><span class="process-math">\(\displaystyle 11\)</span></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/svg-source/tikz-file-152965.svg" role="img" class="contained" alt="Bloques en base diez"></div>
+</li>
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-1-1-2">
+<div class="para" id="gra3-uni4-secD-lec19-act1-4-3-1-1-1-2-1"><span class="process-math">\(\displaystyle 15\)</span></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/svg-source/tikz-file-152966.svg" role="img" class="contained" alt="Bloques en base diez"></div>
+</li>
+</ol></div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-3-1-2"><ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-2-1-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-3-1-2-1-1">
+<span class="process-math">\(21\)</span> (<span class="process-math">\(3\)</span> grupos de <span class="process-math">\(21\)</span> unidades, o <span class="process-math">\(3\)</span> grupos de <span class="process-math">\(2\)</span> decenas y <span class="process-math">\(1\)</span> unidad)</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-2-1-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-3-1-2-1-2">
+<span class="process-math">\(12\)</span> (<span class="process-math">\(7\)</span> grupos de <span class="process-math">\(12\text{,}\)</span> o <span class="process-math">\(7\)</span> grupos de <span class="process-math">\(1\)</span> decena y <span class="process-math">\(2\)</span> unidades)</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-3-1-2-1-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-3-1-2-1-3">
+<span class="process-math">\(20\)</span> (<span class="process-math">\(5\)</span> grupos de <span class="process-math">\(20\)</span> unidades, o <span class="process-math">\(5\)</span> grupos de <span class="process-math">\(2\)</span> decenas)</div></li>
+</ol></div></li>
+</ol></div></details></div></article><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-5-1"><h5 class="heading"><span class="title">Síntesis de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act1-4-5-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-5-1-2-1">Invite a los estudiantes a compartir sus respuestas y razonamientos para el último grupo de cocientes.</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-5-1-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-5-1-2-2">Pregunte a los estudiantes que utilizaron bloques en base diez o dibujaron diagramas: “¿Fue necesario descomponer alguna decena en unidades para dividir?” (No fue necesario para <span class="process-math">\(63 \div 3\)</span> porque ya había la cantidad correcta de decenas y unidades para colocar en <span class="process-math">\(3\)</span> grupos. No fue necesario para <span class="process-math">\(100 \div 5\)</span> porque comencé con <span class="process-math">\(10\)</span> decenas y ya había la cantidad correcta de decenas para hacer <span class="process-math">\(5\)</span> grupos.)</div></li>
+<li id="gra3-uni4-secD-lec19-act1-4-5-1-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act1-4-5-1-2-3">“¿Por qué fue necesario o útil descomponer las decenas de <span class="process-math">\(84\text{?}\)</span>” (Después de colocar <span class="process-math">\(7\)</span> decenas en <span class="process-math">\(7\)</span> grupos, todavía queda <span class="process-math">\(1\)</span> decena y <span class="process-math">\(4\)</span> unidades. <span class="process-math">\(1\)</span> decena no se pudo dividir en <span class="process-math">\(7\)</span> grupos.)</div></li>
+</ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-5-2"><h5 class="heading"><span class="title">Desarrollo de lenguaje matemático.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-2-2">Apoyos para la discusión de MLR8:</div> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-2-3">Síntesis: Algunos estudiantes pueden beneficiarse de la oportunidad de ensayar lo que dirán con un compañero antes de compartirlo con toda la clase.</div> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-2-4">Avances: Habla.</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act1-4-5-3"><h5 class="heading"><span class="title">Acceso a estudiantes con discapacidades.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-3-2">Representación: Interiorizar la comprensión.</div> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-3-3">Síntesis: Invite a los estudiantes a identificar qué detalles fueron más importantes al decidir cómo dividir los bloques. Muestre el esquema de oración: “La próxima vez que use bloques en base diez para dividir, buscaré / prestaré atención a”.</div> <div class="para" id="gra3-uni4-secD-lec19-act1-4-5-3-4">Apoya la accesibilidad para: Funcionamiento Social-Emocional.</div></section></section><section class="subsubsection" id="gra3-uni4-secD-lec19-act2"><h3 class="heading hide-type">
+<span class="type">Subsubsección</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Actividad 2 (15 mins)</span>
+</h3>
+<section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-4-1"><h5 class="heading"><span class="title">Tiempo recomendado.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act2-4-4-1-2">15 minutos</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-4-2"><h5 class="heading"><span class="title">Narrativa.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-act2-4-4-2-2">El propósito de esta actividad es mostrar que los dos significados de la división siguen siendo válidos al dividir números más grandes y que, en algunos casos, una interpretación puede ser más útil que la otra.</div> <div class="para" id="gra3-uni4-secD-lec19-act2-4-4-2-3">Los estudiantes primero analizan dos formas de usar bloques en base diez para representar <span class="process-math">\(60 \div 5\)</span> y ven que el divisor, <span class="process-math">\(5\text{,}\)</span> puede interpretarse como el número de grupos o el tamaño de un grupo. Luego consideran cómo podrían interpretar y representar el divisor en otros cocientes. El razonamiento aquí prepara a los estudiantes para pensar de manera más estratégica a medida que dividen números más grandes.</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-4-3"><h5 class="heading"><span class="title">Materiales.</span></h5> <ul class="disc"><li id="gra3-uni4-secD-lec19-act2-4-4-3-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-3-2-1">Bloques en base diez</div></li></ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-4-4"><h5 class="heading"><span class="title">Lanzamiento.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act2-4-4-4-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-4-2-1">Grupos de 2 a 4.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-4-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-4-2-2">Entregue bloques en base diez a cada grupo.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-4-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-4-2-3">Pida a los estudiantes que mantengan sus libros cerrados.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-4-2-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-4-2-4">“Usen bloques en base diez para encontrar el valor de <span class="process-math">\(60 \div 5\text{.}\)</span>”</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-4-2-5"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-4-2-5">1-2 minutos: tiempo de trabajo independiente.</div></li>
+</ul></section><section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-4-5"><h5 class="heading"><span class="title">Desarrollo de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-1">“Ahora observen el trabajo de Jada y de Han en la actividad. ¿Quién de ellos representó la división de la misma forma en que ustedes lo hicieron?”</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-2">“Con su compañero, denle sentido al trabajo de Jada y de Han, y completen el primer problema.”</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-3">Pausa para una breve discusión.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-4"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-4">“¿En qué son diferentes las representaciones de Jada y de Han? ¿Cómo interpretó cada uno <span class="process-math">\(60 \div 5\text{?}\)</span>” (Jada vio el <span class="process-math">\(5\)</span> como el número de grupos. Han vio el <span class="process-math">\(5\)</span> como el número en cada grupo.)</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-5"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-5">Haga una encuesta en la clase sobre cómo interpretaron <span class="process-math">\(60 \div 5\)</span> cuando lo representaron en la actividad de calentamiento.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-6"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-6">“Ahora trabajen individualmente en el segundo grupo de problemas.”</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-4-5-2-7"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-4-5-2-7">5 minutos: tiempo de trabajo independiente.</div></li>
+</ul></section><article class="activity project-like" id="gra3-uni4-secD-lec19-act2-4"><h4 class="heading">
+<span class="type">Actividad</span><span class="space"> </span><span class="codenumber">79</span><span class="period">.</span><span class="space"> </span><span class="title">Diferentes formas de mostrar la división.</span>
+</h4>
+<div class="para" id="gra3-uni4-secD-lec19-act2-4-2-1">Jada y Han usaron bloques en base diez para representar <span class="process-math">\(60 \div 5\text{.}\)</span>
+</div> <div class="para" id="gra3-uni4-secD-lec19-act2-4-2-2">Este es el trabajo de Jada:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/svg-source/tikz-file-152963.svg" role="img" class="contained" alt="Bloques en base diez"></div> <div class="para" id="gra3-uni4-secD-lec19-act2-4-2-4">Este es el trabajo de Han:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/svg-source/tikz-file-152964.svg" role="img" class="contained" alt="Bloques en base diez"></div> <ol class="decimal">
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-1">
+<div class="para" id="gra3-uni4-secD-lec19-act2-4-2-6-1-1">Dale sentido al trabajo de Jada y de Han.</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-2-6-1-2-1">¿Cómo se diferencia lo que hicieron?</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-1-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-2-6-1-2-2">¿En qué parte del trabajo de cada uno vemos el valor de <span class="process-math">\(60 \div 5\text{?}\)</span>
+</div></li>
+</ol>
+</li>
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-2">
+<div class="para" id="gra3-uni4-secD-lec19-act2-4-2-6-2-1">¿Cómo usarías bloques en base diez para poder representar estas expresiones y encontrar su valor? Prepárate para explicar tu razonamiento.</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-2-6-2-2-1">
+<span class="process-math">\(64 \div 4:\)</span> ¿Harías <span class="process-math">\(4\)</span> grupos o grupos de <span class="process-math">\(4\text{?}\)</span>
+</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-2-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-2-6-2-2-2">
+<span class="process-math">\(72 \div 6:\)</span> ¿Harías <span class="process-math">\(6\)</span> grupos o grupos de <span class="process-math">\(6\text{?}\)</span>
+</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-2-6-2-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-2-6-2-2-3">
+<span class="process-math">\(75 \div 15:\)</span> ¿Harías <span class="process-math">\(15\)</span> grupos o grupos de <span class="process-math">\(15\text{?}\)</span>
+</div></li>
+</ol>
+</li>
+</ol>
+<div class="solutions"><details id="gra3-uni4-secD-lec19-act2-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solución</span><span class="period">.</span></summary><div class="solution solution-like"><ol class="decimal">
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-1">
+<div class="para" id="gra3-uni4-secD-lec19-act2-4-3-1-1-1">Ejemplo de respuesta:</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-3-1-1-2-1">Jada hizo <span class="process-math">\(5\)</span> grupos y puso <span class="process-math">\(1\)</span> decena en cada uno. Descompuso la última decena en <span class="process-math">\(10\)</span> unidades y puso <span class="process-math">\(2\)</span> unidades en cada grupo. Han dividió cada decena en <span class="process-math">\(2\)</span> grupos con <span class="process-math">\(5\)</span> unidades en cada uno.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-1-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-3-1-1-2-2">En el trabajo de Jada, es el número en cada grupo, que es <span class="process-math">\(12\text{.}\)</span> En el trabajo de Han, es el número de grupos, que es <span class="process-math">\(12\text{.}\)</span>
+</div></li>
+</ol>
+</li>
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-2">
+<div class="para" id="gra3-uni4-secD-lec19-act2-4-3-1-2-1">Ejemplo de respuesta:</div>
+<ol class="lower-alpha">
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-2-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-3-1-2-2-1">
+<span class="process-math">\(4\)</span> grupos, porque es más rápido que hacer grupos de <span class="process-math">\(4\)</span> y contar los grupos.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-2-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-3-1-2-2-2">
+<span class="process-math">\(6\)</span> grupos, ya que no requiere descomponer las <span class="process-math">\(7\)</span> decenas en unidades.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-3-1-2-2-3"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-3-1-2-2-3">Grupos de <span class="process-math">\(15\text{,}\)</span> porque es más rápido hacer grupos de <span class="process-math">\(1\)</span> decena y <span class="process-math">\(5\)</span> unidades, que hacer <span class="process-math">\(15\)</span> grupos y averiguar cuántos poner en cada grupo.</div></li>
+</ol>
+</li>
+</ol></div></details></div></article><section class="paragraphs" id="gra3-uni4-secD-lec19-act2-4-5-1"><h5 class="heading"><span class="title">Síntesis de la actividad.</span></h5> <ul class="disc">
+<li id="gra3-uni4-secD-lec19-act2-4-5-1-2-1"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-5-1-2-1">Invite a los estudiantes a compartir sus respuestas y razonamiento para el último grupo de problemas.</div></li>
+<li id="gra3-uni4-secD-lec19-act2-4-5-1-2-2"><div class="para" id="p-derived-gra3-uni4-secD-lec19-act2-4-5-1-2-2">“¿Cómo decidieron si el divisor, o sea el número entre el cual estamos dividiendo, es el número de grupos o la cantidad en cada grupo?” (Depende del número. En los dos primeros problemas, el divisor era <span class="process-math">\(4\)</span> y <span class="process-math">\(6\text{,}\)</span> por lo que era más fácil pensar en <span class="process-math">\(4\)</span> grupos y <span class="process-math">\(6\)</span> grupos. En el último problema, el divisor era <span class="process-math">\(15\text{.}\)</span> Era más fácil pensar en cuántos grupos de <span class="process-math">\(15\)</span> hay en <span class="process-math">\(75\)</span> que en hacer <span class="process-math">\(15\)</span> grupos a partir de <span class="process-math">\(75\text{.}\)</span>)</div></li>
+</ul></section></section><section class="subsubsection" id="gra3-uni4-secD-lec19-sintesis"><h3 class="heading hide-type">
+<span class="type">Subsubsección</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Síntesis de la lección (10 mins)</span>
+</h3>
+<div class="para" id="gra3-uni4-secD-lec19-sintesis-4">Hoy recordamos que el divisor de una expresión de división se puede ver como el número de grupos o el tamaño de cada grupo</div>
+<div class="para" id="gra3-uni4-secD-lec19-sintesis-5">Muestre: <span class="process-math">\(96 \div 8\)</span>
+</div>
+<div class="para" id="gra3-uni4-secD-lec19-sintesis-6">“Si representaran este cociente con bloques en base diez, ¿pondrían <span class="process-math">\(9\)</span> decenas y <span class="process-math">\(6\)</span> unidades en <span class="process-math">\(8\)</span> grupos, o las pondrían en grupos de <span class="process-math">\(8\text{?}\)</span>” (Los pondría en <span class="process-math">\(8\)</span> grupos. Ocho de las decenas se pueden poner fácilmente en <span class="process-math">\(8\)</span> grupos. La decena que sobra y <span class="process-math">\(6\)</span> unidades forman <span class="process-math">\(16\)</span> unidades, así que <span class="process-math">\(2\)</span> unidades van en cada grupo. Los pondría en grupos de <span class="process-math">\(8\text{.}\)</span> Sé que <span class="process-math">\(10\)</span> grupos de <span class="process-math">\(8\)</span> son <span class="process-math">\(80\text{,}\)</span> así que eso se encarga de las <span class="process-math">\(8\)</span> decenas. La decena que sobra y <span class="process-math">\(6\)</span> unidades hacen <span class="process-math">\(16\text{,}\)</span> que son <span class="process-math">\(2\)</span> grupos de <span class="process-math">\(8\text{.}\)</span>)</div></section><section class="reading-questions" id="gra3-uni4-secD-lec19-cool"><h3 class="heading hide-type">
+<span class="type">Preguntas de comprensión</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Actividad de cierre (5 mins)</span>
+</h3>
+<a class="external" href="external/cools-pdf/gra3-uni4-secD-lec19-cool-standalone.pdf" target="_blank">Descargar pdf para imprimir o proyectar</a><details class="ptx-footnote" aria-live="polite" id="gra3-uni4-secD-lec19-cool-5"><summary class="ptx-footnote__number" title="Nota a pie de página 32"><sup> 32 </sup></summary><div class="ptx-footnote__contents" id="gra3-uni4-secD-lec19-cool-5"><code class="code-inline tex2jax_ignore">external/cools-pdf/gra3-uni4-secD-lec19-cool-standalone.pdf</code></div></details><article class="project project-like" id="gra3-uni4-secD-lec19-cool-6"><h4 class="heading">
+<span class="type">Actividad de cierre</span><span class="space"> </span><span class="codenumber">80</span><span class="period">.</span><span class="space"> </span><span class="title">Encuentra el valor.</span>
+</h4>
+<div class="para" id="gra3-uni4-secD-lec19-cool-6-2-1">Encuentra el valor de <span class="process-math">\(51 \div 3.\)</span> Usa bloques en base diez si crees que te pueden ayudar. Explica o muestra cómo razonaste.</div>
+<div class="solutions"><details id="gra3-uni4-secD-lec19-cool-6-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solución</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="gra3-uni4-secD-lec19-cool-6-3-1">
+<span class="process-math">\(17\text{.}\)</span> Ejemplo de respuesta: los estudiantes forman <span class="process-math">\(51\)</span> con bloques en base diez y hacen <span class="process-math">\(3\)</span> grupos iguales, descomponiendo decenas según sea necesario. Los estudiantes hacen un dibujo que muestra <span class="process-math">\(51\)</span> en <span class="process-math">\(3\)</span> grupos o un dibujo que muestra <span class="process-math">\(51\)</span> en grupos de <span class="process-math">\(3\text{.}\)</span>
+</div></div></details></div></article><section class="paragraphs" id="gra3-uni4-secD-lec19-cool-6-4-1"><h5 class="heading"><span class="title">Posibles errores.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-cool-6-4-1-2">Los estudiantes no encuentran el cociente de <span class="process-math">\(51 \div 3\text{.}\)</span>
+</div></section><section class="paragraphs" id="gra3-uni4-secD-lec19-cool-6-4-2"><h5 class="heading"><span class="title">Acciones para apoyar el aprendizaje.</span></h5> <div class="para" id="gra3-uni4-secD-lec19-cool-6-4-2-2">Durante la introducción de la actividad del día siguiente, destaque las ideas importantes de la lección anterior.</div></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="gra3-uni4-secD-lec18.html" title="Anterior"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Anterior</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="gra3-uni4-secD-lec20.html" title="Siguiente"><span class="name">Siguiente</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+\documentclass[grado3]{LEMA-Tikz-IM}
+\begin{document}
+
+\begin{tikzpicture}
+\matrix[tablaVertical, % ver def en LEMA-Tikz-IM.sty
+        % row 1/.append style={nodes={minimum height=6ex}},
+        % row 3/.append style={nodes={minimum height=8ex}},
+        column 1/.append style={nodes={text width = 16ex}},
+        column 2/.append style={nodes={text width = 36ex}},
+    ] (myTable) {
+        % Header Row 
+        \input{siSeQueEntoncesSeQue-tab-header.tex}
+        % 
+        $2\times 4$ &  $4\times 2$, $4\times 4$, $2\times 8$\\ 
+        $3\times 5$ &  $6\times 5$, $5\times 3$, $4\times 5$\\ 
+        $4\times 10$ & $10\times 4$, $9\times 4$, $8\times 10$ \\ 
+        $7\times 2$ &  $7\times 4$, $8\times 2$, $14\times 2$\\ 
+        $5\times 8$ &  $6\times 8$, $4\times 8$, $8\times 8$\\ 
+  };
+
+\end{tikzpicture}
+
+
+\end{document}

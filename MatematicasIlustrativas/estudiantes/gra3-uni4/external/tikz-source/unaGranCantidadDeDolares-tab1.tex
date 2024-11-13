@@ -1,0 +1,20 @@
+\documentclass[grado3]{LEMA-Tikz-IM}
+
+\begin{document}
+
+\begin{tikzpicture}
+\matrix[tablaVertical, % ver def en LEMA-Tikz-IM.sty
+        row 1/.append style={nodes={minimum height=7ex}},
+        column 1/.append style={nodes={text width = 28ex}},
+        column 2/.append style={nodes={text width = 18ex}},
+        column 3/.append style={nodes={text width = 19ex}},
+    ] (myTable) {
+        % Header Row 
+        \input{unaGranCantidadDeDolares-tab1-header.tex}\\
+        \input{unaGranCantidadDeDolares-tab1-contenidoStatementyBLM.tex}\\
+  };
+
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[border=5pt, tikz]{standalone}
+\begin{document}
+
+
+\def\unitLength{0.5in}
+\tikzset{ every path/.append style={ line width=0.7pt
+                             , rounded corners=0.1mm
+                             }
+        , x=\unitLength
+        , y=\unitLength
+        }
+
+\newcommand{\connectingCube}[2]{
+% \connectingCube{bottom left pt}{color}
+  \def\diagAngle{35}     %angle of the side the points into the page
+  \def\diagScale{0.4}    %scale of the side the points into the page
+  \def\diagDentScale{1}  %scale of the side the points into dent
+  \begin{scope}[shift={#1},x=\unitLength,y=\unitLength,z=(\diagAngle:{\diagScale*\unitLength})]
+    % Draw outer cube
+    \draw[fill=#2!50!white] 
+         (0,0,0) rectangle (1,1,0);
+    \draw[fill=#2!50!white] 
+         (1,0,0) -- ++(0,0,1) -- ++(0,1,0) -- ++(0,0,-1) -- cycle;
+    \draw[fill=#2!50!white] 
+         (0,1,0) -- ++(0,0,1) -- ++(1,0,0) -- ++(0,0,-1) -- cycle;
+    % Draw front dent
+    \begin{scope}[shift={(1/3,1/3,0)}, scale=1/3]
+      \draw[fill=#2] (0,0,0) rectangle (1,1,0);
+      \draw (0,0,0) -- ++(0,0,\diagDentScale) -- ({\diagDentScale*\diagScale*cos(\diagAngle)},1,0);
+      \draw (0,0,0)  ++(0,0,\diagDentScale) -- (1,{\diagDentScale*\diagScale*sin(\diagAngle)},0);
+    \end{scope}
+    % Draw right dent
+    \begin{scope}[shift={(1,1/3,1/3)}, scale=1/3]
+      \draw[fill=#2] (0,0,0) -- ++(0,0,1) -- ++(0,1,0) -- ++(0,0,-1) -- cycle;
+      \draw (0,0,1) -- ++({-\diagScale*cos(\diagAngle)},0,0);
+    \end{scope}
+    % Draw top dent
+    \begin{scope}[shift={(1/3,1,1/3)}, scale=1/3]
+      \draw[fill=#2] (0,0,0)  -- ++(1,0,0) -- ++(0,0,1) -- ++(-1,0,0) -- cycle;
+      \draw (0,0,1) -- ++(0,{-\diagScale*sin(\diagAngle)},0);
+    \end{scope}    
+  \end{scope}
+}
+
+
+\begin{tikzpicture}
+  \connectingCube{(0,0)}{yellow!70!red}
+\end{tikzpicture}
+
+
+
+\end{document}
