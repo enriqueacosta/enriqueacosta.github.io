@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -19,13 +19,13 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</loc>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -37,11 +37,8 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -54,7 +51,7 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/hugo/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -66,11 +63,11 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/hugo/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -83,7 +80,7 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -94,6 +91,15 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</loc>
+    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/figures/</loc>
+    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</loc>
+    <lastmod>2024-01-14T10:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/tikz/</loc>
     <lastmod>2024-01-14T10:49:34-05:00</lastmod>
@@ -409,9 +415,6 @@
     <lastmod>2022-02-09T16:02:00-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-3/</loc>
-    <lastmod>2022-02-05T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
     <lastmod>2022-02-05T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/arecibo-message/</loc>

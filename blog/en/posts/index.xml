@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Oct 2024 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating This Blog Part 3: Tag Functionality and Listings, and Adding an About Page.</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</link>
+      <pubDate>Wed, 02 Oct 2024 21:12:04 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</guid>
+      <description>https://c82.net/blog/?id=79
+https://c82.net/euclid/</description>
+    </item>
+    
     <item>
       <title>Creating This Blog Part 4: Adding a TikZ Gallery</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>
@@ -147,7 +157,7 @@ Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in 
       
       <guid>https://enriqueacosta.github.io/blog/en/posts/translating-im/</guid>
       <description>I was recently invited to participate in a webinar as the lead Spanish translator of the Illustrative Mathematics K-8 Curriculum (see here). The main point they wanted me to discuss was what was our process translating the resources, and why a simple word-for-word translation like that could be put into Google insufficient.
-As a preparation for this webinar, I decided to write this blog entry describing detailed answers to this prompt.</description>
+As a preparation for this webinar, I decided to write this blog entry describing in detail the translation process.</description>
     </item>
     
     <item>
