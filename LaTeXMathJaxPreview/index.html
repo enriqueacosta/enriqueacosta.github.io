@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LaTeX MathJax Previewer</title>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+  <!-- MathJax for rendering LaTeX -->
   <script>
     window.MathJax = {
       tex: {
@@ -13,24 +15,28 @@
       svg: { fontCache: 'global' }
     };
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
   <style>
     body {
       margin: 0;
+      padding: 1rem;
       font-family: system-ui, sans-serif;
       background: #fafafa;
       color: #222;
-      padding: 2rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       max-width: 800px;
+      width: 100%;
       margin-inline: auto;
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
       margin-bottom: 0.2rem;
     }
 
     .subtitle {
-      font-size: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
       color: #666;
       margin-bottom: 1.5rem;
     }
@@ -41,6 +47,7 @@
       padding: 1rem;
       margin-bottom: 2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      font-size: 0.95em;
     }
 
     .controls {
@@ -56,6 +63,7 @@
     textarea {
       width: 100%;
       min-height: 5em;
+      max-height: 50vh;
       font-family: monospace;
       resize: vertical;
       border: 1px solid #ccc;
@@ -71,6 +79,7 @@
       background: #ffffff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
       margin-bottom: 1rem;
+      overflow-x: auto;
     }
 
     .share-msg {
@@ -84,6 +93,11 @@
       color: #0077cc;
       word-break: break-word;
       display: none;
+    }
+
+    /* Scale up MathJax-rendered math on small screens */
+    mjx-container[jax="SVG"] {
+      font-size: 120% !important;
     }
   </style>
 </head>
@@ -177,7 +191,6 @@
           input.value = content;
         }
       } else {
-        // no shared URL — use example
         input.value = examples[modeSelect.value];
       }
     }
@@ -185,5 +198,10 @@
     loadFromQuery();
     render();
   </script>
+
+  <footer style="font-size: 0.8rem; color: #666; margin-top: 2rem; text-align: center;">
+    Powered by <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a>.  
+    Inspired by <a href="https://saxarona.github.io/mathjax-viewer/" target="_blank" rel="noopener noreferrer">this viewer</a>.
+  </footer>
 </body>
 </html>
