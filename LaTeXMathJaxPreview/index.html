@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LaTeX MathJax Previewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #fafafa;
+      color: #222;
+      padding: 2rem;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .instructions {
+      background: #fff;
+      border-left: 4px solid #4a90e2;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .controls {
+      margin-bottom: 1rem;
+    }
+
+    select, textarea, button {
+      font-size: 1rem;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 5em;
+      font-family: monospace;
+      resize: vertical;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .render {
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1rem;
+    }
+
+    .share-msg {
+      color: green;
+      display: none;
+      font-size: 0.9rem;
+    }
+
+    .share-link {
+      font-size: 0.9rem;
+      color: #0077cc;
+      word-break: break-word;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>LaTeX MathJax Previewer</h1>
+  <div class="subtitle">Created by Enrique Acosta, 2025</div>
+
+  <div class="instructions">
+    <strong>Instructions:</strong><br>
+    Select the desired mode, type LaTeX in the input box, and view the rendered result below.<br><br>
+    <strong>Modes:</strong><br>
+    • <strong>Inline Math</strong> — for math inside text. <em>You do NOT need to type <code>$...$</code>.</em><br>
+    • <strong>Display Math</strong> — for centered equations. <em>You do NOT need to type <code>$$...$$</code>.</em><br>
+    • <strong>Full LaTeX</strong> — for documents with both text and math. You must use <code>$...$</code> or <code>$$...$$</code>.<br>
+  </div>
+
+  <div class="controls">
+    <label for="mode">Choose Mode:</label><br>
+    <select id="mode">
+      <option value="inline">Inline Math</option>
+      <option value="display">Display Math</option>
+      <option value="full">Full LaTeX</option>
+    </select>
+  </div>
+
+  <textarea id="input" placeholder="Type LaTeX here..."></textarea>
+  <div id="output" class="render"></div>
+
+  <div class="controls">
+    <button onclick="share()">Share</button>
+    <span id="copyMsg" class="share-msg">Link copied to clipboard!</span>
+    <div id="shareLink" class="share-link"></div>
+  </div>
+
+  <script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+    const modeSelect = document.getElementById('mode');
+    const shareMsg = document.getElementById('copyMsg');
+    const shareLink = document.getElementById('shareLink');
+
+    const examples = {
+      inline: 'a^2 + b^2 = c^2',
+      display: '\\int_0^1 x^2\\,dx = \\frac{1}{3}',
+      full: 'Euler said $e^{ix} = \\cos x + i\\sin x$ and also:\n\n$$\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0}$$'
+    };
+
+    function render() {
+      const val = input.value;
+      const mode = modeSelect.value;
+      if (mode === 'inline') {
+        output.innerHTML = `$${val}$`;
+      } else if (mode === 'display') {
+        output.innerHTML = `$$${val}$$`;
+      } else {
+        output.innerHTML = val;
+      }
+      MathJax.typesetPromise([output]);
+    }
+
+    input.addEventListener('input', render);
+    modeSelect.addEventListener('change', () => {
+      if (!loadedFromURL) {
+        input.value = examples[modeSelect.value];
+      }
+      render();
+    });
+
+    function share() {
+      const content = encodeURIComponent(input.value);
+      const mode = encodeURIComponent(modeSelect.value);
+      const url = `${location.origin}${location.pathname}?mode=${mode}&content=${content}`;
+      navigator.clipboard.writeText(url).then(() => {
+        shareMsg.style.display = 'inline';
+        shareLink.textContent = url;
+        shareLink.style.display = 'block';
+        setTimeout(() => shareMsg.style.display = 'none', 2000);
+      });
+    }
+
+    let loadedFromURL = false;
+
+    function loadFromQuery() {
+      const params = new URLSearchParams(location.search);
+      if (params.has('mode') && params.has('content')) {
+        const mode = params.get('mode');
+        const content = decodeURIComponent(params.get('content'));
+        if (['inline', 'display', 'full'].includes(mode)) {
+          loadedFromURL = true;
+          modeSelect.value = mode;
+          input.value = content;
+        }
+      } else {
+        // no shared URL — use example
+        input.value = examples[modeSelect.value];
+      }
+    }
+
+    loadFromQuery();
+    render();
+  </script>
+</body>
+</html>
