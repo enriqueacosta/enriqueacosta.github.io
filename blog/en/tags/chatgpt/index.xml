@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ChatGPT on Enrique Acosta Jaramillo</title>
+    <link>https://enriqueacosta.github.io/blog/en/tags/chatgpt/</link>
+    <description>Recent content in ChatGPT on Enrique Acosta Jaramillo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Cool HTML Tools with ChatGPT: My LaTeX MathJax Previewer</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</link>
+      <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</guid>
+      <description>Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? A live LaTeX MathJax Previewer — a simple, responsive site where you can write LaTeX and instantly see how it renders.
+The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered.</description>
+    </item>
+    
+  </channel>
+</rss>

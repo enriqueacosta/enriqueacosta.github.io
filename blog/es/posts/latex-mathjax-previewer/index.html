@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Creación de herramientas HTML con ChatGPT: visualizador LaTeX con MathJax &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2025
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Creación de herramientas HTML con ChatGPT: visualizador LaTeX con MathJax</h1>
+  
+  
+  <time datetime=2025-05-22T22:49:34-0500 class="post-date">22 de mayo de 2025</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/latex">LaTeX</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/chatgpt">ChatGPT</a>
+     , 
+    <a href="https://enriqueacosta.github.io/blog/es/tags/html">HTML</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/">English: Building Cool HTML Tools with ChatGPT: My LaTeX MathJax Previewer</a>)</h4>
+    
+  
+  <div>
+  <p>Durante los últimos meses he estado experimentando con la creación de herramientas web pequeñas, útiles y totalmente autocontenidas con la ayuda de ChatGPT. Todo integrado en un solo archivo HTML. Este es un ejemplo, 
+<a href="https://enriqueacosta.github.io/LaTeXMathJaxPreview" target="_blank" rel="noopener">un visualizador interactivo de LaTeX con MathJax</a>: una página simple pero muy funcional, que se adapta bien a computadores y dispositivos móviles, y que es interactiva. Uno escribe LaTeX y ve en tiempo real cómo se ve el LaTeX compilado.</p>
+<p>La idea surgió de una necesidad concreta: a veces quiero compartir cómo se escribe una fórmula en LaTeX y cómo se ve si uno compila el código LaTeX. Existen un par de sitios en la web que hacen esto, pero ninguno que ofreciera exactamente lo que yo buscaba. Le expliqué a ChatGPT lo que quería —algo que permitiera visualizar cómo se ven compiladas las fórmulas en modo <em>inline</em>, en modo <em>display</em>, y también cómo se ve compilado texto LaTeX completo— y en cuestión de minutos ya tenía un prototipo funcional.</p>
+<p>Después de más o menos una hora de iteraciones, terminé con algo muy parecido a lo que había imaginado inicialmente (el diseño, un botón que genera enlaces que se pueden compartir por correo o chat, y todo funcionando bien en el computador y en el celular).</p>
+<p>No es un sitio sofisticado, pero lo increíble es que se puede construir tan rápido. ¡Es como tener un desarrollador que se encarga de descifrar las cosas que uno le pide sin que le quite a uno tiempo! ¡Muy emocionante!</p>
+<p>Este es el visualizador LaTeX con MathJax:<br>
+👉 
+<a href="https://enriqueacosta.github.io/LaTeXMathJaxPreview" target="_blank" rel="noopener">https://enriqueacosta.github.io/LaTeXMathJaxPreview</a></p>
+
+  </div>
+
+</div>
+
+<h2>
+Suscríbase
+</h2>
+<p>
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2025 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

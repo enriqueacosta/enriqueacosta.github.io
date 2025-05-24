@@ -5,7 +5,16 @@
     <link>https://enriqueacosta.github.io/blog/es/tags/latex/</link>
     <description>Recent content in LaTeX on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creación de herramientas HTML con ChatGPT: visualizador LaTeX con MathJax</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/</link>
+      <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/</guid>
+      <description>Durante los últimos meses he estado experimentando con la creación de herramientas web pequeñas, útiles y totalmente autocontenidas con la ayuda de ChatGPT. Todo integrado en un solo archivo HTML. Este es un ejemplo, un visualizador interactivo de LaTeX con MathJax: una página simple pero muy funcional, que se adapta bien a computadores y dispositivos móviles, y que es interactiva. Uno escribe LaTeX y ve en tiempo real cómo se ve el LaTeX compilado.</description>
+    </item>
+    
     <item>
       <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</link>

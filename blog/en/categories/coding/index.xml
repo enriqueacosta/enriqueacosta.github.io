@@ -5,13 +5,23 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/coding/</link>
     <description>Recent content in Coding on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Oct 2024 21:12:04 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Cool HTML Tools with ChatGPT: My LaTeX MathJax Previewer</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</link>
+      <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</guid>
+      <description>Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? A live LaTeX MathJax Previewer — a simple, responsive site where you can write LaTeX and instantly see how it renders.
+The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered.</description>
+    </item>
+    
     <item>
       <title>Creating This Blog Part 3: Tag Functionality and Listings, and Adding an About Page.</title>
-      <link>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</link>
+      <link>https://enriqueacosta.github.io/blog/en/drafts/ode-to-brynes-euclid-reproduction/</link>
       <pubDate>Wed, 02 Oct 2024 21:12:04 -0500</pubDate>
       
-      <guid>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</guid>
+      <guid>https://enriqueacosta.github.io/blog/en/drafts/ode-to-brynes-euclid-reproduction/</guid>
       <description>https://c82.net/blog/?id=79
 https://c82.net/euclid/</description>
     </item>

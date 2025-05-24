@@ -2,11 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/"
+                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -18,14 +28,24 @@
                 href="https://enriqueacosta.github.io/blog/en/categories/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/chatgpt/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/chatgpt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/chatgpt/"
+                />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/ode-to-brynes-euclid-reproduction/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/coding/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -36,6 +56,80 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/html/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/html/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/latex/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/latex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/latex/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/latex/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/categories/latex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/categories/latex/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/posts/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
+    <lastmod>2025-05-22T22:49:34-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://enriqueacosta.github.io/blog/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://enriqueacosta.github.io/blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</loc>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/drafts/ode-to-brynes-euclid-reproduction/</loc>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/drafts/</loc>
+    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/hugo/</loc>
     <lastmod>2024-10-02T21:12:04-05:00</lastmod>
@@ -65,32 +159,6 @@
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</loc>
     <lastmod>2024-10-02T21:12:04-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/posts/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2024-10-02T21:12:04-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/"
-                />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</loc>
     <lastmod>2024-01-14T10:49:34-05:00</lastmod>
@@ -178,32 +246,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/latex/</loc>
-    <lastmod>2022-09-22T14:19:56-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/tags/latex/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/tags/latex/"
-                />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/latex/</loc>
-    <lastmod>2022-09-22T14:19:56-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://enriqueacosta.github.io/blog/es/categories/latex/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://enriqueacosta.github.io/blog/en/categories/latex/"
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
