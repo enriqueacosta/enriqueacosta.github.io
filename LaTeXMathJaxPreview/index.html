@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Ensures responsive layout on mobile -->
+  <!-- Responsive design for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LaTeX MathJax Previewer</title>
 
-  <!-- Configure MathJax to render LaTeX using SVG format -->
+  <!-- MathJax configuration: render LaTeX using SVG output -->
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
-      svg: { fontCache: 'global' } // Better performance
+      svg: { fontCache: 'global' } // better performance with SVG output
     };
   </script>
   <!-- Load MathJax asynchronously -->
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
   <style>
-    /* === Base Layout Styles === */
+    /* === Layout and Typography === */
     body {
       margin: 0;
       padding: 1rem;
@@ -44,7 +44,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* === Instructional Box === */
+    /* === Instruction box === */
     .instructions {
       background: #fff;
       border-left: 4px solid #4a90e2;
@@ -64,7 +64,7 @@
       margin-top: 0.5rem;
     }
 
-    /* === LaTeX Input Area === */
+    /* === Input box === */
     textarea {
       width: 100%;
       min-height: 5em;
@@ -77,7 +77,7 @@
       margin-bottom: 1rem;
     }
 
-    /* === Rendered Output Area === */
+    /* === Rendered LaTeX output box === */
     .render {
       padding: 1rem;
       border-radius: 6px;
@@ -88,7 +88,7 @@
       overflow-x: auto;
     }
 
-    /* === Share Message and Link === */
+    /* === Message when sharing === */
     .share-msg {
       color: green;
       display: none;
@@ -102,25 +102,38 @@
       display: none;
     }
 
-    /* === Improve MathJax Readability on Small Screens === */
+    /* === Increase math size on small screens === */
     mjx-container[jax="SVG"] {
       font-size: 120% !important;
     }
 
-    /* === Footer Credit === */
+    /* === Footer === */
     footer {
       font-size: 0.8rem;
       color: #666;
       margin-top: 2rem;
       text-align: center;
     }
+
+    /* === Message for recovering overwritten LaTeX === */
+    #recoveryNotice {
+      display: none;
+      margin-bottom: 1rem;
+      background: #fff3cd;
+      padding: 0.5rem;
+      border-left: 4px solid #ffc107;
+    }
+
+    #recoverBtn {
+      margin-left: 0.5rem;
+    }
   </style>
 </head>
 <body>
   <h1>LaTeX MathJax Previewer</h1>
-  <div class="subtitle">Enrique Acosta, 2025</div>
+  <!-- <div class="subtitle">Enrique Acosta, 2025</div> -->
 
-  <!-- Instructions for use -->
+  <!-- Instructions for how to use the tool -->
   <div class="instructions">
     <strong>Instructions:</strong><br>
     Select the desired mode, type LaTeX in the input box, and view the rendered result below.<br><br>
@@ -130,7 +143,7 @@
     • <strong>Full LaTeX</strong> — for documents with both text and math. You must use <code>$...$</code> or <code>$$...$$</code>.<br>
   </div>
 
-  <!-- Dropdown for selecting mode -->
+  <!-- Dropdown for mode selection -->
   <div class="controls">
     <label for="mode">Choose Mode:</label><br>
     <select id="mode">
@@ -140,10 +153,16 @@
     </select>
   </div>
 
-  <!-- User input area -->
+  <!-- LaTeX input area -->
   <textarea id="input" placeholder="Type LaTeX here..."></textarea>
 
-  <!-- Rendered Math Output -->
+  <!-- Recovery message for overwritten input -->
+  <div id="recoveryNotice">
+    Loaded sample LaTeX for the selected mode.
+    <button id="recoverBtn">Recover your LaTeX</button>
+  </div>
+
+  <!-- Rendered LaTeX output -->
   <div id="output" class="render"></div>
 
   <!-- Share functionality -->
@@ -153,31 +172,35 @@
     <div id="shareLink" class="share-link"></div>
   </div>
 
-  <!-- Footer credits -->
+  <!-- Credits -->
   <footer>
+    Enrique Acosta, 2025. 
     Powered by <a href="https://www.mathjax.org" target="_blank" rel="noopener noreferrer">MathJax</a>.  
     Inspired by <a href="https://saxarona.github.io/mathjax-viewer/" target="_blank" rel="noopener noreferrer">this viewer</a>.
   </footer>
 
   <script>
-    // DOM Elements
+    // DOM elements
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     const modeSelect = document.getElementById('mode');
     const shareMsg = document.getElementById('copyMsg');
     const shareLink = document.getElementById('shareLink');
+    const recoveryNotice = document.getElementById('recoveryNotice');
+    const recoverBtn = document.getElementById('recoverBtn');
 
-    // Default example LaTeX for each mode
+    // Example LaTeX for each mode
     const examples = {
       inline: 'a^2 + b^2 = c^2',
       display: '\\int_0^1 x^2\\,dx = \\frac{1}{3}',
       full: 'Euler said $e^{ix} = \\cos x + i\\sin x$ and also:\n\n$$\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0}$$'
     };
 
-    // Flag to detect if content came from shared URL
-    let loadedFromURL = false;
+    let loadedFromURL = false;      // True if content came from a shared URL
+    let userModifiedInput = false;  // True if the user typed something manually
+    let userInputBackup = '';       // Stores user's input before it's replaced by a sample
 
-    // Render the LaTeX input based on mode
+    // Render the input according to the selected mode
     function render() {
       const val = input.value;
       const mode = modeSelect.value;
@@ -191,18 +214,39 @@
       MathJax.typesetPromise([output]);
     }
 
-    // Live rendering on input change
-    input.addEventListener('input', render);
-
-    // On mode change, only insert example if input is empty
-    modeSelect.addEventListener('change', () => {
-      if (!loadedFromURL && input.value.trim() === '') {
-        input.value = examples[modeSelect.value];
-      }
+    // When the user types, mark input as modified and re-render
+    input.addEventListener('input', () => {
+      userModifiedInput = true;
       render();
     });
 
-    // Share button functionality: generate shareable URL
+    // When the mode is changed
+    modeSelect.addEventListener('change', () => {
+      const currentInput = input.value.trim();
+      const selectedExample = examples[modeSelect.value];
+
+      // If user typed something custom, show sample and recovery option
+      if (userModifiedInput && currentInput !== '' && currentInput !== selectedExample) {
+        userInputBackup = input.value;
+        input.value = selectedExample;
+        recoveryNotice.style.display = 'block';
+      } else {
+        // Load default example
+        input.value = selectedExample;
+        recoveryNotice.style.display = 'none';
+      }
+
+      render();
+    });
+
+    // Recover the previous user input
+    recoverBtn.addEventListener('click', () => {
+      input.value = userInputBackup;
+      recoveryNotice.style.display = 'none';
+      render();
+    });
+
+    // Share the current input by generating a URL
     function share() {
       const content = encodeURIComponent(input.value);
       const mode = encodeURIComponent(modeSelect.value);
@@ -215,7 +259,7 @@
       });
     }
 
-    // Load shared content from query string if present
+    // Load shared content from query parameters if present
     function loadFromQuery() {
       const params = new URLSearchParams(location.search);
       if (params.has('mode') && params.has('content')) {
@@ -227,12 +271,11 @@
           input.value = content;
         }
       } else {
-        // Default to example if nothing shared
         input.value = examples[modeSelect.value];
       }
     }
 
-    // Initialize on page load
+    // Initialize the previewer
     loadFromQuery();
     render();
   </script>
