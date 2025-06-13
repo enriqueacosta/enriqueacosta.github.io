@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/es/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La ley de Zipf para las ciudades de Colombia en 2025</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/</link>
+      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/</guid>
+      <description>La ley de Zipf dice que el tamaño de las ciudades en una región sigue, a menudo sorprendentemente bien, una ley de potencias sencilla: $$ P(r) = \frac{C}{r^{\alpha}} $$ En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenadas de mayor a menor población), y $C$ y $\alpha$ son constantes que dependen de la región.
+Lo que esto nos dice es que la población de la ciudad más grande (puesto $r=1$) es aproximadamente $P(1)=C/1^\alpha=C$, la población de la segunda ciudad más grande (puesto $r=2$) es $P(2)=C/2^\alpha$, la de la tercera es $P(3)=C/3^\alpha$, y así sucesivamente.</description>
+    </item>
+    
     <item>
       <title>Creación de herramientas HTML con ChatGPT: visualizador LaTeX con MathJax</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/</link>

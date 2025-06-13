@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/categories/math/</link>
     <description>Recent content in Math on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/math/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zipf’s Law for Colombian City Sizes in 2025</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</link>
+      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</guid>
+      <description>Zipf’s Law for populations says that city populations decrease according to a simple power law: $$ P(r) = \frac{C}{r^{\alpha}} $$ Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.
+More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on.</description>
+    </item>
+    
     <item>
       <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>

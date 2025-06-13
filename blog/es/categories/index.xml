@@ -5,7 +5,25 @@
     <link>https://enriqueacosta.github.io/blog/es/categories/</link>
     <description>Recent content in Categorias on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matemáticas</title>
+      <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
+      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modelación</title>
+      <link>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</link>
+      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>LaTeX</title>
       <link>https://enriqueacosta.github.io/blog/es/categories/latex/</link>
@@ -30,15 +48,6 @@
       <pubDate>Tue, 06 Aug 2024 10:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/categories/animaciones/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matemáticas</title>
-      <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
-      <pubDate>Tue, 06 Aug 2024 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</guid>
       <description></description>
     </item>
     
@@ -84,15 +93,6 @@
       <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/categories/datos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Modelación</title>
-      <link>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</link>
-      <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/es/categories/modelaci%C3%B3n/</guid>
       <description></description>
     </item>
     

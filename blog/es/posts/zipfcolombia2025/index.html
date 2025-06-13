@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La ley de Zipf para las ciudades de Colombia en 2025 &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2025
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>La ley de Zipf para las ciudades de Colombia en 2025</h1>
+  
+  
+  <time datetime=2025-06-10T12:49:34-0500 class="post-date">10 de junio de 2025</time>
+  
+  
+  <p> 
+    <strong>Etiquetas: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/es/tags/ley-de-zipf">Ley de Zipf</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/">English: Zipf’s Law for Colombian City Sizes in 2025</a>)</h4>
+    
+  
+  <div>
+  <p>La ley de Zipf dice que el tamaño de las ciudades en una región sigue, a menudo sorprendentemente bien, una ley de potencias sencilla:
+$$
+P(r) = \frac{C}{r^{\alpha}}
+$$
+En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenadas de mayor a menor población), y $C$ y $\alpha$ son constantes que dependen de la región.</p>
+<p>Lo que esto nos dice es que la población de la ciudad más grande (puesto $r=1$) es aproximadamente $P(1)=C/1^\alpha=C$, la población de la segunda ciudad más grande (puesto $r=2$) es $P(2)=C/2^\alpha$, la de la tercera es $P(3)=C/3^\alpha$, y así sucesivamente. Los datos de muchos países sugieren que $\alpha \approx 1$, aunque en la práctica este valor puede variar según el país o la región.</p>
+<p>Busqué algún gráfico reciente que mostrara cómo se cumple esto para Colombia, pero no encontré ninguno. Así que, ¡decidí hacer uno yo mismo! Siempre es bueno encontrar un pretexto para crear una figura en TikZ y aprender algo nuevo en el camino.</p>
+<p>El resultado: la ley de potencias se ajusta bastante bien a los datos de las ciudades colombianas.</p>
+<img src="zipfColombia.es.png" alt="" style="width:100%; height:auto; display:block; margin:auto;">
+
+
+
+
+
+<p>(Imagen creada con TikZ. Código fuente <a href="https://enriqueacosta.github.io/blog/es/tikz-gallery/zipfcolombia/">acá</a>.)</p>
+
+<p>Algo que salta a la vista (además del buen ajuste) es que Bogotá parece ser un caso atípico: está claramente por encima de la curva de ajuste. Sin embargo, esto no es raro y es un fenómeno bien documentado: las capitales suelen atraer población de manera distinta al resto de las ciudades.</p>
+<p>Los datos de población que usé para esa gráfica son las proyecciones oficiales del gobierno para 2025, que tomé de 
+<a href="https://es.wikipedia.org/wiki/Anexo:Ciudades_de_Colombia_por_poblaci%C3%B3n" target="_blank" rel="noopener">Wikipedia</a>. La tabla completa se puede consultar allí o en el código fuente de la figura.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="gráfica-log-log">Gráfica log-log</h3>
+<p>Es mejor revisar el ajuste a los datos en una 
+<a href="https://en.wikipedia.org/wiki/Log%e2%80%93log_plot" target="_blank" rel="noopener">gráfica log-log</a>, pues este tipo de gráfico convierte funciones de potencia (cómo $P(r)$) en líneas rectas, y nuestro cerebro es muy bueno para detectar rectas. Este es el resultado:</p>
+<img src="zipfColombia-log.es.png" alt="" style="width:100%; height:auto; display:block; margin:auto;">
+
+
+
+
+
+<p>(Imagen creada con TikZ. Código fuente <a href="https://enriqueacosta.github.io/blog/es/tikz-gallery/zipfcolombia-log/">acá</a>.)</p>
+
+<p>Para encontrar la función que se ajusta a los datos colombianos, en realidad empecé transformando los datos a escala logarítmica: hice una regresión lineal de $\log P(r)$ y $\log (r)$ (se puede ver el código Python al final de esta entrada de blog). El ajuste da un $R^2=0.96$. ¡Bastante alto!</p>
+<h3 id="errores-porcentuales">Errores porcentuales</h3>
+<p>Pero a veces es más convincente ver los errores porcentuales entre la predicción y los datos reales, en vez de solo mirar el valor de $R^2$ o las gráficas. Los errores son sorprendentemente bajos (ignorando el caso particular de Bogotá, y a Soacha, que en realidad es un municipio vecino de Bogotá).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Ciudad</th>
+<th style="text-align:right">Rango</th>
+<th style="text-align:right">Población real</th>
+<th style="text-align:right">Población del modelo</th>
+<th style="text-align:right">Error (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Bogotá</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">7,937,898</td>
+<td style="text-align:right">5,544,989</td>
+<td style="text-align:right">30%</td>
+</tr>
+<tr>
+<td style="text-align:left">Medellín</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2,634,570</td>
+<td style="text-align:right">2,924,988</td>
+<td style="text-align:right">-11%</td>
+</tr>
+<tr>
+<td style="text-align:left">Cali</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2,285,099</td>
+<td style="text-align:right">2,012,034</td>
+<td style="text-align:right">12%</td>
+</tr>
+<tr>
+<td style="text-align:left">Barranquilla</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1,342,818</td>
+<td style="text-align:right">1,542,935</td>
+<td style="text-align:right">-15%</td>
+</tr>
+<tr>
+<td style="text-align:left">Cartagena</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">1,065,881</td>
+<td style="text-align:right">1,255,809</td>
+<td style="text-align:right">-18%</td>
+</tr>
+<tr>
+<td style="text-align:left">Soacha</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">828,947</td>
+<td style="text-align:right">1,061,350</td>
+<td style="text-align:right">-28%</td>
+</tr>
+<tr>
+<td style="text-align:left">Cúcuta</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">815,891</td>
+<td style="text-align:right">920,626</td>
+<td style="text-align:right">-13%</td>
+</tr>
+<tr>
+<td style="text-align:left">Soledad</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">686,339</td>
+<td style="text-align:right">813,900</td>
+<td style="text-align:right">-19%</td>
+</tr>
+<tr>
+<td style="text-align:left">Bucaramanga</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">623,881</td>
+<td style="text-align:right">730,079</td>
+<td style="text-align:right">-17%</td>
+</tr>
+<tr>
+<td style="text-align:left">Villavicencio</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">593,273</td>
+<td style="text-align:right">662,440</td>
+<td style="text-align:right">-12%</td>
+</tr>
+<tr>
+<td style="text-align:left">Valledupar</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">575,225</td>
+<td style="text-align:right">606,669</td>
+<td style="text-align:right">-5%</td>
+</tr>
+<tr>
+<td style="text-align:left">Bello</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">570,329</td>
+<td style="text-align:right">559,863</td>
+<td style="text-align:right">2%</td>
+</tr>
+<tr>
+<td style="text-align:left">Santa Marta</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">566,650</td>
+<td style="text-align:right">520,002</td>
+<td style="text-align:right">8%</td>
+</tr>
+<tr>
+<td style="text-align:left">Ibagué</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">546,003</td>
+<td style="text-align:right">485,631</td>
+<td style="text-align:right">11%</td>
+</tr>
+<tr>
+<td style="text-align:left">Montería</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">531,424</td>
+<td style="text-align:right">455,678</td>
+<td style="text-align:right">14%</td>
+</tr>
+<tr>
+<td style="text-align:left">Pereira</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">482,824</td>
+<td style="text-align:right">429,333</td>
+<td style="text-align:right">11%</td>
+</tr>
+<tr>
+<td style="text-align:left">Manizales</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">459,262</td>
+<td style="text-align:right">405,975</td>
+<td style="text-align:right">12%</td>
+</tr>
+<tr>
+<td style="text-align:left">Pasto</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">415,937</td>
+<td style="text-align:right">385,117</td>
+<td style="text-align:right">7%</td>
+</tr>
+<tr>
+<td style="text-align:left">Neiva</td>
+<td style="text-align:right">19</td>
+<td style="text-align:right">388,229</td>
+<td style="text-align:right">366,375</td>
+<td style="text-align:right">6%</td>
+</tr>
+<tr>
+<td style="text-align:left">Palmira</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">359,888</td>
+<td style="text-align:right">349,438</td>
+<td style="text-align:right">3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qué-significa-esto">¿Qué significa esto?</h3>
+<p>Es muy sorprendente saber que Cartagena debería tener una población cercana a 1 millón solo por ser la quinta ciudad más grande del país, y que Ibagué debería tener alrededor de 500 mil habitantes simplemente por estar en el puesto 14. Todo esto de una fórmula muy simple:</p>
+<p>$$
+P(r)=\frac{5544989}{r^{0.92}}
+$$</p>
+<p>$P(r):$ Población en 2025 de la ciudad Colombiana en el puesto $r$ en orden de población.</p>
+<h3 id="código-python">Código Python</h3>
+<p>Este es el código Python que usé para encontrar $P(r)$  y para generar algunos gráficos. El código da la función que se ajusta a los datos y el $R^2$ de la regresión. Para probar con otro país, tan solo hay que cambiar los datos al inicio.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># setup</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> r2_score
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>colombia_cities <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Bogotá&#34;</span>,        <span style="color:#ae81ff">7937898</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Medellín&#34;</span>,      <span style="color:#ae81ff">2634570</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Cali&#34;</span>,          <span style="color:#ae81ff">2285099</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Barranquilla&#34;</span>,  <span style="color:#ae81ff">1342818</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Cartagena&#34;</span>,      <span style="color:#ae81ff">1065881</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Soacha&#34;</span>,         <span style="color:#ae81ff">828947</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Cúcuta&#34;</span>,         <span style="color:#ae81ff">815891</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Soledad&#34;</span>,        <span style="color:#ae81ff">686339</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Bucaramanga&#34;</span>,    <span style="color:#ae81ff">623881</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Villavicencio&#34;</span>,  <span style="color:#ae81ff">593273</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Valledupar&#34;</span>,     <span style="color:#ae81ff">575225</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Bello&#34;</span>,          <span style="color:#ae81ff">570329</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Santa Marta&#34;</span>,    <span style="color:#ae81ff">566650</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Ibagué&#34;</span>,         <span style="color:#ae81ff">546003</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Montería&#34;</span>,       <span style="color:#ae81ff">531424</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Pereira&#34;</span>,        <span style="color:#ae81ff">482824</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Manizales&#34;</span>,      <span style="color:#ae81ff">459262</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Pasto&#34;</span>,          <span style="color:#ae81ff">415937</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Neiva&#34;</span>,          <span style="color:#ae81ff">388229</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;Palmira&#34;</span>,        <span style="color:#ae81ff">359888</span>)
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ranks <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">21</span>)
+</span></span><span style="display:flex;"><span>city_names <span style="color:#f92672">=</span> [name <span style="color:#66d9ef">for</span> name, pop <span style="color:#f92672">in</span> colombia_cities]
+</span></span><span style="display:flex;"><span>city_pops <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([pop <span style="color:#66d9ef">for</span> name, pop <span style="color:#f92672">in</span> colombia_cities])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Power law fit: log(Pop) = log(a) + b*log(rank)</span>
+</span></span><span style="display:flex;"><span>log_ranks <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(ranks)
+</span></span><span style="display:flex;"><span>log_pops <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(city_pops)
+</span></span><span style="display:flex;"><span>b, log_a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>polyfit(log_ranks, log_pops, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>exp(log_a)
+</span></span><span style="display:flex;"><span>fit_pops <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> ranks <span style="color:#f92672">**</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fit quality</span>
+</span></span><span style="display:flex;"><span>r2 <span style="color:#f92672">=</span> r2_score(log_pops, log_a <span style="color:#f92672">+</span> b <span style="color:#f92672">*</span> log_ranks)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Power law fit: Population = </span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> × Rank^</span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> (R² = </span><span style="color:#e6db74">{</span>r2<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span></code></pre></div><p>Y el siguiente código sirve para crear los gráficos (no tan bonitos como los de TikZ, pero sí más fáciles de generar):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>fig, (ax1, ax2) <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Linear</span>
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>scatter(ranks, city_pops, s<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>plot(ranks, fit_pops, <span style="color:#e6db74">&#39;--r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Fit: $y=</span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">x^</span><span style="color:#ae81ff">{{</span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">}</span><span style="color:#e6db74">$&#34;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Rank&#34;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Population&#34;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#34;Colombia City Populations: Linear Scale&#34;</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>set_xticks(ranks)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, name <span style="color:#f92672">in</span> enumerate(city_names):
+</span></span><span style="display:flex;"><span>    ax1<span style="color:#f92672">.</span>annotate(name, (ranks[i], city_pops[i]), textcoords<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;offset points&#34;</span>, xytext<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>), ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>ax1<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Log-log</span>
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>scatter(ranks, city_pops, s<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>plot(ranks, fit_pops, <span style="color:#e6db74">&#39;--r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Fit: $y=</span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">x^</span><span style="color:#ae81ff">{{</span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#ae81ff">}}</span><span style="color:#e6db74">}</span><span style="color:#e6db74">$&#34;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_xscale(<span style="color:#e6db74">&#34;log&#34;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_yscale(<span style="color:#e6db74">&#34;log&#34;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Rank (log)&#34;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Population (log)&#34;</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#34;Colombia City Populations: Log-Log&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, name <span style="color:#f92672">in</span> enumerate(city_names):
+</span></span><span style="display:flex;"><span>    ax2<span style="color:#f92672">.</span>annotate(name, (ranks[i], city_pops[i]), textcoords<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;offset points&#34;</span>, xytext<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>), ha<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>ax2<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h2 id="más-información">Más información</h2>
+<p>Se ha escrito mucho sobre la ley de Zipf, tanto para el estudio de idiomas como para poblaciones urbanas. Para los que quieran profundizar, recomiendo:</p>
+<ul>
+<li>
+<a href="https://es.wikipedia.org/wiki/Ley_de_Zipf" target="_blank" rel="noopener">Artículo de Wikipedia sobre la ley de Zipf</a>, que principalmente habla sobre la ley para lenguajes, junto con 
+<a href="https://en.wikipedia.org/wiki/Zipf%27s_law" target="_blank" rel="noopener">la versión en inglés</a>, que tiene más detalles y gráficas.</li>
+<li>Un 
+<a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2013/12/on-city-size-distribution_g17a2442/5k3tt100wf7j-en.pdf" target="_blank" rel="noopener">documento de trabajo de la OCDE sobre desarrollo regional</a> con muchas gráficas y reflexiones interesantes, incluyendo consideraciones sobre la definición de lo que es una ciudad. Hay muchas referencias en el documento para profundizar más.</li>
+</ul>
+
+  </div>
+
+</div>
+
+<h2>
+Suscríbase
+</h2>
+<p>
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2025 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

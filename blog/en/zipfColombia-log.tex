@@ -1,0 +1,91 @@
+% Enrique Acosta
+% 2025
+\documentclass[border=2pt, tikz, convert={command=\unexpanded{magick -density 600 \infile\space "\jobname.png"}}]{standalone}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+% \pgfplotsset{compat=1.17}
+
+\pagecolor{white} % Set the background color to white
+
+% Data table (city names with spaces are in braces!)
+\pgfplotstableread{
+rank  pop       city
+1     7937898   Bogotá
+2     2634570   Medellín
+3     2285099   Cali
+4     1342818   Barranquilla
+5     1065881   Cartagena
+6     828947    Soacha
+7     815891    Cúcuta
+8     686339    Soledad
+9     623881    Bucaramanga
+10    593273    Villavicencio
+11    575225    Valledupar
+12    570329    Bello
+13    566650    {Santa Marta}
+14    546003    Ibagué
+15    531424    Montería
+16    482824    Pereira
+17    459262    Manizales
+18    415937    Pasto
+19    388229    Neiva
+20    359888    Palmira
+}\citydata
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=8cm,
+    xlabel={Rank},
+    ylabel={Population},
+    title={Colombia City Populations: Log-Log Scale},
+    xmin=0.9, xmax=20.5,
+    ymin=300000, ymax=10000000,
+    xmode=log, ymode=log,
+    log ticks with fixed point,
+    xtick={1,...,20},
+    xticklabels={1,...,10,,,,,15,,,,,20},
+    ytick ={300000,600000,1200000,2400000,4800000,9600000},
+    % ytick num = {4},
+    legend pos=north east,
+    grid=both,
+    tick label style={font=\small},
+    ylabel style={yshift=1.5em},
+    ymajorgrids=true,
+    xmajorgrids=true,
+]
+
+% Power law fit
+\addplot [
+    domain=1:20,
+    samples=100,
+    very thick,
+    dashed,
+    cyan,
+] {5544989 * x^(-0.92)};
+
+
+% Scatter plot: city data
+\addplot[
+    only marks,
+    mark=*,
+    black,
+    mark size=2.5pt,
+] table [x=rank, y=pop] {\citydata};
+
+
+% Fit equation
+\node[rectangle, draw, fill=white, text=cyan!70!black, anchor=south west] at (axis cs: 4, 1800000) {$P(r)=\displaystyle\frac{5544989}{r^{0.92}}$};
+
+\end{axis}
+
+
+% link at the bottom
+\node[anchor=south east, font=\tiny, text=gray!80!black, inner sep=2pt] at (current bounding box.south east) {enriqueacosta.github.io 2025};
+
+
+
+\end{tikzpicture}
+\end{document}
+

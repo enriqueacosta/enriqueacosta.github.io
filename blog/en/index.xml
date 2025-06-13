@@ -5,7 +5,17 @@
     <link>https://enriqueacosta.github.io/blog/en/</link>
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zipf’s Law for Colombian City Sizes in 2025</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</link>
+      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</guid>
+      <description>Zipf’s Law for populations says that city populations decrease according to a simple power law: $$ P(r) = \frac{C}{r^{\alpha}} $$ Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.
+More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on.</description>
+    </item>
+    
     <item>
       <title>Building Cool HTML Tools with ChatGPT: My LaTeX MathJax Previewer</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</link>
@@ -285,6 +295,24 @@ As I was working through all the exercises in the book (I still am!) I decided t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tikz-gallery/probabilitytreecardsthirddetails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/en/tikz-gallery/zipfcolombia-log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tikz-gallery/zipfcolombia-log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://enriqueacosta.github.io/blog/en/tikz-gallery/zipfcolombia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tikz-gallery/zipfcolombia/</guid>
       <description></description>
     </item>
     
