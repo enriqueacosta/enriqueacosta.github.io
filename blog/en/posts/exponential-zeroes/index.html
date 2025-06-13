@@ -314,15 +314,15 @@ $$</p>
 <p>The zeros seem to form a &ldquo;wave&rdquo; that grows away from the origin. Can we say something about its shape?</p>
 <p>This question was answered by Gábor Szegő in 1924, no computers involved!</p>
 <p>Szegő discovered that the right way to stop the zeros from trailing off to infinity is to scale them down by a factor of $n$. When one does this, the zeros converge to a very specific &ldquo;tear-shaped&rdquo; curve.</p>
-<p>Here is the animation with the scaling, with $n$ going from $1$ to $60$ past $n=60$ Sage has trouble finding all the zeros numerically). So much hidden order!</p>
+<p>Here is the animation with the scaling, with $n$ going from $1$ to $60$. Past $n=60$, Sage has trouble finding all the zeros numerically. So much hidden order!</p>
 <figure><img src="complexExpZeros-movie-scaled.gif" width="100%"/>
 </figure>
 
-<p>Szegő even found a formula for the limiting curve. It is:
+<p>Szegő even found a formula for the limiting curve. It is
 $$
-\left|ze^{1-z}\right|=1,\quad\text{for } |z|\leq 1
+\left|ze^{1-z}\right|=1,\quad\text{for } |z|\leq 1,
 $$</p>
-<p>and here is it&rsquo;s graph (cartesian equation is $x^{2}+y^{2}=e^{2(x-1)}$)</p>
+<p>and here is it&rsquo;s graph (the cartesian equation is $x^{2}+y^{2}=e^{2(x-1)}$)</p>
 <!-- raw HTML omitted -->
 <figure><img src="complexExpZeros-SzegoCurve.svg" width="100%"/>
 </figure>
