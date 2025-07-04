@@ -5,7 +5,16 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
     <description>Recent content in Tikz on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz Template for Mathematical Figures: Example with Double Number Lines</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/</link>
+      <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/</guid>
+      <description>In this post I explain how I built a system using TikZ (a computer language for drawing mathematical figures rather than dragging shapes around) to produce figures efficiently and in a way that is easy to maintain. The system is a template &amp;ndash; a bit of reusable structure &amp;ndash; for making double number line diagrams, which are a visual tool used in many modern mathematics resources to aid in learning proportional reasoning (think of percentages, ratios, or recipes).</description>
+    </item>
+    
     <item>
       <title>Creating This Blog Part 4: Adding a TikZ Gallery</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>

@@ -1,0 +1,16 @@
+% EAJ - svg generation needs to be run with -shell-escape:
+% pdflatex -shell-escape filename.tex
+\documentclass[border=2pt, tikz, convert={command=\unexpanded{{pdf2svg \infile\space "\jobname.svg" && rsvg-convert --zoom 1.85 --format svg --output "\jobname.svg" "\jobname.svg" && convert -density 300 \infile\space "\jobname.png"}}}]{standalone}
+\begin{document}
+\begin{tikzpicture}
+
+% Parameters
+\def\lineWide{2.5in} % width of line (not including label)
+
+\coordinate (leftEnd) at (0, 0);
+\coordinate (rightEnd) at (\lineWide, 0);
+\draw[->, >=stealth] (leftEnd) -- (rightEnd);
+\node[anchor=east, xshift=-0.15cm] at (leftEnd) {label goes here};
+
+\end{tikzpicture}
+\end{document}

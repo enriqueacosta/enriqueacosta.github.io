@@ -5,7 +5,16 @@
     <link>https://enriqueacosta.github.io/blog/es/tags/</link>
     <description>Recent content in Etiquetas on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/es/tags/tikz/</link>
+      <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/tags/tikz/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Ley de Zipf</title>
       <link>https://enriqueacosta.github.io/blog/es/tags/ley-de-zipf/</link>
@@ -102,15 +111,6 @@
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/es/tags/curvas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tikz</title>
-      <link>https://enriqueacosta.github.io/blog/es/tags/tikz/</link>
-      <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/es/tags/tikz/</guid>
       <description></description>
     </item>
     

@@ -5,7 +5,16 @@
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tikz</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
+      <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Zipf&#39;s law</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</link>
@@ -75,15 +84,6 @@
       <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
       
       <guid>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tikz</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
-      <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
       <description></description>
     </item>
     

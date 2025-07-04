@@ -5,7 +5,26 @@
     <link>https://enriqueacosta.github.io/blog/es/posts/</link>
     <description>Recent content in Posts on Enrique Acosta Jaramillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</link>
+      <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</guid>
+      <description>En esta entrada de blog explico cómo diseñé un sistema con TikZ para generar un tipo de diagramas matemáticos de manera eficiente y fácil de mantener. TikZ un lenguaje de programación para crear diagramas matemáticos mediante código. El sistema es una plantilla para construir rectas numéricas dobles, tipo de diagrama muy utilizado en recursos educativos de matemáticas modernos para apoyar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).
+El objetivo de esta entrada es mostrar cómo estas rectas numéricas dobles se pueden generar &amp;ldquo;automáticamente&amp;rdquo;, usando código de programación breve y flexible, que produce diagramas visualmente consistentes y permite centrar la atención en las ideas matemáticas.</description>
+    </item>
+    
+    <item>
+      <title>Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</title>
+      <link>https://enriqueacosta.github.io/blog/es/posts/tikz-template/</link>
+      <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
+      
+      <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-template/</guid>
+      <description>En esta entrada de blog explico cómo diseñé un sistema con TikZ (un lenguaje para crear figuras matemáticas mediante código, en vez de arrastrar formas con el mouse) que permite generar figuras de manera eficiente y fácil de mantener. El sistema consiste en una plantilla (una estructura reutilizable) para construir rectas numéricas dobles, un tipo de diagrama matemático muy utilizado en recursos de aprendizaje de matemáticas modernos para desarrollar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).</description>
+    </item>
+    
     <item>
       <title>La ley de Zipf para las ciudades de Colombia en 2025</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/</link>

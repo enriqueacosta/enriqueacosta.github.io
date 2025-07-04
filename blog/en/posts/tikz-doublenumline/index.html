@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tikz Template for Mathematical Figures: Example with Double Number Lines &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/en/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/en/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/en/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Personal Blog 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/en">Home</a> </li>
+        <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    <p>2025
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Tikz Template for Mathematical Figures: Example with Double Number Lines</h1>
+  
+  
+  <time datetime=2025-06-25T10:49:34-0500 class="post-date">June 25, 2025</time>
+  
+  
+  <p> 
+    <strong>Tags: </strong>
+     
+    <a href="https://enriqueacosta.github.io/blog/en/tags/tikz">Tikz</a>
+    
+  </p>
+  
+  
+  
+    
+      <h4>(<a href="https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/">Español: Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</a>)</h4>
+    
+  
+  <div>
+  <p>In this post I explain how I built a system using TikZ (a computer language for drawing mathematical figures rather than dragging shapes around) to produce figures efficiently and in a way that is easy to maintain. The system is a template &ndash; a bit of reusable structure &ndash; for making <strong>double number line diagrams</strong>, which are a visual tool used in many modern mathematics resources to aid in learning proportional reasoning (think of percentages, ratios, or recipes).</p>
+<p>The goal of this post is to show how these diagrams can be produced &ldquo;automatically&rdquo;, using code that is short, flexible, and produces figures which are visually consistent, so that the focus can stay on the mathematics being illustrated and learned. Consistent visual structure supports learners and mathematical thinking.</p>
+<p>To illustrate what such a diagram achieves, consider the following example:</p>
+<blockquote>
+<p><em>What is 75% if 100% calcium is 1200mg?</em></p>
+</blockquote>
+<p>The idea is that the diagram helps understand what the answer is visually by matching the 75% mark on one line with the correct value on the other.</p>
+<figure><img src="doubleNumberLine1.svg"/>
+</figure>
+
+<!-- raw HTML omitted -->
+<p>And here is what the code for that figure looks like, using the template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tex" data-lang="tex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\lineWide</span>{6.3cm} <span style="color:#75715e">% width of line (not including label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\numMarks</span>{5}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topMarkLabels</span>{0,300,...,1200} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topLineLabel</span>{calcium (mg)}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomMarkLabels</span>{0<span style="color:#66d9ef">\%</span>, 25<span style="color:#66d9ef">\%</span>, 50<span style="color:#66d9ef">\%</span>,75<span style="color:#66d9ef">\%</span>, 100<span style="color:#66d9ef">\%</span>} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomLineLabel</span>{}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Draw double number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% creates several coordinates like (top-leftEnd) and (bot-mark-2). See details in template.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{<span style="color:#66d9ef">\lineWide</span>}{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\topMarkLabels</span>}{<span style="color:#66d9ef">\topLineLabel</span>}{<span style="color:#66d9ef">\bottomMarkLabels</span>}{<span style="color:#66d9ef">\bottomLineLabel</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% box around some top and bottom marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[fit=(top-mark-4) (bot-mark-4), draw, rectangle, rounded corners=1.5ex, inner sep=2.7ex, densely dashed]</span> {};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span></code></pre></div><p>You do not need to understand all of this code to follow the rest of the post. The main point is that once the template is defined, producing diagrams like this becomes fast and easy: just change a few lines, and a new figure appears, properly spaced, with all texts and tick marks properly placed.</p>
+<p>Before going on, give this a try! No coding skills required!</p>
+<ul>
+<li>How would you adjust the code above to change  <code>calcium</code> into <code>magnesium</code> in the figure?</li>
+<li>What would you change to get the top tick marks to be <code>0,500,1000,1500,2000</code>?</li>
+</ul>
+<p>A well-constructed template effectively separates what varies (the content of the diagram) from what stays the same (the structure and layout). The diagrams all follow a shared design, so they look coherent, and only the content changes.</p>
+<h3 id="who-this-is-for">Who This Is For</h3>
+<p>This post is meant for anyone interested in how mathematical diagrams are produced at scale. I hope it is an interesting read even if you just know that <strong>TikZ</strong> is a computer language for drawing mathematical figures (and if interested, you can read more about it 
+<a href="https://en.wikipedia.org/wiki/PGF/TikZ" target="_blank" rel="noopener">here</a>).</p>
+<p>In this post I try to show the logic behind the template, by showing the step-by-step decisions involved in building it. Even if you never write TikZ code yourself, you may still find it helpful to see how diagrams can be &ldquo;templated&rdquo; in a principled way. If you are already familiar with TikZ, you may find ideas here for improving reusability and consistency.</p>
+<p>The emphasis is not just on drawing one figure, but on producing a system for drawing many related figures, in a way that keeps them consistent, understandable, and easy to adapt. This is particularly useful when materials are developed collaboratively or reused over time.</p>
+<p>Here are two examples that are sized identically (length of the number lines), even though their content differs:</p>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine1.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
+
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine2.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
+
+<hr>
+<h2 id="step-by-step-building-the-template">Step-by-Step: Building the Template</h2>
+<p>This is a walkthrough of how the template is constructed. Each step illustrates a decision that allows one to separate the structure and visual identity from the content.</p>
+<h3 id="what-the-template-aims-to-solve">What the Template Aims to Solve</h3>
+<p>When making double number line diagrams, one often encounters several problems:</p>
+<ul>
+<li>Long labels make the diagrams wider than the available width, so one needs to shorten the number lines to prevent the entire figure from being scaled down (which produces inconsistent font sizes and line widths).</li>
+<li>These line length adjustments snowball into adjusting tick mark placements and placement of their labels, which can become time consuming (and repetitive).</li>
+<li>If the number of tick marks needs to be changed, the positions of all the tick marks and their labels need to be adjusted.</li>
+<li>If using code, it gets messy if reused or copied. If using graphical software, all these individual tweaks become cumbersome, repetitive, and time consuming.</li>
+</ul>
+<p>The template addresses all of these issues by automating them all, while at the same time enforcing a few design principles:</p>
+<ul>
+<li>Text appears at the same size across diagrams by allowing the number line length (excluding labels) to be explicitly controllable, so that figures can be adjusted to fit on a page.</li>
+<li>Number line labels sit at a fixed, consistent distance to the left.</li>
+<li>Tick marks are evenly spaced.</li>
+<li>Tick labels are centered above or below ticks, at consistent vertical spacing.</li>
+<li>Code is clean and readable, so it is easy to adapt.</li>
+</ul>
+<h3 id="step-1-draw-the-line">Step 1: Draw the Line</h3>
+<p>Assuming we have a target width, say <code>\def\lineWide{6.3cm}</code>, we can draw the line as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\lineWide</span>{6.3cm}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\coordinate</span> (leftEnd) at (0, 0);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\coordinate</span> (rightEnd) at (<span style="color:#66d9ef">\lineWide</span>, 0);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (leftEnd) -- (rightEnd);
+</span></span></code></pre></div><p>Here:</p>
+<ul>
+<li>The <code>\coordinate</code> commands name the endpoints of the number line.</li>
+<li>The <code>\draw</code> command draws the line <code>(leftEnd) -- (rightEnd)</code> between the two points.</li>
+<li>The <code>[-&gt;, &gt;=stealth]</code> are draw options:
+<ul>
+<li><code>-&gt;</code> says to draw an arrowhead at the end</li>
+<li><code>&gt;=stealth</code> says to use as arrowhead, the &ldquo;stealth&rdquo; style.</li>
+</ul>
+</li>
+</ul>
+<p>The result is the following figure:</p>
+<figure><img src="doubleNumberLine3.svg"/>
+</figure>
+
+<h3 id="step-2-add-the-line-label">Step 2: Add the Line Label</h3>
+<!-- raw HTML omitted -->
+<p>The label to the left of the line should be consistently placed, regardless of text length. The following works well:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-0.15cm]</span> at (leftEnd) {label goes here};
+</span></span></code></pre></div><p>The <code>anchor=east</code> aligns the right edge of the label with <code>(leftEnd)</code>, and the <code>xshift</code> moves it slightly to the left. This keeps the label visually aligned, even if the text changes. It looks like this:</p>
+<figure><img src="doubleNumberLine4.svg"/>
+</figure>
+
+<p>To separate the piece of code that adds the label and specifies its placement from the actual text of the label (separate content from style and structure), one can define <code>\def\lineLabel</code> with the label text and then use it. Like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\lineLabel</span>{label goes here}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-0.15cm]</span> at (leftEnd) {<span style="color:#66d9ef">\lineLabel</span>};
+</span></span></code></pre></div><h3 id="step-3-add-tickmarks">Step 3: Add Tickmarks</h3>
+<p>To avoid crowding the endpoints, we leave some space on each side. The marks are placed using a loop.</p>
+<p>This is an example for 5 ticks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\numLineExtra</span>{0.3cm}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% draw ticks as nodes (mark-n). 1st mark is (mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,5}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[draw]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It looks like this:</p>
+<figure><img src="doubleNumberLine5.svg"/>
+</figure>
+
+<p>The code places <code>\nodes</code> with empty text <code>{}</code> at the equally spaced points <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code> leaving <code>\numLineExtra</code> space to the left and right in the number line (actually, a bit more to the right). The <code>node</code> commands have the optional <code>[draw]</code> which draws the edges of the node. Naming the nodes as <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code> is useful to later be able to place things around them, like tickmark labels.</p>
+<h3 id="step-4-style-the-tickmarks">Step 4: Style the Tickmarks</h3>
+<p>Now we need to style those nodes so that they actually look like tickmarks and not like little squares! This is done by defining a TikZ style, and then declaring those nodes to have that style.</p>
+<p>This is the style definition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Define the &#34;numLineTick&#34; style
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>numLineTick/.style={
+</span></span><span style="display:flex;"><span>  draw,               <span style="color:#75715e">% Draw tickmark node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  minimum width=0pt,  <span style="color:#75715e">% No width for the node box
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  minimum height=7pt, <span style="color:#75715e">% Height of the tickmark
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  line cap=round,     <span style="color:#75715e">% Rounded ends for ticks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  inner sep=0pt,      <span style="color:#75715e">% No inner padding
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  outer sep=2pt,      <span style="color:#75715e">% Space around the tick
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  line width=0.35pt,  <span style="color:#75715e">% Thickness of the tick line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>},
+</span></span></code></pre></div><p>To apply it, use the style instead of <code>[draw]</code> for the nodes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% draw ticks as nodes (mark-n). 1st mark is (mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,5}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Result:
+<figure><img src="doubleNumberLine6.svg"/>
+</figure>
+</p>
+<h3 id="step-5-generalize-the-tick-count">Step 5: Generalize the Tick Count</h3>
+<p>But of course, part of the point of the template is that it should be able to create any number of ticks. By how this has been coded already, this is not hard: the <code>5</code> can be replaced with a parameter <code>\numMarks</code>, and the code will do everything automatically!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% draw ticks as nodes (mark-n). 1st mark is (mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>For example, setting <code>\def\numMarks{9}</code>, the code produces 9 equally spaced tickmarks:</p>
+<figure><img src="doubleNumberLine7.svg"/>
+</figure>
+
+<h3 id="step-6-add-tick-labels">Step 6: Add Tick Labels</h3>
+<p>With named tick nodes, labeling is simple. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above,font=\small]</span> at (mark-4) {above};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[below,font=\small]</span> at (mark-4) {(mark-4)};
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<figure><img src="doubleNumberLine8.svg"/>
+</figure>
+
+<p>Or with a loop, and adjusting the distance for the <code>above</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in {0,20,...,100} {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num\%</span>};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><figure><img src="doubleNumberLine9.svg"/>
+</figure>
+
+<p>Even better (thinking about a template), one can define the labels as a separate macro and then loop over the labels:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\labels</span>{0<span style="color:#66d9ef">\%</span>,20<span style="color:#66d9ef">\%</span>, , 60<span style="color:#66d9ef">\%</span> , ,100<span style="color:#66d9ef">\%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\label</span> [count=<span style="color:#66d9ef">\i</span>] in <span style="color:#66d9ef">\labels</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\label</span>};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><figure><img src="doubleNumberLine10.svg"/>
+</figure>
+
+<p>Notice how easy it was to get empty labels with the comma-separated the list. It is useful to be able to leave empty labels in these sorts of diagrams with learning resources in mind.</p>
+<h3 id="step-7-define-styles-for-labels">Step 7: Define Styles for Labels</h3>
+<p>Again, trying to remove unnecessary repetition and making this easy to maintain/adjust in the future, the style and placement of the labels should be factored out into a TikZ style. Two different styles, for labels above or below the tickmarks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span>tickLabelAbove/.style={
+</span></span><span style="display:flex;"><span>    font=<span style="color:#66d9ef">\scriptsize</span>,   <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    yshift=2.0ex,       <span style="color:#75715e">% Vertical offset for labels above the line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>},
+</span></span><span style="display:flex;"><span>tickLabelBelow/.style={
+</span></span><span style="display:flex;"><span>    font=<span style="color:#66d9ef">\scriptsize</span>,   <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    yshift=-2.3ex,      <span style="color:#75715e">% Slightly larger offset below the line to account 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        <span style="color:#75715e">% for the label&#39;s baseline alignment (ensures visual balance).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>},
+</span></span></code></pre></div><p>Then, the code simplifies to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\labels</span>{0<span style="color:#66d9ef">\%</span>,20<span style="color:#66d9ef">\%</span>, , 60<span style="color:#66d9ef">\%</span> , ,100<span style="color:#66d9ef">\%</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\label</span> [count=<span style="color:#66d9ef">\i</span>] in <span style="color:#66d9ef">\labels</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelAbove]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\label</span>};
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="final-template-doublenumberline">Final Template: <code>\doubleNumberLine</code></h2>
+<p>What the above has accomplished is to separate all structure from content. We can declare the parameters for a specific figure, as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\lineWide</span>{6.3cm} <span style="color:#75715e">% width of line (not including label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\numMarks</span>{5}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topMarkLabels</span>{0,300,...,1200} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topLineLabel</span>{calcium (mg)}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomMarkLabels</span>{0<span style="color:#66d9ef">\%</span>, 25<span style="color:#66d9ef">\%</span>, 50<span style="color:#66d9ef">\%</span>,75<span style="color:#66d9ef">\%</span>, 100<span style="color:#66d9ef">\%</span>} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomLineLabel</span>{}
+</span></span></code></pre></div><p>and define the template code elsewhere (e.g., preamble or a separate file). The following code defines the command <code>\doubleNumberLine</code> which will take care of all the drawing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\doubleNumberLine</span>}[6]{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% Macro to draw double number line with labeled ticks and labels at the left
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% Command creates several coordinates:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% - Endpoints for top and bottom line: (top-leftEnd), (top-rightEnd), (bot-leftEnd), (bot-rightEnd)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% - Nodes of top marks: (top-mark-1), ...,(top-mark-\numMarks)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% - Nodes of bottom marks: (bot-mark-1), ...,(bot-mark-\numMarks)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #1: Number line lengths (without the label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #2: Number of marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #3: Top mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #4: Top line label (placed at the left)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #5: Bottom mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%   #6: Bottom line label (placed at the left)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">% Internal constants
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\def\numLineExtra</span>{0.3cm} <span style="color:#75715e">% Hardcoded extra space at the ends
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% TOP number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (top-leftEnd) at (0, 0);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (top-rightEnd) at (#1, 0);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (top-leftEnd) -- (top-rightEnd);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (top-leftEnd) {#4};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (top-mark-n). 1st mark is (top-mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (top-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(#2-1)},0) {};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #3 {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelAbove]</span> at (top-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% Bottom number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}[yshift=-6ex]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (bot-leftEnd) at (0, 0);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (bot-rightEnd) at (#1, 0);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (bot-leftEnd) -- (bot-rightEnd);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (bot-leftEnd) {#6};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (bot-mark-n). 1st mark is (bot-mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (bot-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(#2-1)},0) {};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #5 {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelBelow]</span> at (bot-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>and the following code has all the factored-out styles which are used by the <code>\doubleNumberLine</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">%  TikZ Styles for Number Lines
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\tikzset</span>{
+</span></span><span style="display:flex;"><span>  tickLabelAbove/.style={
+</span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=2.0ex,       <span style="color:#75715e">% Vertical offset for labels above the line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>  tickLabelBelow/.style={
+</span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=-2.3ex,      <span style="color:#75715e">% Slightly larger offset below the line to account 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                          <span style="color:#75715e">% for the label&#39;s baseline alignment (ensures visual balance).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>  numLineTick/.style={
+</span></span><span style="display:flex;"><span>      draw,               <span style="color:#75715e">% Draw tickmark node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum width=0pt,  <span style="color:#75715e">% No width for the node box
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum height=7pt, <span style="color:#75715e">% Height of the tickmark
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line cap=round,     <span style="color:#75715e">% Rounded ends for ticks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      inner sep=0pt,      <span style="color:#75715e">% No inner padding
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      outer sep=2pt,      <span style="color:#75715e">% Space around the tick
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line width=0.35pt,  <span style="color:#75715e">% Thickness of the tick line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>With this, tiny codes can produce consistently styled figures.</p>
+<h3 id="examples">Examples</h3>
+<p>The single line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% \begin{tikzpicture}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{6.3cm}{7}{0,1,...,6}{number of books}{<span style="color:#66d9ef">\$</span>0, <span style="color:#66d9ef">\$</span>15, <span style="color:#66d9ef">\$</span>30, <span style="color:#66d9ef">\$</span>45, <span style="color:#66d9ef">\$</span>60, <span style="color:#66d9ef">\$</span>75, <span style="color:#66d9ef">\$</span>90}{total cost}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
+</span></span></span></code></pre></div><p>produces the following figure:
+<figure><img src="doubleNumberLine12.svg"/>
+</figure>
+</p>
+<p>The single line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% \begin{tikzpicture}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{5cm}{5}{0,50,,,200}{number of cards}{0<span style="color:#66d9ef">\%</span>, 10<span style="color:#66d9ef">\%</span>, , , ? }{percentage}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
+</span></span></span></code></pre></div><p>gives
+<figure><img src="doubleNumberLine13.svg"/>
+</figure>
+</p>
+<h3 id="making-the-template-easier-to-use">Making the Template Easier to Use</h3>
+<p>It is nice to specify double number lines with a single line of code. However, brevity is not the same as usability. In fact, it is not easy for people to remember what all the 6 <code>{}{}{}{}{}{}</code> in <code>\doubleNumberLine</code> mean, so it is better to use the following template code, which invokes <code>\doubleNumberLine</code> and makes transparent the meaning of each <code>{}{}{}{}{}{}</code>. More lines of code, but much easier to use.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\lineWide</span>{3in} <span style="color:#75715e">% width of line (not including label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\numMarks</span>{7}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topMarkLabels</span>{0,1,...,6} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topLineLabel</span>{number of books}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomMarkLabels</span>{<span style="color:#66d9ef">\$</span>0, <span style="color:#66d9ef">\$</span>15, <span style="color:#66d9ef">\$</span>30, <span style="color:#66d9ef">\$</span>45, <span style="color:#66d9ef">\$</span>60, <span style="color:#66d9ef">\$</span>75, <span style="color:#66d9ef">\$</span>90} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomLineLabel</span>{total cost}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Draw double number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% creates several coordinates like (top-leftEnd) and (bot-mark-2). See details in template.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{<span style="color:#66d9ef">\lineWide</span>}{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\topMarkLabels</span>}{<span style="color:#66d9ef">\topLineLabel</span>}{<span style="color:#66d9ef">\bottomMarkLabels</span>}{<span style="color:#66d9ef">\bottomLineLabel</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span></code></pre></div><h3 id="full-example-with-code">Full example, with code</h3>
+<p>Here is a full 
+<a href="./tikz-gallery/doublenumberline13/">self-contained example, including all the code in a single file</a> (link to the TikZ gallery). It works out of the box. To use as a template, all the styles and the definition of the macro <code>\doubleNumberLine</code> should be moved into a <code>.sty</code> file, or a separate latex file included in the preamble with the include command (like in this 
+<a href="https://www.overleaf.com/read/wyzvmbhzjxhh#e5bdef" target="_blank" rel="noopener">Overleaf</a> link).</p>
+<p><figure><img src="doubleNumberLine13.svg"/>
+</figure>
+
+
+
+
+
+
+<p>(Figure created with TikZ. Source code <a href="https://enriqueacosta.github.io/blog/en/tikz-gallery/doublenumberline13/">here</a>.)</p>
+</p>
+<h2 id="further-work">Further work</h2>
+<h3 id="number-of-tickmarks">Number of tickmarks</h3>
+<p>The macro <code>\doubleNumberLine</code> could infer <code>\numMarks</code> from the length of <code>\topMarkLabels</code>. This is not trivial because of how <code>\LaTeX</code> expands things, but it can be done.</p>
+<p>For example, one could add the following code close to the start of the code of <code>doubleNumberLine</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Figure out the number of marks from #3 and store in \numMarks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\pgfmathsetmacro</span>{<span style="color:#66d9ef">\numMarks</span>}{0}<span style="color:#75715e">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\i</span> in #3{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\pgfmathtruncatemacro</span>{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\numMarks</span>+1}<span style="color:#75715e">% 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\global\let\numMarks\numMarks</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}<span style="color:#75715e">%
+</span></span></span></code></pre></div><p>This would eliminate one input from <code>\doubleNumberLine</code>, but I am still undecided if removing the explicitness is worth the more complex LaTeX code (due to the use of <code>\global</code> and <code>\pgfmathtruncatemacro</code>). Finding even one reliable version of this code was not trivial. Many trials failed, which may imply that this code may be harder to maintain through changes in <code>TikZ</code> and <code>LaTeX</code>.</p>
+<h3 id="streamlining-the-parameters">Streamlining the parameters</h3>
+<p>To address the six positional arguments, a key-value interface is friendlier, and can probably be developed with pgfkeys. So, calling the template may look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\doubleNumberLine</span>[
+</span></span><span style="display:flex;"><span>  length=7.6cm,
+</span></span><span style="display:flex;"><span>  topmarks={0,50,...,200},
+</span></span><span style="display:flex;"><span>  toplabel={calcium (mg)},
+</span></span><span style="display:flex;"><span>  bottommarks={},
+</span></span><span style="display:flex;"><span>  bottomlabels={0<span style="color:#66d9ef">\%</span>,25<span style="color:#66d9ef">\%</span>,50<span style="color:#66d9ef">\%</span>,75<span style="color:#66d9ef">\%</span>,100<span style="color:#66d9ef">\%</span>}
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div>
+  </div>
+
+</div>
+
+<h2>
+Subscribe
+</h2>
+<p>
+   Want to get an email when a new post is added? If so, subscribe <a href="subscribe/subscribe"> here</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2025 Enrique Acosta. </br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

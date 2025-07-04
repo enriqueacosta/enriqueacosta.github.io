@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Enrique Acosta Jaramillo</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://enriqueacosta.github.io/blog/es/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+
+
+
+
+   
+   <base href="https://enriqueacosta.github.io/blog/es/">
+
+
+   
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+   
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+   crossorigin="anonymous"
+   onload='renderMathInElement(document.body);'></script>
+
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           renderMathInElement(document.body, {
+               delimiters: [
+                   {left: "$$", right: "$$", display: true},
+                   {left: "\\[", right: "\\]", display: true},
+                   {left: "$", right: "$", display: false},
+                   {left: "\\(", right: "\\)", display: false}
+               ]
+           });
+       });
+   </script>
+
+
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  
+    <nav class="LangNav">
+    
+      <a href="https://enriqueacosta.github.io/blog/en/tikz-gallery/doublenumberline13/">English</a>
+    
+      <a href="https://enriqueacosta.github.io/blog/es/tikz-gallery/doublenumberline13/">Español</a>
+    
+    </nav>
+  
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://enriqueacosta.github.io/blog/es/"><h1>Enrique Acosta Jaramillo</h1></a>
+      <p class="lead">
+       Blog personal 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/blog/es">Home</a> </li>
+        <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
+      </ul>
+    </nav>
+    <p>2025
+      
+      
+      
+    </p>
+    <div class="hugo-ref">
+      <p>Powered by <a href="https://gohugo.io">Hugo</a>. Layout based on the <a href="https://github.com/spf13/hyde">Hyde</a> theme.</p>
+    </div>
+    
+  </div>
+</aside>
+
+    <main class="content container">
+    
+  
+  
+  
+  
+
+<div class="tikz-gallery-entry">
+  <h1>Visualizador de Tikz </h1> 
+  
+
+  
+  <image src="doubleNumberLine13.es.png" width="100%"/>
+
+  <h3>Código fuente</h3>
+  
+  
+  <p> doubleNumberLine13.es.tex </p>
+  
+  
+  
+  
+  
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Enrique Acosta, 2025
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% enriqueacosta.github.io
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% Released under CC-BY 4.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% svg generation needs to be run with -shell-escape: pdflatex -shell-escape filename.tex
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz, convert={command=\unexpanded{{pdf2svg \infile\space &#34;\jobname.svg&#34; &amp;&amp; rsvg-convert --zoom 1.85 --format svg --output &#34;\jobname.svg&#34; &#34;\jobname.svg&#34; &amp;&amp; convert -density 300 \infile\space &#34;\jobname.png&#34;}}}]</span>{standalone}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usetikzlibrary</span>{fit}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">%  TikZ Styles for Number Lines
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\tikzset</span>{
+</span></span><span style="display:flex;"><span>  tickLabelAbove/.style={
+</span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=2.0ex,       <span style="color:#75715e">% Vertical offset for labels above the line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>  tickLabelBelow/.style={
+</span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=-2.6ex,      <span style="color:#75715e">% Slightly larger offset below the line to account 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                          <span style="color:#75715e">% for the label&#39;s baseline alignment (ensures visual balance).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>  numLineTick/.style={
+</span></span><span style="display:flex;"><span>      draw,               <span style="color:#75715e">% Draw tickmark node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum width=0pt,  <span style="color:#75715e">% No width for the node box
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum height=7pt, <span style="color:#75715e">% Height of the tickmark
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line cap=round,     <span style="color:#75715e">% Rounded ends for ticks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      inner sep=0pt,      <span style="color:#75715e">% No inner padding
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      outer sep=2pt,      <span style="color:#75715e">% Space around the tick
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line width=0.35pt,  <span style="color:#75715e">% Thickness of the tick line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\doubleNumberLine</span>}[6]{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #1: Number line lengths (without the label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #2: Number of marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #3: Top mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #4: Top line label (placed at the left)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #5: Bottom mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #6: Bottom line label (placed at the left)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">% Internal constants
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\def\numLineExtra</span>{0.3cm} <span style="color:#75715e">% Hardcoded extra space at the ends
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% TOP number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (top-leftEnd) at (0, 0);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (top-rightEnd) at (#1, 0);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (top-leftEnd) -- (top-rightEnd);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (top-leftEnd) {#4};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (top-mark-n). 1st mark is (top-mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (top-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #3 {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelAbove]</span> at (top-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% Bottom number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}[yshift=-6ex]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (bot-leftEnd) at (0, 0);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (bot-rightEnd) at (#1, 0);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (bot-leftEnd) -- (bot-rightEnd);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (bot-leftEnd) {#6};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (bot-mark-n). 1st mark is (bot-mark-1).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (bot-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #5 {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelBelow]</span> at (bot-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\lineWide</span>{2in} <span style="color:#75715e">% width of line (not including label)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\numMarks</span>{5}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topMarkLabels</span>{0,50,,,200} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topLineLabel</span>{número de tarjetas}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomMarkLabels</span>{0<span style="color:#66d9ef">\%</span>, 10<span style="color:#66d9ef">\%</span>, , , ? } 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomLineLabel</span>{porcentaje}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Draw double number line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% creates several coordinates like (top-leftEnd) and (bot-mark-2). See details in template.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{<span style="color:#66d9ef">\lineWide</span>}{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\topMarkLabels</span>}{<span style="color:#66d9ef">\topLineLabel</span>}{<span style="color:#66d9ef">\bottomMarkLabels</span>}{<span style="color:#66d9ef">\bottomLineLabel</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% Extra text in marks if needed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% \node[tickLabelBelow] at (top-mark-3) {text below};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">% box around some top and bottom marks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">% \node[fit=(top-mark-4) (bot-mark-4), draw, rectangle, rounded corners=1.5ex, inner sep=2.7ex, densely dashed] {};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}</span></span></code></pre></div>
+  
+  <h3> Versión vectorial en formato pdf </h3>
+  Download <a href="doubleNumberLine13.es.pdf">here</a>
+
+
+
+  <h3>Entradas en las que sale esta imagen</h3>
+  <ul>
+   
+     
+   
+     
+   
+     
+   
+     
+      <li><a href="/blog/es/posts/tikz-doublenumline/">Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</a></li>
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+     
+   
+  </ul>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+      
+    
+  
+
+  <div>
+  
+  </div>
+
+</div>
+
+<h2>
+Suscríbase
+</h2>
+<p>
+   ¿Quiere recibir un email cuando haya una nueva entrada de blog? Suscríbase  <a href="subscribe/subscribe"> acá</a>.
+</p>
+
+<footer>
+  <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
+  <div class="license">
+    <p>
+      &copy 2025 Enrique Acosta. </br>
+      Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+    </p>
+  </div>
+  
+</footer>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
