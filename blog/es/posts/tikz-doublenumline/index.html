@@ -127,8 +127,14 @@
 <p><em>¿Cuánto es 75% de una cantidad de calcio si 100% es 1200mg?</em></p>
 </blockquote>
 <p>La recta numérica doble permite visualizar la respuesta, alineando la marca del 75% en una recta con el valor correspondiente en la otra.</p>
-<figure><img src="doubleNumberLine1.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine1.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <!-- raw HTML omitted -->
 <p>Con la plantilla, este es el código que genera el diagrama:</p>
@@ -180,6 +186,7 @@
   </div>
 </div>
 
+<p><strong>Nota:</strong> Esta página web es <em>responsiva</em>, lo que significa que el contenido (incluidas las imágenes y los tamaños de letra) se ajusta automáticamente al tamaño de la pantalla. Para mostrar la coherencia visual de los diagramas en esta entrada, he hecho que las imágenes no sean responsivas. Por eso, podrían desbordarse en pantallas pequeñas en lugar de reducirse. Si no ve toda una imagen, intente desplazarse hacia los lados.</p>
 <hr>
 <h2 id="paso-a-paso-cómo-se-construyó-la-plantilla">Paso a paso: cómo se construyó la plantilla</h2>
 <h3 id="qué-inconvenientes-busca-evitar-la-plantilla">¿Qué inconvenientes busca evitar la plantilla?</h3>
@@ -217,16 +224,28 @@
 </li>
 </ul>
 <p>El resultado es el siguiente diagrama:</p>
-<figure><img src="doubleNumberLine3.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine3.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <h3 id="paso-2-añadir-la-etiqueta-de-la-recta">Paso 2: Añadir la etiqueta de la recta</h3>
 <!-- raw HTML omitted -->
 <p>Para que la etiqueta situada a la izquierda de la recta mantenga siempre una posición uniforme, sin importar la longitud del texto, conviene fijar su ubicación de manera automática. El siguiente método resulta especialmente práctico:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-0.15cm]</span> at (leftEnd) {acá va la etiqueta};
 </span></span></code></pre></div><p>La opción <code>anchor=east</code> alinea el borde derecho de la etiqueta con <code>(leftEnd)</code>, y <code>xshift</code> la desplaza ligeramente a la izquierda. Así la etiqueta queda alineada visualmente, aunque el texto cambie. El resultado es:</p>
-<figure><img src="doubleNumberLine4.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine4.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Para separar el comando que agrega la etiqueta y especifica su posición del texto mismo de la etiqueta, se puede definir la maco <code>\def\lineLabel</code> con el texto, y después invocarlo. Así:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% etiqueta de la recta
@@ -244,8 +263,14 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[draw]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>El resultado es el siguiente:</p>
-<figure><img src="doubleNumberLine5.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine5.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Ese fragmento de código coloca nodos sin texto (el texto va adentro de los <code>{}</code>) en los puntos igualmente espaciados <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code>, dejando <code>\numLineExtra</code> de espacio a la izquierda y derecha de la recta numérica (en realidad, un poco más a la derecha). El comando <code>node</code> tiene la opción <code>[draw]</code>, que dibuja el borde del nodo. Dar nombre a los nodos como <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code> es útil para después ubicar etiquetas u otros elementos alrededor de cada marca.</p>
 <h3 id="paso-4-dar-estilo-a-las-marcas">Paso 4: Dar estilo a las marcas</h3>
@@ -267,8 +292,14 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>El resultado es:
-<figure><img src="doubleNumberLine6.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine6.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <h3 id="paso-5-generalizar-la-cantidad-de-marcas">Paso 5: Generalizar la cantidad de marcas</h3>
 <p>Una de las ventajas de esta plantilla es que permite generar tantas marcas como se necesiten. Como el código ya está preparado para ello, solo hay que cambiar el <code>5</code> por un nuevo parámetro <code>\numMarks</code> y todo se adapta de forma automática.</p>
@@ -277,31 +308,55 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Por ejemplo, si se define <code>\def\numMarks{9}</code>, el código produce 9 marcas igualmente espaciadas:</p>
-<figure><img src="doubleNumberLine7.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine7.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <h3 id="paso-6-añadir-etiquetas-a-las-marcas">Paso 6: Añadir etiquetas a las marcas</h3>
 <p>Al tener nombres para todas las marcas, etiquetarlas resulta sencillo. Por ejemplo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above,font=\small]</span> at (mark-4) {above};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[below,font=\small]</span> at (mark-4) {(mark-4)};
 </span></span></code></pre></div><!-- raw HTML omitted -->
-<figure><img src="doubleNumberLine8.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine8.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Otra opción es usar un ciclo y ajustar la distancia para las etiquetas superiores con <code>above=3pt</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in {0,20,...,100} {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num\%</span>};
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><figure><img src="doubleNumberLine9.es.svg"/>
-</figure>
+</span></span></code></pre></div><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine9.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Para facilitar la reutilización, lo más práctico es definir las etiquetas en una macro de LaTeX y luego asignarlas a cada marca con un ciclo. Así:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\labels</span>{0<span style="color:#66d9ef">\%</span>,20<span style="color:#66d9ef">\%</span>, , 60<span style="color:#66d9ef">\%</span> , ,100<span style="color:#66d9ef">\%</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\label</span> [count=<span style="color:#66d9ef">\i</span>] in <span style="color:#66d9ef">\labels</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\label</span>};
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><figure><img src="doubleNumberLine10.es.svg"/>
-</figure>
+</span></span></code></pre></div><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine10.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Observe lo fácil que resulta dejar etiquetas vacías usando la lista separada por comas en <code>\labels</code>. Esto es útil para estos diagramas en el contexto educativo, donde a veces es importante omitir ciertas etiquetas.</p>
 <h3 id="paso-7-definir-estilos-para-las-etiquetas">Paso 7: Definir estilos para las etiquetas</h3>
@@ -421,16 +476,28 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{6.3cm}{7}{0,1,...,6}{número de libros}{<span style="color:#66d9ef">\$</span>0, <span style="color:#66d9ef">\$</span>15, <span style="color:#66d9ef">\$</span>30, <span style="color:#66d9ef">\$</span>45, <span style="color:#66d9ef">\$</span>60, <span style="color:#66d9ef">\$</span>75, <span style="color:#66d9ef">\$</span>90}{costo total}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
 </span></span></span></code></pre></div><p>produce el diagrama:
-<figure><img src="doubleNumberLine12.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine12.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <p>Esta otra línea de código</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% \begin{tikzpicture}
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{5cm}{5}{0,50,,,200}{número de tarjetas}{0<span style="color:#66d9ef">\%</span>, 10<span style="color:#66d9ef">\%</span>, , , ? }{porcentaje}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
 </span></span></span></code></pre></div><p>genera:
-<figure><img src="doubleNumberLine13.es.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine13.es.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <h3 id="cómo-hacer-la-plantilla-más-fácil-de-usar">Cómo hacer la plantilla más fácil de usar</h3>
 <p>Es interesante saber que se puede especificar una diagrama de recta numérica doble con una sola línea de código. Sin embargo, la brevedad no siempre implica facilidad de uso. De hecho, no es sencillo recordar el significado de los seis argumentos <code>{}{}{}{}{}{}</code> en <code>\doubleNumberLine</code>, por lo que resulta más claro estructurar la plantilla  de la siguiente forma que invoque <code>\doubleNumberLine</code> y haga explícito el significado de cada argumento. Son bastantes más líneas de código, pero es mucho más fácil de usar.</p>
@@ -451,8 +518,14 @@
 <p>Este es un 
 <a href="./tikz-gallery/doublenumberline13/">ejemplo completo, con todo el código en un solo archivo</a> (enlace a la galería TikZ de este blog). Para usarlo como plantilla, todos los estilos y la definición de la macro <code>\doubleNumberLine</code> deben trasladarse a un archivo <code>.sty</code> o a un archivo de LaTeX aparte, incluido en el preámbulo mediante el comando <code>\include</code> (como en este 
 <a href="https://www.overleaf.com/read/wyzvmbhzjxhh#e5bdef" target="_blank" rel="noopener">ejemplo que cree en Overleaf</a>).</p>
-<p><figure><img src="doubleNumberLine13.svg"/>
-</figure>
+<p><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine13.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 
 

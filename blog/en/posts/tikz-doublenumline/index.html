@@ -127,8 +127,14 @@
 <p><em>What is 75% if 100% calcium is 1200mg?</em></p>
 </blockquote>
 <p>The idea is that the diagram helps understand what the answer is visually by matching the 75% mark on one line with the correct value on the other.</p>
-<figure><img src="doubleNumberLine1.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine1.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <!-- raw HTML omitted -->
 <p>And here is what the code for that figure looks like, using the template:</p>
@@ -181,6 +187,7 @@
   </div>
 </div>
 
+<p><strong>Note:</strong> This website is <em>responsive</em>, meaning content (including images and fonts) automatically adjusts to the screen size. To show the visual consistency of the diagrams in this post, I have made the images unresponsive, so they may overflow on small screens instead of shrinking. If part of an image is cut off, try scrolling sideways.</p>
 <hr>
 <h2 id="step-by-step-building-the-template">Step-by-Step: Building the Template</h2>
 <p>This is a walkthrough of how the template is constructed. Each step illustrates a decision that allows one to separate the structure and visual identity from the content.</p>
@@ -218,16 +225,28 @@
 </li>
 </ul>
 <p>The result is the following figure:</p>
-<figure><img src="doubleNumberLine3.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine3.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <h3 id="step-2-add-the-line-label">Step 2: Add the Line Label</h3>
 <!-- raw HTML omitted -->
 <p>The label to the left of the line should be consistently placed, regardless of text length. The following works well:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-0.15cm]</span> at (leftEnd) {label goes here};
 </span></span></code></pre></div><p>The <code>anchor=east</code> aligns the right edge of the label with <code>(leftEnd)</code>, and the <code>xshift</code> moves it slightly to the left. This keeps the label visually aligned, even if the text changes. It looks like this:</p>
-<figure><img src="doubleNumberLine4.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine4.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>To separate the piece of code that adds the label and specifies its placement from the actual text of the label (separate content from style and structure), one can define <code>\def\lineLabel</code> with the label text and then use it. Like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\lineLabel</span>{label goes here}
@@ -242,8 +261,14 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[draw]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>It looks like this:</p>
-<figure><img src="doubleNumberLine5.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine5.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>The code places <code>\nodes</code> with empty text <code>{}</code> at the equally spaced points <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code> leaving <code>\numLineExtra</code> space to the left and right in the number line (actually, a bit more to the right). The <code>node</code> commands have the optional <code>[draw]</code> which draws the edges of the node. Naming the nodes as <code>(mark-1)</code>,&hellip;,<code>(mark-5)</code> is useful to later be able to place things around them, like tickmark labels.</p>
 <h3 id="step-4-style-the-tickmarks">Step 4: Style the Tickmarks</h3>
@@ -265,8 +290,14 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(5-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Result:
-<figure><img src="doubleNumberLine6.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine6.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <h3 id="step-5-generalize-the-tick-count">Step 5: Generalize the Tick Count</h3>
 <p>But of course, part of the point of the template is that it should be able to create any number of ticks. By how this has been coded already, this is not hard: the <code>5</code> can be replaced with a parameter <code>\numMarks</code>, and the code will do everything automatically!</p>
@@ -275,31 +306,55 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(<span style="color:#66d9ef">\lineWide</span>-2.5<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>For example, setting <code>\def\numMarks{9}</code>, the code produces 9 equally spaced tickmarks:</p>
-<figure><img src="doubleNumberLine7.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine7.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <h3 id="step-6-add-tick-labels">Step 6: Add Tick Labels</h3>
 <p>With named tick nodes, labeling is simple. For example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above,font=\small]</span> at (mark-4) {above};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[below,font=\small]</span> at (mark-4) {(mark-4)};
 </span></span></code></pre></div><!-- raw HTML omitted -->
-<figure><img src="doubleNumberLine8.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine8.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Or with a loop, and adjusting the distance for the <code>above</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in {0,20,...,100} {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num\%</span>};
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><figure><img src="doubleNumberLine9.svg"/>
-</figure>
+</span></span></code></pre></div><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine9.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Even better (thinking about a template), one can define the labels as a separate macro and then loop over the labels:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\def\labels</span>{0<span style="color:#66d9ef">\%</span>,20<span style="color:#66d9ef">\%</span>, , 60<span style="color:#66d9ef">\%</span> , ,100<span style="color:#66d9ef">\%</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\label</span> [count=<span style="color:#66d9ef">\i</span>] in <span style="color:#66d9ef">\labels</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[above=3pt,font=\scriptsize]</span> at (mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\label</span>};
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><figure><img src="doubleNumberLine10.svg"/>
-</figure>
+</span></span></code></pre></div><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine10.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 <p>Notice how easy it was to get empty labels with the comma-separated the list. It is useful to be able to leave empty labels in these sorts of diagrams with learning resources in mind.</p>
 <h3 id="step-7-define-styles-for-labels">Step 7: Define Styles for Labels</h3>
@@ -420,16 +475,28 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{6.3cm}{7}{0,1,...,6}{number of books}{<span style="color:#66d9ef">\$</span>0, <span style="color:#66d9ef">\$</span>15, <span style="color:#66d9ef">\$</span>30, <span style="color:#66d9ef">\$</span>45, <span style="color:#66d9ef">\$</span>60, <span style="color:#66d9ef">\$</span>75, <span style="color:#66d9ef">\$</span>90}{total cost}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
 </span></span></span></code></pre></div><p>produces the following figure:
-<figure><img src="doubleNumberLine12.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine12.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <p>The single line</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% \begin{tikzpicture}
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{5cm}{5}{0,50,,,200}{number of cards}{0<span style="color:#66d9ef">\%</span>, 10<span style="color:#66d9ef">\%</span>, , , ? }{percentage}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% \end{tikzpicture}
 </span></span></span></code></pre></div><p>gives
-<figure><img src="doubleNumberLine13.svg"/>
-</figure>
+<div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine13.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 </p>
 <h3 id="making-the-template-easier-to-use">Making the Template Easier to Use</h3>
 <p>It is nice to specify double number lines with a single line of code. However, brevity is not the same as usability. In fact, it is not easy for people to remember what all the 6 <code>{}{}{}{}{}{}</code> in <code>\doubleNumberLine</code> mean, so it is better to use the following template code, which invokes <code>\doubleNumberLine</code> and makes transparent the meaning of each <code>{}{}{}{}{}{}</code>. More lines of code, but much easier to use.</p>
@@ -450,8 +517,14 @@
 <p>Here is a full 
 <a href="./tikz-gallery/doublenumberline13/">self-contained example, including all the code in a single file</a> (link to the TikZ gallery). It works out of the box. To use as a template, all the styles and the definition of the macro <code>\doubleNumberLine</code> should be moved into a <code>.sty</code> file, or a separate latex file included in the preamble with the include command (like in this 
 <a href="https://www.overleaf.com/read/wyzvmbhzjxhh#e5bdef" target="_blank" rel="noopener">Overleaf</a> link).</p>
-<p><figure><img src="doubleNumberLine13.svg"/>
-</figure>
+<p><div style="overflow-x: auto;">
+  <div style="width: max-content; margin-left: auto; padding-right: clamp(0px, calc(100vw - 100%), 5vw);">
+    <img 
+      src="doubleNumberLine13.svg" 
+      alt="" 
+      style="display: block;" />
+  </div>
+</div>
 
 
 
