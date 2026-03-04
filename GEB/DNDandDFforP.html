@@ -1,387 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEB: DND & DF System</title>
-    <style>
-        :root {
-            --bg-color: #f4f4f9;
-            --text-color: #333;
-            --card-bg: #fff;
-            --accent: #2c3e50;
-            --mono-font: 'Courier New', Courier, monospace;
-            --border: 1px solid #ddd;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEB: DND & DF System</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+  <style>
+    :root {
+      --bg-color: #f4f4f9;
+      --text-color: #333;
+      --card-bg: #fff;
+      --accent: #2c3e50;
+      --mono-font: 'Courier New', Courier, monospace;
+      --border: 1px solid #ddd;
+    }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
 
-        h1 {
-            text-align: center;
-            color: var(--accent);
-            margin-bottom: 20px;
-        }
+      /* replaces .container */
+      display: flex;
+      justify-content: center;
+    }
 
-        .system-card {
-            background: var(--card-bg);
-            border: var(--border);
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+    /* width constraint moved here */
+    main {
+      max-width: 800px;
+      width: 100%;
+    }
 
-        h2 {
-            margin-top: 0;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-            font-size: 1.5em;
-        }
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
 
-        .rules-box {
-            background: #eef2f5;
-            padding: 15px;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--accent);
-            line-height: 1.6;
-        }
+    .system-card {
+      background: var(--card-bg);
+      border: var(--border);
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-        .input-row {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      font-size: 1.5em;
+    }
 
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .rules-box {
+      background: #eef2f5;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--accent);
+      line-height: 1.6;
+    }
 
-        label {
-            font-weight: bold;
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
+    .intro {
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #444;
+      margin-bottom: 25px;
+    }
 
-        input[type="number"] {
-            padding: 8px;
-            font-family: var(--mono-font);
-            width: 80px;
-            font-size: 1.1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            text-align: center;
-        }
+    .input-row {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
 
-        button {
-            background-color: var(--accent);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        button:hover {
-            background-color: #34495e;
-        }
+    .operator-label {
+      font-family: var(--mono-font);
+      font-weight: bold;
+      font-size: 1.5em;
+      padding-top: 20px;
+    }
 
-        .output-console {
-            background: #222;
-            color: #4eff4e;
-            font-family: var(--mono-font);
-            padding: 15px;
-            border-radius: 4px;
-            min-height: 60px;
-            max-height: 400px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-            line-height: 1.4;
-            border: 1px solid #000;
-        }
+    label {
+      font-weight: bold;
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
 
-        .dash-preview {
-            font-family: var(--mono-font);
-            font-size: 0.8em;
-            color: #666;
-            margin-top: 4px;
-            min-height: 1.2em;
-            font-weight: bold;
-        }
+    input[type="number"] {
+      padding: 8px;
+      font-family: var(--mono-font);
+      width: 80px;
+      font-size: 1.1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+    }
 
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
-        }
+    button {
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
 
-        /* Syntax Highlighting */
-        .log-line { margin-bottom: 4px; }
-        .theorem { color: #4eff4e; font-weight: bold; }
-        .axiom { color: #ffff55; }
-        .error { color: #ff5555; }
-        .comment { color: #aaa; font-style: italic; }
-        .operator { color: #55ffff; font-weight: bold; }
+    button:hover {
+      background-color: #34495e;
+    }
 
-    </style>
+    .center {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .output-console {
+      background: #222;
+      color: #4eff4e;
+      font-family: var(--mono-font);
+      padding: 15px;
+      border-radius: 4px;
+      min-height: 60px;
+      max-height: 400px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.4;
+      border: 1px solid #000;
+    }
+
+    .dash-preview {
+      font-family: var(--mono-font);
+      font-size: 0.8em;
+      color: #666;
+      margin-top: 4px;
+      min-height: 1.2em;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 0.9em;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Syntax Highlighting */
+    .log-line { margin-bottom: 4px; }
+    .theorem { color: #4eff4e; font-weight: bold; }
+    .axiom { color: #ffff55; }
+    .error { color: #ff5555; }
+    .comment { color: #aaa; font-style: italic; }
+    .operator { color: #55ffff; font-weight: bold; }
+  </style>
 </head>
-<body>
 
-<div class="container">
+<body>
+  <main>
     <h1>GEB: Figure and Ground</h1>
 
-    <div style=" padding: 15px; border-radius: 6px; font-size: 0.95em; line-height: 1.5; color: #444; margin-bottom: 25px;">
-        <h2>What is this?</h2>
-        <p style="margin-top: 0;">
-
-            This is an interactive playground for the <strong>DND</strong> (Does-Not-Divide) and <strong>DF</strong> (Divisor-Free) formal systems described in Chapter III of Douglas Hofstadter's <em>Gödel, Escher, Bach: an Eternal Golden Braid</em>.
-        </p>
-        <p style="margin-bottom: 0;">
-            These systems demonstrate how complex mathematical properties, like whether a number is <strong>prime</strong>, can emerge from simple, mechanical rules of string manipulation (adding dashes), without any built-in knowledge of arithmetic.
-        </p>
-    </div>
+    <section class="intro">
+      <h2>What is this?</h2>
+      <p style="margin-top: 0;">
+        This is an interactive playground for the <strong>DND</strong> (Does-Not-Divide) and <strong>DF</strong> (Divisor-Free) formal systems described in Chapter III of Douglas Hofstadter's <em>Gödel, Escher, Bach: an Eternal Golden Braid</em>.
+      </p>
+      <p style="margin-bottom: 0;">
+        These systems demonstrate how complex mathematical properties, like whether a number is <strong>prime</strong>, can emerge from simple, mechanical rules of string manipulation (adding dashes), without any built-in knowledge of arithmetic.
+      </p>
+    </section>
 
     <!-- SYSTEM 1: DND -->
-    <div class="system-card">
-        <h2>The DND-System</h2>
-        <div class="rules-box">
-            <strong>Rules:</strong><br>
-            1. <strong>Axiom:</strong> <code>xy DND x</code> (a number larger than x does not divide x).<br>
-            2. <strong>Rule:</strong> If <code>x DND y</code>, then <code>x DND xy</code> (adding multiples of x to a number that x does not divide will not change the fact that x does not divide).
+    <section class="system-card" aria-labelledby="dnd-title">
+      <h2 id="dnd-title">The DND-System</h2>
+      <div class="rules-box">
+        <strong>Rules:</strong><br>
+        1. <strong>Axiom:</strong> <code>xy DND x</code> (a number larger than x does not divide x).<br>
+        2. <strong>Rule:</strong> If <code>x DND y</code>, then <code>x DND xy</code> (adding multiples of x to a number that x does not divide will not change the fact that x does not divide).
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label for="dnd-x">Candidate divisor</label>
+          <input type="number" id="dnd-x" value="3" min="1" />
+          <span id="prev-dnd-x" class="dash-preview">---(3)</span>
         </div>
 
-        <div class="input-row">
-            <div class="input-group">
-                <label>Candidate divisor</label>
-                <input type="number" id="dnd-x" value="3" min="1">
-                <span id="prev-dnd-x" class="dash-preview">---(3)</span>
-            </div>
-            <div style="font-family: var(--mono-font); font-weight: bold; font-size: 1.5em; padding-top:20px;">DND</div>
-            <div class="input-group">
-                <label>Number</label>
-                <input type="number" id="dnd-y" value="7" min="1">
-                <span id="prev-dnd-y" class="dash-preview">-------(7)</span>
-            </div>
-        </div>
-        <div style="text-align: center; margin-bottom: 10px;">
-            <button id="btn-dnd">Derive Theorem</button>
-        </div>
+        <div class="operator-label">DND</div>
 
-        <div id="out-dnd" class="output-console"><span class="comment">Waiting for input...</span></div>
-    </div>
+        <div class="input-group">
+          <label for="dnd-y">Number</label>
+          <input type="number" id="dnd-y" value="7" min="1" />
+          <span id="prev-dnd-y" class="dash-preview">-------(7)</span>
+        </div>
+      </div>
+
+      <div class="center">
+        <button id="btn-dnd" type="button">Derive Theorem</button>
+      </div>
+
+      <div id="out-dnd" class="output-console"><span class="comment">Waiting for input...</span></div>
+    </section>
 
     <!-- SYSTEM 2: DF & P -->
-    <div class="system-card">
-        <h2>The DF-System (Primes)</h2>
-        <div class="rules-box">
-            <strong>Rules:</strong><br>
-            1. If <code>--(2) DND z</code>, then <code>z DF --(2)</code>.<br>
-            2. If <code>z DF x</code> AND <code>x- DND z</code>, then <code>z DF x-</code>.<br>
-            3. If <code>z DF z-</code>, then <code>P z</code> (Prime).
-        </div>
+    <section class="system-card" aria-labelledby="df-title">
+      <h2 id="df-title">The DF-System (Primes)</h2>
+      <div class="rules-box">
+        <strong>Rules:</strong><br>
+        1. If <code>--(2) DND z</code>, then <code>z DF --(2)</code>.<br>
+        2. If <code>z DF x</code> AND <code>x- DND z</code>, then <code>z DF x-</code>.<br>
+        3. If <code>z DF z-</code>, then <code>P z</code> (Prime).
+      </div>
 
-        <div class="input-row">
-            <div class="input-group">
-                <label>Number (z)</label>
-                <input type="number" id="df-z" value="5" min="2">
-                <span id="prev-df-z" class="dash-preview">-----(5)</span>
-            </div>
+      <div class="input-row">
+        <div class="input-group">
+          <label for="df-z">Number (z)</label>
+          <input type="number" id="df-z" value="5" min="2" />
+          <span id="prev-df-z" class="dash-preview">-----(5)</span>
         </div>
-        <div style="text-align: center; margin-bottom: 10px;">
-            <button id="btn-df">Generate Primality Proof</button>
-        </div>
+      </div>
 
-        <div id="out-df" class="output-console"><span class="comment">Waiting for input...</span></div>
-    </div>
+      <div class="center">
+        <button id="btn-df" type="button">Generate Primality Proof</button>
+      </div>
 
-    <!-- Footer placed inside the container -->
+      <div id="out-df" class="output-console"><span class="comment">Waiting for input...</span></div>
+    </section>
+
     <footer>
-        Enrique Acosta, 2026, with Gemini 3.
+      Enrique Acosta, 2026, with Gemini 3.
     </footer>
+  </main>
 
-</div>
+  <script>
+    // tiny selector helper
+    const $ = (sel) => document.querySelector(sel);
 
-<script>
     // --- UTILITIES ---
-
     function fmt(n) {
-        if (n <= 0) return "";
-        if (n > 50) return `[${n} dashes](${n})`; 
-        return "-".repeat(n) + `(${n})`;
+      if (n <= 0) return "";
+      if (n > 50) return `[${n} dashes](${n})`;
+      return "-".repeat(n) + `(${n})`;
     }
 
-    function log(element, message, type = "") {
-        const div = document.createElement('div');
-        div.className = "log-line " + type;
-        div.innerHTML = message;
-        element.appendChild(div);
-        element.scrollTop = element.scrollHeight;
+    function clearLog(el) {
+      el.innerHTML = "";
     }
 
-    function clearLog(element) {
-        element.innerHTML = "";
+    function log(el, message, type = "") {
+      const div = document.createElement("div");
+      div.className = `log-line ${type}`.trim();
+      div.innerHTML = message;
+      el.appendChild(div);
+      el.scrollTop = el.scrollHeight;
     }
+
+    // --- UI REFERENCES (one place) ---
+    const ui = {
+      dnd: {
+        x: $("#dnd-x"),
+        y: $("#dnd-y"),
+        prevX: $("#prev-dnd-x"),
+        prevY: $("#prev-dnd-y"),
+        out: $("#out-dnd"),
+        btn: $("#btn-dnd"),
+      },
+      df: {
+        z: $("#df-z"),
+        prevZ: $("#prev-df-z"),
+        out: $("#out-df"),
+        btn: $("#btn-df"),
+      },
+    };
 
     // --- LOGIC: DND SYSTEM ---
-
     function deriveDND() {
-        const xInput = document.getElementById('dnd-x');
-        const yInput = document.getElementById('dnd-y');
-        const outDiv = document.getElementById('out-dnd');
+      const xVal = parseInt(ui.dnd.x.value, 10);
+      const yVal = parseInt(ui.dnd.y.value, 10);
+      const outDiv = ui.dnd.out;
 
-        const xVal = parseInt(xInput.value);
-        const yVal = parseInt(yInput.value);
+      clearLog(outDiv);
 
-        clearLog(outDiv);
+      if (!xVal || !yVal || xVal < 1 || yVal < 1) {
+        log(outDiv, "Error: Please enter positive integers.", "error");
+        return;
+      }
 
-        if (!xVal || !yVal || xVal < 1 || yVal < 1) {
-            log(outDiv, "Error: Please enter positive integers.", "error");
-            return;
-        }
+      if (yVal % xVal === 0) {
+        log(outDiv, `FAILURE: ${fmt(xVal)} divides ${fmt(yVal)}.`, "error");
+        log(outDiv, `Since the remainder is 0, no "Does Not Divide" theorem exists.`, "comment");
+        return;
+      }
 
-        if (yVal % xVal === 0) {
-            log(outDiv, `FAILURE: ${fmt(xVal)} divides ${fmt(yVal)}.`, "error");
-            log(outDiv, `Since the remainder is 0, no "Does Not Divide" theorem exists.`, "comment");
-            return;
-        }
+      log(outDiv, "--- DND DERIVATION START ---", "comment");
 
-        log(outDiv, "--- DND DERIVATION START ---", "comment");
-        
-        const rVal = yVal % xVal;
-        const xStr = fmt(xVal);
-        const rStr = fmt(rVal);
+      const rVal = yVal % xVal;
+      const xStr = fmt(xVal);
+      const rStr = fmt(rVal);
 
-        log(outDiv, `1. Axiom:    ${xStr} <span class="operator">DND</span> ${rStr}`, "axiom");
-        log(outDiv, `   (Valid because remainder ${rVal} is smaller than divisor ${xVal})`, "comment");
+      log(outDiv, `1. Axiom:    ${xStr} <span class="operator">DND</span> ${rStr}`, "axiom");
+      log(outDiv, `   (Valid because remainder ${rVal} is smaller than divisor ${xVal})`, "comment");
 
-        let currentRight = rVal;
-        let stepCount = 1;
+      let currentRight = rVal;
+      let stepCount = 1;
 
-        while (currentRight < yVal) {
-            stepCount++;
-            let nextRight = currentRight + xVal;
-            if (nextRight > yVal) break; 
-            let nextRightStr = fmt(nextRight);
-            log(outDiv, `${stepCount}. Rule:     ${xStr} <span class="operator">DND</span> ${nextRightStr}`, "theorem");
-            log(outDiv, `   (From step ${stepCount-1} + adding ${xStr} to right side)`, "comment");
-            currentRight = nextRight;
-        }
+      while (currentRight < yVal) {
+        const nextRight = currentRight + xVal;
+        if (nextRight > yVal) break;
 
-        log(outDiv, "--- THEOREM PROVEN ---", "theorem");
+        stepCount++;
+        log(outDiv, `${stepCount}. Rule:     ${xStr} <span class="operator">DND</span> ${fmt(nextRight)}`, "theorem");
+        log(outDiv, `   (From step ${stepCount - 1} + adding ${xStr} to right side)`, "comment");
+        currentRight = nextRight;
+      }
+
+      log(outDiv, "--- THEOREM PROVEN ---", "theorem");
     }
 
     // --- LOGIC: DF / PRIME SYSTEM ---
-
     function derivePrime() {
-        const zInput = document.getElementById('df-z');
-        const outDiv = document.getElementById('out-df');
-        const zVal = parseInt(zInput.value);
-        const zStr = fmt(zVal);
+      const zVal = parseInt(ui.df.z.value, 10);
+      const outDiv = ui.df.out;
 
-        clearLog(outDiv);
+      clearLog(outDiv);
 
-        if (!zVal || zVal < 2) {
-            log(outDiv, "Error: Primes are defined for numbers >= 2.", "error");
-            return;
+      if (!zVal || zVal < 2) {
+        log(outDiv, "Error: Primes are defined for numbers >= 2.", "error");
+        return;
+      }
+
+      const zStr = fmt(zVal);
+
+      log(outDiv, `Target: Derive P ${zStr}`, "comment");
+      log(outDiv, "----------------------------------", "comment");
+
+      for (let i = 2; i < zVal; i++) {
+        if (zVal % i === 0) {
+          log(outDiv, `FAILURE: ${fmt(i)} divides ${zStr}.`, "error");
+          log(outDiv, `Cannot generate ${fmt(i)} DND ${zStr}.`, "error");
+          log(outDiv, `Chain broken. Not a theorem.`, "comment");
+          return;
         }
+      }
 
-        log(outDiv, `Target: Derive P ${zStr}`, "comment");
-        log(outDiv, "----------------------------------", "comment");
+      if (zVal === 2) {
+        log(outDiv, `1. Axiom:    --(2) <span class="operator">DND</span> -(1)`, "axiom");
+        log(outDiv, `2. Rule 1:   --(2) <span class="operator">DF</span> --(2)`, "theorem");
+        log(outDiv, `<br>RESULT: P --(2)`, "theorem");
+        return;
+      }
 
-        for (let i = 2; i < zVal; i++) {
-            if (zVal % i === 0) {
-                log(outDiv, `FAILURE: ${fmt(i)} divides ${zStr}.`, "error");
-                log(outDiv, `Cannot generate ${fmt(i)} DND ${zStr}.`, "error");
-                log(outDiv, `Chain broken. Not a theorem.`, "comment");
-                return;
-            }
-        }
+      log(outDiv, `[Step 1] Prove ${zStr} is free of divisor --(2)`, "comment");
 
-        if (zVal === 2) {
-            log(outDiv, `1. Axiom:    --(2) <span class="operator">DND</span> -(1)`, "axiom");
-            log(outDiv, `2. Rule 1:   --(2) <span class="operator">DF</span> --(2)`, "theorem");
-            log(outDiv, `<br>RESULT: P --(2)`, "theorem");
-            return;
-        }
+      const r2 = zVal % 2;
+      log(outDiv, `   Axiom:    --(2) <span class="operator">DND</span> ${fmt(r2)}`, "axiom");
+      log(outDiv, `   ... (steps omitted) ...`, "comment");
+      log(outDiv, `   Theorem:  --(2) <span class="operator">DND</span> ${zStr}`, "theorem");
+      log(outDiv, `   Apply Rule 1 (If 2 DND z, then z DF 2):`, "comment");
+      log(outDiv, `   Theorem:  ${zStr} <span class="operator">DF</span> --(2)`, "theorem");
 
-        log(outDiv, `[Step 1] Prove ${zStr} is free of divisor --(2)`, "comment");
-        
-        const r2 = zVal % 2;
-        log(outDiv, `   Axiom:    --(2) <span class="operator">DND</span> ${fmt(r2)}`, "axiom");
-        log(outDiv, `   ... (steps omitted) ...`, "comment");
-        log(outDiv, `   Theorem:  --(2) <span class="operator">DND</span> ${zStr}`, "theorem");
-        log(outDiv, `   Apply Rule 1 (If 2 DND z, then z DF 2):`, "comment");
-        log(outDiv, `   Theorem:  ${zStr} <span class="operator">DF</span> --(2)`, "theorem");
+      for (let d = 2; d < zVal - 1; d++) {
+        const nextD = d + 1;
 
-        for (let d = 2; d < zVal - 1; d++) {
-            let nextD = d + 1;
-            let nextDStr = fmt(nextD);
-            let currentDStr = fmt(d);
+        log(outDiv, `<br>[Step ${d}->${nextD}] Extend DF from ${d} to ${nextD}`, "comment");
+        log(outDiv, `   Requirement: Prove ${fmt(nextD)} <span class="operator">DND</span> ${zStr}`, "comment");
 
-            log(outDiv, `<br>[Step ${d}->${nextD}] Extend DF from ${d} to ${nextD}`, "comment");
-            log(outDiv, `   Requirement: Prove ${nextDStr} <span class="operator">DND</span> ${zStr}`, "comment");
-            
-            let rNext = zVal % nextD;
-            log(outDiv, `   (Axiom: ${nextDStr} <span class="operator">DND</span> ${fmt(rNext)})`, "axiom");
-            log(outDiv, `   (Theorem: ${nextDStr} <span class="operator">DND</span> ${zStr})`, "theorem");
+        const rNext = zVal % nextD;
+        log(outDiv, `   (Axiom: ${fmt(nextD)} <span class="operator">DND</span> ${fmt(rNext)})`, "axiom");
+        log(outDiv, `   (Theorem: ${fmt(nextD)} <span class="operator">DND</span> ${zStr})`, "theorem");
 
-            log(outDiv, `   Apply Rule 2 (Have DF ${d}, Have DND ${nextD}):`, "comment");
-            log(outDiv, `   Result:   ${zStr} <span class="operator">DF</span> ${nextDStr}`, "theorem");
-        }
+        log(outDiv, `   Apply Rule 2 (Have DF ${d}, Have DND ${nextD}):`, "comment");
+        log(outDiv, `   Result:   ${zStr} <span class="operator">DF</span> ${fmt(nextD)}`, "theorem");
+      }
 
-        let penult = zVal - 1;
-        log(outDiv, "<br>--- FINAL STEP ---", "comment");
-        log(outDiv, `We have proven: ${zStr} <span class="operator">DF</span> ${fmt(penult)}`, "theorem");
-        log(outDiv, `Apply Prime Rule (If z DF z-1, then P z):`, "comment");
-        log(outDiv, `P ${zStr}`, "theorem");
+      const penult = zVal - 1;
+      log(outDiv, "<br>--- FINAL STEP ---", "comment");
+      log(outDiv, `We have proven: ${zStr} <span class="operator">DF</span> ${fmt(penult)}`, "theorem");
+      log(outDiv, `Apply Prime Rule (If z DF z-1, then P z):`, "comment");
+      log(outDiv, `P ${zStr}`, "theorem");
     }
 
-    document.getElementById('btn-dnd').addEventListener('click', deriveDND);
-    document.getElementById('btn-df').addEventListener('click', derivePrime);
-
-    function updatePreview(inputId, previewId) {
-        const input = document.getElementById(inputId);
-        const preview = document.getElementById(previewId);
-        input.addEventListener('input', () => {
-            const val = parseInt(input.value);
-            if (!isNaN(val) && val > 0) {
-                preview.innerText = fmt(val);
-            } else {
-                preview.innerText = "";
-            }
-        });
+    // --- PREVIEWS ---
+    function wirePreview(inputEl, previewEl) {
+      const update = () => {
+        const val = parseInt(inputEl.value, 10);
+        previewEl.innerText = !isNaN(val) && val > 0 ? fmt(val) : "";
+      };
+      inputEl.addEventListener("input", update);
+      update(); // ensure correct on load
     }
 
-    updatePreview('dnd-x', 'prev-dnd-x');
-    updatePreview('dnd-y', 'prev-dnd-y');
-    updatePreview('df-z', 'prev-df-z');
+    // --- EVENTS ---
+    ui.dnd.btn.addEventListener("click", deriveDND);
+    ui.df.btn.addEventListener("click", derivePrime);
 
-</script>
-
+    wirePreview(ui.dnd.x, ui.dnd.prevX);
+    wirePreview(ui.dnd.y, ui.dnd.prevY);
+    wirePreview(ui.df.z, ui.df.prevZ);
+  </script>
 </body>
 </html>
