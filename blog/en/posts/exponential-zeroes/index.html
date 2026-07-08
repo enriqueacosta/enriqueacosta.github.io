@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -123,7 +123,7 @@
   
   <div>
   <p>Here is a cool animation I made in 2012.</p>
-<figure><img src="Zeros-Exponential-Animation.gif" width="400px"/>
+<figure><img src="Zeros-Exponential-Animation.gif" width="400px">
 </figure>
 
 <p>The animation shows the complex zeros of the Taylor polynomials of the exponential function $e^z$. In this post I will explain what this means, and why it is interesting. I will also show the code in 
@@ -133,14 +133,12 @@
 <p>Complex numbers are numbers of the form
 $$2+3i,\quad\text{or}\quad -1+\sqrt{2}i,\quad\text{or}\quad 1-5i$$
 where $i=\sqrt{-1}$. One way to think about complex numbers is to think of them as &ldquo;2D numbers&rdquo;. The piece without the $i$ tells you the horizontal coordinate (real part) and the piece with the $i$ tells you the vertical coordinate (imaginary part):</p>
-<!-- raw HTML omitted -->
 <figure><img src="complexExpZeros-ComplexNumbers.svg"
-         alt="Examples of complex numbers." width="600px"/><figcaption>
-            <p>Examples of complex numbers.</p>
-        </figcaption>
+    alt="Examples of complex numbers." width="600px"><figcaption>
+      <p>Examples of complex numbers.</p>
+    </figcaption>
 </figure>
 
-<!-- raw HTML omitted -->
 
 
 
@@ -148,11 +146,8 @@ where $i=\sqrt{-1}$. One way to think about complex numbers is to think of them 
 
 <p>(Figure created with TikZ. Source code <a href="https://enriqueacosta.github.io/blog/en/tikz-gallery/complexexpzeros-complexnumbers/">here</a>.)</p>
 
-<!-- raw HTML omitted -->
 <h2 id="the-complex-exponential-function">The complex exponential function</h2>
 <p>The complex exponential function $e^z$ is the extension of the exponential function $e^x$, where one allows the input to be a complex number.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>For example, with some rounding,
 $$e^{2-3i}=-7.315-1.0427i.$$</p>
 <p>Another example is
@@ -167,12 +162,9 @@ Here:</p>
 <ul>
 <li>The $!$ means multiplying by all smaller numbers. For example, $4!=4\times3\times2\times 1$.</li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <ul>
 <li>The infinite sum means adding more and more terms to get closer to a value. That value is the sum. Sometimes it works, like for $e^z$ independent of what the value of $z$ is, and sometimes it does not, like for $1+2+3+4+\ldots$.</li>
 </ul>
-<!-- raw HTML omitted -->
 <p>For example, for $e^z$ when $z=2$, we add more and more terms to get closer and closer to
 $$e^2=7.3890561\ldots,$$
 like this:
@@ -189,32 +181,25 @@ $$
 1+2+\frac{2^2}{2!}+\frac{2^3}{3!}+\frac{2^4}{4!}+\frac{2^5}{5!} +\ldots+ \frac{2^{20}}{20!} &amp; = 7.38905609893017&hellip;
 \end{aligned}
 $$</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>For more details about $e^z$, you can look at the Wikipedia article on 
 <a href="https://en.wikipedia.org/wiki/Euler%27s_formula#Definitions_of_complex_exponentiation" target="_blank" rel="noopener">Euler&rsquo;s formula</a>.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="the-taylor-polynomials-of-ez-and-their-zeros">The Taylor polynomials of $e^z$ and their zeros</h2>
 <p>The $n$-th order Taylor polynomial of $e^z$ is given by only summing up to the $z^n$ term in the Taylor series:</p>
 <p>$$p_n(z) = 1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\ldots\frac{z^n}{n!}.$$</p>
 <p>By what I explained above, the polynomials $p_n(z)$ become better and better approximations of $e^z$ as $n$ increases.</p>
 <p>The polynomial $p_n(z)$ has $n$ complex zeros, which are the solutions of the equation $p_n(z) = 0$. (Any polynomial of degree $n$ has exactly $n$ complex zeros. This fact is so important that it is called &ldquo;the Fundamental Theorem of Algebra&rdquo;.)</p>
 <p>Here are the zeros for $n=3$ (as expected, we see 3 points &ndash; the 3 complex numbers which satisfy $p_3(z)=0$)</p>
-<figure><img src="complexExpZeros-n03-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n03-unscaled.png" width="450px">
 </figure>
 
-<!-- raw HTML omitted -->
 <p>And here for $n=5$ (as expected, we see 5 points)
-<figure><img src="complexExpZeros-n05-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n05-unscaled.png" width="450px">
 </figure>
 </p>
-<!-- raw HTML omitted -->
 <p>And here for $n=20$!
-<figure><img src="complexExpZeros-n20-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n20-unscaled.png" width="450px">
 </figure>
 </p>
-<!-- raw HTML omitted -->
 <p>Interesting! They seem so organized!</p>
 <h3 id="how-the-above-figures-were-made">How the above figures were made</h3>
 <p>Here is the Sage code that produces one of these figures for a specific value of $n$.</p>
@@ -249,10 +234,9 @@ $$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>myPlot<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#34;myFilename.png&#34;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
 </span></span></code></pre></div><h2 id="the-animation">The animation</h2>
 <p>Here is an animation of the zeros of $p_n(z)$ as $n$ increases.</p>
-<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px"/>
+<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px">
 </figure>
 
-<!-- raw HTML omitted -->
 <p>We made it! This is the animation from the beginning of the post, but this time created with Sage (and at a higher resolution).</p>
 <p>Why the animation is interesting: $e^z$ has no zeros in the complex plane, but its Taylor polynomials have $n$ zeros.</p>
 <ul>
@@ -260,11 +244,6 @@ $$</p>
 <li>What happens to the zeros?</li>
 </ul>
 <p>The animation shows how the zeros escape to infinity in a very orderly manner as $n$ grows.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h3 id="producing-the-animation-frames-with-sage">Producing the animation frames with Sage</h3>
 <p>The following sage code creates images <code>sagePngs/frame001.png</code>, <code>sagePngs/frame002.png</code>, up to <code>sagePngs/frame050.png</code>, each one showing the zeros of the corresponding Taylor polynomial. These will be the frames of the animation.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sage.plot.colors <span style="color:#f92672">import</span> blue
@@ -300,22 +279,20 @@ $$</p>
 <a href="https://imagemagick.org/" target="_blank" rel="noopener">ImageMagick</a> from the terminal using Homebrew by executing the command:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install imagemagick
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Once you have Image Magick, it is very simple to create the animation. Just run in the terminal:</p>
+</span></span></code></pre></div><p>Once you have Image Magick, it is very simple to create the animation. Just run in the terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert frame*.png movie.gif
 </span></span></code></pre></div><p>To control the speed, you need to add <code>-delay X</code> before the input images and <code>-loop 0</code> before the output gif to tell it how many times to loop (0 means to never stop looping).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert -delay <span style="color:#ae81ff">20</span> frame*.png -loop <span style="color:#ae81ff">0</span> movie.gif
 </span></span></code></pre></div><h2 id="digging-deeper---szegő-curve">Digging deeper - Szegő curve</h2>
 <p>There are plenty of interesting things to consider regarding the animation. Let&rsquo;s look at the animation once more:</p>
-<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px"/>
+<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px">
 </figure>
 
 <p>The zeros seem to form a &ldquo;wave&rdquo; that grows away from the origin. Can we say something about its shape?</p>
 <p>This question was answered by Gábor Szegő in 1924, no computers involved!</p>
 <p>Szegő discovered that the right way to stop the zeros from trailing off to infinity is to scale them down by a factor of $n$. When one does this, the zeros converge to a very specific &ldquo;tear-shaped&rdquo; curve.</p>
 <p>Here is the animation with the scaling, with $n$ going from $1$ to $60$. Past $n=60$, Sage has trouble finding all the zeros numerically. So much hidden order!</p>
-<figure><img src="complexExpZeros-movie-scaled.gif" width="100%"/>
+<figure><img src="complexExpZeros-movie-scaled.gif" width="100%">
 </figure>
 
 <p>Szegő even found a formula for the limiting curve. It is
@@ -323,8 +300,7 @@ $$
 \left|ze^{1-z}\right|=1,\quad\text{for } |z|\leq 1,
 $$</p>
 <p>and here is it&rsquo;s graph (the cartesian equation is $x^{2}+y^{2}=e^{2(x-1)}$)</p>
-<!-- raw HTML omitted -->
-<figure><img src="complexExpZeros-SzegoCurve.svg" width="100%"/>
+<figure><img src="complexExpZeros-SzegoCurve.svg" width="100%">
 </figure>
 
 <h3 id="sage-code-for-the-scaled-version-to-see-the-szegő-curve">Sage code for the scaled version to see the Szegő curve</h3>
@@ -371,7 +347,7 @@ $$</p>
 <h2 id="some-other-cool-images">Some other cool images</h2>
 <p>Once one has working code to generate a mathematical image, making all sorts of interesting variations/extensions is easy!</p>
 <p>Here is the plot of all the zeros for $n=1$, $n=2$, &hellip;, $n=40$ at the same time with some cool coloring.</p>
-<figure><img src="complexExpZeros-allPoints.png" width="100%"/>
+<figure><img src="complexExpZeros-allPoints.png" width="100%">
 </figure>
 
 <p>This is the code that produces that image:</p>
@@ -394,7 +370,7 @@ $$</p>
 </span></span><span style="display:flex;"><span>    )
 </span></span><span style="display:flex;"><span>show(myPlot)
 </span></span></code></pre></div><p>And here it is with rainbow colors (each color corresponds to one $n$)</p>
-<p><figure><img src="complexExpZeros-allPoints-rainbow.png" width="100%"/>
+<p><figure><img src="complexExpZeros-allPoints-rainbow.png" width="100%">
 </figure>
 
 Sage code:</p>
@@ -433,7 +409,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

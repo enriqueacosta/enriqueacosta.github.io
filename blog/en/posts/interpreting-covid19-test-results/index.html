@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -130,8 +130,6 @@
 <p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the details or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
 <p>I finally found an 
 <a href="https://www.ams.org/publicoutreach/feature-column/fc-2020-09" target="_blank" rel="noopener">AMS Feature Column</a> by Bill Casselman that got me a bit closer to understanding, and in this post I give a very graphical explanation using probability trees, provide some extra details, and show some nice interactive plots that I made to play around with the ideas in the column.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>Before going any further, I need to establish some terminology.</p>
 <h3 id="some-terminology">Some terminology</h3>
 <ul>
@@ -140,7 +138,6 @@
 <li>The two remaining outcomes are when the test tells the truth. These are the <em>true positive</em> and <em>true negative</em>.</li>
 </ul>
 <p>Which of these four possible outcomes of a Covid-19 test is more important depends on who you are and what you are worrying about. From a societal perspective, the false negatives are probably the most serious ones: they make people think they are not infected when they in fact are, and so increase the chances of them spreading the disease.</p>
-<!-- raw HTML omitted -->
 <h3 id="dont-believe-a-test-saying-guaranteed-to-have-less-than-1-false-negatives">Don&rsquo;t believe a test saying &ldquo;Guaranteed to have less than 1% false negatives!&rdquo;</h3>
 <p>A natural assumption is to believe that the percentage of each of these cases (false negatives, true positives, etc.) depends on the quality of the test:</p>
 <ul>
@@ -153,14 +150,12 @@
 <p>I will try my best to be self contained in what follows so there is no need to read the column before going on. Hopefully the column will make even more sense after reading this!</p>
 <h3 id="before-moving-on-here-are-the-cool-applets-i-made">Before moving on, here are the cool applets I made!</h3>
 <p>The applet below gives the chances that a test result is actually true (true negative, or true positive).</p>
-<!-- raw HTML omitted -->
 <div>
     
     <iframe src="https://www.desmos.com/calculator/0hqs7ihwqm" width="100%" height="500" style="border: 1px solid #ccc" frameborder="0" allowfullscreen></iframe>
     <p> Follow this <a href="https://www.desmos.com/calculator/0hqs7ihwqm" target="_blank">link</a> if the interactive does not load.</p>
     
 </div>
-<!-- raw HTML omitted -->
 <h4 id="how-it-works-and-what-it-says">How it works, and what it says:</h4>
 <ul>
 <li>Move the point $p$ (on the horizontal axis) to specify the &ldquo;amount of covid-19 around you&rdquo;, as a percentage (which we are identifying here as the &ldquo;percentage of infected population&rdquo;, but later we will try to make this more precise).</li>
@@ -181,7 +176,6 @@
     <p> Follow this <a href="https://www.desmos.com/calculator/plddkxiq0r" target="_blank">link</a> if the interactive does not load.</p>
     
 </div>
-<!-- raw HTML omitted -->
 <h4 id="here-they-are-together-all-true-and-false-possible-outcomes-in-all-their-messy-glory">Here they are together (all true and false possible outcomes), in all their messy glory:</h4>
 <div>
     
@@ -189,8 +183,6 @@
     <p> Follow this <a href="https://www.desmos.com/calculator/4i3v7br7mm" target="_blank">link</a> if the interactive does not load.</p>
     
 </div>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="how-are-these-applets-generated">How are these applets generated?</h2>
 <p>The short answer is that I created them using 
 <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">desmos</a> by building on what Bill Casselman explains in his 
@@ -199,7 +191,6 @@
 <p>Probabilities multiply, and it is often useful to visualize this in trees.</p>
 <p>Here is an example:
 Say I take a card from a deck of cards, and then I take a second one. What is the probability that I grab a heart and then another heart? To answer this it helps thinking about the two steps separately.</p>
-<!-- raw HTML omitted -->
 <p>There are 4 possible outcomes in total:</p>
 <ul>
 <li>heart then heart</li>
@@ -208,7 +199,7 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <li>not heart and then not heart</li>
 </ul>
 <p>These four outcomes show up at the far right in the tree-diagram below:
-<figure><img src="ProbabilityTreeCards.png" width="700em"/>
+<figure><img src="ProbabilityTreeCards.png" width="700em">
 </figure>
 </p>
 <p>So, what is the chance for each outcome? The nice thing about the tree is that we can separate thinking about each step separately, and then multiply.</p>
@@ -218,18 +209,18 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <li>The probability that the first one is <em>not</em> a heart is $39/52=3/4$ (all the other cards). So, there is a $75\%$ chance of not grabbing a heart.</li>
 </ul>
 <p>We put these probabilities in the tree:
-<figure><img src="ProbabilityTreeCardsFirstDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCardsFirstDetails.png" width="700em">
 </figure>
 </p>
 <p>For the second card the chances are not the same since there are less cards, and the number of hearts varies!</p>
-<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em>. <!-- raw HTML omitted --></p>
+<p>For example, if the first card was a heart, then there are only 12 hearts in the remaining 51 cards. So, if the first card was a heart, the chances of grabbing a second heart are $12/51$, or $23.53\%$ (as expected, lower than $25\%$, since one heart was taken out).  This second probability is what is known as a <em>conditional probability</em>. </p>
 <p>We put this new information in the tree:
-<figure><img src="ProbabilityTreeCardsSecondDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCardsSecondDetails.png" width="700em">
 </figure>
 </p>
 <p>What if the first card was not a heart? Well, then all the 13 hearts are present in the renaming 51 hearts, so there is a $13/51=25.49\%$ chance that the second card is a heart if the first one was not a heart (as expected, higher than $25\%$, since the there are the same amount of hearts but less cards).</p>
 <p>We put this new information in the tree too:
-<figure><img src="ProbabilityTreeCardsThirdDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCardsThirdDetails.png" width="700em">
 </figure>
 </p>
 <p>The thick blue paths above correspond to the two ways that one can obtain a heart in the second draw:</p>
@@ -238,13 +229,11 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <li>1st is not heart and 2nd is heart (the other path)</li>
 </ul>
 <p>Similar reasoning allows one to complete the whole tree. This is what one gets:
-<figure><img src="ProbabilityTreeCardsFourthDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCardsFourthDetails.png" width="700em">
 </figure>
 </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>Now, we can put them together and multiply! The percentages on the right are the probability of each outcome:</p>
-<figure><img src="ProbabilityTreeDetailsCards.png" width="700em"/>
+<figure><img src="ProbabilityTreeDetailsCards.png" width="700em">
 </figure>
 
 <p>What this says:</p>
@@ -255,21 +244,9 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 </ul>
 <p>So, there is a $5.88\%$ chance that one grabs two hearts. Much lower than the $55.88\%$ chance of not grabbing any hearts.</p>
 <p>Note that all the percentages on the right add up to $100\%$, as they should since they cover all the possible outcomes!</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h3 id="back-to-covid-19">Back to Covid-19</h3>
 <p>This is the tree related to Covid-19 testing:
-<figure><img src="ProbabilityTreeCovid.png" width="700em"/>
+<figure><img src="ProbabilityTreeCovid.png" width="700em">
 </figure>
 </p>
 <h4 id="what-probabilities-do-we-know-in-this-tree">What probabilities do we know in this tree?</h4>
@@ -279,25 +256,24 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <li>Test specificity ($b\%$): Chances that a test will correctly identify a non infected person (i.e. say negative if the person is not infected).</li>
 </ul>
 <p>These are what one could call &ldquo;quality&rdquo; parameters of the test. The important fact is that they do <em>not</em> depend on the population one is testing. They also happen to be the numbers in our tree!</p>
-<figure><img src="ProbabilityTreeCovidFirstDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCovidFirstDetails.png" width="700em">
 </figure>
 
 <p>If we know these, then we know the other two chances in this same &ldquo;branch level&rdquo;, since they are complementary events:
-<figure><img src="ProbabilityTreeCovidSecondDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCovidSecondDetails.png" width="700em">
 </figure>
 </p>
 <h4 id="what-about-the-first-two-branches-of-the-tree">What about the first two branches of the tree?</h4>
 <p>Well, the chances of being infected change according to the proportion of people sick at the current moment. If $p\%$ of the people are infected, then we can take this as the chance of being infected (more on this later). Similarly, the chance of not being infected is $(100-p)\%$ (all the other people).</p>
 <p>So, our tree with the chances of each step is now complete!</p>
-<figure><img src="ProbabilityTreeCovidThirdDetails.png" width="700em"/>
+<figure><img src="ProbabilityTreeCovidThirdDetails.png" width="700em">
 </figure>
 
 <p>We can now multiply the chances to calculate the probability of each outcome. Note that everything depends on two things: the parameters of the test ($a\%$ and $b\%$), and on the current proportion $p\%$ of the  population that is infected (which is independent of the test).</p>
-<figure><img src="ProbabilityTreeCovidDetails.png"/>
+<figure><img src="ProbabilityTreeCovidDetails.png">
 </figure>
 
 <h3 id="so-where-do-the-crazy-curves-in-the-applets-above-come-from">So, where do the crazy curves in the applets above come from?</h3>
-<!-- raw HTML omitted -->
 <p>The natural sort of questions one asks oneself after getting a Covid-19 tests are of the form:</p>
 <ol>
 <li>&ldquo;I got a negative test result, what are the chances I am in reality infected?&rdquo;</li>
@@ -309,7 +285,7 @@ Say I take a card from a deck of cards, and then I take a second one. What is th
 <h4 id="this-is-how-it-works-example-with-question-1">This is how it works: example with question (1).</h4>
 <p>Say, we want to answer the question (1): &ldquo;I got a negative test result, what are the chances I am really infected?&rdquo;</p>
 <p>In question (1) the test result came out negative. These are all the paths in the tree with a negative test result:
-<figure><img src="ProbabilityTreeCovidDetailsConditional.png"/>
+<figure><img src="ProbabilityTreeCovidDetailsConditional.png">
 </figure>
 </p>
 <p>Looking at this tree, the question we want to answer is: out of those two possible outcomes giving a negative test result, what are the chances that I am really on the top path (the one corresponding to being truly infected)? Well, you just divide the chances:</p>
@@ -349,11 +325,11 @@ $$
 This increases the chances&hellip;.</p>
 <p>And then again, since $p$ varies with time and depends on my surroundings, maybe instead of repeating this computation over and over again, one should just plot the chances as a function of $p$!</p>
 <p>Here is the plot, for a test with $a\%=95\%$, and specificity $b\%=85\%$:</p>
-<figure><img src="CovidFalseNegative.png" width="500em"/>
+<figure><img src="CovidFalseNegative.png" width="500em">
 </figure>
 
 <p>You can see in the figure the chances for $p=30$ and $p=80$ we computed above. Just follow what the curve says! See below.</p>
-<figure><img src="CovidFalseNegativeTwoPoints.png" width="500em"/>
+<figure><img src="CovidFalseNegativeTwoPoints.png" width="500em">
 </figure>
 
 <p>As you may be starting to see, the answer to the simple questions one makes about a Covid-19 test result are not that simple to answer!</p>
@@ -367,7 +343,6 @@ This increases the chances&hellip;.</p>
     <p> Follow this <a href="https://www.desmos.com/calculator/yjcszjppgd" target="_blank">link</a> if the interactive does not load.</p>
     
 </div></p>
-<!-- raw HTML omitted -->
 <p>You can also generate plots for other values of $a$ and $b$ using the TikZ+pgfplots 
 <a href="CovidFalseNegative.tex">souce file</a> I created to make the figures in this post. You just need to change the numbers in the <code>\pgfmathsetmacro{\SensA}{0.95}</code> and <code>\pgfmathsetmacro{\SpecB}{0.85}</code> (they need to be given in decimal form, not percentages) and run pdflatex on them.</p>
 <h2 id="probability-of-being-infected-p-pre-test-probability">Probability of being infected $p$: pre-test probability</h2>
@@ -421,7 +396,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

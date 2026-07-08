@@ -4,29 +4,23 @@
     <title>Curves on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
     <description>Recent content in Curves on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/curves/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Sep 2022 14:19:56 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/tags/curves/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</guid>
-      <description>The animation above is a gif file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.
-There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:
-LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;gnuplotTest.gif&#34; width=&#34;500px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The animation above is a &lt;code&gt;gif&lt;/code&gt; file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.&lt;/p&gt;&#xA;&lt;p&gt;There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).&lt;/li&gt;&#xA;&lt;li&gt;Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly &lt;code&gt;gif&lt;/code&gt; format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Given these complications, one may very well wonder why I kept trying to do it. My answer to that is that TikZ is fantastic in several ways:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tikz 3D - Twisted Cubic</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</guid>
-      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
-In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
-As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</description>
+      <description>&lt;p&gt;As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the &lt;em&gt;Twisted Cubic&lt;/em&gt; is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;In affine space, it is given by the image of&#xA;$$t\mapsto(t,t^2,t^3).$$&lt;/p&gt;&#xA;&lt;p&gt;As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

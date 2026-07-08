@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -117,9 +117,8 @@
   <p>TikZ is a programing language for creating images based on 
 <a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One writes TikZ &ldquo;programing code&rdquo; in a 
 <a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &ldquo;drawing instructions for a human&rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates. When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.</p>
-<p>Developing clear, human-readable, and flexible TikZ code is art I cherish and practice. <!-- raw HTML omitted --> I really enjoy looking at well thought out, readable code, specially when displayed next to the image it creates (be it my code, or someone else&rsquo;s).</p>
+<p>Developing clear, human-readable, and flexible TikZ code is art I cherish and practice.  I really enjoy looking at well thought out, readable code, specially when displayed next to the image it creates (be it my code, or someone else&rsquo;s).</p>
 <p>I have wanted to create a system in this blog to display TikZ code for figures alongside the actual figures themselves, but had been holding off because I wanted an efficient setup that did not involve manually creating separate pages for each figure. Duplicating content goes against my belief in avoiding unnecessary repetition, which makes maintaining the content much more difficult, as any changes have to be replicated multiple times.</p>
-<!-- raw HTML omitted -->
 <p>Well, I finally figured out a way to do this! See the new 
 <a href="tikz-gallery/">Tikz-gallery</a> in the sidebar of this blog. It is automatically generated from the source image files. Each gallery entry also includes a list of the blog posts where it appears, all generated automatically.</p>
 <p>I explain the setup for this automated gallery in detail in this blog post. You can read more about how I have set up this blog in these these 
@@ -127,7 +126,7 @@
 <h2 id="how-the-system-works-right-now">How the system works right now</h2>
 <p>Here is an example to illustrate how the automated Tikz gallery works.</p>
 <p>Below is a pretty Tikz image I made in 2020 (it is a schematic figure of the projective space $\mathbb{P}^3$, but that is the content of another future post):</p>
-<figure><img src="3DProyectiveCoords.png"/>
+<figure><img src="3DProyectiveCoords.png">
 </figure>
 
 <p>To be able to include this image in this post, I already have the following files:</p>
@@ -210,7 +209,7 @@
 └── tikz-gallery
     └── single.html   &lt;-- Template file here
 </code></pre><p>This is the content of the <code>single.html</code> template file. I explain below what some key pieces in this template file do.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$source</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Params.source</span> <span style="color:#75715e">}}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">$sourceFile</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">print</span> <span style="color:#a6e22e">$source</span> <span style="color:#e6db74">&#34;.tex&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
@@ -271,34 +270,34 @@ For example, if the image we are adding to the gallery is <code>content/tikz-gal
 </span></span><span style="display:flex;"><span>---</span></span></code></pre></div>
 then those first lines in the template generate the variables:</p>
 <table>
-<thead>
-<tr>
-<th>variable</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$source</td>
-<td>&ldquo;3DProyectiveCoords&rdquo;</td>
-</tr>
-<tr>
-<td>$sourceFile</td>
-<td>&ldquo;3DProyectiveCoords.tex&rdquo;</td>
-</tr>
-<tr>
-<td>$sourceFileWithPath</td>
-<td>&ldquo;static/3DProyectiveCoords.tex&rdquo;</td>
-</tr>
-<tr>
-<td>$imageFile</td>
-<td>&ldquo;3DProyectiveCoords.png&rdquo;</td>
-</tr>
-<tr>
-<td>$pdfFile</td>
-<td>&ldquo;3DProyectiveCoords.pdf&rdquo;</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>variable</th>
+          <th>value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$source</td>
+          <td>&ldquo;3DProyectiveCoords&rdquo;</td>
+      </tr>
+      <tr>
+          <td>$sourceFile</td>
+          <td>&ldquo;3DProyectiveCoords.tex&rdquo;</td>
+      </tr>
+      <tr>
+          <td>$sourceFileWithPath</td>
+          <td>&ldquo;static/3DProyectiveCoords.tex&rdquo;</td>
+      </tr>
+      <tr>
+          <td>$imageFile</td>
+          <td>&ldquo;3DProyectiveCoords.png&rdquo;</td>
+      </tr>
+      <tr>
+          <td>$pdfFile</td>
+          <td>&ldquo;3DProyectiveCoords.pdf&rdquo;</td>
+      </tr>
+  </tbody>
 </table>
 <p>With those filenames now stored in variables, the whole page for the image can be built easily and with very readable code.</p>
 <h4 id="inserting-the-png-image">Inserting the png image</h4>
@@ -344,7 +343,7 @@ then those first lines in the template generate the variables:</p>
     └── single.html   
 </code></pre><p>Since this <code>list.html</code> template is inside the <code>layouts/tikz-gallery</code> folder, it works as a template to list the content placed in <code>content/tikz-gallery</code> (a manifestation of the clever design of Hugo: the folder and file organization corresponds to functionality of the website).</p>
 <p>Here is the <code>list.html</code> template (is is simple compared to the <code>single.html</code> template):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">define</span> <span style="color:#e6db74">&#34;main&#34;</span> <span style="color:#75715e">-}}</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt; <span style="color:#75715e">{{</span> <span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;tikz-gallery-list-title&#34;</span> <span style="color:#75715e">}}</span> &lt;/<span style="color:#f92672">h1</span>&gt; 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tikz-gallery&#34;</span>&gt;
@@ -368,8 +367,6 @@ then those first lines in the template generate the variables:</p>
 <h2 id="more-on-creating-this-blog">More on Creating This Blog</h2>
 <p>See other posts under the 
 <a href="https://enriqueacosta.github.io/blog/en/tags/blog-setup/">Blog setup</a> tag.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 
   </div>
 
@@ -386,7 +383,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

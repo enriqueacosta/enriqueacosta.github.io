@@ -4,17 +4,16 @@
     <title>Tikz on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/categories/tikz/</link>
     <description>Recent content in Tikz on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/categories/tikz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</link>
       <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</guid>
-      <description>En esta entrada de blog explico cómo diseñé un sistema con TikZ para generar un tipo de diagramas matemáticos de manera eficiente y fácil de mantener. TikZ un lenguaje de programación para crear diagramas matemáticos mediante código. El sistema es una plantilla para construir rectas numéricas dobles, tipo de diagrama muy utilizado en recursos educativos de matemáticas modernos para apoyar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).
-El objetivo de esta entrada es mostrar cómo estas rectas numéricas dobles se pueden generar &amp;ldquo;automáticamente&amp;rdquo;, usando código de programación breve y flexible, que produce diagramas visualmente consistentes y permite centrar la atención en las ideas matemáticas.</description>
+      <description>&lt;p&gt;En esta entrada de blog explico cómo diseñé un sistema con &lt;strong&gt;TikZ&lt;/strong&gt; para generar un tipo de diagramas matemáticos de manera eficiente y fácil de mantener. TikZ un lenguaje de programación para crear diagramas matemáticos mediante código. El sistema es una plantilla para construir &lt;strong&gt;rectas numéricas dobles&lt;/strong&gt;, tipo de diagrama muy utilizado en recursos educativos de matemáticas modernos para apoyar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).&lt;/p&gt;&#xA;&lt;p&gt;El objetivo de esta entrada es mostrar cómo estas rectas numéricas dobles se pueden generar &amp;ldquo;automáticamente&amp;rdquo;, usando código de programación breve y flexible, que produce diagramas visualmente consistentes y permite centrar la atención en las ideas matemáticas. Una estructura visual coherente facilita el aprendizaje y el razonamiento matemático.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

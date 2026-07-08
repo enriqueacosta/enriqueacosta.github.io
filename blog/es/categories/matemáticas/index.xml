@@ -4,112 +4,79 @@
     <title>Matemáticas on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/</link>
     <description>Recent content in Matemáticas on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/categories/matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>La ley de Zipf para las ciudades de Colombia en 2025</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/</link>
       <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/zipfcolombia2025/</guid>
-      <description>La ley de Zipf dice que el tamaño de las ciudades en una región sigue, a menudo sorprendentemente bien, una ley de potencias sencilla: $$ P(r) = \frac{C}{r^{\alpha}} $$ En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenadas de mayor a menor población), y $C$ y $\alpha$ son constantes que dependen de la región.
-Lo que esto nos dice es que la población de la ciudad más grande (puesto $r=1$) es aproximadamente $P(1)=C/1^\alpha=C$, la población de la segunda ciudad más grande (puesto $r=2$) es $P(2)=C/2^\alpha$, la de la tercera es $P(3)=C/3^\alpha$, y así sucesivamente.</description>
+      <description>&lt;p&gt;La ley de Zipf dice que el tamaño de las ciudades en una región sigue, a menudo sorprendentemente bien, una ley de potencias sencilla:&#xA;$$&#xA;P(r) = \frac{C}{r^{\alpha}}&#xA;$$&#xA;En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenadas de mayor a menor población), y $C$ y $\alpha$ son constantes que dependen de la región.&lt;/p&gt;&#xA;&lt;p&gt;Lo que esto nos dice es que la población de la ciudad más grande (puesto $r=1$) es aproximadamente $P(1)=C/1^\alpha=C$, la población de la segunda ciudad más grande (puesto $r=2$) es $P(2)=C/2^\alpha$, la de la tercera es $P(3)=C/3^\alpha$, y así sucesivamente. Los datos de muchos países sugieren que $\alpha \approx 1$, aunque en la práctica este valor puede variar según el país o la región.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ceros de la función exponencial</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/exponential-zeroes/</link>
       <pubDate>Tue, 06 Aug 2024 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/exponential-zeroes/</guid>
-      <description>En 2012, creé la siguiente animación que muestra los ceros complejos de los polinomios de Taylor de la función exponencial $e^z$. En esta entrada, explicaré qué significa y por qué es interesante.
-También mostraré el código en Sage para recrear la animación (que originalmente creé en Mathematica en 2012). A diferencia de Mathematica, que no es gratuito ni de código abierto, Sage es un sistema de software matemático de código abierto basado en Python que se construye sobre muchos paquetes de código abierto existentes.</description>
+      <description>&lt;p&gt;En 2012, creé la siguiente animación que muestra los ceros complejos de los polinomios de Taylor de la función exponencial $e^z$. En esta entrada, explicaré qué significa y por qué es interesante.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;Zeros-Exponential-Animation.gif&#34; width=&#34;400px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;También mostraré el código en &#xA;&lt;a href=&#34;https://www.sagemath.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sage&lt;/a&gt; para recrear la animación (que originalmente creé en Mathematica en 2012). A diferencia de Mathematica, que no es gratuito ni de código abierto, Sage es un sistema de software matemático de código abierto basado en Python que se construye sobre muchos paquetes de código abierto existentes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</link>
       <pubDate>Sun, 06 Aug 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</guid>
-      <description>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.
-Esta es la imagen:
-Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.
-¡Y esta es una de las formas como las coloreamos con mis hijos!
-Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos.</description>
+      <description>&lt;p&gt;En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.&lt;/p&gt;&#xA;&lt;p&gt;Esta es la imagen:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-patterns-crop.jpg&#34;&#xA;    alt=&#34;Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Página del libro para colorear &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patterns of the Universe&lt;/a&gt; por Alex Bellos y Edmund Harris.&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;¡Y esta es una de las formas como las coloreamos con mis hijos!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</guid>
-      <description>Esta animación es un archivo gif que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.
-Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:
-LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;gnuplotTest.gif&#34; width=&#34;500px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Esta animación es un archivo &lt;code&gt;gif&lt;/code&gt; que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.&lt;/p&gt;&#xA;&lt;p&gt;Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Exportar figuras de TikZ para la web (de pdf a png o svg)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</link>
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</guid>
-      <description>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de LaTeX. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de texto sin formato) y obtiene como resultado un pdf de la imagen que describe el código.
-Para ver un ejemplo detallado, puede ver esta entrada en la que muestro el código TikZ de la siguiente imagen, o esta otra entrada en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</description>
+      <description>&lt;p&gt;TikZ es un lenguaje de programación para producir imágenes que funciona a partir de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/Archivo_de_texto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;texto sin formato&lt;/a&gt;) y obtiene como resultado un pdf de la imagen que describe el código.&lt;/p&gt;&#xA;&lt;p&gt;Para ver un ejemplo detallado, puede ver esta &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/&#34;&gt;entrada&lt;/a&gt; en la que muestro el código TikZ de la siguiente imagen, o esta otra &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/&#34;&gt;entrada&lt;/a&gt; en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Interpretación de resultados de pruebas de laboratorio de Covid-19</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/interpreting-covid19-test-results/</link>
       <pubDate>Mon, 07 Mar 2022 15:25:05 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/interpreting-covid19-test-results/</guid>
-      <description>Desde el inicio de la pandemia de Covid-19 me ha estado persiguiendo el asunto de interpretar de manera correcta los resultados de las pruebas de laboratorio de Covid-19.
-Sabía que la probabilidad de que una prueba de laboratorio de Covid-19 diera información correcta depende de la proporción de la población que se encuentra infectada en el momento que se hizo la prueba, pero no conocía los detalles ni entendía por qué podía pasar esto.</description>
+      <description>&lt;p&gt;Desde el inicio de la pandemia de Covid-19 me ha estado persiguiendo el asunto de interpretar de manera correcta los resultados de las pruebas de laboratorio de Covid-19.&lt;/p&gt;&#xA;&lt;p&gt;Sabía que la probabilidad de que una prueba de laboratorio de Covid-19 diera información correcta depende de la proporción de la población que se encuentra infectada en el momento que se hizo la prueba, pero no conocía los detalles ni entendía por qué podía pasar esto. Cada vez que trataba de leer al respecto terminaba leyendo artículos en internet con muchas tablas y números inventados de casos positivos y negativos que no me ayudaban a entender el asunto con claridad.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>¿Los niveles de CO2 crecen super-exponencial?</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</link>
       <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
-      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
-Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos.</description>
+      <description>&lt;p&gt;Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro &#xA;&lt;a href=&#34;https://www.wiley.com/en-us/Applied&amp;#43;Calculus%2C&amp;#43;7th&amp;#43;Edition-p-9781119799085&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;libro de Matemáticas Aplicadas&lt;/a&gt;), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma:&#xA;$$f(t)=P_0(b+mt)^t.$$&lt;/p&gt;&#xA;&lt;p&gt;Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos. Este modelo asume que se dió crecimiento exponencial a partir de un nivel $C$ de base, en vez de iniciar en $0$, así:&#xA;$$g(t)= C+Ba^{t}.$$&#xA;Es posible que este modelo tenga más sentido que el super-exponencial, porque es razonable asumir que los niveles de $\text{CO}_2$ en el aire eran constantes antes de que la humanidad comenzara a tener un impacto notorio en la atmósfera y después empezaran a crecer, al parecer de forma exponencial. Entonces, puede que la concentración de $\text{CO}_2$ sí esté creciendo de forma exponencial, lo cual es muy alarmante, pero no tan alarmante como crecimiento super-exponencial.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>
       <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</guid>
-      <description>Prometí en otra entrada de blog que mostraría el código en TikZ que produce la siguiente figura:
-Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+      <description>&lt;p&gt;Prometí en &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/&#34;&gt;otra entrada de blog&lt;/a&gt; que mostraría el código en TikZ que produce la siguiente figura:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;LogisticFunctionParams.es.png&#34; width=&#34;450&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Lo que me gusta mucho de TikZ y su paquete &lt;code&gt;pfgplots&lt;/code&gt; es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por&#xA;$$&#xA;f(t) = \frac{1}{1+e^{-4(x-2.5)}}.&#xA;$$&#xA;Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
-      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
-La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data. Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+      <description>&lt;p&gt;Hoy, como parte de mi trabajo,  me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.&lt;/p&gt;&#xA;&lt;p&gt;La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  &#xA;&lt;a href=&#34;https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;amp;time=2021-02-08..2021-11-29&amp;amp;facet=none&amp;amp;uniformYAxis=0&amp;amp;pickerSort=asc&amp;amp;pickerMetric=location&amp;amp;Metric=Delta&amp;#43;variant&amp;#43;%28share%29&amp;amp;Interval=Weekly&amp;amp;Relative&amp;#43;to&amp;#43;Population=true&amp;amp;Align&amp;#43;outbreaks=false&amp;amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Our World In Data&lt;/a&gt;. &lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;DeltaShareLogisitc.png&#34; width=&#34;100%&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
-      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
-En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
-Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
+      <description>&lt;p&gt;Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la &lt;em&gt;Twisted Cubic&lt;/em&gt; es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;En el espacio afín, está dado por la imagen de&#xA;$$t\mapsto(t,t^2,t^3).$$&lt;/p&gt;&#xA;&lt;p&gt;Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

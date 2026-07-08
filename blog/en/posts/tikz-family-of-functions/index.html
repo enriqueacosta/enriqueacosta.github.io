@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -124,7 +124,7 @@
   <div>
   <p>I promised in 
 <a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/">another post</a> that I would show the code for the TikZ figure I included in that post, reproduced below:</p>
-<figure><img src="LogisticFunctionParams.png" width="450"/>
+<figure><img src="LogisticFunctionParams.png" width="450">
 </figure>
 
 <p>What is very nice about TikZ and its <code>pfgplots</code> package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by
@@ -132,7 +132,7 @@ $$
 f(t) = \frac{1}{1+e^{-4(x-2.5)}}.
 $$</p>
 <p>If one were to plot this function in TikZ with minimal commands, the output would look like this:</p>
-<figure><img src="LogisticFunctionExplicit.png" width="450"/>
+<figure><img src="LogisticFunctionExplicit.png" width="450">
 </figure>
 
 <p>The code for this last figure is very simple and pretty:</p>
@@ -142,18 +142,18 @@ $$</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ axis lines = middle
+</span></span></span><span style="display:flex;"><span>   [ axis lines = middle
 </span></span><span style="display:flex;"><span>   , width=200pt
 </span></span><span style="display:flex;"><span>   , samples=75 
 </span></span><span style="display:flex;"><span>   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
 </span></span><span style="display:flex;"><span>   , ymax=1.2       
 </span></span><span style="display:flex;"><span>   ] 
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      [ color=blue
+</span></span></span><span style="display:flex;"><span>      [ color=blue
 </span></span><span style="display:flex;"><span>      , domain=0:4.5
 </span></span><span style="display:flex;"><span>      , style=thick
 </span></span><span style="display:flex;"><span>      ] {1/(1+exp(-4*(x-2.5))}<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      node
+</span></span></span><span style="display:flex;"><span>      node
 </span></span><span style="display:flex;"><span>      [ above left
 </span></span><span style="display:flex;"><span>      , pos=0.7
 </span></span><span style="display:flex;"><span>      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
@@ -162,18 +162,18 @@ $$</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
 </span></span></code></pre></div><p>The actual code for the figure is only between the <code>\begin{tikzpicture}</code> and the <code>\end{tikzpicture}</code>, with all the rest being the required commands to tell $\LaTeX$ to create the document containing the figure. Thus, in reality the code is just the following:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ axis lines = middle
+</span></span></span><span style="display:flex;"><span>   [ axis lines = middle
 </span></span><span style="display:flex;"><span>   , width=200pt
 </span></span><span style="display:flex;"><span>   , samples=75 
 </span></span><span style="display:flex;"><span>   , xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
 </span></span><span style="display:flex;"><span>   , ymax=1.2       
 </span></span><span style="display:flex;"><span>   ] 
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      [ color=blue
+</span></span></span><span style="display:flex;"><span>      [ color=blue
 </span></span><span style="display:flex;"><span>      , domain=0:4.5
 </span></span><span style="display:flex;"><span>      , style=thick
 </span></span><span style="display:flex;"><span>      ] { 1/(1+exp(-4*(x-2.5)) }<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      node
+</span></span></span><span style="display:flex;"><span>      node
 </span></span><span style="display:flex;"><span>      [ above left
 </span></span><span style="display:flex;"><span>      , pos=0.7
 </span></span><span style="display:flex;"><span>      ] {<span style="color:#e6db74">$</span> \displaystyle f<span style="color:#f92672">(</span>t<span style="color:#f92672">)=</span>\frac{<span style="color:#ae81ff">1</span>}{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>e^{<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">(</span>t<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">5</span><span style="color:#f92672">)</span>}}<span style="color:#e6db74">$</span>};
@@ -188,7 +188,7 @@ $$</p>
 <h2 id="getting-axis-labels-to-be-general-parameters-instead-of-numbers">Getting axis labels to be general parameters instead of numbers</h2>
 <p>These are the fancier axis properties that accomplish this.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = middle
+</span></span></span><span style="display:flex;"><span>[ axis lines = middle
 </span></span><span style="display:flex;"><span>, width=200pt
 </span></span><span style="display:flex;"><span>, samples=75 
 </span></span><span style="display:flex;"><span>, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
@@ -206,13 +206,13 @@ $$</p>
 <li>The strange looking <code>every axis x label/.style ...</code> changes the placement of the $t$ label for the horizontal axis (a matter of taste).</li>
 </ul>
 <p>This is the resulting figure:</p>
-<figure><img src="LogisticFunctionParamsPartial.png" width="450"/>
+<figure><img src="LogisticFunctionParamsPartial.png" width="450">
 </figure>
 
 <h2 id="adding-dashed-lines-and-arrow-to-the-inflection-point">Adding dashed lines and arrow to the inflection point</h2>
 <p><strong>Top horizontal line, with its label:</strong> is done by graphing the function $f(x)=1$ (the <code>{1}</code> in the code below).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-LaTeX" data-lang="LaTeX"><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [ style=dashed
+</span></span></span><span style="display:flex;"><span>   [ style=dashed
 </span></span><span style="display:flex;"><span>   , color=black
 </span></span><span style="display:flex;"><span>   , domain=0:5
 </span></span><span style="display:flex;"><span>   ] {1} 
@@ -261,7 +261,7 @@ $$</p>
 </span></span><span style="display:flex;"><span>      -- (axis cs:2.5,0.5);
 </span></span></code></pre></div><h2 id="complete-code">Complete code</h2>
 <p>And that is all!</p>
-<figure><img src="LogisticFunctionParams.png" width="450"/>
+<figure><img src="LogisticFunctionParams.png" width="450">
 </figure>
 
 <p>Here is the complete code, without so much horizontal indentation</p>
@@ -271,7 +271,7 @@ $$</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = middle
+</span></span></span><span style="display:flex;"><span>[ axis lines = middle
 </span></span><span style="display:flex;"><span>, width=200pt
 </span></span><span style="display:flex;"><span>, samples=75 
 </span></span><span style="display:flex;"><span>, xlabel = {<span style="color:#e6db74">$</span>t<span style="color:#e6db74">$</span>} 
@@ -319,7 +319,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

@@ -4,27 +4,23 @@
     <title>Datos on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/categories/datos/</link>
     <description>Recent content in Datos on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Feb 2022 16:02:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/datos/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sun, 27 Feb 2022 16:02:00 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/categories/datos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Los niveles de CO2 crecen super-exponencial?</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</link>
       <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
-      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
-Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos.</description>
+      <description>&lt;p&gt;Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro &#xA;&lt;a href=&#34;https://www.wiley.com/en-us/Applied&amp;#43;Calculus%2C&amp;#43;7th&amp;#43;Edition-p-9781119799085&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;libro de Matemáticas Aplicadas&lt;/a&gt;), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma:&#xA;$$f(t)=P_0(b+mt)^t.$$&lt;/p&gt;&#xA;&lt;p&gt;Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos. Este modelo asume que se dió crecimiento exponencial a partir de un nivel $C$ de base, en vez de iniciar en $0$, así:&#xA;$$g(t)= C+Ba^{t}.$$&#xA;Es posible que este modelo tenga más sentido que el super-exponencial, porque es razonable asumir que los niveles de $\text{CO}_2$ en el aire eran constantes antes de que la humanidad comenzara a tener un impacto notorio en la atmósfera y después empezaran a crecer, al parecer de forma exponencial. Entonces, puede que la concentración de $\text{CO}_2$ sí esté creciendo de forma exponencial, lo cual es muy alarmante, pero no tan alarmante como crecimiento super-exponencial.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
-      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
-La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data. Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+      <description>&lt;p&gt;Hoy, como parte de mi trabajo,  me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.&lt;/p&gt;&#xA;&lt;p&gt;La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  &#xA;&lt;a href=&#34;https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;amp;time=2021-02-08..2021-11-29&amp;amp;facet=none&amp;amp;uniformYAxis=0&amp;amp;pickerSort=asc&amp;amp;pickerMetric=location&amp;amp;Metric=Delta&amp;#43;variant&amp;#43;%28share%29&amp;amp;Interval=Weekly&amp;amp;Relative&amp;#43;to&amp;#43;Population=true&amp;amp;Align&amp;#43;outbreaks=false&amp;amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Our World In Data&lt;/a&gt;. &lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;DeltaShareLogisitc.png&#34; width=&#34;100%&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

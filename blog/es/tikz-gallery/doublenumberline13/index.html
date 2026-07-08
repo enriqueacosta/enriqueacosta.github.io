@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -125,94 +125,94 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% enriqueacosta.github.io
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% Released under CC-BY 4.0
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% svg generation needs to be run with -shell-escape: pdflatex -shell-escape filename.tex
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz, convert={command=\unexpanded{{pdf2svg \infile\space &#34;\jobname.svg&#34; &amp;&amp; rsvg-convert --zoom 1.85 --format svg --output &#34;\jobname.svg&#34; &#34;\jobname.svg&#34; &amp;&amp; convert -density 300 \infile\space &#34;\jobname.png&#34;}}}]</span>{standalone}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz, convert={command=\unexpanded{{pdf2svg \infile\space &#34;\jobname.svg&#34; &amp;&amp; rsvg-convert --zoom 1.85 --format svg --output &#34;\jobname.svg&#34; &#34;\jobname.svg&#34; &amp;&amp; convert -density 300 \infile\space &#34;\jobname.png&#34;}}}]</span>{standalone}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usetikzlibrary</span>{fit}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">%  TikZ Styles for Number Lines
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\tikzset</span>{
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\tikzset</span>{
 </span></span><span style="display:flex;"><span>  tickLabelAbove/.style={
 </span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=2.0ex,       <span style="color:#75715e">% Vertical offset for labels above the line
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span></span><span style="display:flex;"><span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span>      yshift=2.0ex,       <span style="color:#75715e">% Vertical offset for labels above the line
+</span></span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span>  tickLabelBelow/.style={
 </span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\small</span>,        <span style="color:#75715e">% Font size for tick labels
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      yshift=-2.6ex,      <span style="color:#75715e">% Slightly larger offset below the line to account 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                          <span style="color:#75715e">% for the label&#39;s baseline alignment (ensures visual balance).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span></span><span style="display:flex;"><span>      anchor=mid,         <span style="color:#75715e">% Baseline align text vertically across nodes
+</span></span></span><span style="display:flex;"><span>      yshift=-2.6ex,      <span style="color:#75715e">% Slightly larger offset below the line to account 
+</span></span></span><span style="display:flex;"><span>                          <span style="color:#75715e">% for the label&#39;s baseline alignment (ensures visual balance).
+</span></span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span>  numLineTick/.style={
 </span></span><span style="display:flex;"><span>      draw,               <span style="color:#75715e">% Draw tickmark node
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum width=0pt,  <span style="color:#75715e">% No width for the node box
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      minimum height=7pt, <span style="color:#75715e">% Height of the tickmark
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line cap=round,     <span style="color:#75715e">% Rounded ends for ticks
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      inner sep=0pt,      <span style="color:#75715e">% No inner padding
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      outer sep=2pt,      <span style="color:#75715e">% Space around the tick
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      line width=0.35pt,  <span style="color:#75715e">% Thickness of the tick line
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span></span><span style="display:flex;"><span>      minimum width=0pt,  <span style="color:#75715e">% No width for the node box
+</span></span></span><span style="display:flex;"><span>      minimum height=7pt, <span style="color:#75715e">% Height of the tickmark
+</span></span></span><span style="display:flex;"><span>      line cap=round,     <span style="color:#75715e">% Rounded ends for ticks
+</span></span></span><span style="display:flex;"><span>      inner sep=0pt,      <span style="color:#75715e">% No inner padding
+</span></span></span><span style="display:flex;"><span>      outer sep=2pt,      <span style="color:#75715e">% Space around the tick
+</span></span></span><span style="display:flex;"><span>      line width=0.35pt,  <span style="color:#75715e">% Thickness of the tick line
+</span></span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\doubleNumberLine</span>}[6]{<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% Parameters:
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #1: Number line lengths (without the label)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #2: Number of marks
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #3: Top mark labels (comma-separated)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #4: Top line label (placed at the left)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #5: Bottom mark labels (comma-separated)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">% #6: Bottom line label (placed at the left)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% Parameters:
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #1: Number line lengths (without the label)
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #2: Number of marks
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #3: Top mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #4: Top line label (placed at the left)
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #5: Bottom mark labels (comma-separated)
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">% #6: Bottom line label (placed at the left)
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>   <span style="color:#75715e">% Internal constants
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\def\numLineExtra</span>{0.3cm} <span style="color:#75715e">% Hardcoded extra space at the ends
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\def\numLineExtra</span>{0.3cm} <span style="color:#75715e">% Hardcoded extra space at the ends
+</span></span></span><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% TOP number line
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\begin</span>{scope}
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (top-leftEnd) at (0, 0);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (top-leftEnd) at (0, 0);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (top-rightEnd) at (#1, 0);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (top-leftEnd) -- (top-rightEnd);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (top-leftEnd) -- (top-rightEnd);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (top-leftEnd) {#4};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (top-mark-n). 1st mark is (top-mark-1).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (top-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (top-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #3 {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #3 {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelAbove]</span> at (top-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">%%% Bottom number line
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">\begin</span>{scope}[yshift=-6ex]
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\begin</span>{scope}[yshift=-6ex]
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Coordinates of endpoints
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\coordinate</span> (bot-leftEnd) at (0, 0);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (bot-leftEnd) at (0, 0);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\coordinate</span> (bot-rightEnd) at (#1, 0);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Draw the number line and add label to the left
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (bot-leftEnd) -- (bot-rightEnd);
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\draw</span><span style="color:#a6e22e">[-&gt;, &gt;=stealth]</span> (bot-leftEnd) -- (bot-rightEnd);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=east, xshift=-1.5ex]</span> at (bot-leftEnd) {#6};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% draw ticks as nodes (bot-mark-n). 1st mark is (bot-mark-1).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (bot-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\x</span> in {1,...,#2}{<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[numLineTick]</span> (bot-mark-<span style="color:#66d9ef">\x</span>) at ({<span style="color:#66d9ef">\numLineExtra</span>+(<span style="color:#66d9ef">\x</span>-1)*(#1-2.5*<span style="color:#66d9ef">\numLineExtra</span>)/(<span style="color:#66d9ef">\numMarks</span>-1)},0) {};
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% add mark labels
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #5 {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\foreach</span> <span style="color:#66d9ef">\num</span> [count=<span style="color:#66d9ef">\i</span>] in #5 {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[tickLabelBelow]</span> at (bot-mark-<span style="color:#66d9ef">\i</span>) {<span style="color:#66d9ef">\num</span>};
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">\end</span>{scope}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Parameters
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\lineWide</span>{2in} <span style="color:#75715e">% width of line (not including label)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\def\numMarks</span>{5}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\lineWide</span>{2in} <span style="color:#75715e">% width of line (not including label)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\numMarks</span>{5}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topMarkLabels</span>{0,50,,,200} 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\topLineLabel</span>{número de tarjetas}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\def\bottomMarkLabels</span>{0<span style="color:#66d9ef">\%</span>, 10<span style="color:#66d9ef">\%</span>, , , ? } 
@@ -220,14 +220,14 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Draw double number line
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% creates several coordinates like (top-leftEnd) and (bot-mark-2). See details in template.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\doubleNumberLine</span>{<span style="color:#66d9ef">\lineWide</span>}{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\topMarkLabels</span>}{<span style="color:#66d9ef">\topLineLabel</span>}{<span style="color:#66d9ef">\bottomMarkLabels</span>}{<span style="color:#66d9ef">\bottomLineLabel</span>}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\doubleNumberLine</span>{<span style="color:#66d9ef">\lineWide</span>}{<span style="color:#66d9ef">\numMarks</span>}{<span style="color:#66d9ef">\topMarkLabels</span>}{<span style="color:#66d9ef">\topLineLabel</span>}{<span style="color:#66d9ef">\bottomMarkLabels</span>}{<span style="color:#66d9ef">\bottomLineLabel</span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Extra text in marks if needed
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% \node[tickLabelBelow] at (top-mark-3) {text below};
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% box around some top and bottom marks
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% \node[fit=(top-mark-4) (bot-mark-4), draw, rectangle, rounded corners=1.5ex, inner sep=2.7ex, densely dashed] {};
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}</span></span></code></pre></div>
   
@@ -448,7 +448,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

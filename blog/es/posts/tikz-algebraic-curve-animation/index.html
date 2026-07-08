@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -124,7 +124,7 @@
     
   
   <div>
-  <figure><img src="gnuplotTest.gif" width="500px"/>
+  <figure><img src="gnuplotTest.gif" width="500px">
 </figure>
 
 <p>Esta animación es un archivo <code>gif</code> que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.</p>
@@ -192,7 +192,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% *  Compile this with shellscape: 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">%    pdflatex -shell-escape ChaslesCubic.tex
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz]</span>{standalone}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfplotsset</span>{compat=newest}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
@@ -210,7 +210,7 @@
 </span></span><span style="display:flex;"><span>        raw gnuplot,
 </span></span><span style="display:flex;"><span>        thick,
 </span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span></span><span style="display:flex;"><span>     ] gnuplot {
 </span></span><span style="display:flex;"><span>        f(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
 </span></span><span style="display:flex;"><span>        set xrange [-1:1];
 </span></span><span style="display:flex;"><span>        set yrange [-1:1];
@@ -223,12 +223,12 @@
 </span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation of the curve
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[blue, fill=white]</span> at (0,0.7) {<span style="color:#e6db74">$</span>y<span style="color:#f92672">=</span>\a x^{<span style="color:#ae81ff">3</span>}<span style="color:#f92672">+</span>\b x^{<span style="color:#ae81ff">2</span>}y<span style="color:#f92672">+</span>\c xy^{<span style="color:#ae81ff">2</span>}<span style="color:#f92672">+</span>\d y^{<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[blue, fill=white]</span> at (0,0.7) {<span style="color:#e6db74">$</span>y<span style="color:#f92672">=</span>\a x^{<span style="color:#ae81ff">3</span>}<span style="color:#f92672">+</span>\b x^{<span style="color:#ae81ff">2</span>}y<span style="color:#f92672">+</span>\c xy^{<span style="color:#ae81ff">2</span>}<span style="color:#f92672">+</span>\d y^{<span style="color:#ae81ff">3</span>}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{document}
 </span></span></code></pre></div><p>Y esta es la curva que produce:</p>
-<figure><img src="ChaslesCubic.png" width="600px"/>
+<figure><img src="ChaslesCubic.png" width="600px">
 </figure>
 
 <p>La curva es una 
@@ -248,7 +248,7 @@ $$ y=a x^{3}+b x^{2}y+c xy^{2}+d y^{3}.$$</p>
 </span></span><span style="display:flex;"><span>        raw gnuplot,
 </span></span><span style="display:flex;"><span>        thick,
 </span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">%this is the default behaviour of PGFPlots
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span></span><span style="display:flex;"><span>     ] gnuplot {
 </span></span><span style="display:flex;"><span>        F(x,y)=y-(<span style="color:#66d9ef">\a*</span>x^3+<span style="color:#66d9ef">\b*</span>x^2*y+<span style="color:#66d9ef">\c*</span>x*y^2+<span style="color:#66d9ef">\d*</span>y^3);
 </span></span><span style="display:flex;"><span>        set xrange [-1:1];
 </span></span><span style="display:flex;"><span>        set yrange [-1:1];
@@ -329,7 +329,7 @@ para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code>
 </span></span><span style="display:flex;"><span>        raw gnuplot,
 </span></span><span style="display:flex;"><span>        thick,
 </span></span><span style="display:flex;"><span>        empty line = jump <span style="color:#75715e">% this is the default behaviour
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     ] gnuplot {
+</span></span></span><span style="display:flex;"><span>     ] gnuplot {
 </span></span><span style="display:flex;"><span>        f(x,y)=x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+5.8*x);
 </span></span><span style="display:flex;"><span>        set xrange [-3:3];
 </span></span><span style="display:flex;"><span>        set yrange [-8:8];
@@ -342,10 +342,10 @@ para los valores que se dan de <code>\a</code>, <code>\b</code>, <code>\c</code>
 </span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation with white around it
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Print the value of a
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{axis}
@@ -361,11 +361,11 @@ $$ a = -4, -3.8, -3.6, &hellip;, 0.0,0.2, &hellip;, 4.0, $$
 <a href="gnuplotTest.pdf">acá</a>. Es muy pequeño (188 kb).</p>
 <p>Las últimas líneas en el código agregan la ecuación de LaTeX bonita con el fondo blanco que se muestra en la parte superior de la imagen y el valor de $ a $ en la parte inferior izquierda ( <code>a = ___</code> ).</p>
 <p>Esta es la imagen que corresponde a $a = 1.2$:</p>
-<figure><img src="gnuplotTestOneFrame1.2.png" width="500px"/>
+<figure><img src="gnuplotTestOneFrame1.2.png" width="500px">
 </figure>
 
 <p>Y esta es la imagen que corresponde al valor interesante $a = 0$:</p>
-<figure><img src="gnuplotTestOneFrame0.png" width="500px"/>
+<figure><img src="gnuplotTestOneFrame0.png" width="500px">
 </figure>
 
 <p>Esta última imagen en realidad muestra la unión de dos curvas de grado menor, ya que cuando $a=0$ la curva
@@ -380,12 +380,12 @@ La última ecuación muestra que la curva cúbica del valor $ a = 0 $ es la uni�
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert -density <span style="color:#ae81ff">300</span> -delay <span style="color:#ae81ff">5</span> -loop <span style="color:#ae81ff">0</span> -alpha remove gnuplotTest.pdf gnuplotTest.gif
 </span></span></code></pre></div><p>El parámetro de densidad determina el tamaño y la calidad de cada imagen (300 es bastante alto), el <code>delay</code> determina la velocidad de la animación.</p>
 <p>Este es, una vez más, el GIF que produce:</p>
-<figure><img src="gnuplotTest.gif" width="500px"/>
+<figure><img src="gnuplotTest.gif" width="500px">
 </figure>
 
 <h2 id="más-ejemplos">Más ejemplos</h2>
 <p>Hasta ahora empecé a explorar las posibilidades de esto, ¡pero parece bastante útil! El siguiente ejemplo es menos elaborado, ya que no requiere el uso de Gnuplot (no requiere gráficas de curva implícitas):</p>
-<figure><img src="TikzAnimationLines.gif" width="500px"/>
+<figure><img src="TikzAnimationLines.gif" width="500px">
 </figure>
 
 <p>El código para esta última animación es 
@@ -411,10 +411,10 @@ La última ecuación muestra que la curva cúbica del valor $ a = 0 $ es la uni�
 </span></span><span style="display:flex;"><span>    ]{x*(x^2+y^2)-(<span style="color:#66d9ef">\a*</span>y+<span style="color:#66d9ef">\b*</span>x)};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Equation with white around it
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span> x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right, blue, fill=white]</span> at (-2,6) {<span style="color:#e6db74">$</span>x<span style="color:#f92672">(</span>x^<span style="color:#ae81ff">2</span><span style="color:#f92672">+</span>y^<span style="color:#ae81ff">2</span><span style="color:#f92672">)=(</span>ay<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">8</span> x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">% Print the value of a
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\pgfkeys</span>{/pgf/number format/.cd,fixed};
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[right]</span> at (-2.7,-6) {<span style="color:#e6db74">$</span>a<span style="color:#f92672">=</span>\pgfmathprintnumber{\a}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">\end</span>{axis}
@@ -438,7 +438,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

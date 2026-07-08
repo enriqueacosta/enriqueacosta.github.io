@@ -4,79 +4,58 @@
     <title>Tikz on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/tikz/</link>
     <description>Recent content in Tikz on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/tikz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plantilla de Tikz para crear diagramas matemáticos: ejemplo de rectas numéricas dobles</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</link>
       <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-doublenumline/</guid>
-      <description>En esta entrada de blog explico cómo diseñé un sistema con TikZ para generar un tipo de diagramas matemáticos de manera eficiente y fácil de mantener. TikZ un lenguaje de programación para crear diagramas matemáticos mediante código. El sistema es una plantilla para construir rectas numéricas dobles, tipo de diagrama muy utilizado en recursos educativos de matemáticas modernos para apoyar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).
-El objetivo de esta entrada es mostrar cómo estas rectas numéricas dobles se pueden generar &amp;ldquo;automáticamente&amp;rdquo;, usando código de programación breve y flexible, que produce diagramas visualmente consistentes y permite centrar la atención en las ideas matemáticas.</description>
+      <description>&lt;p&gt;En esta entrada de blog explico cómo diseñé un sistema con &lt;strong&gt;TikZ&lt;/strong&gt; para generar un tipo de diagramas matemáticos de manera eficiente y fácil de mantener. TikZ un lenguaje de programación para crear diagramas matemáticos mediante código. El sistema es una plantilla para construir &lt;strong&gt;rectas numéricas dobles&lt;/strong&gt;, tipo de diagrama muy utilizado en recursos educativos de matemáticas modernos para apoyar el razonamiento proporcional (por ejemplo, porcentajes, razones o recetas).&lt;/p&gt;&#xA;&lt;p&gt;El objetivo de esta entrada es mostrar cómo estas rectas numéricas dobles se pueden generar &amp;ldquo;automáticamente&amp;rdquo;, usando código de programación breve y flexible, que produce diagramas visualmente consistentes y permite centrar la atención en las ideas matemáticas. Una estructura visual coherente facilita el aprendizaje y el razonamiento matemático.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</guid>
-      <description>Esta animación es un archivo gif que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.
-Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:
-LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;gnuplotTest.gif&#34; width=&#34;500px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Esta animación es un archivo &lt;code&gt;gif&lt;/code&gt; que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.&lt;/p&gt;&#xA;&lt;p&gt;Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Exportar figuras de TikZ para la web (de pdf a png o svg)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</link>
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</guid>
-      <description>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de LaTeX. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de texto sin formato) y obtiene como resultado un pdf de la imagen que describe el código.
-Para ver un ejemplo detallado, puede ver esta entrada en la que muestro el código TikZ de la siguiente imagen, o esta otra entrada en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</description>
+      <description>&lt;p&gt;TikZ es un lenguaje de programación para producir imágenes que funciona a partir de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/Archivo_de_texto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;texto sin formato&lt;/a&gt;) y obtiene como resultado un pdf de la imagen que describe el código.&lt;/p&gt;&#xA;&lt;p&gt;Para ver un ejemplo detallado, puede ver esta &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/&#34;&gt;entrada&lt;/a&gt; en la que muestro el código TikZ de la siguiente imagen, o esta otra &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/&#34;&gt;entrada&lt;/a&gt; en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>¿Los niveles de CO2 crecen super-exponencial?</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</link>
       <pubDate>Sun, 27 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/mauna-loa-superexponential/</guid>
-      <description>Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro libro de Matemáticas Aplicadas), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma: $$f(t)=P_0(b+mt)^t.$$
-Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos.</description>
+      <description>&lt;p&gt;Como parte de mi trabajo con el Mathematics Consortium Working Group (he estado escribiendo actividades relacionadas con el uso de datos reales y hojas de cálculo para nuestro &#xA;&lt;a href=&#34;https://www.wiley.com/en-us/Applied&amp;#43;Calculus%2C&amp;#43;7th&amp;#43;Edition-p-9781119799085&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;libro de Matemáticas Aplicadas&lt;/a&gt;), descubrí que la concentración de $\text{CO}_2$ en el aire, que se lleva midiendo en el Observatorio Mauna Loa en Hawaii desde 1950, se puede modelar sorpresivamente bien con un modelo &amp;ldquo;super-exponencial&amp;rdquo; de la siguiente forma:&#xA;$$f(t)=P_0(b+mt)^t.$$&lt;/p&gt;&#xA;&lt;p&gt;Después, aún convencido de lo preocupante y serio que era esto (el crecimiento super-exponencial es tan alarmante como suena), descubrí que también se podía encontrar un modelo &amp;ldquo;casi exponencial&amp;rdquo; que se ajustaba igual de bien a los datos. Este modelo asume que se dió crecimiento exponencial a partir de un nivel $C$ de base, en vez de iniciar en $0$, así:&#xA;$$g(t)= C+Ba^{t}.$$&#xA;Es posible que este modelo tenga más sentido que el super-exponencial, porque es razonable asumir que los niveles de $\text{CO}_2$ en el aire eran constantes antes de que la humanidad comenzara a tener un impacto notorio en la atmósfera y después empezaran a crecer, al parecer de forma exponencial. Entonces, puede que la concentración de $\text{CO}_2$ sí esté creciendo de forma exponencial, lo cual es muy alarmante, pero no tan alarmante como crecimiento super-exponencial.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>
       <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</guid>
-      <description>Prometí en otra entrada de blog que mostraría el código en TikZ que produce la siguiente figura:
-Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+      <description>&lt;p&gt;Prometí en &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/&#34;&gt;otra entrada de blog&lt;/a&gt; que mostraría el código en TikZ que produce la siguiente figura:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;LogisticFunctionParams.es.png&#34; width=&#34;450&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Lo que me gusta mucho de TikZ y su paquete &lt;code&gt;pfgplots&lt;/code&gt; es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por&#xA;$$&#xA;f(t) = \frac{1}{1+e^{-4(x-2.5)}}.&#xA;$$&#xA;Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
-      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
-La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data. Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+      <description>&lt;p&gt;Hoy, como parte de mi trabajo,  me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.&lt;/p&gt;&#xA;&lt;p&gt;La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  &#xA;&lt;a href=&#34;https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;amp;time=2021-02-08..2021-11-29&amp;amp;facet=none&amp;amp;uniformYAxis=0&amp;amp;pickerSort=asc&amp;amp;pickerMetric=location&amp;amp;Metric=Delta&amp;#43;variant&amp;#43;%28share%29&amp;amp;Interval=Weekly&amp;amp;Relative&amp;#43;to&amp;#43;Population=true&amp;amp;Align&amp;#43;outbreaks=false&amp;amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Our World In Data&lt;/a&gt;. &lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;DeltaShareLogisitc.png&#34; width=&#34;100%&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
-      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
-En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
-Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
+      <description>&lt;p&gt;Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la &lt;em&gt;Twisted Cubic&lt;/em&gt; es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;En el espacio afín, está dado por la imagen de&#xA;$$t\mapsto(t,t^2,t^3).$$&lt;/p&gt;&#xA;&lt;p&gt;Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

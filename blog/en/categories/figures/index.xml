@@ -4,29 +4,23 @@
     <title>Figures on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/categories/figures/</link>
     <description>Recent content in Figures on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/figures/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/categories/figures/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating This Blog Part 4: Adding a TikZ Gallery</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>
       <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</guid>
-      <description>TikZ is a programing language for creating images based on LaTeX. One writes TikZ &amp;ldquo;programing code&amp;rdquo; in a plain text file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &amp;ldquo;drawing instructions for a human&amp;rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates.</description>
+      <description>&lt;p&gt;TikZ is a programing language for creating images based on &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. One writes TikZ &amp;ldquo;programing code&amp;rdquo; in a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Plain_text&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;plain text&lt;/a&gt; file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &amp;ldquo;drawing instructions for a human&amp;rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates. When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Recreating a Loxodromic Spiral Grid Using Complex Analysis</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</guid>
-      <description>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired coloring book using complex functions and Möbius transformations.
-Here is the figure:
-Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.
-Here is one of the way we colored them with my sons!
-I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles.</description>
+      <description>&lt;p&gt;In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;coloring book&lt;/a&gt; using complex functions and Möbius transformations.&lt;/p&gt;&#xA;&lt;p&gt;Here is the figure:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-patterns-crop.jpg&#34;&#xA;    alt=&#34;Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Page from &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patterns of the Universe Coloring book&lt;/a&gt; by  Alex Bellos and Edmund Harris.&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Here is one of the way we colored them with my sons!&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-elias.jpg&#34; width=&#34;600px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles. Because of the right angles I guessed there should be a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Conformal_map&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complex conformal map&lt;/a&gt; involved, and I wanted to figure out how it was constructed and what the equations for the functions that produced this curvy grid looked like.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

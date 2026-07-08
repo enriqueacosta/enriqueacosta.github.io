@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -127,8 +127,8 @@
   <p>This blog does not live in a commercial platform for bloggers. It is what is technically called a &ldquo;static site&rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled 
 <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. In this blog entry I explain how I set it up.</p>
 <p>What got me started was Hui Gong&rsquo;s excellent 
-<a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/" target="_blank" rel="noopener">blog entry</a> on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages,<!-- raw HTML omitted --> but not about 
-<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a><!-- raw HTML omitted -->. <!-- raw HTML omitted --> I had Hugo running and my own skeleton version of this blog using the very nice and minimal 
+<a href="https://huigong-dev.github.io/en/posts/how-to-build-personal-blog-with-github-pages-and-hugo/" target="_blank" rel="noopener">blog entry</a> on building a personal blog using GitHub Pages and Hugo. I knew about Github Pages, but not about 
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.  I had Hugo running and my own skeleton version of this blog using the very nice and minimal 
 <a href="https://github.com/spf13/hyde" target="_blank" rel="noopener">Hyde</a> theme by following the blog.</p>
 <p>The Hyde theme is extremely minimal (nice), but I wanted three important things for my blog that the Hyde theme did not have:</p>
 <ul>
@@ -136,9 +136,7 @@
 <li><strong>Multilingual:</strong> Posts and navigation in English and Spanish.</li>
 <li><strong>$\LaTeX$ support:</strong> I wanted to be able to write posts that had math symbols in them, and for me $\LaTeX$ is still the only sensible way to write math.</li>
 </ul>
-<p>Getting these set up <!-- raw HTML omitted --> allowed me to understand the whole Hugo setup, which I must say I really like! Hugo now takes care of almost everything besides the content, which is great.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>Getting these set up  allowed me to understand the whole Hugo setup, which I must say I really like! Hugo now takes care of almost everything besides the content, which is great.</p>
 <h2 id="browsing-by-tags-or-categories">Browsing by tags or categories</h2>
 <p>This could not have been simpler! Hugo comes by default with two ways to categorize content: <code>tags</code> and <code>categories</code>. The Hyde theme comes set up to show them in the sidebar. One just needs to define menu entries in the <code>config.toml</code> file, which controls global settings of the site and themes.</p>
 <!-- raw HTML omitted -->
@@ -238,15 +236,14 @@
 <pre tabindex="0"><code>/layouts/partials/hook_head_end.html
 </code></pre><p>This file overrides the file with the same filename in the theme</p>
 <pre tabindex="0"><code>/themes/hyde/layouts/partials/hook_head_end.html
-</code></pre><p>(which is where I copied it from). This &ldquo;partial&rdquo; file gets loaded at the end of the <code>layouts/partials/head.html</code> file.  <!-- raw HTML omitted --></p>
+</code></pre><p>(which is where I copied it from). This &ldquo;partial&rdquo; file gets loaded at the end of the <code>layouts/partials/head.html</code> file.  </p>
 <p>After this, I could reference the image file <code>fig-twistedCubic2.png</code> located at <code>static/fig-twistedCubic2.png</code> in markdown by using :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>![<span style="color:#f92672">Twisted Cubic</span>](<span style="color:#a6e22e">fig-twistedCubic2.png</span>)
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<p>Note: this is different from the &ldquo;regular&rdquo; syntax/strategy for inserting images in Hugo, since without the <code>&lt;base&gt;</code> hack above, figure referencing should use a <code>/</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#75715e">&lt;!--- 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Regular Hugo syntax for imputing the 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">image at &#34;static/fig-twistedCubic2.png&#34; 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span></code></pre></div><p>Note: this is different from the &ldquo;regular&rdquo; syntax/strategy for inserting images in Hugo, since without the <code>&lt;base&gt;</code> hack above, figure referencing should use a <code>/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>&lt;!--- 
+</span></span><span style="display:flex;"><span>Regular Hugo syntax for imputing the 
+</span></span><span style="display:flex;"><span>image at &#34;static/fig-twistedCubic2.png&#34; 
+</span></span><span style="display:flex;"><span>--&gt;
 </span></span><span style="display:flex;"><span>![<span style="color:#f92672">Twisted Cubic</span>](<span style="color:#a6e22e">/fig-twistedCubic2.png</span>)
 </span></span></code></pre></div><p>Note: this also (unfortunately) breaks the Table of Contents built-in functionality in Hugo, because it relies on using relative links of the form <code>href=&quot;#heading-title&quot;</code> which due to the <code>&lt;base&gt;</code> command en up pointing to</p>
 <pre tabindex="0"><code>broken href: {{base url}}/#heading-title
@@ -345,7 +342,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

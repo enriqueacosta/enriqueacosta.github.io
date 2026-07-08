@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -128,21 +128,20 @@
     
   
   <div>
-  <p>Today, as part of my work, <!-- raw HTML omitted --> I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
+  <p>Today, as part of my work,  I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
 <p>The graph below, which started all of this, should come up if one follows this
 
 <a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta&#43;variant&#43;%28share%29&amp;Interval=Weekly&amp;Relative&#43;to&#43;Population=true&amp;Align&#43;outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA" target="_blank" rel="noopener">Our World In Data link</a>.</p>
-<!-- raw HTML omitted -->
-<figure><img src="DeltaShareLogisitc.png" width="100%"/><figcaption>
-            <p>Image downloaded from Our World in Data, open access under the Creative Commons BY license.</p>
-        </figcaption>
+<figure><img src="DeltaShareLogisitc.png" width="100%"><figcaption>
+      <p>Image downloaded from Our World in Data, open access under the Creative Commons BY license.</p>
+    </figcaption>
 </figure>
 
 <p>The curves clearly look &ldquo;logistic-like&rdquo;, meaning sigmoid shaped (s-shaped) and symmetric. However, not everything that looks sigmoid shaped will be modeled well by a logistic function.</p>
 <p>The general logistic function is of the form
 $$f(t)=\frac{L}{1+e^{-k(t-a)}}$$
 and its graph looks as follows (figure created by me with Tikz, I&rsquo;ll show the code in another post!)</p>
-<figure><img src="LogisticFunctionParams.png" width="450"/>
+<figure><img src="LogisticFunctionParams.png" width="450">
 </figure>
 
 <p>There are fancy ways to check if a set of data is logistic, for example, related to the differential equation of logistic growth (see 
@@ -160,10 +159,9 @@ and its graph looks as follows (figure created by me with Tikz, I&rsquo;ll show 
 <li>$a=139$ (this is just a horizontal shift in the curve and has no mathematically important meaning &mdash; it is just the moment of the year in which the growth rate of the delta share was highest, in $\%$ share per day).</li>
 </ul>
 <p>The fit is shown in the following figure:</p>
-<figure><img src="USDeltaVariantLogistic.png" width="400"/>
+<figure><img src="USDeltaVariantLogistic.png" width="400">
 </figure>
 
-<!-- raw HTML omitted -->
 <p>Concisely:
 $$
 \begin{array}{c}
@@ -185,7 +183,7 @@ $$</p>
 <p>The very good fit is not just for data for the US. I tried the same with the data for the UK and got a similarly good fit.</p>
 <p>In this case, $k=0.11$, $a=104$, $L=1$. It is interesting that that $k$ is different, because it says that the Delta variant overtook other variants slightly faster in the UK than the US.</p>
 <p>Here is the plot:
-<figure><img src="USDeltaVariantLogistic.png" width="400"/>
+<figure><img src="USDeltaVariantLogistic.png" width="400">
 </figure>
 </p>
 <p>And here is the desmos plot with sliders that I created (
@@ -208,7 +206,7 @@ $$</p>
 </div>
 <p>(data from John&rsquo;s Hopkins University).</p>
 <p>Here is a screnshot in case the applet does not load:</p>
-<figure><img src="ItalyCovidLogisticFail.png" width="400"/>
+<figure><img src="ItalyCovidLogisticFail.png" width="400">
 </figure>
 
 <h2 id="other-fancier-ways-to-tell-if-something-is-logistic">Other (fancier) ways to tell if something is logistic</h2>
@@ -229,17 +227,14 @@ This last equation says that the relative growth $y&rsquo;/y$ (which can be inte
 <p>The two ways $(1)$ and $(2)$ to write the differential equation indicate two ways to see if some data is growing logistically (one can estimate $y^\prime$ numerically from the data by computing the rate of change between the entries in the table).</p>
 <p><strong>Is the plot of $y^\prime/y$ against $y$ a line?</strong><br>
 Equation $(2)$ says that for logistic growth the plot of $y^\prime/y$ against $y$ should be a line. If one makes this plot for exactly logistic data, this is what one would see:
-<figure><img src="LogisticRelativeAgainstP.png" width="300"/>
+<figure><img src="LogisticRelativeAgainstP.png" width="300">
 </figure>
 </p>
-<!-- raw HTML omitted -->
 <p><strong>Is the plot of $y^\prime$ against $y$ a parabola?</strong>
 Equation $(1)$ says that for logistic growth the plot of $y^\prime$ against $y$ should be a parabola going through the origin and the point $(y,y^\prime)=(L,0)$. If one makes this plot for exactly logistic data, this is what one would see:
-<figure><img src="LogisticDerivativeAgainstFunction.png" width="350"/>
+<figure><img src="LogisticDerivativeAgainstFunction.png" width="350">
 </figure>
 </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>But once again I say, I have lately grown fond of checking if something is logistic by just plotting the data points and with sliders for the $L$, $a$ and $k$ trying to fit a logistic curve through the data, as I illustrated above.</p>
 
   </div>
@@ -257,7 +252,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

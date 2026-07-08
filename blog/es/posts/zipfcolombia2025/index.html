@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -139,8 +139,6 @@ En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenad
 <p>Algo que salta a la vista (además del buen ajuste) es que Bogotá parece ser un caso atípico: está claramente por encima de la curva de ajuste. Sin embargo, esto no es raro y es un fenómeno bien documentado: las capitales suelen atraer población de manera distinta al resto de las ciudades.</p>
 <p>Los datos de población que usé para esa gráfica son las proyecciones oficiales del gobierno para 2025, que tomé de 
 <a href="https://es.wikipedia.org/wiki/Anexo:Ciudades_de_Colombia_por_poblaci%C3%B3n" target="_blank" rel="noopener">Wikipedia</a>. La tabla completa se puede consultar allí o en el código fuente de la figura.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h3 id="gráfica-log-log">Gráfica log-log</h3>
 <p>Es mejor revisar el ajuste a los datos en una 
 <a href="https://en.wikipedia.org/wiki/Log%e2%80%93log_plot" target="_blank" rel="noopener">gráfica log-log</a>, pues este tipo de gráfico convierte funciones de potencia (cómo $P(r)$) en líneas rectas, y nuestro cerebro es muy bueno para detectar rectas. Este es el resultado:</p>
@@ -156,157 +154,157 @@ En esta fórmula, $P(r)$ es la población de la ciudad en el puesto $r$ (ordenad
 <h3 id="errores-porcentuales">Errores porcentuales</h3>
 <p>Pero a veces es más convincente ver los errores porcentuales entre la predicción y los datos reales, en vez de solo mirar el valor de $R^2$ o las gráficas. Los errores son sorprendentemente bajos (ignorando el caso particular de Bogotá, y a Soacha, que en realidad es un municipio vecino de Bogotá).</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Ciudad</th>
-<th style="text-align:right">Rango</th>
-<th style="text-align:right">Población real</th>
-<th style="text-align:right">Población del modelo</th>
-<th style="text-align:right">Error (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Bogotá</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">7,937,898</td>
-<td style="text-align:right">5,544,989</td>
-<td style="text-align:right">30%</td>
-</tr>
-<tr>
-<td style="text-align:left">Medellín</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">2,634,570</td>
-<td style="text-align:right">2,924,988</td>
-<td style="text-align:right">-11%</td>
-</tr>
-<tr>
-<td style="text-align:left">Cali</td>
-<td style="text-align:right">3</td>
-<td style="text-align:right">2,285,099</td>
-<td style="text-align:right">2,012,034</td>
-<td style="text-align:right">12%</td>
-</tr>
-<tr>
-<td style="text-align:left">Barranquilla</td>
-<td style="text-align:right">4</td>
-<td style="text-align:right">1,342,818</td>
-<td style="text-align:right">1,542,935</td>
-<td style="text-align:right">-15%</td>
-</tr>
-<tr>
-<td style="text-align:left">Cartagena</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">1,065,881</td>
-<td style="text-align:right">1,255,809</td>
-<td style="text-align:right">-18%</td>
-</tr>
-<tr>
-<td style="text-align:left">Soacha</td>
-<td style="text-align:right">6</td>
-<td style="text-align:right">828,947</td>
-<td style="text-align:right">1,061,350</td>
-<td style="text-align:right">-28%</td>
-</tr>
-<tr>
-<td style="text-align:left">Cúcuta</td>
-<td style="text-align:right">7</td>
-<td style="text-align:right">815,891</td>
-<td style="text-align:right">920,626</td>
-<td style="text-align:right">-13%</td>
-</tr>
-<tr>
-<td style="text-align:left">Soledad</td>
-<td style="text-align:right">8</td>
-<td style="text-align:right">686,339</td>
-<td style="text-align:right">813,900</td>
-<td style="text-align:right">-19%</td>
-</tr>
-<tr>
-<td style="text-align:left">Bucaramanga</td>
-<td style="text-align:right">9</td>
-<td style="text-align:right">623,881</td>
-<td style="text-align:right">730,079</td>
-<td style="text-align:right">-17%</td>
-</tr>
-<tr>
-<td style="text-align:left">Villavicencio</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">593,273</td>
-<td style="text-align:right">662,440</td>
-<td style="text-align:right">-12%</td>
-</tr>
-<tr>
-<td style="text-align:left">Valledupar</td>
-<td style="text-align:right">11</td>
-<td style="text-align:right">575,225</td>
-<td style="text-align:right">606,669</td>
-<td style="text-align:right">-5%</td>
-</tr>
-<tr>
-<td style="text-align:left">Bello</td>
-<td style="text-align:right">12</td>
-<td style="text-align:right">570,329</td>
-<td style="text-align:right">559,863</td>
-<td style="text-align:right">2%</td>
-</tr>
-<tr>
-<td style="text-align:left">Santa Marta</td>
-<td style="text-align:right">13</td>
-<td style="text-align:right">566,650</td>
-<td style="text-align:right">520,002</td>
-<td style="text-align:right">8%</td>
-</tr>
-<tr>
-<td style="text-align:left">Ibagué</td>
-<td style="text-align:right">14</td>
-<td style="text-align:right">546,003</td>
-<td style="text-align:right">485,631</td>
-<td style="text-align:right">11%</td>
-</tr>
-<tr>
-<td style="text-align:left">Montería</td>
-<td style="text-align:right">15</td>
-<td style="text-align:right">531,424</td>
-<td style="text-align:right">455,678</td>
-<td style="text-align:right">14%</td>
-</tr>
-<tr>
-<td style="text-align:left">Pereira</td>
-<td style="text-align:right">16</td>
-<td style="text-align:right">482,824</td>
-<td style="text-align:right">429,333</td>
-<td style="text-align:right">11%</td>
-</tr>
-<tr>
-<td style="text-align:left">Manizales</td>
-<td style="text-align:right">17</td>
-<td style="text-align:right">459,262</td>
-<td style="text-align:right">405,975</td>
-<td style="text-align:right">12%</td>
-</tr>
-<tr>
-<td style="text-align:left">Pasto</td>
-<td style="text-align:right">18</td>
-<td style="text-align:right">415,937</td>
-<td style="text-align:right">385,117</td>
-<td style="text-align:right">7%</td>
-</tr>
-<tr>
-<td style="text-align:left">Neiva</td>
-<td style="text-align:right">19</td>
-<td style="text-align:right">388,229</td>
-<td style="text-align:right">366,375</td>
-<td style="text-align:right">6%</td>
-</tr>
-<tr>
-<td style="text-align:left">Palmira</td>
-<td style="text-align:right">20</td>
-<td style="text-align:right">359,888</td>
-<td style="text-align:right">349,438</td>
-<td style="text-align:right">3%</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Ciudad</th>
+          <th style="text-align: right">Rango</th>
+          <th style="text-align: right">Población real</th>
+          <th style="text-align: right">Población del modelo</th>
+          <th style="text-align: right">Error (%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Bogotá</td>
+          <td style="text-align: right">1</td>
+          <td style="text-align: right">7,937,898</td>
+          <td style="text-align: right">5,544,989</td>
+          <td style="text-align: right">30%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Medellín</td>
+          <td style="text-align: right">2</td>
+          <td style="text-align: right">2,634,570</td>
+          <td style="text-align: right">2,924,988</td>
+          <td style="text-align: right">-11%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cali</td>
+          <td style="text-align: right">3</td>
+          <td style="text-align: right">2,285,099</td>
+          <td style="text-align: right">2,012,034</td>
+          <td style="text-align: right">12%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Barranquilla</td>
+          <td style="text-align: right">4</td>
+          <td style="text-align: right">1,342,818</td>
+          <td style="text-align: right">1,542,935</td>
+          <td style="text-align: right">-15%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cartagena</td>
+          <td style="text-align: right">5</td>
+          <td style="text-align: right">1,065,881</td>
+          <td style="text-align: right">1,255,809</td>
+          <td style="text-align: right">-18%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soacha</td>
+          <td style="text-align: right">6</td>
+          <td style="text-align: right">828,947</td>
+          <td style="text-align: right">1,061,350</td>
+          <td style="text-align: right">-28%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cúcuta</td>
+          <td style="text-align: right">7</td>
+          <td style="text-align: right">815,891</td>
+          <td style="text-align: right">920,626</td>
+          <td style="text-align: right">-13%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Soledad</td>
+          <td style="text-align: right">8</td>
+          <td style="text-align: right">686,339</td>
+          <td style="text-align: right">813,900</td>
+          <td style="text-align: right">-19%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bucaramanga</td>
+          <td style="text-align: right">9</td>
+          <td style="text-align: right">623,881</td>
+          <td style="text-align: right">730,079</td>
+          <td style="text-align: right">-17%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Villavicencio</td>
+          <td style="text-align: right">10</td>
+          <td style="text-align: right">593,273</td>
+          <td style="text-align: right">662,440</td>
+          <td style="text-align: right">-12%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Valledupar</td>
+          <td style="text-align: right">11</td>
+          <td style="text-align: right">575,225</td>
+          <td style="text-align: right">606,669</td>
+          <td style="text-align: right">-5%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bello</td>
+          <td style="text-align: right">12</td>
+          <td style="text-align: right">570,329</td>
+          <td style="text-align: right">559,863</td>
+          <td style="text-align: right">2%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Santa Marta</td>
+          <td style="text-align: right">13</td>
+          <td style="text-align: right">566,650</td>
+          <td style="text-align: right">520,002</td>
+          <td style="text-align: right">8%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ibagué</td>
+          <td style="text-align: right">14</td>
+          <td style="text-align: right">546,003</td>
+          <td style="text-align: right">485,631</td>
+          <td style="text-align: right">11%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Montería</td>
+          <td style="text-align: right">15</td>
+          <td style="text-align: right">531,424</td>
+          <td style="text-align: right">455,678</td>
+          <td style="text-align: right">14%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pereira</td>
+          <td style="text-align: right">16</td>
+          <td style="text-align: right">482,824</td>
+          <td style="text-align: right">429,333</td>
+          <td style="text-align: right">11%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Manizales</td>
+          <td style="text-align: right">17</td>
+          <td style="text-align: right">459,262</td>
+          <td style="text-align: right">405,975</td>
+          <td style="text-align: right">12%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pasto</td>
+          <td style="text-align: right">18</td>
+          <td style="text-align: right">415,937</td>
+          <td style="text-align: right">385,117</td>
+          <td style="text-align: right">7%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Neiva</td>
+          <td style="text-align: right">19</td>
+          <td style="text-align: right">388,229</td>
+          <td style="text-align: right">366,375</td>
+          <td style="text-align: right">6%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Palmira</td>
+          <td style="text-align: right">20</td>
+          <td style="text-align: right">359,888</td>
+          <td style="text-align: right">349,438</td>
+          <td style="text-align: right">3%</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="qué-significa-esto">¿Qué significa esto?</h3>
 <p>Es muy sorprendente saber que Cartagena debería tener una población cercana a 1 millón solo por ser la quinta ciudad más grande del país, y que Ibagué debería tener alrededor de 500 mil habitantes simplemente por estar en el puesto 14. Todo esto de una fórmula muy simple:</p>
@@ -415,7 +413,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

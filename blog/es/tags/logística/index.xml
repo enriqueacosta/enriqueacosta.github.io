@@ -4,17 +4,16 @@
     <title>Logística on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/log%C3%ADstica/</link>
     <description>Recent content in Logística on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/log%C3%ADstica/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 23 Dec 2021 19:40:37 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/log%C3%ADstica/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>
       <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</guid>
-      <description>Prometí en otra entrada de blog que mostraría el código en TikZ que produce la siguiente figura:
-Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+      <description>&lt;p&gt;Prometí en &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/&#34;&gt;otra entrada de blog&lt;/a&gt; que mostraría el código en TikZ que produce la siguiente figura:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;LogisticFunctionParams.es.png&#34; width=&#34;450&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Lo que me gusta mucho de TikZ y su paquete &lt;code&gt;pfgplots&lt;/code&gt; es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por&#xA;$$&#xA;f(t) = \frac{1}{1+e^{-4(x-2.5)}}.&#xA;$$&#xA;Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

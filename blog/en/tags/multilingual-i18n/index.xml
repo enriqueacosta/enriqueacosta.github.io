@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Multilingual i18n on Enrique Acosta Jaramillo</title>
+    <title>Multilingual I18n on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</link>
-    <description>Recent content in Multilingual i18n on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Multilingual I18n on Enrique Acosta Jaramillo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jan 2024 10:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating This Blog Part 4: Adding a TikZ Gallery</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</link>
       <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-4/</guid>
-      <description>TikZ is a programing language for creating images based on LaTeX. One writes TikZ &amp;ldquo;programing code&amp;rdquo; in a plain text file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &amp;ldquo;drawing instructions for a human&amp;rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates.</description>
+      <description>&lt;p&gt;TikZ is a programing language for creating images based on &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. One writes TikZ &amp;ldquo;programing code&amp;rdquo; in a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Plain_text&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;plain text&lt;/a&gt; file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &amp;ldquo;drawing instructions for a human&amp;rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates. When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating This Blog Part 2: More Multilingual Support Using i18n</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</link>
       <pubDate>Tue, 01 Feb 2022 21:12:04 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/</guid>
-      <description>This is a follow-up to a previous post describing how I set up this blog. Here I describe setting up more elaborate multilingual support using i18n.
-Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n Hugo comes built in with i18n support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &amp;ldquo;multilingual snippets&amp;rdquo;. To start using it all I had to do was create the files en.</description>
+      <description>&lt;p&gt;This is a follow-up to a &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/&#34;&gt;previous post&lt;/a&gt; describing how I set up this blog. Here I describe setting up more elaborate multilingual support using &#xA;&lt;a href=&#34;https://github.com/nicksnyder/go-i18n&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;i18n&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;multilingual-text-snippets-using-i18n&#34;&gt;Multilingual Text &amp;ldquo;Snippets&amp;rdquo; Using i18n&lt;/h2&gt;&#xA;&lt;p&gt;Hugo comes built in with &lt;code&gt;i18n&lt;/code&gt; support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &amp;ldquo;multilingual snippets&amp;rdquo;. To start using it all I had to do was create the files &lt;code&gt;en.toml&lt;/code&gt; and &lt;code&gt;es.toml&lt;/code&gt; in the already-existing &lt;code&gt;i18n&lt;/code&gt; folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &amp;ldquo;translation dictionaries&amp;rdquo;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

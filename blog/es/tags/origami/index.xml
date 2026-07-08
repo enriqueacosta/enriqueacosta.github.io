@@ -4,29 +4,23 @@
     <title>Origami on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/origami/</link>
     <description>Recent content in Origami on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/origami/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/origami/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flor de origami</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/origami-flower/</link>
       <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/origami-flower/</guid>
-      <description>Esta es otra entrada sobre Origami. Me interesé sobre cómo hacer diagramas de instrucciones de Origami en otra entrada, y decidí intentar hacer los diagramas de instrucciones para una flor que inventé hace bastante tiempo.
-El hacer estos diagramas me ha ayudado a apreciar más estos diagramas de Origami. ¡Es todo un arte! (¡tanto el Origami, como el hacer los diagramas de instrucciones!).
-Ahora me doy cuenta que hacer estos diagramas involucra pensar bastante.</description>
+      <description>&lt;p&gt;Esta es otra entrada sobre Origami. Me interesé sobre cómo hacer diagramas de instrucciones de Origami en &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/paper-plane/&#34;&gt;otra entrada&lt;/a&gt;, y decidí intentar hacer los diagramas de instrucciones para una flor que inventé hace bastante tiempo.&lt;/p&gt;&#xA;&lt;p&gt;El hacer estos diagramas me ha ayudado a apreciar más estos diagramas de Origami. ¡Es todo un arte! (¡tanto el Origami, como el hacer los diagramas de instrucciones!).&lt;/p&gt;&#xA;&lt;p&gt;Ahora me doy cuenta que hacer estos diagramas involucra pensar bastante. En particular:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Un avión de papel</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/paper-plane/</link>
       <pubDate>Wed, 03 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/paper-plane/</guid>
-      <description>Tratando de recordar cómo se hace el avión de papel con el récord mundial de distancia, ¡me inventé un avión que vuela muy bien!
-Es bastante parecido al avión del récord, pero no es el mismo. Creo que la distribución del peso es distinta, por lo que puede que sea mejor planeando (¿más no rompiendo records?). Planea muy bien.
-Estas son las instrucciones que cree usando IPE, un editor de imágenes vectoriales open source, con soporte para LaTeX, que disfruto mucho.</description>
+      <description>&lt;p&gt;Tratando de recordar cómo se hace el avión de papel con el récord mundial de distancia, ¡me inventé un avión que vuela muy bien!&lt;/p&gt;&#xA;&lt;p&gt;Es bastante parecido al avión del récord, pero no es el mismo. Creo que la distribución del peso es distinta, por lo que puede que sea mejor planeando (¿más no rompiendo records?). Planea muy bien.&lt;/p&gt;&#xA;&lt;p&gt;Estas son las instrucciones que cree usando &#xA;&lt;a href=&#34;https://ipe.otfried.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IPE&lt;/a&gt;, un editor de imágenes vectoriales open source, con soporte para LaTeX, que disfruto mucho. También se puede descargar en formato &#xA;&lt;a href=&#34;Avion[IPE].pdf&#34;&gt;pdf&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

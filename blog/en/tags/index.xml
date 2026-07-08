@@ -4,340 +4,268 @@
     <title>Tags on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/</link>
     <description>Recent content in Tags on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zipf&#39;s Law</title>
+      <link>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</link>
+      <pubDate>Fri, 11 Jul 2025 22:49:34 -0500</pubDate>
+      <guid>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Tikz</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/tikz/</link>
       <pubDate>Wed, 25 Jun 2025 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/tikz/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Zipf&#39;s law</title>
-      <link>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</link>
-      <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
-      
-      <guid>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>ChatGPT</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/chatgpt/</link>
       <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/chatgpt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HTML</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/html/</link>
       <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/html/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>LaTeX</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
       <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/latex/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Blog setup</title>
+      <title>Blog Setup</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</link>
       <pubDate>Wed, 02 Oct 2024 21:12:04 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/blog-setup/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hugo</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/hugo/</link>
       <pubDate>Wed, 02 Oct 2024 21:12:04 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Listing Tags</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</link>
       <pubDate>Wed, 02 Oct 2024 21:12:04 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/listing-tags/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Multilingual i18n</title>
+      <title>Multilingual I18n</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</link>
       <pubDate>Sun, 14 Jan 2024 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/multilingual-i18n/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Asymptotics</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/asymptotics/</link>
       <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/asymptotics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Complex Functions</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</link>
       <pubDate>Mon, 11 Dec 2023 10:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/complex-functions/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Conformal Maps</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Loxodromic</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/loxodromic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>MacOS Grapher</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/macos-grapher/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Möbius transformations</title>
+      <title>Möbius Transformations</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/m%C3%B6bius-transformations/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Curves</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/curves/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/curves/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>IPE</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/ipe/</link>
       <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/ipe/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Origami</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/origami/</link>
       <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/origami/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>converting png to pdf</title>
+      <title>Converting Png to Pdf</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/converting-png-to-pdf/</link>
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/converting-png-to-pdf/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Illustrative Mathematics</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</link>
       <pubDate>Mon, 07 Mar 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/illustrative-mathematics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mathematics Curriculum</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/mathematics-curriculum/</link>
       <pubDate>Mon, 07 Mar 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/mathematics-curriculum/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Conditional Probability</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/conditional-probability/</link>
       <pubDate>Mon, 28 Feb 2022 15:25:05 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/conditional-probability/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Covid-19</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/covid-19/</link>
       <pubDate>Mon, 28 Feb 2022 15:25:05 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/covid-19/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Desmos</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/desmos/</link>
       <pubDate>Mon, 28 Feb 2022 15:25:05 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/desmos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Medical tests</title>
+      <title>Medical Tests</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/medical-tests/</link>
       <pubDate>Mon, 28 Feb 2022 15:25:05 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/medical-tests/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Climate Change</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/climate-change/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/climate-change/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/data/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/data/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Exponential</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/exponential/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/exponential/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mauna Loa</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/mauna-loa/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/mauna-loa/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Quadratic</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/quadratic/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/quadratic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Arecibo Message</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/arecibo-message/</link>
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/arecibo-message/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Processing</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/processing/</link>
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/processing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Translation</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/translation/</link>
       <pubDate>Mon, 17 Jan 2022 18:25:45 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/translation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Logistic</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/logistic/</link>
       <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/logistic/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Delta variant</title>
+      <title>Delta Variant</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/delta-variant/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/delta-variant/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Katex</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/katex/</link>
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/katex/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Algebraic Geometry</title>
       <link>https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/tags/algebraic-geometry/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

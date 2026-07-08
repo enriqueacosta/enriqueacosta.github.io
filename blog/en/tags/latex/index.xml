@@ -4,48 +4,37 @@
     <title>LaTeX on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/latex/</link>
     <description>Recent content in LaTeX on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Cool HTML Tools with ChatGPT: My LaTeX MathJax Previewer</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</link>
       <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/latex-mathjax-previewer/</guid>
-      <description>Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? A live LaTeX MathJax Previewer — a simple, responsive site where you can write LaTeX and instantly see how it renders.
-The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered.</description>
+      <description>&lt;p&gt;Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/LaTeXMathJaxPreview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A live LaTeX MathJax Previewer&lt;/a&gt; — a simple, responsive site where you can write LaTeX and instantly see how it renders.&lt;/p&gt;&#xA;&lt;p&gt;The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered. There are several sites that already do this, but I wanted some specific features I could not find anywhere else. I told ChatGPT what I wanted — something that supports inline math, display math, and full LaTeX mode — and within minutes, I had a working prototype.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Gif Animation of Family of Algebraic Curves using Tikz and Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-algebraic-curve-animation/</guid>
-      <description>The animation above is a gif file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.
-There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:
-LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;gnuplotTest.gif&#34; width=&#34;500px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The animation above is a &lt;code&gt;gif&lt;/code&gt; file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.&lt;/p&gt;&#xA;&lt;p&gt;There were two &amp;ldquo;complicated pieces&amp;rdquo; to sort out:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).&lt;/li&gt;&#xA;&lt;li&gt;Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly &lt;code&gt;gif&lt;/code&gt; format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Given these complications, one may very well wonder why I kept trying to do it. My answer to that is that TikZ is fantastic in several ways:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>TikZ Web Export (pdf to png or svg)</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</link>
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-web-export/</guid>
-      <description>TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a plain text file) and gets as output a beautiful looking pdf. For a detailed example, you can see this post in which I show the TikZ code of the following image, or this other post in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</description>
+      <description>&lt;p&gt;TikZ is, in very concise terms, a programing language to generate images based on &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. One runs PdfLateX on a TikZ source file (a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Plain_text&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;plain text&lt;/a&gt; file) and gets as output a beautiful looking pdf. &lt;/p&gt;&#xA;&lt;p&gt;For a detailed example, you can see this &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/&#34;&gt;post&lt;/a&gt; in which I show the TikZ code of the following image, or this other &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/&#34;&gt;post&lt;/a&gt; in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tikz 3D - Twisted Cubic</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/</guid>
-      <description>As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the Twisted Cubic is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;
-In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
-As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</description>
+      <description>&lt;p&gt;As Joe Harris mentions in his book &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, the &lt;em&gt;Twisted Cubic&lt;/em&gt; is &amp;ldquo;everybody&amp;rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;In affine space, it is given by the image of&#xA;$$t\mapsto(t,t^2,t^3).$$&lt;/p&gt;&#xA;&lt;p&gt;As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

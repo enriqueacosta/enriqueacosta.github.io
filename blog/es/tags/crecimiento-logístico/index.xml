@@ -4,17 +4,16 @@
     <title>Crecimiento Logístico on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/crecimiento-log%C3%ADstico/</link>
     <description>Recent content in Crecimiento Logístico on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/crecimiento-log%C3%ADstico/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 15 Dec 2021 18:48:00 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/crecimiento-log%C3%ADstico/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>El % de casos de Covid de la variante Delta creció como una función logística</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/</guid>
-      <description>Hoy, como parte de mi trabajo, me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.
-La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de Our World In Data. Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.</description>
+      <description>&lt;p&gt;Hoy, como parte de mi trabajo,  me topé con el sorprendente hecho de que en muchos países el porcentaje de los casos Covid-19 que son de la variante delta creció de 0% a 100% de forma casi perfectamente logística durante el año 2021.&lt;/p&gt;&#xA;&lt;p&gt;La siguiente gráfica, de la cual surge todo esto, se puede ver de forma interactiva al seguir este link de  &#xA;&lt;a href=&#34;https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;amp;time=2021-02-08..2021-11-29&amp;amp;facet=none&amp;amp;uniformYAxis=0&amp;amp;pickerSort=asc&amp;amp;pickerMetric=location&amp;amp;Metric=Delta&amp;#43;variant&amp;#43;%28share%29&amp;amp;Interval=Weekly&amp;amp;Relative&amp;#43;to&amp;#43;Population=true&amp;amp;Align&amp;#43;outbreaks=false&amp;amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Our World In Data&lt;/a&gt;. &lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;DeltaShareLogisitc.png&#34; width=&#34;100%&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Imagen descargada de Our World in Data, acceso abierto bajo la licencia Creative Commons BY.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

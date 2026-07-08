@@ -4,18 +4,16 @@
     <title>Processing on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/processing/</link>
     <description>Recent content in Processing on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/processing/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 03 Feb 2022 18:56:42 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creación de una imagen vectorial del mensaje Arecibo para imprimir</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</link>
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</guid>
-      <description>Hace poco recordé el mensaje de Arecibo y descubrí que el artículo de Wikipedia es excelente. La versión en inglés es un poco más completa. Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.
-Este es el mensaje:
-Mensaje de Arecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.</description>
+      <description>&lt;p&gt;Hace poco recordé el mensaje de Arecibo y descubrí que el &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/Mensaje_de_Arecibo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;artículo de Wikipedia&lt;/a&gt; es excelente. La versión en &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arecibo_message&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;inglés&lt;/a&gt; es un poco más completa. Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.&lt;/p&gt;&#xA;&lt;p&gt;Este es el mensaje:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;240px-Arecibo_message.svg.png&#34;&#xA;    alt=&#34;Mensaje de Arecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.0&#34; width=&#34;200px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Mensaje de Arecibo. Imagen de &#xA;&lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=365130&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia&lt;/a&gt; elaborada por Arne Nordmann (norro), CC BY-SA 3.0&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

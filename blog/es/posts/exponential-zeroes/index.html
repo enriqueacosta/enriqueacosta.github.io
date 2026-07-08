@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -123,10 +123,9 @@
   
   <div>
   <p>En 2012, creé la siguiente animación que muestra los ceros complejos de los polinomios de Taylor de la función exponencial $e^z$. En esta entrada, explicaré qué significa y por qué es interesante.</p>
-<figure><img src="Zeros-Exponential-Animation.gif" width="400px"/>
+<figure><img src="Zeros-Exponential-Animation.gif" width="400px">
 </figure>
 
-<!-- raw HTML omitted -->
 <p>También mostraré el código en 
 <a href="https://www.sagemath.org" target="_blank" rel="noopener">Sage</a> para recrear la animación (que originalmente creé en Mathematica en 2012). A diferencia de Mathematica, que no es gratuito ni de código abierto, Sage es un sistema de software matemático de código abierto basado en Python que se construye sobre muchos paquetes de código abierto existentes.</p>
 <p>¡Empecemos!</p>
@@ -135,9 +134,9 @@
 $$2+3i,\quad\text{o}\quad -1+\sqrt{2}i,\quad\text{o}\quad 1-5i$$
 en donde $i=\sqrt{-1}$. Una forma de pensar en los números complejos es considerarlos como &ldquo;números 2D&rdquo;. La parte sin la $i$ nos dice la coordenada horizontal (parte real) y la parte con la $i$ nos dice la coordenada vertical (parte imaginaria), como en la imagen:</p>
 <figure><img src="complexExpZeros-ComplexNumbers.es.svg"
-         alt="Ejemplos de números complejos." width="600px"/><figcaption>
-            <p>Ejemplos de números complejos.</p>
-        </figcaption>
+    alt="Ejemplos de números complejos." width="600px"><figcaption>
+      <p>Ejemplos de números complejos.</p>
+    </figcaption>
 </figure>
 
 <h2 id="la-función-exponencial-compleja">La función exponencial compleja</h2>
@@ -185,15 +184,15 @@ $$</p>
 <p>Los polinomios $p_n(z)$ son aproximaciones de $e^z$ que mejoran a medida que $n$ aumenta.</p>
 <p>El polinomio $p_n(z)$ tiene $n$ ceros complejos, que son las soluciones de la ecuación $p_n(z) = 0$. (Cualquier polinomio de grado $n$ tiene exactamente $n$ ceros complejos. Este hecho es tan importante que se llama &ldquo;el Teorema Fundamental del Álgebra&rdquo;).</p>
 <p>Estos son los ceros para $n=3$ (como era de esperar, se ven 3 puntos: los 3 números complejos que satisfacen $p_3(z)=0$)</p>
-<figure><img src="complexExpZeros-n03-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n03-unscaled.png" width="450px">
 </figure>
 
 <p>Y estos son los ceros para $n=5$ (como era de esperar, vemos 5 puntos)
-<figure><img src="complexExpZeros-n05-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n05-unscaled.png" width="450px">
 </figure>
 </p>
 <p>Y estos son los ceros para $n=20$. ¡Interesante, se ven muy organizados!
-<figure><img src="complexExpZeros-n20-unscaled.png" width="450px"/>
+<figure><img src="complexExpZeros-n20-unscaled.png" width="450px">
 </figure>
 </p>
 <h3 id="cómo-se-hicieron-estas-imágenes">Cómo se hicieron estas imágenes</h3>
@@ -228,7 +227,7 @@ $$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>myPlot<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#34;myFilename.png&#34;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
 </span></span></code></pre></div><h2 id="la-animación">La animación</h2>
 <p>Esta es la animación de los ceros de $p_n(z)$ a medida que $n$ aumenta.</p>
-<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px"/>
+<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px">
 </figure>
 
 <p>Con esto logramos el objetivo de esta entrada de blog: entender la animación del inicio y recrearla esta vez con Sage y con una resolución más alta.</p>
@@ -278,14 +277,14 @@ $$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>convert -delay <span style="color:#ae81ff">20</span> frame*.png -loop <span style="color:#ae81ff">0</span> movie.gif
 </span></span></code></pre></div><h2 id="la-estructura-de-fondo-curva-de-szegő">La estructura de fondo: curva de Szegő</h2>
 <p>Hay muchas cosas interesantes que se pueden explorar a partir de la animación. Por ejemplo, los ceros parecen formar una &ldquo;onda&rdquo; que crece alejándose del origen.</p>
-<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px"/>
+<figure><img src="complexExpZeros-movie-unscaled.gif" width="550px">
 </figure>
 
 <p>¿Podemos decir algo sobre su forma?</p>
 <p>Esta pregunta fue respondida por Gábor Szegő en 1924, ¡sin computadoras!</p>
 <p>Szegő descubrió que la forma correcta de evitar que los ceros se alejen al infinito es escalarlos por un factor de $n$. Cuando uno hace esto, los ceros convergen a una curva en forma de &ldquo;lágrima&rdquo;.</p>
 <p>Esta está la animación con los factores de escala, con $n$ entre $1$ y $60$ (después de $n=60$, Sage tiene problemas para encontrar todos los ceros numéricamente).</p>
-<figure><img src="complexExpZeros-movie-scaled.gif" width="100%"/>
+<figure><img src="complexExpZeros-movie-scaled.gif" width="100%">
 </figure>
 
 <p>¡Tanto orden oculto!</p>
@@ -294,8 +293,7 @@ $$
 \left|ze^{1-z}\right|=1,\quad\text{para } |z|\leq 1
 $$</p>
 <p>y esta está su gráfica (la ecuación cartesiana es $x^{2}+y^{2}=e^{2(x-1)}$)</p>
-<!-- raw HTML omitted -->
-<figure><img src="complexExpZeros-SzegoCurve.svg" width="100%"/>
+<figure><img src="complexExpZeros-SzegoCurve.svg" width="100%">
 </figure>
 
 <h3 id="código-sage-para-la-versión-con-escala-para-ver-la-curva-de-szegő">Código Sage para la versión con escala para ver la curva de Szegő</h3>
@@ -340,7 +338,7 @@ $$</p>
 </ol>
 <h2 id="otras-imágenes-interesantes">Otras imágenes interesantes</h2>
 <p>Con el código disponible, es fácil crear variaciones interesantes de la imagen original. Por ejemplo, esta es la gráfica con todos los ceros para $n=1$, $n=2$, &hellip;, $n=40$ al mismo tiempo, coloreados según el valor de $n$.</p>
-<figure><img src="complexExpZeros-allPoints.png" width="100%"/>
+<figure><img src="complexExpZeros-allPoints.png" width="100%">
 </figure>
 
 <p>Este es el código que produce esa imagen:</p>
@@ -363,7 +361,7 @@ $$</p>
 </span></span><span style="display:flex;"><span>    )
 </span></span><span style="display:flex;"><span>show(myPlot)
 </span></span></code></pre></div><p>Y acá está con colores de arcoíris (cada color corresponde a un valor de $n$).</p>
-<p><figure><img src="complexExpZeros-allPoints-rainbow.png" width="100%"/>
+<p><figure><img src="complexExpZeros-allPoints-rainbow.png" width="100%">
 </figure>
 
 Código en Sage:</p>
@@ -402,7 +400,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

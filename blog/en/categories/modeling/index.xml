@@ -4,38 +4,37 @@
     <title>Modeling on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/categories/modeling/</link>
     <description>Recent content in Modeling on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jun 2025 12:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/categories/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zipf’s Law, City Sizes, and Why the Largest City Cheats: A Global Data Experiment</title>
+      <link>https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/</link>
+      <pubDate>Fri, 11 Jul 2025 22:49:34 -0500</pubDate>
+      <guid>https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/</guid>
+      <description>&lt;p&gt;Zipf’s Law claims that city populations decrease according to a power law:&#xA;$$&#xA;P(r) = C r^{-\alpha}&#xA;$$&#xA;where $P(r)$ is the population of the $r$-th largest city, and $C, \alpha$ are fitted constants. Classic theory suggests $\alpha \approx 1$, but this varies from region to region.&lt;/p&gt;&#xA;&lt;p&gt;However, when one plays around finding fits for countries, one often finds that the capital city is often an outlier. This has been extensively noted (see for example &lt;em&gt;Zipf&amp;rsquo;s Law for Cities: An Explanation&lt;/em&gt; from Xavier Gabaix, 1999, from The Quarterly Journal of Economics).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Zipf’s Law for Colombian City Sizes in 2025</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</link>
       <pubDate>Tue, 10 Jun 2025 12:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</guid>
-      <description>Zipf’s Law for populations says that city populations decrease according to a simple power law: $$ P(r) = \frac{C}{r^{\alpha}} $$ Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.
-More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on.</description>
+      <description>&lt;p&gt;Zipf’s Law for populations says that city populations decrease according to a simple power law:&#xA;$$&#xA;P(r) = \frac{C}{r^{\alpha}}&#xA;$$&#xA;Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.&lt;/p&gt;&#xA;&lt;p&gt;More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on. Data from many countries suggests that $\alpha \approx 1$, but in practice, this number can vary depending on the country or region.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mauna Loa CO2 Growing Super-Exponentially?</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/</link>
       <pubDate>Wed, 09 Feb 2022 16:02:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/mauna-loa-superexponential/</guid>
-      <description>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our Applied Calculus book), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &amp;ldquo;super-exponential&amp;rdquo; function of the form $$f(t)=P_0(b+mt)^t.$$
-Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &amp;ldquo;almost exponential&amp;rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this: $$g(t)= C+Ba^{t}.</description>
+      <description>&lt;p&gt;As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our &#xA;&lt;a href=&#34;https://www.wiley.com/en-us/Applied&amp;#43;Calculus%2C&amp;#43;7th&amp;#43;Edition-p-9781119799085&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Applied Calculus book&lt;/a&gt;), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &amp;ldquo;super-exponential&amp;rdquo; function of the form&#xA;$$f(t)=P_0(b+mt)^t.$$&lt;/p&gt;&#xA;&lt;p&gt;Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &amp;ldquo;almost exponential&amp;rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:&#xA;$$g(t)= C+Ba^{t}.$$&#xA;This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then began to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &amp;ldquo;super-exponential&amp;rdquo; growth.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Covid-19 Delta Variant % Share of Cases Grew Logistically</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</link>
       <pubDate>Wed, 15 Dec 2021 18:48:00 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/</guid>
-      <description>Today, as part of my work, I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
-The graph below, which started all of this, should come up if one follows this Our World In Data link.
-Image downloaded from Our World in Data, open access under the Creative Commons BY license.</description>
+      <description>&lt;p&gt;Today, as part of my work,  I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.&lt;/p&gt;&#xA;&lt;p&gt;The graph below, which started all of this, should come up if one follows this&#xA;&#xA;&lt;a href=&#34;https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;amp;time=2021-02-08..2021-11-29&amp;amp;facet=none&amp;amp;uniformYAxis=0&amp;amp;pickerSort=asc&amp;amp;pickerMetric=location&amp;amp;Metric=Delta&amp;#43;variant&amp;#43;%28share%29&amp;amp;Interval=Weekly&amp;amp;Relative&amp;#43;to&amp;#43;Population=true&amp;amp;Align&amp;#43;outbreaks=false&amp;amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Our World In Data link&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;DeltaShareLogisitc.png&#34; width=&#34;100%&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Image downloaded from Our World in Data, open access under the Creative Commons BY license.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

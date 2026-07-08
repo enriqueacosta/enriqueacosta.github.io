@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Currículo de Matemáticas on Enrique Acosta Jaramillo</title>
+    <title>Currículo De Matemáticas on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/curr%C3%ADculo-de-matem%C3%A1ticas/</link>
-    <description>Recent content in Currículo de Matemáticas on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 19 Mar 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/curr%C3%ADculo-de-matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Currículo De Matemáticas on Enrique Acosta Jaramillo</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 19 Mar 2022 14:19:56 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/curr%C3%ADculo-de-matem%C3%A1ticas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Illustrative Mathematics: Ejemplos de Buenas Actividades</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/im-good-examples/</link>
       <pubDate>Sat, 19 Mar 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/im-good-examples/</guid>
-      <description>Los Recursos Educativos de Illustrative Mathematics (Matemáticas Ilustrativas) son una colección de planes de lecciones de Matemáticas, problemas de práctica y materiales de apoyo familiar para todos los grados K&amp;ndash;12 del currículo especificado por el Common Core State Standards de Matemáticas en Estados Unidos.
-Estos recursos fueron creados durante los años 2016&amp;ndash;2021 y tienen la muy buena Licencia de uso Creative Commons Attribution 4.0 (la misma de este blog) que permite compartirlos y adaptarlos libremente siempre y cuando uno mantenga la misma Licencia y se le dé debido crédito a los creadores.</description>
+      <description>&lt;p&gt;Los Recursos Educativos de Illustrative Mathematics (Matemáticas Ilustrativas) son una colección de planes de lecciones de Matemáticas, problemas de práctica y materiales de apoyo familiar para &lt;em&gt;todos&lt;/em&gt; los grados K&amp;ndash;12 del currículo especificado por el &#xA;&lt;a href=&#34;http://www.corestandards.org/Math/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Common Core State Standards&lt;/a&gt; de Matemáticas en Estados Unidos.&lt;/p&gt;&#xA;&lt;p&gt;Estos recursos fueron creados durante los años 2016&amp;ndash;2021 y tienen la muy buena Licencia de uso &#xA;&lt;a href=&#34;https://creativecommons.org/licenses/by/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Creative Commons Attribution 4.0&lt;/a&gt; (la misma de este blog) que permite compartirlos y adaptarlos libremente siempre y cuando uno mantenga la misma Licencia y se le dé debido crédito a los creadores.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

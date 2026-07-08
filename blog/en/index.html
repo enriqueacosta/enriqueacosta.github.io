@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,7 +87,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -105,11 +105,30 @@
   
       <article class="post">
         <h1 class="post-title">
+          <a href="https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/">Zipf’s Law, City Sizes, and Why the Largest City Cheats: A Global Data Experiment</a>
+        </h1>
+        <time datetime="2025-07-11T22:49:34-0500" class="post-date">July 11, 2025</time>
+        
+        <p>Zipf’s Law claims that city populations decrease according to a power law:
+$$
+P(r) = C r^{-\alpha}
+$$
+where $P(r)$ is the population of the $r$-th largest city, and $C, \alpha$ are fitted constants. Classic theory suggests $\alpha \approx 1$, but this varies from region to region.</p>
+<p>However, when one plays around finding fits for countries, one often finds that the capital city is often an outlier. This has been extensively noted (see for example <em>Zipf&rsquo;s Law for Cities: An Explanation</em> from Xavier Gabaix, 1999, from The Quarterly Journal of Economics).</p>
+        
+        <div class="read-more-link">
+          <a href="/blog/en/posts/zipfcountries-predict6thcity/">Read More ...</a>
+        </div>
+        
+      </article>
+    
+      <article class="post">
+        <h1 class="post-title">
           <a href="https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/">Tikz Template for Mathematical Figures: Example with Double Number Lines</a>
         </h1>
         <time datetime="2025-06-25T10:49:34-0500" class="post-date">June 25, 2025</time>
         
-        In this post I explain how I built a system using TikZ (a computer language for drawing mathematical figures rather than dragging shapes around) to produce figures efficiently and in a way that is easy to maintain. The system is a template &ndash; a bit of reusable structure &ndash; for making double number line diagrams, which are a visual tool used in many modern mathematics resources to aid in learning proportional reasoning (think of percentages, ratios, or recipes).
+        <p>In this post I explain how I built a system using TikZ (a computer language for drawing mathematical figures rather than dragging shapes around) to produce figures efficiently and in a way that is easy to maintain. The system is a template &ndash; a bit of reusable structure &ndash; for making <strong>double number line diagrams</strong>, which are a visual tool used in many modern mathematics resources to aid in learning proportional reasoning (think of percentages, ratios, or recipes).</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/tikz-doublenumline/">Read More ...</a>
@@ -123,8 +142,12 @@
         </h1>
         <time datetime="2025-06-10T12:49:34-0500" class="post-date">June 10, 2025</time>
         
-        Zipf’s Law for populations says that city populations decrease according to a simple power law: $$ P(r) = \frac{C}{r^{\alpha}} $$ Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.
-More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on.
+        <p>Zipf’s Law for populations says that city populations decrease according to a simple power law:
+$$
+P(r) = \frac{C}{r^{\alpha}}
+$$
+Here, $P(r)$ is the population of the $r$-th largest city in a given region, and $C$ and $\alpha$ are fitted constants.</p>
+<p>More concretely, this says that the population of the largest city (rank $r=1$) is approximated by $P(1)=C/1^\alpha=C$, the population of the second largest city (rank $r=2$) is approximated by $P(2)=C/2^\alpha$, the population of the third by $P(3)=C/3^\alpha$, and so on. Data from many countries suggests that $\alpha \approx 1$, but in practice, this number can vary depending on the country or region.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/zipfcolombia2025/">Read More ...</a>
@@ -138,8 +161,9 @@ More concretely, this says that the population of the largest city (rank $r=1$) 
         </h1>
         <time datetime="2025-05-22T22:49:34-0500" class="post-date">May 22, 2025</time>
         
-        Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? A live LaTeX MathJax Previewer — a simple, responsive site where you can write LaTeX and instantly see how it renders.
-The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered.
+        <p>Over the past couple of months, I have been experimenting with building self-contained, small, useful web tools with the help of ChatGPT. All of it lives inside a single HTML file. The result? 
+<a href="https://enriqueacosta.github.io/LaTeXMathJaxPreview" target="_blank" rel="noopener">A live LaTeX MathJax Previewer</a> — a simple, responsive site where you can write LaTeX and instantly see how it renders.</p>
+<p>The idea came from a need I had: sometimes I just want to share how to code some math formula using LaTeX and what it looks like when rendered. There are several sites that already do this, but I wanted some specific features I could not find anywhere else. I told ChatGPT what I wanted — something that supports inline math, display math, and full LaTeX mode — and within minutes, I had a working prototype.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/latex-mathjax-previewer/">Read More ...</a>
@@ -153,7 +177,9 @@ The idea came from a need I had: sometimes I just want to share how to code some
         </h1>
         <time datetime="2024-01-14T10:49:34-0500" class="post-date">January 14, 2024</time>
         
-        TikZ is a programing language for creating images based on LaTeX. One writes TikZ &ldquo;programing code&rdquo; in a plain text file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &ldquo;drawing instructions for a human&rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates.
+        <p>TikZ is a programing language for creating images based on 
+<a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One writes TikZ &ldquo;programing code&rdquo; in a 
+<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file, and gets as output a pdf image file. The TikZ programming language was thought out to enable the code for a figure to be surprisingly human-readable. What I mean by this is that the reader can imagine the figure from the code because it looks like &ldquo;drawing instructions for a human&rdquo; instead of a bunch of obscure commands with lots hard to imagine numbers and coordinates. When carefully crafted, the TikZ code for an image can also be very easy to adjust to produce different images.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/creating-this-blog-part-4/">Read More ...</a>
@@ -167,8 +193,12 @@ The idea came from a need I had: sometimes I just want to share how to code some
         </h1>
         <time datetime="2023-12-11T10:49:34-0500" class="post-date">December 11, 2023</time>
         
-        Here is a cool animation I made in 2012.
-The animation shows the complex zeros of the Taylor polynomials of the exponential function $e^z$. In this post I will explain what this means, and why it is interesting. I will also show the code in Sage to recreate the animation (which I originaly created in Mathematica in 2012). Unlike Mathematica, which is not free or open source, Sage is a Python-based open source mathematics software system that builds on top of many existing open-source packages.
+        <p>Here is a cool animation I made in 2012.</p>
+<figure><img src="Zeros-Exponential-Animation.gif" width="400px">
+</figure>
+
+<p>The animation shows the complex zeros of the Taylor polynomials of the exponential function $e^z$. In this post I will explain what this means, and why it is interesting. I will also show the code in 
+<a href="https://www.sagemath.org" target="_blank" rel="noopener">Sage</a> to recreate the animation (which I originaly created in Mathematica in 2012). Unlike Mathematica, which is not free or open source, Sage is a Python-based open source mathematics software system that builds on top of many existing open-source packages.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/exponential-zeroes/">Read More ...</a>
@@ -182,11 +212,22 @@ The animation shows the complex zeros of the Taylor polynomials of the exponenti
         </h1>
         <time datetime="2023-11-19T22:49:34-0500" class="post-date">November 19, 2023</time>
         
-        In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired coloring book using complex functions and Möbius transformations.
-Here is the figure:
-Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.
-Here is one of the way we colored them with my sons!
-I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles.
+        <p>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">coloring book</a> using complex functions and Möbius transformations.</p>
+<p>Here is the figure:</p>
+<figure><img src="loxodromic-coloring-patterns-crop.jpg"
+    alt="Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris." width="600px"><figcaption>
+      <p>Page from 
+<a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> by  Alex Bellos and Edmund Harris.</p>
+    </figcaption>
+</figure>
+
+<p>Here is one of the way we colored them with my sons!</p>
+<figure><img src="loxodromic-coloring-elias.jpg" width="600px">
+</figure>
+
+<p>I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles. Because of the right angles I guessed there should be a 
+<a href="https://en.wikipedia.org/wiki/Conformal_map" target="_blank" rel="noopener">complex conformal map</a> involved, and I wanted to figure out how it was constructed and what the equations for the functions that produced this curvy grid looked like.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/loxodromic-spirals/">Read More ...</a>
@@ -200,9 +241,16 @@ I find the figure mesmerizing with its slight lack of total symmetry, spirals th
         </h1>
         <time datetime="2022-09-22T14:19:56-0500" class="post-date">September 22, 2022</time>
         
-        The animation above is a gif file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.
-There were two &ldquo;complicated pieces&rdquo; to sort out:
-LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$) because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).
+        <figure><img src="gnuplotTest.gif" width="500px">
+</figure>
+
+<p>The animation above is a <code>gif</code> file that was created with LaTeX and TikZ. I had been trying to do something like this with TikZ unsuccessfully for a long time and I finally figured out how to do it. In this blog post I describe all the steps.</p>
+<p>There were two &ldquo;complicated pieces&rdquo; to sort out:</p>
+<ol>
+<li>LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots of the form $f(x,y)=g(x,y)$ with polynomial $f$ and $g$)  because it requires precise numerical calculation which LaTeX is not very good at (being a typesetting system, after all).</li>
+<li>Latex and TikZ are also not very good at animations, and do not produce gifs. There seems to be some svg animation functionality, and there seems to have been some pdf animation functionality, but neither browsers or pdf viewers have provided good support for these. On the other hand, the web-friendly <code>gif</code> format is the de-facto standard for providing low-res animations on the web (think of rotating 3D logos from the 1990s web).</li>
+</ol>
+<p>Given these complications, one may very well wonder why I kept trying to do it. My answer to that is that TikZ is fantastic in several ways:</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/tikz-algebraic-curve-animation/">Read More ...</a>
@@ -216,9 +264,10 @@ LaTeX and TikZ do not natively support graphing algebraic curves (implicit plots
         </h1>
         <time datetime="2022-08-16T14:19:56-0500" class="post-date">August 16, 2022</time>
         
-        Another Origami post. I got into making Origami diagrams in this other post, and I decided I should attempt to make the instruction diagrams for a flower I invented ages ago!
-Making these origami diagrams has allowed me to gain a deeper appreciation for origami diagrams in general. Beautiful art! (Both the origami and the diagrams!)
-I now realize that lots of thought goes into making these diagrams. Like for example,
+        <p>Another Origami post. I got into making Origami diagrams in this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/paper-plane/">other post</a>, and I decided I should attempt to make the instruction diagrams for a flower I invented ages ago!</p>
+<p>Making these origami diagrams has allowed me to gain a deeper appreciation for origami diagrams in general. Beautiful art! (Both the origami and the diagrams!)</p>
+<p>I now realize that lots of thought goes into making these diagrams. Like for example,</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/origami-flower/">Read More ...</a>
@@ -232,9 +281,11 @@ I now realize that lots of thought goes into making these diagrams. Like for exa
         </h1>
         <time datetime="2022-08-03T14:19:56-0500" class="post-date">August 3, 2022</time>
         
-        While trying to remember how to fold the current long distance record-breaking paper plane, y ended up inventing my own paper plane!
-It is pretty similar to the record breaking plane, but it is no exactly the same. I think it has a different balance point, which may make it a better glider (an maybe not long distance record breaking?) It glides very nicely.
-These are folding instructions which I created using IPE, an open source vector image editing software with LaTeX support which I enjoy using.
+        <p>While trying to remember how to fold the current long distance record-breaking paper plane, y ended up inventing my own paper plane!</p>
+<p>It is pretty similar to the record breaking plane, but it is no exactly the same. I think it has a different balance point, which may make it a better glider (an maybe not long distance record breaking?) It glides very nicely.</p>
+<p>These are folding instructions which I created using 
+<a href="https://ipe.otfried.org" target="_blank" rel="noopener">IPE</a>, an open source vector image editing software with LaTeX support which I enjoy using. Instructions can also be downloaded in 
+<a href="Avion[IPE].pdf">pdf</a> format.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/paper-plane/">Read More ...</a>
@@ -248,7 +299,12 @@ These are folding instructions which I created using IPE, an open source vector 
         </h1>
         <time datetime="2022-07-28T19:56:53-0500" class="post-date">July 28, 2022</time>
         
-        TikZ is, in very concise terms, a programing language to generate images based on LaTeX. One runs PdfLateX on a TikZ source file (a plain text file) and gets as output a beautiful looking pdf. For a detailed example, you can see this post in which I show the TikZ code of the following image, or this other post in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.
+        <p>TikZ is, in very concise terms, a programing language to generate images based on 
+<a href="https://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>. One runs PdfLateX on a TikZ source file (a 
+<a href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain text</a> file) and gets as output a beautiful looking pdf. </p>
+<p>For a detailed example, you can see this 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-twisted-cubic/">post</a> in which I show the TikZ code of the following image, or this other 
+<a href="https://enriqueacosta.github.io/blog/en/posts/tikz-family-of-functions/">post</a> in which I go into even more details of the TikZ syntax to create the plot of a function with mathematics LaTeX labels.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/tikz-web-export/">Read More ...</a>
@@ -262,7 +318,11 @@ These are folding instructions which I created using IPE, an open source vector 
         </h1>
         <time datetime="2022-03-07T14:19:56-0500" class="post-date">March 7, 2022</time>
         
-        The Illustrative Mathematics Curriculum/Resources are a collection of Mathematics lesson plans, homework practice problems, and family support materials for all K&ndash;12 grades. They were created during the years 2016-2021 and are licensed with the very nice Creative Commons Attribution 4.0 license (same as this blog) which allows one to freely share and adapt them as long as one keeps the same license and gives due credit. They are very high quality, promoting deep mathematical learning through problem solving, and have been rated very highly by independent non-profit third parties (see here and here).
+        <p>The Illustrative Mathematics Curriculum/Resources are a collection of Mathematics lesson plans, homework practice problems, and family support materials for all K&ndash;12 grades. They were created during the years 2016-2021 and are licensed with the very nice 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 license</a> (same as this blog) which allows one to freely share and adapt them as long as one keeps the same license and gives due credit. They are very high quality, promoting deep mathematical learning through problem solving, and have been rated very highly by independent non-profit third parties (see 
+<a href="https://www.edreports.org/reports/overview/kendall-hunts-illustrative-mathematics-6-8-math-2019" target="_blank" rel="noopener">here</a> and 
+<a href="https://www.edreports.org/reports/detail/kendall-hunts-illustrative-mathematics-traditional-2019-HS" target="_blank" rel="noopener">here</a>). You can learn more about the resources at the official 
+<a href="https://illustrativemathematics.org" target="_blank" rel="noopener">Illustrative Mathematics</a> site.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/im-good-examples/">Read More ...</a>
@@ -276,8 +336,8 @@ These are folding instructions which I created using IPE, an open source vector 
         </h1>
         <time datetime="2022-02-28T15:25:05-0500" class="post-date">February 28, 2022</time>
         
-        Ever since the Covid-19 pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again.
-I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the details or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me gain any clarity or understanding on the matter.
+        <p>Ever since the Covid-19 pandemic started, the subject of interpreting a Covid-19 test results has been coming back to bite me over and over again.</p>
+<p>I knew the fact that the probability of a Covid-19 test result giving the correct information depends on the portion of the population that is infected at that moment, but I did not know the details or understand why this could be the case. Every time I tried to read about this I ended up reading articles with lots of tables with made-up numbers that did not help me  gain any clarity or understanding on the matter.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/interpreting-covid19-test-results/">Read More ...</a>
@@ -291,8 +351,12 @@ I knew the fact that the probability of a Covid-19 test result giving the correc
         </h1>
         <time datetime="2022-02-09T16:02:00-0500" class="post-date">February 9, 2022</time>
         
-        As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our Applied Calculus book), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form $$f(t)=P_0(b+mt)^t.$$
-Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this: $$g(t)= C+Ba^{t}.
+        <p>As part of my work with the Mathematics Consortium Working Group (currently creating data-related activities for our 
+<a href="https://www.wiley.com/en-us/Applied&#43;Calculus%2C&#43;7th&#43;Edition-p-9781119799085" target="_blank" rel="noopener">Applied Calculus book</a>), I discovered that $\text{CO}_2$ concentration, measured at the Mauna Loa observatory in Hawaii since the 1950s, can be modeled surprisingly well by a &ldquo;super-exponential&rdquo; function of the form
+$$f(t)=P_0(b+mt)^t.$$</p>
+<p>Then, while convinced of how alarming and serious this was (super-exponential growth is as alarming as it sounds), I discovered one could also fit an &ldquo;almost exponential&rdquo; model which assumes exponential growth not from $0$, but from a base level $C$ instead, like this:
+$$g(t)= C+Ba^{t}.$$
+This model may make more sense physically, since it seems reasonable to assume $\text{CO}_2$ levels were constant at $C$ ppm before humans started having an impact on the atmosphere, and then began to rise, apparently exponentially. So, the conclusion is that $\text{CO}_2$ concentration may be growing exponentially after all, which is very alarming, but not as alarming as &ldquo;super-exponential&rdquo; growth.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/mauna-loa-superexponential/">Read More ...</a>
@@ -306,8 +370,11 @@ Then, while convinced of how alarming and serious this was (super-exponential gr
         </h1>
         <time datetime="2022-02-05T21:12:04-0500" class="post-date">February 5, 2022</time>
         
-        This is a follow-up to two previous posts ( here and here) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.
-Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface.
+        <p>This is a follow-up to two previous posts (
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">here</a> and 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog-part-2/">here</a>) describing how I set up this blog. Here I describe a couple of extra pieces of the setup including listing tags for each post, and adding the about page.</p>
+<h2 id="listing-the-tags-for-each-post">Listing the Tags for Each Post</h2>
+<p>The Hyde theme, on which this Hugo site is based, does not list the post tags at the beginning of the page. I wanted to add this to the interface. Here is how I did it.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/creating-this-blog-part-3/">Read More ...</a>
@@ -321,9 +388,13 @@ Listing the Tags for Each Post The Hyde theme, on which this Hugo site is based,
         </h1>
         <time datetime="2022-02-03T18:56:42-0500" class="post-date">February 3, 2022</time>
         
-        I recently remembered the very cool Arecibo message and I discovered today that the Wikipedia article on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.
-Here is the message:
-Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.
+        <p>I recently remembered the very cool Arecibo message and I discovered today that the 
+<a href="https://en.wikipedia.org/wiki/Arecibo_message" target="_blank" rel="noopener">Wikipedia article</a> on it is truly fantastic. After reading about the meaning of all the parts of the message, I decided I wanted a printed copy for my home. In this post I describe how I generated the print-ready image file.</p>
+<p>Here is the message:</p>
+<figure><img src="240px-Arecibo_message.svg.png"
+    alt="Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.0" width="200px"><figcaption>
+      <p>Arecibo Message. Image from 
+<a href="https://commons.wikimedia.org/w/index.php?curid=365130" target="_blank" rel="noopener">Wikipedia</a> by Arne Nordmann (norro), CC BY-SA 3.0</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/arrecibo-message/">Read More ...</a>
@@ -337,8 +408,11 @@ Arecibo Message. Image from Wikipedia by Arne Nordmann (norro), CC BY-SA 3.
         </h1>
         <time datetime="2022-02-01T21:12:04-0500" class="post-date">February 1, 2022</time>
         
-        This is a follow-up to a previous post describing how I set up this blog. Here I describe setting up more elaborate multilingual support using i18n.
-Multilingual Text &ldquo;Snippets&rdquo; Using i18n Hugo comes built in with i18n support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. To start using it all I had to do was create the files en.
+        <p>This is a follow-up to a 
+<a href="https://enriqueacosta.github.io/blog/en/posts/creating-this-blog/">previous post</a> describing how I set up this blog. Here I describe setting up more elaborate multilingual support using 
+<a href="https://github.com/nicksnyder/go-i18n" target="_blank" rel="noopener">i18n</a>.</p>
+<h2 id="multilingual-text-snippets-using-i18n">Multilingual Text &ldquo;Snippets&rdquo; Using i18n</h2>
+<p>Hugo comes built in with <code>i18n</code> support. This is a very nice and simple way to specify fixed texts that should change according to the language. I call these &ldquo;multilingual snippets&rdquo;. To start using it all I had to do was create the files <code>en.toml</code> and <code>es.toml</code> in the already-existing <code>i18n</code> folder (Hugo automatically makes this folder what you set up a site) and specify the language-specific texts. The toml files are the &ldquo;translation dictionaries&rdquo;.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/creating-this-blog-part-2/">Read More ...</a>
@@ -352,8 +426,9 @@ Multilingual Text &ldquo;Snippets&rdquo; Using i18n Hugo comes built in with i18
         </h1>
         <time datetime="2022-01-17T18:25:45-0500" class="post-date">January 17, 2022</time>
         
-        I was recently invited to participate in a webinar as the lead Spanish translator of the Illustrative Mathematics K-8 Curriculum (see here). The main point they wanted me to discuss was what was our process translating the resources, and why a simple word-for-word translation like that could be put into Google insufficient.
-As a preparation for this webinar, I decided to write this blog entry describing in detail the translation process.
+        <p>I was recently invited to participate in a webinar as the lead Spanish translator of the Illustrative Mathematics K-8 Curriculum (see 
+<a href="https://illustrativemathematics.org/k-5-launch-webinar/" target="_blank" rel="noopener">here</a>). The main point they wanted me to discuss was what was our process translating the resources, and why a simple word-for-word translation like that could be put into Google insufficient.</p>
+<p>As a preparation for this webinar, I decided to write this blog entry describing in detail the translation process.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/translating-im/">Read More ...</a>
@@ -367,8 +442,15 @@ As a preparation for this webinar, I decided to write this blog entry describing
         </h1>
         <time datetime="2021-12-23T19:40:37-0500" class="post-date">December 23, 2021</time>
         
-        I promised in another post that I would show the code for the TikZ figure I included in that post, reproduced below:
-What is very nice about TikZ and its pfgplots package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by $$ f(t) = \frac{1}{1+e^{-4(x-2.
+        <p>I promised in 
+<a href="https://enriqueacosta.github.io/blog/en/posts/covid-delta-variant-logisitc/">another post</a> that I would show the code for the TikZ figure I included in that post, reproduced below:</p>
+<figure><img src="LogisticFunctionParams.png" width="450">
+</figure>
+
+<p>What is very nice about TikZ and its <code>pfgplots</code> package is that the curve in the figure is really a logistic curve, and not just a Bezier curve, or a spline that attempts to mimic the shape of a logistic. Specifically, the function whose graph shows up in the figure is given by
+$$
+f(t) = \frac{1}{1+e^{-4(x-2.5)}}.
+$$</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/tikz-family-of-functions/">Read More ...</a>
@@ -382,9 +464,12 @@ What is very nice about TikZ and its pfgplots package is that the curve in the f
         </h1>
         <time datetime="2021-12-15T18:48:00-0500" class="post-date">December 15, 2021</time>
         
-        Today, as part of my work, I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.
-The graph below, which started all of this, should come up if one follows this Our World In Data link.
-Image downloaded from Our World in Data, open access under the Creative Commons BY license.
+        <p>Today, as part of my work,  I stumbled upon the surprising fact that in many countries the % share of Covid-19 cases that were Delta variant grew almost perfectly logistically from 0% to 100% during 2021.</p>
+<p>The graph below, which started all of this, should come up if one follows this
+
+<a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2021-02-08..2021-11-29&amp;facet=none&amp;uniformYAxis=0&amp;pickerSort=asc&amp;pickerMetric=location&amp;Metric=Delta&#43;variant&#43;%28share%29&amp;Interval=Weekly&amp;Relative&#43;to&#43;Population=true&amp;Align&#43;outbreaks=false&amp;country=BEL~BRA~CAN~CHL~HRV~DNK~FRA~DEU~JPN~MEX~NLD~NOR~GBR~USA" target="_blank" rel="noopener">Our World In Data link</a>.</p>
+<figure><img src="DeltaShareLogisitc.png" width="100%"><figcaption>
+      <p>Image downloaded from Our World in Data, open access under the Creative Commons BY license.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/covid-delta-variant-logisitc/">Read More ...</a>
@@ -398,7 +483,8 @@ Image downloaded from Our World in Data, open access under the Creative Commons 
         </h1>
         <time datetime="2021-12-10T22:49:34-0500" class="post-date">December 10, 2021</time>
         
-        This blog does not live in a commercial platform for bloggers. It is what is technically called a &ldquo;static site&rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled Hugo. In this blog entry I explain how I set it up.
+        <p>This blog does not live in a commercial platform for bloggers. It is what is technically called a &ldquo;static site&rdquo;, meaning it is just a collection of html files that are linked between each other and some other formatting files (css, for example). As such, it can be hosted anywhere and is not tied to any particular platform. Moreover, it was created with a fantastic open source tool caled 
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. In this blog entry I explain how I set it up.</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/creating-this-blog/">Read More ...</a>
@@ -412,9 +498,10 @@ Image downloaded from Our World in Data, open access under the Creative Commons 
         </h1>
         <time datetime="2021-12-06T22:28:53-0500" class="post-date">December 6, 2021</time>
         
-        As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the Twisted Cubic is &ldquo;everybody&rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;
-In affine space, it is given by the image of $$t\mapsto(t,t^2,t^3).$$
-As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).
+        <p>As Joe Harris mentions in his book &ldquo;Algebraic Geometry: A First Course&rdquo;, the <em>Twisted Cubic</em> is &ldquo;everybody&rsquo;s first example of a concrete variety that is not a hypersurface, linear space, or finite set of points.&rdquo;</p>
+<p>In affine space, it is given by the image of
+$$t\mapsto(t,t^2,t^3).$$</p>
+<p>As I was working through all the exercises in the book (I still am!) I decided that I wanted to make a Tikz picture for it (to learn to do 3D figures in Tikz).</p>
         
         <div class="read-more-link">
           <a href="/blog/en/posts/tikz-twisted-cubic/">Read More ...</a>

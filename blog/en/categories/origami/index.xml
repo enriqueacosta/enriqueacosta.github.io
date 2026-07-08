@@ -4,29 +4,23 @@
     <title>Origami on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/categories/origami/</link>
     <description>Recent content in Origami on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/categories/origami/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Aug 2022 14:19:56 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/categories/origami/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Origami Flower</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/origami-flower/</link>
       <pubDate>Tue, 16 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/origami-flower/</guid>
-      <description>Another Origami post. I got into making Origami diagrams in this other post, and I decided I should attempt to make the instruction diagrams for a flower I invented ages ago!
-Making these origami diagrams has allowed me to gain a deeper appreciation for origami diagrams in general. Beautiful art! (Both the origami and the diagrams!)
-I now realize that lots of thought goes into making these diagrams. Like for example,</description>
+      <description>&lt;p&gt;Another Origami post. I got into making Origami diagrams in this &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/en/posts/paper-plane/&#34;&gt;other post&lt;/a&gt;, and I decided I should attempt to make the instruction diagrams for a flower I invented ages ago!&lt;/p&gt;&#xA;&lt;p&gt;Making these origami diagrams has allowed me to gain a deeper appreciation for origami diagrams in general. Beautiful art! (Both the origami and the diagrams!)&lt;/p&gt;&#xA;&lt;p&gt;I now realize that lots of thought goes into making these diagrams. Like for example,&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cool Paper Plane</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/paper-plane/</link>
       <pubDate>Wed, 03 Aug 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/paper-plane/</guid>
-      <description>While trying to remember how to fold the current long distance record-breaking paper plane, y ended up inventing my own paper plane!
-It is pretty similar to the record breaking plane, but it is no exactly the same. I think it has a different balance point, which may make it a better glider (an maybe not long distance record breaking?) It glides very nicely.
-These are folding instructions which I created using IPE, an open source vector image editing software with LaTeX support which I enjoy using.</description>
+      <description>&lt;p&gt;While trying to remember how to fold the current long distance record-breaking paper plane, y ended up inventing my own paper plane!&lt;/p&gt;&#xA;&lt;p&gt;It is pretty similar to the record breaking plane, but it is no exactly the same. I think it has a different balance point, which may make it a better glider (an maybe not long distance record breaking?) It glides very nicely.&lt;/p&gt;&#xA;&lt;p&gt;These are folding instructions which I created using &#xA;&lt;a href=&#34;https://ipe.otfried.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IPE&lt;/a&gt;, an open source vector image editing software with LaTeX support which I enjoy using. Instructions can also be downloaded in &#xA;&lt;a href=&#34;Avion[IPE].pdf&#34;&gt;pdf&lt;/a&gt; format.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

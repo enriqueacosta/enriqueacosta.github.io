@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
         <li><a href="/blog/en/subscribe/subscribe"> Subscribe </a></li><li><a href="/blog/en/tikz-gallery/"> Tikz Gallery </a></li><li><a href="/blog/en/about/about"> About </a></li><li><a href="/blog/en/categories/"> Categories </a></li><li><a href="/blog/en/tags/"> Tags </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -115,28 +115,28 @@
   
   <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Enrique Acosta
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% 2022
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=0pt, 12pt, tikz]</span>{standalone}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand\Min</span>{0}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand\Max</span>{150}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% \pgfplotsset{domain = \Min : \Max}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{document}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{tikzpicture} 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\begin</span>{axis}<span style="color:#75715e">%   
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ axis lines = left
+</span></span></span><span style="display:flex;"><span>[ axis lines = left
 </span></span><span style="display:flex;"><span>, width=300pt
 </span></span><span style="display:flex;"><span>, height=200pt
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymode = log
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, xlabel = {years since 1950}
+</span></span></span><span style="display:flex;"><span>, xlabel = {years since 1950}
 </span></span><span style="display:flex;"><span>, ylabel = {Mean CO<span style="color:#e6db74">$</span>_<span style="color:#ae81ff">2</span><span style="color:#e6db74">$</span> (ppm)}     
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% , y label style = {yshift = 1em}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, ylabel near ticks  <span style="color:#75715e">% fixes position of ylabel (so that it does not crash with ticks)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, scaled ticks=false <span style="color:#75715e">% removes scaling on axis
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, yticklabel style={/pgf/number format/fixed} <span style="color:#75715e">%avoids scientific notation on axis
+</span></span></span><span style="display:flex;"><span>, ylabel near ticks  <span style="color:#75715e">% fixes position of ylabel (so that it does not crash with ticks)
+</span></span></span><span style="display:flex;"><span>, scaled ticks=false <span style="color:#75715e">% removes scaling on axis
+</span></span></span><span style="display:flex;"><span>, yticklabel style={/pgf/number format/fixed} <span style="color:#75715e">%avoids scientific notation on axis
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymax=420
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ymin=300
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , xmax = 65
@@ -144,57 +144,57 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , log ticks with fixed point
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , grid = both
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% , ytick ={300,320, 340, ...,420}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, legend style = {at={(0.03,0.85)},anchor=west} <span style="color:#75715e">% The command for legend position
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, legend cell align = {left} <span style="color:#75715e">% The command for legend alignment
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>] 
+</span></span></span><span style="display:flex;"><span>, legend style = {at={(0.03,0.85)},anchor=west} <span style="color:#75715e">% The command for legend position
+</span></span></span><span style="display:flex;"><span>, legend cell align = {left} <span style="color:#75715e">% The command for legend alignment
+</span></span></span><span style="display:flex;"><span>] 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 1 - super exponential
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = magenta
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>[ color = magenta
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% , only marks
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, mark = square*
+</span></span></span><span style="display:flex;"><span>, mark = square*
 </span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
 </span></span><span style="display:flex;"><span>, style = thick
 </span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
 </span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{315.98*(1.0026+0.00003*x)^x};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>{315.98*(1.0026+0.00003*x)^x};<span style="color:#75715e">%
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[above left,pos=0.7]{$f(t)=315.98(1.0026+0.00003t)^t$}; 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>f<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{super<span style="color:#f92672">-</span>exponential}<span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>f<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{super<span style="color:#f92672">-</span>exponential}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 2 -  exponential plus constant
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = cyan
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>[ color = cyan
 </span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
 </span></span><span style="display:flex;"><span>, style = thick
 </span></span><span style="display:flex;"><span>, mark = triangle*
 </span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
 </span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{267.277+48.703*(1.01823)^x};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>{267.277+48.703*(1.01823)^x};<span style="color:#75715e">%
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[below right,pos=0.3]{$g(t)=267.277+48.703(1.01823)^t$};
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>g<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{exponential plus constant}<span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>g<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{exponential plus constant}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Model 3 - quadratic
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = orange
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>[ color = orange
 </span></span><span style="display:flex;"><span>, domain = <span style="color:#66d9ef">\Min</span>:<span style="color:#66d9ef">\Max</span>
 </span></span><span style="display:flex;"><span>, style = thick
 </span></span><span style="display:flex;"><span>, mark = diamond*
 </span></span><span style="display:flex;"><span>, mark options = {scale = 0.9}
 </span></span><span style="display:flex;"><span>]<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{0.013*x^2+0.8055*x+315.5219};<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>{0.013*x^2+0.8055*x+315.5219};<span style="color:#75715e">%
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% node[below right,pos=0.3]{$g(t)=267.277+48.703(1.01823)^t$};
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>h<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{quadratic}<span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addlegendentry</span>{<span style="color:#e6db74">$</span>h<span style="color:#f92672">(</span>t<span style="color:#f92672">)</span>: \mbox{quadratic}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% C02 data
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>[ color = blue
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span><span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>[ color = blue
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% , only marks
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>, mark = *
+</span></span></span><span style="display:flex;"><span>, mark = *
 </span></span><span style="display:flex;"><span>, mark options = {scale = 0.4}
 </span></span><span style="display:flex;"><span>, style = thick
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% , mark=none
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>] coordinates {<span style="color:#75715e">%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(0,  315.98)
+</span></span></span><span style="display:flex;"><span>] coordinates {<span style="color:#75715e">%
+</span></span></span><span style="display:flex;"><span>(0,  315.98)
 </span></span><span style="display:flex;"><span>(1,  316.91)
 </span></span><span style="display:flex;"><span>(2,  317.64)
 </span></span><span style="display:flex;"><span>(3,  318.45)
@@ -271,6 +271,8 @@
 
   <h3>Posts where this image appears</h3>
   <ul>
+   
+     
    
      
    
@@ -493,7 +495,7 @@ Subscribe
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA 4.0 License</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

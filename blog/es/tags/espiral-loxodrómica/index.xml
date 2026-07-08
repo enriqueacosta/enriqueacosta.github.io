@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Espiral loxodrómica on Enrique Acosta Jaramillo</title>
+    <title>Espiral Loxodrómica on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/tags/espiral-loxodr%C3%B3mica/</link>
-    <description>Recent content in Espiral loxodrómica on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Aug 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/tags/espiral-loxodr%C3%B3mica/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Espiral Loxodrómica on Enrique Acosta Jaramillo</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Sun, 06 Aug 2023 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/tags/espiral-loxodr%C3%B3mica/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creación de una cuadrícula espiral loxodrómica con funciones de variable compleja</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</link>
       <pubDate>Sun, 06 Aug 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/loxodromic-spirals/</guid>
-      <description>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.
-Esta es la imagen:
-Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.
-¡Y esta es una de las formas como las coloreamos con mis hijos!
-Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos.</description>
+      <description>&lt;p&gt;En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.&lt;/p&gt;&#xA;&lt;p&gt;Esta es la imagen:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-patterns-crop.jpg&#34;&#xA;    alt=&#34;Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris.&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Página del libro para colorear &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patterns of the Universe&lt;/a&gt; por Alex Bellos y Edmund Harris.&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;¡Y esta es una de las formas como las coloreamos con mis hijos!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

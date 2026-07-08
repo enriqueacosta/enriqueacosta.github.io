@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -123,13 +123,13 @@
   
   <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#75715e">% Enrique Acosta
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">% 2025
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz, convert={command=\unexpanded{magick -density 600 \infile\space &#34;\jobname.png&#34;}}]</span>{standalone}
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[border=2pt, tikz, convert={command=\unexpanded{magick -density 600 \infile\space &#34;\jobname.png&#34;}}]</span>{standalone}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplots}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{pgfplotstable}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfplotsset</span>{compat=1.17}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pagecolor</span>{white} <span style="color:#75715e">% Set the background color to white
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\pgfplotstableread</span>{
 </span></span><span style="display:flex;"><span>rank  pop       city
 </span></span><span style="display:flex;"><span>1     7937898   Bogotá
@@ -177,7 +177,7 @@
 </span></span><span style="display:flex;"><span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Fit function 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span> [
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span> [
 </span></span><span style="display:flex;"><span>    domain=1:20,
 </span></span><span style="display:flex;"><span>    samples=100,
 </span></span><span style="display:flex;"><span>    very thick,
@@ -186,17 +186,17 @@
 </span></span><span style="display:flex;"><span>] {5544989 * x^(-0.92)};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Fit equation label
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[rectangle, draw, fill=white, text=cyan!70!black, anchor=south west]</span> at (axis cs: 6.5, 4500000) {<span style="color:#e6db74">$</span>P<span style="color:#f92672">(</span>r<span style="color:#f92672">)=</span>\displaystyle\frac{<span style="color:#ae81ff">5544989</span>}{r^{<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">92</span>}}<span style="color:#e6db74">$</span>};
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[rectangle, draw, fill=white, text=cyan!70!black, anchor=south west]</span> at (axis cs: 6.5, 4500000) {<span style="color:#e6db74">$</span>P<span style="color:#f92672">(</span>r<span style="color:#f92672">)=</span>\displaystyle\frac{<span style="color:#ae81ff">5544989</span>}{r^{<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">92</span>}}<span style="color:#e6db74">$</span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% Data and labels
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\addplot</span>[
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\addplot</span>[
 </span></span><span style="display:flex;"><span>    only marks,
 </span></span><span style="display:flex;"><span>    mark=*,
 </span></span><span style="display:flex;"><span>    black,
 </span></span><span style="display:flex;"><span>    mark size=2.5pt,
 </span></span><span style="display:flex;"><span>    nodes near coords,
 </span></span><span style="display:flex;"><span>    point meta=explicit symbolic, <span style="color:#75715e">% for city names as the nodes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    every node near coord/.append style={
+</span></span></span><span style="display:flex;"><span>    every node near coord/.append style={
 </span></span><span style="display:flex;"><span>      font=<span style="color:#66d9ef">\scriptsize</span>, anchor=south west, yshift=3pt, xshift=2pt, rotate=30, inner sep=1pt, fill=white
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>] table [x=rank, y=pop, meta=city] {<span style="color:#66d9ef">\citydata</span>};
@@ -204,7 +204,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{axis}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">% link at the bottom
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=south east, font=\tiny, text=gray!80!black, inner sep=2pt]</span> at (current bounding box.south east) {enriqueacosta.github.io 2025};
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">\node</span><span style="color:#a6e22e">[anchor=south east, font=\tiny, text=gray!80!black, inner sep=2pt]</span> at (current bounding box.south east) {enriqueacosta.github.io 2025};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">\end</span>{tikzpicture}
@@ -429,7 +429,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

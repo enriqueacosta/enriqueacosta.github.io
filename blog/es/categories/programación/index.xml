@@ -4,78 +4,58 @@
     <title>Programación on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/</link>
     <description>Recent content in Programación on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 22 May 2025 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/es/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creación de herramientas HTML con ChatGPT: visualizador LaTeX con MathJax</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/</link>
       <pubDate>Thu, 22 May 2025 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/latex-mathjax-previewer/</guid>
-      <description>Durante los últimos meses he estado experimentando con la creación de herramientas web pequeñas, útiles y totalmente autocontenidas con la ayuda de ChatGPT. Todo integrado en un solo archivo HTML. Este es un ejemplo, un visualizador interactivo de LaTeX con MathJax: una página simple pero muy funcional, que se adapta bien a computadores y dispositivos móviles, y que es interactiva. Uno escribe LaTeX y ve en tiempo real cómo se ve el LaTeX compilado.</description>
+      <description>&lt;p&gt;Durante los últimos meses he estado experimentando con la creación de herramientas web pequeñas, útiles y totalmente autocontenidas con la ayuda de ChatGPT. Todo integrado en un solo archivo HTML. Este es un ejemplo, &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/LaTeXMathJaxPreview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;un visualizador interactivo de LaTeX con MathJax&lt;/a&gt;: una página simple pero muy funcional, que se adapta bien a computadores y dispositivos móviles, y que es interactiva. Uno escribe LaTeX y ve en tiempo real cómo se ve el LaTeX compilado.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Animación gif de una familia de curvas algebraicas usando Tikz y Gnuplot</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</link>
       <pubDate>Thu, 22 Sep 2022 14:19:56 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-algebraic-curve-animation/</guid>
-      <description>Esta animación es un archivo gif que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.
-Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:
-LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;gnuplotTest.gif&#34; width=&#34;500px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Esta animación es un archivo &lt;code&gt;gif&lt;/code&gt; que se creó con LaTeX y TikZ (un lenguaje de programación para producir imágenes dentro de LaTeX). Había intentado sin éxito, lograr hacer algo de este estilo con TikZ durante mucho tiempo, y finalmente descubrí cómo hacerlo. En esta entrada de blog describo todos los pasos.&lt;/p&gt;&#xA;&lt;p&gt;Había dos aspectos &amp;ldquo;complicados&amp;rdquo; que había que resolver:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;LaTeX y TikZ to tienen funcionalidad para graficar curvas algebraicas (gráficas de ecuaciones implícitas de la forma $ f (x, y) = g (x, y) $ con polinomios $ f $ y $ g $) ya que esto requiere cálculos numéricos con alta precisión en los que LaTeX no es muy bueno (al ser, después de todo, un sistema de composición de textos).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Exportar figuras de TikZ para la web (de pdf a png o svg)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</link>
       <pubDate>Thu, 28 Jul 2022 19:56:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-web-export/</guid>
-      <description>TikZ es un lenguaje de programación para producir imágenes que funciona a partir de LaTeX. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de texto sin formato) y obtiene como resultado un pdf de la imagen que describe el código.
-Para ver un ejemplo detallado, puede ver esta entrada en la que muestro el código TikZ de la siguiente imagen, o esta otra entrada en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.</description>
+      <description>&lt;p&gt;TikZ es un lenguaje de programación para producir imágenes que funciona a partir de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/LaTeX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX&lt;/a&gt;. Uno ejecuta PdfLateX en un archivo fuente de TikZ (un archivo de &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/Archivo_de_texto&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;texto sin formato&lt;/a&gt;) y obtiene como resultado un pdf de la imagen que describe el código.&lt;/p&gt;&#xA;&lt;p&gt;Para ver un ejemplo detallado, puede ver esta &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/&#34;&gt;entrada&lt;/a&gt; en la que muestro el código TikZ de la siguiente imagen, o esta otra &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/&#34;&gt;entrada&lt;/a&gt; en la que discuto en más detalle la sintaxis de TikZ para crear la gráfica de una función con etiquetas matemáticas en LaTeX.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creación de una imagen vectorial del mensaje Arecibo para imprimir</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</link>
       <pubDate>Thu, 03 Feb 2022 18:56:42 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/arrecibo-message/</guid>
-      <description>Hace poco recordé el mensaje de Arecibo y descubrí que el artículo de Wikipedia es excelente. La versión en inglés es un poco más completa. Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.
-Este es el mensaje:
-Mensaje de Arecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.</description>
+      <description>&lt;p&gt;Hace poco recordé el mensaje de Arecibo y descubrí que el &#xA;&lt;a href=&#34;https://es.wikipedia.org/wiki/Mensaje_de_Arecibo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;artículo de Wikipedia&lt;/a&gt; es excelente. La versión en &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arecibo_message&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;inglés&lt;/a&gt; es un poco más completa. Al leer sobre el significado de cada parte del mensaje, decidí que quería una copia impresa para mi casa. En esta entrada de blog describo cómo generé una imagen de buena calidad para impresión.&lt;/p&gt;&#xA;&lt;p&gt;Este es el mensaje:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;240px-Arecibo_message.svg.png&#34;&#xA;    alt=&#34;Mensaje de Arecibo. Imagen de Wikipedia elaborada por Arne Nordmann (norro), CC BY-SA 3.0&#34; width=&#34;200px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Mensaje de Arecibo. Imagen de &#xA;&lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=365130&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia&lt;/a&gt; elaborada por Arne Nordmann (norro), CC BY-SA 3.0&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Figura en TikZ para una función con parámetros</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</link>
       <pubDate>Thu, 23 Dec 2021 19:40:37 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-family-of-functions/</guid>
-      <description>Prometí en otra entrada de blog que mostraría el código en TikZ que produce la siguiente figura:
-Lo que me gusta mucho de TikZ y su paquete pfgplots es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por $$ f(t) = \frac{1}{1+e^{-4(x-2.</description>
+      <description>&lt;p&gt;Prometí en &#xA;&lt;a href=&#34;https://enriqueacosta.github.io/blog/es/posts/covid-delta-variant-logisitc/&#34;&gt;otra entrada de blog&lt;/a&gt; que mostraría el código en TikZ que produce la siguiente figura:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;LogisticFunctionParams.es.png&#34; width=&#34;450&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Lo que me gusta mucho de TikZ y su paquete &lt;code&gt;pfgplots&lt;/code&gt; es que la curva en la figura es de verdad una curva logística y no solo una curva de Bezier o un spline que intenta imitar la forma de una logística. Específicamente, la función cuya gráfica aparece en la figura está dada por&#xA;$$&#xA;f(t) = \frac{1}{1+e^{-4(x-2.5)}}.&#xA;$$&#xA;Si uno grafica esta función en TikZ con mínimos ajustes, el resultado es este:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>La creación de este blog: Hugo, agregar al tema Hyde soporte de varios idiomas y soporte de Latex</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</link>
       <pubDate>Fri, 10 Dec 2021 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/creating-this-blog/</guid>
-      <description>Este blog no se encuentra en una plataforma comercial para bloggers. Es lo que se llama técnicamente un &amp;ldquo;sitio estático&amp;rdquo;, lo cual significa que es solo una colección de archivos HTML que están vinculados entre sí, junto con algunos otros archivos que dan formato (por ejemplo, archivos css). Como tal, este blog se puede alojar en cualquier lugar y no está atado a ninguna plataforma en particular. Además, se creó con una fantástica herramienta de código abierto llamada Hugo.</description>
+      <description>&lt;p&gt;Este blog no se encuentra en una plataforma comercial para bloggers. Es lo que se llama técnicamente un &amp;ldquo;sitio estático&amp;rdquo;, lo cual significa que es solo una colección de archivos HTML que están vinculados entre sí, junto con algunos otros archivos que dan formato (por ejemplo, archivos css). Como tal, este blog se puede alojar en cualquier lugar y no está atado a ninguna plataforma en particular. Además, se creó con una fantástica herramienta de código abierto llamada &#xA;&lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;. En esta entrada de blog explico cómo lo creé.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tikz 3D - La &#34;curva cúbica torcida&#34; (twisted cubic)</title>
       <link>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</link>
       <pubDate>Mon, 06 Dec 2021 22:28:53 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/es/posts/tikz-twisted-cubic/</guid>
-      <description>Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la Twisted Cubic es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.
-En el espacio afín, está dado por la imagen de $$t\mapsto(t,t^2,t^3).$$
-Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.</description>
+      <description>&lt;p&gt;Como menciona Joe Harris en su libro &amp;ldquo;Algebraic Geometry: A First Course&amp;rdquo;, la curva llamada la &lt;em&gt;Twisted Cubic&lt;/em&gt; es &amp;ldquo;el primer ejemplo de todos de una variedad concreta que no es una hipersuperficie, un espacio lineal o un conjunto finito de puntos&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;En el espacio afín, está dado por la imagen de&#xA;$$t\mapsto(t,t^2,t^3).$$&lt;/p&gt;&#xA;&lt;p&gt;Mientras solucionaba todos los ejercicios del libro (¡todavía estoy en esas!), decidí que quería hacer una figura de Tikz de la curva para aprender a hacer figuras 3D con Tikz.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.110.0">
+  <meta name="generator" content="Hugo 0.154.3">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +86,7 @@
         <li><a href="/blog/es/tikz-gallery/"> Galeria de Tikz </a></li><li><a href="/blog/es/subscribe/subscribe"> Suscribirse </a></li><li><a href="/blog/es/about/about"> Acerca de este blog </a></li><li><a href="/blog/es/categories/"> Categorias </a></li><li><a href="/blog/es/tags/"> Etiquetas </a></li>
       </ul>
     </nav>
-    <p>2025
+    <p>2026
       
       
       
@@ -131,14 +131,14 @@
   <p>En esta entrada, mostraré cómo recreé una hermosa imagen con espirales de un libro para colorear inspirado en las matemáticas, usando funciones complejas y transformaciones de Möbius.</p>
 <p>Esta es la imagen:</p>
 <figure><img src="loxodromic-coloring-patterns-crop.jpg"
-         alt="Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris." width="600px"/><figcaption>
-            <p>Página del libro para colorear 
+    alt="Página del libro para colorear Patterns of the Universe por Alex Bellos y Edmund Harris." width="600px"><figcaption>
+      <p>Página del libro para colorear 
 <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe</a> por Alex Bellos y Edmund Harris.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>¡Y esta es una de las formas como las coloreamos con mis hijos!</p>
-<figure><img src="loxodromic-coloring-elias.jpg" width="600px"/>
+<figure><img src="loxodromic-coloring-elias.jpg" width="600px">
 </figure>
 
 <p>Esta imagen es fascinante con su leve falta de simetría, espirales que van en direcciones opuestas y curvas que se cruzan en ángulos rectos. Por los ángulos rectos, supuse que debía haber un 
@@ -149,25 +149,25 @@
 <p>Una <em>espiral loxodrómica</em>, también conocida como 
 <a href="https://en.wikipedia.org/wiki/Rhumb_line" target="_blank" rel="noopener"><em>línea de rumbo</em></a>, es una curva en una esfera que corta los meridianos en el mismo ángulo. Es el camino que sigue un barco que mantiene una dirección de brújula constante.</p>
 <figure><img src="loxodromic-loxodrome-wiki.svg"
-         alt="Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De Wikipedia. Imagen creada por Alvesgaspar, con licencia abierta CC BY-SA 2.5." width="600px"/><figcaption>
-            <p>Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De 
+    alt="Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De Wikipedia. Imagen creada por Alvesgaspar, con licencia abierta CC BY-SA 2.5." width="600px"><figcaption>
+      <p>Imagen de una loxodroma, o línea de rumbo, en espiral hacia el polo norte. De 
 <a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikipedia</a>. Imagen creada por Alvesgaspar, con licencia abierta CC BY-SA 2.5.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>Una espiral loxodrómica también puede representarse en un plano 2D usando la <em>proyección estereográfica</em>. Esta proyección mapea la esfera en el plano enviando cada punto de la esfera a su &ldquo;sombra&rdquo; en el plano. Imagine colocar la esfera sobre el plano, con el polo sur tocando el origen y el polo norte directamente arriba. Una fuente de luz se coloca en la parte superior de la esfera. La &ldquo;sombra&rdquo; de un punto es donde la línea desde el polo norte hasta ese punto se encuentra con el plano.</p>
 <figure><img src="loxodromic-stereographic.svg"
-         alt="Proyección estereográfica. De Wikimedia Commons. Creada por S.Wetzel, con licencia abierta CC BY-SA 4.0." width="600px"/><figcaption>
-            <p>Proyección estereográfica. De 
+    alt="Proyección estereográfica. De Wikimedia Commons. Creada por S.Wetzel, con licencia abierta CC BY-SA 4.0." width="600px"><figcaption>
+      <p>Proyección estereográfica. De 
 <a href="https://commons.wikimedia.org/wiki/File:Loxodrome.png" target="_blank" rel="noopener">Wikimedia Commons</a>. Creada por S.Wetzel, con licencia abierta CC BY-SA 4.0.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>Bajo la proyección estereográfica, las espirales loxodrómicas se convierten en <em>espirales logarítmicas</em>, que son curvas fascinantes por sí mismas. Se ven así:
 <figure><img src="loxodromix-logarithmicSpiral.svg"
-         alt="Espiral logarítmica." width="600px"/><figcaption>
-            <p>Espiral logarítmica.</p>
-        </figcaption>
+    alt="Espiral logarítmica." width="600px"><figcaption>
+      <p>Espiral logarítmica.</p>
+    </figcaption>
 </figure>
 </p>
 <p>Una espiral logarítmica puede describirse usando números complejos con una ecuación de la forma
@@ -192,13 +192,12 @@ donde $a$ es una constante que controla qué tanto se enrolla la espiral. Los pu
 <p>Las transformaciones de Möbius son funciones especiales de la forma</p>
 <p>$$f(z) = \frac{az + b}{cz + d}$$</p>
 <p>donde $a$, $b$, $c$ y $d$ son constantes complejas tales que $ad - bc \neq 0$. Las transformaciones de Möbius tienen la sorprendente propiedad de que mapean círculos y líneas a círculos y líneas, y preservan los ángulos. También corresponden a movimientos y rotaciones de la esfera. Este es un ejemplo de una cuadrícula cuadrada transformada por una transformación de Möbius (note que todas las líneas y círculos se intersectan en ángulos rectos):</p>
-<!-- raw HTML omitted -->
 <figure><img src="loxodromic-mobius.svg"
-         alt="Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos aquí. El enlace de desmos es una modificación de un enlace de Desmos que encontré en línea. No tenía referencia de autoría. Este es otro interesante que encontré." width="100%"/><figcaption>
-            <p>Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos 
+    alt="Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos aquí. El enlace de desmos es una modificación de un enlace de Desmos que encontré en línea. No tenía referencia de autoría. Este es otro interesante que encontré." width="100%"><figcaption>
+      <p>Imagen de una cuadrícula cuadrada bajo una transformación de Möbius creada con desmos 
 <a href="https://www.desmos.com/calculator/fplcgzmy85" target="_blank" rel="noopener">aquí</a>. El enlace de desmos es una modificación de un enlace de Desmos que encontré en línea. No tenía referencia de autoría. Este es 
 <a href="https://www.desmos.com/calculator/z9oz7r3v7m" target="_blank" rel="noopener">otro interesante</a> que encontré.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>Si desea saber más sobre las transformaciones de Möbius, recomiendo comenzar con un 
@@ -250,17 +249,15 @@ $$</p>
 </div>
 <p>¡Ahora podemos transformarlas con nuestra transformación de Möbius para obtener espirales dobles que giran alrededor de cada una! Esta es la imagen:</p>
 <figure><img src="loxodromic-4DoubleSpirals.svg"
-         alt="Creada con Desmos. Siga este enlace si quiere modificar los valores de los parámetros." width="100%"/><figcaption>
-            <p>Creada con Desmos. Siga este 
+    alt="Creada con Desmos. Siga este enlace si quiere modificar los valores de los parámetros." width="100%"><figcaption>
+      <p>Creada con Desmos. Siga este 
 <a href="https://www.desmos.com/calculator/cgqvp0exmp" target="_blank" rel="noopener">enlace</a> si quiere modificar los valores de los parámetros.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>Las fórmulas para estas espirales son más complicadas, pero el método para obtenerlas es simple: solo transforme las cuatro espirales logarítmicas con la transformación de Möbius, y luego encuentre las partes real e imaginaria para graficarlas.</p>
 <p>¡Ahora podemos hacer muchas de ellas a la vez! Esta imagen tiene 10 espirales dobles.</p>
-<figure><img src="loxodromic-manyDoubleSpirals.svg" width="100%"/>
+<figure><img src="loxodromic-manyDoubleSpirals.svg" width="100%">
 </figure>
 
 <p>Esta es una versión interactiva. El parámetro $n$ determina el número de espirales.</p>
@@ -274,7 +271,7 @@ $$</p>
 <p>Ahora sigamos a la segunda tarea para nuestra cuadrícula. Necesitamos un grupo de espirales que se enrosquen en la dirección opuesta, de modo que las espirales siempre se crucen en ángulos rectos con las otras. Dado que las transformaciones de Möbius preservan los ángulos, si encontramos un grupo de espirales logarítmicas que se crucen en ángulos rectos, entonces sus transformaciones de Möbius también se cruzarán en ángulos rectos. Así que todo lo que necesitamos hacer es encontrar una familia de espirales logarítmicas que se crucen en ángulos rectos con las otras.</p>
 <p>Si llamamos a la primera espiral $$z_1(t)=e^{at}e^{it},$$ entonces $e^{-it}$ corresponderá a una rotación de $-t$ grados, así que una espiral con el mismo &ldquo;grado de enrollamiento&rdquo; pero que se enrosca en la dirección opuesta es $$z_2(t)=e^{at}e^{-it}.$$</p>
 <p>Sin embargo, estas dos espirales no se cruzan en ángulos rectos, aunque resultan en imágenes muy bonitas. Esta es una (se graficaron varias espirales en cada dirección):</p>
-<figure><img src="loxodromic-nonOrthogonalSpirals.svg" width="100%"/>
+<figure><img src="loxodromic-nonOrthogonalSpirals.svg" width="100%">
 </figure>
 
 <p>¡Como girasoles! Pero no se cruzan en ángulos rectos.</p>
@@ -288,33 +285,33 @@ $$</p>
 </div></p>
 <p>Si intentó encontrar el $a_2$ arriba, probablemente encontró que $a_2 \approx 1.66$ cuando $a_1=0.6$. De hecho, el valor exacto es $a_2=1/0.6=1.6666&hellip;$. En general, se necesita $a_2=1/a_1$ para que las espirales se crucen en ángulos rectos. (Esto se puede demostrar con algo de cálculo de variable compleja que incluyo al final de esta entrada).</p>
 <p>Esta es la imagen de la cuadrícula exactamente perpendicular con $a=0.6$ y $1/a$ para las espirales opuestas.</p>
-<figure><img src="loxodromic-orthogonalSpirals.svg" width="100%"/>
+<figure><img src="loxodromic-orthogonalSpirals.svg" width="100%">
 </figure>
 
 <h2 id="listo-la-imagen-final-y-la-herramienta-interactiva">¡Listo! La imagen final (y la herramienta interactiva)</h2>
 <p>Hemos creado una cuadrícula de espirales logarítmicas en ángulo recto. ¡Ahora usamos la magia de Möbius para ver los dos centros!</p>
 <p>Aquí está:</p>
 <figure><img src="loxodromic-orthogonalDoublesSpirals.svg"
-         alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"/><figcaption>
-            <p>Creada con Desmos. Siga este 
+    alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"><figcaption>
+      <p>Creada con Desmos. Siga este 
 <a href="https://www.desmos.com/calculator/hdir5xzd0p" target="_blank" rel="noopener">enlace</a> para interactuar con ella.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>Y la siguiente imagen es como la del libro de colorear (con 10 y 20 espirales en direcciones diferentes, por eso parece un poco desajustada, pero es intencional)</p>
 <figure><img src="loxodromic-orthogonalDoublesSpirals-10-20.svg"
-         alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"/><figcaption>
-            <p>Creada con Desmos. Siga este 
+    alt="Creada con Desmos. Siga este enlace para interactuar con ella." width="100%"><figcaption>
+      <p>Creada con Desmos. Siga este 
 <a href="https://www.desmos.com/calculator/g3ddmd56om" target="_blank" rel="noopener">enlace</a> para interactuar con ella.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 
 <p>Esta es la imagen original del libro (rotada)
 <figure><img src="loxodromic-coloring-patterns-crop-rotate.jpg"
-         alt="Página del libro para colorear Patterns of the Universe Coloring book por Alex Bellos y Edmund Harris." width="600px"/><figcaption>
-            <p>Página del libro para colorear 
+    alt="Página del libro para colorear Patterns of the Universe Coloring book por Alex Bellos y Edmund Harris." width="600px"><figcaption>
+      <p>Página del libro para colorear 
 <a href="https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235" target="_blank" rel="noopener">Patterns of the Universe Coloring book</a> por Alex Bellos y Edmund Harris.</p>
-        </figcaption>
+    </figcaption>
 </figure>
 </p>
 <p>Finalmente, esta es la herramienta interactiva. ¡Disfrútela!
@@ -340,7 +337,7 @@ Suscríbase
   <hr style="width:50%;text-align:left;margin-left:0;margin-top:20;border: 1px solid #ac4142;">
   <div class="license">
     <p>
-      &copy 2025 Enrique Acosta. </br>
+      &copy 2026 Enrique Acosta. </br>
       Liberado bajo una licencia de uso <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Creative Commons CC-BY-SA 4.0</a>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>

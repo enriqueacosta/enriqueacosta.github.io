@@ -4,20 +4,16 @@
     <title>Conformal Maps on Enrique Acosta Jaramillo</title>
     <link>https://enriqueacosta.github.io/blog/en/tags/conformal-maps/</link>
     <description>Recent content in Conformal Maps on Enrique Acosta Jaramillo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Nov 2023 22:49:34 -0500</lastBuildDate><atom:link href="https://enriqueacosta.github.io/blog/en/tags/conformal-maps/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Nov 2023 22:49:34 -0500</lastBuildDate>
+    <atom:link href="https://enriqueacosta.github.io/blog/en/tags/conformal-maps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recreating a Loxodromic Spiral Grid Using Complex Analysis</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</link>
       <pubDate>Sun, 19 Nov 2023 22:49:34 -0500</pubDate>
-      
       <guid>https://enriqueacosta.github.io/blog/en/posts/loxodromic-spirals/</guid>
-      <description>In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired coloring book using complex functions and Möbius transformations.
-Here is the figure:
-Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.
-Here is one of the way we colored them with my sons!
-I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles.</description>
+      <description>&lt;p&gt;In this post, I will show how I recreated a beautiful figure with spirals from a math-inspired &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;coloring book&lt;/a&gt; using complex functions and Möbius transformations.&lt;/p&gt;&#xA;&lt;p&gt;Here is the figure:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-patterns-crop.jpg&#34;&#xA;    alt=&#34;Page from Patterns of the Universe Coloring book by Alex Bellos and Edmund Harris.&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Page from &#xA;&lt;a href=&#34;https://www.amazon.com/Patterns-Universe-Coloring-Adventure-Beauty/dp/1615193235&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patterns of the Universe Coloring book&lt;/a&gt; by  Alex Bellos and Edmund Harris.&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Here is one of the way we colored them with my sons!&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;loxodromic-coloring-elias.jpg&#34; width=&#34;600px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I find the figure mesmerizing with its slight lack of total symmetry, spirals that go in opposite directions, and intersecting bendy curves at right angles. Because of the right angles I guessed there should be a &#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Conformal_map&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complex conformal map&lt;/a&gt; involved, and I wanted to figure out how it was constructed and what the equations for the functions that produced this curvy grid looked like.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
