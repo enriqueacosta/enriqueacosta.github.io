@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
+    <lastmod>2025-06-25T10:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
+    <lastmod>2025-06-25T10:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -28,14 +28,8 @@
                 href="https://enriqueacosta.github.io/blog/en/"
                 />
   </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/categories/modeling/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
-  </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
+    <lastmod>2025-06-25T10:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -48,7 +42,7 @@
                 />
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/tags/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
+    <lastmod>2025-06-25T10:49:34-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -59,12 +53,6 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/tags/"
                 />
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
-  </url><url>
-    <loc>https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/</loc>
-    <lastmod>2025-07-11T22:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/categories/tikz/</loc>
     <lastmod>2025-06-25T10:49:34-05:00</lastmod>
@@ -104,6 +92,15 @@
                 hreflang="en"
                 href="https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/"
                 />
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/math/</loc>
+    <lastmod>2025-06-10T12:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/categories/modeling/</loc>
+    <lastmod>2025-06-10T12:49:34-05:00</lastmod>
+  </url><url>
+    <loc>https://enriqueacosta.github.io/blog/en/tags/zipfs-law/</loc>
+    <lastmod>2025-06-10T12:49:34-05:00</lastmod>
   </url><url>
     <loc>https://enriqueacosta.github.io/blog/en/posts/zipfcolombia2025/</loc>
     <lastmod>2025-06-10T12:49:34-05:00</lastmod>

@@ -6,15 +6,8 @@
     <description>Recent content on Enrique Acosta Jaramillo</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Jul 2025 22:49:34 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jun 2025 10:49:34 -0500</lastBuildDate>
     <atom:link href="https://enriqueacosta.github.io/blog/en/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Zipf’s Law, City Sizes, and Why the Largest City Cheats: A Global Data Experiment</title>
-      <link>https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/</link>
-      <pubDate>Fri, 11 Jul 2025 22:49:34 -0500</pubDate>
-      <guid>https://enriqueacosta.github.io/blog/en/posts/zipfcountries-predict6thcity/</guid>
-      <description>&lt;p&gt;Zipf’s Law claims that city populations decrease according to a power law:&#xA;$$&#xA;P(r) = C r^{-\alpha}&#xA;$$&#xA;where $P(r)$ is the population of the $r$-th largest city, and $C, \alpha$ are fitted constants. Classic theory suggests $\alpha \approx 1$, but this varies from region to region.&lt;/p&gt;&#xA;&lt;p&gt;However, when one plays around finding fits for countries, one often finds that the capital city is often an outlier. This has been extensively noted (see for example &lt;em&gt;Zipf&amp;rsquo;s Law for Cities: An Explanation&lt;/em&gt; from Xavier Gabaix, 1999, from The Quarterly Journal of Economics).&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Tikz Template for Mathematical Figures: Example with Double Number Lines</title>
       <link>https://enriqueacosta.github.io/blog/en/posts/tikz-doublenumline/</link>
