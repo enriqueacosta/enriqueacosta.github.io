@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Ink Roll — Level 1</title>
+<style>
+  :root{
+    --paper:#f6f3ea;
+    --paper-2:#efeadd;
+    --ink:#2b3fa0;         /* ballpoint blue */
+    --ink-soft:#6a78c4;
+    --ink-faint:#b9c0e4;
+    --danger:#c0392b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;height:100%;overflow:hidden;background:#e7e2d4;}
+  body{
+    font-family:"Comic Sans MS","Segoe Print","Bradley Hand",system-ui,sans-serif;
+    color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    user-select:none;touch-action:none;
+  }
+  #wrap{
+    position:relative;width:100vw;height:100vh;max-width:100vw;max-height:100vh;
+    background:var(--paper);
+    overflow:hidden;
+  }
+  canvas{display:block;width:100%;height:100%;}
+
+  /* ---- paper grain ---- */
+  #wrap::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,.015), transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(0,0,0,.02), transparent 60%);
+    mix-blend-mode:multiply;
+  }
+
+  /* ---- overlays ---- */
+  .overlay{
+    position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:18px;text-align:center;
+    background:rgba(246,243,234,.82);backdrop-filter:blur(1px);
+    padding:24px;
+  }
+  .overlay.hidden{display:none;}
+  .card{
+    background:var(--paper);
+    border:2.5px solid var(--ink);
+    border-radius:18px 20px 16px 22px;
+    padding:26px 30px;max-width:520px;width:100%;
+    box-shadow:6px 7px 0 rgba(43,63,160,.18);
+  }
+  h1{font-size:clamp(34px,7vw,58px);margin:0 0 2px;letter-spacing:1px;transform:rotate(-1.2deg);}
+  .sub{color:var(--ink-soft);margin:0 0 16px;font-size:15px;}
+  p.tip{margin:6px 0;font-size:15px;line-height:1.5;}
+  .kbd{
+    display:inline-block;border:2px solid var(--ink);border-radius:6px;
+    padding:1px 8px;font-size:13px;background:var(--paper-2);margin:0 2px;
+    box-shadow:2px 2px 0 rgba(43,63,160,.15);
+  }
+  .swatches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0 6px;}
+  .sw{
+    width:38px;height:38px;border-radius:50%;border:2.5px solid var(--ink);
+    cursor:pointer;position:relative;transition:transform .08s;
+  }
+  .sw:hover{transform:scale(1.08) rotate(-4deg);}
+  .sw.sel{box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--ink);}
+  .sw.custom{display:flex;align-items:center;justify-content:center;font-size:20px;overflow:hidden;background:var(--paper-2);}
+  .sw.custom input{position:absolute;inset:-4px;opacity:0;cursor:pointer;}
+  .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px;}
+  button.btn{
+    font-family:inherit;font-size:19px;color:var(--paper);background:var(--ink);
+    border:none;border-radius:12px 14px 11px 13px;padding:12px 26px;cursor:pointer;
+    box-shadow:4px 5px 0 rgba(43,63,160,.35);transition:transform .06s, box-shadow .06s;
+  }
+  button.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 6px 0 rgba(43,63,160,.35);}
+  button.btn:active{transform:translate(2px,3px);box-shadow:1px 1px 0 rgba(43,63,160,.35);}
+  button.btn.ghost{background:var(--paper);color:var(--ink);border:2.5px solid var(--ink);box-shadow:4px 5px 0 rgba(43,63,160,.18);}
+  .stat{font-size:22px;margin:2px 0;}
+  .stat b{font-size:30px;}
+
+  /* ---- HUD ---- */
+  #hud{
+    position:absolute;top:0;left:0;right:0;z-index:4;pointer-events:none;
+    display:flex;align-items:center;gap:16px;padding:12px 16px;font-size:16px;
+  }
+  #hud .pill{
+    background:var(--paper);border:2px solid var(--ink);border-radius:20px;
+    padding:4px 12px;box-shadow:2px 3px 0 rgba(43,63,160,.15);
+  }
+  #progressWrap{
+    flex:1;height:12px;background:var(--paper-2);border:2px solid var(--ink);
+    border-radius:20px;overflow:hidden;margin:0 4px;
+  }
+  #progressBar{height:100%;width:0%;background:var(--ink-soft);}
+  #hud .right{margin-left:auto;display:flex;gap:12px;align-items:center;}
+  #pauseBtn{pointer-events:auto;cursor:pointer;}
+  .flag{font-size:15px;}
+  @media (max-width:520px){ #hud{font-size:14px;} .card{padding:20px;} }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <span class="pill" id="lvlPill">Lvl 1</span>
+    <span class="pill">● <b id="coinCount">0</b></span>
+    <span class="pill">try <b id="tryCount">1</b></span>
+    <div id="progressWrap"><div id="progressBar"></div></div>
+    <div class="right">
+      <span class="pill flag" id="hint"></span>
+      <span class="pill" id="pauseBtn">⏸</span>
+    </div>
+  </div>
+
+  <!-- Start menu -->
+  <div id="menu" class="overlay">
+    <div class="card">
+      <h1>Ink&nbsp;Roll</h1>
+      <p class="sub">a little ball, a lot of ballpoint pen · Level 1</p>
+      <p class="tip"><span class="kbd">Space</span> / tap &nbsp;=&nbsp; jump &nbsp;·&nbsp; <b>hold</b> for a higher jump</p>
+      <p class="tip"><b>double-tap</b> in the air &nbsp;=&nbsp; super jump 🚀</p>
+      <p class="tip" style="color:var(--ink-soft)">You always roll to the right. Dodge the spikes and pits.</p>
+      <div class="swatches" id="swatches"></div>
+      <div class="row" id="levelRow"></div>
+    </div>
+  </div>
+
+  <!-- Pause -->
+  <div id="pause" class="overlay hidden">
+    <div class="card">
+      <h1 style="font-size:44px;">Paused</h1>
+      <div class="row">
+        <button class="btn" id="resumeBtn">Resume</button>
+        <button class="btn ghost" id="restartBtn">Restart</button>
+        <button class="btn ghost" id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Win -->
+  <div id="win" class="overlay hidden">
+    <div class="card">
+      <h1 id="winTitle">You made it! 🎉</h1>
+      <p class="stat">coins&nbsp; <b id="winCoins">0</b> / <span id="winCoinsMax">0</span></p>
+      <p class="stat">time&nbsp; <b id="winTime">0.0</b>s</p>
+      <p class="stat">tries&nbsp; <b id="winTries">1</b></p>
+      <div class="row">
+        <button class="btn" id="nextBtn">Next level ▶</button>
+        <button class="btn ghost" id="againBtn">Play again</button>
+        <button class="btn ghost" id="winMenuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+(function(){
+const cv = document.getElementById('game');
+const ctx = cv.getContext('2d');
+
+// ---------- sizing ----------
+let W=0,H=0,DPR=1, groundBaseY=0, R=16;
+function resize(){
+  DPR = Math.min(window.devicePixelRatio||1, 2);
+  W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = Math.floor(W*DPR); cv.height = Math.floor(H*DPR);
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  groundBaseY = H*0.72;
+  R = Math.max(13, Math.min(20, H*0.032));
+}
+window.addEventListener('resize', resize);
+
+// ---------- deterministic wobble (stable hand-drawn look) ----------
+function wob(seed){ // returns ~[-1,1]
+  const s = Math.sin(seed*12.9898)*43758.5453;
+  return (s - Math.floor(s))*2 - 1;
+}
+
+// ---------- LEVELS ----------
+// Each level: smooth ground control points (up = px above baseline),
+// pits, spikes, solid platforms, coins (ring = worth 3), checkpoints,
+// finish x, background scenery, and hint zones. Peaks/bushes are scenery only.
+const LEVELS = [
+  { // ===== LEVEL 1 — The Warm-Up =====
+    name:"The Warm-Up",
+    ground:[
+      {x:-400,up:0},{x:600,up:0},{x:900,up:26},{x:1200,up:0},{x:1500,up:0},
+      {x:1750,up:34},{x:2050,up:0},{x:2450,up:22},{x:2750,up:40},{x:3000,up:0},
+      {x:3450,up:0},{x:3900,up:0},{x:4300,up:18},{x:4700,up:0},{x:5200,up:0},
+      {x:5700,up:0},{x:6200,up:0}
+    ],
+    gaps:[ {x0:2100,x1:2230},{x0:3300,x1:3400},{x0:3760,x1:3860},{x0:5150,x1:5290} ],
+    spikes:[
+      {x:1330,size:36},{x:1980,size:36},{x:2560,size:34},{x:2620,size:34},
+      {x:3620,size:36},{x:4930,size:34},{x:4990,size:34},{x:5420,size:36}
+    ],
+    platforms:[
+      {x:1650,up:60,w:120},{x:3400,up:46,w:170},{x:4360,up:55,w:110},{x:4520,up:118,w:120}
+    ],
+    coins:[
+      {x:520,up:70},{x:1330,up:120},{x:2160,up:120},{x:2760,up:150,ring:true},
+      {x:3325,up:150},{x:3810,up:150},{x:4360,up:130},{x:4520,up:200},{x:5220,up:150}
+    ],
+    checkpoints:[0,1500,2950,4200,4800],
+    finishX:5950,
+    scenery:[
+      {x:4550,type:'peak',h:230,w:340},{x:5150,type:'bush',h:120,w:150},
+      {x:5400,type:'bush',h:150,w:200},{x:1150,type:'peak',h:120,w:220},{x:300,type:'peak',h:80,w:180}
+    ],
+    hints:[ {x0:0,x1:640,text:'hold Space to jump higher'},{x0:4380,x1:4560,text:'double-tap for a super jump!'} ]
+  },
+  { // ===== LEVEL 2 — Arches & Spikes =====
+    name:"Arches & Spikes",
+    ground:[
+      {x:-400,up:0},{x:600,up:0},
+      {x:760,up:60},{x:920,up:0},                 // arch hump
+      {x:1150,up:0},{x:1450,up:0},
+      {x:1650,up:48},{x:1850,up:48},{x:2050,up:0},// dome
+      {x:2500,up:0},
+      {x:2700,up:64},{x:2900,up:0},               // big dome
+      {x:3150,up:0},{x:3600,up:0},
+      {x:3850,up:42},{x:4050,up:0},               // small dome
+      {x:4250,up:0},{x:4700,up:0},
+      {x:5000,up:18},{x:5450,up:32},{x:5900,up:32}// rise to flag
+    ],
+    gaps:[ {x0:3200,x1:3320},{x0:4480,x1:4580} ],
+    spikes:[
+      {x:1000,size:36},{x:1360,size:36},
+      {x:1980,size:34},{x:2040,size:34},
+      {x:3010,size:34},{x:3070,size:34},
+      {x:3500,size:36},
+      {x:4130,size:34},{x:4190,size:34},
+      {x:4760,size:34},{x:4820,size:34}
+    ],
+    platforms:[
+      {x:1150,up:52,w:90}                          // crate
+    ],
+    movers:[
+      // the square by the flag: a block that rides up & down — touch it = out
+      {x:5150,w:46,h:54,baseUp:48,amp:48,period:2.2,phase:0}
+    ],
+    coins:[
+      {x:760,up:130},{x:1150,up:120},{x:1750,up:120},
+      {x:2200,up:150,ring:true},                   // the loop
+      {x:2700,up:170},{x:3260,up:150},{x:3850,up:120},
+      {x:4300,up:130},{x:4530,up:150},{x:5150,up:150}
+    ],
+    checkpoints:[0,1400,2400,3400,4250],
+    finishX:5450,
+    scenery:[
+      {x:2700,type:'peak',h:120,w:220},{x:5000,type:'peak',h:150,w:260},
+      {x:5750,type:'bush',h:120,w:170},{x:900,type:'bush',h:90,w:150}
+    ],
+    hints:[ {x0:0,x1:600,text:'more spikes this time — time your jumps'},{x0:4250,x1:4470,text:'jump the gap ahead'},{x0:4880,x1:5130,text:'block moves — jump it when it drops, or roll under'} ]
+  },
+  { // ===== LEVEL 3 — The Long Climb =====
+    name:"The Long Climb",
+    ground:[
+      {x:-400,up:0},{x:500,up:8},
+      {x:700,up:38},{x:900,up:12},
+      {x:1150,up:22},
+      {x:1450,up:35},{x:1650,up:62},{x:1850,up:38},
+      {x:2050,up:50},
+      {x:2350,up:60},{x:2600,up:82},{x:2850,up:62},
+      {x:3100,up:75},
+      {x:3400,up:88},{x:3650,up:112},{x:3900,up:90},
+      {x:4150,up:100},
+      {x:4450,up:115},{x:4700,up:140},{x:4950,up:120},
+      {x:5200,up:135},{x:5600,up:158},{x:6100,up:172}
+    ],
+    gaps:[],
+    spikes:[
+      {x:1170,size:44},{x:2070,size:44},{x:3120,size:48},{x:4170,size:48}, // under floating blocks
+      {x:1480,size:32},{x:2850,size:34},{x:3900,size:36},{x:4950,size:36}
+    ],
+    platforms:[],
+    floaters:[
+      {x:1150,w:40,floatGap:48,h:34},
+      {x:2050,w:40,floatGap:48,h:34},
+      {x:3100,w:40,floatGap:52,h:36},
+      {x:4150,w:40,floatGap:52,h:36}
+    ],
+    movers:[
+      {x:5250,w:44,h:52,baseUp:170,amp:45,period:2.3,phase:0}
+    ],
+    coins:[
+      {x:1170,up:150},{x:2070,up:175},{x:3120,up:205},{x:4170,up:230}, // above the floating blocks
+      {x:700,up:120},{x:1650,up:150},{x:2600,up:175},{x:3650,up:205},{x:4700,up:235},{x:5600,up:250}
+    ],
+    checkpoints:[0,1050,1950,3000,4050,5150],
+    finishX:5700,
+    scenery:[
+      {x:1650,type:'peak',h:120,w:220},{x:3650,type:'peak',h:170,w:280},
+      {x:4700,type:'peak',h:210,w:320},{x:5600,type:'bush',h:120,w:170}
+    ],
+    hints:[
+      {x0:0,x1:640,text:'the ground keeps climbing — keep rolling up'},
+      {x0:1000,x1:1140,text:'spike below, block above — get up and over it'},
+      {x0:5050,x1:5240,text:'last one moves — time it'}
+    ]
+  },
+  { // ===== LEVEL 4 — Black Holes =====
+    name:"Black Holes",
+    ground:[
+      {x:-400,up:0},{x:500,up:0},
+      {x:700,up:46},{x:1000,up:0},
+      {x:1300,up:0},
+      {x:1550,up:42},{x:1800,up:42},{x:2050,up:0},
+      {x:2350,up:0},
+      {x:2600,up:50},{x:2850,up:0},
+      {x:3100,up:0},{x:3450,up:0},
+      {x:3650,up:34},{x:3850,up:0},
+      {x:4100,up:0},{x:4550,up:0},
+      {x:4700,up:0},{x:5250,up:0},
+      {x:5350,up:0},{x:5800,up:0},{x:6200,up:0}
+    ],
+    gaps:[],
+    spikes:[
+      {x:720,size:44},{x:3670,size:46},                  // under the floating blocks
+      {x:1300,size:34},{x:2300,size:34},{x:3100,size:36},{x:4300,size:34},
+      {x:4950,size:200}                                   // the "very big mountain"
+    ],
+    platforms:[
+      {x:3300,up:52,w:100}
+    ],
+    floaters:[
+      {x:700,w:40,floatGap:48,h:34},
+      {x:3650,w:40,floatGap:50,h:36}
+    ],
+    movers:[],
+    portals:[
+      {ax:4650,bx:5300}                                   // roll into A, pop out of B, skipping the mountain
+    ],
+    coins:[
+      {x:700,up:150},{x:1550,up:120},{x:2600,up:135},{x:3300,up:150},{x:3650,up:175},
+      {x:4950,up:255,ring:true},                          // brave route: over the mountain
+      {x:5300,up:120},{x:5600,up:110}
+    ],
+    checkpoints:[0,1200,2400,3500,4400],
+    finishX:5800,
+    scenery:[
+      {x:900,type:'bush',h:90,w:160},{x:2600,type:'peak',h:120,w:220},
+      {x:4950,type:'peak',h:240,w:360},{x:5600,type:'bush',h:110,w:160}
+    ],
+    hints:[
+      {x0:0,x1:640,text:'you know the drill — roll and jump'},
+      {x0:4430,x1:4630,text:'black hole ahead — roll in to skip the mountain'},
+      {x0:5270,x1:5460,text:'…and out you pop'}
+    ]
+  }
+];
+
+let GROUND,GAPS,SPIKES,PLATFORMS,COINS,CHECKPOINTS,FINISH_X,SCENERY,HINTS,MOVERS,FLOATERS,PORTALS;
+let levelIndex=0;
+function loadLevel(i){
+  levelIndex=i; const L=LEVELS[i];
+  GROUND=L.ground; GAPS=L.gaps; SPIKES=L.spikes; PLATFORMS=L.platforms;
+  COINS=L.coins; CHECKPOINTS=L.checkpoints; FINISH_X=L.finishX; SCENERY=L.scenery; HINTS=L.hints;
+  MOVERS=L.movers||[];
+  FLOATERS=L.floaters||[];
+  for(const f of FLOATERS){ f.topUp=groundUpAt(f.x+f.w/2)+f.floatGap+f.h; f.botUp=f.topUp-f.h; }
+  PORTALS=L.portals||[];
+}
+loadLevel(0);
+
+// ---------- interpolation ----------
+function smooth(t){ return t*t*(3-2*t); }
+function groundUpAt(x){
+  // find segment
+  for(let i=0;i<GROUND.length-1;i++){
+    const a=GROUND[i],b=GROUND[i+1];
+    if(x>=a.x && x<=b.x){
+      const t=smooth((x-a.x)/(b.x-a.x));
+      return a.up+(b.up-a.up)*t;
+    }
+  }
+  return 0;
+}
+function inGap(x){
+  for(const g of GAPS){ if(x>g.x0 && x<g.x1) return true; }
+  return false;
+}
+// screen Y of the walking surface at world x (null if pit)
+function surfaceY(x){
+  if(inGap(x)) return null;
+  return groundBaseY - groundUpAt(x);
+}
+// effective support (top surface the ball can rest on) accounting for platforms
+function supportAt(x){
+  let sy = surfaceY(x);           // may be null in a pit
+  for(const p of PLATFORMS){
+    if(x>=p.x && x<=p.x+p.w){
+      const top = groundBaseY - p.up;
+      if(sy===null || top<sy) sy=top;
+    }
+  }
+  return sy;
+}
+
+// ---------- state ----------
+const G = 2600;         // gravity px/s^2
+const SPEED = 300;      // constant rightward speed px/s
+const JUMP_V = 820;     // base jump impulse
+const SUPER_V = 1180;   // super (air double-tap) impulse
+const HOLD_G = 1250;    // reduced gravity while holding & rising
+const HOLD_MAX = 0.24;  // seconds of hold assist
+const COYOTE = 0.09;
+const DBL_WINDOW = 0.26;
+
+let state='menu';       // menu | play | pause | win
+let ball, coinsGot, coinsTotal, tries, runStart, deathFlash, hintText, portalFlash=0;
+let chosenColor = '#e5732e';
+
+function resetBall(fromCheckpoint){
+  const cpx = fromCheckpoint ? currentCheckpointX() : 0;
+  const sy = supportAt(cpx) ?? groundBaseY;
+  ball = {
+    x: cpx, y: sy - R, vy:0, grounded:true, lastGround:0, rot:0,
+    holding:false, jumpStart:-1, groundJumpAt:-2, airBoostUsed:false, alive:true
+  };
+}
+function currentCheckpointX(){
+  let cp=0;
+  for(const c of CHECKPOINTS){ if(ball && ball.x>=c) cp=c; }
+  return cp;
+}
+
+// ---------- input ----------
+let pressQueued=false;   // a fresh press this frame
+let holdDown=false;
+let lastPressT=-10;
+
+function press(){
+  const now = performance.now()/1000;
+  pressQueued=true; holdDown=true;
+  lastPressT=now;
+}
+function release(){ holdDown=false; }
+
+window.addEventListener('keydown',e=>{
+  if(e.code==='Space'||e.code==='ArrowUp'){
+    e.preventDefault();
+    if(state==='play'){ if(!e.repeat) press(); }
+  }
+  if(e.code==='KeyP'||e.code==='Escape'){ if(state==='play') doPause(); else if(state==='pause') doResume(); }
+});
+window.addEventListener('keyup',e=>{ if(e.code==='Space'||e.code==='ArrowUp') release(); });
+
+cv.addEventListener('pointerdown',e=>{ if(state==='play'){ e.preventDefault(); press(); } });
+cv.addEventListener('pointerup',e=>{ release(); });
+cv.addEventListener('pointercancel',()=>release());
+
+// ---------- game control ----------
+function startGame(idx){
+  if(idx!==undefined) loadLevel(idx);
+  coinsGot=0; tries=1; coinsTotal = COINS.reduce((s,c)=>s+(c.ring?3:1),0);
+  COINS.forEach(c=>c.got=false);
+  resetBall(false);
+  runStart = performance.now();
+  deathFlash=0; hintText='';
+  state='play';
+  show('menu',false); show('pause',false); show('win',false); show('hud',true);
+}
+function die(){
+  tries++;
+  deathFlash=0.28;
+  resetBall(true);
+}
+function doPause(){ if(state!=='play')return; state='pause'; show('pause',true); }
+function doResume(){ if(state!=='pause')return; state='play'; show('pause',false); }
+function doWin(){
+  state='win';
+  const hasNext = levelIndex < LEVELS.length-1;
+  document.getElementById('winTitle').textContent = hasNext ? 'Level clear! 🎉' : 'You beat every level! 🏁';
+  document.getElementById('winCoins').textContent=coinsGot;
+  document.getElementById('winCoinsMax').textContent=coinsTotal;
+  document.getElementById('winTime').textContent=((performance.now()-runStart)/1000).toFixed(1);
+  document.getElementById('winTries').textContent=tries;
+  document.getElementById('nextBtn').style.display = hasNext ? 'inline-block':'none';
+  document.getElementById('againBtn').textContent = hasNext ? 'Replay' : 'Play again';
+  show('win',true); show('hud',false);
+}
+function toMenu(){ state='menu'; show('menu',true); show('pause',false); show('win',false); show('hud',false); }
+function show(id,on){ document.getElementById(id).classList.toggle('hidden',!on); }
+
+// ---------- update ----------
+function update(dt){
+  if(state!=='play') return;
+  const now = performance.now()/1000;
+  if(deathFlash>0) deathFlash=Math.max(0,deathFlash-dt);
+  if(portalFlash>0) portalFlash=Math.max(0,portalFlash-dt);
+
+  // horizontal
+  ball.x += SPEED*dt;
+
+  // jump input handling
+  if(pressQueued){
+    pressQueued=false;
+    const canGround = ball.grounded || (now-ball.lastGround)<COYOTE;
+    if(canGround){
+      ball.vy = -JUMP_V;
+      ball.grounded=false;
+      ball.holding=true; ball.jumpStart=now;
+      ball.groundJumpAt=now; ball.airBoostUsed=false;
+    } else if(!ball.airBoostUsed && (now-ball.groundJumpAt)<DBL_WINDOW){
+      // quick double-tap → super jump
+      ball.vy = -SUPER_V;
+      ball.airBoostUsed=true;
+      ball.holding=true; ball.jumpStart=now;
+    }
+  }
+
+  // variable-height gravity
+  let g = G;
+  if(ball.holding && holdDown && ball.vy<0 && (now-ball.jumpStart)<HOLD_MAX){
+    g = HOLD_G;
+  } else {
+    if(ball.holding && !holdDown && ball.vy<0){ ball.vy*=0.5; } // jump cut on release
+    ball.holding=false;
+  }
+  ball.vy += g*dt;
+  const prevBottom = ball.y+R;
+  ball.y += ball.vy*dt;
+
+  // rolling rotation
+  ball.rot += (SPEED*dt)/R;
+
+  // landing on support (ground, platform top, or floating-block top)
+  ball.grounded=false;
+  let sy = supportAt(ball.x);
+  for(const f of FLOATERS){
+    if(ball.x>=f.x-1 && ball.x<=f.x+f.w+1){
+      const top = groundBaseY - f.topUp;
+      if(ball.vy>=0 && prevBottom<=top+8 && ball.y+R>=top){
+        if(sy===null || top<sy) sy=top;
+      }
+    }
+  }
+  if(sy!==null){
+    if(ball.vy>=0 && ball.y+R>=sy && prevBottom<=sy+14){
+      ball.y = sy-R; ball.vy=0; ball.grounded=true; ball.lastGround=now; ball.airBoostUsed=false;
+    }
+  }
+
+  // black holes: roll into A, pop out of B (checked before hazards so it saves you)
+  for(const p of PORTALS){
+    const aY=groundBaseY-groundUpAt(p.ax)-R;
+    if(Math.abs(ball.x-p.ax)<24 && Math.abs(ball.y-aY)<40){
+      ball.x=p.bx; ball.y=groundBaseY-groundUpAt(p.bx)-R; ball.vy=0;
+      ball.grounded=true; ball.lastGround=now; ball.airBoostUsed=false;
+      portalFlash=0.32; return;
+    }
+  }
+
+  // platform side collision (slammed into a wall) → die
+  for(const p of PLATFORMS){
+    const top = groundBaseY - p.up;
+    // circle vs rect (rect spans from top down to baseline)
+    const rx0=p.x, rx1=p.x+p.w, ry0=top, ry1=groundBaseY+40;
+    const cx=Math.max(rx0,Math.min(ball.x,rx1));
+    const cy=Math.max(ry0,Math.min(ball.y,ry1));
+    const dx=ball.x-cx, dy=ball.y-cy;
+    if(dx*dx+dy*dy < (R*0.82)*(R*0.82)){
+      // if we're basically resting on the top, that's fine
+      if(!(ball.grounded && Math.abs((ball.y+R)-top)<3)) { die(); return; }
+    }
+  }
+
+  // spikes
+  for(const s of SPIKES){
+    const apex = surfaceY(s.x); if(apex===null) continue;
+    const topY = apex - s.size;
+    const halfBase = s.size*0.62;
+    if(ball.x> s.x-halfBase && ball.x< s.x+halfBase){
+      if(ball.y+R*0.55 > topY){ die(); return; }
+    }
+  }
+
+  // moving blocks (obstacles) — any contact is fatal
+  const tG=performance.now()/1000;
+  for(const m of MOVERS){
+    const centerUp = m.baseUp + m.amp*Math.sin(tG*(2*Math.PI/m.period)+(m.phase||0));
+    const topY = groundBaseY - (centerUp + m.h/2);
+    const botY = groundBaseY - (centerUp - m.h/2);
+    const cx=Math.max(m.x,Math.min(ball.x,m.x+m.w));
+    const cy=Math.max(topY,Math.min(ball.y,botY));
+    const dx=ball.x-cx, dy=ball.y-cy;
+    if(dx*dx+dy*dy < (R*0.85)*(R*0.85)){ die(); return; }
+  }
+
+  // floating blocks: landing on top is safe (handled above); side/underside is fatal
+  for(const f of FLOATERS){
+    const top = groundBaseY - f.topUp;
+    const bot = groundBaseY - f.botUp;   // bot is lower on screen (top + h)
+    const cx=Math.max(f.x,Math.min(ball.x,f.x+f.w));
+    const cy=Math.max(top,Math.min(ball.y,bot));
+    const dx=ball.x-cx, dy=ball.y-cy;
+    if(dx*dx+dy*dy < (R*0.8)*(R*0.8)){
+      if(!(ball.grounded && Math.abs((ball.y+R)-top)<3)) { die(); return; }
+    }
+  }
+
+  // fell in a pit / off screen
+  if(ball.y-R > H+60){ die(); return; }
+
+  // coins
+  for(const c of COINS){
+    if(c.got) continue;
+    const cy = groundBaseY - c.up;
+    const rr = c.ring? 26: 13;
+    const dx=ball.x-c.x, dy=ball.y-cy;
+    if(dx*dx+dy*dy < (rr+R)*(rr+R)){
+      c.got=true; coinsGot += c.ring?3:1;
+    }
+  }
+
+  // hints
+  hintText='';
+  for(const h of HINTS){ if(ball.x>=h.x0 && ball.x<=h.x1){ hintText=h.text; break; } }
+
+  // finish
+  if(ball.x>=FINISH_X){ doWin(); }
+}
+
+// ---------- render ----------
+function inkStroke(pts, width, alpha, color){
+  if(pts.length<2) return;
+  ctx.lineJoin='round'; ctx.lineCap='round';
+  ctx.strokeStyle=color||('rgba(43,63,160,'+(alpha??1)+')');
+  ctx.lineWidth=width;
+  ctx.beginPath();
+  ctx.moveTo(pts[0][0],pts[0][1]);
+  for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]);
+  ctx.stroke();
+}
+
+function drawScenery(camX){
+  for(const s of SCENERY){
+    const par=0.45;
+    const sx = (s.x - camX*par) ;
+    if(sx< -400 || sx>W+400) continue;
+    const baseY=groundBaseY - groundUpAt(s.x)*0.4;
+    ctx.save();
+    ctx.globalAlpha=0.5;
+    if(s.type==='peak'){
+      const pts=[
+        [sx-s.w/2, baseY],
+        [sx-s.w*0.12+ wob(s.x)*8, baseY-s.h*0.9],
+        [sx+ wob(s.x+9)*6, baseY-s.h],
+        [sx+s.w*0.2, baseY-s.h*0.72],
+        [sx+s.w/2, baseY]
+      ];
+      inkStroke(pts,2.2,0.5);
+    } else { // bush = bumpy dome
+      const pts=[]; const n=10;
+      for(let i=0;i<=n;i++){
+        const t=i/n, ang=Math.PI*t;
+        const bump = (i%2? 0.82:1.0);
+        pts.push([sx-s.w/2+s.w*t, baseY - Math.sin(ang)*s.h*bump - wob(s.x+i)*4]);
+      }
+      inkStroke(pts,2.2,0.5);
+    }
+    ctx.restore();
+  }
+}
+
+function drawGround(camX){
+  // draw surface as a wobbly ink line across visible area, broken at gaps
+  const step=8;
+  let seg=[];
+  const flush=()=>{ if(seg.length>1){ inkStroke(seg,3.2,1); 
+      // ground fill hatch (a few faint verticals)
+    } seg=[]; };
+  for(let sx=-10; sx<=W+10; sx+=step){
+    const wx=sx+camX;
+    const sy=surfaceY(wx);
+    if(sy===null){ flush(); continue; }
+    const jitter = wob(Math.floor(wx/6))*1.4;
+    seg.push([sx, sy+jitter]);
+  }
+  flush();
+
+  // little grass ticks
+  ctx.save(); ctx.globalAlpha=0.5;
+  for(let sx=0; sx<=W; sx+=26){
+    const wx=sx+camX; const sy=surfaceY(wx);
+    if(sy===null) continue;
+    const j=wob(Math.floor(wx/26));
+    inkStroke([[sx, sy],[sx+3+j*2, sy-6-Math.abs(j)*3]],1.6,0.5);
+  }
+  ctx.restore();
+
+  // gap edges (short down strokes so pits read as holes)
+  for(const g of GAPS){
+    for(const edge of [g.x0,g.x1]){
+      const sx=edge-camX; if(sx<-20||sx>W+20) continue;
+      const sy=surfaceY(edge-2<g.x0?g.x0-1:g.x1+1) ?? (groundBaseY);
+      const topy = groundBaseY-groundUpAt(edge);
+      inkStroke([[sx,topy],[sx,topy+40]],2.6,0.7);
+    }
+  }
+}
+
+function drawPlatforms(camX){
+  for(const p of PLATFORMS){
+    const sx=p.x-camX; if(sx<-200||sx>W+200) continue;
+    const top=groundBaseY-p.up;
+    const pts=[
+      [sx, groundBaseY+4],
+      [sx+wob(p.x)*1.5, top+wob(p.x+2)*1.5],
+      [sx+p.w+wob(p.x+3)*1.5, top+wob(p.x+4)*1.5],
+      [sx+p.w, groundBaseY+4]
+    ];
+    inkStroke(pts,3,1);
+    // hatch fill
+    ctx.save(); ctx.globalAlpha=0.28;
+    for(let hx=sx+8; hx<sx+p.w; hx+=12){
+      inkStroke([[hx, top+6],[hx-8, groundBaseY]],1.3,0.5);
+    }
+    ctx.restore();
+  }
+}
+
+function drawSpikes(camX){
+  for(const s of SPIKES){
+    const apex=surfaceY(s.x); if(apex===null) continue;
+    const sx=s.x-camX; if(sx<-60||sx>W+60) continue;
+    const hb=s.size*0.62;
+    const pts=[[sx-hb, apex],[sx+wob(s.x)*2, apex-s.size],[sx+hb, apex]];
+    ctx.save();
+    inkStroke(pts,2.8,1,'rgba(43,63,160,1)');
+    ctx.restore();
+  }
+}
+
+function drawCoins(camX){
+  const t=performance.now()/1000;
+  for(const c of COINS){
+    if(c.got) continue;
+    const sx=c.x-camX; if(sx<-60||sx>W+60) continue;
+    const cy=groundBaseY-c.up + Math.sin(t*3+c.x)*3;
+    if(c.ring){
+      ctx.save(); ctx.strokeStyle='rgba(43,63,160,1)'; ctx.lineWidth=3.4;
+      ctx.beginPath(); ctx.ellipse(sx,cy,22,26,0,0,Math.PI*2); ctx.stroke();
+      ctx.lineWidth=1.6; ctx.globalAlpha=0.6;
+      ctx.beginPath(); ctx.ellipse(sx,cy,14,17,0,0,Math.PI*2); ctx.stroke();
+      ctx.restore();
+    } else {
+      ctx.save(); ctx.strokeStyle='rgba(43,63,160,1)'; ctx.lineWidth=2.6;
+      ctx.beginPath(); ctx.arc(sx,cy,10,0,Math.PI*2); ctx.stroke();
+      ctx.fillStyle='rgba(106,120,196,.35)'; ctx.fill();
+      ctx.restore();
+    }
+  }
+}
+
+function drawFinish(camX){
+  const sx=FINISH_X-camX; if(sx<-100||sx>W+200) return;
+  const base=groundBaseY-groundUpAt(FINISH_X);
+  inkStroke([[sx,base],[sx,base-90]],3,1);
+  // flag (chosen color accent tip)
+  const fpts=[[sx,base-90],[sx+42,base-76],[sx,base-58]];
+  ctx.save(); inkStroke(fpts,2.6,1);
+  ctx.fillStyle=chosenColor; ctx.globalAlpha=.85;
+  ctx.beginPath(); ctx.moveTo(sx,base-90); ctx.lineTo(sx+42,base-76); ctx.lineTo(sx,base-58); ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+
+function drawBall(camX){
+  const sx=ball.x-camX;
+  const sy=ball.y;
+  ctx.save();
+  ctx.translate(sx,sy);
+  // shadow
+  ctx.save();
+  const groundy=(supportAt(ball.x)??(groundBaseY))- sy;
+  ctx.globalAlpha=0.12; ctx.fillStyle='#000';
+  ctx.beginPath(); ctx.ellipse(0, Math.min(groundy, H), R*0.9, R*0.35,0,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+
+  ctx.rotate(ball.rot);
+  // body
+  ctx.fillStyle=chosenColor;
+  ctx.beginPath(); ctx.arc(0,0,R,0,Math.PI*2); ctx.fill();
+  // ink outline
+  ctx.strokeStyle='rgba(43,63,160,1)'; ctx.lineWidth=2.6;
+  ctx.beginPath(); ctx.arc(0,0,R,0,Math.PI*2); ctx.stroke();
+  // rolling marks
+  ctx.strokeStyle='rgba(43,63,160,.55)'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(-R*0.5,0); ctx.lineTo(R*0.5,0); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0,-R*0.5); ctx.lineTo(0,R*0.5); ctx.stroke();
+  // highlight
+  ctx.fillStyle='rgba(255,255,255,.5)';
+  ctx.beginPath(); ctx.arc(-R*0.35,-R*0.35,R*0.22,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+}
+
+function drawMovers(camX){
+  const tG=performance.now()/1000;
+  for(const m of MOVERS){
+    const sx=m.x-camX; if(sx<-140||sx>W+140) continue;
+    const centerUp = m.baseUp + m.amp*Math.sin(tG*(2*Math.PI/m.period)+(m.phase||0));
+    const topY = groundBaseY - (centerUp + m.h/2);
+    const botY = groundBaseY - (centerUp - m.h/2);
+    // faint dashed travel guide so the motion reads as fair
+    ctx.save(); ctx.setLineDash([4,7]);
+    const gTop=groundBaseY-(m.baseUp+m.amp+m.h/2), gBot=groundBaseY-(m.baseUp-m.amp-m.h/2);
+    inkStroke([[sx-3,gTop],[sx-3,gBot]],1.3,0.3);
+    inkStroke([[sx+m.w+3,gTop],[sx+m.w+3,gBot]],1.3,0.3);
+    ctx.restore();
+    // wobbly block outline
+    const j=(k)=>wob(m.x+k)*1.6;
+    const pts=[
+      [sx+j(0), topY+j(1)],[sx+m.w+j(2), topY+j(3)],
+      [sx+m.w+j(4), botY+j(5)],[sx+j(6), botY+j(7)],[sx+j(0), topY+j(1)]
+    ];
+    inkStroke(pts,3,1);
+    // cross-hatch fill
+    ctx.save();
+    for(let yy=topY+7; yy<botY-2; yy+=11){ inkStroke([[sx+4,yy],[sx+m.w-4,yy-6]],1.2,0.35); }
+    ctx.restore();
+    // up/down motion chevrons
+    const mx=sx+m.w/2;
+    inkStroke([[mx-5,topY-4],[mx,topY-11],[mx+5,topY-4]],1.6,0.55);
+    inkStroke([[mx-5,botY+4],[mx,botY+11],[mx+5,botY+4]],1.6,0.55);
+  }
+}
+function drawFloaters(camX){
+  for(const f of FLOATERS){
+    const sx=f.x-camX; if(sx<-140||sx>W+140) continue;
+    const top=groundBaseY - f.topUp, bot=groundBaseY - f.botUp;
+    const j=(k)=>wob(f.x+k)*1.5;
+    const pts=[
+      [sx+j(0), top+j(1)],[sx+f.w+j(2), top+j(3)],
+      [sx+f.w+j(4), bot+j(5)],[sx+j(6), bot+j(7)],[sx+j(0), top+j(1)]
+    ];
+    inkStroke(pts,3,1);
+    ctx.save();
+    for(let yy=top+7; yy<bot-2; yy+=10){ inkStroke([[sx+4,yy],[sx+f.w-4,yy-5]],1.2,0.35); }
+    ctx.restore();
+    // faint hover lines beneath, to read as "floating"
+    ctx.save();
+    inkStroke([[sx+6,bot+8],[sx+f.w-6,bot+8]],1.3,0.3);
+    inkStroke([[sx+12,bot+14],[sx+f.w-12,bot+14]],1.1,0.25);
+    ctx.restore();
+  }
+}
+function drawPortals(camX){
+  const t=performance.now()/1000;
+  for(const p of PORTALS){
+    for(const px of [p.ax,p.bx]){
+      const sx=px-camX; if(sx<-90||sx>W+90) continue;
+      const cy=groundBaseY-groundUpAt(px)-R;
+      ctx.save();
+      ctx.fillStyle='rgba(22,17,42,0.92)';
+      ctx.beginPath(); ctx.ellipse(sx,cy,16,21,0,0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle='rgba(120,110,205,0.85)'; ctx.lineWidth=1.5;
+      for(let k=0;k<3;k++){
+        ctx.beginPath();
+        for(let a=0;a<Math.PI*2*1.25;a+=0.3){
+          const rr=3+a*2 + k*3;
+          const xx=sx+Math.cos(a+t*2.2+k)*rr*0.5, yy=cy+Math.sin(a+t*2.2+k)*rr*0.62;
+          if(a===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);
+        }
+        ctx.stroke();
+      }
+      ctx.strokeStyle='rgba(43,63,160,1)'; ctx.lineWidth=2.4;
+      ctx.beginPath(); ctx.ellipse(sx,cy,16,21,0,0,Math.PI*2); ctx.stroke();
+      ctx.restore();
+    }
+  }
+}
+function render(){
+  ctx.clearRect(0,0,W,H);
+  if(state==='menu'){ // idle preview
+    const camX=0;
+    drawScenery(camX); drawGround(camX); drawPlatforms(camX);
+    drawFloaters(camX); drawSpikes(camX); drawMovers(camX); drawPortals(camX); drawCoins(camX); return;
+  }
+  const camX = Math.max(0, ball.x - W*0.32);
+  drawScenery(camX);
+  drawGround(camX);
+  drawPlatforms(camX);
+  drawFloaters(camX);
+  drawSpikes(camX);
+  drawMovers(camX);
+  drawPortals(camX);
+  drawCoins(camX);
+  drawFinish(camX);
+  drawBall(camX);
+
+  if(portalFlash>0){
+    const sx=ball.x-camX;
+    ctx.save();
+    ctx.globalAlpha=Math.min(0.7,portalFlash*2.2);
+    ctx.strokeStyle='rgba(120,110,205,1)'; ctx.lineWidth=3;
+    ctx.beginPath(); ctx.arc(sx,ball.y,(0.32-portalFlash)*130+8,0,Math.PI*2); ctx.stroke();
+    ctx.restore();
+  }
+  if(deathFlash>0){
+    ctx.save();
+    ctx.globalAlpha=deathFlash*0.9;
+    ctx.fillStyle='rgba(192,57,43,.35)';
+    ctx.fillRect(0,0,W,H);
+    ctx.restore();
+  }
+
+  // HUD live values
+  document.getElementById('lvlPill').textContent='Lvl '+(levelIndex+1);
+  document.getElementById('coinCount').textContent=coinsGot;
+  document.getElementById('tryCount').textContent=tries;
+  document.getElementById('progressBar').style.width=Math.min(100,(ball.x/FINISH_X)*100)+'%';
+  document.getElementById('hint').textContent=hintText;
+  document.getElementById('hint').style.display = hintText? 'inline-block':'none';
+}
+
+// ---------- loop ----------
+let last=performance.now();
+function frame(now){
+  let dt=(now-last)/1000; last=now;
+  dt=Math.min(dt,0.033); // clamp
+  // fixed-ish substeps for collision stability at high speed
+  const steps=Math.ceil((SPEED*dt)/10)||1;
+  const sdt=dt/steps;
+  for(let i=0;i<steps && state==='play';i++) update(sdt);
+  render();
+  requestAnimationFrame(frame);
+}
+
+// ---------- color swatches ----------
+const PALETTE=['#e5732e','#2fa36b','#e0b423','#d64b7f','#7b53d1','#38a0c9','#2b2b2b','#e33d3d'];
+function buildSwatches(){
+  const box=document.getElementById('swatches'); box.innerHTML='';
+  PALETTE.forEach((c,i)=>{
+    const d=document.createElement('div'); d.className='sw'+(c===chosenColor?' sel':'');
+    d.style.background=c; d.title=c;
+    d.onclick=()=>{ chosenColor=c; markSel(); };
+    box.appendChild(d);
+  });
+  const cust=document.createElement('label'); cust.className='sw custom'; cust.title='custom color';
+  cust.innerHTML='🎨<input type="color" value="'+chosenColor+'">';
+  const inp=cust.querySelector('input');
+  inp.oninput=e=>{ chosenColor=e.target.value; cust.style.background=chosenColor; cust.innerHTML=''; cust.appendChild(inp); markSel(); };
+  box.appendChild(cust);
+}
+function markSel(){
+  document.querySelectorAll('#swatches .sw').forEach(el=>{
+    el.classList.toggle('sel', el.style.background && rgbToHex(el.style.background)===chosenColor.toLowerCase());
+  });
+}
+function rgbToHex(s){
+  const m=s.match(/\d+/g); if(!m) return s;
+  return '#'+m.slice(0,3).map(x=>(+x).toString(16).padStart(2,'0')).join('');
+}
+
+// ---------- wire buttons ----------
+function buildLevelButtons(){
+  const row=document.getElementById('levelRow'); row.innerHTML='';
+  const start=document.createElement('button');
+  start.className='btn'; start.textContent='Roll out ▶';
+  start.onclick=()=>startGame(0); row.appendChild(start);
+  for(let i=1;i<LEVELS.length;i++){
+    const b=document.createElement('button');
+    b.className='btn ghost'; b.textContent='Level '+(i+1);
+    b.onclick=()=>startGame(i); row.appendChild(b);
+  }
+}
+document.getElementById('pauseBtn').onclick=doPause;
+document.getElementById('resumeBtn').onclick=doResume;
+document.getElementById('restartBtn').onclick=()=>startGame();
+document.getElementById('menuBtn').onclick=toMenu;
+document.getElementById('nextBtn').onclick=()=>startGame(Math.min(levelIndex+1,LEVELS.length-1));
+document.getElementById('againBtn').onclick=()=>startGame(levelIndex);
+document.getElementById('winMenuBtn').onclick=toMenu;
+
+// ---------- boot ----------
+resize();
+buildSwatches();
+buildLevelButtons();
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
