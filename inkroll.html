@@ -354,6 +354,62 @@ const LEVELS = [
       {x0:4430,x1:4630,text:'black hole ahead — roll in to skip the mountain'},
       {x0:5270,x1:5460,text:'…and out you pop'}
     ]
+  },
+  { // ===== LEVEL 5 — Ups & Downs =====
+    name:"Ups & Downs",
+    ground:[
+      {x:-400,up:0},{x:700,up:0},
+      {x:1000,up:0},
+      {x:1150,up:0},{x:1250,up:0},                    // flat approach to the ramp
+      {x:1445,up:150},{x:1560,up:150},                // TALL, steep ramp up to a flat top
+      {x:1565,up:0},                                   // near-vertical cliff — no down-slope
+      {x:1900,up:0},                                   // low pocket you drop into
+      {x:2300,up:0},{x:2500,up:0},
+      {x:2750,up:50},{x:3000,up:0},                   // the hump
+      {x:3450,up:0},{x:3800,up:0},
+      {x:4200,up:0},{x:4800,up:0},
+      {x:5350,up:0},{x:5700,up:0}
+    ],
+    gaps:[],
+    spikes:[
+      {x:820,size:34},        // first spike
+      {x:3050,size:32},       // after the hump
+      {x:3550,size:34},       // after the crate
+      {x:3982,size:44}        // beneath the floating block
+    ],
+    platforms:[
+      {x:1710,up:60,w:70},    // block right past the cliff — clear it by jumping at the very top; fall off and recovery is brutal (~3-frame window)
+      {x:3250,up:50,w:80}     // a crate to hop
+    ],
+    movers:[
+      {x:430, w:44,h:44, baseUp:26, amp:30, period:2.0, phase:0},   // the first bobbing block
+      {x:2450,w:46,h:54, baseUp:48, amp:48, period:2.2, phase:0},   // gate
+      {x:4650,w:46,h:54, baseUp:50, amp:50, period:2.3, phase:0}    // final gate before the flag
+    ],
+    floaters:[
+      {x:2100,w:72,floatGap:8, h:36},   // low box to hop
+      {x:3960,w:44,floatGap:50,h:34}    // floating block, spike underneath
+    ],
+    coins:[
+      {x:430,up:150},{x:900,up:110},{x:1300,up:35},{x:1400,up:130},{x:1620,up:250},
+      {x:2136,up:110},{x:2450,up:150},
+      {x:2850,up:150,ring:true},        // triple coin, near the middle, over the hump
+      {x:3250,up:120},{x:3600,up:130},{x:3982,up:200},
+      {x:4650,up:150},{x:5000,up:110},{x:5200,up:120}
+    ],
+    checkpoints:[0,1050,1950,2900,3900],
+    finishX:5350,
+    scenery:[
+      {x:600,type:'bush',h:90,w:150},{x:1450,type:'peak',h:150,w:260},
+      {x:2750,type:'peak',h:120,w:220},{x:4000,type:'peak',h:180,w:300},
+      {x:5100,type:'bush',h:120,w:170}
+    ],
+    hints:[
+      {x0:0,x1:520,text:'the block bobs up & down — hop over it'},
+      {x0:1120,x1:1560,text:'tall ramp — jump right at the very top; falling off is almost unrecoverable'},
+      {x0:3860,x1:4030,text:'land on the block — spike underneath'},
+      {x0:4450,x1:4620,text:'last mover — over it or under it'}
+    ]
   }
 ];
 
