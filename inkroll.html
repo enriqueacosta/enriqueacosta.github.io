@@ -60,7 +60,8 @@
     padding:1px 8px;font-size:13px;background:var(--paper-2);margin:0 2px;
     box-shadow:2px 2px 0 rgba(43,63,160,.15);
   }
-  .swatches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0 6px;}
+  .swatches{display:flex;flex-direction:column;align-items:center;gap:10px;margin:14px 0 6px;}
+  .swRow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
   .sw{
     width:38px;height:38px;border-radius:50%;border:2.5px solid var(--ink);
     cursor:pointer;position:relative;transition:transform .08s;
@@ -382,13 +383,13 @@ const LEVELS = [
       {x:3250,up:50,w:80}     // a crate to hop
     ],
     movers:[
-      {x:430, w:44,h:44, baseUp:26, amp:30, period:2.0, phase:0},   // the first bobbing block
-      {x:2450,w:46,h:54, baseUp:48, amp:48, period:2.2, phase:0},   // gate
-      {x:4650,w:46,h:54, baseUp:50, amp:50, period:2.3, phase:0}    // final gate before the flag
+      {x:430, w:44,h:44, baseUp:100, amp:100, period:2.0, phase:0},   // the first bobbing block
+      {x:2450,w:46,h:54, baseUp:100, amp:200, period:1.5, phase:0},   // gate
+      {x:4650,w:46,h:54, baseUp:100, amp:200, period:2.0, phase:0}    // final gate before the flag
     ],
     floaters:[
-      {x:2100,w:72,floatGap:8, h:36},   // low box to hop
-      {x:3960,w:44,floatGap:50,h:34}    // floating block, spike underneath
+      {x:2100,w:100,floatGap:40, h:36},   // low box to hop
+      {x:3960,w:44,floatGap:50,h:50}    // floating block, spike underneath
     ],
     coins:[
       {x:430,up:150},{x:900,up:110},{x:1300,up:35},{x:1400,up:130},{x:1620,up:250},
@@ -410,10 +411,64 @@ const LEVELS = [
       {x0:3860,x1:4030,text:'land on the block — spike underneath'},
       {x0:4450,x1:4620,text:'last mover — over it or under it'}
     ]
+  },
+  { // ===== LEVEL 6 — Sliders =====
+    name:"Sliders",
+    ground:[
+      {x:-400,up:40},{x:700,up:40},{x:1300,up:48},{x:2000,up:36},
+      {x:2520,up:30},{x:2680,up:26},{x:3600,up:20},{x:4300,up:14},
+      {x:4450,up:10},{x:5500,up:4},{x:6500,up:0}
+    ],
+    gaps:[ {x0:2520,x1:2680},{x0:4300,x1:4450} ],
+    spikes:[
+      {x:906,size:44},
+      {x:3080,size:40},
+      {x:4990,size:40},
+      {x:5500,size:40}            // right after the big box
+    ],
+    platforms:[
+      {x:2330,up:78,w:50},                 // little post before the first gap
+      {x:3420,up:80,w:150,spiky:true},     // box with spikes on both sides — land on top
+      {x:5330,up:80,w:110}                 // big box
+    ],
+    // sideways blocks: slide back & forth between x0 and x1 — any touch = out
+    sliders:[
+      {x0:560, x1:780, w:40,h:40,lift:0, period:2.2,phase:0},
+      {x0:1060,x1:1280,w:40,h:40,lift:0, period:2.0,phase:1.5},
+      {x0:1380,x1:1880,w:64,h:30,lift:50,period:3.0,phase:0},   // high one — roll under it
+      {x0:1980,x1:2260,w:44,h:44,lift:0, period:2.4,phase:0.8},
+      {x0:2800,x1:3010,w:40,h:40,lift:0, period:2.0,phase:0},
+      {x0:3880,x1:4200,w:44,h:44,lift:0, period:2.6,phase:2.0}
+    ],
+    coins:[
+      {x:906,up:160},{x:1160,up:140},{x:1630,up:64},{x:2355,up:150},
+      {x:2600,up:170},                     // over gap 1
+      {x:3495,up:125},{x:4040,up:130},
+      {x:4375,up:160},                     // over gap 2
+      {x:4620,up:120},
+      {x:4990,up:320,ring:true},           // super jump over the spike (double-tap)
+      {x:5200,up:110},
+      {x:5385,up:135},
+      {x:5700,up:120},
+      {x:5860,up:330,ring:true},           // last super jump before the flag
+      {x:6000,up:22}                       // the one on the ground
+    ],
+    checkpoints:[0,1330,2720,3700,4500],
+    finishX:6250,
+    scenery:[
+      {x:800,type:'bush',h:90,w:150},{x:2200,type:'peak',h:130,w:230},
+      {x:3900,type:'peak',h:170,w:280},{x:5800,type:'bush',h:110,w:160}
+    ],
+    hints:[
+      {x0:0,x1:520,text:'these blocks slide sideways — watch their rhythm'},
+      {x0:1330,x1:1500,text:'high slider — stay low and roll under'},
+      {x0:3200,x1:3410,text:'spiky box — land on top'},
+      {x0:4700,x1:4930,text:'big coins up high — double-tap!'}
+    ]
   }
 ];
 
-let GROUND,GAPS,SPIKES,PLATFORMS,COINS,CHECKPOINTS,FINISH_X,SCENERY,HINTS,MOVERS,FLOATERS,PORTALS;
+let GROUND,GAPS,SPIKES,PLATFORMS,COINS,CHECKPOINTS,FINISH_X,SCENERY,HINTS,MOVERS,FLOATERS,PORTALS,SLIDERS;
 let levelIndex=0;
 function loadLevel(i){
   levelIndex=i; const L=LEVELS[i];
@@ -423,6 +478,7 @@ function loadLevel(i){
   FLOATERS=L.floaters||[];
   for(const f of FLOATERS){ f.topUp=groundUpAt(f.x+f.w/2)+f.floatGap+f.h; f.botUp=f.topUp-f.h; }
   PORTALS=L.portals||[];
+  SLIDERS=L.sliders||[];
 }
 loadLevel(0);
 
@@ -458,6 +514,15 @@ function supportAt(x){
     }
   }
   return sy;
+}
+
+
+// sideways slider: current rect {x, top, bot} (screen coords)
+function sliderRect(sl, tG){
+  const span = sl.x1 - sl.x0 - sl.w;
+  const x = sl.x0 + span*(0.5+0.5*Math.sin(tG*(2*Math.PI/sl.period)+(sl.phase||0)));
+  const bottomUp = groundUpAt(x+sl.w/2) + (sl.lift||0);
+  return { x, top: groundBaseY-(bottomUp+sl.h), bot: groundBaseY-bottomUp };
 }
 
 // ---------- state ----------
@@ -651,6 +716,15 @@ function update(dt){
     if(dx*dx+dy*dy < (R*0.85)*(R*0.85)){ die(); return; }
   }
 
+  // sideways sliders — any contact is fatal
+  for(const sl of SLIDERS){
+    const r = sliderRect(sl, tG);
+    const cx=Math.max(r.x,Math.min(ball.x,r.x+sl.w));
+    const cy=Math.max(r.top,Math.min(ball.y,r.bot));
+    const dx=ball.x-cx, dy=ball.y-cy;
+    if(dx*dx+dy*dy < (R*0.85)*(R*0.85)){ die(); return; }
+  }
+
   // floating blocks: landing on top is safe (handled above); side/underside is fatal
   for(const f of FLOATERS){
     const top = groundBaseY - f.topUp;
@@ -784,6 +858,53 @@ function drawPlatforms(camX){
   }
 }
 
+function drawSliders(camX){
+  const tG=performance.now()/1000;
+  for(const sl of SLIDERS){
+    if(sl.x1-camX < -140 || sl.x0-camX > W+140) continue;
+    const r = sliderRect(sl, tG);
+    const sx = r.x-camX;
+    // faint dashed track so the motion reads as fair
+    const midY = (r.top+r.bot)/2;
+    ctx.save(); ctx.setLineDash([4,7]);
+    inkStroke([[sl.x0-camX, midY],[sl.x1-camX, midY]],1.3,0.3);
+    inkStroke([[sl.x0-camX, midY-6],[sl.x0-camX, midY+6]],1.3,0.3);
+    inkStroke([[sl.x1-camX, midY-6],[sl.x1-camX, midY+6]],1.3,0.3);
+    ctx.restore();
+    const j=(k)=>wob(sl.x0+k)*1.6;
+    const pts=[
+      [sx+j(0), r.top+j(1)],[sx+sl.w+j(2), r.top+j(3)],
+      [sx+sl.w+j(4), r.bot+j(5)],[sx+j(6), r.bot+j(7)],[sx+j(0), r.top+j(1)]
+    ];
+    ctx.save(); ctx.fillStyle='rgba(246,243,234,1)';
+    ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(const q of pts) ctx.lineTo(q[0],q[1]); ctx.fill();
+    ctx.restore();
+    inkStroke(pts,3,1);
+    for(let yy=r.top+7; yy<r.bot-2; yy+=11){ inkStroke([[sx+4,yy],[sx+sl.w-4,yy-6]],1.2,0.35); }
+    // left/right motion chevrons
+    inkStroke([[sx-4,midY-5],[sx-11,midY],[sx-4,midY+5]],1.6,0.55);
+    inkStroke([[sx+sl.w+4,midY-5],[sx+sl.w+11,midY],[sx+sl.w+4,midY+5]],1.6,0.55);
+  }
+}
+function drawPlatformSpikes(camX){
+  for(const p of PLATFORMS){
+    if(!p.spiky) continue;
+    const sx=p.x-camX; if(sx<-200||sx>W+200) continue;
+    const top=groundBaseY-p.up, bot=groundBaseY-groundUpAt(p.x+p.w/2);
+    const n=Math.max(2,Math.floor((bot-top-6)/14));
+    const step=(bot-top-6)/n;
+    for(const side of [-1,1]){
+      const ex = side<0 ? sx : sx+p.w;
+      const pts=[];
+      for(let i=0;i<=n;i++){
+        const y=top+6+i*step;
+        pts.push([ex, y]);
+        if(i<n) pts.push([ex+side*12, y+step/2]);
+      }
+      inkStroke(pts,2.4,1);
+    }
+  }
+}
 function drawSpikes(camX){
   for(const s of SPIKES){
     const apex=surfaceY(s.x); if(apex===null) continue;
@@ -938,7 +1059,7 @@ function render(){
   if(state==='menu'){ // idle preview
     const camX=0;
     drawScenery(camX); drawGround(camX); drawPlatforms(camX);
-    drawFloaters(camX); drawSpikes(camX); drawMovers(camX); drawPortals(camX); drawCoins(camX); return;
+    drawFloaters(camX); drawSpikes(camX); drawPlatformSpikes(camX); drawMovers(camX); drawSliders(camX); drawPortals(camX); drawCoins(camX); return;
   }
   const camX = Math.max(0, ball.x - W*0.32);
   drawScenery(camX);
@@ -946,7 +1067,9 @@ function render(){
   drawPlatforms(camX);
   drawFloaters(camX);
   drawSpikes(camX);
+  drawPlatformSpikes(camX);
   drawMovers(camX);
+  drawSliders(camX);
   drawPortals(camX);
   drawCoins(camX);
   drawFinish(camX);
@@ -992,19 +1115,24 @@ function frame(now){
 
 // ---------- color swatches ----------
 const PALETTE=['#e5732e','#2fa36b','#e0b423','#d64b7f','#7b53d1','#38a0c9','#2b2b2b','#e33d3d'];
+const PALETTE2=['#f2a0b8','#8fd3c1','#a2c8f0','#c9a36b','#9bbb3c','#f08a5d','#39ff14','#ff2bd6'];
 function buildSwatches(){
   const box=document.getElementById('swatches'); box.innerHTML='';
-  PALETTE.forEach((c,i)=>{
-    const d=document.createElement('div'); d.className='sw'+(c===chosenColor?' sel':'');
-    d.style.background=c; d.title=c;
-    d.onclick=()=>{ chosenColor=c; markSel(); };
-    box.appendChild(d);
+  let row;
+  [PALETTE, PALETTE2].forEach(pal=>{
+    row=document.createElement('div'); row.className='swRow'; box.appendChild(row);
+    pal.forEach(c=>{
+      const d=document.createElement('div'); d.className='sw'+(c===chosenColor?' sel':'');
+      d.style.background=c; d.title=c;
+      d.onclick=()=>{ chosenColor=c; markSel(); };
+      row.appendChild(d);
+    });
   });
   const cust=document.createElement('label'); cust.className='sw custom'; cust.title='custom color';
   cust.innerHTML='🎨<input type="color" value="'+chosenColor+'">';
   const inp=cust.querySelector('input');
   inp.oninput=e=>{ chosenColor=e.target.value; cust.style.background=chosenColor; cust.innerHTML=''; cust.appendChild(inp); markSel(); };
-  box.appendChild(cust);
+  row.appendChild(cust);
 }
 function markSel(){
   document.querySelectorAll('#swatches .sw').forEach(el=>{
