@@ -12,6 +12,9 @@
     --ink-soft:#6a78c4;
     --ink-faint:#b9c0e4;
     --danger:#c0392b;
+    --grass:#2fa36b;       /* grass ticks on the ground */
+    --mover:#d64b7f;       /* moving blocks (up-down and sideways) */
+    --mover-fill:#fadbe6;  /* inside of the moving blocks */
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{margin:0;height:100%;overflow:hidden;background:#e7e2d4;}
@@ -200,6 +203,10 @@
 (function(){
 const cv = document.getElementById('game');
 const ctx = cv.getContext('2d');
+const CSSVAR = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim(); // read a color from :root in the CSS
+const GRASS = CSSVAR('--grass');
+const MOVER = CSSVAR('--mover');
+const MOVER_FILL = CSSVAR('--mover-fill');
 
 // ---------- sizing ----------
 let W=0,H=0,DPR=1, groundBaseY=0, R=16;
@@ -853,13 +860,16 @@ function update(dt){
 // ---------- render ----------
 function inkStroke(pts, width, alpha, color){
   if(pts.length<2) return;
+  ctx.save();
   ctx.lineJoin='round'; ctx.lineCap='round';
-  ctx.strokeStyle=color||('rgba(43,63,160,'+(alpha??1)+')');
+  if(color){ ctx.strokeStyle=color; ctx.globalAlpha*=(alpha??1); }
+  else ctx.strokeStyle='rgba(43,63,160,'+(alpha??1)+')';
   ctx.lineWidth=width;
   ctx.beginPath();
   ctx.moveTo(pts[0][0],pts[0][1]);
   for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i][0],pts[i][1]);
   ctx.stroke();
+  ctx.restore();
 }
 
 function drawScenery(camX){
@@ -914,7 +924,7 @@ function drawGround(camX){
     const wx=sx+camX; const sy=surfaceY(wx);
     if(sy===null) continue;
     const j=wob(Math.floor(wx/26));
-    inkStroke([[sx, sy],[sx+3+j*2, sy-6-Math.abs(j)*3]],1.6,0.5);
+    inkStroke([[sx, sy],[sx+3+j*2, sy-6-Math.abs(j)*3]],1.6,1,GRASS);
   }
   ctx.restore();
 
@@ -958,23 +968,23 @@ function drawSliders(camX){
     // faint dashed track so the motion reads as fair
     const midY = (r.top+r.bot)/2;
     ctx.save(); ctx.setLineDash([4,7]);
-    inkStroke([[sl.x0-camX, midY],[sl.x1-camX, midY]],1.3,0.3);
-    inkStroke([[sl.x0-camX, midY-6],[sl.x0-camX, midY+6]],1.3,0.3);
-    inkStroke([[sl.x1-camX, midY-6],[sl.x1-camX, midY+6]],1.3,0.3);
+    inkStroke([[sl.x0-camX, midY],[sl.x1-camX, midY]],1.3,0.3,MOVER);
+    inkStroke([[sl.x0-camX, midY-6],[sl.x0-camX, midY+6]],1.3,0.3,MOVER);
+    inkStroke([[sl.x1-camX, midY-6],[sl.x1-camX, midY+6]],1.3,0.3,MOVER);
     ctx.restore();
     const j=(k)=>wob(sl.x0+k)*1.6;
     const pts=[
       [sx+j(0), r.top+j(1)],[sx+sl.w+j(2), r.top+j(3)],
       [sx+sl.w+j(4), r.bot+j(5)],[sx+j(6), r.bot+j(7)],[sx+j(0), r.top+j(1)]
     ];
-    ctx.save(); ctx.fillStyle='rgba(246,243,234,1)';
+    ctx.save(); ctx.fillStyle=MOVER_FILL;
     ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(const q of pts) ctx.lineTo(q[0],q[1]); ctx.fill();
     ctx.restore();
-    inkStroke(pts,3,1);
-    for(let yy=r.top+7; yy<r.bot-2; yy+=11){ inkStroke([[sx+4,yy],[sx+sl.w-4,yy-6]],1.2,0.35); }
+    inkStroke(pts,3,1,MOVER);
+    for(let yy=r.top+7; yy<r.bot-2; yy+=11){ inkStroke([[sx+4,yy],[sx+sl.w-4,yy-6]],1.2,0.35,MOVER); }
     // left/right motion chevrons
-    inkStroke([[sx-4,midY-5],[sx-11,midY],[sx-4,midY+5]],1.6,0.55);
-    inkStroke([[sx+sl.w+4,midY-5],[sx+sl.w+11,midY],[sx+sl.w+4,midY+5]],1.6,0.55);
+    inkStroke([[sx-4,midY-5],[sx-11,midY],[sx-4,midY+5]],1.6,0.55,MOVER);
+    inkStroke([[sx+sl.w+4,midY-5],[sx+sl.w+11,midY],[sx+sl.w+4,midY+5]],1.6,0.55,MOVER);
   }
 }
 function drawPlatformSpikes(camX){
@@ -1080,8 +1090,8 @@ function drawMovers(camX){
     // faint dashed travel guide so the motion reads as fair
     ctx.save(); ctx.setLineDash([4,7]);
     const gTop=groundBaseY-(m.baseUp+m.amp+m.h/2), gBot=groundBaseY-(m.baseUp-m.amp-m.h/2);
-    inkStroke([[sx-3,gTop],[sx-3,gBot]],1.3,0.3);
-    inkStroke([[sx+m.w+3,gTop],[sx+m.w+3,gBot]],1.3,0.3);
+    inkStroke([[sx-3,gTop],[sx-3,gBot]],1.3,0.3,MOVER);
+    inkStroke([[sx+m.w+3,gTop],[sx+m.w+3,gBot]],1.3,0.3,MOVER);
     ctx.restore();
     // wobbly block outline
     const j=(k)=>wob(m.x+k)*1.6;
@@ -1089,15 +1099,18 @@ function drawMovers(camX){
       [sx+j(0), topY+j(1)],[sx+m.w+j(2), topY+j(3)],
       [sx+m.w+j(4), botY+j(5)],[sx+j(6), botY+j(7)],[sx+j(0), topY+j(1)]
     ];
-    inkStroke(pts,3,1);
+    ctx.save(); ctx.fillStyle=MOVER_FILL;
+    ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for(const q of pts) ctx.lineTo(q[0],q[1]); ctx.fill();
+    ctx.restore();
+    inkStroke(pts,3,1,MOVER);
     // cross-hatch fill
     ctx.save();
-    for(let yy=topY+7; yy<botY-2; yy+=11){ inkStroke([[sx+4,yy],[sx+m.w-4,yy-6]],1.2,0.35); }
+    for(let yy=topY+7; yy<botY-2; yy+=11){ inkStroke([[sx+4,yy],[sx+m.w-4,yy-6]],1.2,0.35,MOVER); }
     ctx.restore();
     // up/down motion chevrons
     const mx=sx+m.w/2;
-    inkStroke([[mx-5,topY-4],[mx,topY-11],[mx+5,topY-4]],1.6,0.55);
-    inkStroke([[mx-5,botY+4],[mx,botY+11],[mx+5,botY+4]],1.6,0.55);
+    inkStroke([[mx-5,topY-4],[mx,topY-11],[mx+5,topY-4]],1.6,0.55,MOVER);
+    inkStroke([[mx-5,botY+4],[mx,botY+11],[mx+5,botY+4]],1.6,0.55,MOVER);
   }
 }
 function drawFloaters(camX){
