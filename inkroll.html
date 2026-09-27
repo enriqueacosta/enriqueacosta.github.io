@@ -22,7 +22,7 @@
     user-select:none;touch-action:none;
   }
   #wrap{
-    position:relative;width:100vw;height:100vh;max-width:100vw;max-height:100vh;
+    position:relative;width:100vw;height:100vh;height:100dvh;max-width:100vw;max-height:100vh;max-height:100dvh;
     background:var(--paper);
     overflow:hidden;
   }
@@ -42,9 +42,12 @@
     position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;
     align-items:center;justify-content:center;gap:18px;text-align:center;
     background:rgba(246,243,234,.82);backdrop-filter:blur(1px);
-    padding:24px;
+    padding:24px;overflow-y:auto;-webkit-overflow-scrolling:touch;
+    justify-content:flex-start;
   }
+  .overlay > .card{margin:auto;}
   .overlay.hidden{display:none;}
+  #hud.hidden{display:none;}
   .card{
     background:var(--paper);
     border:2.5px solid var(--ink);
@@ -100,6 +103,38 @@
   #pauseBtn{pointer-events:auto;cursor:pointer;}
   .flag{font-size:15px;}
   @media (max-width:520px){ #hud{font-size:14px;} .card{padding:20px;} }
+
+  /* ---- small screens (e.g. iPhone mini) ---- */
+  @media (max-width:420px), (max-height:600px){
+    .overlay{padding:10px;}
+    .card{padding:14px 16px;border-width:2px;box-shadow:4px 5px 0 rgba(43,63,160,.18);}
+    h1{font-size:32px;}
+    .sub{font-size:13px;margin-bottom:8px;}
+    p.tip{font-size:13px;margin:3px 0;line-height:1.35;}
+    .kbd{font-size:11px;padding:0 6px;}
+    .swatches{gap:7px;margin:8px 0 4px;}
+    .swRow{gap:7px;}
+    .sw{width:28px;height:28px;border-width:2px;}
+    .sw.custom{font-size:15px;}
+    .sw.sel{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--ink);}
+    .row{gap:8px;margin-top:6px;}
+    button.btn{font-size:15px;padding:8px 14px;box-shadow:3px 4px 0 rgba(43,63,160,.35);}
+    button.btn.ghost{box-shadow:3px 4px 0 rgba(43,63,160,.18);}
+    .stat{font-size:17px;} .stat b{font-size:22px;}
+  }
+  /* ---- very short screens (phone held sideways) ---- */
+  @media (max-height:430px){
+    .overlay{padding:6px;}
+    .card{max-width:700px;padding:10px 14px;}
+    h1{font-size:26px;}
+    .sub{margin-bottom:4px;}
+    p.tip{font-size:12px;margin:1px 0;}
+    .swatches{flex-direction:row;justify-content:center;margin:6px 0 2px;}
+    .sw{width:24px;height:24px;}
+    .swRow{gap:6px;}
+    button.btn{font-size:13px;padding:6px 11px;}
+    .row{gap:6px;margin-top:4px;}
+  }
 </style>
 </head>
 <body>
@@ -537,6 +572,7 @@ const DBL_WINDOW = 0.26;
 
 let state='menu';       // menu | play | pause | win
 let ball, coinsGot, coinsTotal, tries, runStart, deathFlash, hintText, portalFlash=0;
+let pausedAt=0;         // when the current pause began (ms)
 let chosenColor = '#e5732e';
 
 function resetBall(fromCheckpoint){
@@ -594,8 +630,8 @@ function die(){
   deathFlash=0.28;
   resetBall(true);
 }
-function doPause(){ if(state!=='play')return; state='pause'; show('pause',true); }
-function doResume(){ if(state!=='pause')return; state='play'; show('pause',false); }
+function doPause(){ if(state!=='play')return; state='pause'; pausedAt=performance.now(); show('pause',true); }
+function doResume(){ if(state!=='pause')return; runStart += performance.now()-pausedAt; state='play'; show('pause',false); }
 function doWin(){
   state='win';
   const hasNext = levelIndex < LEVELS.length-1;
