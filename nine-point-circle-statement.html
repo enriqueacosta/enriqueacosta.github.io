@@ -1,0 +1,159 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nine Points</title>
+<style>
+  body { font: 17px "New Computer Modern", "Latin Modern Roman", "CMU Serif", Georgia, serif;
+         margin: 0; padding: 24px 16px; background: #fff; color: #000; }
+  main { max-width: 900px; margin: 0 auto; text-align: center; }
+  h1 { font-weight: normal; font-size: 2em; margin: 0 0 0.2em; }
+  .credit { margin: 0 0 1.2em; }
+  .statement { font-style: italic; max-width: 36em; margin: 0 auto 1em; text-align: left; line-height: 1.4; }
+  .statement p { margin: 0 0 0.3em; }
+  .statement ul { margin: 0 0 0.3em; padding-left: 1.4em; list-style: none; }
+  .statement li { position: relative; }
+  /* each kind of point marked as the figure marks it */
+  .dot { position: absolute; left: -1.2em; top: 0.4em; width: 0.6em; height: 0.6em;
+         border-radius: 50%; border: 1.5px solid #000; box-sizing: border-box; }
+  .red { background: rgb(217, 77, 26); }
+  .blue { background: rgb(38, 89, 153); }
+  .yellow { background: rgb(242, 179, 26); }
+  .black { background: #000; }
+  /* a dot in the running text, sitting on the x-height like a glyph */
+  .dot.inline { position: static; display: inline-block; vertical-align: 0.05em; margin: 0 0.1em; }
+  canvas { display: block; margin: 0 auto; max-width: 100%; touch-action: none; }
+  .controls { font-size: 0.85em; color: #555; margin-top: 0.5em; }
+  .controls label { margin-right: 1em; }
+  footer { margin-top: 2.5em; font-size: 0.8em; color: #777; letter-spacing: 0.02em; }
+  footer .rule { width: 3em; margin: 0 auto 0.8em; border-top: 1px solid #ccc; }
+</style></head>
+<body>
+<main>
+  <h1>The Nine-Point Circle (1821)</h1>
+  <p class="credit">Charles-Julien Brianchon and Jean-Victor Poncelet, 1821 · Karl Wilhelm Feuerbach, 1822</p>
+  <div class="statement">
+    <p>In any triangle, these nine points lie on one circle:</p>
+    <ul>
+      <li><span class="dot blue"></span>the middle points of the sides;</li>
+      <li><span class="dot red"></span>the feet of the heights;</li>
+      <li><span class="dot yellow"></span>the middle points of the lines from the corners
+      to the point <span class="dot black inline"></span> where the heights meet.</li>
+    </ul>
+  </div>
+  <canvas id="c" width="900" height="600"></canvas>
+  <div class="controls">
+    Drag the corners of the triangle.
+    <label><input type="checkbox" id="labels"> letters</label>
+    <button id="reset">Reset</button>
+  </div>
+  <footer>
+    <div class="rule"></div>
+    Created by Enrique Acosta, 2026 · License: CC-BY 4.0
+  </footer>
+</main>
+<script>
+const RED = 'rgb(217,77,26)', BLUE = 'rgb(38,89,153)', YEL = 'rgb(242,179,26)', BLK = '#000';
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+// draw at the screen's own resolution (2× on a Retina display), shown at the CSS size
+const W = cv.width, Ht = cv.height, dpr = window.devicePixelRatio || 1;
+cv.width = W * dpr; cv.height = Ht * dpr;
+cv.style.width = W + 'px';
+g.scale(dpr, dpr);
+
+const S = 110, OX = 230, OY = 480;           // px per unit, where B sits on the canvas
+const init = { A: [0.45, 2.9], B: [0, 0], C: [4, 0] };
+let P = JSON.parse(JSON.stringify(init));
+
+const toS = p => [OX + p[0] * S, OY - p[1] * S];
+const toW = (x, y) => [(x - OX) / S, (OY - y) / S];
+const add = (p, q) => [p[0] + q[0], p[1] + q[1]], sub = (p, q) => [p[0] - q[0], p[1] - q[1]];
+const mul = (p, k) => [p[0] * k, p[1] * k], dot = (p, q) => p[0] * q[0] + p[1] * q[1];
+const mid = (p, q) => mul(add(p, q), 0.5);
+const foot = (p, a, b) => { const d = sub(b, a); return add(a, mul(d, dot(sub(p, a), d) / dot(d, d))); };
+const meet = (p1, p2, p3, p4) => {
+  const d1 = sub(p2, p1), d2 = sub(p4, p3), den = d1[0] * d2[1] - d1[1] * d2[0];
+  const t = ((p3[0] - p1[0]) * d2[1] - (p3[1] - p1[1]) * d2[0]) / den;
+  return add(p1, mul(d1, t));
+};
+
+function seg(p, q, col, w) {
+  g.strokeStyle = col; g.lineWidth = w; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(...toS(p)); g.lineTo(...toS(q)); g.stroke();
+}
+// the furthest of some points from p along a line through it, so a height reaches both
+// its foot and H, wherever they fall
+const furthest = (p, pts) => pts.reduce((a, b) => Math.hypot(...sub(b, p)) > Math.hypot(...sub(a, p)) ? b : a);
+// where a foot falls beyond its side, the side produced to it, thin
+function produced(a, b, f) {
+  const t = dot(sub(f, a), sub(b, a)) / dot(sub(b, a), sub(b, a));
+  if (t < 0) seg(a, f, BLK, 1.2); else if (t > 1) seg(b, f, BLK, 1.2);
+}
+function point(p, col) {
+  const s = toS(p);
+  g.fillStyle = col; g.strokeStyle = BLK; g.lineWidth = 1.5;
+  g.beginPath(); g.arc(s[0], s[1], 6, 0, 2 * Math.PI); g.fill(); g.stroke();
+}
+function label(t, p, away) {
+  const s = toS(p), d = sub(p, away), n = Math.hypot(...d) || 1;
+  g.fillStyle = BLK; g.font = 'italic 17px "New Computer Modern", Georgia, serif';
+  g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.fillText(t, s[0] + d[0] / n * 18, s[1] - d[1] / n * 18);
+}
+
+function draw() {
+  const { A, B, C } = P;
+  const D = mid(B, C), E = mid(C, A), F = mid(A, B);
+  const K = foot(A, B, C), L = foot(B, C, A), M = foot(C, A, B);
+  const H = meet(A, K, B, L);
+  const X = mid(A, H), Y = mid(B, H), Z = mid(C, H), N = mid(D, X);
+  g.clearRect(0, 0, W, Ht);
+
+  // the circle, the medians blue, the heights red, the sides over them
+  const n = toS(N); g.strokeStyle = BLK; g.lineWidth = 2.5;
+  g.beginPath(); g.arc(n[0], n[1], Math.hypot(...sub(D, N)) * S, 0, 2 * Math.PI); g.stroke();
+  seg(A, D, BLUE, 3); seg(B, E, BLUE, 3); seg(C, F, BLUE, 3);
+  produced(B, C, K); produced(C, A, L); produced(A, B, M);
+  seg(A, furthest(A, [K, H]), RED, 3); seg(B, furthest(B, [L, H]), RED, 3);
+  seg(C, furthest(C, [M, H]), RED, 3);
+  seg(A, B, BLK, 4); seg(B, C, BLK, 4); seg(C, A, BLK, 4);
+
+  // the nine points
+  [D, E, F].forEach(p => point(p, BLUE));
+  [K, L, M].forEach(p => point(p, RED));
+  [X, Y, Z].forEach(p => point(p, YEL));
+  point(H, BLK); //  where the heights meet
+
+  // the corners that can be dragged
+  for (const k of 'ABC') { const s = toS(P[k]); g.fillStyle = 'rgba(38,89,153,0.2)';
+    g.beginPath(); g.arc(s[0], s[1], 11, 0, 2 * Math.PI); g.fill(); }
+
+  if (document.getElementById('labels').checked) {
+    const G = mul(add(add(A, B), C), 1 / 3);
+    label('A', A, G); label('B', B, G); label('C', C, G);
+    label('D', D, G); label('E', E, G); label('F', F, G);
+    label('K', K, H); label('L', L, H); label('M', M, H);
+    label('H', H, add(H, [0.3, 0.3]));
+    label('X', X, add(X, [-0.3, 0])); label('Y', Y, add(Y, [0, 0.3])); label('Z', Z, add(Z, [0, 0.3]));
+  }
+}
+
+// dragging; the pointer is read in CSS pixels, scaled when the canvas is shown smaller
+let drag = null;
+const at = e => { const r = cv.getBoundingClientRect(), k = W / r.width;
+  return [(e.clientX - r.left) * k, (e.clientY - r.top) * k]; };
+cv.addEventListener('pointerdown', e => {
+  const [x, y] = at(e);
+  for (const k of 'ABC') { const s = toS(P[k]);
+    if (Math.hypot(s[0] - x, s[1] - y) < 18) { drag = k; cv.setPointerCapture(e.pointerId); } }
+});
+cv.addEventListener('pointermove', e => {
+  const [x, y] = at(e);
+  if (drag) { P[drag] = toW(x, y); draw(); return; }
+  cv.style.cursor = 'ABC'.split('').some(k => { const s = toS(P[k]);
+    return Math.hypot(s[0] - x, s[1] - y) < 18; }) ? 'grab' : 'default';
+});
+cv.addEventListener('pointerup', () => drag = null);
+document.getElementById('labels').onchange = draw;
+document.getElementById('reset').onclick = () => { P = JSON.parse(JSON.stringify(init)); draw(); };
+draw();
+</script>
+</body></html>
