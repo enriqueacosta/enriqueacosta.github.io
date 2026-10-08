@@ -116,7 +116,7 @@ function draw() {
 
   // the circle, the medians blue, the heights red, the sides over them
   const n = toS(N); g.strokeStyle = BLK; g.lineWidth = 2.5;
-  g.beginPath(); g.arc(n[0], n[1], Math.hypot(...sub(D, N)) * S, 0, 2 * Math.PI); g.stroke();
+  g.beginPath(); g.arc(n[0], n[1], Math.hypot(...sub(D, N)) * S * fit, 0, 2 * Math.PI); g.stroke();
   seg(A, D, BLUE, 3); seg(B, E, BLUE, 3); seg(C, F, BLUE, 3);
   produced(B, C, K); produced(C, A, L); produced(A, B, M);
   seg(A, furthest(A, [K, H]), RED, 3); seg(B, furthest(B, [L, H]), RED, 3);
