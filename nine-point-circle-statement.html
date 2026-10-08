@@ -54,17 +54,24 @@
 const RED = 'rgb(217,77,26)', BLUE = 'rgb(38,89,153)', YEL = 'rgb(242,179,26)', BLK = '#000';
 const cv = document.getElementById('c'), g = cv.getContext('2d');
 // draw at the screen's own resolution (2× on a Retina display), shown at the CSS size
-const W = cv.width, Ht = cv.height, dpr = window.devicePixelRatio || 1;
-cv.width = W * dpr; cv.height = Ht * dpr;
-cv.style.width = W + 'px';
-g.scale(dpr, dpr);
+// The canvas is as wide as the page allows, up to its natural size; the figure scales
+// to fit it, while the pens, dots and letters keep their sizes on the screen.
+const W0 = cv.width, H0 = cv.height, dpr = window.devicePixelRatio || 1;
+let W = W0, Ht = H0, fit = 1;
+function resize() {
+  W = Math.min(W0, cv.parentElement.clientWidth); fit = W / W0; Ht = H0 * fit;
+  cv.width = W * dpr; cv.height = Ht * dpr;
+  cv.style.width = W + 'px'; cv.style.height = Ht + 'px';
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resize();
 
 const S = 110, OX = 230, OY = 480;           // px per unit, where B sits on the canvas
 const init = { A: [0.45, 2.9], B: [0, 0], C: [4, 0] };
 let P = JSON.parse(JSON.stringify(init));
 
-const toS = p => [OX + p[0] * S, OY - p[1] * S];
-const toW = (x, y) => [(x - OX) / S, (OY - y) / S];
+const toS = p => [(OX + p[0] * S) * fit, (OY - p[1] * S) * fit];
+const toW = (x, y) => [(x / fit - OX) / S, (OY - y / fit) / S];
 const add = (p, q) => [p[0] + q[0], p[1] + q[1]], sub = (p, q) => [p[0] - q[0], p[1] - q[1]];
 const mul = (p, k) => [p[0] * k, p[1] * k], dot = (p, q) => p[0] * q[0] + p[1] * q[1];
 const mid = (p, q) => mul(add(p, q), 0.5);
@@ -154,6 +161,7 @@ cv.addEventListener('pointermove', e => {
 cv.addEventListener('pointerup', () => drag = null);
 document.getElementById('labels').onchange = draw;
 document.getElementById('reset').onclick = () => { P = JSON.parse(JSON.stringify(init)); draw(); };
+window.addEventListener('resize', () => { resize(); draw(); });
 draw();
 </script>
 </body></html>
